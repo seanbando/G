@@ -22,9 +22,9 @@ One of the biggest is Citadel Securities, which reportedly handles around a thir
 
 THE MARKET MAKER: I'll take that order.
 
-THE APP: Thank you. I believe you owe me a fee.
+THE APP: Thank you. I believe you owe me something for sending it.
 
-THE MARKET MAKER: And here's yours.
+THE MARKET MAKER: Of course. Here's a small payment, and I'll take your next order too.
 
 Critics say this setup can quietly cost you a fraction of a cent on each trade. Supporters say regular investors get better prices than they would on the exchange. Regulators have argued about it for years, and it's still legal in the US.
 
