@@ -4,7 +4,9 @@ Usage: python3 tools/make_voiceover.py <script.md> <output.md>
 
 Script format: first paragraph is the title; paragraphs are separated by a
 blank line; character lines start with "ROLE NAME:"; drawing cues are
-"[VISUAL NOTE: ...]" paragraphs. Everything else is NARRATOR.
+"[DRAW: ...]" or "[VISUAL NOTE: ...]" paragraphs, and silent beats are
+"[PAUSE: ...]" paragraphs. Everything else is NARRATOR. Each spoken
+paragraph is one whiteboard scene.
 """
 import re
 import sys
@@ -38,8 +40,13 @@ def parse(path):
     role_re = re.compile(r"^(%s):\s*(.*)$" % "|".join(re.escape(r) for r in CAST if r != "NARRATOR"), re.S)
     for p in paras[1:]:
         p = p.strip()
-        if p.startswith("[VISUAL NOTE:"):
-            cues.append("🎨 Draw: " + p[len("[VISUAL NOTE:"):].rstrip("]").strip())
+        for tag in ("[VISUAL NOTE:", "[DRAW:"):
+            if p.startswith(tag):
+                cues.append("🎨 Draw: " + p[len(tag):].rstrip("]").strip())
+                break
+        else:
+            tag = None
+        if tag:
             continue
         if p.startswith("[PAUSE:"):
             cues.append("⏸ PAUSE " + p[len("[PAUSE:"):].rstrip("]").strip())
@@ -53,6 +60,23 @@ def parse(path):
 
 def words(t):
     return len(t.split())
+
+
+WPM = 180  # measured pace of the narrator voice
+
+
+def secs(t):
+    return round(words(t) / WPM * 60)
+
+
+ASSETS = [
+    "**The dollar:** a dollar bill with a simple face. It's the hero and appears in almost every scene.",
+    "**The road map:** five stops left to right (1 Your App, 2 Market Maker, 3 Exchange, 4 Seller, 5 Clearinghouse). Draw it once and reuse it between stops, adding a check mark each time.",
+    "**The \"OWNER: ???\" paper:** set up in the opening and paid off at Stop 5, where the question marks become \"Cede & Co.\"",
+    "**Pizza:** used for the share-price trap and for \"one bite\" of a share.",
+    "**The stopwatch:** \"less than 1 second.\" Used after Stop 5 and at the end.",
+    "**Characters:** draw each one once and reuse the drawing every time they speak.",
+]
 
 
 def build(title, lines):
@@ -71,8 +95,12 @@ def build(title, lines):
         out.append(f"| {i} | **{v}** | {len(ls)} | {sum(words(l[2]) for l in ls)} | {direction} | {role} |")
     out += [
         "",
-        f"**Total:** {len(lines)} lines · {total} spoken words · about {total / 160:.1f} minutes of audio at 160 wpm, before pauses.\n",
+        f"**Total:** {len(lines)} lines (one scene each) · {total} spoken words · about {total / WPM:.1f} minutes of audio at the narrator's pace of {WPM} words per minute, before pauses. The longest scene is about {max(secs(l[2]) for l in lines)} seconds.\n",
         "**Pause-and-guess breaks:** the ⏸ cues are silent beats where the question stays on screen so viewers can guess. Hold the drawing for the stated time before the next line.\n",
+        "### Recurring drawings (draw once, reuse)",
+        *[f"- {a}" for a in ASSETS],
+        *[f"- **{k}:** {d}" for k, d in DRAW.items()],
+        "",
         "### Recording tips",
         "- **Every character gets its own voice,** so viewers can tell who is talking without seeing the drawing. **YOU** especially must never sound like the narrator.",
         f"- **Name each file after its line ID,** for example `{first_you}_YOU.wav`, so the editor can line the audio up in order.",
@@ -84,13 +112,13 @@ def build(title, lines):
         "",
         "## Part 1: Full script in order",
         "",
-        "Read this top to bottom for timing and context. 🎨 marks a drawing cue and ⏸ marks a silent \"pause and guess\" break with on-screen text. Neither is read aloud.",
+        "Each line is one whiteboard scene. 🎨 says what to draw while the line plays, and ⏸ marks a silent \"pause and guess\" break with on-screen text. Neither is read aloud. Times are estimates.",
         "",
     ]
     for id_, v, t, vis in lines:
         for cue in vis:
             out.append(f"> {cue}\n")
-        out.append(f"**{id_} · {v}**  \n{t}\n")
+        out.append(f"**{id_} · {v}** · ~{secs(t)} s  \n{t}\n")
     out += ["---", "", "## Part 2: Lines by voice (for recording sessions)", ""]
     for v in CAST:
         ls = [l for l in lines if l[1] == v]
