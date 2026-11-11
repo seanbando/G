@@ -17,7 +17,7 @@ Recording sheet for the whiteboard video. Every spoken line is numbered (VO-01, 
 
 ### Recording tips
 - **One voice actor can do it.** The narrator can also voice THE APP and THE EXCHANGE with a filter (a phone-speaker effect for THE APP, a slight echo for THE EXCHANGE). **YOU** should be a different person or a clearly different AI voice so viewers never mix it up with the narrator.
-- **Name each file after its line ID,** for example `VO-07_YOU.wav`, so the editor can line the audio up in order.
+- **Name each file after its line ID,** for example `VO-06_YOU.wav`, so the editor can line the audio up in order.
 - **Leave about half a second of silence** at the start and end of each file. Drawing usually takes longer than speaking, so the editor will add gaps.
 - **Read every line as a full sentence.** Don't clip character lines into short fragments.
 - **Watch the pronunciation of numbers:** say "$250.02" as "two hundred fifty dollars and two cents", "9:30 a.m." as "nine thirty a.m.", and "DTCC" letter by letter (D-T-C-C).
