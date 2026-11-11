@@ -25,18 +25,18 @@ VOICES = {
     "YOU": "cjVigY5qzO86Huf0OWal",           # Eric - Smooth, Trustworthy
     "THE APP": "iCVkdoGNYLTCRiLXC3Iu",       # Wayne - Robotic and Clear
     "THE EXCHANGE": "L1xUIshtTbSBoOSqBFaP",  # Andrew - Crisp Announcer
-    # Suggested voices for the newer characters (swap IDs if the creator prefers others):
+    # Newer characters (confirmed by the creator):
     "THE MARKET MAKER": "CwhRBWXzGAHq8TQ4Fs17",   # Roger - Laid-Back, Casual, Resonant
-    "THE SELLER": "hpp4J3VqNfWAUOO0d1Us",         # Bella - Professional, Bright, Warm
+    "THE SELLER": "FGY2WhTYpPnrIDTdsKH5",         # Laura - Enthusiast, Quirky Attitude
     "THE CLEARINGHOUSE": "pqHfZKP75CvOlQylNhV4",  # Bill - Wise, Mature, Balanced
     "MAYA": "cgSgspJ2msm6clMCkdW9",               # Jessica - Playful, Bright, Warm
     "JORDAN": "bIHbv24MWmeRgasZH58o",             # Will - Relaxed Optimist
 }
-MODEL = "eleven_multilingual_v2"
+MODEL = "eleven_v4"  # narrator style D, chosen by the creator
 FORMAT = "mp3_44100_128"
 
 # Delivery: lower stability = more natural variation; a little style = more expressive.
-SETTINGS = dict(stability=0.35, similarity_boost=0.8, style=0.25, use_speaker_boost=True)
+SETTINGS = dict(stability=0.4, similarity_boost=0.8, style=0.2, use_speaker_boost=True)
 DEFAULT_SPEED = 1.0
 # Faster read for the hook (roughly the first 30 seconds).
 SPEED = {"VO-01": 1.12, "VO-02": 1.12, "VO-03": 1.12}
