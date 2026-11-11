@@ -34,8 +34,12 @@ FINAL_TARGET = -14.0  # LUFS for the finished track (YouTube's level)
 LIMIT = "alimiter=limit=0.89:level=false"  # keeps peaks under about -1 dB
 
 # Lines the voice model read too fast, measured in words per minute against
-# the narrator's usual ~185; the factor brings them back to ~195.
+# the narrator's usual ~185; the factor brings them back to ~190.
 TEMPO = {"VO-30": 0.83, "VO-80": 0.82}
+
+# Lines that drag are sped up automatically (pitch unchanged):
+# narrator below 172 wpm -> toward 180; characters below 140 wpm -> toward 165.
+AUTO_TEMPO = {"NARRATOR": (172, 180, 1.2), "OTHER": (140, 165, 1.3)}  # (below, target, max factor)
 
 
 def loudness(path):
@@ -43,6 +47,11 @@ def loudness(path):
     err = subprocess.run(["ffmpeg", "-nostdin", "-i", path, "-af", "ebur128", "-f", "null", "-"],
                          capture_output=True, text=True, stdin=subprocess.DEVNULL).stderr
     return float(re.findall(r"I:\s+(-?[\d.]+) LUFS", err)[-1])
+
+
+def duration(path):
+    return float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                                 "-of", "csv=p=0", path], capture_output=True, text=True).stdout)
 
 
 def ff(*args):
@@ -62,8 +71,8 @@ def main(script, clips, out):
             silences[sec] = path
         return silences[sec]
 
-    parts, prev_voice, missing = [], None, []
-    for line_id, voice, _, cues in lines:
+    parts, prev_voice, missing, sped = [], None, [], []
+    for line_id, voice, text, cues in lines:
         files = sorted(glob.glob(os.path.join(clips, f"{line_id}[a-z]_*.mp3"))) or \
             sorted(glob.glob(os.path.join(clips, f"{line_id}_*.mp3")))
         if not files:
@@ -85,8 +94,16 @@ def main(script, clips, out):
             # the same chain as silenceremove can hang ffmpeg, and its automatic
             # mode is unreliable on very short clips.)
             ff("-i", f, "-af", chain, "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le", raw)
+            speedup = ""
+            if line not in TEMPO and len(files) == 1:
+                below, target, cap = AUTO_TEMPO["NARRATOR" if voice == "NARRATOR" else "OTHER"]
+                wpm = len(text.split()) / duration(raw) * 60
+                if wpm < below:
+                    factor = min(target / wpm, cap)
+                    speedup = f"atempo={factor:.3f},"
+                    sped.append(f"{line_id} {wpm:.0f}->{wpm * factor:.0f} wpm")
             gain = CLIP_TARGET - loudness(raw)
-            ff("-i", raw, "-af", f"volume={gain:.2f}dB,{LIMIT}", "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le", wav)
+            ff("-i", raw, "-af", f"{speedup}volume={gain:.2f}dB,{LIMIT}", "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le", wav)
             ff("-i", wav, "-c:a", "libmp3lame", "-b:a", "128k", os.path.join(clips, "trimmed", name + ".mp3"))
             if k:
                 parts.append(silence(0.12))
@@ -106,6 +123,8 @@ def main(script, clips, out):
                                 "-of", "csv=p=0", out], capture_output=True, text=True).stdout)
     size = os.path.getsize(out) / 1e6
     print(f"{out}: {int(dur // 60)}m {dur % 60:.0f}s, {size:.1f} MB")
+    if sped:
+        print(f"sped up {len(sped)} slow lines: " + ", ".join(sped))
 
 
 if __name__ == "__main__":
