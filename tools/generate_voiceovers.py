@@ -10,6 +10,8 @@ from the environment.
 """
 import argparse
 import os
+import re
+import string
 import sys
 
 from elevenlabs.client import ElevenLabs
@@ -33,6 +35,42 @@ DEFAULT_SPEED = 1.0
 # Faster read for the hook (roughly the first 30 seconds).
 SPEED = {"VO-01": 1.12, "VO-02": 1.12, "VO-03": 1.12}
 
+# --split: long lines are cut into pieces of a few sentences (VO-13a, VO-13b, ...).
+SPLIT_TARGET = 220  # aim for pieces of about this many characters
+SPLIT_MIN = 120     # a line shorter than this is never split
+
+
+def sentences(text):
+    """Split into sentences without breaking on abbreviations like 'U.S.'."""
+    parts, start = [], 0
+    for m in re.finditer(r"[.?!]['\"]?\s+(?=[A-Z\"'])", text):
+        before = text[start:m.end()].rstrip()
+        if re.search(r"\b(?:[A-Z]\.){2,}$", before):  # U.S. followed by a capital
+            continue
+        parts.append(before)
+        start = m.end()
+    parts.append(text[start:].strip())
+    return [p for p in parts if p]
+
+
+def split_line(text):
+    if len(text) < SPLIT_MIN:
+        return [text]
+    pieces, cur = [], ""
+    for sent in sentences(text):
+        if cur and len(cur) + 1 + len(sent) > SPLIT_TARGET:
+            pieces.append(cur)
+            cur = sent
+        else:
+            cur = f"{cur} {sent}".strip()
+    if cur:
+        # Fold a very short tail into the previous piece.
+        if pieces and len(cur) < 60:
+            pieces[-1] += " " + cur
+        else:
+            pieces.append(cur)
+    return pieces
+
 
 def main():
     ap = argparse.ArgumentParser()
@@ -41,6 +79,7 @@ def main():
     ap.add_argument("--only", help="comma-separated line IDs, e.g. VO-01,VO-06")
     ap.add_argument("--force", action="store_true", help="overwrite existing files")
     ap.add_argument("--model", default=MODEL, help="ElevenLabs model ID")
+    ap.add_argument("--split", action="store_true", help="cut long lines into smaller pieces")
     args = ap.parse_args()
 
     _, lines = parse(args.script)
@@ -48,17 +87,25 @@ def main():
     os.makedirs(args.out_dir, exist_ok=True)
     client = ElevenLabs()  # reads ELEVENLABS_API_KEY
 
-    for i, (line_id, voice, text, _) in enumerate(lines):
-        if only and line_id not in only:
+    # Expand lines into (file_id, line_id, voice, text) units.
+    units = []
+    for line_id, voice, text, _ in lines:
+        pieces = split_line(text) if args.split else [text]
+        for k, piece in enumerate(pieces):
+            suffix = string.ascii_lowercase[k] if len(pieces) > 1 else ""
+            units.append((line_id + suffix, line_id, voice, piece))
+
+    for i, (file_id, line_id, voice, text) in enumerate(units):
+        if only and line_id not in only and file_id not in only:
             continue
-        name = f"{line_id}_{voice.replace(' ', '_')}.mp3"
+        name = f"{file_id}_{voice.replace(' ', '_')}.mp3"
         path = os.path.join(args.out_dir, name)
         if os.path.exists(path) and not args.force:
             print(f"skip  {name} (exists)")
             continue
-        # Surrounding lines give the model context, so delivery flows between files.
-        prev_text = lines[i - 1][2] if i > 0 else None
-        next_text = lines[i + 1][2] if i + 1 < len(lines) else None
+        # Surrounding text gives the model context, so delivery flows between files.
+        prev_text = units[i - 1][3] if i > 0 else None
+        next_text = units[i + 1][3] if i + 1 < len(units) else None
         speed = SPEED.get(line_id, DEFAULT_SPEED)
         audio = client.text_to_speech.convert(
             voice_id=VOICES[voice],
@@ -73,7 +120,6 @@ def main():
             for chunk in audio:
                 f.write(chunk)
         print(f"wrote {name} ({os.path.getsize(path) // 1024} KB, {len(text)} chars, speed {speed})")
-
 
 if __name__ == "__main__":
     main()
