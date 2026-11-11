@@ -14,7 +14,7 @@ That's what we're going to find out. And here's something even stranger. On the 
 
 [DRAW: The "OWNER: ???" paper with a magnifying glass over it. Write "Answer at Stop 5."]
 
-By the end of this video, you'll know whose name is on it, and why that's totally fine.
+By the end of this video, you'll know whose name is on it, and what that means for your ownership.
 
 [DRAW: The road map, drawn left to right: 1 Your App, 2 Market Maker, 3 Exchange, 4 Seller, 5 Clearinghouse. The dollar stands at the start. This map returns between every stop.]
 
@@ -50,9 +50,9 @@ Think of each company as a pizza and each share as a slice. Company A is cut int
 
 Company B is cut into a million slices at five dollars each, so the whole pizza is worth five million dollars. The cheap slice came from the much bigger pizza.
 
-[DRAW: Write "Price of one share × number of shares = size of the company."]
+[DRAW: Write "Price of one share × number of shares = market cap."]
 
-So the price of one share doesn't tell you how big a company is. You have to multiply it by the number of shares.
+So the price of one share doesn't tell you how big a company is. Multiply it by the number of shares, and you get what the stock market says the company is worth. That's called market capitalization, or market cap.
 
 [DRAW: A hand slips a note into a pocket. The note says "Ask one more question."]
 
@@ -78,9 +78,9 @@ THE APP: Got it. I'm buying one dollar of Apple at the market price.
 
 YOU: What's the market price?
 
-[DRAW: THE APP points to a price tag that wobbles slightly: "$250.00 … $250.03."]
+[DRAW: THE APP points to a price tag that wobbles: "$250.00 … $250.0?" with a small note: "Can change before it goes through."]
 
-THE APP: It's the best price I can get for you right now. It might move a few cents before your order goes through.
+THE APP: I'm placing a market order, so I'll buy at whatever price is available when it goes through. That can be different from the price you saw.
 
 [DRAW: The dollar turns into a paper slip labelled "ORDER: buy $1 of Apple." A small sign reads "Looking for a seller…"]
 
@@ -96,7 +96,7 @@ YOU: The market what?
 
 [DRAW: A big building with a trading screen, labelled "Market maker = big trading company." An arrow turns it into a corner store with shelves of Apple stock.]
 
-A market maker is a big trading company that's always ready to buy or sell. Think of it as a store that always keeps Apple stock on the shelf.
+A market maker is a big trading company that regularly posts prices it's willing to buy and sell at. Think of it as a store that usually keeps Apple stock on the shelf.
 
 [DRAW: The store's sign shows two prices: "We buy: lower. We sell: higher."]
 
@@ -104,7 +104,7 @@ Like any store, it buys a little cheaper than it sells.
 
 [DRAW: THE MARKET MAKER, a friendly clerk behind the counter, pointing at two signs: "We buy at $250.00" and "We sell at $250.02."]
 
-THE MARKET MAKER: I'll buy Apple from you at two hundred fifty dollars, or sell it to you at two hundred fifty dollars and two cents. I'm open all day.
+THE MARKET MAKER: I'll buy Apple from you at two hundred fifty dollars, or sell it to you at two hundred fifty dollars and two cents. Those prices change as the market moves.
 
 [DRAW: Zoom in on the gap between the two signs. Write "2¢." A small coin goes into the clerk's jar, then a small coin falls out.]
 
@@ -114,13 +114,13 @@ That tiny two-cent gap is how the market maker tries to make money, although it 
 
 Two of the biggest market makers are Citadel Securities and Virtu.
 
-[DRAW: The clerk hands THE APP a small envelope. THE APP shows a sign that says "$0 trades."]
+[DRAW: The clerk hands THE APP a small envelope. THE APP shows a sign that says "$0 commission."]
 
-Here's something most people don't know. Market makers often pay your app to send them your orders. That's one reason many apps can let you trade for free.
+Here's something most people don't know. Market makers often pay your app to send them your orders. That's one reason many apps can let you trade without paying a commission.
 
-[DRAW: THE APP holding a magnifying glass over price tags, looking for the best one.]
+[DRAW: THE APP holding a magnifying glass over two things: a price tag and a check mark labelled "Will it get filled?"]
 
-Your app is still required to look for a good price for you.
+Your broker still has to try to get you the best available deal, considering price and how reliably the order can be filled.
 
 [DRAW: Two arrows from the store. One arrow: "Has it: sold off the shelf." The other arrow: "Doesn't have it: go to Stop 3."]
 
@@ -136,7 +136,7 @@ The New York Stock Exchange still rings its famous opening bell on Wall Street a
 
 [DRAW: An arrow from the bell across a river to a plain, boxy building labelled "Data center, New Jersey," full of blinking computers.]
 
-But here's the twist. The computers that actually match the trades sit in data centers in New Jersey.
+But here's the twist. The computers that match trades for the New York Stock Exchange and Nasdaq sit in data centers in New Jersey.
 
 [DRAW: THE EXCHANGE, a building with a face, holding two lists: "Want to buy" and "Want to sell."]
 
@@ -150,9 +150,9 @@ When a buyer and a seller agree on a price, it puts them together.
 
 THE EXCHANGE: I have a buyer and a seller at the same price, so you two are a match.
 
-[DRAW: A clock with the hours from 9:30 to 4:00 shaded in. A tiny "Mon to Fri" calendar.]
+[DRAW: A clock with the hours from 9:30 to 4:00 shaded in. A tiny "Mon to Fri" calendar with a note: "except holidays and a few early closes."]
 
-The market is open from nine thirty in the morning until four in the afternoon, Eastern time, on weekdays.
+Regular trading hours are nine thirty in the morning until four in the afternoon, Eastern time, Monday through Friday, except market holidays and a few early-close days.
 
 [DRAW: The shaded clock with small zigzag lines drawn before 9:30 and after 4:00.]
 
@@ -180,9 +180,9 @@ YOU: So Apple gets nothing?
 
 Not from your trade, it doesn't. Apple got money from its stock when it first sold shares to the public, back in December of nineteen eighty.
 
-[DRAW: Apple shares being passed hand to hand along a long line of people, while Apple's logo watches from the side.]
+[DRAW: Two investors trading Apple stock. The money goes to the seller, while Apple's logo watches from the side.]
 
-Since then, almost every Apple share has simply been passed from one investor to another.
+Today, when investors trade Apple stock on the market, the money normally goes to the seller, not to Apple.
 
 [DRAW: A box office sells a concert ticket to Fan 1. Money goes to the band.]
 
@@ -198,31 +198,31 @@ Stop five is where your trade becomes official. Your trade is matched, but the p
 
 [DRAW: Two calendar pages: "Tuesday: trade" with an arrow to "Wednesday: final," with a stamp that says "OFFICIAL."]
 
-Most trades become final one business day later, so your Tuesday trade is final on Wednesday.
+Most trades settle one business day later, so your Tuesday trade is usually final on Wednesday.
 
 [DRAW: THE CLEARINGHOUSE, a referee with a whistle standing between the buyer and the seller.]
 
 THE CLEARINGHOUSE: Nobody walks away until everyone gets paid.
 
-[DRAW: The referee holds a sign that says "D-T-C-C." Money moves one way and the stock moves the other, with the referee in the middle.]
+[DRAW: The referee wears a jersey that says "D-T-C-C" and holds a clipboard listing what each firm owes. Money moves one way and shares move the other.]
 
-That's the clearinghouse, a company called the D-T-C-C. It sits in the middle of the trade and makes sure the money and the stock end up where they're supposed to, even if one side can't pay.
+That's the clearinghouse. Behind the scenes, companies within a group called the D-T-C-C help clear and settle the trade. They work out what each firm owes and arrange the exchange of money and shares.
 
 [DRAW: The "OWNER: ???" paper from the opening comes back. The question marks are erased and replaced with "Cede & Co."]
 
-And now, the paperwork I promised you at the start. On the official records, most American stock is registered to a company called Cede and Company.
+And now, the paperwork I promised you at the start. On the official records, many shares held through brokerages are registered under a company called Cede and Company, which the settlement system uses as its name on the record.
 
 [DRAW: YOU looks shocked, holding the paper.]
 
 YOU: Hold on. So it's not my stock?
 
-[DRAW: A coat check counter at a restaurant. A coat hangs on a hook.]
+[DRAW: A coat check counter at a restaurant. A coat hangs on a hook with a tag that has no name on it. YOU holds the ticket.]
 
-It is your stock. Think of a coat check at a restaurant. The coat check holds your coat and keeps track of the ticket, but the coat still belongs to you.
+It is your stock. It's a bit like a coat check at a restaurant. The tag on the hanger doesn't have your name on it, but your ticket shows the coat belongs to you.
 
-[DRAW: The coat's tag says "Cede & Co." The ticket in YOU's hand says "Yours." THE APP holds a notebook that says "Slice of Apple: belongs to YOU."]
+[DRAW: A record book with "Cede & Co." as the name on the record. Next to it, THE APP holds its own notebook that says "Slice of Apple: owner = YOU."]
 
-Cede and Company holds the paperwork so trades can move fast, and your app keeps the record that says the slice is yours.
+In the same way, the name on the record isn't yours, but your brokerage's records show the shares belong to you. That setup lets trades settle quickly.
 
 [DRAW: An Apple price arrow going up, with YOU smiling, and an arrow going down, with YOU frowning.]
 
@@ -232,9 +232,9 @@ If Apple goes up, you gain, and if it goes down, you lose.
 
 YOU: Okay, but what if my app goes out of business?
 
-[DRAW: A shield labelled "S-I-P-C: up to $500,000" standing in front of YOU's account, while THE APP's building crumbles behind it.]
+[DRAW: A shield labelled "S-I-P-C: up to $500,000 per customer, including $250,000 cash" standing in front of YOU, while THE APP's building crumbles behind it.]
 
-If the company behind your app is a member of S-I-P-C, your account is protected up to five hundred thousand dollars if the company fails and your investments go missing.
+If the company behind your app is a member of S-I-P-C and it fails with customer investments missing, S-I-P-C can help get them back, up to five hundred thousand dollars per customer, including up to two hundred fifty thousand dollars in cash.
 
 [DRAW: A falling stock arrow passes straight past the shield, labelled "Not covered."]
 
@@ -242,11 +242,11 @@ It doesn't protect you if the stock simply goes down.
 
 [DRAW: The road map with all five stops checked off. The dollar's path is drawn as a dotted line.]
 
-So here's where we are. Your dollar became an order in your app, went to a market maker or an exchange, landed with a stranger who wanted to sell, and became official the next day.
+So here's where we are. Your dollar became an order in your app, went to a market maker or an exchange, landed with a stranger who wanted to sell, and became official the next business day.
 
-[DRAW: A stopwatch reading "less than 1 second."]
+[DRAW: A stopwatch labelled "Order: can be a fraction of a second" next to a calendar labelled "Settlement: next business day."]
 
-That's five stops, and most of it happened in less than a second.
+That's five stops. The order can go through in a fraction of a second, and settlement normally follows one business day later.
 
 [DRAW: The dollar looks at itself in a mirror, and the reflection shows a stack of dollars.]
 
@@ -288,7 +288,7 @@ YOU: So why would Jordan pay more than Maya did?
 
 [DRAW: A see-saw. Buyers on one side push the price up; sellers on the other side push it down.]
 
-Because the price of a stock is just the last price someone agreed to pay. If buyers are willing to pay more, the price goes up. If sellers are willing to take less, the price goes down.
+Because the price you usually see is the last-traded price, the last price someone actually agreed to pay. If buyers are willing to pay more, the price goes up. If sellers are willing to take less, the price goes down.
 
 [DRAW: A price board: "Last trade: $250.00."]
 
@@ -296,13 +296,13 @@ Here's one more to try. Apple's last trade was at two hundred fifty dollars.
 
 [DRAW: A seller holds a sign: "I'll sell at $250.05." A buyer reaches for it, and the phone screen shows a question mark.]
 
-The cheapest anyone will sell for right now is two hundred fifty dollars and five cents, and a buyer decides to pay it. What price shows up on your screen?
+The cheapest anyone will sell for right now is two hundred fifty dollars and five cents, and a buyer decides to pay it. What does the last-trade price become?
 
-[PAUSE: 2 seconds. On screen: "Last trade $250.00. Someone pays $250.05. Price now?"]
+[PAUSE: 2 seconds. On screen: "Last trade $250.00. Someone pays $250.05. Last-trade price now?"]
 
 [DRAW: The price board flips to "$250.05." A tiny chart line ticks up by one step.]
 
-It's two hundred fifty dollars and five cents, because the price you see is simply the last trade.
+The last-trade price becomes two hundred fifty dollars and five cents, because someone just bought at that price.
 
 [DRAW: Many tiny handshakes forming a zigzag stock chart line.]
 
@@ -330,19 +330,19 @@ Then let's go back to your one dollar and change one thing.
 
 [DRAW: The dollar drops into one giant basket labelled "S&P 500 index fund," overflowing with about 500 tiny logos.]
 
-Instead of buying a slice of Apple, you buy a slice of a giant basket that holds about five hundred big American companies. That's called an S and P five hundred index fund.
+Instead of buying a slice of Apple, you buy a slice of a giant basket, a fund that owns about five hundred big American companies. That's called an S and P five hundred index fund.
 
 [DRAW: Inside the basket, company logos at different sizes, with the biggest ones drawn largest. The dollar is spread thinly across all of them.]
 
-Your one dollar now owns a tiny piece of Apple, and Microsoft, and Nvidia, and hundreds of others, all at once.
+Through the fund, your one dollar gives you a tiny piece of Apple, and Microsoft, and Nvidia, and hundreds of others, all at once.
 
 [DRAW: YOU sitting on a bench next to the basket, holding a calendar.]
 
 YOU: Okay, but what happens if I just leave my dollar in there?
 
-[DRAW: A long road marked with years. A small plant grows bigger along it. Write "About 10% a year, on average, historically."]
+[DRAW: A long road marked with years. A small plant grows bigger along it. Write "S&P 500: about 10% a year historically, dividends reinvested, before inflation."]
 
-Nobody can promise anything. But over long stretches of history, big American companies have grown about ten percent a year on average.
+Nobody can promise anything. But over long periods, the S and P five hundred has historically returned roughly ten percent a year with dividends reinvested, before inflation. The result depends on the period you measure.
 
 [DRAW: A dollar at the start of a 40-year road. Three doors at the end: "$5," "$15," "$45."]
 
@@ -366,17 +366,17 @@ The basket as a whole came back both times, but a single company doesn't always 
 
 So here's the whole trip one last time. Your dollar bought a slice of ownership. It left your app, may have stopped at a market maker or an exchange, and landed with a stranger.
 
-[DRAW: The "OFFICIAL" stamp on Wednesday, the coat check tag "Cede & Co.", and YOU holding a tiny slice of Apple.]
+[DRAW: The "OFFICIAL" stamp on Wednesday, the record book with "Cede & Co.", and YOU holding a tiny slice of Apple.]
 
-It became official the next day, with the paperwork held by Cede and Company. Apple never got your dollar, but you now own a tiny piece of Apple.
+It settled the next business day, with Cede and Company as the name on the record. Apple never got your dollar, but you now own a tiny piece of Apple.
 
 [DRAW: YOU wiping their forehead, looking at the long road map.]
 
 YOU: That's a lot of stops for one dollar.
 
-[DRAW: The stopwatch again: "under 1 second."]
+[DRAW: The stopwatch and the calendar again: "Order: a fraction of a second. Paperwork: next business day."]
 
-It is, and almost all of it happened in under a second.
+It is. The order can go through in a fraction of a second, and the paperwork finishes one business day later.
 
 [DRAW: Three signposts: "Market maker," "The stranger," "Cede & Co. coat check," with a big comment bubble.]
 
