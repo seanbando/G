@@ -1,6 +1,6 @@
 # "I Like the Stock" — How a Mall Game Shop Broke Wall Street
 
-**Format:** Story-driven whiteboard explainer · ~2,500 spoken words · ~15–16 min at ~160 wpm
+**Format:** Story-driven whiteboard explainer · ~1,700 spoken words · ~11 min at ~160 wpm (below the 2,000–3,000 target; Chapters 2 and 7 are the natural places to expand)
 **Voices:** Narrator + character voices (bold role names). Each character = a drawn figure with a speech bubble.
 **Callback line:** "I like the stock."
 **Running example character:** Sam and the sneakers (explains short selling)
