@@ -84,7 +84,7 @@ def build(title, lines):
     total = sum(words(l[2]) for l in lines)
     out = [
         f"# Voice-Over Script: {title}\n",
-        "Recording sheet for the whiteboard video. Every spoken line is numbered (VO-01, VO-02 …) so audio files can be named to match and dropped onto the timeline in order.\n",
+        "Voice-only recording sheet. Every spoken line is numbered (VO-01, VO-02 …) and becomes one audio file with the same number, so the files join back together in order. Golpo animates the finished narration, so there are no drawing notes here; those live in the main script and the Golpo brief.\n",
         "**All numbers, dollar amounts, dates, times and abbreviations are written out in words**, so read them exactly as written.\n",
         f"## Cast: {len(CAST)} voices\n",
         "| # | Voice | Lines | Words | Character direction | Role in the story |",
@@ -96,15 +96,11 @@ def build(title, lines):
     out += [
         "",
         f"**Total:** {len(lines)} lines (one scene each) · {total} spoken words · about {total / WPM:.1f} minutes of audio at the narrator's pace of {WPM} words per minute, before pauses. The longest scene is about {max(secs(l[2]) for l in lines)} seconds.\n",
-        "**Pause-and-guess breaks:** the ⏸ cues are silent beats where the question stays on screen so viewers can guess. Hold the drawing for the stated time before the next line.\n",
-        "### Recurring drawings (draw once, reuse)",
-        *[f"- {a}" for a in ASSETS],
-        *[f"- **{k}:** {d}" for k, d in DRAW.items()],
-        "",
+        "**Pause-and-guess breaks:** the ⏸ cues are silent beats so viewers can guess. Nobody records them; the silence is added automatically when the files are joined.\n",
         "### Recording tips",
         "- **Every character gets its own voice,** so viewers can tell who is talking without seeing the drawing. **YOU** especially must never sound like the narrator.",
         f"- **Name each file after its line ID,** for example `{first_you}_YOU.wav`, so the editor can line the audio up in order.",
-        "- **Leave about half a second of silence** at the start and end of each file. Drawing usually takes longer than speaking, so the editor will add gaps.",
+        "- **Don't worry about silence at the start or end of a file.** It's trimmed automatically when the files are joined.",
         "- **Read every line as a full sentence.** Don't clip character lines into short fragments.",
         "- **Letter-by-letter names:** \"D-T-C-C\" and \"S-I-P-C\" are written with hyphens so they're read one letter at a time, and \"U.S.\" is read \"you-ess\".",
         "",
@@ -112,12 +108,13 @@ def build(title, lines):
         "",
         "## Part 1: Full script in order",
         "",
-        "Each line is one whiteboard scene. 🎨 says what to draw while the line plays, and ⏸ marks a silent \"pause and guess\" break with on-screen text. Neither is read aloud. Times are estimates.",
+        "⏸ marks a silent \"pause and guess\" break. It isn't read aloud. Times are estimates.",
         "",
     ]
     for id_, v, t, vis in lines:
         for cue in vis:
-            out.append(f"> {cue}\n")
+            if cue.startswith("⏸"):
+                out.append(f"> {cue}\n")
         out.append(f"**{id_} · {v}** · ~{secs(t)} s  \n{t}\n")
     out += ["---", "", "## Part 2: Lines by voice (for recording sessions)", ""]
     for v in CAST:
@@ -125,10 +122,8 @@ def build(title, lines):
         out.append(f"### {v} ({len(ls)} lines)\n")
         out += [f"- **{id_}:** {t}" for id_, _, t, _ in ls]
         out.append("")
-    out += ["---", "", "## Part 3: Drawing and pause cues (for the animator and editor)", ""]
-    out += [f"- **Before {id_}:** {cue}" for id_, _, _, vis in lines for cue in vis]
-    out.append("- **Every character line:** draw the speaker with a speech bubble: " +
-               "; ".join(f"{k} = {d}" for k, d in DRAW.items()) + ".")
+    out += ["---", "", "## Part 3: Pause cues (added as silence when joining)", ""]
+    out += [f"- **Before {id_}:** {cue}" for id_, _, _, vis in lines for cue in vis if cue.startswith("⏸")]
     return "\n".join(out) + "\n"
 
 
