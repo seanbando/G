@@ -25,6 +25,12 @@ VOICES = {
     "YOU": "cjVigY5qzO86Huf0OWal",           # Eric - Smooth, Trustworthy
     "THE APP": "iCVkdoGNYLTCRiLXC3Iu",       # Wayne - Robotic and Clear
     "THE EXCHANGE": "L1xUIshtTbSBoOSqBFaP",  # Andrew - Crisp Announcer
+    # Suggested voices for the newer characters (swap IDs if the creator prefers others):
+    "THE MARKET MAKER": "CwhRBWXzGAHq8TQ4Fs17",   # Roger - Laid-Back, Casual, Resonant
+    "THE SELLER": "hpp4J3VqNfWAUOO0d1Us",         # Bella - Professional, Bright, Warm
+    "THE CLEARINGHOUSE": "pqHfZKP75CvOlQylNhV4",  # Bill - Wise, Mature, Balanced
+    "MAYA": "cgSgspJ2msm6clMCkdW9",               # Jessica - Playful, Bright, Warm
+    "JORDAN": "bIHbv24MWmeRgasZH58o",             # Will - Relaxed Optimist
 }
 MODEL = "eleven_multilingual_v2"
 FORMAT = "mp3_44100_128"
