@@ -29,12 +29,20 @@ TRIM = ("silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,
         "areverse,silenceremove=stop_periods=-1:stop_duration=0.45:stop_threshold=-45dB:stop_silence=0.4")
 
 
-CLIP_LOUDNESS = "loudnorm=I=-16:TP=-2:LRA=11"
-FINAL_LOUDNESS = "loudnorm=I=-14:TP=-1:LRA=11"
+CLIP_TARGET = -16.0   # LUFS every clip is set to
+FINAL_TARGET = -14.0  # LUFS for the finished track (YouTube's level)
+LIMIT = "alimiter=limit=0.89:level=false"  # keeps peaks under about -1 dB
 
 # Lines the voice model read too fast, measured in words per minute against
 # the narrator's usual ~185; the factor brings them back to ~195.
 TEMPO = {"VO-30": 0.83, "VO-80": 0.82}
+
+
+def loudness(path):
+    """Integrated loudness in LUFS, measured over the whole file."""
+    err = subprocess.run(["ffmpeg", "-nostdin", "-i", path, "-af", "ebur128", "-f", "null", "-"],
+                         capture_output=True, text=True, stdin=subprocess.DEVNULL).stderr
+    return float(re.findall(r"I:\s+(-?[\d.]+) LUFS", err)[-1])
 
 
 def ff(*args):
@@ -71,8 +79,14 @@ def main(script, clips, out):
             name = os.path.splitext(os.path.basename(f))[0]
             wav = os.path.join(tmp, name + ".wav")
             line = name.split("_")[0]
-            chain = TRIM + (f",atempo={TEMPO[line]}" if line in TEMPO else "") + "," + CLIP_LOUDNESS
-            ff("-i", f, "-af", chain, "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le", wav)
+            chain = TRIM + (f",atempo={TEMPO[line]}" if line in TEMPO else "")
+            raw = os.path.join(tmp, name + "_raw.wav")
+            # Trim first, then measure and apply an exact gain. (Running loudnorm in
+            # the same chain as silenceremove can hang ffmpeg, and its automatic
+            # mode is unreliable on very short clips.)
+            ff("-i", f, "-af", chain, "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le", raw)
+            gain = CLIP_TARGET - loudness(raw)
+            ff("-i", raw, "-af", f"volume={gain:.2f}dB,{LIMIT}", "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le", wav)
             ff("-i", wav, "-c:a", "libmp3lame", "-b:a", "128k", os.path.join(clips, "trimmed", name + ".mp3"))
             if k:
                 parts.append(silence(0.12))
@@ -84,8 +98,10 @@ def main(script, clips, out):
     listing = os.path.join(tmp, "list.txt")
     with open(listing, "w") as fh:
         fh.writelines(f"file '{p}'\n" for p in parts)
-    ff("-f", "concat", "-safe", "0", "-i", listing, "-af", FINAL_LOUDNESS,
-       "-ar", "44100", "-c:a", "libmp3lame", "-b:a", "128k", out)
+    joined = os.path.join(tmp, "joined.wav")
+    ff("-f", "concat", "-safe", "0", "-i", listing, "-c:a", "pcm_s16le", joined)
+    gain = FINAL_TARGET - loudness(joined)
+    ff("-i", joined, "-af", f"volume={gain:.2f}dB,{LIMIT}", "-ar", "44100", "-c:a", "libmp3lame", "-b:a", "128k", out)
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                 "-of", "csv=p=0", out], capture_output=True, text=True).stdout)
     size = os.path.getsize(out) / 1e6
