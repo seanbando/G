@@ -8,6 +8,10 @@ Order and pauses come from the script, so the track always matches it:
 - 0.12 s between pieces of one line (VO-13a, VO-13b), 0.3 s between lines
   from the same voice, 0.4 s when the speaker changes
 - each [PAUSE: N seconds ...] in the script becomes N seconds of silence
+- every clip is levelled to the same loudness, and the finished track is
+  brought to YouTube's loudness (-14 LUFS, peaks under -1 dB)
+- clips listed in TEMPO are gently slowed (pitch unchanged) when the voice
+  model rushed them
 Trimmed copies of every clip are written to <clips_dir>/trimmed/.
 """
 import glob
@@ -23,6 +27,14 @@ from make_voiceover import parse  # noqa: E402
 TRIM = ("silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,"
         "areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08,"
         "areverse,silenceremove=stop_periods=-1:stop_duration=0.45:stop_threshold=-45dB:stop_silence=0.4")
+
+
+CLIP_LOUDNESS = "loudnorm=I=-16:TP=-2:LRA=11"
+FINAL_LOUDNESS = "loudnorm=I=-14:TP=-1:LRA=11"
+
+# Lines the voice model read too fast, measured in words per minute against
+# the narrator's usual ~185; the factor brings them back to ~195.
+TEMPO = {"VO-30": 0.83, "VO-80": 0.82}
 
 
 def ff(*args):
@@ -58,7 +70,9 @@ def main(script, clips, out):
         for k, f in enumerate(files):
             name = os.path.splitext(os.path.basename(f))[0]
             wav = os.path.join(tmp, name + ".wav")
-            ff("-i", f, "-af", TRIM, "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le", wav)
+            line = name.split("_")[0]
+            chain = TRIM + (f",atempo={TEMPO[line]}" if line in TEMPO else "") + "," + CLIP_LOUDNESS
+            ff("-i", f, "-af", chain, "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le", wav)
             ff("-i", wav, "-c:a", "libmp3lame", "-b:a", "128k", os.path.join(clips, "trimmed", name + ".mp3"))
             if k:
                 parts.append(silence(0.12))
@@ -70,7 +84,8 @@ def main(script, clips, out):
     listing = os.path.join(tmp, "list.txt")
     with open(listing, "w") as fh:
         fh.writelines(f"file '{p}'\n" for p in parts)
-    ff("-f", "concat", "-safe", "0", "-i", listing, "-c:a", "libmp3lame", "-b:a", "128k", out)
+    ff("-f", "concat", "-safe", "0", "-i", listing, "-af", FINAL_LOUDNESS,
+       "-ar", "44100", "-c:a", "libmp3lame", "-b:a", "128k", out)
     dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
                                 "-of", "csv=p=0", out], capture_output=True, text=True).stdout)
     size = os.path.getsize(out) / 1e6
