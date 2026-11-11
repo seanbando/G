@@ -8,17 +8,17 @@ Recording sheet for the whiteboard video. Every spoken line is numbered (VO-01, 
 
 | # | Voice | Lines | Words | Character direction | Role in the story |
 |---|---|---|---|---|---|
-| 1 | **NARRATOR** | 42 | 1800 | Main host. Warm, clear, conversational, like explaining money to a friend. Steady pace, about 160 words per minute. | The whole story |
-| 2 | **YOU** | 7 | 47 | The viewer's inner voice. Curious and a little surprised. Younger and more casual than the narrator. Must sound clearly different from the narrator. | Asks the questions the audience is thinking |
-| 3 | **THE APP** | 2 | 26 | The investing app, personified. Upbeat, efficient, slightly robotic customer-service tone. | Confirms the order |
-| 4 | **THE MARKET MAKER** | 1 | 28 | A trading firm, personified. Relaxed, confident, a little salesy, like a currency-booth clerk. Not shady. | Quotes the buy and sell prices (stop two) |
+| 1 | **NARRATOR** | 45 | 1688 | Main host. Warm, clear, conversational, like explaining money to a friend. Steady pace, about 160 words per minute. | The whole story |
+| 2 | **YOU** | 11 | 84 | The viewer's inner voice. Curious and a little surprised. Younger and more casual than the narrator. Must sound clearly different from the narrator. | Asks the questions the audience is thinking |
+| 3 | **THE APP** | 2 | 34 | The investing app, personified. Upbeat, efficient, slightly robotic customer-service tone. | Confirms the order |
+| 4 | **THE MARKET MAKER** | 1 | 27 | A trading firm, personified. Relaxed, confident, a little salesy, like a currency-booth clerk. Not shady. | Quotes the buy and sell prices (stop two) |
 | 5 | **THE EXCHANGE** | 1 | 17 | The stock exchange, personified. Calm, official, matter-of-fact, like an announcer or matchmaker. | Matches buyer and seller (stop three) |
-| 6 | **THE SELLER** | 1 | 15 | A retired teacher in Arizona. Warm, friendly, unhurried. | The stranger who gets your dollar (stop four) |
-| 7 | **THE CLEARINGHOUSE** | 1 | 19 | The D-T-C-C, personified. Steady, wise, a bit strict, like a referee. | Makes the trade official (stop five) |
+| 6 | **THE SELLER** | 1 | 16 | A retired teacher in Arizona. Warm, friendly, unhurried. | The stranger who gets your dollar (stop four) |
+| 7 | **THE CLEARINGHOUSE** | 1 | 7 | The D-T-C-C, personified. Steady, wise, a bit strict, like a referee. | Makes the trade official (stop five) |
 | 8 | **MAYA** | 1 | 19 | A young investor. Bright, a little proud of her savings. | Buys ten shares |
 | 9 | **JORDAN** | 1 | 12 | A young buyer. Relaxed and upbeat. | Buys Maya's shares for more |
 
-**Total:** 57 lines · 1983 spoken words · about 12.4 minutes of audio at 160 wpm, before pauses.
+**Total:** 64 lines · 1904 spoken words · about 11.9 minutes of audio at 160 wpm, before pauses.
 
 **Pause-and-guess breaks:** the ⏸ cues are silent beats where the question stays on screen so viewers can guess. Hold the drawing for the stated time before the next line.
 
@@ -36,21 +36,21 @@ Recording sheet for the whiteboard video. Every spoken line is numbered (VO-01, 
 Read this top to bottom for timing and context. 🎨 marks a drawing cue and ⏸ marks a silent "pause and guess" break with on-screen text. Neither is read aloud.
 
 **VO-01 · NARRATOR**  
-When you tap "buy" on a stock, your order can leave your phone and reach a trading firm's computers in less than a second. Some orders end up on systems in New Jersey, not Wall Street. And the company whose name is on the button usually doesn't get a single cent of your money.
+When you tap "buy" on a stock, your money almost never goes to the company whose name is on the button. If you buy one dollar of Apple, Apple usually doesn't get a single cent of it.
 
 **VO-02 · YOU**  
-Wait, then who does?
+Wait, then who gets it?
 
 **VO-03 · NARRATOR**  
-That's the first thing we're going to find out. Here's the second. On the official paperwork, the stock you buy usually isn't registered in your name, and it isn't registered in your app's name either. By the end of this video, you'll know whose name is on it, and why that's completely normal.
+That's what we're going to find out. And here's something even stranger. On the official paperwork, the stock you buy usually isn't in your name. By the end of this video, you'll know whose name is on it, and why that's totally fine.
 
 > 🎨 Draw: A road map with five stops: Your App, Market Maker, Exchange, Seller, Clearinghouse. A small dollar bill waits at the start. This map returns at every stop.
 
 **VO-04 · NARRATOR**  
-We're going to follow one dollar through five stops, from your pocket to a total stranger. But before the dollar moves, you need to know what it's buying.
+We're going to follow one dollar through five stops. At every stop, I'll tell you who's there and what they do, in plain English. But first, you need to know what your dollar is buying.
 
 **VO-05 · NARRATOR**  
-The stock market is a place where buyers and sellers meet to trade shares of public companies like Apple, Meta, and Alphabet. A stock is a piece of ownership in one of those companies.
+A stock is a small piece of ownership in a company. The stock market is simply the place where people buy and sell those pieces.
 
 **VO-06 · NARRATOR**  
 So here's a quick test. Company A's stock costs five hundred dollars a share. Company B's stock costs five dollars a share. Which company is worth more?
@@ -66,253 +66,293 @@ That was a trap, because I didn't give you enough information.
 > 🎨 Draw: Two pizzas side by side. Pizza A cut into 3 slices labelled $500. Pizza B cut into a million tiny slices labelled $5.
 
 **VO-09 · NARRATOR**  
-Think of each company as a pizza and each share as a slice. Company A is a pizza cut into only three slices, and each slice costs five hundred dollars, so the whole company is worth fifteen hundred dollars. Company B is cut into a million slices at five dollars each, so it's worth five million dollars. The cheap stock belongs to the company that's worth over three thousand times more.
+Think of each company as a pizza and each share as a slice. Company A is cut into only three slices, and each slice costs five hundred dollars, so the whole pizza is worth fifteen hundred dollars. Company B is cut into a million slices at five dollars each, so the whole pizza is worth five million dollars. The cheap slice came from the much bigger pizza.
 
 **VO-10 · NARRATOR**  
-The price of one share tells you almost nothing on its own. What matters is the price multiplied by the number of shares, which is called market value. Apple has roughly fifteen billion shares, which is why a few hundred dollars a share adds up to trillions. So when something sounds too simple, it's worth asking a follow-up question, and the stock market is full of simple-sounding answers.
+So the price of one share doesn't tell you how big a company is. You have to multiply it by the number of shares. Keep that trick in your pocket, because a lot of things in the stock market sound simple until you ask one more question.
 
 **VO-11 · NARRATOR**  
-Stop one is your app. Say you open an investing app on a Tuesday morning and buy one dollar of Apple. A whole share costs a few hundred dollars, so your dollar buys a small fraction of one share.
+Now let's spend your dollar. Stop one is your app.
 
-**VO-12 · THE APP**  
-Your order is in. I'm buying one dollar of Apple at the market price.
+**VO-12 · NARRATOR**  
+Say it's Tuesday morning, and you open an investing app and buy one dollar of Apple. One Apple share costs a few hundred dollars, so your dollar buys a tiny slice of one share, kind of like buying one bite of a whole pizza.
 
-**VO-13 · YOU**  
-Great. What price is that, exactly?
+**VO-13 · THE APP**  
+Got it. I'm buying one dollar of Apple at the market price.
 
-**VO-14 · THE APP**  
-It's whatever the best available price is when your order gets filled.
+**VO-14 · YOU**  
+What's the market price?
 
-**VO-15 · NARRATOR**  
-That's what a market order means. The price you saw on your screen isn't guaranteed, because it can move while your order is being filled. Your broker may also group your fractional order with other customers' orders before it buys.
+**VO-15 · THE APP**  
+It's the best price I can get for you right now. It might move a few cents before your order goes through.
 
 **VO-16 · NARRATOR**  
-Stop two is a kind of firm most people have never heard of. Many retail orders don't go straight to an exchange. The broker often sends them to a market maker, which is a trading firm like Citadel Securities or Virtu that's always ready to buy and sell.
+That's all that happens at stop one. Your dollar has turned into an order, and now the app needs to find someone who will sell you that slice.
 
-**VO-17 · THE MARKET MAKER**  
-I'll buy Apple from you at two hundred fifty dollars even, or sell it to you at two hundred fifty dollars and two cents. I'm here all day.
+> 🎨 Draw: Road map. The dollar moves from Your App to Market Maker.
 
-**VO-18 · NARRATOR**  
-It works a bit like a currency booth at the airport. That two-cent gap is called the spread. It isn't guaranteed profit, because the stock can move against the market maker a minute later. Citadel Securities says it handles about a third of all U.S. retail stock trading volume.
+**VO-17 · NARRATOR**  
+Stop two is the market maker.
+
+**VO-18 · YOU**  
+The market what?
 
 **VO-19 · NARRATOR**  
-So how can your app charge you zero commission? Market makers often pay brokers for sending them orders, which is called payment for order flow. Critics say it gives brokers a reason to route orders where they're paid most. Brokers are still required to seek the best execution reasonably available for your order.
+A market maker is a big trading company that's always ready to buy or sell. Think of it as a store that always keeps Apple stock on the shelf. Like any store, it buys a little cheaper than it sells.
 
-**VO-20 · NARRATOR**  
-The market maker might sell to you from its own inventory, or it might find shares somewhere else. That takes us to stop three, the stock exchange.
-
-> 🎨 Draw: Map of New Jersey with two dots, Mahwah and Carteret
+**VO-20 · THE MARKET MAKER**  
+I'll buy Apple from you at two hundred fifty dollars, or sell it to you at two hundred fifty dollars and two cents. I'm open all day.
 
 **VO-21 · NARRATOR**  
-The New York Stock Exchange still rings its opening bell at nine thirty in the morning, Eastern time, from its floor at eleven Wall Street. But its trading systems run in a data center in Mahwah, New Jersey, and Nasdaq's main U.S. data center is in Carteret, New Jersey. The New York exchange traces its roots to seventeen ninety-two, when twenty-four brokers signed an agreement in Lower Manhattan.
+That tiny two-cent gap is how the market maker tries to make money, although it can lose money too if the price moves the wrong way. Two of the biggest market makers are Citadel Securities and Virtu.
 
 **VO-22 · NARRATOR**  
-Regular trading runs from nine thirty in the morning to four in the afternoon, Eastern time, on weekdays. Some brokers also let you trade in the premarket session, which can start as early as four in the morning, and in after-hours trading until eight at night. Fewer people trade at those times, so prices can jump more and the gap between buying and selling prices is often wider.
+Here's something most people don't know. Market makers often pay your app to send them your orders. That's one reason many apps can let you trade for free. Your app is still required to look for a good price for you.
 
-**VO-23 · THE EXCHANGE**  
-I have a buyer and a seller at the same price, so you two are a match.
+**VO-23 · NARRATOR**  
+If the market maker has the stock, it can sell it to you straight off the shelf. If it doesn't, your order can head to stop three.
+
+> 🎨 Draw: Road map. The dollar moves from Market Maker to Exchange.
 
 **VO-24 · NARRATOR**  
-Which brings us back to the first question. Before I tell you who got your dollar, take a guess. Was it Apple, your app, or a total stranger?
+Stop three is the stock exchange. This is what most people picture when they hear "Wall Street." The New York Stock Exchange still rings its famous opening bell on Wall Street at nine thirty in the morning, Eastern time. But here's the twist. The computers that actually match the trades sit in data centers in New Jersey.
+
+> 🎨 Draw: A bell on Wall Street, with an arrow pointing across the river to a plain data center building in New Jersey.
+
+**VO-25 · NARRATOR**  
+An exchange works like a matchmaker. It keeps one list of people who want to buy and another list of people who want to sell. When a buyer and a seller agree on a price, it puts them together.
+
+**VO-26 · THE EXCHANGE**  
+I have a buyer and a seller at the same price, so you two are a match.
+
+**VO-27 · NARRATOR**  
+The market is open from nine thirty in the morning until four in the afternoon, Eastern time, on weekdays. Some apps let you trade earlier or later, but fewer people are trading then, so prices can jump around more.
+
+**VO-28 · NARRATOR**  
+So your order has found a match. That means it's time to answer the very first question. Who got your dollar? Take a guess.
 
 > ⏸ PAUSE 3 seconds. On screen: "A) Apple  B) Your app  C) A stranger"
 
-**VO-25 · NARRATOR**  
-It's the stranger. Stop four is whoever sold you that sliver. That might be the market maker itself, a pension fund, a hedge fund, or a retired teacher in Arizona.
-
-**VO-26 · THE SELLER**  
-I'm selling a little Apple to pay for a new roof. Thanks for the dollar.
-
-**VO-27 · YOU**  
-So Apple doesn't get my dollar at all?
-
-**VO-28 · NARRATOR**  
-Not from this trade, it doesn't. A company raises money when it sells new shares, like in its initial public offering. Apple went public on December twelfth, nineteen eighty, at twenty-two dollars a share and raised roughly a hundred million dollars. Almost every Apple trade since then has been between investors, like buying a concert ticket from another fan after the box office has sold out.
-
 **VO-29 · NARRATOR**  
-Apple still cares about its stock price, because executives are often paid in stock, shareholders vote on who sits on the board, and a high price makes it easier to raise money or pay for deals with shares. Companies can also move their own stock when they report earnings, buy back shares, or sell new ones.
+It's the stranger, and that's stop four. Your dollar goes to whoever sold you that slice. That could be the market maker itself, a big investment fund, or a regular person, like a retired teacher in Arizona.
 
-**VO-30 · NARRATOR**  
-Stop five is where your trade becomes official. Since May of twenty twenty-four, most U.S. stock trades settle one business day later, so your Tuesday trade usually becomes official on Wednesday.
+**VO-30 · THE SELLER**  
+I'm selling a little Apple to help pay for a new roof. Thanks for the dollar.
 
-**VO-31 · THE CLEARINGHOUSE**  
-Nobody walks away until everyone gets paid. I add up what each firm owes, and I settle the difference.
+**VO-31 · YOU**  
+So Apple gets nothing?
 
 **VO-32 · NARRATOR**  
-That's the D-T-C-C. It stands in the middle of the trade and guarantees eligible trades, so if one side fails, the other side still gets what it was promised.
+Not from your trade, it doesn't. Apple got money from its stock when it first sold shares to the public, back in December of nineteen eighty. Since then, almost every Apple share has simply been passed from one investor to another.
 
 **VO-33 · NARRATOR**  
-And now, the paperwork I promised you at the start. On the official records, most American shares are registered to a company called Cede and Company.
+It works like a concert ticket. The band gets paid when the ticket is first sold. If you buy that ticket later from another fan, your money goes to the fan, not the band.
 
-**VO-34 · YOU**  
-Hold on. So whose stock is it?
+> 🎨 Draw: A concert ticket passing from the box office to a fan, then from that fan to you, with the money going fan to fan.
 
-**VO-35 · NARRATOR**  
-It's yours. Cede and Company is the registered owner, which means its name is on the record so trades can move quickly. You're the beneficial owner, so the gains and the losses are yours, and your app keeps the record that says the sliver belongs to you.
+> 🎨 Draw: Road map. The dollar moves from Seller to Clearinghouse.
+
+**VO-34 · NARRATOR**  
+Stop five is where your trade becomes official. Your trade is matched, but the paperwork isn't finished yet. Most trades become final one business day later, so your Tuesday trade is final on Wednesday.
+
+**VO-35 · THE CLEARINGHOUSE**  
+Nobody walks away until everyone gets paid.
 
 **VO-36 · NARRATOR**  
-And if your broker is a member of S-I-P-C, the Securities Investor Protection Corporation, and it fails with customer assets missing, it generally protects up to five hundred thousand dollars per customer, including up to two hundred fifty thousand dollars in cash. It doesn't protect you if the stock simply falls.
-
-> 🎨 Draw: The road map again, with the dollar at the last stop and a tiny slice of Apple in your hand.
+That's the clearinghouse, a company called the D-T-C-C. It sits in the middle of the trade and makes sure the money and the stock end up where they're supposed to, even if one side can't pay.
 
 **VO-37 · NARRATOR**  
-That's the whole trip. But knowing where your dollar went doesn't tell you how it ever turns into more dollars. So how do people actually make money from owning a stock?
+And now, the paperwork I promised you at the start. On the official records, most American stock is registered to a company called Cede and Company.
 
-**VO-38 · NARRATOR**  
-There are two main ways. The first is selling for more than you paid, so let's meet Maya.
+**VO-38 · YOU**  
+Hold on. So it's not my stock?
 
-**VO-39 · MAYA**  
-I bought ten shares of a company at two hundred dollars each. That's two thousand dollars of my savings.
+**VO-39 · NARRATOR**  
+It is your stock. Think of a coat check at a restaurant. The coat check holds your coat and keeps track of the ticket, but the coat still belongs to you. Cede and Company holds the paperwork so trades can move fast, and your app keeps the record that says the slice is yours. If Apple goes up, you gain, and if it goes down, you lose.
 
-**VO-40 · NARRATOR**  
-A year later, the company is doing well, and Jordan wants in.
+> 🎨 Draw: A coat check counter. The coat has a tag that says "Cede & Co." and the ticket in your hand says "Yours."
 
-**VO-41 · JORDAN**  
-I'll pay you two hundred fifty dollars a share for all ten.
+**VO-40 · YOU**  
+Okay, but what if my app goes out of business?
+
+**VO-41 · NARRATOR**  
+If the company behind your app is a member of S-I-P-C, your account is protected up to five hundred thousand dollars if the company fails and your investments go missing. It doesn't protect you if the stock simply goes down.
+
+> 🎨 Draw: Road map with all five stops checked off.
 
 **VO-42 · NARRATOR**  
+So here's where we are. Your dollar became an order in your app, went to a market maker or an exchange, landed with a stranger who wanted to sell, and became official the next day. That's five stops, and most of it happened in less than a second.
+
+**VO-43 · NARRATOR**  
+But you probably didn't come here just to find out where your dollar goes. You want to know how it turns into more dollars.
+
+**VO-44 · NARRATOR**  
+There are two main ways to make money from a stock. The first is selling it for more than you paid. Let's meet Maya.
+
+**VO-45 · MAYA**  
+I bought ten shares of a company at two hundred dollars each. That's two thousand dollars of my savings.
+
+**VO-46 · NARRATOR**  
+A year later, the company is doing well, and Jordan wants in.
+
+**VO-47 · JORDAN**  
+I'll pay you two hundred fifty dollars a share for all ten.
+
+**VO-48 · NARRATOR**  
 Before I tell you, how much did Maya just make?
 
 > ⏸ PAUSE 3 seconds. On screen: "10 shares, bought at $200, sold at $250"
 
-**VO-43 · NARRATOR**  
-She made five hundred dollars before taxes. If Jordan had only offered one hundred fifty dollars a share, she'd be down five hundred dollars instead. Maya never had to go looking for Jordan, because the market matched them for her.
-
-**VO-44 · NARRATOR**  
-The second way is dividends, which are part of a company's profits paid out to shareholders. Not every company pays them, and they can be cut.
-
-**VO-45 · NARRATOR**  
-So why would Jordan pay more than Maya did? Every trade has a buyer and a seller. The price rises when buyers are willing to pay more, and it falls when sellers are willing to accept less.
-
-**VO-46 · NARRATOR**  
-Here's one more to try. Apple's last trade was at two hundred fifty dollars even. The lowest anyone will sell for right now is two hundred fifty dollars and five cents, and a buyer decides to pay it. What price shows up on your screen?
-
-> ⏸ PAUSE 2 seconds. On screen: "Last trade $250.00. Next trade $250.05. Price now?"
-
-**VO-47 · NARRATOR**  
-It's two hundred fifty dollars and five cents, because the price you see is simply the last trade. Thousands of small decisions like that, every second, are what make a stock chart move.
-
-**VO-48 · NARRATOR**  
-What changes people's minds is mostly what they expect the company to earn. A strong earnings report or a lawsuit can shift those expectations in minutes, and so can fear about the whole economy.
-
 **VO-49 · NARRATOR**  
-In his nineteen eighty-seven letter to shareholders, Warren Buffett passed on a lesson from his teacher, Benjamin Graham: in the short run, the market is a voting machine, but in the long run it's a weighing machine. Day to day, prices follow moods. Over many years, they tend to follow profits.
+She made five hundred dollars before taxes. But if Jordan had only offered one hundred fifty dollars a share, she'd have lost five hundred dollars instead. Selling for more is never guaranteed.
 
 **VO-50 · NARRATOR**  
-Now let's go back to your one dollar and change one thing. Instead of buying Apple, you put it into an S and P five hundred index fund, which is one common way to own a basket of companies. You buy a slice of the fund, and the fund owns stock in roughly five hundred large American companies, with the biggest companies getting the biggest weight. According to Gallup, sixty-two percent of U.S. adults said they owned stock in twenty twenty-five, whether directly, through a fund, or in a retirement account.
+The second way to make money is dividends. Some companies share part of their profits with the people who own their stock, usually a few times a year. Not every company does it, and they can stop.
 
 **VO-51 · YOU**  
-Okay, but what happens if I just leave my dollar alone?
+So why would Jordan pay more than Maya did?
 
 **VO-52 · NARRATOR**  
-Nobody can promise anything. Historically, over long periods, U.S. large-company stocks have returned roughly ten percent a year on average, including dividends. So take a guess. If a dollar grew at a steady ten percent a year for forty years, would you end up with about five dollars, fifteen dollars, or forty-five dollars?
+Because the price of a stock is just the last price someone agreed to pay. If buyers are willing to pay more, the price goes up. If sellers are willing to take less, the price goes down.
+
+**VO-53 · NARRATOR**  
+Here's one more to try. Apple's last trade was at two hundred fifty dollars. The cheapest anyone will sell for right now is two hundred fifty dollars and five cents, and a buyer decides to pay it. What price shows up on your screen?
+
+> ⏸ PAUSE 2 seconds. On screen: "Last trade $250.00. Someone pays $250.05. Price now?"
+
+**VO-54 · NARRATOR**  
+It's two hundred fifty dollars and five cents, because the price you see is simply the last trade. Millions of little deals like that, every day, are what make a stock chart go up and down.
+
+**VO-55 · NARRATOR**  
+What makes people willing to pay more or less? Mostly, it's what they think the company will earn in the future. Good news can push the price up in minutes, and bad news can push it down just as fast. Warren Buffett likes to repeat an idea from his old teacher: day to day, the market acts like a popularity contest, but over many years, it follows how much money a company actually makes.
+
+**VO-56 · YOU**  
+That sounds like a lot to keep track of. What if I don't want to pick just one company?
+
+**VO-57 · NARRATOR**  
+Then let's go back to your one dollar and change one thing. Instead of buying a slice of Apple, you buy a slice of a giant basket that holds about five hundred big American companies. That's called an S and P five hundred index fund. Your one dollar now owns a tiny piece of Apple, and Microsoft, and Nvidia, and hundreds of others, all at once.
+
+> 🎨 Draw: A dollar dropping into one big basket, with company logos inside at different sizes.
+
+**VO-58 · YOU**  
+Okay, but what happens if I just leave my dollar in there?
+
+**VO-59 · NARRATOR**  
+Nobody can promise anything. But over long stretches of history, big American companies have grown about ten percent a year on average. So take a guess. If a dollar grew ten percent every year for forty years, would you end up with about five dollars, fifteen dollars, or forty-five dollars?
 
 > ⏸ PAUSE 3 seconds. On screen: "$5, $15, or $45?"
 
-**VO-53 · NARRATOR**  
-You'd end up with about forty-five dollars, before inflation, fees, and taxes. That's an illustration, not a forecast, because real markets don't move in a straight line. From late two thousand seven to early two thousand nine, the S and P five hundred lost more than half its value. In twenty twenty, it fell almost thirty-four percent between February nineteenth and March twenty-third. The broad index recovered both times, but individual stocks don't always come back.
+**VO-60 · NARRATOR**  
+You'd end up with about forty-five dollars, before inflation, fees, and taxes. That's just an example, not a promise, because the market doesn't go up in a straight line. Between two thousand seven and two thousand nine, it lost more than half its value. In twenty twenty, it dropped about a third in roughly a month. The basket as a whole came back both times, but a single company doesn't always come back.
 
 > 🎨 Draw: The full road map, with the dollar's path drawn through all five stops.
 
-**VO-54 · NARRATOR**  
-So here's the whole trip one last time. Your dollar bought a slice of ownership. It left your app, may have stopped at a market maker or an exchange in New Jersey, and landed with a stranger who wanted to sell. The next business day, the clearinghouse made it official, and the paperwork went into the name of Cede and Company while the sliver stayed yours. The company on the button never got your dollar, but you now own a tiny piece of it.
+**VO-61 · NARRATOR**  
+So here's the whole trip one last time. Your dollar bought a slice of ownership. It left your app, may have stopped at a market maker or an exchange, landed with a stranger, and became official the next day, with the paperwork held by Cede and Company. Apple never got your dollar, but you now own a tiny piece of Apple.
 
-**VO-55 · YOU**  
+**VO-62 · YOU**  
 That's a lot of stops for one dollar.
 
-**VO-56 · NARRATOR**  
+**VO-63 · NARRATOR**  
 It is, and almost all of it happened in under a second.
 
-**VO-57 · NARRATOR**  
-So here's my question for you. Which stop surprised you most: the market maker, the stranger who got your dollar, or Cede and Company? Tell me in the comments, and subscribe if you want more of the money system explained one dollar at a time.
+**VO-64 · NARRATOR**  
+So here's my question for you. Which stop surprised you most: the market maker, the stranger who got your dollar, or the coat check called Cede and Company? Tell me in the comments, and subscribe if you want more of the money system explained one dollar at a time.
 
 ---
 
 ## Part 2: Lines by voice (for recording sessions)
 
-### NARRATOR (42 lines)
+### NARRATOR (45 lines)
 
-- **VO-01:** When you tap "buy" on a stock, your order can leave your phone and reach a trading firm's computers in less than a second. Some orders end up on systems in New Jersey, not Wall Street. And the company whose name is on the button usually doesn't get a single cent of your money.
-- **VO-03:** That's the first thing we're going to find out. Here's the second. On the official paperwork, the stock you buy usually isn't registered in your name, and it isn't registered in your app's name either. By the end of this video, you'll know whose name is on it, and why that's completely normal.
-- **VO-04:** We're going to follow one dollar through five stops, from your pocket to a total stranger. But before the dollar moves, you need to know what it's buying.
-- **VO-05:** The stock market is a place where buyers and sellers meet to trade shares of public companies like Apple, Meta, and Alphabet. A stock is a piece of ownership in one of those companies.
+- **VO-01:** When you tap "buy" on a stock, your money almost never goes to the company whose name is on the button. If you buy one dollar of Apple, Apple usually doesn't get a single cent of it.
+- **VO-03:** That's what we're going to find out. And here's something even stranger. On the official paperwork, the stock you buy usually isn't in your name. By the end of this video, you'll know whose name is on it, and why that's totally fine.
+- **VO-04:** We're going to follow one dollar through five stops. At every stop, I'll tell you who's there and what they do, in plain English. But first, you need to know what your dollar is buying.
+- **VO-05:** A stock is a small piece of ownership in a company. The stock market is simply the place where people buy and sell those pieces.
 - **VO-06:** So here's a quick test. Company A's stock costs five hundred dollars a share. Company B's stock costs five dollars a share. Which company is worth more?
 - **VO-08:** That was a trap, because I didn't give you enough information.
-- **VO-09:** Think of each company as a pizza and each share as a slice. Company A is a pizza cut into only three slices, and each slice costs five hundred dollars, so the whole company is worth fifteen hundred dollars. Company B is cut into a million slices at five dollars each, so it's worth five million dollars. The cheap stock belongs to the company that's worth over three thousand times more.
-- **VO-10:** The price of one share tells you almost nothing on its own. What matters is the price multiplied by the number of shares, which is called market value. Apple has roughly fifteen billion shares, which is why a few hundred dollars a share adds up to trillions. So when something sounds too simple, it's worth asking a follow-up question, and the stock market is full of simple-sounding answers.
-- **VO-11:** Stop one is your app. Say you open an investing app on a Tuesday morning and buy one dollar of Apple. A whole share costs a few hundred dollars, so your dollar buys a small fraction of one share.
-- **VO-15:** That's what a market order means. The price you saw on your screen isn't guaranteed, because it can move while your order is being filled. Your broker may also group your fractional order with other customers' orders before it buys.
-- **VO-16:** Stop two is a kind of firm most people have never heard of. Many retail orders don't go straight to an exchange. The broker often sends them to a market maker, which is a trading firm like Citadel Securities or Virtu that's always ready to buy and sell.
-- **VO-18:** It works a bit like a currency booth at the airport. That two-cent gap is called the spread. It isn't guaranteed profit, because the stock can move against the market maker a minute later. Citadel Securities says it handles about a third of all U.S. retail stock trading volume.
-- **VO-19:** So how can your app charge you zero commission? Market makers often pay brokers for sending them orders, which is called payment for order flow. Critics say it gives brokers a reason to route orders where they're paid most. Brokers are still required to seek the best execution reasonably available for your order.
-- **VO-20:** The market maker might sell to you from its own inventory, or it might find shares somewhere else. That takes us to stop three, the stock exchange.
-- **VO-21:** The New York Stock Exchange still rings its opening bell at nine thirty in the morning, Eastern time, from its floor at eleven Wall Street. But its trading systems run in a data center in Mahwah, New Jersey, and Nasdaq's main U.S. data center is in Carteret, New Jersey. The New York exchange traces its roots to seventeen ninety-two, when twenty-four brokers signed an agreement in Lower Manhattan.
-- **VO-22:** Regular trading runs from nine thirty in the morning to four in the afternoon, Eastern time, on weekdays. Some brokers also let you trade in the premarket session, which can start as early as four in the morning, and in after-hours trading until eight at night. Fewer people trade at those times, so prices can jump more and the gap between buying and selling prices is often wider.
-- **VO-24:** Which brings us back to the first question. Before I tell you who got your dollar, take a guess. Was it Apple, your app, or a total stranger?
-- **VO-25:** It's the stranger. Stop four is whoever sold you that sliver. That might be the market maker itself, a pension fund, a hedge fund, or a retired teacher in Arizona.
-- **VO-28:** Not from this trade, it doesn't. A company raises money when it sells new shares, like in its initial public offering. Apple went public on December twelfth, nineteen eighty, at twenty-two dollars a share and raised roughly a hundred million dollars. Almost every Apple trade since then has been between investors, like buying a concert ticket from another fan after the box office has sold out.
-- **VO-29:** Apple still cares about its stock price, because executives are often paid in stock, shareholders vote on who sits on the board, and a high price makes it easier to raise money or pay for deals with shares. Companies can also move their own stock when they report earnings, buy back shares, or sell new ones.
-- **VO-30:** Stop five is where your trade becomes official. Since May of twenty twenty-four, most U.S. stock trades settle one business day later, so your Tuesday trade usually becomes official on Wednesday.
-- **VO-32:** That's the D-T-C-C. It stands in the middle of the trade and guarantees eligible trades, so if one side fails, the other side still gets what it was promised.
-- **VO-33:** And now, the paperwork I promised you at the start. On the official records, most American shares are registered to a company called Cede and Company.
-- **VO-35:** It's yours. Cede and Company is the registered owner, which means its name is on the record so trades can move quickly. You're the beneficial owner, so the gains and the losses are yours, and your app keeps the record that says the sliver belongs to you.
-- **VO-36:** And if your broker is a member of S-I-P-C, the Securities Investor Protection Corporation, and it fails with customer assets missing, it generally protects up to five hundred thousand dollars per customer, including up to two hundred fifty thousand dollars in cash. It doesn't protect you if the stock simply falls.
-- **VO-37:** That's the whole trip. But knowing where your dollar went doesn't tell you how it ever turns into more dollars. So how do people actually make money from owning a stock?
-- **VO-38:** There are two main ways. The first is selling for more than you paid, so let's meet Maya.
-- **VO-40:** A year later, the company is doing well, and Jordan wants in.
-- **VO-42:** Before I tell you, how much did Maya just make?
-- **VO-43:** She made five hundred dollars before taxes. If Jordan had only offered one hundred fifty dollars a share, she'd be down five hundred dollars instead. Maya never had to go looking for Jordan, because the market matched them for her.
-- **VO-44:** The second way is dividends, which are part of a company's profits paid out to shareholders. Not every company pays them, and they can be cut.
-- **VO-45:** So why would Jordan pay more than Maya did? Every trade has a buyer and a seller. The price rises when buyers are willing to pay more, and it falls when sellers are willing to accept less.
-- **VO-46:** Here's one more to try. Apple's last trade was at two hundred fifty dollars even. The lowest anyone will sell for right now is two hundred fifty dollars and five cents, and a buyer decides to pay it. What price shows up on your screen?
-- **VO-47:** It's two hundred fifty dollars and five cents, because the price you see is simply the last trade. Thousands of small decisions like that, every second, are what make a stock chart move.
-- **VO-48:** What changes people's minds is mostly what they expect the company to earn. A strong earnings report or a lawsuit can shift those expectations in minutes, and so can fear about the whole economy.
-- **VO-49:** In his nineteen eighty-seven letter to shareholders, Warren Buffett passed on a lesson from his teacher, Benjamin Graham: in the short run, the market is a voting machine, but in the long run it's a weighing machine. Day to day, prices follow moods. Over many years, they tend to follow profits.
-- **VO-50:** Now let's go back to your one dollar and change one thing. Instead of buying Apple, you put it into an S and P five hundred index fund, which is one common way to own a basket of companies. You buy a slice of the fund, and the fund owns stock in roughly five hundred large American companies, with the biggest companies getting the biggest weight. According to Gallup, sixty-two percent of U.S. adults said they owned stock in twenty twenty-five, whether directly, through a fund, or in a retirement account.
-- **VO-52:** Nobody can promise anything. Historically, over long periods, U.S. large-company stocks have returned roughly ten percent a year on average, including dividends. So take a guess. If a dollar grew at a steady ten percent a year for forty years, would you end up with about five dollars, fifteen dollars, or forty-five dollars?
-- **VO-53:** You'd end up with about forty-five dollars, before inflation, fees, and taxes. That's an illustration, not a forecast, because real markets don't move in a straight line. From late two thousand seven to early two thousand nine, the S and P five hundred lost more than half its value. In twenty twenty, it fell almost thirty-four percent between February nineteenth and March twenty-third. The broad index recovered both times, but individual stocks don't always come back.
-- **VO-54:** So here's the whole trip one last time. Your dollar bought a slice of ownership. It left your app, may have stopped at a market maker or an exchange in New Jersey, and landed with a stranger who wanted to sell. The next business day, the clearinghouse made it official, and the paperwork went into the name of Cede and Company while the sliver stayed yours. The company on the button never got your dollar, but you now own a tiny piece of it.
-- **VO-56:** It is, and almost all of it happened in under a second.
-- **VO-57:** So here's my question for you. Which stop surprised you most: the market maker, the stranger who got your dollar, or Cede and Company? Tell me in the comments, and subscribe if you want more of the money system explained one dollar at a time.
+- **VO-09:** Think of each company as a pizza and each share as a slice. Company A is cut into only three slices, and each slice costs five hundred dollars, so the whole pizza is worth fifteen hundred dollars. Company B is cut into a million slices at five dollars each, so the whole pizza is worth five million dollars. The cheap slice came from the much bigger pizza.
+- **VO-10:** So the price of one share doesn't tell you how big a company is. You have to multiply it by the number of shares. Keep that trick in your pocket, because a lot of things in the stock market sound simple until you ask one more question.
+- **VO-11:** Now let's spend your dollar. Stop one is your app.
+- **VO-12:** Say it's Tuesday morning, and you open an investing app and buy one dollar of Apple. One Apple share costs a few hundred dollars, so your dollar buys a tiny slice of one share, kind of like buying one bite of a whole pizza.
+- **VO-16:** That's all that happens at stop one. Your dollar has turned into an order, and now the app needs to find someone who will sell you that slice.
+- **VO-17:** Stop two is the market maker.
+- **VO-19:** A market maker is a big trading company that's always ready to buy or sell. Think of it as a store that always keeps Apple stock on the shelf. Like any store, it buys a little cheaper than it sells.
+- **VO-21:** That tiny two-cent gap is how the market maker tries to make money, although it can lose money too if the price moves the wrong way. Two of the biggest market makers are Citadel Securities and Virtu.
+- **VO-22:** Here's something most people don't know. Market makers often pay your app to send them your orders. That's one reason many apps can let you trade for free. Your app is still required to look for a good price for you.
+- **VO-23:** If the market maker has the stock, it can sell it to you straight off the shelf. If it doesn't, your order can head to stop three.
+- **VO-24:** Stop three is the stock exchange. This is what most people picture when they hear "Wall Street." The New York Stock Exchange still rings its famous opening bell on Wall Street at nine thirty in the morning, Eastern time. But here's the twist. The computers that actually match the trades sit in data centers in New Jersey.
+- **VO-25:** An exchange works like a matchmaker. It keeps one list of people who want to buy and another list of people who want to sell. When a buyer and a seller agree on a price, it puts them together.
+- **VO-27:** The market is open from nine thirty in the morning until four in the afternoon, Eastern time, on weekdays. Some apps let you trade earlier or later, but fewer people are trading then, so prices can jump around more.
+- **VO-28:** So your order has found a match. That means it's time to answer the very first question. Who got your dollar? Take a guess.
+- **VO-29:** It's the stranger, and that's stop four. Your dollar goes to whoever sold you that slice. That could be the market maker itself, a big investment fund, or a regular person, like a retired teacher in Arizona.
+- **VO-32:** Not from your trade, it doesn't. Apple got money from its stock when it first sold shares to the public, back in December of nineteen eighty. Since then, almost every Apple share has simply been passed from one investor to another.
+- **VO-33:** It works like a concert ticket. The band gets paid when the ticket is first sold. If you buy that ticket later from another fan, your money goes to the fan, not the band.
+- **VO-34:** Stop five is where your trade becomes official. Your trade is matched, but the paperwork isn't finished yet. Most trades become final one business day later, so your Tuesday trade is final on Wednesday.
+- **VO-36:** That's the clearinghouse, a company called the D-T-C-C. It sits in the middle of the trade and makes sure the money and the stock end up where they're supposed to, even if one side can't pay.
+- **VO-37:** And now, the paperwork I promised you at the start. On the official records, most American stock is registered to a company called Cede and Company.
+- **VO-39:** It is your stock. Think of a coat check at a restaurant. The coat check holds your coat and keeps track of the ticket, but the coat still belongs to you. Cede and Company holds the paperwork so trades can move fast, and your app keeps the record that says the slice is yours. If Apple goes up, you gain, and if it goes down, you lose.
+- **VO-41:** If the company behind your app is a member of S-I-P-C, your account is protected up to five hundred thousand dollars if the company fails and your investments go missing. It doesn't protect you if the stock simply goes down.
+- **VO-42:** So here's where we are. Your dollar became an order in your app, went to a market maker or an exchange, landed with a stranger who wanted to sell, and became official the next day. That's five stops, and most of it happened in less than a second.
+- **VO-43:** But you probably didn't come here just to find out where your dollar goes. You want to know how it turns into more dollars.
+- **VO-44:** There are two main ways to make money from a stock. The first is selling it for more than you paid. Let's meet Maya.
+- **VO-46:** A year later, the company is doing well, and Jordan wants in.
+- **VO-48:** Before I tell you, how much did Maya just make?
+- **VO-49:** She made five hundred dollars before taxes. But if Jordan had only offered one hundred fifty dollars a share, she'd have lost five hundred dollars instead. Selling for more is never guaranteed.
+- **VO-50:** The second way to make money is dividends. Some companies share part of their profits with the people who own their stock, usually a few times a year. Not every company does it, and they can stop.
+- **VO-52:** Because the price of a stock is just the last price someone agreed to pay. If buyers are willing to pay more, the price goes up. If sellers are willing to take less, the price goes down.
+- **VO-53:** Here's one more to try. Apple's last trade was at two hundred fifty dollars. The cheapest anyone will sell for right now is two hundred fifty dollars and five cents, and a buyer decides to pay it. What price shows up on your screen?
+- **VO-54:** It's two hundred fifty dollars and five cents, because the price you see is simply the last trade. Millions of little deals like that, every day, are what make a stock chart go up and down.
+- **VO-55:** What makes people willing to pay more or less? Mostly, it's what they think the company will earn in the future. Good news can push the price up in minutes, and bad news can push it down just as fast. Warren Buffett likes to repeat an idea from his old teacher: day to day, the market acts like a popularity contest, but over many years, it follows how much money a company actually makes.
+- **VO-57:** Then let's go back to your one dollar and change one thing. Instead of buying a slice of Apple, you buy a slice of a giant basket that holds about five hundred big American companies. That's called an S and P five hundred index fund. Your one dollar now owns a tiny piece of Apple, and Microsoft, and Nvidia, and hundreds of others, all at once.
+- **VO-59:** Nobody can promise anything. But over long stretches of history, big American companies have grown about ten percent a year on average. So take a guess. If a dollar grew ten percent every year for forty years, would you end up with about five dollars, fifteen dollars, or forty-five dollars?
+- **VO-60:** You'd end up with about forty-five dollars, before inflation, fees, and taxes. That's just an example, not a promise, because the market doesn't go up in a straight line. Between two thousand seven and two thousand nine, it lost more than half its value. In twenty twenty, it dropped about a third in roughly a month. The basket as a whole came back both times, but a single company doesn't always come back.
+- **VO-61:** So here's the whole trip one last time. Your dollar bought a slice of ownership. It left your app, may have stopped at a market maker or an exchange, landed with a stranger, and became official the next day, with the paperwork held by Cede and Company. Apple never got your dollar, but you now own a tiny piece of Apple.
+- **VO-63:** It is, and almost all of it happened in under a second.
+- **VO-64:** So here's my question for you. Which stop surprised you most: the market maker, the stranger who got your dollar, or the coat check called Cede and Company? Tell me in the comments, and subscribe if you want more of the money system explained one dollar at a time.
 
-### YOU (7 lines)
+### YOU (11 lines)
 
-- **VO-02:** Wait, then who does?
+- **VO-02:** Wait, then who gets it?
 - **VO-07:** Company A, obviously.
-- **VO-13:** Great. What price is that, exactly?
-- **VO-27:** So Apple doesn't get my dollar at all?
-- **VO-34:** Hold on. So whose stock is it?
-- **VO-51:** Okay, but what happens if I just leave my dollar alone?
-- **VO-55:** That's a lot of stops for one dollar.
+- **VO-14:** What's the market price?
+- **VO-18:** The market what?
+- **VO-31:** So Apple gets nothing?
+- **VO-38:** Hold on. So it's not my stock?
+- **VO-40:** Okay, but what if my app goes out of business?
+- **VO-51:** So why would Jordan pay more than Maya did?
+- **VO-56:** That sounds like a lot to keep track of. What if I don't want to pick just one company?
+- **VO-58:** Okay, but what happens if I just leave my dollar in there?
+- **VO-62:** That's a lot of stops for one dollar.
 
 ### THE APP (2 lines)
 
-- **VO-12:** Your order is in. I'm buying one dollar of Apple at the market price.
-- **VO-14:** It's whatever the best available price is when your order gets filled.
+- **VO-13:** Got it. I'm buying one dollar of Apple at the market price.
+- **VO-15:** It's the best price I can get for you right now. It might move a few cents before your order goes through.
 
 ### THE MARKET MAKER (1 lines)
 
-- **VO-17:** I'll buy Apple from you at two hundred fifty dollars even, or sell it to you at two hundred fifty dollars and two cents. I'm here all day.
+- **VO-20:** I'll buy Apple from you at two hundred fifty dollars, or sell it to you at two hundred fifty dollars and two cents. I'm open all day.
 
 ### THE EXCHANGE (1 lines)
 
-- **VO-23:** I have a buyer and a seller at the same price, so you two are a match.
+- **VO-26:** I have a buyer and a seller at the same price, so you two are a match.
 
 ### THE SELLER (1 lines)
 
-- **VO-26:** I'm selling a little Apple to pay for a new roof. Thanks for the dollar.
+- **VO-30:** I'm selling a little Apple to help pay for a new roof. Thanks for the dollar.
 
 ### THE CLEARINGHOUSE (1 lines)
 
-- **VO-31:** Nobody walks away until everyone gets paid. I add up what each firm owes, and I settle the difference.
+- **VO-35:** Nobody walks away until everyone gets paid.
 
 ### MAYA (1 lines)
 
-- **VO-39:** I bought ten shares of a company at two hundred dollars each. That's two thousand dollars of my savings.
+- **VO-45:** I bought ten shares of a company at two hundred dollars each. That's two thousand dollars of my savings.
 
 ### JORDAN (1 lines)
 
-- **VO-41:** I'll pay you two hundred fifty dollars a share for all ten.
+- **VO-47:** I'll pay you two hundred fifty dollars a share for all ten.
 
 ---
 
@@ -321,11 +361,17 @@ So here's my question for you. Which stop surprised you most: the market maker, 
 - **Before VO-04:** 🎨 Draw: A road map with five stops: Your App, Market Maker, Exchange, Seller, Clearinghouse. A small dollar bill waits at the start. This map returns at every stop.
 - **Before VO-07:** ⏸ PAUSE 3 seconds. On screen: "Pause and guess: A or B?"
 - **Before VO-09:** 🎨 Draw: Two pizzas side by side. Pizza A cut into 3 slices labelled $500. Pizza B cut into a million tiny slices labelled $5.
-- **Before VO-21:** 🎨 Draw: Map of New Jersey with two dots, Mahwah and Carteret
-- **Before VO-25:** ⏸ PAUSE 3 seconds. On screen: "A) Apple  B) Your app  C) A stranger"
-- **Before VO-37:** 🎨 Draw: The road map again, with the dollar at the last stop and a tiny slice of Apple in your hand.
-- **Before VO-43:** ⏸ PAUSE 3 seconds. On screen: "10 shares, bought at $200, sold at $250"
-- **Before VO-47:** ⏸ PAUSE 2 seconds. On screen: "Last trade $250.00. Next trade $250.05. Price now?"
-- **Before VO-53:** ⏸ PAUSE 3 seconds. On screen: "$5, $15, or $45?"
-- **Before VO-54:** 🎨 Draw: The full road map, with the dollar's path drawn through all five stops.
+- **Before VO-17:** 🎨 Draw: Road map. The dollar moves from Your App to Market Maker.
+- **Before VO-24:** 🎨 Draw: Road map. The dollar moves from Market Maker to Exchange.
+- **Before VO-25:** 🎨 Draw: A bell on Wall Street, with an arrow pointing across the river to a plain data center building in New Jersey.
+- **Before VO-29:** ⏸ PAUSE 3 seconds. On screen: "A) Apple  B) Your app  C) A stranger"
+- **Before VO-34:** 🎨 Draw: A concert ticket passing from the box office to a fan, then from that fan to you, with the money going fan to fan.
+- **Before VO-34:** 🎨 Draw: Road map. The dollar moves from Seller to Clearinghouse.
+- **Before VO-40:** 🎨 Draw: A coat check counter. The coat has a tag that says "Cede & Co." and the ticket in your hand says "Yours."
+- **Before VO-42:** 🎨 Draw: Road map with all five stops checked off.
+- **Before VO-49:** ⏸ PAUSE 3 seconds. On screen: "10 shares, bought at $200, sold at $250"
+- **Before VO-54:** ⏸ PAUSE 2 seconds. On screen: "Last trade $250.00. Someone pays $250.05. Price now?"
+- **Before VO-58:** 🎨 Draw: A dollar dropping into one big basket, with company logos inside at different sizes.
+- **Before VO-60:** ⏸ PAUSE 3 seconds. On screen: "$5, $15, or $45?"
+- **Before VO-61:** 🎨 Draw: The full road map, with the dollar's path drawn through all five stops.
 - **Every character line:** draw the speaker with a speech bubble: YOU = a stick-figure viewer holding a phone; THE APP = a phone with a face; THE MARKET MAKER = a currency-booth clerk behind a window with two price signs; THE EXCHANGE = a building with a face; THE SELLER = a retired teacher holding a roofing estimate; THE CLEARINGHOUSE = a referee standing between two buildings; MAYA = a young woman holding ten share certificates; JORDAN = a young buyer holding cash.
