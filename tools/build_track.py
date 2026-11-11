@@ -35,13 +35,15 @@ LIMIT = "alimiter=limit=0.89:level=false"  # keeps peaks under about -1 dB
 
 # Lines the voice model read too fast, measured in words per minute against
 # the narrator's usual ~185; the factor brings them back to ~190.
-TEMPO = {"VO-80": 0.82}
+TEMPO = {}  # per-line overrides, e.g. {"VO-80": 0.9}; empty by the creator's choice
 
 # Lines that drag are sped up automatically (pitch unchanged):
 # narrator below 172 wpm -> toward 180; characters below 140 wpm -> toward 165.
 AUTO_TEMPO = {"NARRATOR": (172, 180, 1.2), "OTHER": (140, 165, 1.3)}  # (below, target, max factor)
 # Lines that are rushed are slowed the same way: above 215 wpm -> toward 195
 # (210 for the deliberately faster opening, VO-01 to VO-06), never below 0.8x.
+# Off by the creator's choice: fast, natural delivery is kept as recorded.
+SLOW_DOWN_FAST_LINES = False
 FAST_ABOVE, FAST_TARGET, FAST_HOOK_TARGET, FAST_MIN = 215, 195, 210, 0.8
 HOOK = {f"VO-{n:02d}" for n in range(1, 7)}
 
@@ -105,7 +107,7 @@ def main(script, clips, out):
                 factor = None
                 if wpm < below:
                     factor = min(target / wpm, cap)
-                elif wpm > FAST_ABOVE:
+                elif SLOW_DOWN_FAST_LINES and wpm > FAST_ABOVE:
                     goal = FAST_HOOK_TARGET if line_id in HOOK else FAST_TARGET
                     factor = max(goal / wpm, FAST_MIN)
                 if factor:
