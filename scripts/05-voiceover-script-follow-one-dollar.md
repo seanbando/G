@@ -13,7 +13,7 @@ Voice-only recording sheet. Every spoken line is numbered (VO-01, VO-02 …) and
 | 3 | **THE APP** | 2 | 34 | The investing app, personified. Upbeat, efficient, slightly robotic customer-service tone. | Confirms the order |
 | 4 | **THE MARKET MAKER** | 1 | 27 | A trading firm, personified. Relaxed, confident, a little salesy, like a currency-booth clerk. Not shady. | Quotes the buy and sell prices (stop two) |
 | 5 | **THE EXCHANGE** | 1 | 17 | The stock exchange, personified. Calm, official, matter-of-fact, like an announcer or matchmaker. | Matches buyer and seller (stop three) |
-| 6 | **THE SELLER** | 1 | 16 | A retired teacher in Arizona. Warm, friendly, unhurried. | The stranger who gets your dollar (stop four) |
+| 6 | **THE SELLER** | 1 | 16 | A retired teacher in Arizona, deliberately played by a younger, quirky voice (Laura) as a funny twist. Cheerful and a little sassy. | The stranger who gets your dollar (stop four) |
 | 7 | **THE CLEARINGHOUSE** | 1 | 7 | The D-T-C-C, personified. Steady, wise, a bit strict, like a referee. | Makes the trade official (stop five) |
 | 8 | **MAYA** | 1 | 19 | A young investor. Bright, a little proud of her savings. | Buys ten shares |
 | 9 | **JORDAN** | 1 | 12 | A young buyer. Relaxed and upbeat. | Buys Maya's shares for more |

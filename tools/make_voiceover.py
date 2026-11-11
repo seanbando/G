@@ -17,7 +17,7 @@ CAST = {
     "THE APP": ("The investing app, personified. Upbeat, efficient, slightly robotic customer-service tone.", "Confirms the order"),
     "THE MARKET MAKER": ("A trading firm, personified. Relaxed, confident, a little salesy, like a currency-booth clerk. Not shady.", "Quotes the buy and sell prices (stop two)"),
     "THE EXCHANGE": ("The stock exchange, personified. Calm, official, matter-of-fact, like an announcer or matchmaker.", "Matches buyer and seller (stop three)"),
-    "THE SELLER": ("A retired teacher in Arizona. Warm, friendly, unhurried.", "The stranger who gets your dollar (stop four)"),
+    "THE SELLER": ("A retired teacher in Arizona, deliberately played by a younger, quirky voice (Laura) as a funny twist. Cheerful and a little sassy.", "The stranger who gets your dollar (stop four)"),
     "THE CLEARINGHOUSE": ("The D-T-C-C, personified. Steady, wise, a bit strict, like a referee.", "Makes the trade official (stop five)"),
     "MAYA": ("A young investor. Bright, a little proud of her savings.", "Buys ten shares"),
     "JORDAN": ("A young buyer. Relaxed and upbeat.", "Buys Maya's shares for more"),
