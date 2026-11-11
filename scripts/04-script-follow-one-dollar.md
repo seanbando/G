@@ -1,97 +1,81 @@
 Follow $1 From Your Pocket to Wall Street: The Stock Market Explained
 
-When you tap "buy" on a stock, your dollar almost never goes to Wall Street. It goes to a computer in New Jersey. And the company whose name is on the button usually doesn't get a single cent of it.
+When you tap "buy" on a stock, your order can be out of your phone and on a trading firm's computers in less than a second. Some orders end up on systems in New Jersey, not Wall Street. And the company whose name is on the button usually doesn't get a single cent of your money.
 
-YOU: Wait, so who gets my money?
+YOU: Wait, so who does?
 
-That's what we're going to find out. We're going to follow one dollar from your pocket, through your phone, into a data center, past a company most people have never heard of, and into the hands of a total stranger. By the end, you'll know exactly what you own when you own a stock, and why its price moves.
+That's what we're going to find out. We're going to follow one dollar from your pocket to the stranger who ends up with it, and by the end you'll know exactly what you bought and why its price moves.
 
-Let's start with the tap.
+First, let's be clear about what you're actually buying. A stock is a share of ownership in a company. If a company is split into a billion shares and you own one, you own one billionth of that business, including a sliver of its profits and its future.
 
-Say you open an investing app on a Tuesday afternoon and buy one dollar of Apple. One Apple share costs a few hundred dollars, so a dollar won't buy a whole one. Most big apps now let you buy a fraction, so you're getting a tiny sliver of a single share.
+[VISUAL NOTE: A company drawn as a cake cut into tiny slices, with one slice labelled "you"]
+
+Picture a neighbourhood pizza shop worth $100,000, split into 100 shares worth $1,000 each. If you own one share, you own one percent of the shop. If the shop grows and becomes worth $200,000, your share is worth about $2,000. If it struggles and drops to $50,000, your share is worth about $500. Apple works the same way, just with billions of shares instead of a hundred.
+
+Say you open an investing app on a Tuesday and buy one dollar of Apple. A whole Apple share costs a few hundred dollars, so your dollar buys a fraction of one share. If a share costs about $250, your dollar buys about one two-hundred-and-fiftieth of it. It's small, but it's real ownership in one of the biggest companies in the world.
 
 THE APP: Your order is in. I'm buying one dollar of Apple at the market price.
 
-That phrase "market price" matters. You didn't pick a price. You told the app to buy at whatever the best price is right now. Your order is now a message, and that message has to go somewhere.
+A market order tells your broker to buy right away at the best price available. The price you saw on your screen a second ago isn't guaranteed, because prices can move while the order is being filled. Your broker may also group your fractional order together with other customers' orders before it buys.
 
-Here's the first surprise. Most orders from apps like Robinhood, Schwab, or Webull don't go straight to the stock exchange. They go to a firm called a market maker.
+Now the order needs a seller. Many retail stock orders don't go straight to an exchange. Instead, the broker sends them to a firm called a market maker.
 
-A market maker is like a currency booth at the airport. It's always willing to buy and always willing to sell, and it makes a tiny profit on the gap between the two prices. That gap is called the spread. If a market maker will buy Apple at $230.00 and sell it at $230.02, those two cents are its cut.
+A market maker works a bit like a currency booth at the airport. It quotes a price to buy and a slightly higher price to sell, and the gap is called the spread. If it will buy Apple at $250.00 and sell at $250.02, that's a two-cent spread on a whole share. It isn't guaranteed profit, because the market maker is holding stock that can lose value a minute later.
 
-One of the biggest is Citadel Securities, which reportedly handles around a third of all US stock trades placed by regular investors. Many apps get paid by market makers for sending your order to them. It's called payment for order flow, and it's a big reason your app can charge you zero commission.
+Citadel Securities says it executes about a third of all US retail stock trading volume. Market makers often pay brokers for sending them orders, which is called payment for order flow, and it's one reason many apps charge zero commission. Critics say it gives brokers a reason to route orders where they get paid most. Brokers are still required to seek the best execution reasonably available for your order.
 
-THE MARKET MAKER: I'll take that order.
-
-THE APP: Thank you. I believe you owe me something for sending it.
-
-THE MARKET MAKER: Of course. Here's a small payment, and I'll take your next order too.
-
-Critics say this setup can quietly cost you a fraction of a cent on each trade. Supporters say regular investors get better prices than they would on the exchange. Regulators have argued about it for years, and it's still legal in the US.
-
-So what about your dollar? If the market maker can fill your order from its own stock, the trade is done in a fraction of a second. If it can't, it sends the order on to an exchange. And this is where Wall Street stops being Wall Street.
+The market maker might sell to you from its own inventory, or it might find shares elsewhere. One place it can go is a stock exchange.
 
 [VISUAL NOTE: Map of New Jersey with two dots, Mahwah and Carteret]
 
-The New York Stock Exchange still has its famous trading floor at 11 Wall Street, and the opening bell still rings at 9:30 every morning. But the actual matching of buyers and sellers happens in a data center in Mahwah, New Jersey, about thirty miles away. The Nasdaq's computers sit in Carteret, New Jersey. Trading firms pay to put their own servers in the same buildings, because being a few feet closer to the exchange can save a few millionths of a second.
+The New York Stock Exchange still rings its opening bell at 9:30 a.m. Eastern every trading day, from its floor at 11 Wall Street. But its trading systems run in a data center in Mahwah, New Jersey, and Nasdaq's main US data center is in Carteret, New Jersey. The NYSE traces its roots to May 17, 1792, when twenty-four brokers signed the Buttonwood Agreement in Lower Manhattan. Today, an exchange does what those brokers did, only faster. It matches people who want to buy with people who want to sell.
 
-It started a lot slower. On May 17, 1792, twenty-four brokers signed a short agreement in Lower Manhattan about how they'd trade with each other and what they'd charge. According to tradition, they met under a buttonwood tree on Wall Street. That handshake deal grew into the New York Stock Exchange.
+THE EXCHANGE: I have a buyer and a seller at the same price, so you two are a match.
 
-Today, the exchange's job is the same as it was under that tree. It keeps a list of everyone who wants to buy, a list of everyone who wants to sell, and the price each one is asking. When a buyer and a seller agree, the computer matches them.
-
-THE EXCHANGE: I have a buyer at $230.02 and a seller at $230.02, so you two are a match.
-
-And now your dollar is about to reach someone. But it's probably not who you think.
-
-You might think that when you buy Apple stock, your money goes to Apple. It doesn't. Your dollar goes to whoever sold that sliver of stock. That could be a retired teacher in Arizona trimming her portfolio, a pension fund rebalancing, or a hedge fund that changed its mind.
-
-THE SELLER: I'm selling a little Apple to pay for a new roof.
+So who got your dollar? It went to whoever sold you that sliver. That might be the market maker itself, or a retired teacher in Arizona selling a little stock to pay for a new roof, or a pension fund rebalancing.
 
 YOU: So Apple doesn't get my dollar at all?
 
-Not from this trade, it doesn't. A company only gets money from its stock when it first sells shares to the public, which is called an IPO, or when it issues new shares later. Apple went public in December 1980 and raised about a hundred million dollars. Almost every trade since then has been between investors, like swapping concert tickets after the box office has already sold them.
+Not from this trade, it doesn't. A company raises money when it sells new shares, like in an initial public offering. Apple went public on December 12, 1980, at $22 a share, and the offering raised roughly a hundred million dollars. Almost every Apple trade since then has been between investors. It's like buying a concert ticket from another fan after the box office has already sold out.
 
-So why does Apple care about its stock price? Because executives are often paid in stock, because shareholders vote on who runs the company, and because a high price makes it easier to raise money or buy other companies with shares later.
+Apple still cares about its stock price, because executives are often paid in stock, shareholders vote on who sits on the board, and a high price makes it easier to raise money or pay for deals with shares.
 
-Your trade is matched. But on paper, nothing has actually changed hands yet.
+Your trade is matched, but it isn't official yet. Since May 28, 2024, most US stock trades settle one business day later, so a Tuesday trade usually becomes official on Wednesday, unless there's a holiday.
 
-Every trade still has to settle, meaning the money and the shares officially swap owners. Since May 2024, US stock trades settle one business day after the trade. Your Tuesday purchase becomes official on Wednesday.
+Behind the scenes, a company called the DTCC handles this. One part of it, the National Securities Clearing Corporation, clears trades and guarantees that eligible trades will be completed even if one side fails. Another part, the Depository Trust Company, settles them and holds the shares. It doesn't pass every dollar from hand to hand. It adds up what each firm owes and is owed, and settles the difference.
 
-In between, a company called the Depository Trust and Clearing Corporation stands in the middle. Its job is to make sure that if one side can't pay, the other side still gets what it was promised. It processes trades worth trillions of dollars a day, and most people have never heard of it.
+On the official records, most American shares are registered to a company called Cede and Company, which holds them for the Depository Trust Company.
 
-And here's the strangest part of the whole trip. On the official records, the legal owner of most American shares isn't you, and it isn't your app. It's a company called Cede and Company, which the clearinghouse uses to hold shares on behalf of everyone.
+YOU: So do I actually own my stock?
 
-YOU: So who actually owns my Apple stock?
+Yes, you do. Cede and Company is the registered owner, and you're the beneficial owner, which means the gains and the losses are yours. Voting with a fractional share depends on your broker. Robinhood combines fractional votes, while Schwab generally doesn't let you vote with less than a whole share.
 
-You do. You're what's called the beneficial owner, which means you get the gains, the dividends, and the voting rights. Your app keeps the record that says the sliver is yours. If your app's brokerage ever went under, an organization called SIPC protects customer accounts up to $500,000, including up to $250,000 in cash. That protects you if the broker fails. It doesn't protect you if the stock falls.
+And if your broker is a SIPC member and goes out of business with customer assets missing, SIPC protection generally covers up to $500,000 per customer, including up to $250,000 in cash. It doesn't protect you if the stock simply falls.
 
-Which brings us to the price itself. Why did your dollar buy Apple at $230 and not $200 or $300?
+Which brings us to the price. Every trade has a buyer and a seller, so the price isn't set by Apple or by anyone in particular. It rises when buyers are willing to pay more, and it falls when sellers are willing to accept less.
 
-The price of a stock is simply the last price that a buyer and a seller agreed on. Nobody at Apple sets it. If more people want to buy than sell, buyers have to offer more, and the price rises. If more people want out, sellers have to accept less, and the price falls.
+Imagine Apple's last trade was at $250.00. The lowest anyone is willing to sell for right now is $250.05. A buyer who really wants in decides to pay it, and the trade goes through. The last price is now $250.05, and that's the number you see on your screen. Thousands of tiny decisions like that, every second, are what make a stock chart move.
 
-What makes people want to buy or sell? Mostly, it's what they expect the company to earn in the future. A good earnings report, a new product, or a big lawsuit can change those expectations in minutes. So can fear about the whole economy.
+What changes their minds is mostly what they expect the company to earn. A strong earnings report, a new product, or a lawsuit can shift those expectations in minutes, and so can fear about the whole economy.
 
-Warren Buffett likes to repeat a line from his old teacher, Benjamin Graham: "In the short run, the market is a voting machine, but in the long run, it is a weighing machine." Day to day, prices follow moods. Over years, they tend to follow profits.
+In his 1987 letter to shareholders, Warren Buffett passed on a lesson from his teacher, Benjamin Graham: in the short run, the market is a voting machine, but in the long run it's a weighing machine. Day to day, prices follow moods. Over many years, they tend to follow profits.
 
-Now let's change one thing about your dollar. Instead of buying Apple, you put it into an S&P 500 index fund, which is the kind most people own through a 401(k).
+Now let's change one thing. Instead of buying Apple, you put your dollar into an S&P 500 index fund, which is one common way to own a basket of companies.
 
-[VISUAL NOTE: One dollar bill cut into 500 uneven slices]
+[VISUAL NOTE: A dollar going into one big basket, with company logos inside the basket at different sizes]
 
-That one dollar gets split across roughly 500 of the biggest American companies, and the biggest companies get the biggest slices. As of late 2026, Nvidia alone is about eight cents of every dollar in an S&P 500 fund. Seven giant tech companies together make up roughly a third.
+You aren't buying 500 separate stocks. You're buying a share, or a fraction of a share, of the fund, and the fund owns stock in roughly 500 large American companies. The biggest companies get the biggest weight, so a large share of the fund rides on a handful of giants.
 
-So even if you've never picked a single stock, there's a good chance you own a sliver of Nvidia, Apple, Microsoft, and a few hundred others. According to Gallup, about six in ten Americans own stock in some form, and most of them own it exactly this way.
+Funds charge a yearly fee called an expense ratio, which is taken out of the fund's value rather than billed to you. Some of the largest S&P 500 funds charge three cents a year for every hundred dollars you invest, while other funds charge much more, so it's worth checking before you buy.
 
-Some of those companies pay out part of their profits as dividends. If your fund holds them, a few cents eventually find their way back to you, and most funds let you reinvest them automatically.
+According to Gallup, 62 percent of US adults said they owned stock in 2025, whether directly, through a fund, or in a retirement account. When companies in your fund pay dividends, your share of those dividends can come back to you, and many funds let you reinvest them automatically.
 
-So what happens to your dollar if you just leave it alone?
+So what happens if you leave your dollar alone? Nobody can promise anything. Historically, over long periods, US large-company stocks have returned roughly ten percent a year on average, including dividends.
 
-Nobody can promise anything. But over the last century, the S&P 500 has returned about ten percent a year on average, including dividends. At ten percent, a dollar roughly doubles every seven years. Leave it for forty years and that single dollar could become about forty-five, before inflation and fees.
+As a simple illustration, not a forecast, a dollar growing at a steady ten percent a year would become about $45 after forty years, before inflation, fees, and taxes.
 
-The hard part is the ride in between. From late 2007 to early 2009, the S&P 500 fell by more than half. In early 2020, it dropped about a third in roughly a month. People who sold in a panic locked in those losses. People who held on, or kept buying, eventually saw the market recover.
+Real markets don't grow in a straight line. From late 2007 to early 2009, the S&P 500 lost more than half its value. In 2020, it fell almost 34 percent between February 19 and March 23. Both times, the broad index eventually recovered, but individual stocks don't always come back.
 
-So here's the full trip. Your dollar left your pocket, became a message in an app, got passed to a market maker or an exchange computer in New Jersey, landed with a stranger who wanted to sell, and was settled a day later by a company you'd never heard of, with the paperwork held in the name of another one. And at the end of all that, you own a tiny piece of a real business.
+So here's the whole trip. Your dollar bought a slice of ownership. Your order left your app, may have gone to a market maker or an exchange in New Jersey, and was matched with a seller who wanted out. The next business day, the system settled what everyone owed, and your app recorded the sliver as yours. And the company on the button didn't get your dollar, but you now own a tiny piece of it.
 
-YOU: That's a lot of hands for one dollar.
-
-It is, and most of them get paid a fraction of a cent along the way. That's the price of being able to buy a piece of almost any big American company from your couch in under a second.
-
-Now I'm curious. What was the first stock or fund you ever bought, and do you still own it? Tell me in the comments. And if this helped the stock market make a little more sense, subscribe, because next time we're following a dollar through a 401(k).
+So I'm curious. What was the first stock or fund you ever bought, and do you still own it? Tell me in the comments, and subscribe if you want more of the money system explained one dollar at a time.
