@@ -39,7 +39,7 @@ FORMAT = "mp3_44100_128"
 SETTINGS = dict(stability=0.4, similarity_boost=0.8, style=0.2, use_speaker_boost=True)
 DEFAULT_SPEED = 1.0
 # Faster read for the hook (roughly the first 30 seconds).
-SPEED = {"VO-01": 1.12, "VO-02": 1.12, "VO-03": 1.12}
+SPEED = {f"VO-{n:02d}": 1.12 for n in range(1, 7)}  # VO-01 to VO-06
 
 # --split: long lines are cut into pieces of a few sentences (VO-13a, VO-13b, ...).
 SPLIT_TARGET = 220  # aim for pieces of about this many characters
