@@ -54,3 +54,33 @@ python3 tools/build_sfx.py <sfx.txt> <narration.mp3> <out_dir>
 - Reuse existing sounds across versions; generate only new ones.
 - Deliver `sfx-track.mp3` (drop at 0:00 in CapCut) and `preview-mix.mp3` (voice plus effects).
 - Golpo gets the voice-only track; effects are added in the editor.
+
+## The approved feel, measured (match these numbers)
+
+The creator singled out the dead space, the sounds and the breathing room. Measured on `audio/nvidia-300-billion-final-FULL.mp3` (59.5 s):
+
+**Breathing room**
+- Silence is about 6.4 s of the 59.5 s (about 11%). Typical gap is about 0.33 s; nothing is longer than 0.6 s.
+- Between ordinary sentences and at commas: about 0.3 to 0.4 s, like a natural breath.
+- After the big beats: 0.5 to 0.6 s, the longest pauses in the track, used only on payoffs and the peak:
+  - 0.56 s after "They were buying one man." (first payoff)
+  - 0.59 s after "drops nine percent in a single night." (peak)
+  - 0.47 s after "has resigned as Nvidia's C-E-O." (the big news)
+  - about 0.4 s before the callback and before the final line
+- No silence at the very start (first word at about 0.14 s) and the track ends right on the last word, so the loop restarts cleanly.
+
+**Pace**
+- Narrator about 155 to 165 words a minute, escalation lines 185 to 195, the anchor 145 to 165 after tempo fixes, the closing line about 210 (casual, quick).
+- Total about 150 words in 59.5 s.
+
+**Sounds**
+- 21 cues in 59.5 s, one about every 3 seconds, densest in the hook (boom plus three stamps in the first 4 s) and at the callback (three stamps plus the boom again on "It lost one man").
+- Each sound starts 0 to 0.1 s before its word, so it lands with the word, not after it.
+- The pause after the peak keeps only the impact's tail; no new sound starts in it.
+- Effects sit about 6 dB under the voice; the mix measures the same loudness as the voice alone (-15 LUFS, peaks -1 dB).
+
+**How to check a new track against this**
+```bash
+ffmpeg -i <track.mp3> -af silencedetect=n=-40dB:d=0.15 -f null - 2>&1 | grep silence_duration
+```
+Most gaps should be 0.3 to 0.4 s, only the payoff and peak beats 0.5 to 0.6 s, and nothing longer.
