@@ -1,0 +1,4 @@
+# Pitch-safe speed-up applied when joining the 60-second track (no new recording).
+VO-04 1.25  # anchor headline: was about 120 words a minute, needs to sound urgent
+VO-05 1.08  # escalation
+VO-06 1.10  # anchor: board line

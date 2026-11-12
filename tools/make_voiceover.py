@@ -21,6 +21,7 @@ CAST = {
     "THE CLEARINGHOUSE": ("The D-T-C-C, personified. Steady, wise, a bit strict, like a referee.", "Makes the trade official (stop five)"),
     "MAYA": ("A young investor. Bright, a little proud of her savings.", "Buys ten shares"),
     "JORDAN": ("A young buyer. Relaxed and upbeat.", "Buys Maya's shares for more"),
+    "NEWS ANCHOR": ("A TV news anchor. Crisp, urgent, official, like a breaking-news bulletin.", "Reads the headlines in news shorts"),
 }
 DRAW = {
     "YOU": "a stick-figure viewer holding a phone",
@@ -31,6 +32,7 @@ DRAW = {
     "THE CLEARINGHOUSE": "a referee standing between two buildings",
     "MAYA": "a young woman holding ten share certificates",
     "JORDAN": "a young buyer holding cash",
+    "NEWS ANCHOR": "a news anchor behind a desk with a BREAKING banner",
 }
 
 

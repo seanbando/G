@@ -1,0 +1,9 @@
+# 60-second cut: everything at normal speed; pace is shaped in tempo-60s.txt instead,
+# because this voice mostly ignores the speed setting. Listed so the long video's
+# default 1.12 hook speed is not applied here.
+VO-01 1.0
+VO-02 1.0
+VO-03 1.0
+VO-04 1.0
+VO-05 1.0
+VO-06 1.0

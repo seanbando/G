@@ -35,6 +35,7 @@ VOICES = {
     "THE CLEARINGHOUSE": "pqHfZKP75CvOlQylNhV4",  # Bill - Wise, Mature, Balanced
     "MAYA": "cgSgspJ2msm6clMCkdW9",               # Jessica - Playful, Bright, Warm
     "JORDAN": "bIHbv24MWmeRgasZH58o",             # Will - Relaxed Optimist
+    "NEWS ANCHOR": "L1xUIshtTbSBoOSqBFaP",        # Andrew - Crisp Announcer (same voice as THE EXCHANGE)
 }
 MODEL = "eleven_v4"  # narrator style D, chosen by the creator
 FORMAT = "mp3_44100_128"
