@@ -8,17 +8,17 @@ Voice-only recording sheet. Every spoken line is numbered (VO-01, VO-02 …) and
 
 | # | Voice | Lines | Words | Character direction | Role in the story |
 |---|---|---|---|---|---|
-| 1 | **NARRATOR** | 75 | 1812 | Main host. Warm, clear, conversational, like explaining money to a friend. Steady pace, about 160 words per minute. | The whole story |
-| 2 | **YOU** | 11 | 84 | The viewer's inner voice. Curious and a little surprised. Younger and more casual than the narrator. Must sound clearly different from the narrator. | Asks the questions the audience is thinking |
+| 1 | **NARRATOR** | 75 | 1810 | Main host. Warm, clear, conversational, like explaining money to a friend. Steady pace, about 160 words per minute. | The whole story |
+| 2 | **YOU** | 11 | 85 | The viewer's inner voice. Curious and a little surprised. Younger and more casual than the narrator. Must sound clearly different from the narrator. | Asks the questions the audience is thinking |
 | 3 | **THE APP** | 2 | 38 | The investing app, personified. Upbeat, efficient, slightly robotic customer-service tone. | Confirms the order |
 | 4 | **THE MARKET MAKER** | 1 | 30 | A trading firm, personified. Relaxed, confident, a little salesy, like a currency-booth clerk. Not shady. | Quotes the buy and sell prices (stop two) |
 | 5 | **THE EXCHANGE** | 1 | 17 | The stock exchange, personified. Calm, official, matter-of-fact, like an announcer or matchmaker. | Matches buyer and seller (stop three) |
-| 6 | **THE SELLER** | 1 | 16 | A retired teacher in Arizona, deliberately played by a younger, quirky voice (Laura) as a funny twist. Cheerful and a little sassy. | The stranger who gets your dollar (stop four) |
+| 6 | **THE SELLER** | 1 | 17 | A retired teacher in Arizona, deliberately played by a younger, quirky voice (Laura) as a funny twist. Cheerful and a little sassy. | The stranger who gets your dollar (stop four) |
 | 7 | **THE CLEARINGHOUSE** | 1 | 7 | The D-T-C-C, personified. Steady, wise, a bit strict, like a referee. | Makes the trade official (stop five) |
 | 8 | **MAYA** | 1 | 19 | A young investor. Bright, a little proud of her savings. | Buys ten shares |
-| 9 | **JORDAN** | 1 | 12 | A young buyer. Relaxed and upbeat. | Buys Maya's shares for more |
+| 9 | **JORDAN** | 1 | 11 | A young buyer. Relaxed and upbeat. | Buys Maya's shares for more |
 
-**Total:** 94 lines (one scene each) · 2035 spoken words · about 11.3 minutes of audio at the narrator's pace of 180 words per minute, before pauses. The longest scene is about 14 seconds.
+**Total:** 94 lines (one scene each) · 2034 spoken words · about 11.3 minutes of audio at the narrator's pace of 180 words per minute, before pauses. The longest scene is about 14 seconds.
 
 **Pause-and-guess breaks:** the ⏸ cues are silent beats so viewers can guess. Nobody records them; the silence is added automatically when the files are joined.
 
@@ -122,7 +122,7 @@ That tiny two-cent gap is how the market maker tries to make money, although it 
 Two of the biggest market makers are Citadel Securities and Virtu.
 
 **VO-29 · NARRATOR** · ~10 s  
-Here's something most people don't know. Market makers often pay your app to send them your orders. That's one reason many apps can let you trade without paying a commission.
+Most people don't know this part. Market makers often pay your app to send them your orders. That's one reason many apps can let you trade without paying a commission.
 
 **VO-30 · NARRATOR** · ~8 s  
 Your broker still has to try to get you the best available deal, considering price and how reliably the order can be filled.
@@ -162,8 +162,8 @@ So your order has found a match. That means it's time to answer the very first q
 **VO-41 · NARRATOR** · ~12 s  
 It's the stranger, and that's stop four. Your dollar goes to whoever sold you that slice. That could be the market maker itself, a big investment fund, or a regular person, like a retired teacher in Arizona.
 
-**VO-42 · THE SELLER** · ~5 s  
-I'm selling a little Apple to help pay for a new roof. Thanks for the dollar.
+**VO-42 · THE SELLER** · ~6 s  
+I'm selling a little Apple to help pay for a new roof. Thanks for the dollar. Seriously.
 
 **VO-43 · YOU** · ~1 s  
 So Apple gets nothing?
@@ -217,7 +217,7 @@ If the company behind your app is a member of S-I-P-C and it fails with customer
 It doesn't protect you if the stock simply goes down.
 
 **VO-60 · NARRATOR** · ~12 s  
-So here's where we are. Your dollar became an order in your app, went to a market maker or an exchange, landed with a stranger who wanted to sell, and became official the next business day.
+Quick check on where we are. Your dollar became an order in your app, went to a market maker or an exchange, landed with a stranger who wanted to sell, and became official the next business day.
 
 **VO-61 · NARRATOR** · ~7 s  
 That's five stops. The order can go through in a fraction of a second, and settlement normally follows one business day later.
@@ -235,7 +235,7 @@ I bought ten shares of a company at two hundred dollars each. That's two thousan
 A year later, the company is doing well, and Jordan wants in.
 
 **VO-66 · JORDAN** · ~4 s  
-I'll pay you two hundred fifty dollars a share for all ten.
+I'll pay you two hundred fifty dollars a share. All ten.
 
 **VO-67 · NARRATOR** · ~3 s  
 Before I tell you, how much did Maya just make?
@@ -254,8 +254,8 @@ So why would Jordan pay more than Maya did?
 **VO-71 · NARRATOR** · ~13 s  
 Because the price you usually see is the last-traded price, the last price someone actually agreed to pay. If buyers are willing to pay more, the price goes up. If sellers are willing to take less, the price goes down.
 
-**VO-72 · NARRATOR** · ~5 s  
-Here's one more to try. Apple's last trade was at two hundred fifty dollars.
+**VO-72 · NARRATOR** · ~4 s  
+One more to try. Apple's last trade was at two hundred fifty dollars.
 
 **VO-73 · NARRATOR** · ~10 s  
 The cheapest anyone will sell for right now is two hundred fifty dollars and five cents, and a buyer decides to pay it. What does the last-trade price become?
@@ -310,13 +310,13 @@ Between two thousand seven and two thousand nine, it lost more than half its val
 The basket as a whole came back both times, but a single company doesn't always come back.
 
 **VO-89 · NARRATOR** · ~11 s  
-So here's the whole trip one last time. Your dollar bought a slice of ownership. It left your app, may have stopped at a market maker or an exchange, and landed with a stranger.
+One last time, the whole trip. Your dollar bought a slice of ownership. It left your app, may have stopped at a market maker or an exchange, and landed with a stranger.
 
 **VO-90 · NARRATOR** · ~10 s  
 It settled the next business day, with Cede and Company as the name on the record. Apple never got your dollar, but you now own a tiny piece of Apple.
 
 **VO-91 · YOU** · ~3 s  
-That's a lot of stops for one dollar.
+That's a lot of stops for one dollar. Exhausting.
 
 **VO-92 · NARRATOR** · ~7 s  
 It is. The order can go through in a fraction of a second, and the paperwork finishes one business day later.
@@ -354,7 +354,7 @@ And subscribe if you want more of the money system explained one dollar at a tim
 - **VO-25:** Like any store, it buys a little cheaper than it sells.
 - **VO-27:** That tiny two-cent gap is how the market maker tries to make money, although it can lose money too if the price moves the wrong way.
 - **VO-28:** Two of the biggest market makers are Citadel Securities and Virtu.
-- **VO-29:** Here's something most people don't know. Market makers often pay your app to send them your orders. That's one reason many apps can let you trade without paying a commission.
+- **VO-29:** Most people don't know this part. Market makers often pay your app to send them your orders. That's one reason many apps can let you trade without paying a commission.
 - **VO-30:** Your broker still has to try to get you the best available deal, considering price and how reliably the order can be filled.
 - **VO-31:** If the market maker has the stock, it can sell it to you straight off the shelf. If it doesn't, your order can head to stop three.
 - **VO-32:** Stop three is the stock exchange. This is what most people picture when they hear "Wall Street."
@@ -379,7 +379,7 @@ And subscribe if you want more of the money system explained one dollar at a tim
 - **VO-56:** If Apple goes up, you gain, and if it goes down, you lose.
 - **VO-58:** If the company behind your app is a member of S-I-P-C and it fails with customer investments missing, S-I-P-C can help get them back, up to five hundred thousand dollars per customer, including up to two hundred fifty thousand dollars in cash.
 - **VO-59:** It doesn't protect you if the stock simply goes down.
-- **VO-60:** So here's where we are. Your dollar became an order in your app, went to a market maker or an exchange, landed with a stranger who wanted to sell, and became official the next business day.
+- **VO-60:** Quick check on where we are. Your dollar became an order in your app, went to a market maker or an exchange, landed with a stranger who wanted to sell, and became official the next business day.
 - **VO-61:** That's five stops. The order can go through in a fraction of a second, and settlement normally follows one business day later.
 - **VO-62:** But you probably didn't come here just to find out where your dollar goes. You want to know how it turns into more dollars.
 - **VO-63:** There are two main ways to make money from a stock. The first is selling it for more than you paid. Let's meet Maya.
@@ -388,7 +388,7 @@ And subscribe if you want more of the money system explained one dollar at a tim
 - **VO-68:** She made five hundred dollars before taxes. But if Jordan had only offered one hundred fifty dollars a share, she'd have lost five hundred dollars instead. Selling for more is never guaranteed.
 - **VO-69:** The second way to make money is dividends. Some companies share part of their profits with the people who own their stock, usually a few times a year. Not every company does it, and they can stop.
 - **VO-71:** Because the price you usually see is the last-traded price, the last price someone actually agreed to pay. If buyers are willing to pay more, the price goes up. If sellers are willing to take less, the price goes down.
-- **VO-72:** Here's one more to try. Apple's last trade was at two hundred fifty dollars.
+- **VO-72:** One more to try. Apple's last trade was at two hundred fifty dollars.
 - **VO-73:** The cheapest anyone will sell for right now is two hundred fifty dollars and five cents, and a buyer decides to pay it. What does the last-trade price become?
 - **VO-74:** The last-trade price becomes two hundred fifty dollars and five cents, because someone just bought at that price.
 - **VO-75:** Millions of little deals like that, every day, are what make a stock chart go up and down.
@@ -403,7 +403,7 @@ And subscribe if you want more of the money system explained one dollar at a tim
 - **VO-86:** You'd end up with about forty-five dollars, before inflation, fees, and taxes. That's just an example, not a promise, because the market doesn't go up in a straight line.
 - **VO-87:** Between two thousand seven and two thousand nine, it lost more than half its value. In twenty twenty, it dropped about a third in roughly a month.
 - **VO-88:** The basket as a whole came back both times, but a single company doesn't always come back.
-- **VO-89:** So here's the whole trip one last time. Your dollar bought a slice of ownership. It left your app, may have stopped at a market maker or an exchange, and landed with a stranger.
+- **VO-89:** One last time, the whole trip. Your dollar bought a slice of ownership. It left your app, may have stopped at a market maker or an exchange, and landed with a stranger.
 - **VO-90:** It settled the next business day, with Cede and Company as the name on the record. Apple never got your dollar, but you now own a tiny piece of Apple.
 - **VO-92:** It is. The order can go through in a fraction of a second, and the paperwork finishes one business day later.
 - **VO-93:** So here's my question for you. Which stop surprised you most: the market maker, the stranger who got your dollar, or the coat check called Cede and Company? Tell me in the comments.
@@ -421,7 +421,7 @@ And subscribe if you want more of the money system explained one dollar at a tim
 - **VO-70:** So why would Jordan pay more than Maya did?
 - **VO-79:** That sounds like a lot to keep track of. What if I don't want to pick just one company?
 - **VO-83:** Okay, but what happens if I just leave my dollar in there?
-- **VO-91:** That's a lot of stops for one dollar.
+- **VO-91:** That's a lot of stops for one dollar. Exhausting.
 
 ### THE APP (2 lines)
 
@@ -438,7 +438,7 @@ And subscribe if you want more of the money system explained one dollar at a tim
 
 ### THE SELLER (1 lines)
 
-- **VO-42:** I'm selling a little Apple to help pay for a new roof. Thanks for the dollar.
+- **VO-42:** I'm selling a little Apple to help pay for a new roof. Thanks for the dollar. Seriously.
 
 ### THE CLEARINGHOUSE (1 lines)
 
@@ -450,7 +450,7 @@ And subscribe if you want more of the money system explained one dollar at a tim
 
 ### JORDAN (1 lines)
 
-- **VO-66:** I'll pay you two hundred fifty dollars a share for all ten.
+- **VO-66:** I'll pay you two hundred fifty dollars a share. All ten.
 
 ---
 

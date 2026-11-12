@@ -116,7 +116,7 @@ Two of the biggest market makers are Citadel Securities and Virtu.
 
 [DRAW: The clerk hands THE APP a small envelope. THE APP shows a sign that says "$0 commission."]
 
-Here's something most people don't know. Market makers often pay your app to send them your orders. That's one reason many apps can let you trade without paying a commission.
+Most people don't know this part. Market makers often pay your app to send them your orders. That's one reason many apps can let you trade without paying a commission.
 
 [DRAW: THE APP holding a magnifying glass over two things: a price tag and a check mark labelled "Will it get filled?"]
 
@@ -170,7 +170,7 @@ It's the stranger, and that's stop four. Your dollar goes to whoever sold you th
 
 [DRAW: THE SELLER, a retired teacher with glasses, holding a "New roof" estimate and waving the dollar.]
 
-THE SELLER: I'm selling a little Apple to help pay for a new roof. Thanks for the dollar.
+THE SELLER: I'm selling a little Apple to help pay for a new roof. Thanks for the dollar. Seriously.
 
 [DRAW: YOU looking at the Apple logo, which shrugs with empty pockets.]
 
@@ -242,7 +242,7 @@ It doesn't protect you if the stock simply goes down.
 
 [DRAW: The road map with all five stops checked off. The dollar's path is drawn as a dotted line.]
 
-So here's where we are. Your dollar became an order in your app, went to a market maker or an exchange, landed with a stranger who wanted to sell, and became official the next business day.
+Quick check on where we are. Your dollar became an order in your app, went to a market maker or an exchange, landed with a stranger who wanted to sell, and became official the next business day.
 
 [DRAW: A stopwatch labelled "Order: can be a fraction of a second" next to a calendar labelled "Settlement: next business day."]
 
@@ -266,7 +266,7 @@ A year later, the company is doing well, and Jordan wants in.
 
 [DRAW: JORDAN holding cash and offering it to MAYA. Write "$250 a share."]
 
-JORDAN: I'll pay you two hundred fifty dollars a share for all ten.
+JORDAN: I'll pay you two hundred fifty dollars a share. All ten.
 
 [DRAW: MAYA and JORDAN shaking hands, with a big question mark over MAYA's head.]
 
@@ -292,7 +292,7 @@ Because the price you usually see is the last-traded price, the last price someo
 
 [DRAW: A price board: "Last trade: $250.00."]
 
-Here's one more to try. Apple's last trade was at two hundred fifty dollars.
+One more to try. Apple's last trade was at two hundred fifty dollars.
 
 [DRAW: A seller holds a sign: "I'll sell at $250.05." A buyer reaches for it, and the phone screen shows a question mark.]
 
@@ -364,7 +364,7 @@ The basket as a whole came back both times, but a single company doesn't always 
 
 [DRAW: The full road map one last time, with the dollar's path drawn through all five stops in a solid line.]
 
-So here's the whole trip one last time. Your dollar bought a slice of ownership. It left your app, may have stopped at a market maker or an exchange, and landed with a stranger.
+One last time, the whole trip. Your dollar bought a slice of ownership. It left your app, may have stopped at a market maker or an exchange, and landed with a stranger.
 
 [DRAW: The "OFFICIAL" stamp on Wednesday, the record book with "Cede & Co.", and YOU holding a tiny slice of Apple.]
 
@@ -372,7 +372,7 @@ It settled the next business day, with Cede and Company as the name on the recor
 
 [DRAW: YOU wiping their forehead, looking at the long road map.]
 
-YOU: That's a lot of stops for one dollar.
+YOU: That's a lot of stops for one dollar. Exhausting.
 
 [DRAW: The stopwatch and the calendar again: "Order: a fraction of a second. Paperwork: next business day."]
 
