@@ -1,0 +1,19 @@
+# Per-line ElevenLabs speed (0.7 to 1.2). Energy comes from pace and pauses, never volume.
+# 1.20 is the ElevenLabs maximum; this voice reads about 160 words a minute at 1.0, so the escalation (VO-08 to VO-10) needs it.
+VO-01 1.00  # hook: three denials, punchy                     energy 7
+VO-02 0.95  # "three hundred billion", slows into "private life"  energy 7
+VO-03 1.00  # open loop, leaning in                          energy 6
+VO-04 1.15  # build: brisk and confident, names tossed off   energy 6-7
+VO-05 0.95  # set up the turn                                energy 5
+VO-06 0.85  # payoff 1: "one man", slow, let it land         energy 4
+VO-07 1.00  # Jensen intro                                   energy 5
+VO-08 1.20  # re-hook at about 30s, news breaking            energy 7
+VO-09 1.20  # escalating                                     energy 8
+VO-10 1.20  # escalating                                     energy 8
+VO-11 1.05  # peak: "nine percent in a single night"         energy 9
+VO-12 0.95  # lesson: calm teacher                           energy 5
+VO-13 0.92  # succession planning                            energy 4
+VO-14 0.85  # "no plan B": slow, quiet                       energy 3
+VO-15 1.00  # Jobs proof, storytelling                       energy 5
+VO-16 1.00  # twist: casual aside                            energy 4
+VO-17 0.88  # last line: slow, deadpan                       energy 2

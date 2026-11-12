@@ -2,6 +2,10 @@
 
 Usage:
     python3 tools/generate_voiceovers.py <script.md> <output_dir> [--only VO-01,VO-02] [--force]
+        [--speeds speeds.txt]
+
+--speeds reads a per-line speed sheet ("VO-06 0.85  # comment" per line) and
+replaces the default speeds below, so each short can set its own pacing.
 
 Reads the script with the same parser as make_voiceover.py, so file names
 (VO-01_NARRATOR.mp3, ...) match the voice-over sheet. Existing files are
@@ -78,6 +82,17 @@ def split_line(text):
     return pieces
 
 
+def load_speeds(path):
+    """Read 'VO-06 0.85  # comment' lines into {line_id: speed}."""
+    speeds = {}
+    for raw in open(path):
+        line = raw.split("#", 1)[0].strip()
+        if line:
+            line_id, value = line.split()
+            speeds[line_id] = float(value)
+    return speeds
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("script")
@@ -86,7 +101,9 @@ def main():
     ap.add_argument("--force", action="store_true", help="overwrite existing files")
     ap.add_argument("--model", default=MODEL, help="ElevenLabs model ID")
     ap.add_argument("--split", action="store_true", help="cut long lines into smaller pieces")
+    ap.add_argument("--speeds", help="per-line speed sheet; replaces the default speeds")
     args = ap.parse_args()
+    speed_map = load_speeds(args.speeds) if args.speeds else SPEED
 
     _, lines = parse(args.script)
     only = set(args.only.split(",")) if args.only else None
@@ -112,7 +129,7 @@ def main():
         # Surrounding text gives the model context, so delivery flows between files.
         prev_text = units[i - 1][3] if i > 0 else None
         next_text = units[i + 1][3] if i + 1 < len(units) else None
-        speed = SPEED.get(line_id, DEFAULT_SPEED)
+        speed = speed_map.get(line_id, DEFAULT_SPEED)
         audio = client.text_to_speech.convert(
             voice_id=VOICES[voice],
             text=text,

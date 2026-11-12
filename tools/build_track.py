@@ -13,6 +13,11 @@ Order and pauses come from the script, so the track always matches it:
 - clips listed in TEMPO are gently slowed (pitch unchanged) when the voice
   model rushed them
 Trimmed copies of every clip are written to <clips_dir>/trimmed/.
+
+Add --keep-pace to skip the automatic speed-ups, for scripts whose slow
+lines are slow on purpose (set with generate_voiceovers.py --speeds).
+Add --tempo <sheet> to stretch chosen lines for this script only, with the
+same "VO-08 1.18  # comment" format; it adds to TEMPO for this run.
 """
 import glob
 import os
@@ -64,7 +69,7 @@ def ff(*args):
     subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", *args], check=True, stdin=subprocess.DEVNULL)
 
 
-def main(script, clips, out):
+def main(script, clips, out, keep_pace=False):
     _, lines = parse(script)
     tmp = tempfile.mkdtemp()
     os.makedirs(os.path.join(clips, "trimmed"), exist_ok=True)
@@ -101,7 +106,7 @@ def main(script, clips, out):
             # mode is unreliable on very short clips.)
             ff("-i", f, "-af", chain, "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le", raw)
             speedup = ""
-            if line not in TEMPO and len(files) == 1:
+            if line not in TEMPO and len(files) == 1 and not keep_pace:
                 below, target, cap = AUTO_TEMPO["NARRATOR" if voice == "NARRATOR" else "OTHER"]
                 wpm = len(text.split()) / duration(raw) * 60
                 factor = None
@@ -139,4 +144,11 @@ def main(script, clips, out):
 
 
 if __name__ == "__main__":
-    main(*sys.argv[1:4])
+    argv = sys.argv[1:]
+    if "--tempo" in argv:
+        i = argv.index("--tempo")
+        from generate_voiceovers import load_speeds
+        TEMPO.update(load_speeds(argv[i + 1]))
+        del argv[i:i + 2]
+    args = [a for a in argv if a != "--keep-pace"]
+    main(*args[:3], keep_pace="--keep-pace" in argv)

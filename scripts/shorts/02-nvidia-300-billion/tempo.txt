@@ -1,0 +1,7 @@
+# Pitch-safe speed-up applied when joining the track (build_track.py --tempo).
+# The voice model ignores most of its speed setting, so the escalation is sped up here.
+VO-04 1.08  # build list, brisk
+VO-08 1.20  # re-hook: "Then the reports drop"
+VO-09 1.15  # escalating
+VO-10 1.15  # escalating
+VO-15 1.12  # Jobs line read slower than the rest
