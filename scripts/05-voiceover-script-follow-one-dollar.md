@@ -8,7 +8,7 @@ Voice-only recording sheet. Every spoken line is numbered (VO-01, VO-02 …) and
 
 | # | Voice | Lines | Words | Character direction | Role in the story |
 |---|---|---|---|---|---|
-| 1 | **NARRATOR** | 75 | 1810 | Main host. Warm, clear, conversational, like explaining money to a friend. Steady pace, about 160 words per minute. | The whole story |
+| 1 | **NARRATOR** | 77 | 1903 | Main host. Warm, clear, conversational, like explaining money to a friend. Steady pace, about 160 words per minute. | The whole story |
 | 2 | **YOU** | 11 | 85 | The viewer's inner voice. Curious and a little surprised. Younger and more casual than the narrator. Must sound clearly different from the narrator. | Asks the questions the audience is thinking |
 | 3 | **THE APP** | 2 | 38 | The investing app, personified. Upbeat, efficient, slightly robotic customer-service tone. | Confirms the order |
 | 4 | **THE MARKET MAKER** | 1 | 30 | A trading firm, personified. Relaxed, confident, a little salesy, like a currency-booth clerk. Not shady. | Quotes the buy and sell prices (stop two) |
@@ -18,7 +18,7 @@ Voice-only recording sheet. Every spoken line is numbered (VO-01, VO-02 …) and
 | 8 | **MAYA** | 1 | 19 | A young investor. Bright, a little proud of her savings. | Buys ten shares |
 | 9 | **JORDAN** | 1 | 11 | A young buyer. Relaxed and upbeat. | Buys Maya's shares for more |
 
-**Total:** 94 lines (one scene each) · 2034 spoken words · about 11.3 minutes of audio at the narrator's pace of 180 words per minute, before pauses. The longest scene is about 14 seconds.
+**Total:** 96 lines (one scene each) · 2127 spoken words · about 11.8 minutes of audio at the narrator's pace of 180 words per minute, before pauses. The longest scene is about 15 seconds.
 
 **Pause-and-guess breaks:** the ⏸ cues are silent beats so viewers can guess. Nobody records them; the silence is added automatically when the files are joined.
 
@@ -321,17 +321,23 @@ That's a lot of stops for one dollar. Exhausting.
 **VO-92 · NARRATOR** · ~7 s  
 It is. The order can go through in a fraction of a second, and the paperwork finishes one business day later.
 
-**VO-93 · NARRATOR** · ~11 s  
-So here's my question for you. Which stop surprised you most: the market maker, the stranger who got your dollar, or the coat check called Cede and Company? Tell me in the comments.
+**VO-93 · NARRATOR** · ~15 s  
+Before I ask you something, I'll go first. The first stock I ever bought was Nvidia. I picked it because I think it's tied to where the world is heading, and it's one of the biggest companies in the stock market. That's my reason, not advice.
 
-**VO-94 · NARRATOR** · ~5 s  
+**VO-94 · NARRATOR** · ~13 s  
+The first time I opened a candlestick chart, I was completely lost, but that's a story for another video. I started learning about money because I want to be financially free and live the life everyone dreams about.
+
+**VO-95 · NARRATOR** · ~14 s  
+So here's my question for you. Which stop surprised you most: the market maker, the stranger who got your dollar, or the coat check called Cede and Company? And what was the first stock you ever bought? Tell me in the comments.
+
+**VO-96 · NARRATOR** · ~5 s  
 And subscribe if you want more of the money system explained one dollar at a time.
 
 ---
 
 ## Part 2: Lines by voice (for recording sessions)
 
-### NARRATOR (75 lines)
+### NARRATOR (77 lines)
 
 - **VO-01:** When you tap "buy" on a stock, your money almost never goes to the company whose name is on the button. If you buy one dollar of Apple, Apple usually doesn't get a single cent of it.
 - **VO-03:** That's what we're going to find out. And here's something even stranger. On the official paperwork, the stock you buy usually isn't in your name.
@@ -406,8 +412,10 @@ And subscribe if you want more of the money system explained one dollar at a tim
 - **VO-89:** One last time, the whole trip. Your dollar bought a slice of ownership. It left your app, may have stopped at a market maker or an exchange, and landed with a stranger.
 - **VO-90:** It settled the next business day, with Cede and Company as the name on the record. Apple never got your dollar, but you now own a tiny piece of Apple.
 - **VO-92:** It is. The order can go through in a fraction of a second, and the paperwork finishes one business day later.
-- **VO-93:** So here's my question for you. Which stop surprised you most: the market maker, the stranger who got your dollar, or the coat check called Cede and Company? Tell me in the comments.
-- **VO-94:** And subscribe if you want more of the money system explained one dollar at a time.
+- **VO-93:** Before I ask you something, I'll go first. The first stock I ever bought was Nvidia. I picked it because I think it's tied to where the world is heading, and it's one of the biggest companies in the stock market. That's my reason, not advice.
+- **VO-94:** The first time I opened a candlestick chart, I was completely lost, but that's a story for another video. I started learning about money because I want to be financially free and live the life everyone dreams about.
+- **VO-95:** So here's my question for you. Which stop surprised you most: the market maker, the stranger who got your dollar, or the coat check called Cede and Company? And what was the first stock you ever bought? Tell me in the comments.
+- **VO-96:** And subscribe if you want more of the money system explained one dollar at a time.
 
 ### YOU (11 lines)
 

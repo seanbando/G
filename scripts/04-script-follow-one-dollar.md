@@ -378,9 +378,17 @@ YOU: That's a lot of stops for one dollar. Exhausting.
 
 It is. The order can go through in a fraction of a second, and the paperwork finishes one business day later.
 
+[DRAW: The narrator's own stick figure holds up a stock certificate with the Nvidia logo, labelled "My first stock." A small note underneath says "My reason, not advice."]
+
+Before I ask you something, I'll go first. The first stock I ever bought was Nvidia. I picked it because I think it's tied to where the world is heading, and it's one of the biggest companies in the stock market. That's my reason, not advice.
+
+[DRAW: The narrator stares at a messy candlestick chart with spinning eyes, labelled "Story for another video." Then a road leading to a sunny house labelled "Financial freedom."]
+
+The first time I opened a candlestick chart, I was completely lost, but that's a story for another video. I started learning about money because I want to be financially free and live the life everyone dreams about.
+
 [DRAW: Three signposts: "Market maker," "The stranger," "Cede & Co. coat check," with a big comment bubble.]
 
-So here's my question for you. Which stop surprised you most: the market maker, the stranger who got your dollar, or the coat check called Cede and Company? Tell me in the comments.
+So here's my question for you. Which stop surprised you most: the market maker, the stranger who got your dollar, or the coat check called Cede and Company? And what was the first stock you ever bought? Tell me in the comments.
 
 [DRAW: The dollar waving goodbye next to a subscribe button.]
 
