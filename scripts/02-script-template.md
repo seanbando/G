@@ -1,5 +1,7 @@
 # Script Template — Story-Driven Finance Explainer (Whiteboard)
 
+> **For every new script, follow the CashleyFinance script system in `docs/script-system.md`** (research → script → humanization pass). Background on why those rules exist is in `docs/ai-detection-notes.md`. Where this older template disagrees with the system, the system wins.
+
 Based on Paper Billions' structure, with Stick Finance's recurring example character for concepts.
 
 **Targets:** 2,000–3,000 words · 12–18 min · ~160 wpm · 7–9 chapters · avg sentence ≤ 10 words
