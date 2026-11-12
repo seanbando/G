@@ -100,3 +100,16 @@ Golpo can't time zooms or shakes to a word, so add these in the editor.
 - Recheck the Nvidia board decision. If he has been removed, VO-06 needs a new line.
 - Add the "KEY-PERSON RISK" label in the editor at about 0:41 to 0:46 (blocked in Golpo by the spoken-words-only setting).
 - Description disclaimer: "Not financial advice. Based on news reports as of November 2026; allegations are unproven and no charges have been filed."
+
+## Final: editorial render, patched (2026-11-12)
+
+Golpo job `8f9cbee9-9858-4630-bf0d-39f648b7d8fd` (Editorial, marker). Checked frame by frame:
+
+- Golpo skipped scene 10 (the resignation): the stock chart sat frozen from 0:37 to 0:41 while the anchor said "This just in, Jensen Huang has resigned". Patched with a 3.7 s scene built from the video's own drawings (`patch-resigned-scene.py`): white flash and zoom on the anchor with "THIS JUST IN" on the banner, cut to the CEO, red RESIGNED stamp on "resigned" (39.3 s), shake on the door slam (40.5 s).
+- Golpo held the last drawing 2.5 s after the final word; trimmed to end at 59.6 s so the loop restarts cleanly.
+- Golpo's audio came in at -21 LUFS; raised to the narration's level, mixed with the sound-effects track, final -14 LUFS, peaks -1.1 dB.
+- The narration sits at 0:00 in Golpo's video with no drift, so `sfx-track.mp3` lines up at 0:00.
+
+Ready-to-post file: `video/nvidia-final-editorial-patched.mp4` (59.6 s, 864x1536).
+
+**Lesson for future renders:** check every Golpo video for frozen stretches (frame difference per second) before posting; Golpo can silently merge or drop a mapped scene.
