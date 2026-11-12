@@ -1,0 +1,5 @@
+# Pitch-safe speed-up when joining the final track (no new recording).
+VO-04 1.25  # anchor headline, read slowly by the voice model
+VO-05 1.08  # escalation
+VO-07 1.15  # anchor "This just in", read slowly by the voice model
+VO-09 1.05  # slightly slow

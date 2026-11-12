@@ -235,6 +235,9 @@ These come from how the channel's videos are made and don't change the rules abo
 3. **Check:** run `python3 tools/check_script.py <script.md>` and fix what it flags.
 4. **Golpo:** keep `onscreen_text_from_script_only` on so on-screen text matches the narration.
 
+5. **Whiteboard animation rule (creator, 2026-11-12):** every spoken line names one drawable thing (an object, a number, a character) and one motion for it (a crack spreads, an arrow plunges, a door shuts). Abstract lines with nothing to draw get rewritten.
+6. **Endings:** prefer a callback to the opening drawings followed by a twist that lands on the viewer, so the short loops.
+
 ## Rule conflicts to decide (open)
 
 These rules pull against each other or against earlier decisions. Settle each once and record the answer here.

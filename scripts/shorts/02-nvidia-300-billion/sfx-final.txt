@@ -1,0 +1,25 @@
+# Sound effect cues for audio/nvidia-300-billion-final-FULL.mp3 (tools/build_sfx.py).
+# Times come from the word timestamps in words-final.json. Sounds are reused
+# from the first SFX pass; only "door" is new.
+# time   name         loudness  seconds  prompt                                      # spoken word
+0.00     boom         -20       2.0      Deep cinematic boom impact, dark trailer hit, short tail   # "Nvidia"
+1.22     stamp        -22       0.6      Single heavy rubber stamp thud on paper, short and dry     # "war"
+2.02     stamp                                                                                       # "lawsuit"
+3.62     stamp                                                                                       # "customer"
+5.55     drain        -24       2.0      Coins spilling and draining away, then a deep bass drop    # "three hundred billion"
+8.20     scratch      -22       0.8      Short vinyl record scratch                                 # "Wait"
+17.30    heartbeat    -20       1.0      Single heavy cinematic heartbeat thump, deep                # "man"
+18.30    breaking     -22       1.5      TV breaking news alert sting, short urgent synth chime     # "Breaking"
+27.30    crack1       -22       0.8      Glass cracking, one short sharp crack                      # "unfaithful"
+28.94    crack2       -20       1.2      Large glass pane cracking and splintering                  # "relationship"
+34.65    fall         -26       2.0      Descending cinematic falling whistle, smooth, no impact    # "drops"
+36.55    impact       -18       1.5      Heavy cinematic impact hit with low rumble                 # "night"
+37.40    breaking                                                                                    # "This just in"
+40.50    door         -20       0.8      Heavy wooden office door closing shut firmly               # "CEO" (walks out)
+45.28    subhit       -20       1.5      Low dark sub bass hit, short                               # "B"
+46.15    pop          -24       0.5      Light soft pop, clean and subtle                           # "interim"
+50.02    stamp                                                                                       # "war" (callback)
+50.90    stamp                                                                                       # "lawsuit" (callback)
+52.02    stamp                                                                                       # "customer" (callback)
+53.78    boom                                                                                        # "man" (callback to the opening boom)
+58.85    buzz         -22       0.8      Smartphone vibrating notification buzz, two short pulses   # "yours"
