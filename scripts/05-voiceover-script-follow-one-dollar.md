@@ -8,7 +8,7 @@ Voice-only recording sheet. Every spoken line is numbered (VO-01, VO-02 …) and
 
 | # | Voice | Lines | Words | Character direction | Role in the story |
 |---|---|---|---|---|---|
-| 1 | **NARRATOR** | 77 | 1903 | Main host. Warm, clear, conversational, like explaining money to a friend. Steady pace, about 160 words per minute. | The whole story |
+| 1 | **NARRATOR** | 77 | 1911 | Main host. Warm, clear, conversational, like explaining money to a friend. Steady pace, about 160 words per minute. | The whole story |
 | 2 | **YOU** | 11 | 85 | The viewer's inner voice. Curious and a little surprised. Younger and more casual than the narrator. Must sound clearly different from the narrator. | Asks the questions the audience is thinking |
 | 3 | **THE APP** | 2 | 38 | The investing app, personified. Upbeat, efficient, slightly robotic customer-service tone. | Confirms the order |
 | 4 | **THE MARKET MAKER** | 1 | 30 | A trading firm, personified. Relaxed, confident, a little salesy, like a currency-booth clerk. Not shady. | Quotes the buy and sell prices (stop two) |
@@ -18,7 +18,7 @@ Voice-only recording sheet. Every spoken line is numbered (VO-01, VO-02 …) and
 | 8 | **MAYA** | 1 | 19 | A young investor. Bright, a little proud of her savings. | Buys ten shares |
 | 9 | **JORDAN** | 1 | 11 | A young buyer. Relaxed and upbeat. | Buys Maya's shares for more |
 
-**Total:** 96 lines (one scene each) · 2127 spoken words · about 11.8 minutes of audio at the narrator's pace of 180 words per minute, before pauses. The longest scene is about 15 seconds.
+**Total:** 96 lines (one scene each) · 2135 spoken words · about 11.9 minutes of audio at the narrator's pace of 180 words per minute, before pauses. The longest scene is about 15 seconds.
 
 **Pause-and-guess breaks:** the ⏸ cues are silent beats so viewers can guess. Nobody records them; the silence is added automatically when the files are joined.
 
@@ -59,7 +59,7 @@ A stock is a small piece of ownership in a company. The stock market is simply t
 **VO-08 · NARRATOR** · ~9 s  
 So here's a quick test. Company A's stock costs five hundred dollars a share. Company B's stock costs five dollars a share. Which company is worth more?
 
-> ⏸ PAUSE 3 seconds. On screen: "Pause and guess: A or B?"
+> ⏸ PAUSE 3 seconds. On screen: "Which company is worth more?"
 
 **VO-09 · YOU** · ~1 s  
 Company A, obviously.
@@ -154,10 +154,10 @@ Regular trading hours are nine thirty in the morning until four in the afternoon
 **VO-39 · NARRATOR** · ~7 s  
 Some apps let you trade earlier or later, but fewer people are trading then, so prices can jump around more.
 
-**VO-40 · NARRATOR** · ~8 s  
-So your order has found a match. That means it's time to answer the very first question. Who got your dollar? Take a guess.
+**VO-40 · NARRATOR** · ~11 s  
+So your order has found a match. That means it's time to answer the very first question. Who got your dollar? Was it Apple, your app, or a stranger? Take a guess.
 
-> ⏸ PAUSE 3 seconds. On screen: "A) Apple  B) Your app  C) A stranger"
+> ⏸ PAUSE 3 seconds. On screen: "Was it Apple, your app, or a stranger?"
 
 **VO-41 · NARRATOR** · ~12 s  
 It's the stranger, and that's stop four. Your dollar goes to whoever sold you that slice. That could be the market maker itself, a big investment fund, or a regular person, like a retired teacher in Arizona.
@@ -240,7 +240,7 @@ I'll pay you two hundred fifty dollars a share. All ten.
 **VO-67 · NARRATOR** · ~3 s  
 Before I tell you, how much did Maya just make?
 
-> ⏸ PAUSE 3 seconds. On screen: "10 shares, bought at $200, sold at $250"
+> ⏸ PAUSE 3 seconds. On screen: "How much did Maya just make?"
 
 **VO-68 · NARRATOR** · ~11 s  
 She made five hundred dollars before taxes. But if Jordan had only offered one hundred fifty dollars a share, she'd have lost five hundred dollars instead. Selling for more is never guaranteed.
@@ -260,7 +260,7 @@ One more to try. Apple's last trade was at two hundred fifty dollars.
 **VO-73 · NARRATOR** · ~10 s  
 The cheapest anyone will sell for right now is two hundred fifty dollars and five cents, and a buyer decides to pay it. What does the last-trade price become?
 
-> ⏸ PAUSE 2 seconds. On screen: "Last trade $250.00. Someone pays $250.05. Last-trade price now?"
+> ⏸ PAUSE 2 seconds. On screen: "What does the last-trade price become?"
 
 **VO-74 · NARRATOR** · ~6 s  
 The last-trade price becomes two hundred fifty dollars and five cents, because someone just bought at that price.
@@ -298,7 +298,7 @@ Nobody can promise anything. But over long periods, the S and P five hundred has
 **VO-85 · NARRATOR** · ~9 s  
 So take a guess. If a dollar grew ten percent every year for forty years, would you end up with about five dollars, fifteen dollars, or forty-five dollars?
 
-> ⏸ PAUSE 3 seconds. On screen: "$5, $15, or $45?"
+> ⏸ PAUSE 3 seconds. On screen: "About five dollars, fifteen dollars, or forty-five dollars?"
 
 **VO-86 · NARRATOR** · ~10 s  
 You'd end up with about forty-five dollars, before inflation, fees, and taxes. That's just an example, not a promise, because the market doesn't go up in a straight line.
@@ -370,7 +370,7 @@ And subscribe if you want more of the money system explained one dollar at a tim
 - **VO-36:** When a buyer and a seller agree on a price, it puts them together.
 - **VO-38:** Regular trading hours are nine thirty in the morning until four in the afternoon, Eastern time, Monday through Friday, except market holidays and a few early-close days.
 - **VO-39:** Some apps let you trade earlier or later, but fewer people are trading then, so prices can jump around more.
-- **VO-40:** So your order has found a match. That means it's time to answer the very first question. Who got your dollar? Take a guess.
+- **VO-40:** So your order has found a match. That means it's time to answer the very first question. Who got your dollar? Was it Apple, your app, or a stranger? Take a guess.
 - **VO-41:** It's the stranger, and that's stop four. Your dollar goes to whoever sold you that slice. That could be the market maker itself, a big investment fund, or a regular person, like a retired teacher in Arizona.
 - **VO-44:** Not from your trade, it doesn't. Apple got money from its stock when it first sold shares to the public, back in December of nineteen eighty.
 - **VO-45:** Today, when investors trade Apple stock on the market, the money normally goes to the seller, not to Apple.
@@ -464,8 +464,8 @@ And subscribe if you want more of the money system explained one dollar at a tim
 
 ## Part 3: Pause cues (added as silence when joining)
 
-- **Before VO-09:** ⏸ PAUSE 3 seconds. On screen: "Pause and guess: A or B?"
-- **Before VO-41:** ⏸ PAUSE 3 seconds. On screen: "A) Apple  B) Your app  C) A stranger"
-- **Before VO-68:** ⏸ PAUSE 3 seconds. On screen: "10 shares, bought at $200, sold at $250"
-- **Before VO-74:** ⏸ PAUSE 2 seconds. On screen: "Last trade $250.00. Someone pays $250.05. Last-trade price now?"
-- **Before VO-86:** ⏸ PAUSE 3 seconds. On screen: "$5, $15, or $45?"
+- **Before VO-09:** ⏸ PAUSE 3 seconds. On screen: "Which company is worth more?"
+- **Before VO-41:** ⏸ PAUSE 3 seconds. On screen: "Was it Apple, your app, or a stranger?"
+- **Before VO-68:** ⏸ PAUSE 3 seconds. On screen: "How much did Maya just make?"
+- **Before VO-74:** ⏸ PAUSE 2 seconds. On screen: "What does the last-trade price become?"
+- **Before VO-86:** ⏸ PAUSE 3 seconds. On screen: "About five dollars, fifteen dollars, or forty-five dollars?"

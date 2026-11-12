@@ -32,7 +32,7 @@ A stock is a small piece of ownership in a company. The stock market is simply t
 
 So here's a quick test. Company A's stock costs five hundred dollars a share. Company B's stock costs five dollars a share. Which company is worth more?
 
-[PAUSE: 3 seconds. On screen: "Pause and guess: A or B?"]
+[PAUSE: 3 seconds. On screen: "Which company is worth more?"]
 
 [DRAW: YOU points confidently at Company A.]
 
@@ -160,11 +160,11 @@ Some apps let you trade earlier or later, but fewer people are trading then, so 
 
 [DRAW: The road map. A check mark on Stop 3. A big question mark over Stop 4.]
 
-So your order has found a match. That means it's time to answer the very first question. Who got your dollar? Take a guess.
+So your order has found a match. That means it's time to answer the very first question. Who got your dollar? Was it Apple, your app, or a stranger? Take a guess.
 
-[PAUSE: 3 seconds. On screen: "A) Apple  B) Your app  C) A stranger"]
+[PAUSE: 3 seconds. On screen: "Was it Apple, your app, or a stranger?"]
 
-[DRAW: Circle "C) A stranger." The dollar walks into the hands of a group: a store clerk, a big fund building, and a retired teacher.]
+[DRAW: Circle "a stranger." The dollar walks into the hands of a group: a store clerk, a big fund building, and a retired teacher.]
 
 It's the stranger, and that's stop four. Your dollar goes to whoever sold you that slice. That could be the market maker itself, a big investment fund, or a regular person, like a retired teacher in Arizona.
 
@@ -272,7 +272,7 @@ JORDAN: I'll pay you two hundred fifty dollars a share. All ten.
 
 Before I tell you, how much did Maya just make?
 
-[PAUSE: 3 seconds. On screen: "10 shares, bought at $200, sold at $250"]
+[PAUSE: 3 seconds. On screen: "How much did Maya just make?"]
 
 [DRAW: Write "10 × $250 = $2,500" and "$2,500 − $2,000 = $500 profit." Then a smaller version: "$150 a share = $500 loss."]
 
@@ -298,7 +298,7 @@ One more to try. Apple's last trade was at two hundred fifty dollars.
 
 The cheapest anyone will sell for right now is two hundred fifty dollars and five cents, and a buyer decides to pay it. What does the last-trade price become?
 
-[PAUSE: 2 seconds. On screen: "Last trade $250.00. Someone pays $250.05. Last-trade price now?"]
+[PAUSE: 2 seconds. On screen: "What does the last-trade price become?"]
 
 [DRAW: The price board flips to "$250.05." A tiny chart line ticks up by one step.]
 
@@ -324,7 +324,7 @@ Warren Buffett likes to repeat an idea from his old teacher: day to day, the mar
 
 YOU: That sounds like a lot to keep track of. What if I don't want to pick just one company?
 
-[DRAW: The dollar standing in front of a single Apple logo. A hand crosses the Apple logo out.]
+[DRAW: The dollar standing in front of a single Apple logo. The Apple logo slides to the side to make room.]
 
 Then let's go back to your one dollar and change one thing.
 
@@ -348,7 +348,7 @@ Nobody can promise anything. But over long periods, the S and P five hundred has
 
 So take a guess. If a dollar grew ten percent every year for forty years, would you end up with about five dollars, fifteen dollars, or forty-five dollars?
 
-[PAUSE: 3 seconds. On screen: "$5, $15, or $45?"]
+[PAUSE: 3 seconds. On screen: "About five dollars, fifteen dollars, or forty-five dollars?"]
 
 [DRAW: The "$45" door opens to a stack of forty-five dollars. A small note says "Before inflation, fees and taxes. Example, not a promise."]
 
@@ -386,7 +386,7 @@ Before I ask you something, I'll go first. The first stock I ever bought was Nvi
 
 The first time I opened a candlestick chart, I was completely lost, but that's a story for another video. I started learning about money because I want to be financially free and live the life everyone dreams about.
 
-[DRAW: Three signposts: "Market maker," "The stranger," "Cede & Co. coat check," with a big comment bubble.]
+[DRAW: Three signposts: "Market maker," "The stranger," "Cede & Co. coat check," with a big comment bubble, plus a second bubble: "Your first stock?"]
 
 So here's my question for you. Which stop surprised you most: the market maker, the stranger who got your dollar, or the coat check called Cede and Company? And what was the first stock you ever bought? Tell me in the comments.
 
