@@ -16,6 +16,9 @@ Trimmed copies of every clip are written to <clips_dir>/trimmed/.
 
 Add --keep-pace to skip the automatic speed-ups, for scripts whose slow
 lines are slow on purpose (set with generate_voiceovers.py --speeds).
+Add --tight for Shorts: pauses and quiet breaths inside a line are capped at about 0.2 s,
+lines are 0.1 s apart (0.15 s when the speaker changes) and every
+[PAUSE: ...] is cut to 60% of its length.
 Add --tempo <sheet> to stretch chosen lines for this script only, with the
 same "VO-08 1.18  # comment" format; it adds to TEMPO for this run.
 """
@@ -69,7 +72,13 @@ def ff(*args):
     subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", *args], check=True, stdin=subprocess.DEVNULL)
 
 
-def main(script, clips, out, keep_pace=False):
+TIGHT_TRIM = (TRIM.replace("stop_duration=0.45", "stop_duration=0.25").replace("stop_silence=0.4", "stop_silence=0.2")
+              .replace("stop_threshold=-45dB", "stop_threshold=-38dB"))  # also catches quiet breaths
+
+
+def main(script, clips, out, keep_pace=False, tight=False):
+    trim = TIGHT_TRIM if tight else TRIM
+    same_gap, change_gap, pause_scale = (0.1, 0.15, 0.6) if tight else (0.3, 0.4, 1.0)
     _, lines = parse(script)
     tmp = tempfile.mkdtemp()
     os.makedirs(os.path.join(clips, "trimmed"), exist_ok=True)
@@ -92,14 +101,14 @@ def main(script, clips, out, keep_pace=False):
         pause = sum(float(m) for c in cues if c.startswith("⏸")
                     for m in re.findall(r"([\d.]+)\s*second", c))
         if parts:
-            parts.append(silence(0.3 if voice == prev_voice else 0.4))
+            parts.append(silence(same_gap if voice == prev_voice else change_gap))
         if pause:
-            parts.append(silence(pause))
+            parts.append(silence(round(pause * pause_scale, 2)))
         for k, f in enumerate(files):
             name = os.path.splitext(os.path.basename(f))[0]
             wav = os.path.join(tmp, name + ".wav")
             line = name.split("_")[0]
-            chain = TRIM + (f",atempo={TEMPO[line]}" if line in TEMPO else "")
+            chain = trim + (f",atempo={TEMPO[line]}" if line in TEMPO else "")
             raw = os.path.join(tmp, name + "_raw.wav")
             # Trim first, then measure and apply an exact gain. (Running loudnorm in
             # the same chain as silenceremove can hang ffmpeg, and its automatic
@@ -150,5 +159,5 @@ if __name__ == "__main__":
         from generate_voiceovers import load_speeds
         TEMPO.update(load_speeds(argv[i + 1]))
         del argv[i:i + 2]
-    args = [a for a in argv if a != "--keep-pace"]
-    main(*args[:3], keep_pace="--keep-pace" in argv)
+    args = [a for a in argv if a not in ("--keep-pace", "--tight")]
+    main(*args[:3], keep_pace="--keep-pace" in argv, tight="--tight" in argv)
