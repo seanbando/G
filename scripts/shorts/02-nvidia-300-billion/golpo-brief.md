@@ -50,6 +50,33 @@ Learned from a nurse explainer that reads better: one board that keeps growing b
 
 Job: `30ec2366-1531-4025-b1b8-ceb97ec80740`. Version 1 (fast pacing, a scene per sentence): `f573bc12-ab2a-43e6-8979-f32c78109ac6`.
 
+## Version 3 (final): 14 mapped scenes, close-ups, fast pacing (rendered 2026-11-12)
+
+The creator liked version 2's drawings but wanted many boards again, each drawing zoomed in, and faster pacing. Golpo decides the final scene split and redraws everything on each render, so the scenes are mapped line by line in `video_instructions` to steer it. Settings as in the table above, with `pacing: fast`.
+
+Job: `95879afe-908e-4554-b104-4d58b5f91a50`.
+
+```
+14 short scenes, one big drawing per scene, drawn as a close-up that fills the vertical frame, so each scene feels zoomed in. Change scene on every line. Same look in every scene: calm off-white background, green and alarm red accents, short words in rounded pill tags. Recurring designs: a glowing green computer chip; a simple cartoon CEO with grey-black hair, glasses and a black leather jacket, never a realistic face; a young guy with a phone. No real company logos.
+1 "war, lawsuit, customer": sword, gavel and shopping cart, each crossed out in red.
+2 "three hundred billion dollars": giant glowing chip with "$300 billion" above it.
+3 "how is that even possible": shocked young guy holding his phone.
+4 "every AI on Earth": chip in the centre, wires out to small robot and AI icons.
+5 "one man": the CEO standing on top of the chip, holding it up alone, pill "one man".
+6 "Breaking tonight": TV anchor with a red BREAKING banner, then a spy silhouette, pill "alleged".
+7 "unfaithful": cracked heart, and the first crack appears in the chip.
+8 "second relationship": second cracked heart beside an office desk, second crack in the chip.
+9 "board": boardroom table with an empty CEO chair, pill "board".
+10 "nine percent": big red arrow crashing down a stock chart, pill "nine percent".
+11 "succession planning": org chart, CEO box on top, empty boxes below.
+12 "no plan B": empty spot on top of the cracked chip under a spotlight, pill "no plan B".
+13 "index fund": basket labelled "index fund" with the cracked chip as one of the biggest pieces.
+14 "lost money too": close-up of the young guy's phone showing a red number.
+Draw only what the narration describes at that moment.
+```
+
+**Template for future shorts:** one numbered scene per narration line, each with the quoted spoken words it belongs to, one big close-up drawing, recurring designs named up front, pill tags only with spoken words.
+
 ## Editor motion cues (times from the TIGHT track)
 
 Golpo can't time zooms or shakes to a word, so add these in the editor.
