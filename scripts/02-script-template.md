@@ -86,3 +86,30 @@ Character roles to use: real people (quote only what they actually said), imagin
 - [ ] Viewer's wallet is addressed directly
 - [ ] Every fact, quote, and number checked against a source
 - [ ] Read-aloud test: no sentence needs a second breath
+
+---
+
+## Human-sounding writing (apply to every new script)
+
+Taken from the "Gemini content classification" notes, keeping the solid writing advice and dropping the unverified claims about YouTube.
+
+**Do**
+- Use specific details: real dates, names, places and numbers instead of general statements.
+- Vary sentence length a lot. Mix very short lines with long ones; avoid a run of similar-length sentences.
+- Say things plainly and take a position where the facts support one. Hedge only where something is genuinely uncertain, and say why.
+- Use the words people in the niche actually use, explained the first time.
+- Use real personal moments from the creator's own experience when they help.
+
+**Don't**
+- Use filler and stock AI phrasing: "delve", "furthermore", "moreover", "crucial", "leverage", "robust", "comprehensive", "in today's world", "it's important to note", "at the end of the day", "without further ado", "in the world of".
+- Lean on tidy lists of three or perfectly balanced sentences.
+- Repeat the same opener ("Here's…", "So here's…") more than twice in a script.
+- Invent personal stories or experiences. A made-up anecdote in a finance video misleads viewers.
+
+**Open question for each script:** whether a few short fragments are allowed in character lines. The original rules ban fragments; decide per script.
+
+**Check before recording:**
+
+```bash
+python3 tools/check_script.py scripts/<script>.md
+```
