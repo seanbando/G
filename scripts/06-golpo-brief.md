@@ -40,3 +40,35 @@ Simple whiteboard explainer with a recurring cast; one idea per scene, unclutter
 ```
 
 The full scene-by-scene drawing notes are in `scripts/04-script-follow-one-dollar.md` if you want to adjust anything above.
+
+---
+
+## Render: editorial marker version (2026-11-12)
+
+The creator's brief: a whiteboard finance explainer for adults learning from zero, built around the narration, white background, black outlines, forest-green accents, red only for losses or warnings, diagrams that build as the narrator explains, money paths drawn with arrows, short phone-readable labels, no invented statistics, smooth transitions, expressive editorial marker.
+
+| Field | Value |
+|---|---|
+| `audio_clip` | `audio/follow-one-dollar-v2-FULL-golpo.mp3` (mono 96 kbps copy; Golpo's uploader rejected the 11.6 MB original) |
+| `visual_style` | **Editorial** (Canvas) with `pen_style` **marker** |
+| `video_type` | `long` (16:9) |
+| `pacing` | `normal` (related steps stay together) |
+| `enable_camera_follow` / `visual_animation_style` | `true` / `auto` |
+| `bg_music` | `engaging` |
+| `onscreen_text_from_script_only` | `true` |
+| `prompt` | the `prompt` above, unchanged |
+
+Job: `b2a0bd55-109f-4a9e-8611-c1bf2b644541`. Cost about 12 to 13 credits (12 min 7 s).
+
+`video_instructions` (1988 of 2,000 characters):
+
+```
+Whiteboard finance explainer for adults learning from zero, in expressive editorial marker. Clean white background, confident black outlines, restrained forest-green accents; red only for losses, costs or warnings. Polished, approachable, consistent.
+Show how each idea works with simple drawings, comparisons, arrows and step-by-step diagrams built progressively as the narrator explains. When money or ownership moves, draw its path clearly with arrows. One main idea per scene; keep related objects visible while the explanation develops and keep related steps together instead of resetting the board each sentence; transition smoothly when the subject changes.
+Start immediately on a visual for the opening hook; keep the first 30 seconds active with purposeful reveals and focus changes, then give each example time to land. No long blank moments and no holding a finished drawing without development.
+Short labels and essential numbers only, large enough for a phone; never paragraphs. Match every amount, percentage, name and calculation to the audio. Illustrative charts must look illustrative, not like real historical data.
+Recurring designs, the same every time: HERO a dollar bill with a simple face; YOU a person holding a phone; THE APP a phone with a face; MARKET MAKER a store clerk with buy and sell price signs; THE EXCHANGE a building with a face; THE SELLER a retired teacher; THE CLEARINGHOUSE a referee labelled DTCC; MAYA and JORDAN two young investors. A road map of five numbered stops (1 Your App, 2 Market Maker, 3 Exchange, 4 Seller, 5 Clearinghouse) returns between stops with finished stops ticked.
+Key visuals: two pizzas for share price vs company value; an "OWNER: ???" paper that becomes "Cede & Co."; a coat check; a SIPC shield; a see-saw for price; a basket of companies for an index fund; a bumpy road for market drops.
+During each silent pause after a spoken question, keep that question large on screen.
+End on a clear visual of the final takeaway.
+```
