@@ -39,6 +39,17 @@ A 55-second news short for 18 to 35 year-olds new to investing. Nvidia, the chip
 Dark newsroom mood: black, white, Nvidia-style green and alarm red. Big readable numbers: $300 billion, 9%. Keep every scene moving: build each board in layers, use arrows, motion lines and falling or rising elements, and frame key objects large so the camera can push in on them. Recurring CEO: simple cartoon man with grey-black hair, glasses and a black leather jacket, never a realistic face. News anchor boards: TV anchor behind a desk with a red BREAKING banner. "Wait, how is that even possible?": a young guy staring at his phone, shocked. Chips: a glowing computer chip with simple AI icons, no real company logos. Scandal beats: newspaper headlines, a spy silhouette, a cracked heart, a boardroom table with an empty CEO chair. Stock drop: a red chart crashing down. "No plan B": an empty chair under a spotlight. Index fund: a basket of stocks with the green chip as one of the biggest pieces. Last line: the young guy looks at his own phone showing a red number. Draw only what the narration describes at that moment.
 ```
 
+## Version 2: build-up boards (rendered 2026-11-12)
+
+Learned from a nurse explainer that reads better: one board that keeps growing beats a new scene every sentence. Changes from version 1:
+
+- `pacing`: `normal` (boards stay up to about 15 s and build) instead of `fast`.
+- Three boards: 1 the empire (chip, viewer, CEO holding it up, "one man"), 2 the cracks (same board; each scandal beat adds a tagged icon and a crack: "alleged", "unfaithful", "board", "nine percent"), 3 you (empty spot, "no plan B", then pull back into an "index fund" basket on the viewer's phone).
+- Every item: icon + rounded pill label + small effect icon. Pill words must be spoken words, because on-screen text is limited to the narration.
+- Big icons that fill the vertical frame; little text.
+
+Job: `30ec2366-1531-4025-b1b8-ceb97ec80740`. Version 1 (fast pacing, a scene per sentence): `f573bc12-ab2a-43e6-8979-f32c78109ac6`.
+
 ## Editor motion cues (times from the TIGHT track)
 
 Golpo can't time zooms or shakes to a word, so add these in the editor.
