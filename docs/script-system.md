@@ -240,6 +240,8 @@ These come from how the channel's videos are made and don't change the rules abo
 
 7. **Voiceover:** follow `docs/voiceover-recipe.md`, the creator-approved way to voice, tighten and add sound effects to a short.
 
+8. **Story structure:** for evergreen shorts, follow the Ricks Clips beats in `docs/ricks-clips-analysis.md`, especially the mid-video fake-out and showing a concept before naming it.
+
 ## Rule conflicts to decide (open)
 
 These rules pull against each other or against earlier decisions. Settle each once and record the answer here.
