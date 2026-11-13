@@ -74,6 +74,12 @@ Never: claims the video can't back up, vague "the mystery of" titles, "Full Docu
 - Never generate a real person's face. Recreate scenes with AI/3D renders; avoid news-agency photos.
 - Test 2 options with YouTube Studio's Test & Compare.
 
+**Thumbnail prompt template** (swap the bracketed parts, keep the rest):
+```
+3D isometric miniature diorama at night, 16:9, camera close and low at a 35-degree angle. Focus on [the real place where the key moment happened, 3–5 concrete objects]. Everything is matte white-gray clay, heavily desaturated, with dark surroundings fading to black. [The key action: who/what is found, and what reveals it]. [The key detail] is bright saturated amber-orange, the only color in the image. The key detail fills the right-center of the frame and is large and clearly readable. Top third of the frame is dark and empty for text. Clean render, high contrast, tilt-shift depth of field. No text, no logos, no faces.
+```
+Text goes on in Canva afterward (AI tools mangle lettering). Approved example: `videos/01-olympic-bomber/`.
+
 ## 8. VISUAL STYLE
 Case-file look: timestamp cards in a typewriter font (`MAY 31, 2003 · 3:30 AM · MURPHY, NC`), dark maps with the accent color for routes and scenes, documents with a highlighter sweep on the key line, silence at the reveal.
 
