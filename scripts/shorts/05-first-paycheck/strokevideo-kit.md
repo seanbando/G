@@ -15,7 +15,7 @@
 | Characters | **None** | A character switches pricing from 50 to 100 credits a minute; describe the guy in the director notes instead |
 | Let me check the script first | **On** | Catch problems before credits are spent |
 
-## Director notes (paste; 293 characters)
+## Director notes (paste; 267 characters)
 ```
 White board, black marker, forest green, red only for money taken. Every amount in digits: $ before money, % after rates. YOU: young guy, orange hoodie. Pizza = paycheck, "$1,600" on the box; hands take slices labelled with amounts. Boss: man in a tie. No real logos.
 ```
@@ -28,7 +28,7 @@ You just got hired at $20 an hour, you worked 80 hours, and your first paycheck 
 
 Then you open it, and it says about $1,369.
 
-Wait, who took $230 bucks from my check?
+Wait, who took $230 from my check?
 
 Picture your paycheck as a $1,600 pizza, and three people grab a slice before you get a single bite. Social Security takes 6.2%, $99.20.
 

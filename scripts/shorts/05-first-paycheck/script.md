@@ -4,7 +4,7 @@ You just got hired at twenty dollars an hour, you worked eighty hours, and your 
 
 Then you open it, and it says about thirteen hundred sixty-nine.
 
-YOU: Wait, who took two hundred thirty bucks from my check?
+YOU: Wait, who took two hundred thirty dollars from my check?
 
 Picture your paycheck as a sixteen hundred dollar pizza, and three people grab a slice before you get a single bite.
 
