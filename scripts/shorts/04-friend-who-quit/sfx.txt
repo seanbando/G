@@ -1,0 +1,20 @@
+# Sound effect cues for audio/friend-who-quit-FULL.mp3 (tools/build_sfx.py), from the storyboard.
+# time   name       loudness  seconds  prompt                                                  # spoken word
+0.00     boom       -20       2.0      Deep cinematic boom impact, dark trailer hit, short tail   # "Four friends"
+6.25     impact     -18       1.5      Heavy cinematic impact hit with low rumble                 # "four hundred thousand" (tower shoots up)
+7.50     scratch    -22       0.8      Short vinyl record scratch                                 # "Wait"
+10.70    paper      -24       0.8      Stack of paper sheets fluttering, light quick whoosh       # "hid" (cash under the mattress)
+13.56    stamp      -22       0.6      Single heavy rubber stamp thud on paper, short and dry     # "forty-eight thousand"
+17.82    coinclink  -24       1.0      A few coins clinking as they stack up, light and bright    # "four percent"
+19.66    pop        -24       0.5      Light soft pop, clean and subtle                           # "one hundred eighteen"
+21.68    clock      -24       1.2      Fast ticking clock, crisp ticks                            # "waited"
+28.38    register   -22       1.0      Old cash register ka-ching with drawer opening             # "two hundred twenty-six"
+31.60    coinclink                                                                                 # "index fund" (money into the basket)
+34.52    stamp                                                                                     # "quit" (QUIT stamp)
+35.96    pop                                                                                       # "twelve thousand"
+38.94    stack      -22       1.2      Wooden blocks stacking quickly one on top of another, building up   # "four hundred six" (tower grows)
+40.52    impact                                                                                    # "more than anyone"
+43.74    rolling    -24       1.5      Snowball rolling down a snowy hill, growing, soft rumble  # "growth kept growing"
+46.02    pop                                                                                       # "compound interest"
+50.72    clock                                                                                     # "time"
+52.64    buzz       -22       0.8      Smartphone vibrating notification buzz, two short pulses   # "you"

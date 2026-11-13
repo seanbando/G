@@ -3,9 +3,8 @@ VO-01 1.151  # NARRATOR: 169 wpm as recorded
 VO-02 1.000  # YOU: 205 wpm as recorded
 VO-03 1.197  # NARRATOR: 163 wpm as recorded
 VO-04 1.145  # NARRATOR: 170 wpm as recorded
-VO-05 1.236  # NARRATOR: 158 wpm as recorded
+VO-05 1.186  # NARRATOR: 164 wpm as recorded
 VO-06 1.152  # NARRATOR: 169 wpm as recorded
 VO-07 1.229  # NARRATOR: 159 wpm as recorded
 VO-08 1.172  # NARRATOR: 166 wpm as recorded
-VO-09 1.350  # NARRATOR: 141 wpm as recorded
-VO-10 1.036  # NARRATOR: 188 wpm as recorded
+VO-09 1.036  # NARRATOR: 188 wpm as recorded
