@@ -66,10 +66,12 @@ Name the case by what people remember ("the Olympic Bomber", "the D.C. Sniper"),
 Never: claims the video can't back up, vague "the mystery of" titles, "Full Documentary".
 
 ## 7. THUMBNAILS
-- Near-black, desaturated, ONE accent color (evidence-tag amber) used on every video.
-- One object or scene. 3 words max. Text adds to the title, never repeats it.
-- No red arrows, no shocked faces. Must read on a phone and on a TV.
-- Recreate scenes with stock or AI images; avoid news-agency photos.
+- Gray/desaturated base with ONE fully saturated accent: amber-orange (the niche uses red, so orange stands out in the sidebar). Used on every video.
+- Preferred look: 3D isometric miniature diorama of the real place (matte white-gray clay), with the key detail, route or figure in amber. Proven by Uncovering's top outliers (escape route, North Tower, Pizza Hut).
+- One object or scene. 2–3 words max, heavy condensed font (Anton), white with one amber word. Text adds to the title, never repeats it.
+- One clean white hand-drawn arrow or circle pointing at the key detail is fine. No cluttered arrows, no shocked faces.
+- Must read on a phone and on a TV. Squint test before upload.
+- Never generate a real person's face. Recreate scenes with AI/3D renders; avoid news-agency photos.
 - Test 2 options with YouTube Studio's Test & Compare.
 
 ## 8. VISUAL STYLE
