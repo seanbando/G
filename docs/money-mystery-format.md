@@ -48,3 +48,9 @@ How it is applied:
 - **Golpo:** every `video_instructions` includes: "Write every amount on screen with digits: money with $ in front (e.g. $406,000) and percentages with % (e.g. 10%); never spell numbers out." Scene descriptions quote amounts in that form.
 - **Captions:** after the word timestamps, spelled-out numbers are converted to digits with $ or % before the .srt is written.
 - **Frame check:** the frame-by-frame review of each render also checks that every drawn amount follows this rule; a wrong one is patched or flagged.
+
+## Golpo lessons (2026-11-13, friend-who-quit render)
+
+- **`onscreen_text_from_script_only` blocks the numbers rule.** With it on, Golpo only writes words from the narration transcript, so "$48,000" and "4%" were not drawn. For future renders set it to **false** and list the exact labels in `video_instructions` ("Only these words may appear: ..."), each amount with $ or %.
+- **Golpo does not keep characters identical across scenes**, even with detailed descriptions. When a callback needs the same characters, reuse the opening board's frames in the edit (as with the Nvidia RESIGNED patch), or use Golpo's character reference features only with the creator's green light.
+- Any missing or wrong on-screen number can be added or covered in the edit with a marker-style overlay at the word's timestamp, at no credit cost.
