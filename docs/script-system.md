@@ -270,6 +270,8 @@ These come from how the channel's videos are made and don't change the rules abo
 | a savings rate as if permanent | "a savings account paying 4%" (an example rate) | Rates change over decades |
 
 
+12. **Recurring character:** "YOU", the orange-hoodie guy in `docs/characters.md`, appears in every short as the viewer's stand-in.
+
 ## Rule conflicts to decide (open)
 
 These rules pull against each other or against earlier decisions. Settle each once and record the answer here.
