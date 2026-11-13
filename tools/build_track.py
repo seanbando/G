@@ -19,6 +19,10 @@ lines are slow on purpose (set with generate_voiceovers.py --speeds).
 Add --tight for Shorts: pauses and quiet breaths inside a line are capped at about 0.2 s,
 lines are 0.1 s apart (0.15 s when the speaker changes) and every
 [PAUSE: ...] is cut to 60% of its length.
+Add --punch for the creator-approved "B" sound: the whole track 15% faster
+(pitch unchanged), presence EQ and two-stage compression so the voice sits
+dense and upfront, levelled to -14 LUFS. Use --speed <factor> to change
+the 1.15 default.
 Add --tempo <sheet> to stretch chosen lines for this script only, with the
 same "VO-08 1.18  # comment" format; it adds to TEMPO for this run.
 """
@@ -76,7 +80,23 @@ TIGHT_TRIM = (TRIM.replace("stop_duration=0.45", "stop_duration=0.25").replace("
               .replace("stop_threshold=-45dB", "stop_threshold=-38dB"))  # also catches quiet breaths
 
 
-def main(script, clips, out, keep_pace=False, tight=False):
+PUNCH = ("highpass=f=80,equalizer=f=250:t=q:w=1.2:g=-2,equalizer=f=3500:t=q:w=1.0:g=4,"
+         "equalizer=f=9000:t=h:w=1:g=2,"
+         "acompressor=threshold=-32dB:ratio=6:attack=3:release=50:makeup=8dB,"
+         "acompressor=threshold=-18dB:ratio=3:attack=1:release=40:makeup=2dB")
+
+
+def punch(path, speed):
+    """Speed up the finished track and give it the dense, upfront approved sound."""
+    tmp = tempfile.mkdtemp()
+    wav = os.path.join(tmp, "punch.wav")
+    ff("-i", path, "-af", f"atempo={speed},{PUNCH}", "-ar", "44100", wav)
+    gain = FINAL_TARGET - loudness(wav)
+    ff("-i", wav, "-af", f"volume={gain:.2f}dB,alimiter=limit=0.84:level=false",
+       "-c:a", "libmp3lame", "-b:a", "192k", path)
+
+
+def main(script, clips, out, keep_pace=False, tight=False, speed=None):
     trim = TIGHT_TRIM if tight else TRIM
     same_gap, change_gap, pause_scale = (0.1, 0.15, 0.6) if tight else (0.3, 0.4, 1.0)
     _, lines = parse(script)
@@ -148,6 +168,9 @@ def main(script, clips, out, keep_pace=False, tight=False):
                                 "-of", "csv=p=0", out], capture_output=True, text=True).stdout)
     size = os.path.getsize(out) / 1e6
     print(f"{out}: {int(dur // 60)}m {dur % 60:.0f}s, {size:.1f} MB")
+    if speed:
+        punch(out, speed)
+        print(f"punch: {speed}x faster, compressed, -14 LUFS: {duration(out):.1f} s")
     if sped:
         print(f"adjusted the pace of {len(sped)} lines: " + ", ".join(sped))
 
@@ -159,5 +182,12 @@ if __name__ == "__main__":
         from generate_voiceovers import load_speeds
         TEMPO.update(load_speeds(argv[i + 1]))
         del argv[i:i + 2]
-    args = [a for a in argv if a not in ("--keep-pace", "--tight")]
-    main(*args[:3], keep_pace="--keep-pace" in argv, tight="--tight" in argv)
+    speed = None
+    if "--speed" in argv:
+        i = argv.index("--speed")
+        speed = float(argv[i + 1])
+        del argv[i:i + 2]
+    if "--punch" in argv:
+        speed = speed or 1.15
+    args = [a for a in argv if a not in ("--keep-pace", "--tight", "--punch")]
+    main(*args[:3], keep_pace="--keep-pace" in argv, tight="--tight" in argv, speed=speed)

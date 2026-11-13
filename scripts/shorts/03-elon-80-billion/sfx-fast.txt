@@ -1,0 +1,23 @@
+# Sound effect cues for audio/elon-80-billion-FAST.mp3 (times scaled by 1/1.15 from sfx.txt) (tools/build_sfx.py).
+# Times from words.json. Sounds reused from the Nvidia short except stack, crumble, paper, register.
+# time   name      loudness  seconds  prompt                                              # spoken word
+0.00     boom      -20       2.0      Deep cinematic boom impact, dark trailer hit, short tail   # "Elon"
+1.41     drain     -24       2.0      Coins spilling and draining away, then a deep bass drop    # "$80 billion"
+4.39     stamp     -22       0.6      Single heavy rubber stamp thud on paper, short and dry     # "buy"
+5.30     stamp                                                                                  # "sell"
+6.97     stamp                                                                                  # "cent"
+7.57     scratch   -22       0.8      Short vinyl record scratch                                 # "Wait"
+10.70    door      -22       0.8      Heavy wooden office door closing shut firmly               # "bank" (empty vault)
+14.54    stack     -22       1.2      Wooden blocks stacking quickly one on top of another, building up   # "stacked"
+16.48    breaking  -22       1.5      TV breaking news alert sting, short urgent synth chime     # "Breaking"
+19.39    fall      -26       2.0      Descending cinematic falling whistle, smooth, no impact    # "falls"
+21.70    impact    -18       1.5      Heavy cinematic impact hit with low rumble                 # "8%"
+23.96    crumble   -22       1.0      Stack of wooden blocks tumbling down and crumbling, short   # "shrinks"
+28.14    paper     -24       0.8      Stack of paper sheets fluttering, light quick whoosh       # "paper wealth"
+31.10    register  -22       1.0      Old cash register ka-ching with drawer opening             # "sell"
+32.17    pop       -24       0.5      Light soft pop, clean and subtle                           # "two days"
+35.04    drain                                                                                  # "$113 billion"
+38.92    subhit    -20       1.5      Low dark sub bass hit, short                               # "Earth" (still richest)
+40.82    stamp                                                                                  # "dollar" (callback)
+42.50    boom                                                                                   # "80 billion" (callback to the opening boom)
+48.96    buzz      -22       0.8      Smartphone vibrating notification buzz, two short pulses   # "panic"

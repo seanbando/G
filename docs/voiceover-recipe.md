@@ -84,3 +84,17 @@ The creator singled out the dead space, the sounds and the breathing room. Measu
 ffmpeg -i <track.mp3> -af silencedetect=n=-40dB:d=0.15 -f null - 2>&1 | grep silence_duration
 ```
 Most gaps should be 0.3 to 0.4 s, only the payoff and peak beats 0.5 to 0.6 s, and nothing longer.
+
+## Update (2026-11-13): the "B" sound is the new standard
+
+The creator compared the approved Nvidia-style mix with a punchier, faster version and chose the faster one ("B sounds better"); Ricks Clips' narration is louder-sounding and higher-energy, at about 205 to 220 words a minute.
+
+- Join the track exactly as above, then add `--punch`:
+  ```bash
+  python3 tools/build_track.py <script.md> <clips_dir> <out.mp3> --keep-pace --tight --tempo <tempo.txt> --punch
+  ```
+- `--punch`: the whole track 15% faster (pitch unchanged, narrator about 185 words a minute), presence EQ (+4 dB at 3.5 kHz, -2 dB at 250 Hz, a little air at 9 kHz), two-stage compression, levelled to -14 LUFS. Loudness range drops from about 1.9 to 1.3 LU, so the voice sits dense and upfront.
+- Every pause shrinks by the same 15%; the breathing-room numbers above become about 0.26 to 0.34 s between sentences and about 0.45 to 0.55 s on payoff beats.
+- Build the sound effects against the punched track. If the cues were timed on the unpunched track, divide each time by 1.15.
+- Render the Golpo video from the punched track, so drawings follow the faster pace.
+- Next step to test: re-recording with a more energetic delivery (lower stability, higher style) to get closer to Ricks' 205 to 220 words a minute.
