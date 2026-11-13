@@ -16,6 +16,7 @@
 Confirmed by the review: major dates, Postell's age and rookie status, four bombings, 88 days, the training-video interview, the dynamite disclosure.
 
 ## Still to verify before recording
+- Part 2 teaser: Postell "was a teenager" when the manhunt started (21 in May 2003 → ~16 in early 1998)
 - New hook: "for a year and a half, the real bomber didn't have a name" (Jul 1996 → Jan 1998)
 - Band on stage: Jack Mack and the Heart Attack
 - Alice Hawthorne, 44, Albany GA; daughter Fallon, 14, injured; Melih Uzunyol heart attack

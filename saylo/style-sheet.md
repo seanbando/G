@@ -36,6 +36,13 @@ The click: **"I know what happened, but I never understood how they caught him."
 | 18:00–end | Aftermath, the ordinary truth, a closing line |
 | Outro (~30s) | One specific question for comments + one related Saylo video + short subscribe ask |
 
+**Hooks & payoffs (retention):**
+- Open a new forward hook at least every 2–3 minutes. No stretch over ~3 minutes without one (biography and "the search" sections are where gaps happen).
+- If the hook promises a list ("three reasons"), call out each one when it lands ("That's reason number two").
+- At least one "hold onto that" plant in the first third that pays off near the end.
+- Re-hook at the start of Part 2 with a teaser about the ending.
+- Use only facts for teasers — a hook can't promise something the script doesn't deliver.
+
 Mark a split point `[PART 2]` near the middle so each half fits under 10,000 characters for voice tools.
 
 ## 5. WRITING RULES
