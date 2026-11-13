@@ -8,13 +8,13 @@ Thumbnail text: WRONG MAN
 
 [VISUAL: timestamp card — MAY 31, 2003 · 3:30 AM · MURPHY, NC]
 
-The officer in that car is 21 years old. His name is Jeff Postell, and he's been on the job for less than a year. He swings around behind the Save-A-Lot grocery store, and his headlights catch a man crouched by the dumpsters.
+The officer in that car is 21 years old. His name is Jeff Postell, and he's been on the job for less than a year. He swings around behind the Save-A-Lot grocery store with his lights off, and he spots a man crouched by the dumpsters.
 
-Postell figures it's a break-in. He draws his gun. The man comes out slowly, thin, clean-shaven, polite, and says his name is Jerry Wilson. Homeless. Just passing through from Ohio.
+Postell figures it's a burglar. The man bolts, then gives up. Thin, clean-shaven, polite. He says his name is Jerry Wilson. Homeless. Just passing through from Ohio.
 
 It's a lie, and a pretty good one.
 
-For five years, the man standing in that parking lot had been on the FBI's Ten Most Wanted list with a million dollars on his head. Helicopters with heat cameras had flown over these exact hills looking for him. At one point more than 200 federal agents were working out of this corner of the state, and every one of them knew his face.
+For five years, the man standing in that parking lot had been on the FBI's Ten Most Wanted list with a million dollars on his head. Helicopters with heat cameras had flown over these exact hills looking for him. At one point more than 200 federal agents were working out of this corner of the state.
 
 His real name was Eric Rudolph. And seven years earlier, after a bomb went off at the Atlanta Olympics, the FBI had spent 88 days chasing someone else.
 
@@ -32,9 +32,9 @@ Saturday, July 27th, 1996. The Olympics are in Atlanta, and if you didn't have t
 
 Working security near the big sound and light tower is a 33-year-old named Richard Jewell. Former sheriff's deputy. Now he's a contract guard for AT&T, which is not where he wanted his career to be, but it's a job.
 
-Around 12:30, he spots a green military-style backpack under a bench. Nobody's sitting there and nobody comes back for it.
+Shortly before one in the morning, Jewell notices a green military-style backpack under a bench near the tower. Nobody's sitting there and nobody comes back for it.
 
-Jewell gets Georgia Bureau of Investigation officers over to look. They see wires and pipes inside, and Jewell starts helping push people back. Which is harder than it sounds — you try telling a crowd at 1 a.m. to leave a concert because of a bag.
+Jewell points it out to Georgia Bureau of Investigation officers. One of them calls the bomb squad, and Jewell starts helping push people back. Which is harder than it sounds — you try telling a crowd at 1 a.m. to leave a concert because of a bag.
 
 At 12:58, a call comes into 911 from a payphone a few blocks away. A man, very calm, says there's a bomb in Centennial Park and you've got 30 minutes. According to later reporting the dispatcher had trouble even routing the warning, because the park's address wasn't in her system. The park was brand new.
 
@@ -54,33 +54,33 @@ For three days, Richard Jewell was a hero. He went on the Today show. Then on Ju
 
 ## The Wrong Man
 
-The FBI had a theory, and it wasn't a crazy one on paper. There have been cases where someone plants a device so they can find it and be the hero. Jewell was an ex-cop who wanted to be a cop again. He lived with his mom. He liked talking to reporters.
+It started with a tip. Before the Olympics, Jewell had worked as a campus police officer at Piedmont College in north Georgia. After the bombing, people from the college contacted investigators with concerns about how he'd behaved there.
 
-That was the case. That was all of it.
+That tip pointed the FBI toward a theory. There have been cases where someone plants a device so they can find it and be the hero. Jewell was an ex-cop who badly wanted to be a cop again, he lived with his mom, and he'd been doing interviews all week.
 
-No physical evidence tied him to the backpack, and no witness put him near it before he "found" it. Didn't matter. Once his name leaked, reporters camped outside his mother's apartment, agents carried boxes of their stuff out on live TV, and Jay Leno was making jokes about him.
+Suspicion isn't evidence, though. Nothing physical tied him to the backpack, and no witness put him near it before he found it. Didn't matter. Once his name leaked, reporters camped outside his mother's apartment, agents carried boxes of their stuff out on live TV, and Jay Leno was making jokes about him.
 
 [VISUAL: archival news clip of the apartment search — set up, play, break down]
 
 It wasn't only the newspaper. On NBC, Tom Brokaw reportedly told viewers the FBI probably had enough to arrest him. NBC later paid Jewell a settlement over that. CNN settled with him too.
 
-Jewell's mother, Bobi, eventually held her own press conference. She was crying, and she asked President Clinton directly to clear her son's name. Picture that — a mother who'd spent weeks watching agents haul her Tupperware out of her kitchen on television, begging the President of the United States on camera.
+Jewell's mother, Bobi, eventually held her own press conference. She was crying, and she asked President Clinton directly to clear her son's name. Picture that — a mother who'd watched agents carry her things out of her apartment on live TV, now begging the President of the United States on camera.
 
-A Justice Department review later went through how agents handled him, and one detail from it still gets me. They brought Jewell in by telling him he'd be helping make a training video for first responders. Then, partway through, they tried reading him his rights as if that were part of the video.
+A Justice Department review later went through how agents handled him, and one detail from it still gets me. They brought Jewell in by telling him he'd be helping make a training video for first responders. Then, partway through, they presented his Miranda rights as if that were part of the video too. That's specifically what the Justice Department criticized.
 
 And the thing that should've cleared him was sitting there the whole time.
 
-When that 911 call came in from a payphone blocks away, Jewell was at the bench. With police officers. Moving people. He couldn't have made that call, and the timeline showed it from the first night.
+It's in the phone records. A GBI agent called the bomb squad at 12:57, right after Jewell pointed out the bag. One minute later, at 12:58, the bomber called 911 from a payphone several blocks away.
 
-His lawyer, Watson Bryant, reportedly went and walked the route himself — bench to payphone and back — to show how impossible it was. Through a packed park, in the dark, with cops standing next to you the entire time. It doesn't work. It never worked.
+One minute. Jewell's lawyers kept coming back to that, and they were right to. For Jewell to be the caller, he'd have had to point out the bag and then get to a payphone several blocks away, through a packed park, in about sixty seconds.
 
-[VISUAL: dark map of the park — bench, payphone, a dotted line between them]
+[VISUAL: dark map of the park — bench, payphone, 12:57 and 12:58 in accent color]
 
-Something to hold onto for later in this story. The answer to "could Jewell have done it" didn't need a profile. It needed a clock and a map.
+The question of whether Jewell could have done it didn't need a profile. It needed a clock and a map.
 
 On October 26th, 1996 — 88 days in — the U.S. Attorney's office sent his lawyers a letter saying he was no longer a target. Attorney General Janet Reno later said publicly she was sorry about the leak.
 
-That's three months where the real bomber had the whole country looking the other way. He used them.
+That's three months with the investigation's attention on the wrong man. And the real bomber wasn't finished.
 
 ---
 
@@ -146,21 +146,21 @@ May 1998, the FBI puts him on the Ten Most Wanted list. One million dollars. He'
 
 The task force sets up in Andrews, a small town about 15 miles from Murphy. Imagine living there in 1998 — you go to the gas station and there are guys in FBI windbreakers buying coffee, every single day, for months. Your neighbor probably has a theory about where he's hiding. I'd bet everybody did.
 
-What comes next is one of the biggest manhunts the country's ever run. At the peak, more than 200 federal agents in a part of North Carolina that, honestly, most of them had never heard of. Helicopters with heat cameras. Bloodhounds. Teams walking ridgelines for weeks.
+What comes next is one of the biggest manhunts the country's ever run. At the peak, more than 200 federal agents, working alongside local officers who knew the ground. Helicopters with heat cameras. Bloodhounds. Teams walking ridgelines for weeks.
 
 [VISUAL: short archival news clip of agents and helicopters — set up, play, break down]
 
 Almost nothing.
 
-Some of that is the land. The Nantahala is steep and thick and full of caves and old mine shafts. A heat camera at night lights up for deer. And bears. Dogs lose a scent on wet rock, and there's a lot of wet rock.
+Some of that is the land. The Nantahala is steep, densely wooded country, all ravines and hollows, and Rudolph had grown up in it. The people searching mostly hadn't.
 
 The other part was the people.
 
 A lot of folks in that corner of the state didn't trust the federal government, and they weren't shy about it. "Run, Rudolph, Run" T-shirts were for sale. There were bumper stickers. A restaurant reportedly put up a sign joking that Rudolph ate there. I don't want to paint the whole region with that — plenty of people there were sickened by what he'd done — but the agents felt the cold shoulder, and they said so.
 
-July 1998, there's a real break. George Nordmann, who ran a health food store, reports that Rudolph came to his place while he was away, took about six months' worth of food and his truck, and left $500 in cash behind. At least, that's Nordmann's account.
+July 1998, there's a real break. Rudolph approaches George Nordmann, a health food store owner he knew, looking for supplies. A few days later he comes back and takes food and Nordmann's truck, leaving money and a note behind.
 
-The truck turned up abandoned. The trail went cold. Again.
+The truck was later recovered. Rudolph wasn't anywhere near it. The trail went cold. Again.
 
 [VISUAL: news clipping, highlight on Nordmann]
 
@@ -176,13 +176,15 @@ So how do you live out there for five years?
 
 Most of what we know comes from Rudolph himself — what he told investigators after he was caught, and what agents later dug up. Keep that in your head. He has every reason to tell this as a story about a tough guy surviving on his own.
 
-According to those accounts, he moved between hidden camps on the slopes, some of them close enough to look down on Murphy. He reportedly ate acorns. Salamanders. Whatever he could hunt, and whatever he could pull out of people's gardens. He reportedly stole grain and buried food in containers to get through winter. And at night, when the town was asleep, he'd come down and go through the trash.
+According to those accounts, he moved between hidden camps on the slopes, some of them close enough to look down on Murphy. He reportedly ate acorns. Salamanders. Whatever he could hunt, and whatever he could pull out of people's gardens. He stole grain and buried barrels of food to get through the winters — agents later found them. Chris Swecker, who ran the FBI's Charlotte office, also suspected he slipped into empty vacation cabins. And at night, when the town was asleep, he'd come down and go through the trash.
 
 [VISUAL: dark map — camp markers a few miles from town]
 
 Which is exactly what he was doing behind the Save-A-Lot.
 
-Here's where it gets murky, though. When Postell found him, he didn't look like a guy who'd been eating salamanders for five years. Officers reportedly described him as clean-shaven, a fresh haircut, fit, wearing newish sneakers. Some investigators and reporters thought somebody local must have helped him, at least for part of that time.
+Here's where it gets murky, though. When Postell found him, he didn't look like a guy who'd been eating salamanders for five years. Clean-shaven, a recent haircut, fit. Reporters started asking right away whether somebody local had been helping him.
+
+Maybe. But a haircut isn't an accomplice. Between the buried barrels, the stolen grain, the dumpsters and possibly those empty cabins, there are other ways to explain it.
 
 Rudolph says no. He did it alone. Nobody was ever charged with helping him.
 
@@ -194,23 +196,23 @@ Me? I'm not sure. I'd be careful with anybody who tells you they know for certai
 
 Back to the parking lot.
 
-Postell isn't thinking about the Ten Most Wanted list. He's thinking somebody's trying to break into a grocery store. He takes "Jerry Wilson" in to the Cherokee County jail, and at the jail somebody looks at that face a little longer than normal. They run the fingerprints.
+Postell isn't thinking about the Ten Most Wanted list. He thinks he's caught a prowler. Then another officer who responded takes a long look at "Jerry Wilson" and thinks he looks an awful lot like Eric Rudolph. Under questioning, the man finally admits it.
 
-Jerry Wilson is Eric Rudolph.
+His real name is Eric Robert Rudolph.
 
 [VISUAL: booking photo — slow push in]
 
-No shootout. No standoff. After five years, the helicopters, the dogs and a million-dollar reward, the guy was picked up by a 21-year-old rookie who thought he'd caught a shoplifter. Postell said in interviews afterward that he didn't recognize him. He was just doing his rounds.
+No shootout. No standoff. After five years, the helicopters, the dogs and a million-dollar reward, the guy was picked up by a 21-year-old rookie who thought he'd caught a burglar. Postell said in interviews afterward that he didn't recognize him. He was just doing his rounds.
 
-And here's the part that gets me — where was this? Murphy. The same town where they'd found his abandoned truck back in 1998.
+And here's the part that gets me — where was this? Murphy. Near where they'd found his abandoned truck back in 1998.
 
-Five years, and he never really left.
+Five years, and he hadn't gone far.
 
-Go back through it with that in your head. February 1998, the truck turns up outside Murphy. July 1998, he walks into George Nordmann's place for food — still in the same mountains. The camps he talked about later looked down on the town. And on the night he finally got caught, he was a short walk from where this whole search started.
+[VISUAL: dark map — 1998 truck pin, 2003 arrest pin, forest outline]
 
-[VISUAL: dark map — truck site, Nordmann, camps, Save-A-Lot, all in accent color, tightly clustered]
+And that's the part people get wrong about this manhunt. The FBI wasn't searching the wrong place. Investigators believed he was still in western North Carolina, and some people on the task force kept the search focused there even when others figured he'd died out there or slipped away. They were right.
 
-All those helicopters were flying over a man who, a lot of the time, could probably see the lights of Murphy from where he slept. Hundreds of agents were combing half a million acres for someone who, by his own account, kept coming back to the same few square miles. Same as Jewell, really. The answer was a clock and a map, and nobody looked at it the right way.
+They were searching the right mountains. But knowing the region where a man is hiding and finding his campsite are two very different things.
 
 ---
 
@@ -222,7 +224,7 @@ Prosecutors wanted him executed. In April 2005, Rudolph made a deal instead. He 
 
 He put out a written statement afterward. In it, he said the point of the Olympic bomb was to "confound, anger and embarrass" the government over abortion. That was his reason. One woman dead in a park full of people at a concert.
 
-Four life sentences, no parole. He's at the federal supermax in Florence, Colorado, and he isn't coming out.
+Across the Birmingham and Atlanta cases, he got six consecutive life sentences, plus another hundred and twenty years. No parole. He's at the federal supermax in Florence, Colorado, and he isn't coming out.
 
 Emily Lyons, the nurse from Birmingham, was in court for it.
 
@@ -242,7 +244,7 @@ What bugs me most is that it's the same mistake twice, pointed in opposite direc
 
 The profile didn't catch Rudolph, and neither did the reward. What caught him was a college student who saw a man walking the wrong way, a stranger with a pen, and a kid cop who pulled behind a grocery store at 3:30 in the morning.
 
-It was close the whole time. Somebody just had to look.
+Everybody knew roughly where he was. For five years, nobody was in the right spot at the right minute. Then one night, a rookie was.
 
 ---
 
