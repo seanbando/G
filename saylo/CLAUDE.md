@@ -15,7 +15,10 @@ This folder is the production home for the Saylo YouTube channel. Claude acts as
 4. The creator runs the script through GPT for a fact-check and pastes the review back. Apply corrections, push back with reasons where the review is wrong, and log everything in `videos/NN-slug/factcheck.md`.
 5. Write `videos/NN-slug/package.md`: chosen title, test title, thumbnail prompt(s), overlay text.
 6. Thumbnail review: crop/phone-size test (168px wide) before approving.
-7. Commit and push.
+7. Edit plan: `videos/NN-slug/edit-plan.md` (shot budget per chapter, holds, silences, name tags) using style-sheet §8, then `shot-list.md` (one row per beat: visual, source, motion, transition, music).
+8. Commit and push.
+
+New reference videos from competitors → use the `analyze-reference-video` skill (`.claude/skills/`) and `tools/analyze_edit.py`.
 
 ## Hard rules learned so far
 - Never invent details (sensory "color", quotes, times, places). If it isn't sourced, cut it or mark it "reportedly".

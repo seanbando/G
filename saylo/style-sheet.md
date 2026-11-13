@@ -83,6 +83,23 @@ Text goes on in Canva afterward (AI tools mangle lettering). Approved example: `
 ## 8. VISUAL STYLE
 Case-file look: timestamp cards in a typewriter font (`MAY 31, 2003 · 3:30 AM · MURPHY, NC`), dark maps with the accent color for routes and scenes, documents with a highlighter sweep on the key line, silence at the reveal.
 
+**Editing rules** (measured from Uncovering + fern, see `channel/edit-style-analysis.md`):
+| Rule | Target |
+|---|---|
+| Overall pace | ~13 cuts/min, median shot ~3–3.5s, average ~4.5s. A 20-min video ≈ 270 shots. |
+| Hook (first 60s) | 25–35 cuts — one every ~2s. Fastest part of the video. |
+| Short vs long | ~1/3 of shots under 2s; ~1 in 10 held 10s+ (maps being explained, emotional beats). |
+| Chapter breaks | Fade to black + chapter card. Only at chapters (~8–10 per video). Nowhere else. |
+| Music | Never stops, except 1–2 deliberate silent holds at the biggest emotional beat. |
+| Maps | Dark teal/near-black terrain or street map, route line draws itself in amber, pin icons, timestamp card in the corner, camera flies between pins. |
+| Documents | Slow push-in + amber highlighter sweep on the key line. |
+| People | Name tag (Anton, caps, off-white) the first time anyone appears. Real photos get a slow push-in or parallax. |
+| Archival clips | Set up → play (short) → break down. Framed or with a lower third, never dropped in raw. |
+| Missing footage | AI/3D recreations (no real faces), maps, documents — never invent a scene the record doesn't support. |
+| Color grade | Dark, desaturated, cool shadows; amber is the only warm accent. |
+
+Every script gets a shot list (`videos/NN-slug/shot-list.md`) before editing: one row per beat with visual, source, motion, transition and music cue.
+
 ## 9. WORKFLOW
 1. Pick and score the topic (scorecard: Competition ×5, Demand ×4, Outlier proof ×4, Originality ×3, Footage ×2, Depth ×2 = /100).
 2. Claude writes the script using this sheet.
