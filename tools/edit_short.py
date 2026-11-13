@@ -17,6 +17,13 @@ Cue lines ("#" starts a comment):
                                hold a zoom on one spot (x, y as fractions of the frame,
                                0.5 0.5 = centre) until <end>; use it to frame out
                                something the render got wrong
+    <time> note <end> <y> <size> <text>
+                               small readable text on a light box until <end>, centred at
+                               <y> (fraction of the height), <size> = text height as a share
+                               of the width (0.03 for fine print, 0.05 for a headline);
+                               drawn after camera moves so it never shakes or zooms
+    <time> image <end> <path>  show a still image (e.g. a composite board) instead of the
+                               video until <end>; camera moves still apply
     <time> card <seconds> <red|green|black> <text>
                                full-screen number card: the frame dims and blurs, the text
                                slams in big in a marker font with a small shake, e.g.
@@ -118,6 +125,51 @@ def state(t, cues):
     return zoom, dx, dy, blur, hblur, flash
 
 
+NOTE_FONT = "/usr/share/fonts/opentype/inter/Inter-Bold.otf"
+_images = {}
+
+
+def image_at(t, cues, w, h):
+    for c, kind, args in cues:
+        if kind == "image" and c <= t < float(args[0]):
+            path = args[1] if os.path.isabs(args[1]) else os.path.join(os.path.dirname(__file__), "..", args[1])
+            if path not in _images:
+                _images[path] = np.asarray(Image.open(path).convert("RGB").resize((w, h), Image.LANCZOS))
+            return _images[path]
+    return None
+
+
+def draw_notes(frame, t, cues, w, h):
+    notes = [(args, c) for c, kind, args in cues if kind == "note" and c <= t < float(args[0])]
+    if not notes:
+        return frame
+    im = Image.fromarray(frame).convert("RGBA")
+    for args, c in notes:
+        y, size, text = float(args[1]), float(args[2]), " ".join(args[3:])
+        font = ImageFont.truetype(NOTE_FONT, max(12, int(w * size)))
+        layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        d = ImageDraw.Draw(layer)
+        lines, cur = [], ""
+        for word in text.split():
+            trial = (cur + " " + word).strip()
+            if d.textlength(trial, font=font) > w * 0.86 and cur:
+                lines.append(cur)
+                cur = word
+            else:
+                cur = trial
+        lines.append(cur)
+        lh = int(font.size * 1.25)
+        top = int(h * y - lh * len(lines) / 2)
+        wid = max(d.textlength(l, font=font) for l in lines)
+        a = min((t - c) / 0.15, 1.0)  # fade in
+        d.rounded_rectangle(((w - wid) / 2 - 18, top - 10, (w + wid) / 2 + 18, top + lh * len(lines) + 6),
+                            radius=14, fill=(255, 255, 252, int(225 * a)))
+        for i, l in enumerate(lines):
+            d.text((w / 2, top + i * lh + lh / 2), l, font=font, fill=(25, 25, 25, int(255 * a)), anchor="mm")
+        im.alpha_composite(layer)
+    return np.asarray(im.convert("RGB"))
+
+
 def card_at(t, cues):
     """The number card showing at time t, as (text, colour, seconds into the card), or None."""
     for c, kind, args in cues:
@@ -201,7 +253,10 @@ def main(src, cue_file, out, audio=None):
         if len(buf) < size:
             break
         frame = np.frombuffer(buf, np.uint8).reshape(h, w, 3)
-        enc.stdin.write(np.ascontiguousarray(render(frame, w, h, state(i / fps, cues), card_at(i / fps, cues))).tobytes())
+        still = image_at(i / fps, cues, w, h)
+        if still is not None:
+            frame = still
+        enc.stdin.write(np.ascontiguousarray(draw_notes(np.ascontiguousarray(render(frame, w, h, state(i / fps, cues), card_at(i / fps, cues))), i / fps, cues, w, h)).tobytes())
         i += 1
     enc.stdin.close()
     enc.wait()

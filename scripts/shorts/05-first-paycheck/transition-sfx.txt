@@ -1,12 +1,13 @@
-# Transition sounds for the paycheck edit; reused sounds, no credits.
+# Transition sounds for the paycheck v2 edit; reused sounds, no credits.
 # time   name    loudness  seconds  prompt
-6.65  zoomwhoosh  -24  0.6  Fast cinematic whoosh rushing forward, airy, ends abruptly
-10.20  zoomwhoosh
-13.43  zoomwhoosh
-19.81  whipswish  -24  0.6  Quick sharp whip swish, short air swipe
-24.27  whipswish
-29.01  whipswish
-35.47  zoomwhoosh
-43.69  whipswish
-49.87  zoomwhoosh
-58.62  zoomwhoosh
+7.56  zoomwhoosh  -24  0.6  Fast cinematic whoosh rushing forward, airy, ends abruptly
+10.96  zoomwhoosh
+14.19  zoomwhoosh
+20.58  whipswish  -24  0.6  Quick sharp whip swish, short air swipe
+25.03  whipswish
+29.78  whipswish
+36.25  zoomwhoosh
+45.67  whipswish
+52.83  zoomwhoosh
+55.58  whipswish
+61.59  zoomwhoosh

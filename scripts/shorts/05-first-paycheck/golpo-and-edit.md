@@ -6,3 +6,8 @@
 - Audio: Golpo's track raised to the narration level, 15 sound effects and 10 whooshes, cut at 63.45 s, -14 LUFS, peaks -1.5 dB. Captions from `display.txt` ($ and %) burned last.
 - Output: `video/first-paycheck-final.mp4`, cover `video/first-paycheck-cover.png`, captions `video/first-paycheck-captions.srt`.
 - Golpo's own .srt drops $ and % ("1 600", "6 2 99 20"); never use it.
+
+## Version 2 (after the outside review), 2026-11-13
+- Four lines re-recorded (over two weeks; about $1,370; payroll taxes fund Social Security and Medicare; income tax withholding refund). Track 66.4 s.
+- Golpo job `818464eb-59e9-4d28-8eca-966a90000365`: all 11 boards as mapped, YOU consistent, every figure labelled with $ or %, slices into the Social Security building and Medicare clinic (no faces), boss fully drawn.
+- Edit fixes: opening note "$1,600 earned → $1,369.60 take-home"; "Illustrative example. Excludes state/local taxes and other deductions." under the $108; "Robbed?" card; boss composite (`assets/patches/paycheck-boss-composite.png`: worker, boss and "Employer pays +$122.40" together, since Golpo's camera cropped the worker out); ending composite (`assets/patches/paycheck-ending-composite.png`: "Your take-home $1,369.60" beside "Employer cost $1,722.40", since the camera cropped the take-home label); employer-cost note at the end. Quiet seconds 29 to 3; 66.4 s; -14 LUFS.
