@@ -1,4 +1,4 @@
-Editorial marker whiteboard: white background, black outlines, forest green, red only for money taken. One big drawing per scene, new scene every line, always moving, bottom fifth clear. YOU = the man in the uploaded reference image: same face and messy brown hair in every scene, ORANGE hoodie, jeans; never change his look. Only these words may appear: $20/hour, 80 hours, $1,600, $1,369, -$230, Social Security, 6.2%, $99.20, Medicare, 1.45%, $23.20, Federal tax, $108, State, Refund, Boss, +$122.40, $1,722.40.
+Editorial marker whiteboard: white background, black outlines, forest green, red only for money taken. One big drawing per scene, new scene every line, always moving, bottom fifth clear. YOU = the man in the uploaded reference sheet: messy black hair, black square glasses, black suit, white shirt, black tie, same face in every scene; never change his look. Only these words may appear: $20/hour, 80 hours, $1,600, $1,369, -$230, Social Security, 6.2%, $99.20, Medicare, 1.45%, $23.20, Federal tax, $108, State, Refund, Boss, +$122.40, $1,722.40.
 1 hired: YOU at work, "$20/hour" tag, clock spinning to "80 hours", paycheck "$1,600".
 2 opens it: YOU opens an envelope, "$1,369" in red.
 3 who took it: YOU shocked, eyes popping, "-$230" in red.
@@ -6,7 +6,7 @@ Editorial marker whiteboard: white background, black outlines, forest green, red
 5 Social Security: same pizza, a hand pulls a slice "Social Security 6.2% $99.20".
 6 Medicare: same pizza, a second slice "Medicare 1.45% $23.20".
 7 federal: a bigger third slice "Federal tax $108", a small hand "State".
-8 robbed then older: the hands wear robber masks, then the masks fall off and an older YOU (grey hair, same orange hoodie) holds "Social Security" and "Medicare" cards.
+8 robbed then older: the hands wear robber masks, then the masks fall off and an older YOU (grey hair, same glasses and suit) holds "Social Security" and "Medicare" cards.
 9 refund: a tax form, an arrow carries one slice back to YOU, "Refund".
-10 boss: a man in a tie ("Boss") secretly adds a slice "+$122.40" behind YOU's back.
+10 boss: an older bald man in a grey suit with a mustache ("Boss") secretly adds a slice "+$122.40" behind YOU's back.
 11 bigger: the pizza grows to "$1,722.40" while YOU looks at his small plate "$1,369".

@@ -17,7 +17,7 @@
 
 ## Director notes (paste; 267 characters)
 ```
-White board, black marker, forest green, red only for money taken. Every amount in digits: $ before money, % after rates. YOU: young guy, orange hoodie. Pizza = paycheck, "$1,600" on the box; hands take slices labelled with amounts. Boss: man in a tie. No real logos.
+White board, black marker, forest green, red only for money taken. Every amount in digits: $ before money, % after rates. YOU: the reference sheet guy (glasses, black suit). Pizza = paycheck, "$1,600" on the box; hands take slices labelled with amounts. Boss: older bald man, grey suit, mustache. No real logos.
 ```
 
 ## Exact words (paste into "Add the exact words"; each paragraph = one board)
