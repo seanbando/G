@@ -1,0 +1,3 @@
+# Pitch-safe tempo fixes when joining (recipe: anchor ~145-165 wpm).
+VO-04 1.22  # anchor headline, read slowly by the voice model
+VO-06 0.93  # "paper wealth" lesson, slightly rushed
