@@ -1,6 +1,7 @@
-# He Hid 5 Years in the Woods. A Rookie Found Him Behind a Dumpster.
+# Why the Olympic Bomber Was So Hard to Catch
 
-Thumbnail text: WRONG MAN
+Test against: How a Rookie Cop Caught the Olympic Bomber
+Thumbnail: night, flashlight beam on a figure crouched by a dumpster. Text: 5 YEARS
 
 ---
 
@@ -18,7 +19,7 @@ For five years, the man standing in that parking lot had been on the FBI's Ten M
 
 His real name was Eric Rudolph. And seven years earlier, after a bomb went off at the Atlanta Olympics, the FBI had spent 88 days chasing someone else.
 
-Two questions run through this whole case. How does the most hunted man in the country stay hidden for five years in a place where everybody knows what he looks like? And the one I honestly find worse — how did the guy who saved people that night end up treated like the bomber?
+So why was he so hard to catch? There isn't one answer. There are three, and they stack on top of each other. For the first 88 days, the FBI was looking at the wrong man — the guard who'd helped save people that night, which is the part I honestly find hardest to read about. Then for a year and a half, the real bomber didn't have a name. And once he finally did, he walked into a place that was built for hiding.
 
 I'm working from court records, the FBI's own case history, a Justice Department review, and news reporting from the time. When the record is fuzzy, I'll say so.
 
