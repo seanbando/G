@@ -1,0 +1,12 @@
+# What viewers read (captions); numbers the on-screen way.
+VO-01 You just got hired at $20 an hour, you worked 80 hours, and your first paycheck should be $1,600.
+VO-02 Then you open it, and it says about $1,369.
+VO-03 Wait, who took $230 from my check?
+VO-04 Picture your paycheck as a $1,600 pizza, and three people grab a slice before you get a single bite.
+VO-05 Social Security takes 6.2%, $99.20.
+VO-06 Medicare grabs 1.45%, another $23.20.
+VO-07 Then federal income tax takes about $108, and in most states, your state grabs a slice too.
+VO-08 So it feels like you just got robbed, but those first two slices are how you earn the right to collect Social Security and Medicare when you're older.
+VO-09 The tax slice is only an estimate, and if too much gets taken, you get the difference back as a refund.
+VO-10 And here's the part nobody tells you, because your boss pays another $122.40 on top, a matching slice you never even see.
+VO-11 You thought your pizza got smaller, but it was actually bigger than you ever saw.

@@ -10,6 +10,13 @@ Cue lines ("#" starts a comment):
     <time> shake [seconds]     camera shake starting at <time> (default 0.25 s)
     <time> punch               quick zoom-in on a word, easing back out
     <time> push <end> <zoom>   slow push-in from <time> to <end> up to <zoom> (e.g. 1.08)
+    <time> reframe <0|1|2>     jump to a slightly different framing until the next reframe
+                               (0 = full frame, 1 = 7% in, upper left, 2 = 10% in, lower right),
+                               like a quick cut; tools/auto_punch.py writes these
+    <time> card <seconds> <red|green|black> <text>
+                               full-screen number card: the frame dims and blurs, the text
+                               slams in big in a marker font with a small shake, e.g.
+                               "35.1 card 1.4 red $113,000,000,000"
 
 Transitions are centred on the cut: the outgoing scene accelerates into the
 cut and the incoming scene settles out of it (0.18 s each side). The video's
@@ -19,8 +26,14 @@ import math
 import subprocess
 import sys
 
+import os
+
 import numpy as np
-from PIL import Image, ImageFilter
+from PIL import Image, ImageDraw, ImageFilter, ImageFont
+
+FONT = os.path.join(os.path.dirname(__file__), "..", "assets", "fonts", "PermanentMarker-Regular.ttf")
+COLORS = {"red": (196, 30, 45), "green": (34, 98, 58), "black": (20, 20, 20)}
+REFRAMES = {0: (1.0, 0.0, 0.0), 1: (1.07, 0.02, 0.02), 2: (1.10, -0.02, -0.025)}
 
 HALF = 0.18  # seconds each side of a transition
 
@@ -50,6 +63,10 @@ def ease(x):  # smooth 0..1
 def state(t, cues):
     """Zoom, x/y offset (fraction of size), blur, horizontal blur and flash at time t."""
     zoom, dx, dy, blur, hblur, flash = 1.0, 0.0, 0.0, 0.0, 0.0, 0.0
+    frames = [(c, args) for c, kind, args in cues if kind == "reframe" and c <= t]
+    if frames:
+        rz, rx, ry = REFRAMES[int(max(frames)[1][0]) if max(frames)[1] else 0]
+        zoom, dx, dy = rz, rx, ry
     for c, kind, args in cues:
         u = t - c
         if kind == "zoomthru" and -HALF <= u <= HALF:
@@ -91,8 +108,44 @@ def state(t, cues):
     return zoom, dx, dy, blur, hblur, flash
 
 
-def render(frame, w, h, s):
+def card_at(t, cues):
+    """The number card showing at time t, as (text, colour, seconds into the card), or None."""
+    for c, kind, args in cues:
+        if kind == "card" and c <= t < c + float(args[0]):
+            return " ".join(args[2:]), COLORS.get(args[1], COLORS["black"]), t - c
+    return None
+
+
+def draw_card(im, w, h, card):
+    text, colour, u = card
+    fade = min(u / 0.08, 1.0)
+    bg = im.filter(ImageFilter.GaussianBlur(10 * fade))
+    bg = Image.blend(bg, Image.new("RGB", (w, h), (246, 246, 240)), 0.55 * fade)
+    size = int(w * 0.16)
+    font = ImageFont.truetype(FONT, size)
+    while ImageDraw.Draw(bg).textlength(text, font=font) > w * 0.9 and size > 20:
+        size -= 4
+        font = ImageFont.truetype(FONT, size)
+    k = 1.0 + 0.6 * max(0.0, 1 - u / 0.12)          # slam: big to normal in 0.12 s
+    layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+    ImageDraw.Draw(layer).text((w / 2, h * 0.45), text, font=font, fill=colour + (255,), anchor="mm")
+    if k != 1.0:
+        lw, lh = int(w * k), int(h * k)
+        layer = layer.resize((lw, lh), Image.BILINEAR).crop(((lw - w) // 2, (lh - h) // 2, (lw - w) // 2 + w, (lh - h) // 2 + h))
+    out = bg.convert("RGBA")
+    out.alpha_composite(layer)
+    return out.convert("RGB")
+
+
+def render(frame, w, h, s, card=None):
     zoom, dx, dy, blur, hblur, flash = s
+    if card:
+        im = draw_card(Image.fromarray(frame), w, h, card)
+        if card[2] < 0.2:  # small shake as it lands
+            a = 0.012 * (1 - card[2] / 0.2)
+            dx += a * math.sin(card[2] * 90)
+            dy += a * math.cos(card[2] * 70)
+        frame = np.asarray(im)
     if zoom == 1 and dx == 0 and dy == 0 and blur == 0 and hblur == 0 and flash == 0:
         return frame
     im = Image.fromarray(frame)
@@ -138,7 +191,7 @@ def main(src, cue_file, out, audio=None):
         if len(buf) < size:
             break
         frame = np.frombuffer(buf, np.uint8).reshape(h, w, 3)
-        enc.stdin.write(np.ascontiguousarray(render(frame, w, h, state(i / fps, cues))).tobytes())
+        enc.stdin.write(np.ascontiguousarray(render(frame, w, h, state(i / fps, cues), card_at(i / fps, cues))).tobytes())
         i += 1
     enc.stdin.close()
     enc.wait()

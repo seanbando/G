@@ -1,0 +1,18 @@
+# Sound effect cues for audio/first-paycheck-FULL.mp3 (tools/build_sfx.py); reused sounds only, so no credits.
+# Times from words.json (tools/word_times.py estimate).
+# time   name  loudness  seconds  prompt   # word
+0.00  boom       -20       2.0      Deep cinematic boom impact, dark trailer hit, short tail   # "You just got hired"
+5.45  register   -22       1.0      Old cash register ka-ching with drawer opening   # "$1,600"
+8.75  impact     -18       1.5      Heavy cinematic impact hit with low rumble   # "$1,369"
+10.38  scratch    -22       0.8      Short vinyl record scratch   # "Wait"
+16.45  pop        -24       0.5      Light soft pop, clean and subtle   # "pizza"
+22.49  stamp      -22       0.6      Single heavy rubber stamp thud on paper, short and dry   # Social Security slice
+27.24  stamp   # Medicare slice
+31.94  stamp   # federal slice "$108"
+37.47  impact   # fake-out "robbed"
+43.83  pop   # "older" (benefits later)
+50.26  register   # "refund"
+52.05  paper      -24       0.8      Stack of paper sheets fluttering, light quick whoosh   # "the part nobody tells you"
+56.45  coinclink  -24       1.0      A few coins clinking as they stack up, light and bright   # "$122.40" boss slice
+62.96  impact   # "bigger" (the flip)
+64.18  buzz       -22       0.8      Smartphone vibrating notification buzz, two short pulses   # end
