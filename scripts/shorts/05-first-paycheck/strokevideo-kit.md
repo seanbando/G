@@ -15,9 +15,9 @@
 | Characters | **None** | A character switches pricing from 50 to 100 credits a minute; describe the guy in the director notes instead |
 | Let me check the script first | **On** | Catch problems before credits are spent |
 
-## Director notes (paste; 267 characters)
+## Director notes (paste; 293 characters)
 ```
-White board, black marker, forest green, red only for money taken. Every amount in digits: $ before money, % after rates. YOU: the reference sheet guy (glasses, black suit). Pizza = paycheck, "$1,600" on the box; hands take slices labelled with amounts. Boss: older bald man, grey suit, mustache. No real logos.
+White board, black marker, forest green, red for money taken. Every amount in digits: $ before money, % after rates. YOU: the reference sheet guy (glasses, black suit). Pizza = paycheck, "$1,600" on the box; hands take labelled slices. Boss: older bald man, grey suit, mustache. No real logos.
 ```
 
 ## Exact words (paste into "Add the exact words"; each paragraph = one board)
