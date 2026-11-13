@@ -18,7 +18,7 @@ Everything for @watchsaylo lives here. Start every new chat (with Claude or GPT)
 ## Video pipeline
 | # | Video | Status |
 |---|---|---|
-| 01 | Why the Olympic Bomber Was So Hard to Catch | Script fact-checked once. Re-check new hook (18 months), then record. Thumbnail approved — finish text in Canva. Edit plan done; shot list next. |
+| 01 | Why the Olympic Bomber Was So Hard to Catch | Script fact-checked once. Re-check new hook (18 months), then record. Thumbnail approved — finish text in Canva. Edit plan + shot list done — gather footage, then record VO and edit. |
 | 02 | Whitey Bulger (scorecard #2) | Not started |
 | 03 | Christopher Dorner (scorecard #3) | Not started |
 

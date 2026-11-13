@@ -1,7 +1,7 @@
 # 01 — Edit Plan (targets before the shot list)
 
 Based on `script.md` (2,927 words ≈ 18.3 min at 160 wpm) and the editing rules in `style-sheet.md` §8.
-**Total: ~240–260 shots.** Full beat-by-beat shot list goes in `shot-list.md` (next step).
+**Total: ~240–270 shots** (shot list came out at 269). Full beat-by-beat shot list goes in `shot-list.md` (next step).
 
 ## Shot budget per chapter
 | Chapter | Words | ~Runtime | Ends ~ | Shots | Pace notes |
