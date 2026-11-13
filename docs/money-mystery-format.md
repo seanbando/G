@@ -2,7 +2,11 @@
 
 Built for money explainers with maximum retention. It keeps Ricks Clips' retention mechanics (mystery up front, answer late, mid-video fake-out) but the payoff is a money concept the viewer can use, not a weird fact.
 
-## Beats (about 50 to 60 s, about 150 to 175 words, B voice)
+## Length and pace
+
+Length follows the story, not a 60-second target: never pad a script to reach a minute, and cut any line that drags. The goal is viewers staying to the end. Pace stays high the whole way: every line at about 195 words a minute (`tools/auto_tempo.py`), like Ricks Clips.
+
+## Beats (typically 45 to 60 s, B voice)
 
 | Time | Beat |
 |---|---|

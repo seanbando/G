@@ -1,0 +1,7 @@
+# All lines generated at normal speed; pace set per line in tempo.txt.
+VO-01 1.0
+VO-02 1.0
+VO-03 1.0
+VO-04 1.0
+VO-05 1.0
+VO-06 1.0
