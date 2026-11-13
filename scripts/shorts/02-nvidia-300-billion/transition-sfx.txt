@@ -1,0 +1,16 @@
+# Transition sounds for the Nvidia transitions test.
+# time   name    loudness  seconds  prompt
+1.95  zoomwhoosh  -24  0.6  Fast cinematic whoosh rushing forward, airy, ends abruptly
+5.41  whipswish  -24  0.6  Quick sharp whip swish, short air swipe
+8.15  zoomwhoosh
+10.38  whipswish
+18.31  zoomwhoosh
+21.98  whipswish
+24.41  zoomwhoosh
+31.85  whipswish
+35.88  zoomwhoosh
+40.78  whipswish
+44.58  zoomwhoosh
+48.65  zoomwhoosh
+54.55  whipswish
+57.75  zoomwhoosh

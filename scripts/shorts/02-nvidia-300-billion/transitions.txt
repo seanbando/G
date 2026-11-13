@@ -1,0 +1,20 @@
+0.00   push 2.0 1.06
+2.17   zoomthru          # into the crossed-out icons
+5.63   whip left         # into "300 billion"
+6.40   punch             # "billion"
+8.37   zoomthru          # smash into the shocked guy
+10.60  whip right        # into the chip
+17.30  punch             # "one man"
+18.53  zoomthru          # into the anchor (Breaking)
+22.20  whip left         # into the spy
+24.63  zoomthru          # into the hearts
+27.34  shake 0.2         # "unfaithful" crack
+32.07  whip right        # into "powered the whole AI boom"
+36.10  zoomthru          # into the crash
+36.58  shake 0.3         # "night" impact
+41.00  whip left         # into the org chart
+44.80  zoomthru          # into "interim"
+48.87  zoomthru          # callback
+53.78  shake 0.25        # "It lost one man" boom
+54.77  whip right        # into the money pile
+57.97  zoomthru          # into the red phone
