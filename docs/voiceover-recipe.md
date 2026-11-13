@@ -107,3 +107,4 @@ Tested on the creator's cloned voice: emotion tags in square brackets are not sp
 - **Never use `[shouting]`**: far too much.
 - Use mostly `[excited]`; for the fake-out beat a calmer tag such as `[serious]`; for the lesson or callback `[confident]`. Put the tag at the start of the line.
 - Tags go in the script line itself, so `make_voiceover.py` and `generate_voiceovers.py` pass them through unchanged; keep them out of captions.
+- **Creator's verdict (2026-11-13):** `[excited]` alone was "a little too much" too. Default is **no emotion tags**; energy comes from the 195 wpm per-line pace (`tools/auto_tempo.py`) and the `--punch` sound. A milder tag such as `[upbeat]` is untested; try it on one line before using it.
