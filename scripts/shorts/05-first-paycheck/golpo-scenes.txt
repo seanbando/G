@@ -6,7 +6,7 @@ Editorial marker whiteboard: white background, black outlines, forest green, red
 5 Social Security: same pizza, a hand pulls a slice "Social Security 6.2% $99.20".
 6 Medicare: same pizza, a second slice "Medicare 1.45% $23.20".
 7 federal: a bigger third slice "Federal tax $108", a small hand "State".
-8 robbed then older: the hands wear robber masks, then the masks fall off and an older YOU (grey hair, same glasses and suit) holds "Social Security" and "Medicare" cards.
+8 robbed, then the slices: the three hands wear robber masks; ON THE WORDS "but those first two slices" the masks vanish and the Social Security and Medicare slices float off the pizza to an older YOU (grey hair, same glasses and suit), who holds them as "Social Security" and "Medicare" cards. Do not keep the masks after "robbed".
 9 refund: a tax form, an arrow carries one slice back to YOU, "Refund".
 10 boss: an older bald man in a grey suit with a mustache ("Boss") secretly adds a slice "+$122.40" behind YOU's back.
 11 bigger: the pizza grows to "$1,722.40" while YOU looks at his small plate "$1,369".
