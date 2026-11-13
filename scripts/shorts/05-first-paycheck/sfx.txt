@@ -2,17 +2,17 @@
 # Times from words.json (tools/word_times.py estimate).
 # time   name  loudness  seconds  prompt   # word
 0.00  boom       -20       2.0      Deep cinematic boom impact, dark trailer hit, short tail   # "You just got hired"
-5.45  register   -22       1.0      Old cash register ka-ching with drawer opening   # "$1,600"
-8.75  impact     -18       1.5      Heavy cinematic impact hit with low rumble   # "$1,369"
-10.38  scratch    -22       0.8      Short vinyl record scratch   # "Wait"
-16.34  pop        -24       0.5      Light soft pop, clean and subtle   # "pizza"
-22.39  stamp      -22       0.6      Single heavy rubber stamp thud on paper, short and dry   # Social Security slice
-27.14  stamp   # Medicare slice
-31.84  stamp   # federal slice "$108"
-37.30  impact   # fake-out "robbed"
-43.44  pop   # "older" (benefits later)
-49.30  register   # "refund"
-51.06  paper      -24       0.8      Stack of paper sheets fluttering, light quick whoosh   # "the part nobody tells you"
-55.45  coinclink  -24       1.0      A few coins clinking as they stack up, light and bright   # "$122.40" boss slice
-61.90  impact   # "bigger" (the flip)
-63.08  buzz       -22       0.8      Smartphone vibrating notification buzz, two short pulses   # end
+6.34  register   -22       1.0      Old cash register ka-ching with drawer opening   # "$1,600"
+9.64  impact     -18       1.5      Heavy cinematic impact hit with low rumble   # "$1,369"
+11.14  scratch    -22       0.8      Short vinyl record scratch   # "Wait"
+17.11  pop        -24       0.5      Light soft pop, clean and subtle   # "pizza"
+23.15  stamp      -22       0.6      Single heavy rubber stamp thud on paper, short and dry   # Social Security slice
+27.91  stamp   # Medicare slice
+32.61  stamp   # federal slice "$108"
+38.07  impact   # fake-out "robbed"
+45.42  pop   # "older" (benefits later)
+52.38  register   # "file" (refund after you file)
+54.03  paper      -24       0.8      Stack of paper sheets fluttering, light quick whoosh   # "the part nobody tells you"
+58.43  coinclink  -24       1.0      A few coins clinking as they stack up, light and bright   # "$122.40" boss slice
+64.88  impact   # "bigger" (the flip)
+66.06  buzz       -22       0.8      Smartphone vibrating notification buzz, two short pulses   # end

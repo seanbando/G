@@ -3,67 +3,67 @@
   {
    "id": "VO-01",
    "start": 0.0,
-   "end": 6.77,
-   "text": "You just got hired at twenty dollars an hour, you worked eighty hours, and your first paycheck should be sixteen hundred dollars."
+   "end": 7.683,
+   "text": "You just got hired at twenty dollars an hour, you worked eighty hours over two weeks, and your first paycheck should be sixteen hundred dollars."
   },
   {
    "id": "VO-02",
-   "start": 6.869,
-   "end": 10.267,
-   "text": "Then you open it, and it says about thirteen hundred sixty-nine."
+   "start": 7.782,
+   "end": 11.028,
+   "text": "Then you open it, and it says about thirteen hundred seventy."
   },
   {
    "id": "VO-03",
-   "start": 10.416,
-   "end": 13.503,
+   "start": 11.177,
+   "end": 14.265,
    "text": "Wait, who took two hundred thirty dollars from my check?"
   },
   {
    "id": "VO-04",
-   "start": 13.652,
-   "end": 19.929,
+   "start": 14.414,
+   "end": 20.696,
    "text": "Picture your paycheck as a sixteen hundred dollar pizza, and three people grab a slice before you get a single bite."
   },
   {
    "id": "VO-05",
-   "start": 20.028,
-   "end": 24.386,
+   "start": 20.795,
+   "end": 25.156,
    "text": "Social Security takes six point two percent, ninety-nine dollars and twenty cents."
   },
   {
    "id": "VO-06",
-   "start": 24.486,
-   "end": 29.129,
+   "start": 25.255,
+   "end": 29.901,
    "text": "Medicare grabs one point four five percent, another twenty-three dollars and twenty cents."
   },
   {
    "id": "VO-07",
-   "start": 29.228,
-   "end": 35.297,
+   "start": 30.001,
+   "end": 36.075,
    "text": "Then federal income tax takes about one hundred eight dollars, and in most states, your state grabs a slice too."
   },
   {
    "id": "VO-08",
-   "start": 35.694,
-   "end": 43.814,
-   "text": "So it feels like you just got robbed, but those first two slices are how you earn the right to collect Social Security and Medicare when you're older."
+   "start": 36.473,
+   "end": 45.791,
+   "text": "So it feels like you just got robbed, but those first two slices fund Social Security and Medicare, and your work history helps decide what you qualify for when you're older."
   },
   {
    "id": "VO-09",
-   "start": 43.913,
-   "end": 49.749,
-   "text": "The tax slice is only an estimate, and if too much gets taken, you get the difference back as a refund."
+   "start": 45.891,
+   "end": 52.717,
+   "text": "The income tax slice is just an estimate, and if more was taken than you owe, you get the extra back after you file."
   },
   {
    "id": "VO-10",
-   "start": 50.086,
-   "end": 58.439,
+   "start": 53.055,
+   "end": 61.413,
    "text": "And here's the part nobody tells you, because your boss pays another one hundred twenty-two dollars and forty cents on top, a matching slice you never even see."
   },
   {
    "id": "VO-11",
-   "start": 58.836,
-   "end": 63.349,
+   "start": 61.81,
+   "end": 66.327,
    "text": "You thought your pizza got smaller, but it was actually bigger than you ever saw."
   }
  ],
@@ -71,1207 +71,1261 @@
   {
    "text": "You",
    "start": 0.0,
-   "end": 0.213,
+   "end": 0.217,
    "line": "VO-01"
   },
   {
    "text": "just",
-   "start": 0.213,
-   "end": 0.48,
+   "start": 0.217,
+   "end": 0.487,
    "line": "VO-01"
   },
   {
    "text": "got",
-   "start": 0.48,
-   "end": 0.693,
+   "start": 0.487,
+   "end": 0.704,
    "line": "VO-01"
   },
   {
    "text": "hired",
-   "start": 0.693,
-   "end": 1.013,
+   "start": 0.704,
+   "end": 1.028,
    "line": "VO-01"
   },
   {
    "text": "at",
-   "start": 1.013,
-   "end": 1.173,
+   "start": 1.028,
+   "end": 1.19,
    "line": "VO-01"
   },
   {
    "text": "twenty",
-   "start": 1.173,
-   "end": 1.546,
+   "start": 1.19,
+   "end": 1.569,
    "line": "VO-01"
   },
   {
    "text": "dollars",
-   "start": 1.546,
-   "end": 1.972,
+   "start": 1.569,
+   "end": 2.002,
    "line": "VO-01"
   },
   {
    "text": "an",
-   "start": 1.972,
-   "end": 2.132,
+   "start": 2.002,
+   "end": 2.164,
    "line": "VO-01"
   },
   {
    "text": "hour,",
-   "start": 2.132,
-   "end": 2.399,
+   "start": 2.164,
+   "end": 2.434,
    "line": "VO-01"
   },
   {
    "text": "you",
-   "start": 2.399,
-   "end": 2.612,
+   "start": 2.434,
+   "end": 2.651,
    "line": "VO-01"
   },
   {
    "text": "worked",
-   "start": 2.612,
-   "end": 2.985,
+   "start": 2.651,
+   "end": 3.03,
    "line": "VO-01"
   },
   {
    "text": "eighty",
-   "start": 2.985,
-   "end": 3.358,
+   "start": 3.03,
+   "end": 3.409,
    "line": "VO-01"
   },
   {
-   "text": "hours,",
-   "start": 3.358,
-   "end": 3.678,
+   "text": "hours",
+   "start": 3.409,
+   "end": 3.733,
+   "line": "VO-01"
+  },
+  {
+   "text": "over",
+   "start": 3.733,
+   "end": 4.003,
+   "line": "VO-01"
+  },
+  {
+   "text": "two",
+   "start": 4.003,
+   "end": 4.22,
+   "line": "VO-01"
+  },
+  {
+   "text": "weeks,",
+   "start": 4.22,
+   "end": 4.545,
    "line": "VO-01"
   },
   {
    "text": "and",
-   "start": 3.678,
-   "end": 3.891,
+   "start": 4.545,
+   "end": 4.762,
    "line": "VO-01"
   },
   {
    "text": "your",
-   "start": 3.891,
-   "end": 4.158,
+   "start": 4.762,
+   "end": 5.032,
    "line": "VO-01"
   },
   {
    "text": "first",
-   "start": 4.158,
-   "end": 4.478,
+   "start": 5.032,
+   "end": 5.357,
    "line": "VO-01"
   },
   {
    "text": "paycheck",
-   "start": 4.478,
-   "end": 4.958,
+   "start": 5.357,
+   "end": 5.844,
    "line": "VO-01"
   },
   {
    "text": "should",
-   "start": 4.958,
-   "end": 5.33,
+   "start": 5.844,
+   "end": 6.222,
    "line": "VO-01"
   },
   {
    "text": "be",
-   "start": 5.33,
-   "end": 5.491,
+   "start": 6.222,
+   "end": 6.384,
    "line": "VO-01"
   },
   {
    "text": "sixteen",
-   "start": 5.491,
-   "end": 5.917,
+   "start": 6.384,
+   "end": 6.818,
    "line": "VO-01"
   },
   {
    "text": "hundred",
-   "start": 5.917,
-   "end": 6.343,
+   "start": 6.818,
+   "end": 7.251,
    "line": "VO-01"
   },
   {
    "text": "dollars.",
-   "start": 6.343,
-   "end": 6.77,
+   "start": 7.251,
+   "end": 7.683,
    "line": "VO-01"
   },
   {
    "text": "Then",
-   "start": 6.869,
-   "end": 7.143,
+   "start": 7.782,
+   "end": 8.053,
    "line": "VO-02"
   },
   {
    "text": "you",
-   "start": 7.143,
-   "end": 7.363,
+   "start": 8.053,
+   "end": 8.269,
    "line": "VO-02"
   },
   {
    "text": "open",
-   "start": 7.363,
-   "end": 7.637,
+   "start": 8.269,
+   "end": 8.54,
    "line": "VO-02"
   },
   {
    "text": "it,",
-   "start": 7.637,
-   "end": 7.801,
+   "start": 8.54,
+   "end": 8.702,
    "line": "VO-02"
   },
   {
    "text": "and",
-   "start": 7.801,
-   "end": 8.02,
+   "start": 8.702,
+   "end": 8.918,
    "line": "VO-02"
   },
   {
    "text": "it",
-   "start": 8.02,
-   "end": 8.185,
+   "start": 8.918,
+   "end": 9.08,
    "line": "VO-02"
   },
   {
    "text": "says",
-   "start": 8.185,
-   "end": 8.459,
+   "start": 9.08,
+   "end": 9.35,
    "line": "VO-02"
   },
   {
    "text": "about",
-   "start": 8.459,
-   "end": 8.788,
+   "start": 9.35,
+   "end": 9.675,
    "line": "VO-02"
   },
   {
    "text": "thirteen",
-   "start": 8.788,
-   "end": 9.281,
+   "start": 9.675,
+   "end": 10.162,
    "line": "VO-02"
   },
   {
    "text": "hundred",
-   "start": 9.281,
-   "end": 9.719,
+   "start": 10.162,
+   "end": 10.594,
    "line": "VO-02"
   },
   {
-   "text": "sixty-nine.",
-   "start": 9.719,
-   "end": 10.267,
+   "text": "seventy.",
+   "start": 10.594,
+   "end": 11.028,
    "line": "VO-02"
   },
   {
    "text": "Wait,",
-   "start": 10.416,
-   "end": 10.697,
+   "start": 11.177,
+   "end": 11.457,
    "line": "VO-03"
   },
   {
    "text": "who",
-   "start": 10.697,
-   "end": 10.922,
+   "start": 11.457,
+   "end": 11.682,
    "line": "VO-03"
   },
   {
    "text": "took",
-   "start": 10.922,
-   "end": 11.202,
+   "start": 11.682,
+   "end": 11.963,
    "line": "VO-03"
   },
   {
    "text": "two",
-   "start": 11.202,
-   "end": 11.426,
+   "start": 11.963,
+   "end": 12.187,
    "line": "VO-03"
   },
   {
    "text": "hundred",
-   "start": 11.426,
-   "end": 11.876,
+   "start": 12.187,
+   "end": 12.636,
    "line": "VO-03"
   },
   {
    "text": "thirty",
-   "start": 11.876,
-   "end": 12.268,
+   "start": 12.636,
+   "end": 13.03,
    "line": "VO-03"
   },
   {
    "text": "dollars",
-   "start": 12.268,
-   "end": 12.717,
+   "start": 13.03,
+   "end": 13.479,
    "line": "VO-03"
   },
   {
    "text": "from",
-   "start": 12.717,
-   "end": 12.998,
+   "start": 13.479,
+   "end": 13.759,
    "line": "VO-03"
   },
   {
    "text": "my",
-   "start": 12.998,
-   "end": 13.166,
+   "start": 13.759,
+   "end": 13.928,
    "line": "VO-03"
   },
   {
    "text": "check?",
-   "start": 13.166,
-   "end": 13.503,
+   "start": 13.928,
+   "end": 14.265,
    "line": "VO-03"
   },
   {
    "text": "Picture",
-   "start": 13.652,
-   "end": 14.088,
+   "start": 14.414,
+   "end": 14.851,
    "line": "VO-04"
   },
   {
    "text": "your",
-   "start": 14.088,
-   "end": 14.361,
+   "start": 14.851,
+   "end": 15.125,
    "line": "VO-04"
   },
   {
    "text": "paycheck",
-   "start": 14.361,
-   "end": 14.853,
+   "start": 15.125,
+   "end": 15.615,
    "line": "VO-04"
   },
   {
    "text": "as",
-   "start": 14.853,
-   "end": 15.017,
+   "start": 15.615,
+   "end": 15.779,
    "line": "VO-04"
   },
   {
    "text": "a",
-   "start": 15.017,
-   "end": 15.126,
+   "start": 15.779,
+   "end": 15.889,
    "line": "VO-04"
   },
   {
    "text": "sixteen",
-   "start": 15.126,
-   "end": 15.563,
+   "start": 15.889,
+   "end": 16.326,
    "line": "VO-04"
   },
   {
    "text": "hundred",
-   "start": 15.563,
-   "end": 15.999,
+   "start": 16.326,
+   "end": 16.763,
    "line": "VO-04"
   },
   {
    "text": "dollar",
-   "start": 15.999,
-   "end": 16.381,
+   "start": 16.763,
+   "end": 17.146,
    "line": "VO-04"
   },
   {
    "text": "pizza,",
-   "start": 16.381,
-   "end": 16.709,
+   "start": 17.146,
+   "end": 17.473,
    "line": "VO-04"
   },
   {
    "text": "and",
-   "start": 16.709,
-   "end": 16.927,
+   "start": 17.473,
+   "end": 17.691,
    "line": "VO-04"
   },
   {
    "text": "three",
-   "start": 16.927,
-   "end": 17.255,
+   "start": 17.691,
+   "end": 18.019,
    "line": "VO-04"
   },
   {
    "text": "people",
-   "start": 17.255,
-   "end": 17.636,
+   "start": 18.019,
+   "end": 18.402,
    "line": "VO-04"
   },
   {
    "text": "grab",
-   "start": 17.636,
-   "end": 17.909,
+   "start": 18.402,
+   "end": 18.675,
    "line": "VO-04"
   },
   {
    "text": "a",
-   "start": 17.909,
-   "end": 18.018,
+   "start": 18.675,
+   "end": 18.784,
    "line": "VO-04"
   },
   {
    "text": "slice",
-   "start": 18.018,
-   "end": 18.346,
+   "start": 18.784,
+   "end": 19.112,
    "line": "VO-04"
   },
   {
    "text": "before",
-   "start": 18.346,
-   "end": 18.728,
+   "start": 19.112,
+   "end": 19.494,
    "line": "VO-04"
   },
   {
    "text": "you",
-   "start": 18.728,
-   "end": 18.947,
+   "start": 19.494,
+   "end": 19.712,
    "line": "VO-04"
   },
   {
    "text": "get",
-   "start": 18.947,
-   "end": 19.165,
+   "start": 19.712,
+   "end": 19.931,
    "line": "VO-04"
   },
   {
    "text": "a",
-   "start": 19.165,
-   "end": 19.274,
+   "start": 19.931,
+   "end": 20.04,
    "line": "VO-04"
   },
   {
    "text": "single",
-   "start": 19.274,
-   "end": 19.656,
+   "start": 20.04,
+   "end": 20.423,
    "line": "VO-04"
   },
   {
    "text": "bite.",
-   "start": 19.656,
-   "end": 19.929,
+   "start": 20.423,
+   "end": 20.696,
    "line": "VO-04"
   },
   {
    "text": "Social",
-   "start": 20.028,
-   "end": 20.409,
+   "start": 20.795,
+   "end": 21.177,
    "line": "VO-05"
   },
   {
    "text": "Security",
-   "start": 20.409,
-   "end": 20.9,
+   "start": 21.177,
+   "end": 21.667,
    "line": "VO-05"
   },
   {
    "text": "takes",
-   "start": 20.9,
-   "end": 21.227,
+   "start": 21.667,
+   "end": 21.995,
    "line": "VO-05"
   },
   {
    "text": "six",
-   "start": 21.227,
-   "end": 21.444,
+   "start": 21.995,
+   "end": 22.212,
    "line": "VO-05"
   },
   {
    "text": "point",
-   "start": 21.444,
-   "end": 21.772,
+   "start": 22.212,
+   "end": 22.539,
    "line": "VO-05"
   },
   {
    "text": "two",
-   "start": 21.772,
-   "end": 21.989,
+   "start": 22.539,
+   "end": 22.758,
    "line": "VO-05"
   },
   {
    "text": "percent,",
-   "start": 21.989,
-   "end": 22.425,
+   "start": 22.758,
+   "end": 23.193,
    "line": "VO-05"
   },
   {
    "text": "ninety-nine",
-   "start": 22.425,
-   "end": 23.024,
+   "start": 23.193,
+   "end": 23.793,
    "line": "VO-05"
   },
   {
    "text": "dollars",
-   "start": 23.024,
-   "end": 23.46,
+   "start": 23.793,
+   "end": 24.23,
    "line": "VO-05"
   },
   {
    "text": "and",
-   "start": 23.46,
-   "end": 23.678,
+   "start": 24.23,
+   "end": 24.447,
    "line": "VO-05"
   },
   {
    "text": "twenty",
-   "start": 23.678,
-   "end": 24.06,
+   "start": 24.447,
+   "end": 24.829,
    "line": "VO-05"
   },
   {
    "text": "cents.",
-   "start": 24.06,
-   "end": 24.386,
+   "start": 24.829,
+   "end": 25.156,
    "line": "VO-05"
   },
   {
    "text": "Medicare",
-   "start": 24.486,
-   "end": 24.96,
+   "start": 25.255,
+   "end": 25.731,
    "line": "VO-06"
   },
   {
    "text": "grabs",
-   "start": 24.96,
-   "end": 25.277,
+   "start": 25.731,
+   "end": 26.047,
    "line": "VO-06"
   },
   {
    "text": "one",
-   "start": 25.277,
-   "end": 25.487,
+   "start": 26.047,
+   "end": 26.259,
    "line": "VO-06"
   },
   {
    "text": "point",
-   "start": 25.487,
-   "end": 25.804,
+   "start": 26.259,
+   "end": 26.576,
    "line": "VO-06"
   },
   {
    "text": "four",
-   "start": 25.804,
-   "end": 26.068,
+   "start": 26.576,
+   "end": 26.839,
    "line": "VO-06"
   },
   {
    "text": "five",
-   "start": 26.068,
-   "end": 26.332,
+   "start": 26.839,
+   "end": 27.103,
    "line": "VO-06"
   },
   {
    "text": "percent,",
-   "start": 26.332,
-   "end": 26.754,
+   "start": 27.103,
+   "end": 27.526,
    "line": "VO-06"
   },
   {
    "text": "another",
-   "start": 26.754,
-   "end": 27.176,
+   "start": 27.526,
+   "end": 27.948,
    "line": "VO-06"
   },
   {
    "text": "twenty-three",
-   "start": 27.176,
-   "end": 27.809,
+   "start": 27.948,
+   "end": 28.582,
    "line": "VO-06"
   },
   {
    "text": "dollars",
-   "start": 27.809,
-   "end": 28.231,
+   "start": 28.582,
+   "end": 29.004,
    "line": "VO-06"
   },
   {
    "text": "and",
-   "start": 28.231,
-   "end": 28.443,
+   "start": 29.004,
+   "end": 29.215,
    "line": "VO-06"
   },
   {
    "text": "twenty",
-   "start": 28.443,
-   "end": 28.812,
+   "start": 29.215,
+   "end": 29.584,
    "line": "VO-06"
   },
   {
    "text": "cents.",
-   "start": 28.812,
-   "end": 29.129,
+   "start": 29.584,
+   "end": 29.901,
    "line": "VO-06"
   },
   {
    "text": "Then",
-   "start": 29.228,
-   "end": 29.504,
+   "start": 30.001,
+   "end": 30.277,
    "line": "VO-07"
   },
   {
    "text": "federal",
-   "start": 29.504,
-   "end": 29.945,
+   "start": 30.277,
+   "end": 30.719,
    "line": "VO-07"
   },
   {
    "text": "income",
-   "start": 29.945,
-   "end": 30.331,
+   "start": 30.719,
+   "end": 31.106,
    "line": "VO-07"
   },
   {
    "text": "tax",
-   "start": 30.331,
-   "end": 30.552,
+   "start": 31.106,
+   "end": 31.326,
    "line": "VO-07"
   },
   {
    "text": "takes",
-   "start": 30.552,
-   "end": 30.883,
+   "start": 31.326,
+   "end": 31.657,
    "line": "VO-07"
   },
   {
    "text": "about",
-   "start": 30.883,
-   "end": 31.214,
+   "start": 31.657,
+   "end": 31.989,
    "line": "VO-07"
   },
   {
    "text": "one",
-   "start": 31.214,
-   "end": 31.434,
+   "start": 31.989,
+   "end": 32.21,
    "line": "VO-07"
   },
   {
    "text": "hundred",
-   "start": 31.434,
-   "end": 31.876,
+   "start": 32.21,
+   "end": 32.652,
    "line": "VO-07"
   },
   {
    "text": "eight",
-   "start": 31.876,
-   "end": 32.207,
+   "start": 32.652,
+   "end": 32.983,
    "line": "VO-07"
   },
   {
    "text": "dollars,",
-   "start": 32.207,
-   "end": 32.649,
+   "start": 32.983,
+   "end": 33.425,
    "line": "VO-07"
   },
   {
    "text": "and",
-   "start": 32.649,
-   "end": 32.869,
+   "start": 33.425,
+   "end": 33.646,
    "line": "VO-07"
   },
   {
    "text": "in",
-   "start": 32.869,
-   "end": 33.035,
+   "start": 33.646,
+   "end": 33.812,
    "line": "VO-07"
   },
   {
    "text": "most",
-   "start": 33.035,
-   "end": 33.311,
+   "start": 33.812,
+   "end": 34.087,
    "line": "VO-07"
   },
   {
    "text": "states,",
-   "start": 33.311,
-   "end": 33.697,
+   "start": 34.087,
+   "end": 34.473,
    "line": "VO-07"
   },
   {
    "text": "your",
-   "start": 33.697,
-   "end": 33.973,
+   "start": 34.473,
+   "end": 34.75,
    "line": "VO-07"
   },
   {
    "text": "state",
-   "start": 33.973,
-   "end": 34.304,
+   "start": 34.75,
+   "end": 35.081,
    "line": "VO-07"
   },
   {
    "text": "grabs",
-   "start": 34.304,
-   "end": 34.636,
+   "start": 35.081,
+   "end": 35.412,
    "line": "VO-07"
   },
   {
    "text": "a",
-   "start": 34.636,
-   "end": 34.746,
+   "start": 35.412,
+   "end": 35.523,
    "line": "VO-07"
   },
   {
    "text": "slice",
-   "start": 34.746,
-   "end": 35.077,
+   "start": 35.523,
+   "end": 35.855,
    "line": "VO-07"
   },
   {
    "text": "too.",
-   "start": 35.077,
-   "end": 35.297,
+   "start": 35.855,
+   "end": 36.075,
    "line": "VO-07"
   },
   {
    "text": "So",
-   "start": 35.694,
-   "end": 35.859,
+   "start": 36.473,
+   "end": 36.636,
    "line": "VO-08"
   },
   {
    "text": "it",
-   "start": 35.859,
-   "end": 36.024,
+   "start": 36.636,
+   "end": 36.8,
    "line": "VO-08"
   },
   {
    "text": "feels",
-   "start": 36.024,
-   "end": 36.352,
+   "start": 36.8,
+   "end": 37.126,
    "line": "VO-08"
   },
   {
    "text": "like",
-   "start": 36.352,
-   "end": 36.628,
+   "start": 37.126,
+   "end": 37.399,
    "line": "VO-08"
   },
   {
    "text": "you",
-   "start": 36.628,
-   "end": 36.847,
+   "start": 37.399,
+   "end": 37.617,
    "line": "VO-08"
   },
   {
    "text": "just",
-   "start": 36.847,
-   "end": 37.121,
+   "start": 37.617,
+   "end": 37.89,
    "line": "VO-08"
   },
   {
    "text": "got",
-   "start": 37.121,
-   "end": 37.34,
+   "start": 37.89,
+   "end": 38.107,
    "line": "VO-08"
   },
   {
    "text": "robbed,",
-   "start": 37.34,
-   "end": 37.724,
+   "start": 38.107,
+   "end": 38.489,
    "line": "VO-08"
   },
   {
    "text": "but",
-   "start": 37.724,
-   "end": 37.943,
+   "start": 38.489,
+   "end": 38.706,
    "line": "VO-08"
   },
   {
    "text": "those",
-   "start": 37.943,
-   "end": 38.273,
+   "start": 38.706,
+   "end": 39.033,
    "line": "VO-08"
   },
   {
    "text": "first",
-   "start": 38.273,
-   "end": 38.602,
+   "start": 39.033,
+   "end": 39.361,
    "line": "VO-08"
   },
   {
    "text": "two",
-   "start": 38.602,
-   "end": 38.821,
+   "start": 39.361,
+   "end": 39.579,
    "line": "VO-08"
   },
   {
    "text": "slices",
-   "start": 38.821,
-   "end": 39.205,
+   "start": 39.579,
+   "end": 39.96,
    "line": "VO-08"
   },
   {
-   "text": "are",
-   "start": 39.205,
-   "end": 39.425,
-   "line": "VO-08"
-  },
-  {
-   "text": "how",
-   "start": 39.425,
-   "end": 39.644,
-   "line": "VO-08"
-  },
-  {
-   "text": "you",
-   "start": 39.644,
-   "end": 39.864,
-   "line": "VO-08"
-  },
-  {
-   "text": "earn",
-   "start": 39.864,
-   "end": 40.138,
-   "line": "VO-08"
-  },
-  {
-   "text": "the",
-   "start": 40.138,
-   "end": 40.357,
-   "line": "VO-08"
-  },
-  {
-   "text": "right",
-   "start": 40.357,
-   "end": 40.687,
-   "line": "VO-08"
-  },
-  {
-   "text": "to",
-   "start": 40.687,
-   "end": 40.851,
-   "line": "VO-08"
-  },
-  {
-   "text": "collect",
-   "start": 40.851,
-   "end": 41.289,
+   "text": "fund",
+   "start": 39.96,
+   "end": 40.233,
    "line": "VO-08"
   },
   {
    "text": "Social",
-   "start": 41.289,
-   "end": 41.674,
+   "start": 40.233,
+   "end": 40.614,
    "line": "VO-08"
   },
   {
    "text": "Security",
-   "start": 41.674,
-   "end": 42.167,
+   "start": 40.614,
+   "end": 41.104,
    "line": "VO-08"
   },
   {
    "text": "and",
-   "start": 42.167,
-   "end": 42.387,
+   "start": 41.104,
+   "end": 41.323,
    "line": "VO-08"
   },
   {
-   "text": "Medicare",
-   "start": 42.387,
-   "end": 42.881,
+   "text": "Medicare,",
+   "start": 41.323,
+   "end": 41.813,
+   "line": "VO-08"
+  },
+  {
+   "text": "and",
+   "start": 41.813,
+   "end": 42.031,
+   "line": "VO-08"
+  },
+  {
+   "text": "your",
+   "start": 42.031,
+   "end": 42.303,
+   "line": "VO-08"
+  },
+  {
+   "text": "work",
+   "start": 42.303,
+   "end": 42.576,
+   "line": "VO-08"
+  },
+  {
+   "text": "history",
+   "start": 42.576,
+   "end": 43.012,
+   "line": "VO-08"
+  },
+  {
+   "text": "helps",
+   "start": 43.012,
+   "end": 43.339,
+   "line": "VO-08"
+  },
+  {
+   "text": "decide",
+   "start": 43.339,
+   "end": 43.72,
+   "line": "VO-08"
+  },
+  {
+   "text": "what",
+   "start": 43.72,
+   "end": 43.993,
+   "line": "VO-08"
+  },
+  {
+   "text": "you",
+   "start": 43.993,
+   "end": 44.21,
+   "line": "VO-08"
+  },
+  {
+   "text": "qualify",
+   "start": 44.21,
+   "end": 44.647,
+   "line": "VO-08"
+  },
+  {
+   "text": "for",
+   "start": 44.647,
+   "end": 44.865,
    "line": "VO-08"
   },
   {
    "text": "when",
-   "start": 42.881,
-   "end": 43.155,
+   "start": 44.865,
+   "end": 45.137,
    "line": "VO-08"
   },
   {
    "text": "you're",
-   "start": 43.155,
-   "end": 43.484,
+   "start": 45.137,
+   "end": 45.464,
    "line": "VO-08"
   },
   {
    "text": "older.",
-   "start": 43.484,
-   "end": 43.814,
+   "start": 45.464,
+   "end": 45.791,
    "line": "VO-08"
   },
   {
    "text": "The",
-   "start": 43.913,
-   "end": 44.143,
+   "start": 45.891,
+   "end": 46.13,
+   "line": "VO-09"
+  },
+  {
+   "text": "income",
+   "start": 46.13,
+   "end": 46.549,
    "line": "VO-09"
   },
   {
    "text": "tax",
-   "start": 44.143,
-   "end": 44.375,
+   "start": 46.549,
+   "end": 46.789,
    "line": "VO-09"
   },
   {
    "text": "slice",
-   "start": 44.375,
-   "end": 44.721,
+   "start": 46.789,
+   "end": 47.148,
    "line": "VO-09"
   },
   {
    "text": "is",
-   "start": 44.721,
-   "end": 44.895,
+   "start": 47.148,
+   "end": 47.327,
    "line": "VO-09"
   },
   {
-   "text": "only",
-   "start": 44.895,
-   "end": 45.184,
+   "text": "just",
+   "start": 47.327,
+   "end": 47.628,
    "line": "VO-09"
   },
   {
    "text": "an",
-   "start": 45.184,
-   "end": 45.358,
+   "start": 47.628,
+   "end": 47.806,
    "line": "VO-09"
   },
   {
    "text": "estimate,",
-   "start": 45.358,
-   "end": 45.877,
+   "start": 47.806,
+   "end": 48.346,
    "line": "VO-09"
   },
   {
    "text": "and",
-   "start": 45.877,
-   "end": 46.108,
+   "start": 48.346,
+   "end": 48.585,
    "line": "VO-09"
   },
   {
    "text": "if",
-   "start": 46.108,
-   "end": 46.282,
+   "start": 48.585,
+   "end": 48.765,
    "line": "VO-09"
   },
   {
-   "text": "too",
-   "start": 46.282,
-   "end": 46.512,
+   "text": "more",
+   "start": 48.765,
+   "end": 49.064,
    "line": "VO-09"
   },
   {
-   "text": "much",
-   "start": 46.512,
-   "end": 46.801,
+   "text": "was",
+   "start": 49.064,
+   "end": 49.304,
    "line": "VO-09"
   },
   {
-   "text": "gets",
-   "start": 46.801,
-   "end": 47.09,
+   "text": "taken",
+   "start": 49.304,
+   "end": 49.664,
    "line": "VO-09"
   },
   {
-   "text": "taken,",
-   "start": 47.09,
-   "end": 47.437,
+   "text": "than",
+   "start": 49.664,
+   "end": 49.963,
    "line": "VO-09"
   },
   {
    "text": "you",
-   "start": 47.437,
-   "end": 47.668,
+   "start": 49.963,
+   "end": 50.202,
+   "line": "VO-09"
+  },
+  {
+   "text": "owe,",
+   "start": 50.202,
+   "end": 50.442,
+   "line": "VO-09"
+  },
+  {
+   "text": "you",
+   "start": 50.442,
+   "end": 50.681,
    "line": "VO-09"
   },
   {
    "text": "get",
-   "start": 47.668,
-   "end": 47.9,
+   "start": 50.681,
+   "end": 50.921,
    "line": "VO-09"
   },
   {
    "text": "the",
-   "start": 47.9,
-   "end": 48.131,
+   "start": 50.921,
+   "end": 51.16,
    "line": "VO-09"
   },
   {
-   "text": "difference",
-   "start": 48.131,
-   "end": 48.767,
+   "text": "extra",
+   "start": 51.16,
+   "end": 51.52,
    "line": "VO-09"
   },
   {
    "text": "back",
-   "start": 48.767,
-   "end": 49.055,
+   "start": 51.52,
+   "end": 51.819,
    "line": "VO-09"
   },
   {
-   "text": "as",
-   "start": 49.055,
-   "end": 49.228,
+   "text": "after",
+   "start": 51.819,
+   "end": 52.179,
    "line": "VO-09"
   },
   {
-   "text": "a",
-   "start": 49.228,
-   "end": 49.344,
+   "text": "you",
+   "start": 52.179,
+   "end": 52.418,
    "line": "VO-09"
   },
   {
-   "text": "refund.",
-   "start": 49.344,
-   "end": 49.749,
+   "text": "file.",
+   "start": 52.418,
+   "end": 52.717,
    "line": "VO-09"
   },
   {
    "text": "And",
-   "start": 50.086,
-   "end": 50.301,
+   "start": 53.055,
+   "end": 53.27,
    "line": "VO-10"
   },
   {
    "text": "here's",
-   "start": 50.301,
-   "end": 50.621,
+   "start": 53.27,
+   "end": 53.591,
    "line": "VO-10"
   },
   {
    "text": "the",
-   "start": 50.621,
-   "end": 50.836,
+   "start": 53.591,
+   "end": 53.805,
    "line": "VO-10"
   },
   {
    "text": "part",
-   "start": 50.836,
-   "end": 51.104,
+   "start": 53.805,
+   "end": 54.073,
    "line": "VO-10"
   },
   {
    "text": "nobody",
-   "start": 51.104,
-   "end": 51.478,
+   "start": 54.073,
+   "end": 54.448,
    "line": "VO-10"
   },
   {
    "text": "tells",
-   "start": 51.478,
-   "end": 51.8,
+   "start": 54.448,
+   "end": 54.769,
    "line": "VO-10"
   },
   {
    "text": "you,",
-   "start": 51.8,
-   "end": 52.014,
+   "start": 54.769,
+   "end": 54.984,
    "line": "VO-10"
   },
   {
    "text": "because",
-   "start": 52.014,
-   "end": 52.442,
+   "start": 54.984,
+   "end": 55.413,
    "line": "VO-10"
   },
   {
    "text": "your",
-   "start": 52.442,
-   "end": 52.71,
+   "start": 55.413,
+   "end": 55.68,
    "line": "VO-10"
   },
   {
    "text": "boss",
-   "start": 52.71,
-   "end": 52.978,
+   "start": 55.68,
+   "end": 55.948,
    "line": "VO-10"
   },
   {
    "text": "pays",
-   "start": 52.978,
-   "end": 53.245,
+   "start": 55.948,
+   "end": 56.216,
    "line": "VO-10"
   },
   {
    "text": "another",
-   "start": 53.245,
-   "end": 53.674,
+   "start": 56.216,
+   "end": 56.645,
    "line": "VO-10"
   },
   {
    "text": "one",
-   "start": 53.674,
-   "end": 53.888,
+   "start": 56.645,
+   "end": 56.859,
    "line": "VO-10"
   },
   {
    "text": "hundred",
-   "start": 53.888,
-   "end": 54.316,
+   "start": 56.859,
+   "end": 57.288,
    "line": "VO-10"
   },
   {
    "text": "twenty-two",
-   "start": 54.316,
-   "end": 54.851,
+   "start": 57.288,
+   "end": 57.824,
    "line": "VO-10"
   },
   {
    "text": "dollars",
-   "start": 54.851,
-   "end": 55.279,
+   "start": 57.824,
+   "end": 58.252,
    "line": "VO-10"
   },
   {
    "text": "and",
-   "start": 55.279,
-   "end": 55.494,
+   "start": 58.252,
+   "end": 58.466,
    "line": "VO-10"
   },
   {
    "text": "forty",
-   "start": 55.494,
-   "end": 55.816,
+   "start": 58.466,
+   "end": 58.787,
    "line": "VO-10"
   },
   {
    "text": "cents",
-   "start": 55.816,
-   "end": 56.136,
+   "start": 58.787,
+   "end": 59.109,
    "line": "VO-10"
   },
   {
    "text": "on",
-   "start": 56.136,
-   "end": 56.297,
+   "start": 59.109,
+   "end": 59.27,
    "line": "VO-10"
   },
   {
    "text": "top,",
-   "start": 56.297,
-   "end": 56.512,
+   "start": 59.27,
+   "end": 59.484,
    "line": "VO-10"
   },
   {
    "text": "a",
-   "start": 56.512,
-   "end": 56.618,
+   "start": 59.484,
+   "end": 59.591,
    "line": "VO-10"
   },
   {
    "text": "matching",
-   "start": 56.618,
-   "end": 57.1,
+   "start": 59.591,
+   "end": 60.074,
    "line": "VO-10"
   },
   {
    "text": "slice",
-   "start": 57.1,
-   "end": 57.421,
+   "start": 60.074,
+   "end": 60.395,
    "line": "VO-10"
   },
   {
    "text": "you",
-   "start": 57.421,
-   "end": 57.636,
+   "start": 60.395,
+   "end": 60.61,
    "line": "VO-10"
   },
   {
    "text": "never",
-   "start": 57.636,
-   "end": 57.956,
+   "start": 60.61,
+   "end": 60.931,
    "line": "VO-10"
   },
   {
    "text": "even",
-   "start": 57.956,
-   "end": 58.225,
+   "start": 60.931,
+   "end": 61.199,
    "line": "VO-10"
   },
   {
    "text": "see.",
-   "start": 58.225,
-   "end": 58.439,
+   "start": 61.199,
+   "end": 61.413,
    "line": "VO-10"
   },
   {
    "text": "You",
-   "start": 58.836,
-   "end": 59.062,
+   "start": 61.81,
+   "end": 62.037,
    "line": "VO-11"
   },
   {
    "text": "thought",
-   "start": 59.062,
-   "end": 59.512,
+   "start": 62.037,
+   "end": 62.488,
    "line": "VO-11"
   },
   {
    "text": "your",
-   "start": 59.512,
-   "end": 59.795,
+   "start": 62.488,
+   "end": 62.77,
    "line": "VO-11"
   },
   {
    "text": "pizza",
-   "start": 59.795,
-   "end": 60.133,
+   "start": 62.77,
+   "end": 63.109,
    "line": "VO-11"
   },
   {
    "text": "got",
-   "start": 60.133,
-   "end": 60.359,
+   "start": 63.109,
+   "end": 63.335,
    "line": "VO-11"
   },
   {
    "text": "smaller,",
-   "start": 60.359,
-   "end": 60.81,
+   "start": 63.335,
+   "end": 63.787,
    "line": "VO-11"
   },
   {
    "text": "but",
-   "start": 60.81,
-   "end": 61.036,
+   "start": 63.787,
+   "end": 64.012,
    "line": "VO-11"
   },
   {
    "text": "it",
-   "start": 61.036,
-   "end": 61.205,
+   "start": 64.012,
+   "end": 64.182,
    "line": "VO-11"
   },
   {
    "text": "was",
-   "start": 61.205,
-   "end": 61.431,
+   "start": 64.182,
+   "end": 64.408,
    "line": "VO-11"
   },
   {
    "text": "actually",
-   "start": 61.431,
-   "end": 61.939,
+   "start": 64.408,
+   "end": 64.915,
    "line": "VO-11"
   },
   {
    "text": "bigger",
-   "start": 61.939,
-   "end": 62.333,
+   "start": 64.915,
+   "end": 65.311,
    "line": "VO-11"
   },
   {
    "text": "than",
-   "start": 62.333,
-   "end": 62.615,
+   "start": 65.311,
+   "end": 65.593,
    "line": "VO-11"
   },
   {
    "text": "you",
-   "start": 62.615,
-   "end": 62.842,
+   "start": 65.593,
+   "end": 65.819,
    "line": "VO-11"
   },
   {
    "text": "ever",
-   "start": 62.842,
-   "end": 63.124,
+   "start": 65.819,
+   "end": 66.102,
    "line": "VO-11"
   },
   {
    "text": "saw.",
-   "start": 63.124,
-   "end": 63.349,
+   "start": 66.102,
+   "end": 66.327,
    "line": "VO-11"
   }
  ]
