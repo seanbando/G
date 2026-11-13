@@ -127,7 +127,13 @@ def main(src, cue_file, out, audio=None):
                             "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out],
                            stdin=subprocess.PIPE)
     size, i = w * h * 3, 0
-    while True:
+    # With a replacement track, stop at its end (the video may run longer).
+    last = None
+    if audio:
+        dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration",
+                                    "-of", "csv=p=0", audio], capture_output=True, text=True).stdout)
+        last = int(dur * fps)
+    while last is None or i < last:
         buf = dec.stdout.read(size)
         if len(buf) < size:
             break
@@ -136,6 +142,7 @@ def main(src, cue_file, out, audio=None):
         i += 1
     enc.stdin.close()
     enc.wait()
+    dec.kill()
     dec.wait()
     print(f"{out}: {i} frames, {len(cues)} cues")
 

@@ -1,0 +1,15 @@
+# Transition sounds for the Elon edit (tools/build_sfx.py); sounds from audio/transition-sfx.
+# time   name    loudness  seconds  prompt
+2.11  whipswish  -24  0.6  Quick sharp whip swish, short air swipe
+4.21  whipswish
+7.45  zoomwhoosh  -24  0.6  Fast cinematic whoosh rushing forward, airy, ends abruptly
+9.48  whipswish
+16.28  zoomwhoosh
+17.61  whipswish
+22.01  whipswish
+25.15  whipswish
+27.35  zoomwhoosh
+31.81  whipswish
+37.35  zoomwhoosh
+39.65  zoomwhoosh
+43.65  whipswish

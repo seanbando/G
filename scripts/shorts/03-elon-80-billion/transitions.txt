@@ -1,0 +1,38 @@
+# Edit cues for the Elon Golpo render (tools/edit_short.py). Times on the 50 s fast track.
+0.00   push 2.3 1.06      # opening never sits still
+1.44   punch              # "$80 billion"
+2.33   whip left          # into the counter
+4.43   whip right         # into the cart
+7.01   shake 0.2          # "cent" (third X)
+7.67   zoomthru           # smash into "Wait"
+9.70   whip left          # into the vault
+10.75  punch              # "bank"
+14.57  punch              # "stacked"
+16.50  zoomthru           # into "Breaking tonight"
+17.83  whip right         # into the anchor
+19.84  punch              # "11%"
+20.20  push 21.6 1.08     # arrows were holding still
+21.74  shake 0.25         # "8%" impact
+22.23  whip left          # into the tower
+23.98  shake 0.2          # "shrinks" crumble
+25.37  whip right         # into Elon hugging his shares
+27.57  zoomthru           # into "paper wealth"
+29.00  push 31.0 1.07     # register was holding still
+31.13  punch              # "sell" (ka-ching)
+32.03  whip left          # into the calendar
+35.10  punch              # "$113 billion"
+35.40  push 37.4 1.07     # number was holding still
+37.57  zoomthru           # the fake-out reveal: still the richest
+38.96  punch              # "Earth"
+39.87  zoomthru           # callback
+42.54  shake 0.25         # "80 billion" boom
+43.87  whip right         # into the young guy
+48.99  punch              # "panic"
+# Second pass: gentle motion on the remaining quiet seconds
+3.00   push 4.4 1.05      # Elon finished drawing
+12.80  push 14.5 1.05     # vault before the tower
+26.00  push 27.5 1.06     # Elon hugging his shares
+26.75  punch              # "share"
+33.00  push 35.0 1.06     # calendar flip
+40.85  punch              # "dollar" (callback)
+45.00  push 47.3 1.07     # young guy staring at his phone
