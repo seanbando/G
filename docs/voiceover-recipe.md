@@ -98,3 +98,12 @@ The creator compared the approved Nvidia-style mix with a punchier, faster versi
 - Build the sound effects against the punched track. If the cues were timed on the unpunched track, divide each time by 1.15.
 - Render the Golpo video from the punched track, so drawings follow the faster pace.
 - Next step to test: re-recording with a more energetic delivery (lower stability, higher style) to get closer to Ricks' 205 to 220 words a minute.
+
+## Update (2026-11-13): emotion tags on Eleven v4
+
+Tested on the creator's cloned voice: emotion tags in square brackets are not spoken, and they change the delivery. With `[excited]` the payoff line came out about 10% faster and 3 dB more projected before any processing.
+
+- **Model stays `eleven_v4` (style D).** Eleven v3 sounded bad with this voice; never use it.
+- **Never use `[shouting]`**: far too much.
+- Use mostly `[excited]`; for the fake-out beat a calmer tag such as `[serious]`; for the lesson or callback `[confident]`. Put the tag at the start of the line.
+- Tags go in the script line itself, so `make_voiceover.py` and `generate_voiceovers.py` pass them through unchanged; keep them out of captions.
