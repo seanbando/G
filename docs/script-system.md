@@ -244,6 +244,8 @@ These come from how the channel's videos are made and don't change the rules abo
 
 9. **Shorts format (creator, 2026-11-13):** shorts follow `docs/money-mystery-format.md`. For shorts, this replaces the Part 2 and Part 5 intro rule: open with the money paradox (a fact that seems impossible), not "This is…" or "These are…". Long videos keep the direct "This is…" intro.
 
+10. **On-screen numbers:** money with $ in front ($406,000), percentages with % (10%), digits only, in drawings, captions and covers. Details in `docs/money-mystery-format.md`.
+
 ## Rule conflicts to decide (open)
 
 These rules pull against each other or against earlier decisions. Settle each once and record the answer here.

@@ -35,3 +35,16 @@ Re-hook every 8 to 10 seconds. One concept per short. Every line names one drawa
 5. Edit with `tools/edit_short.py`, sound effects with `tools/build_sfx.py`, frozen-spot check, captions and cover.
 
 After each short has been up 24 to 48 hours, compare its YouTube retention graph against these beats and adjust.
+
+## On-screen numbers rule (creator, 2026-11-13)
+
+Every amount of money or percentage that appears on screen (drawings, labels, captions, covers) is written with digits and its symbol:
+
+- Money always has **$ in front**: $300, $12,000, $406,000, $80 billion, $113 billion. Large round amounts may use a word for the unit ("$80 billion"), never "eighty billion dollars".
+- Percentages always end in **%**: 9%, 4%, 10%, 11%.
+- Never spell numbers out on screen. (The voice-over script still writes numbers in words so the voice reads them correctly; this rule is only for what viewers see.)
+
+How it is applied:
+- **Golpo:** every `video_instructions` includes: "Write every amount on screen with digits: money with $ in front (e.g. $406,000) and percentages with % (e.g. 10%); never spell numbers out." Scene descriptions quote amounts in that form.
+- **Captions:** after the word timestamps, spelled-out numbers are converted to digits with $ or % before the .srt is written.
+- **Frame check:** the frame-by-frame review of each render also checks that every drawn amount follows this rule; a wrong one is patched or flagged.
