@@ -1,5 +1,7 @@
 # Voiceover Recipe (approved by the creator)
 
+> **Spending rule:** nothing in this recipe that costs ElevenLabs or Golpo credits runs without the creator's green light for that specific item. See the top of `docs/script-system.md`.
+
 The creator called the Nvidia final voiceover (`audio/nvidia-300-billion-final-sfx/preview-mix.mp3`, 59.5 s) "perfect". Make every short's voiceover this way unless the creator asks otherwise. Its files are in `scripts/shorts/02-nvidia-300-billion/` (`script-final.md`, `speeds-final.txt`, `tempo-final.txt`, `sfx-final.txt`).
 
 ## Voices

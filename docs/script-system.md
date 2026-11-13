@@ -1,5 +1,12 @@
 # CashleyFinance Script System (Research → Script → Humanization)
 
+## Spending rule (creator, 2026-11-13): highest priority
+
+**Never spend credits without the creator's explicit green light for that specific item.** This covers Golpo renders, ElevenLabs (voices, re-recordings, sound effects, speech-to-text), vidIQ and any other paid service. Before asking, say what would be generated and roughly what it costs, then wait. Approval for one item does not carry over to the next.
+
+Free work can go ahead without asking: writing and fact-checking scripts, storyboards, editing videos the creator sends (transitions, mixing, captions, covers, frame checks), and checking the status of renders already started.
+
+
 The creator's three-part system for every script. Parts are run in order: research first, then the script from that research only, then the humanization pass. The text below is saved as provided; replace the bracketed topic, length and audience for each video.
 
 ---
