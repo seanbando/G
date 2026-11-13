@@ -1,12 +1,12 @@
-Editorial marker whiteboard: white background, black outlines, forest green, red only for money taken. One big drawing per scene, new scene every line, always moving, bottom fifth clear. YOU = the man in the uploaded reference sheet: messy black hair, black square glasses, black suit, white shirt, black tie, same face in every scene; never change his look. Only these words may appear: $20/hour, 80 hours, $1,600, $1,369, -$230, Social Security, 6.2%, $99.20, Medicare, 1.45%, $23.20, Federal tax, $108, State, Refund, Boss, +$122.40, $1,722.40.
-1 hired: YOU at work, "$20/hour" tag, clock spinning to "80 hours", paycheck "$1,600".
-2 opens it: YOU opens an envelope, "$1,369" in red.
-3 who took it: YOU shocked, eyes popping, "-$230" in red.
-4 pizza: a big pizza box "$1,600" in the centre, three hands reach in from the edges.
-5 Social Security: same pizza, a hand pulls a slice "Social Security 6.2% $99.20".
-6 Medicare: same pizza, a second slice "Medicare 1.45% $23.20".
-7 federal: a bigger third slice "Federal tax $108", a small hand "State".
-8 robbed, then the slices: the three hands wear robber masks; ON THE WORDS "but those first two slices" the masks vanish and the Social Security and Medicare slices float off the pizza to an older YOU (grey hair, same glasses and suit), who holds them as "Social Security" and "Medicare" cards. Do not keep the masks after "robbed".
-9 refund: a tax form, an arrow carries one slice back to YOU, "Refund".
-10 boss: an older bald man in a grey suit with a mustache ("Boss") secretly adds a slice "+$122.40" behind YOU's back.
-11 bigger: the pizza grows to "$1,722.40" while YOU looks at his small plate "$1,369".
+Editorial marker whiteboard: white background, black outlines, forest green, red only for money taken. One big drawing per scene, new scene every line, always moving, bottom fifth clear. YOU = the man in the uploaded reference sheet: messy black hair, black square glasses, black suit, white shirt, black tie; never change his look. Only these words may appear: Gross pay $1,600, $20/hour, 80 hours, 2 weeks, Take-home pay $1,369.60, -$230.40, Social Security 6.2% $99.20, Medicare 1.45% $23.20, Federal withholding $108, State, Refund, Boss, Employer pays +$122.40, Employer cost $1,722.40, Your take-home $1,369.60.
+1 hired: YOU at a desk, "$20/hour" tag, a calendar "2 weeks" and clock "80 hours", a paycheck "Gross pay $1,600".
+2 opens it: YOU opens an envelope, big red "Take-home pay $1,369.60".
+3 who took it: YOU shocked, eyes popping, "-$230.40" in red.
+4 pizza: a big pizza box "Gross pay $1,600" in the centre, three hands reach in from the edges.
+5 same pizza, a hand pulls a slice "Social Security 6.2% $99.20".
+6 same pizza, a second slice "Medicare 1.45% $23.20".
+7 a third slice "Federal withholding $108", a small hand "State".
+8 the three hands in robber masks; ON "but those first two slices" the masks vanish and the two slices float into a building labelled "Social Security" and a clinic labelled "Medicare"; no new faces.
+9 a tax form, an arrow carries the federal slice back to YOU, "Refund".
+10 boss: YOU and the Boss (older bald man, grey suit, mustache) side by side and both fully drawn; the Boss hands over a slice "Employer pays +$122.40".
+11 the pizza grows, labelled "Employer cost $1,722.40"; YOU's plate labelled "Your take-home $1,369.60".

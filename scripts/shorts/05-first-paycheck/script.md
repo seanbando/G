@@ -1,8 +1,8 @@
 You Just Got Your First Paycheck
 
-You just got hired at twenty dollars an hour, you worked eighty hours, and your first paycheck should be sixteen hundred dollars.
+You just got hired at twenty dollars an hour, you worked eighty hours over two weeks, and your first paycheck should be sixteen hundred dollars.
 
-Then you open it, and it says about thirteen hundred sixty-nine.
+Then you open it, and it says about thirteen hundred seventy.
 
 YOU: Wait, who took two hundred thirty dollars from my check?
 
@@ -16,9 +16,9 @@ Then federal income tax takes about one hundred eight dollars, and in most state
 
 [PAUSE: 0.5 seconds. The fake-out.]
 
-So it feels like you just got robbed, but those first two slices are how you earn the right to collect Social Security and Medicare when you're older.
+So it feels like you just got robbed, but those first two slices fund Social Security and Medicare, and your work history helps decide what you qualify for when you're older.
 
-The tax slice is only an estimate, and if too much gets taken, you get the difference back as a refund.
+The income tax slice is just an estimate, and if more was taken than you owe, you get the extra back after you file.
 
 [PAUSE: 0.4 seconds]
 
