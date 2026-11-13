@@ -8,7 +8,7 @@ The first hid it under his mattress, and at sixty-two, he had forty-eight thousa
 
 The second used a savings account paying four percent, and ended with about one hundred eighteen thousand.
 
-The third waited until thirty-two, then invested in an index fund growing about ten percent a year, for thirty years, and ended with about two hundred twenty-six thousand.
+The third waited until thirty-two, then invested in an index fund averaging about ten percent a year, for thirty years, and ended with about two hundred twenty-six thousand.
 
 [PAUSE: 0.5 seconds]
 
@@ -18,7 +18,7 @@ The fourth started that same index fund at twenty-two, and after ten years, he q
 
 He put in just twelve thousand dollars, and at sixty-two, he had about four hundred six thousand, more than anyone.
 
-His money had ten extra years, and the growth kept growing on itself, which is called compound interest.
+His money had ten extra years, and his gains kept earning their own gains, which is called compounding.
 
 [PAUSE: 0.5 seconds. Callback to the four friends.]
 

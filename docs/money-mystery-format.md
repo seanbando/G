@@ -36,7 +36,7 @@ Re-hook every 8 to 10 seconds. One concept per short. Every line names one drawa
 
 After each short has been up 24 to 48 hours, compare its YouTube retention graph against these beats and adjust.
 
-## On-screen numbers rule (creator, 2026-11-13)
+## On-screen numbers rule (creator, 2026-11-13; all videos, long and short)
 
 Every amount of money or percentage that appears on screen (drawings, labels, captions, covers) is written with digits and its symbol:
 

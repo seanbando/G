@@ -244,7 +244,24 @@ These come from how the channel's videos are made and don't change the rules abo
 
 9. **Shorts format (creator, 2026-11-13):** shorts follow `docs/money-mystery-format.md`. For shorts, this replaces the Part 2 and Part 5 intro rule: open with the money paradox (a fact that seems impossible), not "This is…" or "These are…". Long videos keep the direct "This is…" intro.
 
-10. **On-screen numbers:** money with $ in front ($406,000), percentages with % (10%), digits only, in drawings, captions and covers. Details in `docs/money-mystery-format.md`.
+10. **On-screen numbers (all videos, long and short):** money with $ in front ($406,000), percentages with % (10%), digits only, in drawings, captions, thumbnails and covers. Details in `docs/money-mystery-format.md`.
+11. **Nerd-proof, but for dummies (all videos, long and short; creator, 2026-11-13):** every claim must survive a finance expert's correction while staying simple. Use the correct term and explain it in plain words the first time ("compounding, which means your gains start earning their own gains"). Every script gets a fact-check table before the creator sees it: each claim marked verified (with source or calculation) or simplified (with why it's fair), plus the nerd corrections below. `tools/check_script.py` flags the common ones.
+
+### Nerd-correction list
+
+| Don't say | Say instead (still simple) | Why a nerd would object |
+|---|---|---|
+| "compound interest" for stocks or index funds | "compounding" / "compound growth": your gains earn their own gains | Stocks don't pay interest; interest is for savings and bonds |
+| "grows 10% a year" | "averages about 10% a year" | Returns swing year to year; 10% is a long-run average |
+| a return figure with no time frame | "the S&P 500's long-run average, before inflation" | Nominal vs. real; the period matters |
+| "guaranteed", "risk-free", "can't lose", "always goes up" | "historically", "on average", "never guaranteed" | Nothing in investing is guaranteed |
+| "every / all / no one" (e.g. "every AI runs on Nvidia") | "most", "nearly every", "the biggest" | One counterexample breaks the claim |
+| "lost $80 billion" with no context | "his paper fortune fell $80 billion" | A drop in share price isn't cash lost until sold |
+| "worth $X" for a company | "valued at $X" / "market value" | Market cap isn't cash in a bank |
+| a future amount as if in today's money | add "before inflation" once, or put it in the description | $406,000 in 40 years buys less than today |
+| "the stock market" when the data is the S&P 500 | "the S&P 500" or "big US stocks" | The market has many indexes |
+| a savings rate as if permanent | "a savings account paying 4%" (an example rate) | Rates change over decades |
+
 
 ## Rule conflicts to decide (open)
 

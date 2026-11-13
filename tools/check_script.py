@@ -32,6 +32,15 @@ BANNED = {
     "overused descriptor": ["plethora", "myriad", "paramount", "invaluable", "remarkable", "significant",
                             "substantial", "profound", "essential", "vital"],
 }
+# Phrases a finance expert would correct (docs/script-system.md, nerd-correction list).
+NERD = [
+    (r"\bcompound interest\b", "stocks and funds don't pay interest: say 'compounding' or 'compound growth' unless it's a savings account or bond"),
+    (r"\bgrow(s|ing)? (about |roughly )?[a-z-]+ percent a year\b", "returns aren't steady: say 'averaging about ... percent a year'"),
+    (r"\bguarantee(d)?\b(?<!never guaranteed)", "check it says returns are never guaranteed, not the opposite"),
+    (r"\brisk[- ]free\b|\bcan't lose\b|\balways goes up\b", "nothing in investing is risk-free or certain"),
+    (r"\b(every|all) (ai|a-i|stock|company|companies|investor|investors)\b", "absolute claim: one counterexample breaks it, say 'most' or 'nearly every'"),
+    (r"\bworth (about |almost |over )?[a-z-]+ (trillion|billion)\b", "for a company say 'valued at' or 'market value'"),
+]
 WEAK_STARTS = ("But", "And", "So", "Then", "After that")
 GENERIC_VERBS = ["was", "were", "had", "made", "got", "went", "said"]
 
@@ -75,6 +84,11 @@ def main(path):
             problems.append(f"{tag}: number or symbol not written out for the voice: \"{text[:60]}\"")
 
     text = " ".join(l[2] for l in lines)
+    for pat, why in NERD:
+        for m in re.finditer(pat, text, re.I):
+            if m.group(0).lower() == "guaranteed" and re.search(r"never guaranteed|not guaranteed", text, re.I):
+                continue
+            notes.append(f"nerd check: \"{m.group(0)}\": {why}")
     for kind, phrases in BANNED.items():
         for p in phrases:
             n = len(re.findall(r"\b" + re.escape(p) + r"\b", text, re.I))
