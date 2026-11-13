@@ -13,6 +13,10 @@ Cue lines ("#" starts a comment):
     <time> reframe <0|1|2>     jump to a slightly different framing until the next reframe
                                (0 = full frame, 1 = 7% in, upper left, 2 = 10% in, lower right),
                                like a quick cut; tools/auto_punch.py writes these
+    <time> focus <end> <zoom> <x> <y>
+                               hold a zoom on one spot (x, y as fractions of the frame,
+                               0.5 0.5 = centre) until <end>; use it to frame out
+                               something the render got wrong
     <time> card <seconds> <red|green|black> <text>
                                full-screen number card: the frame dims and blurs, the text
                                slams in big in a marker font with a small shake, e.g.
@@ -101,6 +105,12 @@ def state(t, cues):
         elif kind == "punch" and 0 <= u < 0.75:
             k = ease(u / 0.1) if u < 0.1 else 1 - ease((u - 0.1) / 0.65)
             zoom *= 1 + 0.12 * k
+        elif kind == "focus":
+            end, z, fx, fy = (float(a) for a in args[:4])
+            if c <= t <= end:
+                zoom *= z
+                dx += 0.5 - fx
+                dy += 0.5 - fy
         elif kind == "push":
             end, z = float(args[0]), float(args[1])
             if c <= t <= end:

@@ -1,0 +1,49 @@
+# Edit cues for the paycheck Golpo render (job fa3523e4), times on the 63.4 s track.
+6.87   zoomthru          # into the envelope: $1,369
+10.42  zoomthru          # smash into the shocked guy
+13.65  zoomthru          # into the pizza
+20.03  whip left         # Social Security slice
+24.49  whip right        # Medicare slice
+29.23  whip left         # federal slice
+35.69  zoomthru          # "So it feels like you just got robbed"
+37.34  card 1.5 red Robbed?   # Golpo left this nearly blank
+40.40  focus 43.85 1.8 0.42 0.80   # frame out the older man's face, keep the cards
+43.91  whip right        # refund
+50.09  zoomthru          # boss twist
+53.67  card 1.5 green +$122.40   # the boss slice was barely drawn
+58.84  zoomthru          # callback: the bigger pizza
+# auto punches and reframes (tools/auto_punch.py), filtered around transitions, cards and the focus
+1.17  punch
+2.98  punch
+5.49  punch
+8.79  punch
+11.20  punch
+15.13  punch
+16.93  punch
+21.23  punch
+21.77  punch
+22.43  punch
+23.68  punch
+25.28  punch
+25.80  punch
+27.18  punch
+28.44  punch
+31.21  punch
+55.49  punch
+4.00  reframe 0
+7.20  reframe 1
+12.00  reframe 0
+18.40  reframe 2
+29.60  reframe 1
+32.80  reframe 2
+34.40  reframe 0
+36.00  reframe 1
+45.60  reframe 0
+47.20  reframe 1
+48.80  reframe 2
+50.40  reframe 0
+52.00  reframe 1
+56.80  reframe 2
+58.40  reframe 0
+60.00  reframe 1
+61.60  reframe 2
