@@ -6,7 +6,10 @@ Usage:
 Each clip is trimmed of leading and trailing silence the same way
 build_track.py trims it, its words per minute is measured, and a
 pitch-safe tempo factor is written so the line plays at <target_wpm>.
-Factors are kept between 0.85 and 1.35 so no line sounds unnatural.
+Lines are only ever sped up, never slowed down (factor 1.0 to 1.35): slowing
+a recorded line down makes it sound draggy and stretched (the creator heard
+this on the paycheck short), so a line read faster than the target keeps
+its natural pace.
 Pass the sheet to build_track.py with --tempo (and use --punch --speed 1.0
 for the punchy sound without a further blanket speed-up).
 """
@@ -20,7 +23,7 @@ sys.path.insert(0, os.path.dirname(__file__))
 from build_track import TRIM, duration, ff  # noqa: E402
 from make_voiceover import parse  # noqa: E402
 
-LOW, HIGH = 0.85, 1.35
+LOW, HIGH = 1.0, 1.35
 
 
 def main(script, clips, target):
