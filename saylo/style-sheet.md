@@ -57,6 +57,13 @@ Also avoid: "This isn't just X, it's Y", "carefully orchestrated", "multifaceted
 
 **Clips (copyright):** short, and always as commentary — set it up, play it, break it down. Prefer government/court sources. No news-agency footage with logos, no music baked into clips. Only licensed music.
 
+## 5b. VOICEOVER
+- Calm investigator, ~150 wpm baseline (range 140–165). Low-mid pitch, sentences land down. Energy never above 4/5; the darkest lines are the quietest.
+- Silence is the main effect: pauses are added in the edit. Cut music entirely at 3–5 key lines per part.
+- Victims' names: slowest pace, plain delivery, no dramatic emphasis.
+- TTS files: spell out every number, time and date ("twelve fifty-eight", "nineteen ninety-six"); spell out uncommon abbreviations (G-B-I, A-T-and-T, nine-one-one, U-S). Keep each file under 10,000 characters; split at a section break.
+- Each video gets a `voiceover-partN-directed.md` (energy/pace/emotion per section + beat notes) alongside the TTS text. Example: `videos/01-olympic-bomber/`.
+
 ## 6. TITLES
 **Rule:** name the case clearly, reveal one surprising fact, leave the explanation for the video.
 Name the case by what people remember ("the Olympic Bomber", "the D.C. Sniper"), not the person's name — unless the name itself is famous (Bulger, Escobar). 40–60 characters. Include a number when possible.
