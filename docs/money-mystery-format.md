@@ -78,3 +78,11 @@ How it is applied:
 5. Strong hook? (a paradox that fits a frame-1 slam card and lands in 5 s)
 6. Real payoff? (the reveal plus something they can do or check today)
 7. Picked with confidence or guessing? If guessing, validate first (outlier search when vidIQ credits return, free web/forum demand checks meanwhile).
+
+## Simple first (creator rule)
+Viewers are beginners scrolling fast. Nerd-proof means never say anything false; it does NOT mean adding detail.
+- Feeling first, number second: the relatable moment ("car breaks down, you're back to zero") before any math.
+- At most one number per line, and only as a dollar story ("borrow $400, owe $460 two weeks later"), never a rate a beginner can't picture (skip "400% APR" in the voice; it can go on screen small).
+- Everyday words only: no APR, credit mix, utilization, liquidity in the voice-over.
+- If a nerd detail makes the line harder, cut the detail rather than add it; put it in the description.
+- Test: could a 15-year-old repeat the line to a friend after one listen?
