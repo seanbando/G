@@ -28,3 +28,16 @@ Views climbed to about 1,400 by hour 6 to 7, then flattened: distribution stoppe
 5. A series name and the recurring YOU character to give a reason to follow.
 
 **Still needed:** the "How long people watched your reel" graph, to find the exact drop-off second.
+
+### Retention graph (Instagram, "How long people watched")
+| Time | Still watching | On screen / spoken |
+|---|---|---|
+| 0:00 to 0:03 | 100% to about 72% | Elon still being drawn on a mostly blank board; "Elon Musk lost almost..." |
+| 0:03 to 0:08 | to 58% | "...didn't buy anything, sell anything, or spend a single cent" (hook runs 8 s) |
+| 0:08 to 0:20 | to about 40% | "Wait..." through "Breaking tonight" |
+| 0:20 to 0:25 | to about 36% | anchor bulletin, before "paper wealth" |
+| 0:25 to 0:50 | to about 14% | lesson, fake-out, callback |
+
+Sources of views: Reels tab 93.1%, Explore 6.8%, Feed 0.1% (almost all strangers scrolling).
+
+**Biggest leak: the first 3 seconds (about 28% gone).** The opening frame was a half-drawn board.

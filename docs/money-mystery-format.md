@@ -6,6 +6,12 @@ Built for money explainers with maximum retention. It keeps Ricks Clips' retenti
 
 Length follows the story, not a 60-second target: never pad a script to reach a minute, and cut any line that drags. The goal is viewers staying to the end. Pace stays high the whole way: every line at about 195 words a minute (`tools/auto_tempo.py`), like Ricks Clips.
 
+## First-frame rule (from the Elon short's retention graph, 2026-11-14)
+
+About 28% of viewers left in the first 3 seconds while the first board was still being drawn. So:
+- **Frame 1 is finished and loud:** a completed drawing plus the shock number, e.g. a full-screen slam card ("$80,000,000,000", "$1,600 → $1,369.60") for the first 1 to 1.5 s, then the drawing animation.
+- **The hook line lands within 4 to 5 seconds.** Cut lists from the opening line.
+
 ## Beats (typically 45 to 60 s, B voice)
 
 | Time | Beat |
