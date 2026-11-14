@@ -101,6 +101,19 @@ Case-file look: timestamp cards in a typewriter font (`MAY 31, 2003 · 3:30 AM �
 | Missing footage | AI/3D recreations (no real faces), maps, documents — never invent a scene the record doesn't support. |
 | Color grade | Dark, desaturated, cool shadows; amber is the only warm accent. |
 
+**Transitions** (same effects as the shorts, tuned calmer for long-form; tool: `saylo/tools/edit_video.py`):
+| Effect | Use it for | Limit |
+|---|---|---|
+| Hard cut | Default for everything | — |
+| `zoomthru` (punch-zoom + blur + flash through the cut) | Big reveals: "His real name was Eric Rudolph", "Eric Robert Rudolph" name reveal, booking photo | 3–5 per video |
+| `whip left/right` | Jumps between places or years: map pin → next pin, 1996 → 1998, back to the parking lot | ~1 per chapter |
+| `flash` | Only the blast cut and the camera-shutter on the booking photo | 2 per video |
+| `shake 0.2–0.3` | Lands with a boom SFX (name reveals, "That second one was for them", cell door) | with booms only |
+| `punch` | A number as it's spoken: $1,000,000, 88 days, 200 agents, 250 lbs, 6 life sentences | max ~1 per 20s |
+| `push` | Photos, documents, maps (100→115% over ~6s) | most stills |
+| `reframe` jump cuts | Hook only (first 60s), for energy | not after 1:00 |
+Never use a transition inside the silent Jewell hold or on archival news clips.
+
 Every script gets a shot list (`videos/NN-slug/shot-list.md`) before editing: one row per beat with visual, source, motion, transition and music cue.
 
 ## 9. WORKFLOW
