@@ -60,6 +60,7 @@ CLIPS = {
     "It went off at about 1:20.": (4.0, "CLIP: blast moment + crowd reaction (no injured victims)"),
     "Jay Leno was making jokes about him.": (7.0, "CLIP: Jewell apartment search, Aug 1996"),
     "to clear her son's name.": (6.0, "CLIP: Bobi Jewell press conference"),
+    "sorry about the leak.": (8.0, "CLIP: Richard Jewell in his own words (60 Minutes interview)"),
     "Teams walking ridgelines for weeks.": (7.0, "CLIP: 1998 Nantahala manhunt, agents + helicopters"),
 }
 CLIP_LEAD = 0.3  # breath before the clip starts

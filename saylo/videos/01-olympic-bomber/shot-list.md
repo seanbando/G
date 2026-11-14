@@ -1,7 +1,7 @@
 # 01 — Shot List: Why the Olympic Bomber Was So Hard to Catch
 
 Built from `script.md` (the fact-checked version with the "three answers" hook) and `edit-plan.md`. Rules: `style-sheet.md` §8.
-**~269 shots / ~18.5 min (~14.5 cuts/min).** **Chapter times are real** (from `voiceover-full.mp3`, 18:35, Saylo new, incl. 5 clip slots — see `sound-plan.md`). Per-row times are pre-voiceover estimates. For the exact time of any line, use `vo-timings.tsv` (start/end of every chunk).
+**~269 shots / ~18.5 min (~14.5 cuts/min).** **Chapter times are real** (from `voiceover-full.mp3`, 18:43, Saylo new, incl. 6 clip slots — see `sound-plan.md`). Per-row times are pre-voiceover estimates. For the exact time of any line, use `vo-timings.tsv` (start/end of every chunk).
 
 ## Key
 **Source codes**
@@ -53,7 +53,7 @@ Hook: 25–35 cuts in the first 60s. No chapter card until the end.
 | 20 | 3:42 | "For three days, Richard Jewell was a hero. Today show…" | 3 | Hero-coverage stills; Today show frame (short); Jewell smiling photo | PHOTO + CLIP (logo cropped) | PUSH | C → B |
 | 21 | 3:55 | "July 30th… Atlanta Journal-Constitution special edition…" | 4 | AJC July 30, 1996 front page: PULL to full page, then PUSH + SWEEP on the "hero" headline | DOC (newspaper archive) | SWEEP, then **FADE** → **THE WRONG MAN** | HIT on headline |
 
-## THE WRONG MAN — 4:09–7:10 · 37 shots · bed B
+## THE WRONG MAN — 4:09–7:18 · 37 shots · bed B
 | # | ~Time | VO cue | Shots | Visual | Source | Motion / transition | Music / SFX |
 |---|---|---|---|---|---|---|---|
 | 22 | 4:15 | "It started with a tip… Piedmont College" | 3 | MAP flies north to pin **PIEDMONT COLLEGE**; campus photo; case-file card `TIP` | MAP + PHOTO + CARD | FLY | B |
@@ -70,7 +70,7 @@ Hook: 25–35 cuts in the first 60s. No chapter card until the end.
 | 33 | 6:42 | "October 26th, 1996… letter… Janet Reno…" | 4 | Card `OCT 26, 1996`; letter card `NO LONGER A TARGET`; Reno photo + name tag **JANET RENO**; `88 DAYS` counter stops | CARD + PHOTO (DOJ/public domain) | PUSH | C |
 | 34 | 6:58 | "three months… the real bomber wasn't finished" | 2 | MAP pulls out from Atlanta, goes dark; one amber pin pulses north of the city | MAP | **FADE** → **SAME HANDS** | A sting |
 
-## SAME HANDS — 7:10–8:11 · 14 shots · bed A
+## SAME HANDS — 7:18–8:19 · 14 shots · bed A
 | # | ~Time | VO cue | Shots | Visual | Source | Motion / transition | Music / SFX |
 |---|---|---|---|---|---|---|---|
 | 35 | 7:05 | "January 16th, 1997… Sandy Springs… second bomb… parking lot" | 5 | Card `JAN 16, 1997 · SANDY SPRINGS, GA`; MAP pin; building exterior photo; timer `+1 HOUR`; responder silhouettes | CARD + MAP + PHOTO + REC | FLY | A |
@@ -79,7 +79,7 @@ Hook: 25–35 cuts in the first 60s. No chapter card until the end.
 | 38 | 7:42 | "Letters… signed 'Army of God'" | 2 | Letter text PUSH + SWEEP on the signature | DOC (FBI-released letter text) | SWEEP | — |
 | 39 | 7:50 | "one person… same construction… What they don't have is a name" | 2 | Evidence board: 3 pins joined by red string; empty `NAME: ____` | CARD | **FADE** → **BIRMINGHAM** | — |
 
-## BIRMINGHAM — 8:11–9:32 · 19 shots · bed A → B
+## BIRMINGHAM — 8:19–9:41 · 19 shots · bed A → B
 | # | ~Time | VO cue | Shots | Visual | Source | Motion / transition | Music / SFX |
 |---|---|---|---|---|---|---|---|
 | 40 | 8:05 | "January 29th, 1998. About 7:30 a.m.…" | 3 | Card `JAN 29, 1998 · 7:30 AM · BIRMINGHAM, AL`; MAP flies Atlanta → Birmingham; clinic exterior photo | CARD + MAP + PHOTO | FLY | A |
@@ -91,7 +91,7 @@ Hook: 25–35 cuts in the first 60s. No chapter card until the end.
 | 46 | 9:08 | "the whole story in miniature… grabbed a pen" | 2 | Evidence board (task forces, profiles) → pen close-up | CARD + REC | — | — |
 | 47 | 9:22 | "The truck comes back to… Eric Robert Rudolph." | 1 | Wanted photo + name tag **ERIC ROBERT RUDOLPH** | DOC (FBI poster) | **FADE** → **WHO HE WAS** | HIT |
 
-## WHO HE WAS — 9:32–10:31 · 14 shots · bed D
+## WHO HE WAS — 9:41–10:39 · 14 shots · bed D
 | # | ~Time | VO cue | Shots | Visual | Source | Motion / transition | Music / SFX |
 |---|---|---|---|---|---|---|---|
 | 48 | 9:30 | "born in 1966 in Merritt Island… moved to Topton and Murphy… Nantahala" | 4 | MAP: pin **MERRITT ISLAND, FL**, route DRAWs to **MURPHY, NC**; dark topo map with **NANTAHALA NATIONAL FOREST** outlined | MAP | DRAW, FLY | D |
@@ -102,7 +102,7 @@ Hook: 25–35 cuts in the first 60s. No chapter card until the end.
 
 *[PART 2 — voice split. No visual change.]*
 
-## THE HUNT — 10:31–13:07 · 35 shots · bed B → D
+## THE HUNT — 10:39–13:16 · 35 shots · bed B → D
 | # | ~Time | VO cue | Shots | Visual | Source | Motion / transition | Music / SFX |
 |---|---|---|---|---|---|---|---|
 | 53 | 10:30 | "May 1998… Ten Most Wanted… One million dollars… charged…" | 4 | Full wanted poster PUSH, SWEEP on `$1,000,000`; charge document; card `ATLANTA BOMBINGS — CHARGED` | DOC | SWEEP | B |
@@ -117,7 +117,7 @@ Hook: 25–35 cuts in the first 60s. No chapter card until the end.
 | 62 | 12:28 | "Daniel… cut off his own hand…" | 2 | Typewriter card `MARCH 1998`; MAP pin South Carolina. **No images of the act.** | CARD + MAP | — | low |
 | 63 | 12:42 | "After 1999 the task force shrinks… September 11th…" | 3 | Counter `200 → ` shrinking; reward card stays; card `SEPTEMBER 11, 2001` over black | CARD | **FADE** → **FIVE YEARS** | — |
 
-## FIVE YEARS — 13:07–14:39 · 20 shots · bed D
+## FIVE YEARS — 13:16–14:47 · 20 shots · bed D
 | # | ~Time | VO cue | Shots | Visual | Source | Motion / transition | Music / SFX |
 |---|---|---|---|---|---|---|---|
 | 64 | 12:55 | "So how do you live out there for five years?" | 1 | Forest at night, faint town lights below | STOCK/REC | hold 3s | D |
@@ -128,7 +128,7 @@ Hook: 25–35 cuts in the first 60s. No chapter card until the end.
 | 69 | 14:05 | "a haircut isn't an accomplice… other ways to explain it" | 2 | Checklist card: `BARRELS · GRAIN · DUMPSTERS · CABINS?` | CARD | ticks on | — |
 | 70 | 14:15 | "Rudolph says no… Nobody was ever charged… Me? I'm not sure." | 2 | Card `CHARGED WITH HELPING: NONE`; forest at night | CARD + STOCK | **FADE** → **THE STOP** | — |
 
-## THE STOP — 14:39–15:57 · 17 shots · bed A
+## THE STOP — 14:47–16:05 · 17 shots · bed A
 | # | ~Time | VO cue | Shots | Visual | Source | Motion / transition | Music / SFX |
 |---|---|---|---|---|---|---|---|
 | 71 | 14:30 | "Back to the parking lot." | 2 | Timestamp `3:30 AM` re-types; cold-open dumpster shot | CARD + REC | callback | A returns |
@@ -138,7 +138,7 @@ Hook: 25–35 cuts in the first 60s. No chapter card until the end.
 | 75 | 15:20 | "where was this? Murphy. Near where they'd found his abandoned truck…" | 1 | **LONG HOLD 10s+: MAP pins `TRUCK · 1998` and `ARREST · 2003` close together, forest outline** | MAP | slow FLY | music thins |
 | 76 | 15:30 | "the part people get wrong… searching the right mountains… finding his campsite" | 4 | MAP: region highlighted `SEARCH AREA ✓`; zoom down through the search grid to one small amber campsite dot | MAP | FLY → **FADE** → **THE DEAL** | B |
 
-## THE DEAL — 15:57–16:50 · 11 shots · bed B → C
+## THE DEAL — 16:05–16:58 · 11 shots · bed B → C
 | # | ~Time | VO cue | Shots | Visual | Source | Motion / transition | Music / SFX |
 |---|---|---|---|---|---|---|---|
 | 77 | 15:45 | "Prosecutors wanted him executed… April 2005… plea… explosives… 250 pounds" | 5 | Federal courthouse exterior; card `APRIL 2005`; plea agreement PUSH + SWEEP; MAP cache markers in the woods; card `~250 LBS DYNAMITE (REPORTEDLY)` | PHOTO + DOC + MAP + CARD | SWEEP | B |
@@ -146,7 +146,7 @@ Hook: 25–35 cuts in the first 60s. No chapter card until the end.
 | 80 | 16:20 | "six consecutive life sentences… 120 years… Florence, Colorado" | 2 | Card `6 LIFE SENTENCES + 120 YEARS · NO PAROLE`; ADX Florence exterior | CARD + PHOTO (BOP / Commons) | — | — |
 | 81 | 16:30 | "Emily Lyons… was in court for it." | 1 | Emily Lyons photo | PHOTO | hold, **FADE** → **WHAT IT ACTUALLY WAS** | C |
 
-## WHAT IT ACTUALLY WAS — 16:50–18:13 · 18 shots · bed C
+## WHAT IT ACTUALLY WAS — 16:58–18:21 · 18 shots · bed C
 | # | ~Time | VO cue | Shots | Visual | Source | Motion / transition | Music / SFX |
 |---|---|---|---|---|---|---|---|
 | 82 | 16:35 | "Richard Jewell was never charged… sued… back into police work" | 4 | Card `CHARGES: NONE`; card `LAWSUITS — SETTLED (SOME)`; later-years Jewell photo; Georgia patrol car | CARD + PHOTO | PUSH | C |
@@ -157,7 +157,7 @@ Hook: 25–35 cuts in the first 60s. No chapter card until the end.
 | 87 | 17:38 | "a college student… a stranger with a pen… a kid cop…" | 4 | Callbacks: figure walking away (#43); pen (#44); patrol car turning the corner (#3); Save-A-Lot pin | REC + MAP | on the beats | builds |
 | 88 | 17:52 | "Everybody knew roughly where he was… Then one night, a rookie was." | 2 | MAP: whole region → FLY down to the Save-A-Lot pin; timestamp `3:30 AM` | MAP + CARD | **FADE** to black, hold 1s | final HIT, out |
 
-## OUTRO — 18:13–18:34 · 6 shots
+## OUTRO — 18:21–18:43 · 6 shots
 | # | ~Time | VO cue | Shots | Visual | Source | Motion / transition | Music / SFX |
 |---|---|---|---|---|---|---|---|
 | 89 | 18:00 | "do you think… alone? Or did somebody help him?" | 2 | Two-option card `ALONE` / `HELPED`; forest night | CARD + STOCK | — | outro bed |

@@ -1,6 +1,6 @@
 # 01 — Sound Plan (music + SFX)
 
-Timed to `voiceover-full.mp3` (18:35, Saylo new, with 5 clip slots). Exact line times: `vo-timings.tsv`.
+Timed to `voiceover-full.mp3` (18:35 version, 5 clip slots). **Update:** a 6th slot (Jewell's 60 Minutes interview, 8s at 7:03) was added, so every time after 7:03 below is now **+8 seconds**. The music/SFX build uses `vo-timings.tsv`, which is current. Exact line times: `vo-timings.tsv`.
 Principle: **music under everything** (ducked under the voice), **SFX only on moments that earn it**. Every SFX below is tied to a specific line; whooshes/hits on visual cuts are added in the edit from the SFX kit.
 
 ## Music beds (generated, licensed)
@@ -94,7 +94,8 @@ typewriter keys short (~1s) · typewriter keys medium (~2s) · typewriter keys l
 | 3:19.6 | 4s | Blast moment + crowd reaction (no injured victims) |
 | 4:58.8 | 7s | Jewell apartment search, Aug 1996 |
 | 5:30.4 | 6s | Bobi Jewell press conference |
-| 11:20.5 | 7s | 1998 Nantahala manhunt: agents, helicopters |
+| 7:02.8 | 8s | Richard Jewell in his own words (60 Minutes interview), shot 37b |
+| 11:28.8 | 7s | 1998 Nantahala manhunt: agents, helicopters |
 
 ## Mix targets
 Voice stem −16 LUFS · music ~20–25 dB under the voice while he talks (sidechain duck), up between lines and in clip-free pauses · SFX just under the voice · final mix ≈ −14 LUFS, peaks ≤ −1 dBTP. Deliver `full-mix.mp3` plus separate voice / music / SFX stems.
