@@ -1,6 +1,6 @@
 Why Paying the Minimum Costs You More
 
-That thousand-dollar phone can cost you seventeen hundred sixty-six dollars if you only pay the minimum on your credit card.
+That thousand-dollar phone can cost you seventeen hundred sixty-six dollars if you only pay the minimum.
 
 YOU: Wait, how does the minimum cost me more?
 
@@ -8,7 +8,7 @@ Say your card charges twenty-two percent. Your first minimum is about twenty-eig
 
 It's like walking up an escalator that's moving down, because you step every month, but you barely go anywhere.
 
-Keep paying the minimum and it takes five years and ten months to pay off that one phone.
+Keep paying the minimum and it takes five years and ten months, long after you've bought your next phone.
 
 [PAUSE: 0.5 seconds. The fake-out.]
 
@@ -18,7 +18,7 @@ So that low minimum feels like the bank doing you a favor, but it's exactly what
 
 Pay one hundred dollars a month instead, and the phone is paid off in one year with about one hundred fifteen dollars of interest.
 
-Look for "Minimum Payment Warning" on your credit card statement. It estimates how long your balance will take to pay off if you keep paying the minimum.
+Your statement even has a "Minimum Payment Warning" box estimating how long the minimum takes.
 
 [PAUSE: 0.4 seconds. Callback to the escalator.]
 
