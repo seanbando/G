@@ -146,6 +146,7 @@ def build(video, units):
     for u in units:
         wav = os.path.join(tmp, f"{u['id']}.wav")
         ff("-i", os.path.join(vo, f"VO-{u['id']}.mp3"), "-af", trim, "-ar", "44100", "-ac", "1", wav)
+        shorten_pauses(wav)
         gap = gaps[u["gap_before"]] + (rows and BEATS_after(rows[-1][4]) or 0) + LOCKED.get(u["text"], {}).get("pre", 0)
         if gap:
             sil = os.path.join(tmp, f"gap-{u['id']}.wav")
@@ -160,7 +161,9 @@ def build(video, units):
     with open(os.path.join(tmp, "list.txt"), "w") as f:
         f.writelines(f"file '{os.path.abspath(p)}'\n" for p in listing)
     out = os.path.join(video, "voiceover-full.mp3")
-    ff("-f", "concat", "-safe", "0", "-i", os.path.join(tmp, "list.txt"), "-c:a", "libmp3lame", "-b:a", "192k", out)
+    # Master the voice stem to -16 LUFS (music goes under it in the edit; final mix ~-14 LUFS).
+    ff("-f", "concat", "-safe", "0", "-i", os.path.join(tmp, "list.txt"),
+       "-af", "loudnorm=I=-16:TP=-1.5:LRA=7", "-ar", "44100", "-c:a", "libmp3lame", "-b:a", "192k", out)
     with open(os.path.join(video, "vo-timings.tsv"), "w") as f:
         f.write("id\tchapter\tstart\tend\ttext\n")
         for i, c, a, b, txt in rows:
@@ -168,6 +171,42 @@ def build(video, units):
     report(video, stats, t)
     subprocess.run(["rm", "-rf", tmp])
     return out, t
+
+
+def shorten_pauses(wav, threshold_db=-45, longest=0.6, keep=0.45):
+    """Cut breaths inside a chunk: any pause longer than `longest` s is shortened to `keep` s."""
+    import numpy as np
+    import wave
+    w = wave.open(wav)
+    sr, n = w.getframerate(), w.getnframes()
+    x = np.frombuffer(w.readframes(n), dtype=np.int16)
+    w.close()
+    hop = sr // 100
+    frames = len(x) // hop
+    rms = np.sqrt(np.mean((x[:frames * hop].astype(np.float32) / 32768).reshape(frames, hop) ** 2, axis=1))
+    quiet = 20 * np.log10(rms + 1e-9) < threshold_db
+    keep_mask = np.ones(len(x), bool)
+    i = 0
+    while i < frames:
+        if quiet[i]:
+            j = i
+            while j < frames and quiet[j]:
+                j += 1
+            if (j - i) / 100 > longest:
+                cut = int(((j - i) / 100 - keep) * sr)
+                start = i * hop + int(keep / 2 * sr)
+                keep_mask[start:start + cut] = False
+            i = j
+        else:
+            i += 1
+    if keep_mask.all():
+        return
+    w = wave.open(wav, "wb")
+    w.setnchannels(1)
+    w.setsampwidth(2)
+    w.setframerate(sr)
+    w.writeframes(x[keep_mask].tobytes())
+    w.close()
 
 
 def BEATS_after(text):
