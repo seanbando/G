@@ -69,3 +69,12 @@ How it is applied:
 - `tools/make_captions.py`: captions from a `display.txt` with on-screen numbers ($, %), 2 to 3 words each.
 - `tools/burn_captions.py`: **the very last step**, after every edit, so captions never interfere with drawings or effects. Low on the frame (74% height), white with a black outline, a quick pop.
 - StrokeVideo: one board per paragraph of the exact-words text, so the storyboard's boards are set by how the paragraphs are split (see `scripts/shorts/05-first-paycheck/strokevideo-kit.md`).
+
+## Idea checklist (run before scripting any idea)
+1. Safe for YouTube? (no "get rich" promises, no specific buy/sell advice, finance facts sourced)
+2. Is our audience (18-35 beginners) interested? Proof, not a feeling: search demand, competitor outliers, our own analytics.
+3. Something they don't see every day? (skip overdone: latte factor, "rule of 72", "pay yourself first")
+4. Does the viewer learn something new?
+5. Strong hook? (a paradox that fits a frame-1 slam card and lands in 5 s)
+6. Real payoff? (the reveal plus something they can do or check today)
+7. Picked with confidence or guessing? If guessing, validate first (outlier search when vidIQ credits return, free web/forum demand checks meanwhile).
