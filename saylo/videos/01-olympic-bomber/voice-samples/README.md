@@ -12,3 +12,6 @@ Model eleven_v4 · stability 0.4 · similarity 0.8 · style 0.2 · speaker boost
 | sample-philip.mp3 | Philip – Quiet Authority (library) | exurTFaGNF2gnRcPNH8I | 42.4s |
 | sample-leo.mp3 | Leo Ashcraft – Late-Night Radio Host (library) | oJUpLOe3yEYTEIjO6ddh | 43.1s |
 | sample-maven.mp3 | Maven – True Crime & Mystery Narrator (library, female) | OtHu0lbpdNTqJVqaxDtR | 44.3s |
+| sample-saylo-new.mp3 | **Saylo new** (creator's Yaboy remix: deeper, steadier) | MB346AXfvAnxXiEMXWHX | 42.4s |
+
+Pitch check vs. the Boston bombers reference narrator (~100 Hz, 3.6 st variation): Saylo new **95 Hz, 3.6 st**, the closest of all 10. Yaboy 125 Hz / 5.3 st, Mike 124 / 4.1, Philip 113 / 3.2.
