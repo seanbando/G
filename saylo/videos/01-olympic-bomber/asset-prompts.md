@@ -1,7 +1,7 @@
 # 01 — Asset Prompts: characters, locations, recreated scenes
 
 How to make every recreated asset so it looks the same each time it appears.
-Shot numbers in the creator's "Create list" refer to their Shot list tab. Check them against `shot-list.md` before you file assets; the two numberings differ.
+**Shot numbers and file names follow the creator's doc "Olympic Bomber — Shot List" (86 shots, Shot list + Create list tabs)**, which is what the Video Editor app uses: save every file into `Downloads\Olympic Bomber`, named with its shot number first. (`shot-list.md` in this repo is the longer 90-beat version; its numbers differ.)
 
 ## The rule for real people (stricter than the Create list)
 - **Never generate a real person's face.** That covers victims and officials, and also Rudolph, Jewell and Postell. Their faces appear only in their real photos.
@@ -16,7 +16,8 @@ Shot numbers in the creator's "Create list" refer to their Shot list tab. Check 
 3. **Location plates.** One empty wide shot per location (no people). Save as `loc-<name>.png`.
 4. **Scene stills.** For each scene, upload character sheet + location plate + style frame as references, then use the scene prompt. Make 4, pick 1.
 5. **Animate.** Put the chosen still into an image-to-video tool (Kling, Runway, Veo, Hailuo, etc.) with the motion prompt. 5s clips, cut to 3–8s in the edit.
-6. **File naming.** `scene-A-01.png`, `scene-A-01.mp4`, so the editor can find them by scene letter.
+6. **File naming.** Use the doc's names exactly (column "Save as" below), e.g. `05 dumpster flashlight.mp4`. The Video Editor app places files by the shot number at the start of the name. Keep the references (`00-style.png`, `char-…`, `loc-…`) in a separate `refs` folder so they don't land on the timeline.
+7. **Bake in motion.** The editor can only cut and layer, so any push-in, highlight sweep or typewriter text must already be in the exported .mp4.
 
 Tool notes: any image tool that accepts **reference images** works (Midjourney with character/style reference, Flux Kontext, ChatGPT images, Gemini image, Ideogram). The key is to always feed the same `00-style.png` plus the character sheet and location plate. Never generate a character from text alone after the sheet exists.
 
@@ -63,17 +64,16 @@ Wide establishing shot, no people. [LOCATION DESCRIPTION]. [MASTER STYLE]
 Upload the listed character sheet(s), location plate and `00-style.png` as references. Paste the still prompt + master style. Then animate the chosen still with the motion prompt.
 
 | Scene | Refs | Still prompt | Motion prompt (image-to-video) |
-|---|---|---|---|
-| **A. The stop** | postell-2003, rudolph-2003, savealot-backlot | A patrol car with headlights off rolls into the back lot; a police officer seen from behind raises a flashlight; the amber beam lands on a man crouched beside a dumpster, his face turned away into shadow | Slow push-in toward the dumpster as the flashlight beam sweeps across and stops on the crouched figure |
-| **B. The backpack** | jewell-1996, olympic-park | A green military-style backpack alone under a park bench at night, low angle; behind it, out of focus, a security guard seen from behind looks toward it; crowd and stage lights far back | Very slow push-in on the backpack; crowd lights flicker softly in the background |
-| **C. Clearing the crowd** | jewell-1996, olympic-park | Security guards seen from behind with arms out, moving concertgoers back from the tall tower at night | Guards wave the crowd back; people drift away from camera |
-| **D. The call** | 911-caller, payphone | A black silhouette at a payphone under a streetlight lifts the receiver; small digital clock on a building nearby (no readable text needed, add 12:58 in the edit) | Hand lifts the receiver; slight camera drift; streetlight hum |
-| **E. Walking the wrong way** | rudolph-1998, student, birmingham-clinic | On a cold street, a few people run toward rising smoke while one man in a denim jacket walks calmly the other way; camera behind him, a student in flannel follows at a distance | Camera tracks behind the walking man; runners pass in the opposite direction |
-| **F. The plate** | birmingham-clinic | Close-up of a hand writing on a small notepad with a pen; in the soft background a gray compact pickup pulls away from the curb. Plate unreadable | Pen moves across paper; truck drives off out of focus |
-| **G. Into the woods** | nantahala | An empty gray compact pickup parked at a misty trailhead, then fresh boot prints leading into the trees | Slow pan from the truck to the prints and into the dark trees |
-| **H. Living rough** | rudolph-2003, hidden-camp | Hands gathering acorns from wet leaves (close-up), and the tarp camp on the slope looking down at small town lights at dusk; man only seen from behind | Hands sift leaves; second shot: slow pull-back from the camp to reveal the town lights below |
-| **I. The night raid** | rudolph-2003, murphy-street, savealot-backlot | A figure in a dark jacket seen from behind slips between buildings at night and lifts a dumpster lid | Figure moves in from the dark edge of frame; lid lifts slowly |
-| **J. The manhunt** | fbi-agent, nantahala | A helicopter with a searchlight sweeps a misty ridge; below, agents in navy windbreakers and a bloodhound walk through the trees, seen from behind | Helicopter crosses frame; searchlight sweeps; agents move uphill away from camera |
+|---|---|---|---| **A. The stop** → save as `03 patrol car.mp4` + `05 dumpster flashlight.mp4` (05 is reused for 67 and 70) | postell-2003, rudolph-2003, savealot-backlot | A patrol car with headlights off rolls into the back lot; a police officer seen from behind raises a flashlight; the amber beam lands on a man crouched beside a dumpster, his face turned away into shadow | Slow push-in toward the dumpster as the flashlight beam sweeps across and stops on the crouched figure |
+| **B. The backpack** → `18 backpack.jpg` (still) | jewell-1996, olympic-park | A green military-style backpack alone under a park bench at night, low angle; behind it, out of focus, a security guard seen from behind looks toward it; crowd and stage lights far back | Very slow push-in on the backpack; crowd lights flicker softly in the background |
+| **C. Clearing the crowd** → `19 crowd pushback.mp4` | jewell-1996, olympic-park | Security guards seen from behind with arms out, moving concertgoers back from the tall tower at night | Guards wave the crowd back; people drift away from camera |
+| **D. The call** → `20 payphone.mp4` (add `12:58 AM` typed on in the corner) | 911-caller, payphone | A black silhouette at a payphone under a streetlight lifts the receiver; small digital clock on a building nearby (no readable text needed, add 12:58 in the edit) | Hand lifts the receiver; slight camera drift; streetlight hum |
+| **E. Walking the wrong way** → `46 walking away.mp4` | rudolph-1998, student, birmingham-clinic | On a cold street, a few people run toward rising smoke while one man in a denim jacket walks calmly the other way; camera behind him, a student in flannel follows at a distance | Camera tracks behind the walking man; runners pass in the opposite direction |
+| **F. The plate** → `47 nissan pickup.jpg` (still of the truck) + use the clip under `48 nc plate.png` | birmingham-clinic | Close-up of a hand writing on a small notepad with a pen; in the soft background a gray compact pickup pulls away from the curb. Plate unreadable | Pen moves across paper; truck drives off out of focus |
+| **G. Into the woods** → extra shot for 53/54 (`53a forest.mp4`…); a real news photo of the truck stays `54 truck found.jpg` | nantahala | An empty gray compact pickup parked at a misty trailhead, then fresh boot prints leading into the trees | Slow pan from the truck to the prints and into the dark trees |
+| **H. Living rough** → `64a acorns.mp4`, `65 barrel.jpg`, camp shot as an extra under `68 map camps.mp4` | rudolph-2003, hidden-camp | Hands gathering acorns from wet leaves (close-up), and the tarp camp on the slope looking down at small town lights at dusk; man only seen from behind | Hands sift leaves; second shot: slow pull-back from the camp to reveal the town lights below |
+| **I. The night raid** → optional; the doc reuses `05` for shot 67 | rudolph-2003, murphy-street, savealot-backlot | A figure in a dark jacket seen from behind slips between buildings at night and lifts a dumpster lid | Figure moves in from the dark edge of frame; lid lifts slowly |
+| **J. The manhunt** → `08 helicopter.mp4`, `58 bloodhounds.mp4` (57 stays real news footage) | fbi-agent, nantahala | A helicopter with a searchlight sweeps a misty ridge; below, agents in navy windbreakers and a bloodhound walk through the trees, seen from behind | Helicopter crosses frame; searchlight sweeps; agents move uphill away from camera |
 
 ## Graphics (templates, not AI)
 Build each type ONCE in your editor (CapCut / Premiere / After Effects), save it as a template, and reuse it. Every text element types on with the typewriter effect + keystroke SFX (style sheet §8).
