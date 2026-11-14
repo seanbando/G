@@ -96,6 +96,7 @@ Case-file look: timestamp cards in a typewriter font (`MAY 31, 2003 · 3:30 AM �
 | Maps | Dark teal/near-black terrain or street map, route line draws itself in amber, pin icons, timestamp card in the corner, camera flies between pins. |
 | Documents | Slow push-in + amber highlighter sweep on the key line. |
 | People | Name tag (Anton, caps, off-white) the first time anyone appears. Real photos get a slow push-in or parallax. |
+| **All on-screen text** | **Typewriter effect on every piece of text, no exceptions:** timestamp cards, name tags, labels, counters, quotes, chapter cards, map labels, evidence-board text. Letters type on one by one (~25–35 characters/sec, fast enough to finish before the line it supports ends) with a blinking cursor at the end for 2–3 blinks, then the cursor disappears. Each type-on gets **typewriter keystroke SFX** matched to its length, plus a carriage-return "ding" only on chapter cards. Fonts stay as set (typewriter font for cards/labels, Anton for name tags); only the reveal is typed. |
 | Archival clips | Set up → play (short) → break down. Framed or with a lower third, never dropped in raw. |
 | Missing footage | AI/3D recreations (no real faces), maps, documents — never invent a scene the record doesn't support. |
 | Color grade | Dark, desaturated, cool shadows; amber is the only warm accent. |

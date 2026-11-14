@@ -47,6 +47,9 @@ Principle: **music under everything** (ducked under the voice), **SFX only on mo
 | 18:01.5 | Final swell → hit → out on "a rookie was." | |
 | 18:13 | Outro: **B** light | |
 
+## Typewriter rule
+Every piece of on-screen text types on, and every type-on gets **typewriter keystrokes** for its length (~25–35 characters/sec). Chapter cards also get a carriage-return **ding**. These fire wherever the editor places text, so they're added in the edit from the kit (`typewriter-keys-short`, `-medium`, `-long`, `typewriter-ding`). The cue list below only shows the typewriter moments tied to narration.
+
 ## SFX cue list (narration-locked)
 | Time | Line | SFX |
 |---|---|---|
@@ -82,7 +85,7 @@ Principle: **music under everything** (ducked under the voice), **SFX only on mo
 | 18:01.5 | "Then one night, a rookie was." | **typewriter** `3:30 AM` → **final hit** |
 
 ## SFX kit (generated once, reused everywhere)
-typewriter · flashlight click · gravel footsteps · car idle/tires · paper slide · distant helicopter · riser (3s) · low boom hit · crowd/concert ambience · payphone pickup · clock tick (single + loop) · pen tick · stamp thud · pen scribble · wind gust · distant dogs · night forest ambience · camera shutter · shovel in dirt · cell door slam · soft whoosh (for the editor's cuts)
+typewriter keys short (~1s) · typewriter keys medium (~2s) · typewriter keys long (~3.5s) · typewriter ding · flashlight click · gravel footsteps · car idle/tires · paper slide · distant helicopter · riser (3s) · low boom hit · crowd/concert ambience · payphone pickup · clock tick (single + loop) · pen tick · stamp thud · pen scribble · wind gust · distant dogs · night forest ambience · camera shutter · shovel in dirt · cell door slam · soft whoosh (for the editor's cuts)
 
 ## Clip slots (narration pauses; clip audio plays, music out)
 | Time | Length | Clip |

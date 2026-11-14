@@ -16,6 +16,7 @@ Built from `script.md` (the fact-checked version with the "three answers" hook) 
 | **STOCK** | Generic footage (forest, night town, acorns, etc.) | Pexels / Pixabay (free) or licensed stock. |
 
 **Motion:** PUSH = slow push-in · PULL = slow pull-out · PAN · PARALLAX (photo split into layers) · FLY = map camera move between pins · DRAW = route line draws itself · SWEEP = highlighter sweep · SNAP = quick zoom/punch-in.
+**Text:** every CARD, name tag, label, counter, quote and map label **types on with the typewriter effect + keystroke SFX** (style sheet §8). Not repeated in each row.
 **Transitions:** cut unless noted. **FADE** = fade to black + chapter card (chapters only). **HIT** = cut on a music/SFX hit.
 **Music beds** (licensed only): **A** night tension (low drone + pulse) · **B** investigation (ticking, steady) · **C** somber piano/strings · **D** woods (wind, sparse low strings) · **SILENCE** only once (#84).
 
