@@ -30,11 +30,15 @@ def main(video):
         n, a, f = line.rstrip("\n").split("|")
         t = None
         if a.startswith("CLIP:"):
-            word = a[5:]
-            t = next(c[1] for c in chunks if c[0] == "CLIP" and word in c[3])
-            a = f"({word} clip, music out)"
-        else:
-            key = norm(a).split()
+            word, _, fallback = a[5:].partition(">")
+            t = next((c[1] for c in chunks if c[0] == "CLIP" and word in c[3]), None)
+            if t is not None:
+                a = f"({word} clip, music out)"
+            elif fallback:  # no gap in this voiceover build: start on the fallback words instead
+                a = fallback + f"  ({word} clip, no gap yet)"
+                t = None
+        if t is None and not a.startswith("CLIP:"):
+            key = norm(a.split("  (")[0]).split()
             for cid, s0, s1, txt in chunks:
                 if cid == "CLIP":
                     continue

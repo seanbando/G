@@ -54,8 +54,9 @@ BEATS = {              # extra hold after a chunk ending with this text
 
 # Archival clip slots: after a chunk ending with this text, the narration stops for N seconds
 # so the clip's own audio (news, press conference, 911 call) can play. Music drops out there.
-# If a clip can't be sourced, the editor cuts the gap out (it's marked in vo-timings.tsv).
-CLIPS = {
+# OFF by default: the creator wants a clean, continuous voiceover until the shot sheet is final.
+# Build with --with-clips to put the gaps in (each one is then marked in vo-timings.tsv).
+PLANNED_CLIPS = {
     "you've got 30 minutes.": (5.0, "CLIP: 911 call audio (only if officially released)"),
     "It went off at about 1:20.": (4.0, "CLIP: blast moment + crowd reaction (no injured victims)"),
     "Jay Leno was making jokes about him.": (7.0, "CLIP: Jewell apartment search, Aug 1996"),
@@ -64,6 +65,7 @@ CLIPS = {
     "Teams walking ridgelines for weeks.": (7.0, "CLIP: 1998 Nantahala manhunt, agents + helicopters"),
 }
 CLIP_LEAD = 0.3  # breath before the clip starts
+CLIPS = PLANNED_CLIPS if "--with-clips" in sys.argv else {}
 
 # Approved takes: a chunk whose text matches uses this recorded file instead of a new
 # generation, plus an extra pause before it. Paths are relative to the video folder.
