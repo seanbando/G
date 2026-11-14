@@ -52,6 +52,18 @@ BEATS = {              # extra hold after a chunk ending with this text
     "a rookie was.": 1.5,
 }
 
+# Archival clip slots: after a chunk ending with this text, the narration stops for N seconds
+# so the clip's own audio (news, press conference, 911 call) can play. Music drops out there.
+# If a clip can't be sourced, the editor cuts the gap out (it's marked in vo-timings.tsv).
+CLIPS = {
+    "you've got 30 minutes.": (5.0, "CLIP: 911 call audio (only if officially released)"),
+    "It went off at about 1:20.": (4.0, "CLIP: blast moment + crowd reaction (no injured victims)"),
+    "Jay Leno was making jokes about him.": (7.0, "CLIP: Jewell apartment search, Aug 1996"),
+    "to clear her son's name.": (6.0, "CLIP: Bobi Jewell press conference"),
+    "Teams walking ridgelines for weeks.": (7.0, "CLIP: 1998 Nantahala manhunt, agents + helicopters"),
+}
+CLIP_LEAD = 0.3  # breath before the clip starts
+
 # Approved takes: a chunk whose text matches uses this recorded file instead of a new
 # generation, plus an extra pause before it. Paths are relative to the video folder.
 LOCKED = {
@@ -147,7 +159,8 @@ def build(video, units):
         wav = os.path.join(tmp, f"{u['id']}.wav")
         ff("-i", os.path.join(vo, f"VO-{u['id']}.mp3"), "-af", trim, "-ar", "44100", "-ac", "1", wav)
         shorten_pauses(wav)
-        gap = gaps[u["gap_before"]] + (rows and BEATS_after(rows[-1][4]) or 0) + LOCKED.get(u["text"], {}).get("pre", 0)
+        prev_text = next((r[4] for r in reversed(rows) if r[0] != "CLIP"), "")
+        gap = gaps[u["gap_before"]] + (BEATS_after(prev_text) if rows else 0) + LOCKED.get(u["text"], {}).get("pre", 0)
         if gap:
             sil = os.path.join(tmp, f"gap-{u['id']}.wav")
             ff("-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", f"{gap:.2f}", sil)
@@ -158,6 +171,14 @@ def build(video, units):
         rows.append((u["id"], u["chapter"], t, t + d, u["text"]))
         stats.append((u["id"], len(u["text"].split()) / d * 60 if d else 0, loudness(wav), d, u["text"]))
         t += d
+        clip = next((v for k, v in CLIPS.items() if u["text"].endswith(k)), None)
+        if clip:
+            secs, label = clip
+            sil = os.path.join(tmp, f"clip-{u['id']}.wav")
+            ff("-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", f"{CLIP_LEAD + secs:.2f}", sil)
+            listing.append(sil)
+            rows.append(("CLIP", u["chapter"], t + CLIP_LEAD, t + CLIP_LEAD + secs, label))
+            t += CLIP_LEAD + secs
     with open(os.path.join(tmp, "list.txt"), "w") as f:
         f.writelines(f"file '{os.path.abspath(p)}'\n" for p in listing)
     out = os.path.join(video, "voiceover-full.mp3")

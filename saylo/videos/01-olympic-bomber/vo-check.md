@@ -1,6 +1,6 @@
 # Voiceover check
 
-Total length: **18:04.24** · 116 chunks · average pace 178 wpm · average loudness -21.3 dB
+Total length: **18:34.74** · 116 chunks · average pace 178 wpm · average loudness -21.3 dB
 
 Chunks more than 2 standard deviations from the average. Listen to these; redo with `--redo ID,ID`.
 
