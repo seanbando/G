@@ -43,3 +43,20 @@ Uncovering is the closest match to Saylo (same lane, same length). fern is the p
 
 ## Saylo editing rules (derived)
 Copied into `style-sheet.md` §8 — that file is the source of truth.
+
+## Narrator voice: "Police Found Both Boston Bombers. One Still Escaped." (Nov 14, 2026)
+Measured with a numpy prosody script (syllable-rate proxy, level, pitch via autocorrelation). Rough numbers; the music bed adds noise.
+
+| Span | Syllables/s | Level | Pitch (median) | Pitch variation |
+|---|---|---|---|---|
+| 0–30s | 4.33 | −24.4 dB | 91 Hz | 3.4 st |
+| 30–60s | 4.37 | −23.3 dB | 101 Hz | 3.7 st |
+| 60–150s | ~4.0 | −23 dB | ~103 Hz | 3.5 st |
+| 150–780s | ~4.4 | −23.6 dB | ~100 Hz | 3.5–4.0 st |
+
+**Finding:** this narrator does **not** speed up or get louder in the hook. Pace and level are flat for the whole video and match our Mike track (~4.3 syll/s). The energy comes from:
+1. **A deeper, heavier voice:** ~100 Hz median pitch vs. Mike ~124 Hz. Lower and steadier, with less pitch movement (3.6 st vs. Mike 4.1 st).
+2. **Wall-to-wall visuals in the hook:** CCTV with a yellow frame, location label in the corner (`MASSACHUSETTS AVENUE, CAMBRIDGE`), name tag (`SEAN COLLIER`), a recreation of the police car, a flashlight reveal of an evidence board, then a jump back to the marathon start with a date card (`15TH APRIL, MONDAY`).
+3. **Music and SFX** under every line.
+
+Closest of our 9 tested voices by pitch and steadiness: **Philip – Quiet Authority** (113 Hz, 3.2 st). All 9 are higher than this narrator.
