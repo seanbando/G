@@ -9,7 +9,7 @@ CC BY-SA files need a credit in the video description: "Photo: <author>, CC BY-S
 | 52b 101st patch.jpg | Public domain | Ringo8884 at English Wikipedia | https://commons.wikimedia.org/wiki/File:US_101st_ABN_DIV_shoulder_sleeve_insignia.jpg |
 | 17 tower.jpg | CC BY-SA 4.0 | Don Ramey Logan | https://commons.wikimedia.org/wiki/File:1996_Olympic_games_bombing_sound_tower_by_Don_Ramey_Logan.jpg |
 | 76 dynamite (extra).jpg | Public domain (added by creator to Drive) | FBI | https://commons.wikimedia.org/wiki/File:Eric_Rudolph_dynamite.jpg |
-| 23 shrapnel (extra).jpg | CC BY-SA 4.0, needs credit (added by creator to Drive) | | https://commons.wikimedia.org/wiki/File:Centennial_Olympic_Park_Shrapnel.jpg |
+| 23 shrapnel (extra).jpg | CC BY-SA 4.0, needs credit (added by creator to Drive) | Darth-Wiki-Man | https://commons.wikimedia.org/wiki/File:Centennial_Olympic_Park_Shrapnel.jpg |
 | 23 aftermath (extra).png | CC BY-SA 3.0 | Gary Mark Smith | https://commons.wikimedia.org/wiki/File:Atlanta_Olympic_Park_Bomb_Aftermath.png |
 | 37 reno.jpg | Public domain | Department of Justice. | https://commons.wikimedia.org/wiki/File:Janet_Reno-us-Portrait.jpg |
 | 79 adx florence.jpg | Public domain | US Bureau of Prisons | https://commons.wikimedia.org/wiki/File:Supermax_prison,_Florence_Colorado.jpg |
