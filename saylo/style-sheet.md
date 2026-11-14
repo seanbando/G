@@ -80,7 +80,7 @@ Never: claims the video can't back up, vague "the mystery of" titles, "Full Docu
 ```
 Text goes on in Canva afterward (AI tools mangle lettering). Approved example: `videos/01-olympic-bomber/`.
 
-**Narrator voice:** Mike – Polite and Strict Narrator (ElevenLabs library, `v61mxH30651CgTnSC8le`), `eleven_v4`, stability 0.4 / similarity 0.8 / style 0.2. Serious, steady. Use the same voice on every video.
+**Narrator voice:** **Saylo new** — the creator's own Yaboy clone remixed deeper and steadier (ElevenLabs `MB346AXfvAnxXiEMXWHX`), `eleven_v4`, stability 0.4 / similarity 0.8 / style 0.2. Matches the Boston-bombers reference narrator (~95–100 Hz, steady pitch). Use the same voice on every video. Extra energy in the hook comes from music/SFX and dense visuals, not speed. Keep the original Yaboy for CashleyFinance.
 
 ## 8. VISUAL STYLE
 Case-file look: timestamp cards in a typewriter font (`MAY 31, 2003 · 3:30 AM · MURPHY, NC`), dark maps with the accent color for routes and scenes, documents with a highlighter sweep on the key line, silence at the reveal.

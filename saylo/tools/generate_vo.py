@@ -24,7 +24,7 @@ import statistics as st
 import subprocess
 import sys
 
-VOICE_ID = "v61mxH30651CgTnSC8le"  # Mike – Polite and Strict Narrator (style sheet)
+VOICE_ID = "MB346AXfvAnxXiEMXWHX"  # "Saylo new" — creator's Yaboy remix, deeper/steadier (style sheet)
 MODEL = "eleven_v4"
 SETTINGS = dict(stability=0.4, similarity_boost=0.8, style=0.2, use_speaker_boost=True, speed=1.0)
 SEED = 1996
@@ -50,6 +50,13 @@ BEATS = {              # extra hold after a chunk ending with this text
     "Almost nothing.": 1.0,
     "He was 44.": 4.0,          # silent Jewell photo hold
     "a rookie was.": 1.5,
+}
+
+# Approved takes: a chunk whose text matches uses this recorded file instead of a new
+# generation, plus an extra pause before it. Paths are relative to the video folder.
+LOCKED = {
+    "It's a lie, and a pretty good one.": dict(
+        file="voice-samples/lie-takes/take3-line.mp3", pre=0.8),  # take 3, chosen Nov 14, 2026
 }
 
 
@@ -139,7 +146,7 @@ def build(video, units):
     for u in units:
         wav = os.path.join(tmp, f"{u['id']}.wav")
         ff("-i", os.path.join(vo, f"VO-{u['id']}.mp3"), "-af", trim, "-ar", "44100", "-ac", "1", wav)
-        gap = gaps[u["gap_before"]] + (rows and BEATS_after(rows[-1][4]) or 0)
+        gap = gaps[u["gap_before"]] + (rows and BEATS_after(rows[-1][4]) or 0) + LOCKED.get(u["text"], {}).get("pre", 0)
         if gap:
             sil = os.path.join(tmp, f"gap-{u['id']}.wav")
             ff("-f", "lavfi", "-i", "anullsrc=r=44100:cl=mono", "-t", f"{gap:.2f}", sil)
@@ -206,6 +213,10 @@ def main(argv):
         jobs = []
         for i, u in enumerate(units):
             path = os.path.join(vo, f"VO-{u['id']}.mp3")
+            lock = LOCKED.get(u["text"])
+            if lock:
+                subprocess.run(["cp", os.path.join(video, lock["file"]), path])
+                continue
             if os.path.exists(path) and u["id"] not in redo:
                 continue
             prev_t = units[i - 1]["text"] if i else None
