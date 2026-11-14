@@ -24,6 +24,12 @@ Cue lines ("#" starts a comment):
                                drawn after camera moves so it never shakes or zooms
     <time> image <end> <path>  show a still image (e.g. a composite board) instead of the
                                video until <end>; camera moves still apply
+    <time> tag <end> <y> <size> <red|green|yellow|white> <text>
+                               big bold label with a dark outline that pops in, centred at
+                               <y>; drawn after camera moves (for dark, non-whiteboard looks)
+    <time> dash <end> <y> <red|green|yellow|white>
+                               recolour a full-width dashed line at <y> (e.g. a goal line
+                               turning green on the payoff)
     <time> card <seconds> <red|green|black> <text>
                                full-screen number card: the frame dims and blurs, the text
                                slams in big in a marker font with a small shake, e.g.
@@ -32,6 +38,11 @@ Cue lines ("#" starts a comment):
 Transitions are centred on the cut: the outgoing scene accelerates into the
 cut and the incoming scene settles out of it (0.18 s each side). The video's
 own audio is kept unless --audio gives a replacement track.
+
+--keep-bottom <y> protects a video whose captions are already burned in: camera
+moves zoom around a point on the row at <y> (fraction of the height) and every
+row below it is copied back from the original frame (feathered), so the
+captions never zoom, shake or crop.
 """
 import math
 import subprocess
@@ -47,6 +58,8 @@ COLORS = {"red": (196, 30, 45), "green": (34, 98, 58), "black": (20, 20, 20)}
 REFRAMES = {0: (1.0, 0.0, 0.0), 1: (1.07, 0.02, 0.02), 2: (1.10, -0.02, -0.025)}
 
 HALF = 0.18  # seconds each side of a transition
+KEEP = None  # --keep-bottom row (fraction of the height), or None
+TAG_COLORS = {"red": (240, 70, 80), "green": (60, 205, 110), "yellow": (245, 200, 90), "white": (255, 255, 255)}
 
 
 def probe(path):
@@ -170,6 +183,38 @@ def draw_notes(frame, t, cues, w, h):
     return np.asarray(im.convert("RGB"))
 
 
+def draw_tags(frame, t, cues, w, h):
+    items = [(c, kind, args) for c, kind, args in cues if kind in ("tag", "dash") and c <= t < float(args[0])]
+    if not items:
+        return frame
+    im = Image.fromarray(frame).convert("RGBA")
+    for c, kind, args in items:
+        u = t - c
+        layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
+        d = ImageDraw.Draw(layer)
+        if kind == "dash":
+            y, col = int(float(args[1]) * h), TAG_COLORS.get(args[2], TAG_COLORS["green"])
+            k = min(u / 0.25, 1.0)  # sweeps across left to right
+            for x in range(0, int(w * k), 62):
+                d.rectangle((x, y - 4, x + 38, y + 4), fill=col + (255,))
+        else:
+            y, size, col = float(args[1]), float(args[2]), TAG_COLORS.get(args[3], TAG_COLORS["white"])
+            text = " ".join(args[4:])
+            font = ImageFont.truetype(NOTE_FONT, max(12, int(w * size)))
+            while d.textlength(text, font=font) > w * 0.9 and font.size > 20:
+                font = ImageFont.truetype(NOTE_FONT, font.size - 4)
+            d.text((w / 2, h * y), text, font=font, fill=col + (255,), anchor="mm",
+                   stroke_width=max(3, font.size // 10), stroke_fill=(15, 15, 30, 255))
+            k = 1.0 + 0.45 * max(0.0, 1 - u / 0.12)
+            if k != 1.0:
+                lw, lh = int(w * k), int(h * k)
+                cy = h * y
+                layer = layer.resize((lw, lh), Image.BILINEAR).crop(
+                    ((lw - w) // 2, int(cy * k - cy), (lw - w) // 2 + w, int(cy * k - cy) + h))
+        im.alpha_composite(layer)
+    return np.asarray(im.convert("RGB"))
+
+
 def card_at(t, cues):
     """The number card showing at time t, as (text, colour, seconds into the card), or None."""
     for c, kind, args in cues:
@@ -214,6 +259,8 @@ def render(frame, w, h, s, card=None):
     if zoom != 1 or dx or dy:
         cw, ch = w / zoom, h / zoom
         cx, cy = w / 2 - dx * w, h / 2 - dy * h
+        if KEEP is not None:  # zoom around the protected row so it lines up
+            cy = KEEP * h - (KEEP * h - h / 2) / zoom - dy * h
         box = (cx - cw / 2, cy - ch / 2, cx + cw / 2, cy + ch / 2)
         # Fill anything outside the frame with the board colour, not black.
         big = Image.new("RGB", (w * 3, h * 3), tuple(int(v) for v in frame[4, 4]))
@@ -224,6 +271,11 @@ def render(frame, w, h, s, card=None):
         im = im.resize((max(1, w // f), h), Image.BILINEAR).resize((w, h), Image.BILINEAR)
     if blur > 0.5:
         im = im.filter(ImageFilter.GaussianBlur(blur))
+    if KEEP is not None:
+        out, top, feather = np.asarray(im).astype(np.float32), int(KEEP * h), 30
+        a = np.clip((np.arange(h) - top + feather) / feather, 0, 1)[:, None, None]
+        out = out * (1 - a) + frame.astype(np.float32) * a
+        im = Image.fromarray(out.astype(np.uint8))
     if flash > 0:
         im = Image.blend(im, Image.new("RGB", (w, h), "white"), min(flash, 1.0))
     return np.asarray(im)
@@ -256,7 +308,7 @@ def main(src, cue_file, out, audio=None):
         still = image_at(i / fps, cues, w, h)
         if still is not None:
             frame = still
-        enc.stdin.write(np.ascontiguousarray(draw_notes(np.ascontiguousarray(render(frame, w, h, state(i / fps, cues), card_at(i / fps, cues))), i / fps, cues, w, h)).tobytes())
+        enc.stdin.write(np.ascontiguousarray(draw_tags(draw_notes(np.ascontiguousarray(render(frame, w, h, state(i / fps, cues), card_at(i / fps, cues))), i / fps, cues, w, h), i / fps, cues, w, h)).tobytes())
         i += 1
     enc.stdin.close()
     enc.wait()
@@ -268,6 +320,10 @@ def main(src, cue_file, out, audio=None):
 if __name__ == "__main__":
     argv = sys.argv[1:]
     audio = None
+    if "--keep-bottom" in argv:
+        k = argv.index("--keep-bottom")
+        KEEP = float(argv[k + 1])
+        del argv[k:k + 2]
     if "--audio" in argv:
         k = argv.index("--audio")
         audio = argv[k + 1]

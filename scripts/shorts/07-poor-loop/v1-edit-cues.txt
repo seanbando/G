@@ -1,0 +1,27 @@
+# Edit pass on the v1 style test (captions already burned in -> run with --keep-bottom 0.85)
+1.3 punch
+4.9 punch
+26.0 shake 0.3
+26.0 tag 27.6 0.31 0.11 red $60 FEE
+27.0 push 33.1 1.12
+30.0 punch
+33.7 shake 0.3
+33.7 tag 35.6 0.31 0.11 red CREDIT ↓
+35.8 shake 0.3
+35.8 tag 36.9 0.31 0.11 red INSURANCE ↑
+36.9 focus 39.1 1.9 0.5 0.5          # cockpit close-up on YOU, "every launch gets heavier"
+42.2 punch
+42.2 tag 43.6 0.66 0.11 red STILL SHORT
+46.3 tag 47.9 0.31 0.11 green + CUSHION
+46.7 push 49.1 1.1
+49.4 shake 0.3
+49.5 tag 51.1 0.31 0.11 green JUST A BILL
+51.3 flash
+51.3 shake 0.45
+51.45 dash 52.4 0.197 green
+51.45 tag 52.4 0.33 0.14 green FREE!
+52.4 zoomthru
+52.6 push 59.1 1.08
+53.7 punch
+56.5 punch
+58.15 image 59.1 scripts/shorts/07-poor-loop/video/end-hold.png
