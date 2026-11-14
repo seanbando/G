@@ -272,7 +272,7 @@ def render(frame, w, h, s, card=None):
     if blur > 0.5:
         im = im.filter(ImageFilter.GaussianBlur(blur))
     if KEEP is not None:
-        out, top, feather = np.asarray(im).astype(np.float32), int(KEEP * h), 30
+        out, top, feather = np.asarray(im).astype(np.float32), int(KEEP * h), 15
         a = np.clip((np.arange(h) - top + feather) / feather, 0, 1)[:, None, None]
         out = out * (1 - a) + frame.astype(np.float32) * a
         im = Image.fromarray(out.astype(np.uint8))

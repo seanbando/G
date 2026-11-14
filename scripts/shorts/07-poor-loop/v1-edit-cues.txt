@@ -1,4 +1,4 @@
-# Edit pass on the v1 style test (captions already burned in -> run with --keep-bottom 0.85)
+# Edit pass on the v1 style test (captions already burned in -> run with --keep-bottom 0.875)
 1.3 punch
 4.9 punch
 26.0 shake 0.3
