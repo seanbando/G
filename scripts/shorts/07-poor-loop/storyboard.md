@@ -20,3 +20,7 @@ Recurring: YOU (reference sheet: glasses, black suit) as the rocket pilot; YOU's
 Caption question: "What's still chained to your rocket? 👇" Share line: "Send this to someone who keeps falling back to Earth 🚀"
 
 Golpo cautions (lessons from earlier renders): keep YOU visible in boards 2, 4, 9, 10 (patch with a composite if the camera crops him); text labels must use the allowed-words list; board 3 has no YOU on purpose (pure concept shot).
+
+## v1 (made in another chat): style test
+Flat vector, dark space look instead of whiteboard, on purpose as a one-off test (creator decision). Compare its 3 s hold, skip rate and average watch time against the whiteboard shorts before choosing a style.
+v1 review: audio -14 LUFS, no dead gaps, about 187 wpm. Fix list: payoff chain snap only about 1 s, never crosses the escape line; empty end 0:57-0:59; static chained rocket 0:27-0:38; labels too small for a phone; YOU only a tiny face in the window.
