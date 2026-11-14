@@ -33,7 +33,8 @@ Timed to `voiceover-full.mp3` (**18:04.24**). Shot numbers and file names match 
 | 22 | 3:11.89 | 3:14.54 | It went off at about | 22 bench highlight.mp4 |
 | 23 | 3:14.54 | 3:16.84 | Three pipe bombs, packed with nails  (blast clip, no gap yet) | 23 blast.mp4 |
 | 24 | 3:16.84 | 3:30.77 | Alice Hawthorne, 44 | 24 hawthorne.jpg |
-| 25 | 3:30.77 | 3:45.26 | Melih Uzunyol | 25 uzunyol.jpg |
+| 25 | 3:30.77 | 3:42.12 | Melih Uzunyol | 25 uzunyol.jpg |
+| 26a | 3:42.12 | 3:45.26 | For three days, Richard Jewell was a hero | 26a hero headline.mp4 |
 | 26 | 3:45.26 | 3:53.11 | He went on the Today show | 26 today show.mp4 |
 | 27 | 3:53.11 | 4:04.65 | the headline said the FBI suspected | 27 ajc front page.mp4 |
 | 28 | 4:04.65 | 4:18.35 | campus police officer at Piedmont College | 28 piedmont.jpg |

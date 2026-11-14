@@ -18,6 +18,7 @@ Scenes A–J (stills + clips) cover: 03, 05, 08, 19, 20, 46, 47, 53 (partly), 58
 ## Still to FIND: real footage (news-first)
 | Shot | What |
 |---|---|
+| 26a | ✓ "Guard's alertness in park makes him an unexpected hero" headline (creator found it): grab the clip it came from |
 | 26 | Jewell on the Today show, July 1996 (short clip or still) |
 | 27 | AJC special edition front page, July 30, 1996 |
 | 30 | Apartment search news clip, Aug 1996 |

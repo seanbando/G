@@ -23,6 +23,7 @@
 23|CLIP:blast>Three pipe bombs, packed with nails|23 blast.mp4
 24|Alice Hawthorne, 44|24 hawthorne.jpg
 25|Melih Uzunyol|25 uzunyol.jpg
+26a|For three days, Richard Jewell was a hero|26a hero headline.mp4
 26|He went on the Today show|26 today show.mp4
 27|the headline said the FBI suspected|27 ajc front page.mp4
 28|campus police officer at Piedmont College|28 piedmont.jpg
