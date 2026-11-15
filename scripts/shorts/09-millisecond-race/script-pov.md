@@ -4,11 +4,11 @@ You're a fiber cable from Chicago to New Jersey, an estimated three hundred mill
 
 YOU: Wait, who pays that much for three milliseconds?
 
-Trading firms, because when a price moves in Chicago, firms using you can react in New Jersey before a rival's order gets there.
+Trading firms, because when a price moves in Chicago, they can react in New Jersey before a rival's order gets there.
 
-Older cables followed the railroads, but you cut the straightest path, so in twenty ten you made the round trip in about thirteen milliseconds.
+Older cables followed the railroads, but you cut the straightest path, making the round trip in about thirteen milliseconds in twenty ten.
 
-You're the fastest line between those markets, until microwave towers show up, because a signal through the air beats light through your glass.
+You're the fastest line around, until microwave towers beat you, because a signal through the air beats light through your glass.
 
 In twenty seventeen, Zayo agreed to buy the company that built you for one hundred twenty-seven million dollars.
 
