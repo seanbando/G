@@ -17,11 +17,12 @@ seg(50.10, 53.86, src="07 wanted poster clip.mp4")                              
 seg(53.86, 58.28, src="J clip.mp4")                                                     # "Helicopters with heat cameras"
 seg(58.28, 63.62, number=dict(value=200, suffix="+", label="FEDERAL AGENTS", land=59.64 - 58.28 + 0.5))  # "At one point… 200 federal agents"
 seg(63.62, 67.54, src="10 rudolph clip.mp4", tag=["ERIC RUDOLPH", "The Olympic Park bomber"])  # "His real name was Eric Rudolph"
-seg(67.54, 70.14, src="23e live tv - word of an explosion.mp4", **{"in": 0.5})         # "after a bomb went off at the Atlanta Olympics"
-seg(70.14, 74.68, src="30b media scrum 1996.mp4", **{"in": 1.0})                       # "the FBI had spent 88 days chasing someone else"
+# News-footage balance (creator, Nov 15): real footage only where it IS the thing named, short, rest original.
+seg(67.54, 70.14, src="23e live tv - word of an explosion.mp4")                       # "after a bomb went off at the Atlanta Olympics" (2.6 s of the real 1996 live report)
+seg(70.14, 74.68, number=dict(value=88, suffix=" DAYS", label="CHASING THE WRONG MAN", land=71.42 - 70.14 + 0.5))  # "the FBI had spent 88 days chasing someone else"
 seg(74.68, 81.59, card=[["WHY WAS HE SO", "big"], ["HARD TO CATCH?", "big"]])         # "So why was he so hard to catch?… three"
 seg(81.59, 86.20, card=[["1 · THE WRONG MAN", "type"], ["88 DAYS", "amber"]])          # "For the first 88 days… the wrong man"
-seg(86.20, 92.06, src="26c jewell on cnn as the hero.mp4")                             # "the guard who'd helped save people"
+seg(86.20, 92.06, src="C clip.mp4", **{"in": 1.0})                                     # "the guard who'd helped save people that night" (C = clearing the crowd)
 seg(92.06, 95.79, card=[["2 · NO NAME", "type"], ["18 MONTHS", "amber"]])              # "Then for a year and a half… didn't have a name"
 seg(95.79, 99.10, src="L05 nantahala.mp4")                                              # "he walked into a place…"
 seg(99.10, 100.62, card=[["3 · BUILT FOR HIDING", "type"], ["5 YEARS", "amber"]], bg="L05 nantahala.mp4")  # "built for hiding"

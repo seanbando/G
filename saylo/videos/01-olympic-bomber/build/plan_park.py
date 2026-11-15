@@ -22,16 +22,16 @@ seg(175.64, 181.32, src="D clip.mp4")                                           
 seg(181.32, 186.00, effect="map-callout", ov={"title": "CENTENNIAL OLYMPIC PARK", "images": ["Centennial Park Bomb Map.jpg"], "accent": "#E0A040"})  # "According to later reporting… routing the warning"
 seg(186.00, 190.52, card=[["THE PARK'S ADDRESS", "type"], ["WASN'T IN THE 911 SYSTEM", "amber"]])  # "the park's address wasn't in her system"
 seg(190.52, 194.60, card=[["WARNING: 30 MINUTES", "type"], ["BLAST: ~1:20 AM", "amber"]])  # "He said 30 minutes. It went off at about 1:20."
-seg(194.60, 197.46, src="23e live tv - word of an explosion.mp4", **{"in": 0.3})  # "Three pipe bombs, packed with nails"
+seg(194.60, 197.46, src="23 bomb scene clip.mp4")                                 # "Three pipe bombs, packed with nails" (no third-party news footage)
 seg(197.46, 204.26, src="24 hawthorne clip.mp4", tag=["ALICE HAWTHORNE", "Albany, Georgia, age 44"])  # "Alice Hawthorne, 44, from Albany"
 seg(204.26, 206.80, card=[["FALLON HAWTHORNE, 14", "type"], ["INJURED", "amber"]])  # "her 14-year-old daughter, Fallon"
 seg(206.80, 211.04, card=[["MORE THAN 100", "amber"], ["OTHERS INJURED", "type"]])  # "Over a hundred other people were injured"
 seg(211.04, 215.54, src="25 uzunyol clip.mp4", tag=["MELIH UZUNYOL", "Turkish TV cameraman"])  # "Melih Uzunyol"
 seg(215.54, 222.16, src="23c investigators sort debris 1996-07-28.jpg", motion="pan_left")  # "Investigators said afterward…"
-seg(222.16, 226.08, effect="news-image", ov={"title": "GUARD'S ALERTNESS IN PARK MAKES HIM AN UNEXPECTED HERO", "subtitle": "JULY 28, 1996", "label": "GANNETT NEWS SERVICE", "images": ["16c jewell talking to reporters 1996-07-28.jpg"], "accent": "#E0A040", "background": "#0B0D10"})  # "For three days, Richard Jewell was a hero"
-seg(226.08, 227.94, src="26c jewell on cnn as the hero.mp4")                    # "He went on the Today show"
-seg(227.94, 233.94, src="27b newsstand - fbi has a suspect.mp4")                # "July 30th… a special edition"
-seg(233.94, 240.01, src="27b2 ajc headline close.mp4", **{"in": 0.5})           # "the FBI suspected the 'hero' guard may have planted the bomb" (the real AJC headline, word for word)
+seg(222.16, 227.94, effect="news-image", ov={"title": "GUARD'S ALERTNESS IN PARK MAKES HIM AN UNEXPECTED HERO", "subtitle": "JULY 28, 1996", "label": "GANNETT NEWS SERVICE", "images": ["16c jewell talking to reporters 1996-07-28.jpg"], "accent": "#E0A040", "background": "#0B0D10"})  # "For three days, Richard Jewell was a hero"
+# (hero headline above runs through "He went on the Today show"; no third-party news footage, creator Nov 15)
+seg(227.94, 233.94, src="27b newsstand - fbi has a suspect.mp4")                # "July 30th… a special edition" (6 s of the real AJC front page: set up, then our card breaks it down)
+seg(233.94, 240.01, card=[["“FBI SUSPECTS", "big"], ["‘HERO’ GUARD MAY", "big"], ["HAVE PLANTED BOMB”", "big"]])  # "the FBI suspected the 'hero' guard may have planted the bomb"
 
 MUSIC = [dict(start=111.0, end=196.0, bed="bed-B.mp3", gain=-19), dict(start=194.5, end=224.0, bed="bed-C.mp3", gain=-17),
          dict(start=222.0, end=240.01, bed="bed-B.mp3", gain=-19)]
