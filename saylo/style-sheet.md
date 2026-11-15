@@ -116,6 +116,8 @@ Never use a transition inside the silent Jewell hold or on archival news clips.
 
 **The Saylo look (locked Nov 15, 2026, after the style test):** the creator's Template Library effects carry the stills: case board / evidence wall (connections), press stack and article zoom (headlines, documents), film window (archival photos), photo timeline (sequences of dated photos), clock badge and territory/date maps (times and places), archive profiles (people). Plain photos with a push-in are only quick 2–3 s cutaways between them. Moving AI recreations (faceless, 5 s, same look as scenes A–J) cover beats with no real footage; real news footage always wins when it exists. Engine: `node .claude/effects/render_effect.mjs` from the Template Library (see `saylo/tools` notes).
 
+**100% rule (creator, Nov 15, 2026): the picture always shows what the narration is saying at that exact moment.** Shots are cut on word-level timestamps (`vo-words.json`), never on sentence or chunk timing. A clip made for one line is never reused under a different line it doesn't match (e.g. the dumpster-raid scene only plays under "go through the trash", never under "the man bolts"). If no matching visual exists for a line, use a typed card or a matching effect, and list the gap for the creator. Every asset the creator made (scenes A–J and later, animated location clips) gets used on the line it was made for.
+
 Every script gets a shot list (`videos/NN-slug/shot-list.md`) before editing: one row per beat with visual, source, motion, transition and music cue.
 
 ## 9. WORKFLOW
