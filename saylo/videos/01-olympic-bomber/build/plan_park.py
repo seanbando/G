@@ -31,7 +31,7 @@ seg(215.54, 222.16, src="23c investigators sort debris 1996-07-28.jpg", motion="
 seg(222.16, 227.94, effect="news-image", ov={"title": "GUARD'S ALERTNESS IN PARK MAKES HIM AN UNEXPECTED HERO", "subtitle": "JULY 28, 1996", "label": "GANNETT NEWS SERVICE", "images": ["16c jewell talking to reporters 1996-07-28.jpg"], "accent": "#E0A040", "background": "#0B0D10"})  # "For three days, Richard Jewell was a hero"
 # (hero headline above runs through "He went on the Today show"; no third-party news footage, creator Nov 15)
 seg(227.94, 233.94, src="27b newsstand - fbi has a suspect.mp4")                # "July 30th… a special edition" (6 s of the real AJC front page: set up, then our card breaks it down)
-seg(233.94, 240.01, card=[["“FBI SUSPECTS", "big"], ["‘HERO’ GUARD MAY", "big"], ["HAVE PLANTED BOMB”", "big"]])  # "the FBI suspected the 'hero' guard may have planted the bomb"
+seg(233.94, 240.01, effect="film-window", ov={"images": ["Richard Jewell, 1996.png"], "background": "#0B0D10"})  # creator note #5: Jewell holding the real AJC headline  # "the FBI suspected the 'hero' guard may have planted the bomb"
 
 MUSIC = [dict(start=111.0, end=196.0, bed="bed-B.mp3", gain=-19), dict(start=194.5, end=224.0, bed="bed-C.mp3", gain=-17),
          dict(start=222.0, end=240.01, bed="bed-B.mp3", gain=-19)]
