@@ -2,9 +2,12 @@
 # part-1 feedback: every cut starts on the word it illustrates (times = first word of the phrase in the comment).
 S = []
 def seg(a, b, **k): S.append(dict(start=a, end=b, **k))
-seg(0.00, 4.50, card=[["MAY 31, 2003", "type"], ["3:30 AM", "amber"], ["MURPHY, NORTH CAROLINA", "type"]], bg="loc-murphy-street.png")
-seg(4.50, 12.36, src="loc-murphy-street.png", motion="push_in", fx=("fog", "flicker"))   # "Murphy, North Carolina… a mountain town" (no L01 clip)
-seg(12.36, 17.38, src="K clip.mp4")                                                     # "the occasional patrol car" / "The officer in that car"
+# Hook re-cut (creator note: first 20 s was the same street + parked car). One shot per phrase, street only from 8.9 s.
+seg(0.00, 4.50, card=[["MAY 31, 2003", "type"], ["3:30 AM", "amber"]])                 # "3:30 in the morning. May 31st, 2003."
+seg(4.50, 8.90, effect="date-center", ov={"title": "MURPHY, NORTH CAROLINA", "subtitle": "A MOUNTAIN TOWN OF ABOUT 1,600", "backgroundImage": "loc-nantahala.jpg", "foreground": "#F3F1E9"})  # "Murphy, North Carolina, a mountain town of about 1,600 people"
+seg(8.90, 11.10, src="loc-murphy-street.png", motion="pull_out", fx=("fog", "flicker"))  # "where, at that hour" (no L01 clip)
+seg(11.10, 14.32, src="K clip.mp4")                                                     # "the only thing moving is the occasional patrol car"
+seg(14.32, 17.38, src="04b postell clip.mp4", **{"in": 1.0})                            # "The officer in that car is 21 years old"
 seg(17.38, 21.92, src="04 postell clip.mp4", tag=["JEFF POSTELL", "Murphy police officer, age 21"])  # "His name is Jeff Postell"
 seg(21.92, 24.28, src="05 save a lot clip.mp4", crop="1220:686:300:150")               # "swings around behind the Save-A-Lot"
 seg(24.28, 25.66, src="L02 savealot backlot.mp4")                                       # "with his lights off"
@@ -31,7 +34,7 @@ seg(100.62, 111.06, card=[["COURT RECORDS · FBI CASE HISTORY", "small"], ["JUST
 MUSIC = [dict(start=0, end=74.7, bed="bed-A.mp3", gain=-17), dict(start=74.0, end=112.46, bed="bed-B.mp3", gain=-19)]
 SFX = [
     (0.15, "sfx-typewriter-keys-long.mp3", -16), (0.1, "sfx-night-forest.mp3", -24),
-    (12.4, "sfx-car-idle-gravel.mp3", -18), (30.7, "sfx-gravel-footsteps.mp3", -14),
+    (11.1, "sfx-car-idle-gravel.mp3", -18), (30.7, "sfx-gravel-footsteps.mp3", -14),
     (35.8, "sfx-typewriter-keys-medium.mp3", -16), (42.0, "sfx-typewriter-keys-short.mp3", -16),
     (25.7, "sfx-flashlight-click.mp3", -10), (50.1, "sfx-paper-slide.mp3", -14), (53.8, "sfx-helicopter-distant.mp3", -16),
     (58.3, "sfx-typewriter-keys-medium.mp3", -16), (61.6, "sfx-riser.mp3", -14), (63.6, "sfx-boom-hit.mp3", -10),
