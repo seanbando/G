@@ -48,8 +48,9 @@ seg(380.33, 382.03, card=[["NOT A PROFILE", "type"]])                           
 seg(382.03, 384.41, effect="stacked-highlight", ov={"title": "A CLOCK|AND A MAP", "backgroundImage": "Centennial Park Bomb Map.jpg", "accent": AMBER})  # "It needed a clock and a map."
 seg(384.41, 389.03, card=[["OCTOBER 26, 1996", "type"], ["DAY 88", "amber"]])     # "On October 26th, 1996, 88 days in"
 seg(389.03, 394.23, effect="paper-typewriter", ov={"title": "NOT CONSIDERED A TARGET"})  # "the U.S. Attorney's office sent his lawyers a letterâ€¦ no longer a target"
-seg(394.23, 399.25, src="37 reno clip.mp4", tag=["JANET RENO", "U.S. Attorney General"])  # "Attorney General Janet Reno later saidâ€¦ sorry about the leak"
-seg(399.25, 403.99, src="36e jewell walks past truck 1996.mp4")  # "That's three monthsâ€¦ on the wrong man"
+seg(394.23, 399.00, src="37 reno clip.mp4", tag=["JANET RENO", "U.S. Attorney General"])  # "Attorney General Janet Reno later saidâ€¦ sorry about the leak"
+# BITE 399.00: Jewell's Oct 28, 1996 press conference, "the FBI trampled on my rights as a citizen"
+seg(399.00, 403.99, src="36e jewell walks past truck 1996.mp4")  # "That's three monthsâ€¦ on the wrong man"
 seg(403.99, 407.12, src="loc-sandy-springs.png", motion="push_in", fx=("fog", "flicker"))  # "And the real bomber wasn't finished."
 
 MUSIC = [dict(start=240.0, end=346.0, bed="bed-B.mp3", gain=-19), dict(start=344.5, end=386.0, bed="bed-C.mp3", gain=-18),
@@ -71,3 +72,5 @@ CUES = """240.01 whip right
 363.45 punch
 368.53 whip left
 """
+# News bite: narration pauses, the real clip plays with its own sound (see build_part1.py)
+BITES = [dict(at=399.00, src="bite jewell fbi trampled my rights 1996.mp4", dur=4.4)]

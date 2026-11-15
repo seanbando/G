@@ -21,13 +21,15 @@ seg(170.16, 175.64, effect="clock-badge", ov={"title": "12:58 AM", "subtitle": "
 seg(175.64, 181.32, src="D clip.mp4")                                            # "A man, very calm, says there's a bomb"
 seg(181.32, 186.00, effect="map-callout", ov={"title": "CENTENNIAL OLYMPIC PARK", "images": ["Centennial Park Bomb Map.jpg"], "accent": "#E0A040"})  # "According to later reporting… routing the warning"
 seg(186.00, 190.52, card=[["THE PARK'S ADDRESS", "type"], ["WASN'T IN THE 911 SYSTEM", "amber"]])  # "the park's address wasn't in her system"
-seg(190.52, 194.60, card=[["WARNING: 30 MINUTES", "type"], ["BLAST: ~1:20 AM", "amber"]])  # "He said 30 minutes. It went off at about 1:20."
-seg(194.60, 197.46, src="23 bomb scene clip.mp4")                                 # "Three pipe bombs, packed with nails" (no third-party news footage)
+seg(190.52, 194.40, card=[["WARNING: 30 MINUTES", "type"], ["BLAST: ~1:20 AM", "amber"]])  # "He said 30 minutes. It went off at about 1:20."
+# BITE 194.40: AP eyewitness that night, "I saw the smoke, there's like a little tower over there"
+seg(194.40, 197.46, src="23 bomb scene clip.mp4")                                 # "Three pipe bombs, packed with nails" (no third-party news footage)
 seg(197.46, 204.26, src="24 hawthorne clip.mp4", tag=["ALICE HAWTHORNE", "Albany, Georgia, age 44"])  # "Alice Hawthorne, 44, from Albany"
 seg(204.26, 206.80, card=[["FALLON HAWTHORNE, 14", "type"], ["INJURED", "amber"]])  # "her 14-year-old daughter, Fallon"
-seg(206.80, 211.04, card=[["MORE THAN 100", "amber"], ["OTHERS INJURED", "type"]])  # "Over a hundred other people were injured"
-seg(211.04, 215.54, src="25 uzunyol clip.mp4", tag=["MELIH UZUNYOL", "Turkish TV cameraman"])  # "Melih Uzunyol"
-seg(215.54, 222.16, src="23c investigators sort debris 1996-07-28.jpg", motion="pan_left")  # "Investigators said afterward…"
+seg(206.80, 211.04, src="ap aerial ambulances 1996 b.mp4")                        # "Over a hundred other people were injured" (real AP aerial, responders on the street)
+seg(211.04, 215.30, src="25 uzunyol clip.mp4", tag=["MELIH UZUNYOL", "Turkish TV cameraman"])  # "Melih Uzunyol"
+# BITE 215.30: President Clinton, "The bombing at Centennial Olympic Park this morning was an evil act of terror."
+seg(215.30, 222.16, src="ap street closed 1996.mp4")                               # "Investigators said afterward that the evacuation…" (real AP, park sealed off)
 seg(222.16, 227.94, effect="news-image", ov={"title": "GUARD'S ALERTNESS IN PARK MAKES HIM AN UNEXPECTED HERO", "subtitle": "JULY 28, 1996", "label": "GANNETT NEWS SERVICE", "images": ["16c jewell talking to reporters 1996-07-28.jpg"], "accent": "#E0A040", "background": "#0B0D10"})  # "For three days, Richard Jewell was a hero"
 # (hero headline above runs through "He went on the Today show"; no third-party news footage, creator Nov 15)
 seg(227.94, 233.94, src="27b newsstand - fbi has a suspect.mp4")                # "July 30th… a special edition" (6 s of the real AJC front page: set up, then our card breaks it down)
@@ -40,12 +42,15 @@ SFX = [(111.1, "sfx-typewriter-keys-medium.mp3", -15), (111.1, "sfx-typewriter-d
        (145.8, "sfx-typewriter-keys-short.mp3", -15), (148.6, "sfx-low-hit.mp3", -16), (155.8, "sfx-typewriter-keys-medium.mp3", -15),
        (170.2, "sfx-clock-tick.mp3", -12), (175.7, "sfx-payphone-pickup.mp3", -14),
        (181.3, "sfx-whoosh.mp3", -16), (186.0, "sfx-typewriter-keys-medium.mp3", -15), (190.5, "sfx-clock-ticking.mp3", -14),
-       (194.6, "sfx-boom-hit.mp3", -8), (204.3, "sfx-typewriter-keys-short.mp3", -16), (206.8, "sfx-typewriter-keys-short.mp3", -16),
+       (194.38, "sfx-boom-hit.mp3", -8), (204.3, "sfx-typewriter-keys-short.mp3", -16),
        (222.2, "sfx-whoosh.mp3", -16), (227.9, "sfx-paper-slide.mp3", -14), (233.9, "sfx-paper-slide.mp3", -14)]
 CUES = """111.06 whip right
 119.98 whip left
 170.16 whip right
-194.60 flash
-194.61 shake 0.3
+194.38 flash
+194.39 shake 0.3
 222.16 whip right
 """
+# News bites: narration pauses, the real clip plays with its own sound (see build_part1.py)
+BITES = [dict(at=194.40, src="bite ap witness smoke 1996.mp4", dur=5.0),
+         dict(at=215.30, src="bite clinton evil act of terror 1996.mp4", dur=4.45)]

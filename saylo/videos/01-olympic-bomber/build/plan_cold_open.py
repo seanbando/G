@@ -17,11 +17,13 @@ seg(35.74, 41.98, card=[['"JERRY WILSON"', "type"], ["HOMELESS", "type"], ["FROM
 seg(41.98, 47.02, card=[['"JERRY WILSON"', "type"], ["IT'S A LIE", "amber"]])         # "It's a lie, and a pretty good one."
 seg(47.02, 50.10, src="A clip.mp4", **{"in": 4.5})                                      # "the man standing in that parking lot"
 seg(50.10, 53.86, src="07 wanted poster clip.mp4")                                      # "Ten Most Wanted"
-seg(53.86, 58.28, src="J clip.mp4")                                                     # "Helicopters with heat cameras"
-seg(58.28, 63.62, number=dict(value=200, suffix="+", label="FEDERAL AGENTS", land=59.64 - 58.28 + 0.5))  # "At one point… 200 federal agents"
+seg(53.86, 56.10, src="wyff helicopter search 1998.mp4")                               # "Helicopters with heat cameras" (real search footage, WYFF)
+seg(56.10, 58.28, src="J clip.mp4")                                                     # "had flown over these exact hills looking for him"
+seg(58.28, 59.64, src="wyff search team woods 1998.mp4", **{"in": 0.9})                 # "At one point more than" (real search team + dog, WYFF)
+seg(59.64, 63.62, number=dict(value=200, suffix="+", label="FEDERAL AGENTS", land=0.4))  # "200 federal agents"
 seg(63.62, 67.54, src="10 rudolph clip.mp4", tag=["ERIC RUDOLPH", "The Olympic Park bomber"])  # "His real name was Eric Rudolph"
 # News-footage balance (creator, Nov 15): real footage only where it IS the thing named, short, rest original.
-seg(67.54, 70.14, src="23e live tv - word of an explosion.mp4")                       # "after a bomb went off at the Atlanta Olympics" (2.6 s of the real 1996 live report)
+seg(67.54, 70.14, src="ap street after the blast 1996.mp4", **{"in": 1.8})            # "after a bomb went off at the Atlanta Olympics" (real AP footage, that night)
 seg(70.14, 74.68, number=dict(value=88, suffix=" DAYS", label="CHASING THE WRONG MAN", land=71.42 - 70.14 + 0.5))  # "the FBI had spent 88 days chasing someone else"
 seg(74.68, 81.59, card=[["WHY WAS HE SO", "big"], ["HARD TO CATCH?", "big"]])         # "So why was he so hard to catch?… three"
 seg(81.59, 86.20, card=[["1 · THE WRONG MAN", "type"], ["88 DAYS", "amber"]])          # "For the first 88 days… the wrong man"

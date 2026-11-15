@@ -228,7 +228,10 @@ def main(argv):
         seg.setdefault("motion", MOTIONS[i % len(MOTIONS)])
         if seg["end"] <= t0 or seg["start"] >= t1:
             continue
-        p = os.path.join(parts_dir, f"{i:04d}.mp4")
+        # cache key = the segment's own content, so moving or re-timing other shots never invalidates this one
+        import hashlib
+        key = hashlib.sha1(json.dumps({k: v for k, v in seg.items() if k != "start"}, sort_keys=True).encode()).hexdigest()[:10]
+        p = os.path.join(parts_dir, f"{i:04d}_{key}.mp4")
         if not os.path.exists(p):
             print(f"render {i:04d} {seg['start']:.1f}-{seg['end']:.1f} {seg.get('src') or 'card'}", flush=True)
             render_segment(seg, plan["assets"], p, os.path.join(parts_dir, f"_{i:04d}"))
