@@ -2,7 +2,7 @@
 # Re-cut Nov 15, 2026 on word timestamps (vo-words.json): each cut starts on the word in its comment.
 S = []
 def seg(a, b, **k): S.append(dict(start=a, end=b, **k))
-seg(111.06, 112.56, effect="chapter-type", ov={"title": "The Park", "background": "#0B0D10", "foreground": "#F3F1E9"})
+seg(111.06, 112.56, card=[["THE PARK", "big"]])  # note #8: chapter-type needs 3 s+, this slot is 1.5 s
 seg(112.56, 119.98, effect="date-center", ov={"title": "JULY 27, 1996", "subtitle": "CENTENNIAL OLYMPIC PARK  ·  ATLANTA", "backgroundImage": "loc-olympic-park-1996.png", "foreground": "#F3F1E9"})  # "Saturday, July 27th, 1996"
 seg(119.98, 123.74, src="L03 olympic park.mp4")                                  # "Centennial Olympic Park was where you went"
 seg(123.74, 126.24, src="M clip.mp4", **{"in": 0.0})                             # "A little after midnight… thousands of people" (first 2.5 s only)
@@ -14,7 +14,7 @@ seg(141.00, 145.74, effect="film-window", ov={"images": ["16b jewell talking to 
 seg(145.74, 148.50, card=[["JULY 27, 1996", "type"], ["SHORTLY BEFORE 1 AM", "amber"]])  # "Shortly before one in the morning"
 seg(148.50, 152.58, src="B clip.mp4")                                            # "a green military-style backpack under a bench"
 seg(152.58, 155.78, src="18 backpack replica clip.mp4")                          # "Nobody's sitting there…"
-seg(155.78, 161.52, card=[["JEWELL ALERTS GBI OFFICERS", "type"], ["BOMB SQUAD CALLED", "amber"]])  # "Jewell points it out… calls the bomb squad"
+seg(155.78, 161.52, src="film jewell alerts the tower 2019.mp4", tag=["DRAMATIZATION", "Richard Jewell (2019 film)"])  # creator note #9: movie footage here (picture only, labeled)  # "Jewell points it out… calls the bomb squad"
 seg(161.52, 165.78, src="C clip.mp4")                                            # "Jewell starts helping push people back"
 seg(165.78, 170.16, src="L03 olympic park.mp4", **{"in": 7.0})                   # "you try telling a crowd at 1 a.m."
 seg(170.16, 175.64, effect="clock-badge", ov={"title": "12:58 AM", "subtitle": "JULY 27, 1996", "backgroundImage": "loc-payphone-1996.png", "accent": "#E0A040"})  # "At 12:58… a payphone"
@@ -39,8 +39,7 @@ MUSIC = [dict(start=111.0, end=196.0, bed="bed-B.mp3", gain=-19), dict(start=194
          dict(start=222.0, end=240.01, bed="bed-B.mp3", gain=-19)]
 SFX = [(111.1, "sfx-typewriter-keys-medium.mp3", -15), (111.1, "sfx-typewriter-ding.mp3", -16),
        (120.0, "sfx-crowd-concert.mp3", -22), (126.3, "sfx-crowd-concert.mp3", -22),
-       (145.8, "sfx-typewriter-keys-short.mp3", -15), (148.6, "sfx-low-hit.mp3", -16), (155.8, "sfx-typewriter-keys-medium.mp3", -15),
-       (170.2, "sfx-clock-tick.mp3", -12), (175.7, "sfx-payphone-pickup.mp3", -14),
+       (145.8, "sfx-typewriter-keys-short.mp3", -15), (148.6, "sfx-low-hit.mp3", -16),       (170.2, "sfx-clock-tick.mp3", -12), (175.7, "sfx-payphone-pickup.mp3", -14),
        (181.3, "sfx-whoosh.mp3", -16), (186.0, "sfx-typewriter-keys-medium.mp3", -15), (190.5, "sfx-clock-ticking.mp3", -14),
        (194.38, "sfx-boom-hit.mp3", -8), (204.3, "sfx-typewriter-keys-short.mp3", -16),
        (222.2, "sfx-whoosh.mp3", -16), (227.9, "sfx-paper-slide.mp3", -14), (233.9, "sfx-paper-slide.mp3", -14)]

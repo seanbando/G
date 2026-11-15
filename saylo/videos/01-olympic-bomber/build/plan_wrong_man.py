@@ -8,7 +8,7 @@ S = []
 def seg(a, b, **k): S.append(dict(start=a, end=b, **k))
 BG = "#0B0D10"; FG = "#F3F1E9"; AMBER = "#E0A040"
 
-seg(240.01, 241.72, effect="chapter-type", ov={"title": "The Wrong Man", "background": BG, "foreground": FG})  # "It started with a tip."
+seg(240.01, 241.72, card=[["THE WRONG MAN", "big"]])  # "It started with a tip."
 seg(241.72, 247.70, card=[["BEFORE THE OLYMPICS", "type"], ["CAMPUS POLICE OFFICER", "type"], ["PIEDMONT COLLEGE · NORTH GEORGIA", "amber"]])  # "Before the Olympicsâ€¦ Piedmont College"
 seg(247.70, 254.22, effect="paper-typewriter", ov={"title": "A TIP FROM THE COLLEGE"})  # "After the bombing, people from the college contacted investigators"
 seg(254.22, 257.28, effect="stacked-highlight", ov={"title": "THE ‘HERO BOMBER’|THEORY", "backgroundImage": "loc-olympic-park-1996.png", "accent": AMBER})  # "That tip pointed the FBI toward a theory"

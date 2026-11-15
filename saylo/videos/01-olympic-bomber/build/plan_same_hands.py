@@ -4,7 +4,7 @@ S = []
 def seg(a, b, **k): S.append(dict(start=a, end=b, **k))
 BG = "#0B0D10"; FG = "#F3F1E9"; AMBER = "#E0A040"
 
-seg(407.12, 410.35, effect="chapter-type", ov={"title": "Same Hands", "background": BG, "foreground": FG})  # "January 16th, 1997."
+seg(407.12, 410.35, card=[["SAME HANDS", "big"]])  # "January 16th, 1997."
 seg(410.35, 414.41, effect="date-center", ov={"title": "JANUARY 16, 1997", "subtitle": "SANDY SPRINGS  ·  NORTH OF ATLANTA", "backgroundImage": "loc-sandy-springs.png", "foreground": FG})  # "A bomb goes off at a building in Sandy Springs"
 seg(414.41, 417.05, src="L08 sandy springs.mp4")                                   # "where an abortion clinic has its offices"
 seg(417.05, 420.63, card=[["POLICE", "type"], ["FIREFIGHTERS", "type"], ["FEDERAL AGENTS", "amber"]], bg="loc-sandy-springs.png")  # "Police show up. Firefighters, federal agents." (note #6: not lights on a door)
