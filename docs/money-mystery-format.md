@@ -98,3 +98,13 @@ The idea decides the opening; beats after the hook (YOU question, mechanism, re-
 | A journey from start to goal | A -> B -> how | "From $0 saved to $1,000 in 90 days." |
 | News / famous name drama (Afterhour) | Contradiction + real name + stakes | "Nvidia didn't lose a war or a customer. It lost $300B over one man." |
 Track "viewed vs. swiped away" per hook type to learn which opening this audience stays for.
+
+## RULE: one structure per video (creator rule, Nov 15 2026)
+Never mix structures. Pick the ONE that fits the idea best and follow its beats only:
+| Structure | Fits when the idea is... | Beats |
+|---|---|---|
+| Money Mystery (ours) | a money paradox about the viewer's own life (minimum payment, broke, paycheck) | paradox hook -> YOU question -> setup -> escalation -> mechanism -> fake-out -> callback lesson + question |
+| Ricks Clips | a strange real story, place or system (weird things behind money, history) | strange act + stake -> "You see" -> doubters -> fake-out -> time jumps -> outcome -> mechanism last / one-line truth (no CTA) |
+| Afterhour Theory | current drama with a famous name or company | contrarian hook + real name -> "But how?" -> you play the company (need -> asset) -> fast list -> twist that pulls the viewer in |
+Hook types (common belief, won't work unless, better way, results first, A to B) are openings inside the chosen structure, not extra structures.
+The recurring character YOU can appear in the drawings of any structure; YOU only speaks a line in Money Mystery.
