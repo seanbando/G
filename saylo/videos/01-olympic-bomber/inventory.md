@@ -54,3 +54,8 @@ Highlights: 22 · 27 · 34 · 42 · 48 · 60 · Push-in: 71 · Split: 83 · End 
 | 60 | George Nordmann interviewed on the news, 1998 | His own account |
 | 70–72 | News coverage the morning of the arrest, May 31, 2003 | Real payoff for the cold open |
 | 75 | Plea hearing coverage, April 2005, and Emily Lyons speaking after | Real ending |
+
+## Update Nov 15: downloaded by Claude
+- Photo pack 2 (sent as zip): 24 AJC archive photos 1996–97 (16b, 16c, 22b, 23b–d, 26a, 26b, 30a, 30c–i, 33b, 41a–g) + Commons 56a, 56b, 70b. Sources/rights: `assets/SOURCES-pack2.md`.
+- 4 AP press-conference cuts (36b, 36c, 37b, 30b): see `research/clip-cuts.md`.
+- Not available: Sandy Springs 1997 photos (none online); 1998 NC newspapers (archive blocks this environment).
