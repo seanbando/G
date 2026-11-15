@@ -20,7 +20,7 @@ seg(442.31, 445.63, card=[["A SECOND DEVICE", "type"], ["THE SAME TRICK", "amber
 seg(445.63, 449.41, card=[["BOMB SQUAD", "type"], ["DEFUSES IT IN TIME", "amber"]], bg="loc-otherside-lounge.png")  # "the bomb squad takes care of it before it goes off" (note #7: no ambulances)
 seg(449.41, 452.73, effect="paper-typewriter", ov={"title": "THE LETTERS"})  # "Letters start showing up at news organizations" (paper-typewriter types ~5 chars/s)
 seg(452.73, 455.29, card=[["SIGNED:", "type"], ["“ARMY OF GOD”", "amber"]])  # "signed 'Army of God,' taking credit"
-seg(455.29, 462.55, effect="case-board", ov={"images": ["loc-olympic-park-1996.png", "loc-sandy-springs.png", "loc-otherside-lounge.png", "41a otherside lounge after the bombing 1997-02-21.jpg", "Replica of Centennial Bombing Backpack.jpg", "Centennial Park Bomb Site.jpg"]})  # "investigators are pretty sure it's one person. Same construction, same habits, same kind of target."
+seg(455.29, 462.55, src="blender H_bombings.mp4")  # 3D hero (build/blender/H_three_bombings.py): the three nights as dated prints  # "investigators are pretty sure it's one person. Same construction, same habits, same kind of target."
 seg(462.55, 468.26, card=[["SUSPECT:", "type"], ["NO NAME", "amber"]])             # "What they don't have is a name… almost another year"
 
 MUSIC = [dict(start=407.0, end=468.26, bed="bed-A.mp3", gain=-18)]

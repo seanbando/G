@@ -20,12 +20,12 @@ seg(50.10, 53.86, src="07 wanted poster clip.mp4")                              
 seg(53.86, 56.10, src="wyff helicopter search 1998.mp4")                               # "Helicopters with heat cameras" (real search footage, WYFF)
 seg(56.10, 58.28, src="J clip.mp4")                                                     # "had flown over these exact hills looking for him"
 seg(58.28, 59.64, src="wyff search team woods 1998.mp4", **{"in": 0.9})                 # "At one point more than" (real search team + dog, WYFF)
-seg(59.64, 63.62, number=dict(value=200, suffix="+", label="FEDERAL AGENTS", land=0.4))  # "200 federal agents"
+seg(59.64, 63.62, src="blender H_agents.mp4")  # 3D hero (build/blender/H_agents_200.py): 200+ lands on "two hundred"  # "200 federal agents"
 seg(63.62, 67.54, src="10 rudolph clip.mp4", tag=["ERIC RUDOLPH", "The Olympic Park bomber"])  # "His real name was Eric Rudolph"
 # News-footage balance (creator, Nov 15): real footage only where it IS the thing named, short, rest original.
 seg(67.54, 70.14, src="ap street after the blast 1996.mp4", **{"in": 1.8})            # "after a bomb went off at the Atlanta Olympics" (real AP footage, that night)
 seg(70.14, 74.68, number=dict(value=88, suffix=" DAYS", label="CHASING THE WRONG MAN", land=71.42 - 70.14 + 0.5))  # "the FBI had spent 88 days chasing someone else"
-seg(74.68, 81.59, card=[["WHY WAS HE SO", "big"], ["HARD TO CATCH?", "big"]])         # "So why was he so hard to catch?… three"
+seg(74.68, 81.59, src="blender H_title.mp4")  # 3D hero (build/blender/H_title_three.py): the question, then 3 slabs stack         # "So why was he so hard to catch?… three"
 seg(81.59, 86.20, card=[["1 · THE WRONG MAN", "type"], ["88 DAYS", "amber"]])          # "For the first 88 days… the wrong man"
 seg(86.20, 92.06, src="C clip.mp4", **{"in": 1.0})                                     # "the guard who'd helped save people that night" (C = clearing the crowd)
 seg(92.06, 95.79, card=[["2 · NO NAME", "type"], ["18 MONTHS", "amber"]])              # "Then for a year and a half… didn't have a name"
