@@ -126,3 +126,175 @@ def overlay(out, text, seconds, kind="tag", sub=None):
         p.stdin.write(im.tobytes())
     p.stdin.close()
     p.wait()
+
+
+# ---------------------------------------------------------------------------
+# Documentary Pro looks, rebuilt in 2D (the creator's Blender kit can't run in the cloud).
+# Fonts: saylo/assets/fonts (Anton, Montserrat-Bold, Gelasio; OFL licensed).
+import math
+import os
+import random
+
+_FONTS = os.path.join(os.path.dirname(__file__), "..", "assets", "fonts")
+ANTON = os.path.join(_FONTS, "Anton-Regular.ttf")
+MONT_B = os.path.join(_FONTS, "Montserrat-Bold.ttf")
+GELASIO = os.path.join(_FONTS, "Gelasio-Variable.ttf")
+ACCENT = (224, 160, 64)  # #E0A040
+
+
+def _ease_out(x):
+    x = max(0.0, min(1.0, x))
+    return 1 - (1 - x) ** 3
+
+
+def _ease_expo(x):
+    x = max(0.0, min(1.0, x))
+    return 1.0 if x >= 1 else 1 - 2 ** (-10 * x)
+
+
+def lower_third(out, name, role, seconds):
+    """Transparent overlay: amber bar leads, dark panel wipes open, name types on (Montserrat Bold),
+    role in amber caps underneath; everything leaves in the last 0.6 s."""
+    fn, fr = _font(MONT_B, 66), _font(MONT_B, 32)
+    x0, y0 = 150, 820
+    tmp = Image.new("RGBA", (10, 10))
+    dd = ImageDraw.Draw(tmp)
+    width = max(dd.textlength(name, font=fn), dd.textlength(role.upper(), font=fr) * 1.05) + 90
+    height = 150
+    p = _pipe(out, alpha=True)
+    n = int(seconds * FPS)
+    for f in range(n):
+        t = f / FPS
+        leave = max(0.0, (t - (seconds - 0.6)) / 0.6)
+        open_k = _ease_expo((t - 0.1) / 0.45) * (1 - _ease_expo(leave))
+        im = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(im)
+        pw = int(width * open_k)
+        if pw > 2:
+            d.rectangle((x0, y0, x0 + pw, y0 + height), fill=(14, 17, 22, int(225 * (1 - leave))))
+        bar_x = x0 - 18 + int(-60 * (1 - _ease_expo(t / 0.25)))
+        d.rectangle((bar_x, y0, bar_x + 10, y0 + height), fill=ACCENT + (int(255 * (1 - leave)),))
+        shown = int(max(0.0, t - 0.4) * CPS)
+        a = int(255 * (1 - leave))
+        d.text((x0 + 36, y0 + 18), name[:shown], font=fn, fill=(255, 255, 255, a))
+        rshown = int(max(0.0, t - 0.4 - len(name) / CPS) * CPS * 1.4)
+        d.text((x0 + 38, y0 + 98), role.upper()[:rshown], font=fr, fill=ACCENT + (a,))
+        if shown < len(name) and a > 0:
+            cx = x0 + 36 + d.textlength(name[:shown], font=fn) + 4
+            d.rectangle((cx, y0 + 26, cx + 26, y0 + 84), fill=(255, 255, 255, a))
+        p.stdin.write(im.tobytes())
+    p.stdin.close()
+    p.wait()
+
+
+def number_build(out, value, seconds, prefix="", suffix="", label="", land=2.0, seed=7):
+    """Full-frame: a big gold Anton figure counts up and lands on `land` seconds, dust motes drift,
+    the frame pushes in slowly; a rule and label arrive after the count lands."""
+    rnd = random.Random(seed)
+    motes = [(rnd.uniform(0, W), rnd.uniform(0, H), rnd.uniform(1.5, 7), rnd.uniform(-8, 8), rnd.uniform(-5, 3),
+              rnd.uniform(40, 140)) for _ in range(70)]
+    bg = Image.new("RGB", (W, H), (5, 7, 10))
+    g = ImageDraw.Draw(bg)
+    for r in range(900, 0, -12):  # soft centre glow
+        c = int(5 + 22 * (1 - r / 900) ** 2)
+        g.ellipse((W / 2 - r * 1.6, H / 2 - r, W / 2 + r * 1.6, H / 2 + r), fill=(c, c + 4, c + 12))
+    fbig, flab = _font(ANTON, 230), _font(MONT_B, 40)
+    p = _pipe(out)
+    n = int(seconds * FPS)
+    for f in range(n):
+        t = f / FPS
+        k = _ease_out(t / max(land, 0.1))
+        val = value * k
+        txt = f"{prefix}{val:,.0f}{suffix}"
+        im = bg.copy().convert("RGBA")
+        layer = Image.new("RGBA", (W, H), (0, 0, 0, 0))
+        d = ImageDraw.Draw(layer)
+        for (mx, my, ms, vx, vy, ma) in motes:
+            x, y = (mx + vx * t) % W, (my + vy * t) % H
+            d.ellipse((x - ms, y - ms, x + ms, y + ms), fill=(255, 220, 160, int(ma * 0.5)))
+        layer = layer.filter(ImageFilter.GaussianBlur(2.2))
+        im = Image.alpha_composite(im, layer)
+        d = ImageDraw.Draw(im)
+        tw = d.textlength(txt, font=fbig)
+        ty = H / 2 - 190
+        # gold with a soft shadow
+        d.text((W / 2 - tw / 2 + 6, ty + 8), txt, font=fbig, fill=(0, 0, 0, 160))
+        d.text((W / 2 - tw / 2, ty), txt, font=fbig, fill=(226, 182, 92, 255))
+        if t > land:
+            rk = _ease_expo((t - land) / 0.5)
+            rw = 520 * rk
+            d.rectangle((W / 2 - rw, H / 2 + 95, W / 2 + rw, H / 2 + 99), fill=(226, 182, 92, 255))
+            if label:
+                la = int(255 * _ease_out((t - land - 0.1) / 0.5))
+                lw = d.textlength(label, font=flab)
+                d.text((W / 2 - lw / 2, H / 2 + 125 + 12 * (1 - la / 255)), label, font=flab, fill=(217, 222, 230, la))
+        # slow push-in + slight shake
+        z = 1.0 + 0.06 * t / seconds
+        sx = 2.5 * math.sin(t * 7.1)
+        sy = 2.0 * math.cos(t * 6.3)
+        zw, zh = int(W / z), int(H / z)
+        cx, cy = (W - zw) / 2 + sx, (H - zh) / 2 + sy
+        frame = im.crop((int(cx), int(cy), int(cx) + zw, int(cy) + zh)).resize((W, H), Image.BILINEAR)
+        # vignette
+        p.stdin.write(frame.tobytes())
+    p.stdin.close()
+    p.wait()
+
+
+def photo_stack(out, photos, seconds, date, where="", beat=1.6):
+    """Full-frame: real photos land one by one on a dark table (back first), then a date card
+    (Montserrat Bold date, Gelasio amber place) lands on `beat` with a small overshoot; slow drift."""
+    table = Image.new("RGB", (W, H), (12, 11, 9))
+    g = ImageDraw.Draw(table)
+    for r in range(1000, 0, -10):
+        c = (int(12 + 30 * (1 - r / 1000) ** 2), int(11 + 26 * (1 - r / 1000) ** 2), int(9 + 20 * (1 - r / 1000) ** 2))
+        g.ellipse((W / 2 - r * 1.5, H / 2 - r, W / 2 + r * 1.5, H / 2 + r), fill=c)
+    layout = [(980, 470, -3), (620, 430, 5), (1330, 400, -6), (760, 360, 3)]  # front to back
+    prints = []
+    for i, path in enumerate(photos[:4]):
+        ph = Image.open(path).convert("RGB")
+        ph.thumbnail((760, 560))
+        framed = Image.new("RGB", (ph.width + 28, ph.height + 28), (236, 232, 222))
+        framed.paste(ph, (14, 14))
+        prints.append(framed.convert("RGBA"))
+    n_p = len(prints)
+    fd, fw = _font(MONT_B, 64), _font(GELASIO, 40)
+    p = _pipe(out)
+    for f in range(int(seconds * FPS)):
+        t = f / FPS
+        im = table.copy().convert("RGBA")
+        for i in range(n_p - 1, -1, -1):  # back to front
+            t0 = (n_p - 1 - i) * 0.25
+            k = _ease_expo((t - t0) / 0.6)
+            if k <= 0:
+                continue
+            cx, cy, rot = layout[i] if n_p > 1 else (W / 2, 470, -2)
+            pr = prints[i].rotate(rot * (1 + 1.2 * (1 - k)), expand=True, resample=Image.BICUBIC)
+            sc = 1.0 + 0.25 * (1 - k)
+            pr = pr.resize((int(pr.width * sc), int(pr.height * sc)))
+            sh = Image.new("RGBA", pr.size, (0, 0, 0, 0))
+            ImageDraw.Draw(sh).rectangle((0, 0, pr.width, pr.height), fill=(0, 0, 0, int(150 * k)))
+            sh = sh.filter(ImageFilter.GaussianBlur(18))
+            x, y = int(cx - pr.width / 2), int(cy - pr.height / 2 - 60 * (1 - k))
+            im.alpha_composite(sh, (x + 18, y + 24)) if x + 18 >= 0 and y + 24 >= 0 else None
+            pr.putalpha(Image.eval(pr.getchannel("A"), lambda v: int(v * k)))
+            im.alpha_composite(pr, (max(0, x), max(0, y)))
+        if t > beat - 0.15:
+            k = _ease_expo((t - beat + 0.15) / 0.35)
+            d = ImageDraw.Draw(im)
+            tw = max(d.textlength(date, font=fd), d.textlength(where, font=fw) if where else 0) + 90
+            th = 150 if where else 110
+            s = 1.0 + 0.18 * (1 - k)
+            x0, y0 = W / 2 - tw * s / 2, H - 120 - th * s
+            d.rectangle((x0, y0, x0 + tw * s, y0 + th * s), fill=(16, 18, 21, int(235 * k)))
+            d.rectangle((x0, y0, x0 + 9, y0 + th * s), fill=ACCENT + (int(255 * k),))
+            d.text((x0 + 36, y0 + 18), date, font=fd, fill=(244, 241, 234, int(255 * k)))
+            if where:
+                d.text((x0 + 38, y0 + 96), where, font=fw, fill=ACCENT + (int(255 * k),))
+        z = 1.0 + 0.05 * t / seconds
+        zw, zh = int(W / z), int(H / z)
+        dx = 12 * t / seconds
+        frame = im.crop((int((W - zw) / 2 + dx), int((H - zh) / 2), int((W - zw) / 2 + dx) + zw, int((H - zh) / 2) + zh)).resize((W, H))
+        p.stdin.write(frame.tobytes())
+    p.stdin.close()
+    p.wait()

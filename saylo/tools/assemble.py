@@ -25,7 +25,7 @@ import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(__file__))
-from make_card import card, overlay  # noqa: E402
+from make_card import card, overlay, lower_third, number_build, photo_stack  # noqa: E402
 
 FPS = 30
 VENC = ["-c:v", "libx264", "-crf", "20", "-preset", "medium", "-pix_fmt", "yuv420p", "-r", str(FPS)]
@@ -49,17 +49,51 @@ def still_png(src, out):
     run(["-i", src, "-frames:v", "1", out])  # handles avif/webp/jpg/png
 
 
-def render_photo(src, dur, out, tmp):
+MOTIONS = ["push_in", "pan_right", "pull_out", "pan_left"]
+
+
+def _zoompan(motion, n):
+    """zoompan expressions on a 2x-res frame: stronger moves + a slight handheld drift."""
+    drift_x = f"+sin(on/{FPS}*0.9)*iw*0.004"
+    drift_y = f"+cos(on/{FPS}*0.7)*ih*0.004"
+    cx, cy = "iw/2-(iw/zoom/2)", "ih/2-(ih/zoom/2)"
+    if motion == "push_in":
+        return f"1.02+0.20*on/{n}", cx + drift_x, cy + drift_y
+    if motion == "pull_out":
+        return f"1.22-0.20*on/{n}", cx + drift_x, cy + drift_y
+    if motion == "pan_right":
+        return "1.20", f"(iw-iw/zoom)*(0.1+0.8*on/{n})", cy + drift_y
+    if motion == "pan_left":
+        return "1.20", f"(iw-iw/zoom)*(0.9-0.8*on/{n})", cy + drift_y
+    return "1.0", cx, cy
+
+
+def _fx_chain(fx):
+    """Atmosphere on stills: grain always; optional flicker (night lights) and fog drift."""
+    chain = ["noise=alls=7:allf=t"]
+    if "flicker" in fx:
+        chain.append("eq=brightness='-0.03+0.025*sin(t*13)*sin(t*3.1)':eval=frame")
+    return ",".join(chain)
+
+
+def render_photo(src, dur, out, tmp, motion="push_in", fx=()):
     png = tmp + ".png"
     still_png(src, png)
-    # compose a 2x-res 16:9 frame (blurred fill for odd shapes), then a slow push-in 100% -> 112%
     big = tmp + "_big.png"
-    run(["-i", png, "-filter_complex", FILL.replace("1920:1080", "3840:2160").replace("1920:1080", "3840:2160"),
-         "-frames:v", "1", big])
+    run(["-i", png, "-filter_complex", FILL.replace("1920:1080", "3840:2160"), "-frames:v", "1", big])
     n = max(1, int(round(dur * FPS)))
-    run(["-loop", "1", "-i", big, "-t", f"{dur:.3f}", "-filter_complex",
-         f"[0:v]zoompan=z='1+0.12*on/{n}':x='iw/2-(iw/zoom/2)':y='ih/2-(ih/zoom/2)':d={n}:s=1920x1080:fps={FPS},{GRADE}",
-         *VENC, "-an", out])
+    z, x, y = _zoompan(motion, n)
+    base = (f"[0:v]zoompan=z='{z}':x='{x}':y='{y}':d={n}:s=1920x1080:fps={FPS},{GRADE},{_fx_chain(fx)}")
+    if "fog" in fx:
+        # slow drifting fog: blurred noise layer scrolling sideways, screened on top
+        run(["-loop", "1", "-i", big, "-f", "lavfi", "-i", f"color=c=gray:s=2400x1080:d={dur:.3f},noise=alls=100:allf=t+u",
+             "-t", f"{dur:.3f}", "-filter_complex",
+             base + "[b];[1:v]trim=end_frame=1,loop=loop=-1:size=1,gblur=sigma=60,eq=contrast=2.2:brightness=-0.25,"
+             f"crop=1920:1080:x='t*{400 / max(dur, 1):.2f}':y=0,format=gbrp[f];[b]format=gbrp[bb];"
+             "[bb][f]blend=all_mode=screen:all_opacity=0.35,format=yuv420p",
+             *VENC, "-an", out])
+        return
+    run(["-loop", "1", "-i", big, "-t", f"{dur:.3f}", "-filter_complex", base, *VENC, "-an", out])
 
 
 def render_video(src, dur, out, start=0.0, crop=None):
@@ -71,12 +105,20 @@ def render_video(src, dur, out, start=0.0, crop=None):
 
 def add_tag(clip, dur, tag, out, tmp):
     mov = tmp + "_tag.mov"
-    overlay(mov, tag[0], min(dur, 4.0), "tag", sub=tag[1] if len(tag) > 1 else None)
+    lower_third(mov, tag[0], tag[1] if len(tag) > 1 else "", min(dur, 4.2))
     run(["-i", clip, "-i", mov, "-filter_complex", "[0:v][1:v]overlay=eof_action=pass", *VENC, "-an", out])
 
 
 def render_segment(seg, assets, out, tmp):
     dur = seg["end"] - seg["start"]
+    if "number" in seg:
+        nb = seg["number"]
+        number_build(out, nb["value"], dur, nb.get("prefix", ""), nb.get("suffix", ""), nb.get("label", ""), nb.get("land", 2.0))
+        return
+    if "stack" in seg:
+        st = seg["stack"]
+        photo_stack(out, [os.path.join(assets, x) for x in st["photos"]], dur, st["date"], st.get("where", ""), st.get("beat", 1.6))
+        return
     if "card" in seg:
         bg = os.path.join(assets, seg["bg"]) if seg.get("bg") else None
         if bg and is_video(bg):
@@ -89,7 +131,7 @@ def render_segment(seg, assets, out, tmp):
     if is_video(src):
         render_video(src, dur, base, seg.get("in", 0.0), seg.get("crop"))
     else:
-        render_photo(src, dur, base, tmp)
+        render_photo(src, dur, base, tmp, seg.get("motion", "push_in"), seg.get("fx", ()))
     if "tag" in seg:
         add_tag(base, dur, seg["tag"], out, tmp)
 
@@ -150,6 +192,7 @@ def main(argv):
     os.makedirs(parts_dir, exist_ok=True)
     listing = []
     for i, seg in enumerate(plan["segments"]):
+        seg.setdefault("motion", MOTIONS[i % len(MOTIONS)])
         if seg["end"] <= t0 or seg["start"] >= t1:
             continue
         p = os.path.join(parts_dir, f"{i:04d}.mp4")
