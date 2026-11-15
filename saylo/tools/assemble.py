@@ -109,8 +109,41 @@ def add_tag(clip, dur, tag, out, tmp):
     run(["-i", clip, "-i", mov, "-filter_complex", "[0:v][1:v]overlay=eof_action=pass", *VENC, "-an", out])
 
 
+EFFECTS = os.environ.get("SAYLO_EFFECTS", "")  # path to the Template Library's .claude/effects folder
+_EFFECT_LIMITS = {}
+
+
+def _effect_limits(eid):
+    if eid not in _EFFECT_LIMITS:
+        r = subprocess.run(["node", "render_effect.mjs", "--schema", eid], cwd=EFFECTS, capture_output=True, text=True)
+        d = json.loads(r.stdout)["duration"]
+        _EFFECT_LIMITS[eid] = (d["min"], d["max"])
+    return _EFFECT_LIMITS[eid]
+
+
+def render_effect(seg, assets, dur, out, tmp):
+    """Render a Template Library effect with overrides (image paths relative to the assets folder)."""
+    lo, hi = _effect_limits(seg["effect"])
+    edur = min(max(dur, lo), hi)
+    ov = os.path.join(assets, "_ov_" + os.path.basename(tmp) + ".json")
+    json.dump(seg.get("ov", {}), open(ov, "w"))
+    raw = tmp + "_fx.mp4"
+    r = subprocess.run(["node", "render_effect.mjs", "--id", seg["effect"], "--overrides", ov, "--duration", f"{edur:.2f}",
+                        "--out", raw], cwd=EFFECTS, capture_output=True, text=True)
+    if r.returncode:
+        raise RuntimeError(r.stderr[-600:])
+    run(["-i", raw, "-filter_complex",
+         f"[0:v]scale=1920:1080,fps={FPS},tpad=stop_mode=clone:stop_duration={dur:.3f},trim=duration={dur:.3f},format=yuv420p",
+         *VENC, "-an", out])
+
+
 def render_segment(seg, assets, out, tmp):
     dur = seg["end"] - seg["start"]
+    if "effect" in seg:
+        render_effect(seg, assets, dur, out if "tag" not in seg else tmp + "_base.mp4", tmp)
+        if "tag" in seg:
+            add_tag(tmp + "_base.mp4", dur, seg["tag"], out, tmp)
+        return
     if "number" in seg:
         nb = seg["number"]
         number_build(out, nb["value"], dur, nb.get("prefix", ""), nb.get("suffix", ""), nb.get("label", ""), nb.get("land", 2.0))
