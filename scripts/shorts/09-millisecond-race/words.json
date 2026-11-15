@@ -1,0 +1,1140 @@
+{
+ "lines": [
+  {
+   "id": "VO-01",
+   "start": 0.0,
+   "end": 7.916,
+   "text": "You're a fiber cable from Chicago to New Jersey, an estimated three hundred million dollars of glass, and your whole job is saving three milliseconds."
+  },
+  {
+   "id": "VO-02",
+   "start": 8.065,
+   "end": 10.557,
+   "text": "Wait, who pays that much for three milliseconds?"
+  },
+  {
+   "id": "VO-03",
+   "start": 10.706,
+   "end": 17.169,
+   "text": "Trading firms, because when a price moves in Chicago, they can react in New Jersey before a rival's order gets there."
+  },
+  {
+   "id": "VO-04",
+   "start": 17.269,
+   "end": 23.939,
+   "text": "Older cables followed the railroads, but you cut the straightest path, making the round trip in about thirteen milliseconds in twenty ten."
+  },
+  {
+   "id": "VO-05",
+   "start": 24.038,
+   "end": 30.423,
+   "text": "You're the fastest line around, until microwave towers beat you, because a signal through the air beats light through your glass."
+  },
+  {
+   "id": "VO-06",
+   "start": 30.522,
+   "end": 36.363,
+   "text": "In twenty seventeen, Zayo agreed to buy the company that built you for one hundred twenty-seven million dollars."
+  },
+  {
+   "id": "VO-07",
+   "start": 36.462,
+   "end": 42.717,
+   "text": "And inside two New Jersey data centers, Cboe matches every cable's length, so no firm sitting closer gets a shorter wire."
+  },
+  {
+   "id": "VO-08",
+   "start": 43.114,
+   "end": 51.031,
+   "text": "So does that mean regular people buying stocks are losing to you? Not if they hold for years, because three milliseconds barely matters over ten years."
+  },
+  {
+   "id": "VO-09",
+   "start": 51.369,
+   "end": 56.897,
+   "text": "The cable was built for a sprint, but investing is a marathon, so which race are you running?"
+  }
+ ],
+ "words": [
+  {
+   "text": "You're",
+   "start": 0.0,
+   "end": 0.323,
+   "line": "VO-01"
+  },
+  {
+   "text": "a",
+   "start": 0.323,
+   "end": 0.431,
+   "line": "VO-01"
+  },
+  {
+   "text": "fiber",
+   "start": 0.431,
+   "end": 0.754,
+   "line": "VO-01"
+  },
+  {
+   "text": "cable",
+   "start": 0.754,
+   "end": 1.077,
+   "line": "VO-01"
+  },
+  {
+   "text": "from",
+   "start": 1.077,
+   "end": 1.346,
+   "line": "VO-01"
+  },
+  {
+   "text": "Chicago",
+   "start": 1.346,
+   "end": 1.778,
+   "line": "VO-01"
+  },
+  {
+   "text": "to",
+   "start": 1.778,
+   "end": 1.939,
+   "line": "VO-01"
+  },
+  {
+   "text": "New",
+   "start": 1.939,
+   "end": 2.154,
+   "line": "VO-01"
+  },
+  {
+   "text": "Jersey,",
+   "start": 2.154,
+   "end": 2.531,
+   "line": "VO-01"
+  },
+  {
+   "text": "an",
+   "start": 2.531,
+   "end": 2.693,
+   "line": "VO-01"
+  },
+  {
+   "text": "estimated",
+   "start": 2.693,
+   "end": 3.231,
+   "line": "VO-01"
+  },
+  {
+   "text": "three",
+   "start": 3.231,
+   "end": 3.554,
+   "line": "VO-01"
+  },
+  {
+   "text": "hundred",
+   "start": 3.554,
+   "end": 3.985,
+   "line": "VO-01"
+  },
+  {
+   "text": "million",
+   "start": 3.985,
+   "end": 4.416,
+   "line": "VO-01"
+  },
+  {
+   "text": "dollars",
+   "start": 4.416,
+   "end": 4.847,
+   "line": "VO-01"
+  },
+  {
+   "text": "of",
+   "start": 4.847,
+   "end": 5.009,
+   "line": "VO-01"
+  },
+  {
+   "text": "glass,",
+   "start": 5.009,
+   "end": 5.332,
+   "line": "VO-01"
+  },
+  {
+   "text": "and",
+   "start": 5.332,
+   "end": 5.547,
+   "line": "VO-01"
+  },
+  {
+   "text": "your",
+   "start": 5.547,
+   "end": 5.817,
+   "line": "VO-01"
+  },
+  {
+   "text": "whole",
+   "start": 5.817,
+   "end": 6.139,
+   "line": "VO-01"
+  },
+  {
+   "text": "job",
+   "start": 6.139,
+   "end": 6.355,
+   "line": "VO-01"
+  },
+  {
+   "text": "is",
+   "start": 6.355,
+   "end": 6.516,
+   "line": "VO-01"
+  },
+  {
+   "text": "saving",
+   "start": 6.516,
+   "end": 6.894,
+   "line": "VO-01"
+  },
+  {
+   "text": "three",
+   "start": 6.894,
+   "end": 7.216,
+   "line": "VO-01"
+  },
+  {
+   "text": "milliseconds.",
+   "start": 7.216,
+   "end": 7.916,
+   "line": "VO-01"
+  },
+  {
+   "text": "Wait,",
+   "start": 8.065,
+   "end": 8.33,
+   "line": "VO-02"
+  },
+  {
+   "text": "who",
+   "start": 8.33,
+   "end": 8.543,
+   "line": "VO-02"
+  },
+  {
+   "text": "pays",
+   "start": 8.543,
+   "end": 8.807,
+   "line": "VO-02"
+  },
+  {
+   "text": "that",
+   "start": 8.807,
+   "end": 9.073,
+   "line": "VO-02"
+  },
+  {
+   "text": "much",
+   "start": 9.073,
+   "end": 9.338,
+   "line": "VO-02"
+  },
+  {
+   "text": "for",
+   "start": 9.338,
+   "end": 9.549,
+   "line": "VO-02"
+  },
+  {
+   "text": "three",
+   "start": 9.549,
+   "end": 9.867,
+   "line": "VO-02"
+  },
+  {
+   "text": "milliseconds?",
+   "start": 9.867,
+   "end": 10.557,
+   "line": "VO-02"
+  },
+  {
+   "text": "Trading",
+   "start": 10.706,
+   "end": 11.16,
+   "line": "VO-03"
+  },
+  {
+   "text": "firms,",
+   "start": 11.16,
+   "end": 11.5,
+   "line": "VO-03"
+  },
+  {
+   "text": "because",
+   "start": 11.5,
+   "end": 11.953,
+   "line": "VO-03"
+  },
+  {
+   "text": "when",
+   "start": 11.953,
+   "end": 12.237,
+   "line": "VO-03"
+  },
+  {
+   "text": "a",
+   "start": 12.237,
+   "end": 12.35,
+   "line": "VO-03"
+  },
+  {
+   "text": "price",
+   "start": 12.35,
+   "end": 12.69,
+   "line": "VO-03"
+  },
+  {
+   "text": "moves",
+   "start": 12.69,
+   "end": 13.03,
+   "line": "VO-03"
+  },
+  {
+   "text": "in",
+   "start": 13.03,
+   "end": 13.201,
+   "line": "VO-03"
+  },
+  {
+   "text": "Chicago,",
+   "start": 13.201,
+   "end": 13.654,
+   "line": "VO-03"
+  },
+  {
+   "text": "they",
+   "start": 13.654,
+   "end": 13.937,
+   "line": "VO-03"
+  },
+  {
+   "text": "can",
+   "start": 13.937,
+   "end": 14.165,
+   "line": "VO-03"
+  },
+  {
+   "text": "react",
+   "start": 14.165,
+   "end": 14.505,
+   "line": "VO-03"
+  },
+  {
+   "text": "in",
+   "start": 14.505,
+   "end": 14.674,
+   "line": "VO-03"
+  },
+  {
+   "text": "New",
+   "start": 14.674,
+   "end": 14.901,
+   "line": "VO-03"
+  },
+  {
+   "text": "Jersey",
+   "start": 14.901,
+   "end": 15.298,
+   "line": "VO-03"
+  },
+  {
+   "text": "before",
+   "start": 15.298,
+   "end": 15.695,
+   "line": "VO-03"
+  },
+  {
+   "text": "a",
+   "start": 15.695,
+   "end": 15.808,
+   "line": "VO-03"
+  },
+  {
+   "text": "rival's",
+   "start": 15.808,
+   "end": 16.206,
+   "line": "VO-03"
+  },
+  {
+   "text": "order",
+   "start": 16.206,
+   "end": 16.545,
+   "line": "VO-03"
+  },
+  {
+   "text": "gets",
+   "start": 16.545,
+   "end": 16.829,
+   "line": "VO-03"
+  },
+  {
+   "text": "there.",
+   "start": 16.829,
+   "end": 17.169,
+   "line": "VO-03"
+  },
+  {
+   "text": "Older",
+   "start": 17.269,
+   "end": 17.563,
+   "line": "VO-04"
+  },
+  {
+   "text": "cables",
+   "start": 17.563,
+   "end": 17.906,
+   "line": "VO-04"
+  },
+  {
+   "text": "followed",
+   "start": 17.906,
+   "end": 18.348,
+   "line": "VO-04"
+  },
+  {
+   "text": "the",
+   "start": 18.348,
+   "end": 18.543,
+   "line": "VO-04"
+  },
+  {
+   "text": "railroads,",
+   "start": 18.543,
+   "end": 19.034,
+   "line": "VO-04"
+  },
+  {
+   "text": "but",
+   "start": 19.034,
+   "end": 19.23,
+   "line": "VO-04"
+  },
+  {
+   "text": "you",
+   "start": 19.23,
+   "end": 19.427,
+   "line": "VO-04"
+  },
+  {
+   "text": "cut",
+   "start": 19.427,
+   "end": 19.623,
+   "line": "VO-04"
+  },
+  {
+   "text": "the",
+   "start": 19.623,
+   "end": 19.819,
+   "line": "VO-04"
+  },
+  {
+   "text": "straightest",
+   "start": 19.819,
+   "end": 20.407,
+   "line": "VO-04"
+  },
+  {
+   "text": "path,",
+   "start": 20.407,
+   "end": 20.653,
+   "line": "VO-04"
+  },
+  {
+   "text": "making",
+   "start": 20.653,
+   "end": 20.996,
+   "line": "VO-04"
+  },
+  {
+   "text": "the",
+   "start": 20.996,
+   "end": 21.192,
+   "line": "VO-04"
+  },
+  {
+   "text": "round",
+   "start": 21.192,
+   "end": 21.487,
+   "line": "VO-04"
+  },
+  {
+   "text": "trip",
+   "start": 21.487,
+   "end": 21.732,
+   "line": "VO-04"
+  },
+  {
+   "text": "in",
+   "start": 21.732,
+   "end": 21.879,
+   "line": "VO-04"
+  },
+  {
+   "text": "about",
+   "start": 21.879,
+   "end": 22.173,
+   "line": "VO-04"
+  },
+  {
+   "text": "thirteen",
+   "start": 22.173,
+   "end": 22.614,
+   "line": "VO-04"
+  },
+  {
+   "text": "milliseconds",
+   "start": 22.614,
+   "end": 23.252,
+   "line": "VO-04"
+  },
+  {
+   "text": "in",
+   "start": 23.252,
+   "end": 23.399,
+   "line": "VO-04"
+  },
+  {
+   "text": "twenty",
+   "start": 23.399,
+   "end": 23.743,
+   "line": "VO-04"
+  },
+  {
+   "text": "ten.",
+   "start": 23.743,
+   "end": 23.939,
+   "line": "VO-04"
+  },
+  {
+   "text": "You're",
+   "start": 24.038,
+   "end": 24.342,
+   "line": "VO-05"
+  },
+  {
+   "text": "the",
+   "start": 24.342,
+   "end": 24.545,
+   "line": "VO-05"
+  },
+  {
+   "text": "fastest",
+   "start": 24.545,
+   "end": 24.95,
+   "line": "VO-05"
+  },
+  {
+   "text": "line",
+   "start": 24.95,
+   "end": 25.204,
+   "line": "VO-05"
+  },
+  {
+   "text": "around,",
+   "start": 25.204,
+   "end": 25.558,
+   "line": "VO-05"
+  },
+  {
+   "text": "until",
+   "start": 25.558,
+   "end": 25.862,
+   "line": "VO-05"
+  },
+  {
+   "text": "microwave",
+   "start": 25.862,
+   "end": 26.369,
+   "line": "VO-05"
+  },
+  {
+   "text": "towers",
+   "start": 26.369,
+   "end": 26.724,
+   "line": "VO-05"
+  },
+  {
+   "text": "beat",
+   "start": 26.724,
+   "end": 26.977,
+   "line": "VO-05"
+  },
+  {
+   "text": "you,",
+   "start": 26.977,
+   "end": 27.18,
+   "line": "VO-05"
+  },
+  {
+   "text": "because",
+   "start": 27.18,
+   "end": 27.585,
+   "line": "VO-05"
+  },
+  {
+   "text": "a",
+   "start": 27.585,
+   "end": 27.687,
+   "line": "VO-05"
+  },
+  {
+   "text": "signal",
+   "start": 27.687,
+   "end": 28.041,
+   "line": "VO-05"
+  },
+  {
+   "text": "through",
+   "start": 28.041,
+   "end": 28.447,
+   "line": "VO-05"
+  },
+  {
+   "text": "the",
+   "start": 28.447,
+   "end": 28.649,
+   "line": "VO-05"
+  },
+  {
+   "text": "air",
+   "start": 28.649,
+   "end": 28.852,
+   "line": "VO-05"
+  },
+  {
+   "text": "beats",
+   "start": 28.852,
+   "end": 29.156,
+   "line": "VO-05"
+  },
+  {
+   "text": "light",
+   "start": 29.156,
+   "end": 29.46,
+   "line": "VO-05"
+  },
+  {
+   "text": "through",
+   "start": 29.46,
+   "end": 29.865,
+   "line": "VO-05"
+  },
+  {
+   "text": "your",
+   "start": 29.865,
+   "end": 30.119,
+   "line": "VO-05"
+  },
+  {
+   "text": "glass.",
+   "start": 30.119,
+   "end": 30.423,
+   "line": "VO-05"
+  },
+  {
+   "text": "In",
+   "start": 30.522,
+   "end": 30.681,
+   "line": "VO-06"
+  },
+  {
+   "text": "twenty",
+   "start": 30.681,
+   "end": 31.054,
+   "line": "VO-06"
+  },
+  {
+   "text": "seventeen,",
+   "start": 31.054,
+   "end": 31.584,
+   "line": "VO-06"
+  },
+  {
+   "text": "Zayo",
+   "start": 31.584,
+   "end": 31.85,
+   "line": "VO-06"
+  },
+  {
+   "text": "agreed",
+   "start": 31.85,
+   "end": 32.221,
+   "line": "VO-06"
+  },
+  {
+   "text": "to",
+   "start": 32.221,
+   "end": 32.38,
+   "line": "VO-06"
+  },
+  {
+   "text": "buy",
+   "start": 32.38,
+   "end": 32.593,
+   "line": "VO-06"
+  },
+  {
+   "text": "the",
+   "start": 32.593,
+   "end": 32.806,
+   "line": "VO-06"
+  },
+  {
+   "text": "company",
+   "start": 32.806,
+   "end": 33.23,
+   "line": "VO-06"
+  },
+  {
+   "text": "that",
+   "start": 33.23,
+   "end": 33.495,
+   "line": "VO-06"
+  },
+  {
+   "text": "built",
+   "start": 33.495,
+   "end": 33.814,
+   "line": "VO-06"
+  },
+  {
+   "text": "you",
+   "start": 33.814,
+   "end": 34.027,
+   "line": "VO-06"
+  },
+  {
+   "text": "for",
+   "start": 34.027,
+   "end": 34.238,
+   "line": "VO-06"
+  },
+  {
+   "text": "one",
+   "start": 34.238,
+   "end": 34.451,
+   "line": "VO-06"
+  },
+  {
+   "text": "hundred",
+   "start": 34.451,
+   "end": 34.876,
+   "line": "VO-06"
+  },
+  {
+   "text": "twenty-seven",
+   "start": 34.876,
+   "end": 35.513,
+   "line": "VO-06"
+  },
+  {
+   "text": "million",
+   "start": 35.513,
+   "end": 35.937,
+   "line": "VO-06"
+  },
+  {
+   "text": "dollars.",
+   "start": 35.937,
+   "end": 36.363,
+   "line": "VO-06"
+  },
+  {
+   "text": "And",
+   "start": 36.462,
+   "end": 36.674,
+   "line": "VO-07"
+  },
+  {
+   "text": "inside",
+   "start": 36.674,
+   "end": 37.045,
+   "line": "VO-07"
+  },
+  {
+   "text": "two",
+   "start": 37.045,
+   "end": 37.257,
+   "line": "VO-07"
+  },
+  {
+   "text": "New",
+   "start": 37.257,
+   "end": 37.468,
+   "line": "VO-07"
+  },
+  {
+   "text": "Jersey",
+   "start": 37.468,
+   "end": 37.84,
+   "line": "VO-07"
+  },
+  {
+   "text": "data",
+   "start": 37.84,
+   "end": 38.105,
+   "line": "VO-07"
+  },
+  {
+   "text": "centers,",
+   "start": 38.105,
+   "end": 38.529,
+   "line": "VO-07"
+  },
+  {
+   "text": "Cboe",
+   "start": 38.529,
+   "end": 38.794,
+   "line": "VO-07"
+  },
+  {
+   "text": "matches",
+   "start": 38.794,
+   "end": 39.218,
+   "line": "VO-07"
+  },
+  {
+   "text": "every",
+   "start": 39.218,
+   "end": 39.536,
+   "line": "VO-07"
+  },
+  {
+   "text": "cable's",
+   "start": 39.536,
+   "end": 39.908,
+   "line": "VO-07"
+  },
+  {
+   "text": "length,",
+   "start": 39.908,
+   "end": 40.278,
+   "line": "VO-07"
+  },
+  {
+   "text": "so",
+   "start": 40.278,
+   "end": 40.437,
+   "line": "VO-07"
+  },
+  {
+   "text": "no",
+   "start": 40.437,
+   "end": 40.596,
+   "line": "VO-07"
+  },
+  {
+   "text": "firm",
+   "start": 40.596,
+   "end": 40.862,
+   "line": "VO-07"
+  },
+  {
+   "text": "sitting",
+   "start": 40.862,
+   "end": 41.286,
+   "line": "VO-07"
+  },
+  {
+   "text": "closer",
+   "start": 41.286,
+   "end": 41.656,
+   "line": "VO-07"
+  },
+  {
+   "text": "gets",
+   "start": 41.656,
+   "end": 41.922,
+   "line": "VO-07"
+  },
+  {
+   "text": "a",
+   "start": 41.922,
+   "end": 42.028,
+   "line": "VO-07"
+  },
+  {
+   "text": "shorter",
+   "start": 42.028,
+   "end": 42.451,
+   "line": "VO-07"
+  },
+  {
+   "text": "wire.",
+   "start": 42.451,
+   "end": 42.717,
+   "line": "VO-07"
+  },
+  {
+   "text": "So",
+   "start": 43.114,
+   "end": 43.274,
+   "line": "VO-08"
+  },
+  {
+   "text": "does",
+   "start": 43.274,
+   "end": 43.539,
+   "line": "VO-08"
+  },
+  {
+   "text": "that",
+   "start": 43.539,
+   "end": 43.805,
+   "line": "VO-08"
+  },
+  {
+   "text": "mean",
+   "start": 43.805,
+   "end": 44.071,
+   "line": "VO-08"
+  },
+  {
+   "text": "regular",
+   "start": 44.071,
+   "end": 44.496,
+   "line": "VO-08"
+  },
+  {
+   "text": "people",
+   "start": 44.496,
+   "end": 44.868,
+   "line": "VO-08"
+  },
+  {
+   "text": "buying",
+   "start": 44.868,
+   "end": 45.239,
+   "line": "VO-08"
+  },
+  {
+   "text": "stocks",
+   "start": 45.239,
+   "end": 45.611,
+   "line": "VO-08"
+  },
+  {
+   "text": "are",
+   "start": 45.611,
+   "end": 45.824,
+   "line": "VO-08"
+  },
+  {
+   "text": "losing",
+   "start": 45.824,
+   "end": 46.196,
+   "line": "VO-08"
+  },
+  {
+   "text": "to",
+   "start": 46.196,
+   "end": 46.355,
+   "line": "VO-08"
+  },
+  {
+   "text": "you?",
+   "start": 46.355,
+   "end": 46.568,
+   "line": "VO-08"
+  },
+  {
+   "text": "Not",
+   "start": 46.568,
+   "end": 46.78,
+   "line": "VO-08"
+  },
+  {
+   "text": "if",
+   "start": 46.78,
+   "end": 46.939,
+   "line": "VO-08"
+  },
+  {
+   "text": "they",
+   "start": 46.939,
+   "end": 47.206,
+   "line": "VO-08"
+  },
+  {
+   "text": "hold",
+   "start": 47.206,
+   "end": 47.471,
+   "line": "VO-08"
+  },
+  {
+   "text": "for",
+   "start": 47.471,
+   "end": 47.684,
+   "line": "VO-08"
+  },
+  {
+   "text": "years,",
+   "start": 47.684,
+   "end": 48.003,
+   "line": "VO-08"
+  },
+  {
+   "text": "because",
+   "start": 48.003,
+   "end": 48.427,
+   "line": "VO-08"
+  },
+  {
+   "text": "three",
+   "start": 48.427,
+   "end": 48.746,
+   "line": "VO-08"
+  },
+  {
+   "text": "milliseconds",
+   "start": 48.746,
+   "end": 49.436,
+   "line": "VO-08"
+  },
+  {
+   "text": "barely",
+   "start": 49.436,
+   "end": 49.809,
+   "line": "VO-08"
+  },
+  {
+   "text": "matters",
+   "start": 49.809,
+   "end": 50.234,
+   "line": "VO-08"
+  },
+  {
+   "text": "over",
+   "start": 50.234,
+   "end": 50.5,
+   "line": "VO-08"
+  },
+  {
+   "text": "ten",
+   "start": 50.5,
+   "end": 50.712,
+   "line": "VO-08"
+  },
+  {
+   "text": "years.",
+   "start": 50.712,
+   "end": 51.031,
+   "line": "VO-08"
+  },
+  {
+   "text": "The",
+   "start": 51.369,
+   "end": 51.611,
+   "line": "VO-09"
+  },
+  {
+   "text": "cable",
+   "start": 51.611,
+   "end": 51.976,
+   "line": "VO-09"
+  },
+  {
+   "text": "was",
+   "start": 51.976,
+   "end": 52.219,
+   "line": "VO-09"
+  },
+  {
+   "text": "built",
+   "start": 52.219,
+   "end": 52.583,
+   "line": "VO-09"
+  },
+  {
+   "text": "for",
+   "start": 52.583,
+   "end": 52.827,
+   "line": "VO-09"
+  },
+  {
+   "text": "a",
+   "start": 52.827,
+   "end": 52.948,
+   "line": "VO-09"
+  },
+  {
+   "text": "sprint,",
+   "start": 52.948,
+   "end": 53.373,
+   "line": "VO-09"
+  },
+  {
+   "text": "but",
+   "start": 53.373,
+   "end": 53.616,
+   "line": "VO-09"
+  },
+  {
+   "text": "investing",
+   "start": 53.616,
+   "end": 54.223,
+   "line": "VO-09"
+  },
+  {
+   "text": "is",
+   "start": 54.223,
+   "end": 54.406,
+   "line": "VO-09"
+  },
+  {
+   "text": "a",
+   "start": 54.406,
+   "end": 54.528,
+   "line": "VO-09"
+  },
+  {
+   "text": "marathon,",
+   "start": 54.528,
+   "end": 55.074,
+   "line": "VO-09"
+  },
+  {
+   "text": "so",
+   "start": 55.074,
+   "end": 55.257,
+   "line": "VO-09"
+  },
+  {
+   "text": "which",
+   "start": 55.257,
+   "end": 55.621,
+   "line": "VO-09"
+  },
+  {
+   "text": "race",
+   "start": 55.621,
+   "end": 55.925,
+   "line": "VO-09"
+  },
+  {
+   "text": "are",
+   "start": 55.925,
+   "end": 56.168,
+   "line": "VO-09"
+  },
+  {
+   "text": "you",
+   "start": 56.168,
+   "end": 56.411,
+   "line": "VO-09"
+  },
+  {
+   "text": "running?",
+   "start": 56.411,
+   "end": 56.897,
+   "line": "VO-09"
+  }
+ ]
+}

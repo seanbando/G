@@ -16,8 +16,8 @@ And inside two New Jersey data centers, Cboe matches every cable's length, so no
 
 [PAUSE: 0.5 seconds. The fake-out.]
 
-So you'd think regular investors are losing to you, but if they're holding for years, you were never racing them.
+So does that mean regular people buying stocks are losing to you? Not if they hold for years, because three milliseconds barely matters over ten years.
 
-[PAUSE: 0.4 seconds. Flip back to the viewer.]
+[PAUSE: 0.4 seconds. Callback to the race.]
 
-You were built for a hundred-meter dash, and they're running a marathon, so which race are you really in?
+The cable was built for a sprint, but investing is a marathon, so which race are you running?
