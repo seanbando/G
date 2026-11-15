@@ -230,12 +230,22 @@ def draw_card(im, w, h, card):
     bg = Image.blend(bg, Image.new("RGB", (w, h), (246, 246, 240)), 0.55 * fade)
     size = int(w * 0.16)
     font = ImageFont.truetype(FONT, size)
-    while ImageDraw.Draw(bg).textlength(text, font=font) > w * 0.9 and size > 20:
+    measure = ImageDraw.Draw(bg)
+    words = text.split()
+    lines = [text]
+    if measure.textlength(text, font=font) > w * 0.9 and len(words) > 1:
+        # two lines read bigger than one shrunken line
+        cut = min(range(1, len(words)), key=lambda i: abs(len(" ".join(words[:i])) - len(" ".join(words[i:]))))
+        lines = [" ".join(words[:cut]), " ".join(words[cut:])]
+    while max(measure.textlength(l, font=font) for l in lines) > w * 0.9 and size > 20:
         size -= 4
         font = ImageFont.truetype(FONT, size)
     k = 1.0 + 0.6 * max(0.0, 1 - u / 0.12)          # slam: big to normal in 0.12 s
     layer = Image.new("RGBA", (w, h), (0, 0, 0, 0))
-    ImageDraw.Draw(layer).text((w / 2, h * 0.45), text, font=font, fill=colour + (255,), anchor="mm")
+    ld = ImageDraw.Draw(layer)
+    for i, l in enumerate(lines):
+        y = h * 0.45 + (i - (len(lines) - 1) / 2) * size * 1.15
+        ld.text((w / 2, y), l, font=font, fill=colour + (255,), anchor="mm")
     if k != 1.0:
         lw, lh = int(w * k), int(h * k)
         layer = layer.resize((lw, lh), Image.BILINEAR).crop(((lw - w) // 2, (lh - h) // 2, (lw - w) // 2 + w, (lh - h) // 2 + h))

@@ -1,0 +1,35 @@
+# Nvidia part 2 edit (times in seconds, from words.json)
+0.0 image 0.95 scripts/shorts/08-nvidia-part2/video/board1-finished.png
+0.0 card 0.95 black NVIDIA WITHOUT JENSEN?
+5.7 zoomthru
+7.7 whip left
+10.6 note 14.0 0.12 0.045 MONEY CHIEF = CFO, now also interim CEO
+14.2 zoomthru
+16.8 punch
+21.0 whip right
+21.0 push 23.7 1.15
+23.8 shake 0.35
+26.9 zoomthru
+29.35 punch
+30.1 punch
+30.9 punch
+32.5 whip left
+35.7 shake 0.25
+36.9 zoomthru
+37.0 push 43.8 1.12
+42.5 punch
+1.78  punch
+3.83  punch
+12.19  punch
+22.92  punch
+38.16  punch
+0.80  reframe 0
+2.40  reframe 1
+8.80  reframe 1
+10.40  reframe 2
+15.20  reframe 1
+16.80  reframe 2
+18.40  reframe 0
+24.80  reframe 0
+34.40  reframe 0
+13.3 punch
