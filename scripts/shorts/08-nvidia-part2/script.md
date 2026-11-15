@@ -1,25 +1,23 @@
 Nvidia's First Earnings Without Jensen
 
-On Tuesday, Nvidia has to explain billions of dollars, and for the first time in thirty-three years, Jensen Huang won't be the one doing it.
+On Tuesday, for the first time in thirty-three years, Nvidia explains its billions without Jensen Huang.
 
 YOU: Wait, who's running Nvidia now?
 
-Last week Jensen resigned after a scandal, and the company's money chief became the interim boss, so one person is now doing two of the biggest jobs in tech.
+Jensen resigned last week after a scandal, so the company's money chief is now doing two of the biggest jobs in tech.
 
-Picture Nvidia as a jet, where every big AI company flies on its chips, and investors paid extra because they trusted the pilot in the leather jacket.
+Nvidia is the jet every AI company flies on, and investors paid extra because they trusted the pilot in the leather jacket.
 
-That's called key person risk, because when a company leans on one person, losing them can shake the stock even if nothing in the business changed.
+That's key person risk, when losing one person can shake a stock even if the business didn't change.
 
 [PAUSE: 0.5 seconds. The fake-out.]
 
-So you'd think the jet falls without its pilot, but the factories, the chips and the customers didn't resign with him.
+You'd think the jet falls without him, but the factories, the chips and the customers didn't resign.
 
-[PAUSE: 0.4 seconds]
+[PAUSE: 0.3 seconds]
 
-What Tuesday really tests is whether investors still believe the story without the storyteller.
-
-And it's not over, because Congress wants to question Jensen behind closed doors on December first.
+And Congress still wants to question Jensen behind closed doors on December first.
 
 [PAUSE: 0.4 seconds. Twist.]
 
-If you own an S and P five hundred fund, you already own a seat on this jet, so would you still fly without him?
+If you own an S and P five hundred fund, you already have a seat on this jet, so would you fly without him?
