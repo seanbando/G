@@ -1,0 +1,876 @@
+{
+ "lines": [
+  {
+   "id": "VO-01",
+   "start": 0.0,
+   "end": 5.443,
+   "text": "On Tuesday, for the first time in thirty-three years, Nvidia explains its billions without Jensen Huang."
+  },
+  {
+   "id": "VO-02",
+   "start": 5.592,
+   "end": 7.173,
+   "text": "Wait, who's running Nvidia now?"
+  },
+  {
+   "id": "VO-03",
+   "start": 7.321,
+   "end": 14.06,
+   "text": "Jensen resigned last week after a scandal, so the company's money chief is now doing two of the biggest jobs in tech."
+  },
+  {
+   "id": "VO-04",
+   "start": 14.16,
+   "end": 20.898,
+   "text": "Nvidia is the jet every AI company flies on, and investors paid extra because they trusted the pilot in the leather jacket."
+  },
+  {
+   "id": "VO-05",
+   "start": 20.998,
+   "end": 26.492,
+   "text": "That's key person risk, when losing one person can shake a stock even if the business didn't change."
+  },
+  {
+   "id": "VO-06",
+   "start": 26.889,
+   "end": 32.125,
+   "text": "You'd think the jet falls without him, but the factories, the chips and the customers didn't resign."
+  },
+  {
+   "id": "VO-07",
+   "start": 32.403,
+   "end": 36.42,
+   "text": "And Congress still wants to question Jensen behind closed doors on December first."
+  },
+  {
+   "id": "VO-08",
+   "start": 36.758,
+   "end": 43.47,
+   "text": "If you own an S and P five hundred fund, you already have a seat on this jet, so would you fly without him?"
+  }
+ ],
+ "words": [
+  {
+   "text": "On",
+   "start": 0.0,
+   "end": 0.162,
+   "line": "VO-01"
+  },
+  {
+   "text": "Tuesday,",
+   "start": 0.162,
+   "end": 0.592,
+   "line": "VO-01"
+  },
+  {
+   "text": "for",
+   "start": 0.592,
+   "end": 0.809,
+   "line": "VO-01"
+  },
+  {
+   "text": "the",
+   "start": 0.809,
+   "end": 1.024,
+   "line": "VO-01"
+  },
+  {
+   "text": "first",
+   "start": 1.024,
+   "end": 1.347,
+   "line": "VO-01"
+  },
+  {
+   "text": "time",
+   "start": 1.347,
+   "end": 1.616,
+   "line": "VO-01"
+  },
+  {
+   "text": "in",
+   "start": 1.616,
+   "end": 1.778,
+   "line": "VO-01"
+  },
+  {
+   "text": "thirty-three",
+   "start": 1.778,
+   "end": 2.425,
+   "line": "VO-01"
+  },
+  {
+   "text": "years,",
+   "start": 2.425,
+   "end": 2.748,
+   "line": "VO-01"
+  },
+  {
+   "text": "Nvidia",
+   "start": 2.748,
+   "end": 3.125,
+   "line": "VO-01"
+  },
+  {
+   "text": "explains",
+   "start": 3.125,
+   "end": 3.611,
+   "line": "VO-01"
+  },
+  {
+   "text": "its",
+   "start": 3.611,
+   "end": 3.826,
+   "line": "VO-01"
+  },
+  {
+   "text": "billions",
+   "start": 3.826,
+   "end": 4.311,
+   "line": "VO-01"
+  },
+  {
+   "text": "without",
+   "start": 4.311,
+   "end": 4.743,
+   "line": "VO-01"
+  },
+  {
+   "text": "Jensen",
+   "start": 4.743,
+   "end": 5.12,
+   "line": "VO-01"
+  },
+  {
+   "text": "Huang.",
+   "start": 5.12,
+   "end": 5.443,
+   "line": "VO-01"
+  },
+  {
+   "text": "Wait,",
+   "start": 5.592,
+   "end": 5.864,
+   "line": "VO-02"
+  },
+  {
+   "text": "who's",
+   "start": 5.864,
+   "end": 6.137,
+   "line": "VO-02"
+  },
+  {
+   "text": "running",
+   "start": 6.137,
+   "end": 6.573,
+   "line": "VO-02"
+  },
+  {
+   "text": "Nvidia",
+   "start": 6.573,
+   "end": 6.954,
+   "line": "VO-02"
+  },
+  {
+   "text": "now?",
+   "start": 6.954,
+   "end": 7.173,
+   "line": "VO-02"
+  },
+  {
+   "text": "Jensen",
+   "start": 7.321,
+   "end": 7.732,
+   "line": "VO-03"
+  },
+  {
+   "text": "resigned",
+   "start": 7.732,
+   "end": 8.259,
+   "line": "VO-03"
+  },
+  {
+   "text": "last",
+   "start": 8.259,
+   "end": 8.552,
+   "line": "VO-03"
+  },
+  {
+   "text": "week",
+   "start": 8.552,
+   "end": 8.845,
+   "line": "VO-03"
+  },
+  {
+   "text": "after",
+   "start": 8.845,
+   "end": 9.197,
+   "line": "VO-03"
+  },
+  {
+   "text": "a",
+   "start": 9.197,
+   "end": 9.314,
+   "line": "VO-03"
+  },
+  {
+   "text": "scandal,",
+   "start": 9.314,
+   "end": 9.783,
+   "line": "VO-03"
+  },
+  {
+   "text": "so",
+   "start": 9.783,
+   "end": 9.959,
+   "line": "VO-03"
+  },
+  {
+   "text": "the",
+   "start": 9.959,
+   "end": 10.193,
+   "line": "VO-03"
+  },
+  {
+   "text": "company's",
+   "start": 10.193,
+   "end": 10.721,
+   "line": "VO-03"
+  },
+  {
+   "text": "money",
+   "start": 10.721,
+   "end": 11.072,
+   "line": "VO-03"
+  },
+  {
+   "text": "chief",
+   "start": 11.072,
+   "end": 11.423,
+   "line": "VO-03"
+  },
+  {
+   "text": "is",
+   "start": 11.423,
+   "end": 11.6,
+   "line": "VO-03"
+  },
+  {
+   "text": "now",
+   "start": 11.6,
+   "end": 11.834,
+   "line": "VO-03"
+  },
+  {
+   "text": "doing",
+   "start": 11.834,
+   "end": 12.185,
+   "line": "VO-03"
+  },
+  {
+   "text": "two",
+   "start": 12.185,
+   "end": 12.419,
+   "line": "VO-03"
+  },
+  {
+   "text": "of",
+   "start": 12.419,
+   "end": 12.596,
+   "line": "VO-03"
+  },
+  {
+   "text": "the",
+   "start": 12.596,
+   "end": 12.83,
+   "line": "VO-03"
+  },
+  {
+   "text": "biggest",
+   "start": 12.83,
+   "end": 13.298,
+   "line": "VO-03"
+  },
+  {
+   "text": "jobs",
+   "start": 13.298,
+   "end": 13.592,
+   "line": "VO-03"
+  },
+  {
+   "text": "in",
+   "start": 13.592,
+   "end": 13.768,
+   "line": "VO-03"
+  },
+  {
+   "text": "tech.",
+   "start": 13.768,
+   "end": 14.06,
+   "line": "VO-03"
+  },
+  {
+   "text": "Nvidia",
+   "start": 14.16,
+   "end": 14.546,
+   "line": "VO-04"
+  },
+  {
+   "text": "is",
+   "start": 14.546,
+   "end": 14.712,
+   "line": "VO-04"
+  },
+  {
+   "text": "the",
+   "start": 14.712,
+   "end": 14.932,
+   "line": "VO-04"
+  },
+  {
+   "text": "jet",
+   "start": 14.932,
+   "end": 15.154,
+   "line": "VO-04"
+  },
+  {
+   "text": "every",
+   "start": 15.154,
+   "end": 15.485,
+   "line": "VO-04"
+  },
+  {
+   "text": "AI",
+   "start": 15.485,
+   "end": 15.651,
+   "line": "VO-04"
+  },
+  {
+   "text": "company",
+   "start": 15.651,
+   "end": 16.092,
+   "line": "VO-04"
+  },
+  {
+   "text": "flies",
+   "start": 16.092,
+   "end": 16.425,
+   "line": "VO-04"
+  },
+  {
+   "text": "on,",
+   "start": 16.425,
+   "end": 16.59,
+   "line": "VO-04"
+  },
+  {
+   "text": "and",
+   "start": 16.59,
+   "end": 16.811,
+   "line": "VO-04"
+  },
+  {
+   "text": "investors",
+   "start": 16.811,
+   "end": 17.363,
+   "line": "VO-04"
+  },
+  {
+   "text": "paid",
+   "start": 17.363,
+   "end": 17.639,
+   "line": "VO-04"
+  },
+  {
+   "text": "extra",
+   "start": 17.639,
+   "end": 17.971,
+   "line": "VO-04"
+  },
+  {
+   "text": "because",
+   "start": 17.971,
+   "end": 18.413,
+   "line": "VO-04"
+  },
+  {
+   "text": "they",
+   "start": 18.413,
+   "end": 18.689,
+   "line": "VO-04"
+  },
+  {
+   "text": "trusted",
+   "start": 18.689,
+   "end": 19.13,
+   "line": "VO-04"
+  },
+  {
+   "text": "the",
+   "start": 19.13,
+   "end": 19.352,
+   "line": "VO-04"
+  },
+  {
+   "text": "pilot",
+   "start": 19.352,
+   "end": 19.683,
+   "line": "VO-04"
+  },
+  {
+   "text": "in",
+   "start": 19.683,
+   "end": 19.849,
+   "line": "VO-04"
+  },
+  {
+   "text": "the",
+   "start": 19.849,
+   "end": 20.07,
+   "line": "VO-04"
+  },
+  {
+   "text": "leather",
+   "start": 20.07,
+   "end": 20.512,
+   "line": "VO-04"
+  },
+  {
+   "text": "jacket.",
+   "start": 20.512,
+   "end": 20.898,
+   "line": "VO-04"
+  },
+  {
+   "text": "That's",
+   "start": 20.998,
+   "end": 21.337,
+   "line": "VO-05"
+  },
+  {
+   "text": "key",
+   "start": 21.337,
+   "end": 21.564,
+   "line": "VO-05"
+  },
+  {
+   "text": "person",
+   "start": 21.564,
+   "end": 21.96,
+   "line": "VO-05"
+  },
+  {
+   "text": "risk,",
+   "start": 21.96,
+   "end": 22.244,
+   "line": "VO-05"
+  },
+  {
+   "text": "when",
+   "start": 22.244,
+   "end": 22.527,
+   "line": "VO-05"
+  },
+  {
+   "text": "losing",
+   "start": 22.527,
+   "end": 22.924,
+   "line": "VO-05"
+  },
+  {
+   "text": "one",
+   "start": 22.924,
+   "end": 23.15,
+   "line": "VO-05"
+  },
+  {
+   "text": "person",
+   "start": 23.15,
+   "end": 23.547,
+   "line": "VO-05"
+  },
+  {
+   "text": "can",
+   "start": 23.547,
+   "end": 23.773,
+   "line": "VO-05"
+  },
+  {
+   "text": "shake",
+   "start": 23.773,
+   "end": 24.113,
+   "line": "VO-05"
+  },
+  {
+   "text": "a",
+   "start": 24.113,
+   "end": 24.226,
+   "line": "VO-05"
+  },
+  {
+   "text": "stock",
+   "start": 24.226,
+   "end": 24.567,
+   "line": "VO-05"
+  },
+  {
+   "text": "even",
+   "start": 24.567,
+   "end": 24.849,
+   "line": "VO-05"
+  },
+  {
+   "text": "if",
+   "start": 24.849,
+   "end": 25.019,
+   "line": "VO-05"
+  },
+  {
+   "text": "the",
+   "start": 25.019,
+   "end": 25.246,
+   "line": "VO-05"
+  },
+  {
+   "text": "business",
+   "start": 25.246,
+   "end": 25.756,
+   "line": "VO-05"
+  },
+  {
+   "text": "didn't",
+   "start": 25.756,
+   "end": 26.096,
+   "line": "VO-05"
+  },
+  {
+   "text": "change.",
+   "start": 26.096,
+   "end": 26.492,
+   "line": "VO-05"
+  },
+  {
+   "text": "You'd",
+   "start": 26.889,
+   "end": 27.162,
+   "line": "VO-06"
+  },
+  {
+   "text": "think",
+   "start": 27.162,
+   "end": 27.489,
+   "line": "VO-06"
+  },
+  {
+   "text": "the",
+   "start": 27.489,
+   "end": 27.707,
+   "line": "VO-06"
+  },
+  {
+   "text": "jet",
+   "start": 27.707,
+   "end": 27.925,
+   "line": "VO-06"
+  },
+  {
+   "text": "falls",
+   "start": 27.925,
+   "end": 28.253,
+   "line": "VO-06"
+  },
+  {
+   "text": "without",
+   "start": 28.253,
+   "end": 28.689,
+   "line": "VO-06"
+  },
+  {
+   "text": "him,",
+   "start": 28.689,
+   "end": 28.907,
+   "line": "VO-06"
+  },
+  {
+   "text": "but",
+   "start": 28.907,
+   "end": 29.125,
+   "line": "VO-06"
+  },
+  {
+   "text": "the",
+   "start": 29.125,
+   "end": 29.343,
+   "line": "VO-06"
+  },
+  {
+   "text": "factories,",
+   "start": 29.343,
+   "end": 29.889,
+   "line": "VO-06"
+  },
+  {
+   "text": "the",
+   "start": 29.889,
+   "end": 30.107,
+   "line": "VO-06"
+  },
+  {
+   "text": "chips",
+   "start": 30.107,
+   "end": 30.434,
+   "line": "VO-06"
+  },
+  {
+   "text": "and",
+   "start": 30.434,
+   "end": 30.652,
+   "line": "VO-06"
+  },
+  {
+   "text": "the",
+   "start": 30.652,
+   "end": 30.87,
+   "line": "VO-06"
+  },
+  {
+   "text": "customers",
+   "start": 30.87,
+   "end": 31.416,
+   "line": "VO-06"
+  },
+  {
+   "text": "didn't",
+   "start": 31.416,
+   "end": 31.743,
+   "line": "VO-06"
+  },
+  {
+   "text": "resign.",
+   "start": 31.743,
+   "end": 32.125,
+   "line": "VO-06"
+  },
+  {
+   "text": "And",
+   "start": 32.403,
+   "end": 32.598,
+   "line": "VO-07"
+  },
+  {
+   "text": "Congress",
+   "start": 32.598,
+   "end": 33.039,
+   "line": "VO-07"
+  },
+  {
+   "text": "still",
+   "start": 33.039,
+   "end": 33.334,
+   "line": "VO-07"
+  },
+  {
+   "text": "wants",
+   "start": 33.334,
+   "end": 33.627,
+   "line": "VO-07"
+  },
+  {
+   "text": "to",
+   "start": 33.627,
+   "end": 33.774,
+   "line": "VO-07"
+  },
+  {
+   "text": "question",
+   "start": 33.774,
+   "end": 34.216,
+   "line": "VO-07"
+  },
+  {
+   "text": "Jensen",
+   "start": 34.216,
+   "end": 34.558,
+   "line": "VO-07"
+  },
+  {
+   "text": "behind",
+   "start": 34.558,
+   "end": 34.901,
+   "line": "VO-07"
+  },
+  {
+   "text": "closed",
+   "start": 34.901,
+   "end": 35.244,
+   "line": "VO-07"
+  },
+  {
+   "text": "doors",
+   "start": 35.244,
+   "end": 35.538,
+   "line": "VO-07"
+  },
+  {
+   "text": "on",
+   "start": 35.538,
+   "end": 35.685,
+   "line": "VO-07"
+  },
+  {
+   "text": "December",
+   "start": 35.685,
+   "end": 36.126,
+   "line": "VO-07"
+  },
+  {
+   "text": "first.",
+   "start": 36.126,
+   "end": 36.42,
+   "line": "VO-07"
+  },
+  {
+   "text": "If",
+   "start": 36.758,
+   "end": 36.949,
+   "line": "VO-08"
+  },
+  {
+   "text": "you",
+   "start": 36.949,
+   "end": 37.205,
+   "line": "VO-08"
+  },
+  {
+   "text": "own",
+   "start": 37.205,
+   "end": 37.46,
+   "line": "VO-08"
+  },
+  {
+   "text": "an",
+   "start": 37.46,
+   "end": 37.653,
+   "line": "VO-08"
+  },
+  {
+   "text": "S",
+   "start": 37.653,
+   "end": 37.78,
+   "line": "VO-08"
+  },
+  {
+   "text": "and",
+   "start": 37.78,
+   "end": 38.036,
+   "line": "VO-08"
+  },
+  {
+   "text": "P",
+   "start": 38.036,
+   "end": 38.164,
+   "line": "VO-08"
+  },
+  {
+   "text": "five",
+   "start": 38.164,
+   "end": 38.483,
+   "line": "VO-08"
+  },
+  {
+   "text": "hundred",
+   "start": 38.483,
+   "end": 38.995,
+   "line": "VO-08"
+  },
+  {
+   "text": "fund,",
+   "start": 38.995,
+   "end": 39.314,
+   "line": "VO-08"
+  },
+  {
+   "text": "you",
+   "start": 39.314,
+   "end": 39.57,
+   "line": "VO-08"
+  },
+  {
+   "text": "already",
+   "start": 39.57,
+   "end": 40.081,
+   "line": "VO-08"
+  },
+  {
+   "text": "have",
+   "start": 40.081,
+   "end": 40.401,
+   "line": "VO-08"
+  },
+  {
+   "text": "a",
+   "start": 40.401,
+   "end": 40.529,
+   "line": "VO-08"
+  },
+  {
+   "text": "seat",
+   "start": 40.529,
+   "end": 40.848,
+   "line": "VO-08"
+  },
+  {
+   "text": "on",
+   "start": 40.848,
+   "end": 41.041,
+   "line": "VO-08"
+  },
+  {
+   "text": "this",
+   "start": 41.041,
+   "end": 41.36,
+   "line": "VO-08"
+  },
+  {
+   "text": "jet,",
+   "start": 41.36,
+   "end": 41.616,
+   "line": "VO-08"
+  },
+  {
+   "text": "so",
+   "start": 41.616,
+   "end": 41.808,
+   "line": "VO-08"
+  },
+  {
+   "text": "would",
+   "start": 41.808,
+   "end": 42.192,
+   "line": "VO-08"
+  },
+  {
+   "text": "you",
+   "start": 42.192,
+   "end": 42.447,
+   "line": "VO-08"
+  },
+  {
+   "text": "fly",
+   "start": 42.447,
+   "end": 42.703,
+   "line": "VO-08"
+  },
+  {
+   "text": "without",
+   "start": 42.703,
+   "end": 43.215,
+   "line": "VO-08"
+  },
+  {
+   "text": "him?",
+   "start": 43.215,
+   "end": 43.47,
+   "line": "VO-08"
+  }
+ ]
+}
