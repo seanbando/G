@@ -110,3 +110,8 @@ Tested on the creator's cloned voice: emotion tags in square brackets are not sp
 - Use mostly `[excited]`; for the fake-out beat a calmer tag such as `[serious]`; for the lesson or callback `[confident]`. Put the tag at the start of the line.
 - Tags go in the script line itself, so `make_voiceover.py` and `generate_voiceovers.py` pass them through unchanged; keep them out of captions.
 - **Creator's verdict (2026-11-13):** `[excited]` alone was "a little too much" too. Default is **no emotion tags**; energy comes from the 195 wpm per-line pace (`tools/auto_tempo.py`) and the `--punch` sound. A milder tag such as `[upbeat]` is untested; try it on one line before using it.
+
+## Write to fit, never speed to fit (creator feedback, Nov 15 2026)
+The 180-word cable POV take sounded rushed: most lines needed 1.15-1.29x to reach 195 wpm. Fix the script, not the tempo:
+- Budget words for the natural read: about 175 wpm as recorded -> ~140 words for a 50 s short.
+- auto_tempo speed-ups should stay at or under about 1.1x; if a line needs more, cut words from it.
