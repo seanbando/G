@@ -22,8 +22,19 @@ OFF_WHITE = (236, 232, 222)
 AMBER = (255, 170, 40)
 
 
+# Windows stand-ins for the Linux fonts above (same look: bold monospace typewriter, bold sans)
+_WIN_FONTS = {"FreeMonoBold.ttf": "courbd.ttf", "LiberationSans-Bold.ttf": "arialbd.ttf"}
+
+
 def _font(path, size):
-    return ImageFont.truetype(path, size)
+    try:
+        return ImageFont.truetype(path, size)
+    except OSError:
+        import os
+        alt = _WIN_FONTS.get(os.path.basename(path))
+        if not alt:
+            raise
+        return ImageFont.truetype(os.path.join(os.environ.get("WINDIR", r"C:\Windows"), "Fonts", alt), size)
 
 
 def _pipe(out, alpha=False):

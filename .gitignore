@@ -3,3 +3,10 @@
 
 # Python cache
 __pycache__/
+
+# Local media and renders (not in git)
+/_kit/
+saylo/videos/*/media/
+saylo/videos/*/render/
+
+/.videohub/
