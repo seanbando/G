@@ -1,0 +1,858 @@
+{
+ "lines": [
+  {
+   "id": "VO-01",
+   "start": 0.0,
+   "end": 7.6,
+   "text": "A company spent an estimated three hundred million dollars on a cable from Chicago to New Jersey, just to save three milliseconds."
+  },
+  {
+   "id": "VO-02",
+   "start": 7.699,
+   "end": 13.614,
+   "text": "You see, when a price moves in Chicago, the fastest traders in New Jersey can react before their rivals."
+  },
+  {
+   "id": "VO-03",
+   "start": 13.713,
+   "end": 19.809,
+   "text": "It sounded crazy, until the line made the round trip in about thirteen milliseconds, the fastest route yet."
+  },
+  {
+   "id": "VO-04",
+   "start": 20.146,
+   "end": 21.728,
+   "text": "It looked set for years."
+  },
+  {
+   "id": "VO-05",
+   "start": 21.827,
+   "end": 26.522,
+   "text": "Then microwave towers beat it, because signals fly faster through air than through glass."
+  },
+  {
+   "id": "VO-06",
+   "start": 26.621,
+   "end": 32.069,
+   "text": "In twenty seventeen, the company behind it agreed to sell for one hundred twenty-seven million dollars."
+  },
+  {
+   "id": "VO-07",
+   "start": 32.407,
+   "end": 39.28,
+   "text": "Now Cboe gives traders connecting in two New Jersey data centers the same length of cable, so nobody's wire is shorter."
+  },
+  {
+   "id": "VO-08",
+   "start": 39.617,
+   "end": 45.272,
+   "text": "It's a race measured in milliseconds, and if you hold stocks for years, you never had to run it."
+  }
+ ],
+ "words": [
+  {
+   "text": "A",
+   "start": 0.0,
+   "end": 0.118,
+   "line": "VO-01"
+  },
+  {
+   "text": "company",
+   "start": 0.118,
+   "end": 0.589,
+   "line": "VO-01"
+  },
+  {
+   "text": "spent",
+   "start": 0.589,
+   "end": 0.942,
+   "line": "VO-01"
+  },
+  {
+   "text": "an",
+   "start": 0.942,
+   "end": 1.119,
+   "line": "VO-01"
+  },
+  {
+   "text": "estimated",
+   "start": 1.119,
+   "end": 1.709,
+   "line": "VO-01"
+  },
+  {
+   "text": "three",
+   "start": 1.709,
+   "end": 2.062,
+   "line": "VO-01"
+  },
+  {
+   "text": "hundred",
+   "start": 2.062,
+   "end": 2.533,
+   "line": "VO-01"
+  },
+  {
+   "text": "million",
+   "start": 2.533,
+   "end": 3.005,
+   "line": "VO-01"
+  },
+  {
+   "text": "dollars",
+   "start": 3.005,
+   "end": 3.476,
+   "line": "VO-01"
+  },
+  {
+   "text": "on",
+   "start": 3.476,
+   "end": 3.653,
+   "line": "VO-01"
+  },
+  {
+   "text": "a",
+   "start": 3.653,
+   "end": 3.77,
+   "line": "VO-01"
+  },
+  {
+   "text": "cable",
+   "start": 3.77,
+   "end": 4.124,
+   "line": "VO-01"
+  },
+  {
+   "text": "from",
+   "start": 4.124,
+   "end": 4.419,
+   "line": "VO-01"
+  },
+  {
+   "text": "Chicago",
+   "start": 4.419,
+   "end": 4.89,
+   "line": "VO-01"
+  },
+  {
+   "text": "to",
+   "start": 4.89,
+   "end": 5.067,
+   "line": "VO-01"
+  },
+  {
+   "text": "New",
+   "start": 5.067,
+   "end": 5.302,
+   "line": "VO-01"
+  },
+  {
+   "text": "Jersey,",
+   "start": 5.302,
+   "end": 5.715,
+   "line": "VO-01"
+  },
+  {
+   "text": "just",
+   "start": 5.715,
+   "end": 6.009,
+   "line": "VO-01"
+  },
+  {
+   "text": "to",
+   "start": 6.009,
+   "end": 6.186,
+   "line": "VO-01"
+  },
+  {
+   "text": "save",
+   "start": 6.186,
+   "end": 6.481,
+   "line": "VO-01"
+  },
+  {
+   "text": "three",
+   "start": 6.481,
+   "end": 6.835,
+   "line": "VO-01"
+  },
+  {
+   "text": "milliseconds.",
+   "start": 6.835,
+   "end": 7.6,
+   "line": "VO-01"
+  },
+  {
+   "text": "You",
+   "start": 7.699,
+   "end": 7.931,
+   "line": "VO-02"
+  },
+  {
+   "text": "see,",
+   "start": 7.931,
+   "end": 8.163,
+   "line": "VO-02"
+  },
+  {
+   "text": "when",
+   "start": 8.163,
+   "end": 8.453,
+   "line": "VO-02"
+  },
+  {
+   "text": "a",
+   "start": 8.453,
+   "end": 8.569,
+   "line": "VO-02"
+  },
+  {
+   "text": "price",
+   "start": 8.569,
+   "end": 8.917,
+   "line": "VO-02"
+  },
+  {
+   "text": "moves",
+   "start": 8.917,
+   "end": 9.264,
+   "line": "VO-02"
+  },
+  {
+   "text": "in",
+   "start": 9.264,
+   "end": 9.439,
+   "line": "VO-02"
+  },
+  {
+   "text": "Chicago,",
+   "start": 9.439,
+   "end": 9.903,
+   "line": "VO-02"
+  },
+  {
+   "text": "the",
+   "start": 9.903,
+   "end": 10.134,
+   "line": "VO-02"
+  },
+  {
+   "text": "fastest",
+   "start": 10.134,
+   "end": 10.598,
+   "line": "VO-02"
+  },
+  {
+   "text": "traders",
+   "start": 10.598,
+   "end": 11.063,
+   "line": "VO-02"
+  },
+  {
+   "text": "in",
+   "start": 11.063,
+   "end": 11.236,
+   "line": "VO-02"
+  },
+  {
+   "text": "New",
+   "start": 11.236,
+   "end": 11.468,
+   "line": "VO-02"
+  },
+  {
+   "text": "Jersey",
+   "start": 11.468,
+   "end": 11.874,
+   "line": "VO-02"
+  },
+  {
+   "text": "can",
+   "start": 11.874,
+   "end": 12.106,
+   "line": "VO-02"
+  },
+  {
+   "text": "react",
+   "start": 12.106,
+   "end": 12.454,
+   "line": "VO-02"
+  },
+  {
+   "text": "before",
+   "start": 12.454,
+   "end": 12.86,
+   "line": "VO-02"
+  },
+  {
+   "text": "their",
+   "start": 12.86,
+   "end": 13.207,
+   "line": "VO-02"
+  },
+  {
+   "text": "rivals.",
+   "start": 13.207,
+   "end": 13.614,
+   "line": "VO-02"
+  },
+  {
+   "text": "It",
+   "start": 13.713,
+   "end": 13.887,
+   "line": "VO-03"
+  },
+  {
+   "text": "sounded",
+   "start": 13.887,
+   "end": 14.351,
+   "line": "VO-03"
+  },
+  {
+   "text": "crazy,",
+   "start": 14.351,
+   "end": 14.7,
+   "line": "VO-03"
+  },
+  {
+   "text": "until",
+   "start": 14.7,
+   "end": 15.047,
+   "line": "VO-03"
+  },
+  {
+   "text": "the",
+   "start": 15.047,
+   "end": 15.28,
+   "line": "VO-03"
+  },
+  {
+   "text": "line",
+   "start": 15.28,
+   "end": 15.571,
+   "line": "VO-03"
+  },
+  {
+   "text": "made",
+   "start": 15.571,
+   "end": 15.861,
+   "line": "VO-03"
+  },
+  {
+   "text": "the",
+   "start": 15.861,
+   "end": 16.093,
+   "line": "VO-03"
+  },
+  {
+   "text": "round",
+   "start": 16.093,
+   "end": 16.442,
+   "line": "VO-03"
+  },
+  {
+   "text": "trip",
+   "start": 16.442,
+   "end": 16.732,
+   "line": "VO-03"
+  },
+  {
+   "text": "in",
+   "start": 16.732,
+   "end": 16.905,
+   "line": "VO-03"
+  },
+  {
+   "text": "about",
+   "start": 16.905,
+   "end": 17.254,
+   "line": "VO-03"
+  },
+  {
+   "text": "thirteen",
+   "start": 17.254,
+   "end": 17.776,
+   "line": "VO-03"
+  },
+  {
+   "text": "milliseconds,",
+   "start": 17.776,
+   "end": 18.531,
+   "line": "VO-03"
+  },
+  {
+   "text": "the",
+   "start": 18.531,
+   "end": 18.763,
+   "line": "VO-03"
+  },
+  {
+   "text": "fastest",
+   "start": 18.763,
+   "end": 19.228,
+   "line": "VO-03"
+  },
+  {
+   "text": "route",
+   "start": 19.228,
+   "end": 19.576,
+   "line": "VO-03"
+  },
+  {
+   "text": "yet.",
+   "start": 19.576,
+   "end": 19.809,
+   "line": "VO-03"
+  },
+  {
+   "text": "It",
+   "start": 20.146,
+   "end": 20.344,
+   "line": "VO-04"
+  },
+  {
+   "text": "looked",
+   "start": 20.344,
+   "end": 20.806,
+   "line": "VO-04"
+  },
+  {
+   "text": "set",
+   "start": 20.806,
+   "end": 21.069,
+   "line": "VO-04"
+  },
+  {
+   "text": "for",
+   "start": 21.069,
+   "end": 21.333,
+   "line": "VO-04"
+  },
+  {
+   "text": "years.",
+   "start": 21.333,
+   "end": 21.728,
+   "line": "VO-04"
+  },
+  {
+   "text": "Then",
+   "start": 21.827,
+   "end": 22.095,
+   "line": "VO-05"
+  },
+  {
+   "text": "microwave",
+   "start": 22.095,
+   "end": 22.628,
+   "line": "VO-05"
+  },
+  {
+   "text": "towers",
+   "start": 22.628,
+   "end": 23.001,
+   "line": "VO-05"
+  },
+  {
+   "text": "beat",
+   "start": 23.001,
+   "end": 23.268,
+   "line": "VO-05"
+  },
+  {
+   "text": "it,",
+   "start": 23.268,
+   "end": 23.428,
+   "line": "VO-05"
+  },
+  {
+   "text": "because",
+   "start": 23.428,
+   "end": 23.855,
+   "line": "VO-05"
+  },
+  {
+   "text": "signals",
+   "start": 23.855,
+   "end": 24.282,
+   "line": "VO-05"
+  },
+  {
+   "text": "fly",
+   "start": 24.282,
+   "end": 24.495,
+   "line": "VO-05"
+  },
+  {
+   "text": "faster",
+   "start": 24.495,
+   "end": 24.869,
+   "line": "VO-05"
+  },
+  {
+   "text": "through",
+   "start": 24.869,
+   "end": 25.295,
+   "line": "VO-05"
+  },
+  {
+   "text": "air",
+   "start": 25.295,
+   "end": 25.508,
+   "line": "VO-05"
+  },
+  {
+   "text": "than",
+   "start": 25.508,
+   "end": 25.775,
+   "line": "VO-05"
+  },
+  {
+   "text": "through",
+   "start": 25.775,
+   "end": 26.202,
+   "line": "VO-05"
+  },
+  {
+   "text": "glass.",
+   "start": 26.202,
+   "end": 26.522,
+   "line": "VO-05"
+  },
+  {
+   "text": "In",
+   "start": 26.621,
+   "end": 26.783,
+   "line": "VO-06"
+  },
+  {
+   "text": "twenty",
+   "start": 26.783,
+   "end": 27.161,
+   "line": "VO-06"
+  },
+  {
+   "text": "seventeen,",
+   "start": 27.161,
+   "end": 27.7,
+   "line": "VO-06"
+  },
+  {
+   "text": "the",
+   "start": 27.7,
+   "end": 27.916,
+   "line": "VO-06"
+  },
+  {
+   "text": "company",
+   "start": 27.916,
+   "end": 28.347,
+   "line": "VO-06"
+  },
+  {
+   "text": "behind",
+   "start": 28.347,
+   "end": 28.725,
+   "line": "VO-06"
+  },
+  {
+   "text": "it",
+   "start": 28.725,
+   "end": 28.886,
+   "line": "VO-06"
+  },
+  {
+   "text": "agreed",
+   "start": 28.886,
+   "end": 29.265,
+   "line": "VO-06"
+  },
+  {
+   "text": "to",
+   "start": 29.265,
+   "end": 29.427,
+   "line": "VO-06"
+  },
+  {
+   "text": "sell",
+   "start": 29.427,
+   "end": 29.696,
+   "line": "VO-06"
+  },
+  {
+   "text": "for",
+   "start": 29.696,
+   "end": 29.911,
+   "line": "VO-06"
+  },
+  {
+   "text": "one",
+   "start": 29.911,
+   "end": 30.128,
+   "line": "VO-06"
+  },
+  {
+   "text": "hundred",
+   "start": 30.128,
+   "end": 30.559,
+   "line": "VO-06"
+  },
+  {
+   "text": "twenty-seven",
+   "start": 30.559,
+   "end": 31.206,
+   "line": "VO-06"
+  },
+  {
+   "text": "million",
+   "start": 31.206,
+   "end": 31.637,
+   "line": "VO-06"
+  },
+  {
+   "text": "dollars.",
+   "start": 31.637,
+   "end": 32.069,
+   "line": "VO-06"
+  },
+  {
+   "text": "Now",
+   "start": 32.407,
+   "end": 32.642,
+   "line": "VO-07"
+  },
+  {
+   "text": "Cboe",
+   "start": 32.642,
+   "end": 32.935,
+   "line": "VO-07"
+  },
+  {
+   "text": "gives",
+   "start": 32.935,
+   "end": 33.287,
+   "line": "VO-07"
+  },
+  {
+   "text": "traders",
+   "start": 33.287,
+   "end": 33.758,
+   "line": "VO-07"
+  },
+  {
+   "text": "connecting",
+   "start": 33.758,
+   "end": 34.404,
+   "line": "VO-07"
+  },
+  {
+   "text": "in",
+   "start": 34.404,
+   "end": 34.58,
+   "line": "VO-07"
+  },
+  {
+   "text": "two",
+   "start": 34.58,
+   "end": 34.815,
+   "line": "VO-07"
+  },
+  {
+   "text": "New",
+   "start": 34.815,
+   "end": 35.05,
+   "line": "VO-07"
+  },
+  {
+   "text": "Jersey",
+   "start": 35.05,
+   "end": 35.462,
+   "line": "VO-07"
+  },
+  {
+   "text": "data",
+   "start": 35.462,
+   "end": 35.755,
+   "line": "VO-07"
+  },
+  {
+   "text": "centers",
+   "start": 35.755,
+   "end": 36.225,
+   "line": "VO-07"
+  },
+  {
+   "text": "the",
+   "start": 36.225,
+   "end": 36.46,
+   "line": "VO-07"
+  },
+  {
+   "text": "same",
+   "start": 36.46,
+   "end": 36.754,
+   "line": "VO-07"
+  },
+  {
+   "text": "length",
+   "start": 36.754,
+   "end": 37.165,
+   "line": "VO-07"
+  },
+  {
+   "text": "of",
+   "start": 37.165,
+   "end": 37.342,
+   "line": "VO-07"
+  },
+  {
+   "text": "cable,",
+   "start": 37.342,
+   "end": 37.694,
+   "line": "VO-07"
+  },
+  {
+   "text": "so",
+   "start": 37.694,
+   "end": 37.87,
+   "line": "VO-07"
+  },
+  {
+   "text": "nobody's",
+   "start": 37.87,
+   "end": 38.34,
+   "line": "VO-07"
+  },
+  {
+   "text": "wire",
+   "start": 38.34,
+   "end": 38.634,
+   "line": "VO-07"
+  },
+  {
+   "text": "is",
+   "start": 38.634,
+   "end": 38.81,
+   "line": "VO-07"
+  },
+  {
+   "text": "shorter.",
+   "start": 38.81,
+   "end": 39.28,
+   "line": "VO-07"
+  },
+  {
+   "text": "It's",
+   "start": 39.617,
+   "end": 39.861,
+   "line": "VO-08"
+  },
+  {
+   "text": "a",
+   "start": 39.861,
+   "end": 39.983,
+   "line": "VO-08"
+  },
+  {
+   "text": "race",
+   "start": 39.983,
+   "end": 40.287,
+   "line": "VO-08"
+  },
+  {
+   "text": "measured",
+   "start": 40.287,
+   "end": 40.834,
+   "line": "VO-08"
+  },
+  {
+   "text": "in",
+   "start": 40.834,
+   "end": 41.017,
+   "line": "VO-08"
+  },
+  {
+   "text": "milliseconds,",
+   "start": 41.017,
+   "end": 41.807,
+   "line": "VO-08"
+  },
+  {
+   "text": "and",
+   "start": 41.807,
+   "end": 42.05,
+   "line": "VO-08"
+  },
+  {
+   "text": "if",
+   "start": 42.05,
+   "end": 42.232,
+   "line": "VO-08"
+  },
+  {
+   "text": "you",
+   "start": 42.232,
+   "end": 42.475,
+   "line": "VO-08"
+  },
+  {
+   "text": "hold",
+   "start": 42.475,
+   "end": 42.779,
+   "line": "VO-08"
+  },
+  {
+   "text": "stocks",
+   "start": 42.779,
+   "end": 43.205,
+   "line": "VO-08"
+  },
+  {
+   "text": "for",
+   "start": 43.205,
+   "end": 43.448,
+   "line": "VO-08"
+  },
+  {
+   "text": "years,",
+   "start": 43.448,
+   "end": 43.813,
+   "line": "VO-08"
+  },
+  {
+   "text": "you",
+   "start": 43.813,
+   "end": 44.056,
+   "line": "VO-08"
+  },
+  {
+   "text": "never",
+   "start": 44.056,
+   "end": 44.421,
+   "line": "VO-08"
+  },
+  {
+   "text": "had",
+   "start": 44.421,
+   "end": 44.665,
+   "line": "VO-08"
+  },
+  {
+   "text": "to",
+   "start": 44.665,
+   "end": 44.846,
+   "line": "VO-08"
+  },
+  {
+   "text": "run",
+   "start": 44.846,
+   "end": 45.09,
+   "line": "VO-08"
+  },
+  {
+   "text": "it.",
+   "start": 45.09,
+   "end": 45.272,
+   "line": "VO-08"
+  }
+ ]
+}
