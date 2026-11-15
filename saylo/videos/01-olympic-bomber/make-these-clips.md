@@ -24,7 +24,7 @@ Paste this at the end of EVERY prompt:
 ## Part 2: new recreation scenes
 | # | Upload this | Prompt | Save as |
 |---|---|---|---|
-| 12 | First frame: `loc-murphy-street.png` | Aerial drone shot at 3:30 AM over a tiny mountain town, a police car with headlights off rolls slowly down the empty main street | `K clip.mp4` |
+| 12 | None (text only: the parked car in `loc-murphy-street.png` makes the generator drive it in reverse) | Slow camera following behind a police car as it drives forward, away from the camera, down the empty main street of a tiny mountain town at 3:30 AM, taillights glowing red, headlights off, moving forward at walking speed, mist on the mountains, streetlights. **Negative prompt:** reversing, driving backwards, car moving in reverse, sliding sideways, wrong direction | `K clip.mp4` |
 | 13 | First frame: `loc-savealot-backlot.png` · Reference: `char-rudolph-2003.png` | A thin man in a dark jacket seen from behind sprints across the wet lot, a flashlight beam catches him, he stops and slowly raises his hands | `L clip.mp4` |
 | 14 | First frame: `loc-olympic-park-1996.png` | Drone shot pushing over a huge night concert crowd in a city park, stage lights and a tall metal light tower | `M clip.mp4` |
 | 15 | First frame: `loc-olympic-park-1996.png` · Reference: `char-jewell-1996.png` | A heavyset security guard in a light blue shirt seen from behind points toward a park bench; two plainclothes officers turn to look | `N clip.mp4` |
