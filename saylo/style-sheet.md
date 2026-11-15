@@ -114,6 +114,8 @@ Case-file look: timestamp cards in a typewriter font (`MAY 31, 2003 · 3:30 AM �
 | `reframe` jump cuts | Hook only (first 60s), for energy | not after 1:00 |
 Never use a transition inside the silent Jewell hold or on archival news clips.
 
+**The Saylo look (locked Nov 15, 2026, after the style test):** the creator's Template Library effects carry the stills: case board / evidence wall (connections), press stack and article zoom (headlines, documents), film window (archival photos), photo timeline (sequences of dated photos), clock badge and territory/date maps (times and places), archive profiles (people). Plain photos with a push-in are only quick 2–3 s cutaways between them. Moving AI recreations (faceless, 5 s, same look as scenes A–J) cover beats with no real footage; real news footage always wins when it exists. Engine: `node .claude/effects/render_effect.mjs` from the Template Library (see `saylo/tools` notes).
+
 Every script gets a shot list (`videos/NN-slug/shot-list.md`) before editing: one row per beat with visual, source, motion, transition and music cue.
 
 ## 9. WORKFLOW
