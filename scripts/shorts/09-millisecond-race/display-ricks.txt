@@ -1,0 +1,9 @@
+# What viewers read (captions)
+VO-01 A company spent an estimated $300 million on a cable from Chicago to New Jersey, just to save 3 milliseconds.
+VO-02 You see, when a price moves in Chicago, the fastest traders in New Jersey can react before their rivals.
+VO-03 It sounded crazy, until the line made the round trip in about 13 milliseconds, the fastest route yet.
+VO-04 It looked set for years.
+VO-05 Then microwave towers beat it, because signals fly faster through air than through glass.
+VO-06 In 2017, the company behind it agreed to sell for $127 million.
+VO-07 Now Cboe gives traders connecting in 2 New Jersey data centers the same length of cable, so nobody's wire is shorter.
+VO-08 It's a race measured in milliseconds, and if you hold stocks for years, you never had to run it.
