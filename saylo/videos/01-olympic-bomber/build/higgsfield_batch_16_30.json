@@ -1,0 +1,31 @@
+{
+ "model": "kling3_0", "mode": "std", "duration": 5, "sound": "off", "aspect_ratio": "16:9",
+ "style_suffix": "cinematic, photoreal, 1990s, dark moody grade, teal shadows, warm amber lights, film grain, slow camera move, no faces visible, no text, no blood",
+ "start_images": {
+  "loc-olympic-park-1996.png": "1479ad6a-4196-484b-9877-d07c2869283c",
+  "loc-sandy-springs.png": "a61609c6-8aa9-405e-bb3c-a83248b380de",
+  "loc-otherside-lounge.png": "470745fc-30aa-4a33-9d0a-69fcab89832f",
+  "loc-birmingham-clinic.png": "cc9f72d4-70c1-455a-972a-41a38f4a1f9a",
+  "loc-andrews-1998.jpg": "9593f06e-fb5a-4682-9739-230f7122d71d",
+  "loc-nantahala.jpg": "f621fd86-c495-49ca-8fdb-f14f01ec9e0a",
+  "loc-hidden-camp.png": "49d75105-3545-48f1-a735-41264e296d59",
+  "loc-savealot-backlot.png": "65df7943-e67d-4921-8399-88b9e897c742"
+ },
+ "clips": [
+  {"n":16,"save":"O clip.mp4","start":"loc-olympic-park-1996.png","prompt":"Bomb squad technicians in heavy protective suits walk slowly toward a park bench, seen from behind, police lights flashing, crowd being pushed back behind tape"},
+  {"n":17,"save":"P clip.mp4","start":null,"prompt":"Close-up of a 1990s newspaper printing press running fast at night, pages flying through rollers, then stacks of fresh newspapers bundled, no readable text"},
+  {"n":18,"save":"Q clip.mp4","start":null,"prompt":"A plain 1990s FBI interview room, a VHS camcorder on a tripod in the foreground with its red record light on, an out-of-focus figure sitting at a table, fluorescent light"},
+  {"n":19,"save":"R clip.mp4","start":null,"prompt":"Extreme close-up of a 1990s dot-matrix printer printing a phone log, paper feeding out, numbers blurred, desk lamp light"},
+  {"n":20,"save":"S clip.mp4","start":"loc-sandy-springs.png","prompt":"Firefighters and police seen from behind run toward the building, a shockwave of dust rolls across the parking lot in the distance, nobody hurt on screen"},
+  {"n":21,"save":"T clip.mp4","start":"loc-otherside-lounge.png","prompt":"Officers with flashlights seen from behind sweep a dark side lot, red and blue police lights wash the wall"},
+  {"n":22,"save":"V clip.mp4","start":"loc-birmingham-clinic.png","prompt":"A college student in a flannel shirt and backpack, seen from behind, walks fast down the sidewalk, keeping distance from a man far ahead, cold gray morning"},
+  {"n":23,"save":"W clip.mp4","start":"loc-andrews-1998.jpg","prompt":"Agents in navy windbreakers with plain yellow block letters on the back, seen from behind, stand at a small-town gas station holding coffee cups, white task-force trailers in the lot"},
+  {"n":24,"save":"X clip.mp4","start":null,"prompt":"Thermal-camera point of view from a helicopter flying forward over a dense winter forest at night, white heat shapes of deer moving between trees, monochrome thermal look"},
+  {"n":25,"save":"Y clip.mp4","start":"loc-nantahala.jpg","prompt":"A search team in navy jackets with two bloodhounds pulling on leashes climbs a steep misty ridge, seen from behind, walking forward uphill away from the camera"},
+  {"n":26,"save":"Z clip.mp4","start":null,"prompt":"Night, a rural store's back door, hands in work gloves load boxes of food into an old pickup truck bed, then the truck drives forward away from the camera, taillights fading into the dark"},
+  {"n":27,"save":"AA clip.mp4","start":"loc-hidden-camp.png","prompt":"Gloved hands brush dirt off the lid of a blue plastic barrel half-buried on the forest slope, agents' boots and flashlight beams around it"},
+  {"n":28,"save":"AB clip.mp4","start":"loc-savealot-backlot.png","prompt":"A second police car drives forward into the lot with lights flashing and stops, an officer in a navy uniform seen from behind walks up to the first officer, a figure sits on the curb in shadow"},
+  {"n":29,"save":"AC clip.mp4","start":"loc-nantahala.jpg","prompt":"Federal agents in vests seen from behind carefully lift a dirt-covered wooden crate from a hole in a forest clearing, yellow tape around it"},
+  {"n":30,"save":"AD clip.mp4","start":null,"prompt":"Drone shot flying forward over a stark concrete supermax prison in the Colorado high desert, razor wire fences, snow on distant mountains, cold light"}
+ ]
+}
