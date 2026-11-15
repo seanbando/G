@@ -17,7 +17,13 @@ Branch: `claude/inspiring-meitner-514uac` (repo seanbando/G).
 - Real footage cut and cleaned: AP Oct 28 1996 press conference (36b, 36c, 37b, 30b) and Retro Report (23e, 26c, 27b, 27c, 29b, 30j, 36d): see `research/clip-cuts.md`. AJC archive photo pack (24 photos) + Commons photos: `assets/SOURCES*.md`.
 - Part 1 render (cold open + The Park, 0:00–4:00) reviewed by the creator.
 
-## Fix before continuing (creator feedback on part 1)
+## Local build on the creator's PC (Nov 15, 2026)
+- Repo cloned to `C:\Users\seanb\Documents\VideoHub\films\saylo-G`; Drive clips folder downloaded to `media/` (gitignored), Template Library kit unpacked to `_kit/` (gitignored, `npm install` done).
+- Part 1 re-cut on word timings is DONE (`build/plan_cold_open.py`, `build/plan_park.py`): `python saylo/videos/01-olympic-bomber/build/build_part1.py` → `render/part1.mp4`, registered in VideoHub (project saylo-G). Awaiting creator review.
+- AJC photos 26b, 16b, 16c, 23c fetched from GSU (`digitalcollections.library.gsu.edu/digital/iiif/ajc/<id>/full/full/0/default.jpg`).
+- Still MISSING (typed placeholder cards in the render): news cuts 23e, 30b, 26c, 27b, 27c. The creator has them; once they are in the Drive clips folder, download to `media/`, delete their parts in `render/part1_raw.mp4.parts/` and rebuild.
+
+## Fix before continuing (creator feedback on part 1): applied Nov 15, see above
 - **Re-cut the cold open and The Park on word timings.** Key word times (cold open): "a mountain town" 6.54 · "the occasional patrol car" 12.36 → `K clip` · "His name is Jeff Postell" 17.38 → `04 postell clip` + lower third · "swings around behind" 21.92 → `05 save a lot clip` · "with his lights off" 24.28 → `L02 savealot backlot` · "he spots a man crouched" 25.66 → `A clip` (flashlight on crouched man) · "The man bolts" 30.68 / "then gives up" 31.80 → **L clip** (running, slips, hands up), NOT the I (dumpster raid) clip · "He says his name" 35.74 → Jerry Wilson card · "It's a lie" 41.98 · "the man standing in that parking lot" 47.02 → A clip · "Ten Most Wanted" 50.10 → poster · "Helicopters with heat cameras" 53.86 → J clip · "At one point… 200 federal agents" 58.28 → number build **200+ FEDERAL AGENTS** (not $1,000,000) · "His real name was Eric Rudolph" 63.62 → rudolph clip + lower third · "after a bomb went off" 67.54 → 23e live TV · "the FBI had spent… 88 days chasing someone else" 70.14 → 30b media scrum · "So why was he" 74.68 → title card · "the guard who'd helped save" 86.20 → 26c Jewell CNN · "Then for a year and a half" 92.06 → "2 · NO NAME" card · "built for hiding" 99.10 → "3" card over L05/Nantahala · "I'm working from court records" 100.62 → sources card.
 - **I clip (dumpster raid)** goes ONLY under "at night, when the town was asleep, he'd come down and go through the trash" (Five Years chapter).
 - Use the creator's animated location clips wherever their line comes up (L02, L03, L07–L10 uploaded; K, M uploaded).
