@@ -22,3 +22,9 @@ Lessons from v1 of the image: the first render was too wide — the figure was a
 3D isometric miniature terrain model, 16:9, aerial view at a 45-degree angle. Vast steep Appalachian mountains covered in pine forest, rendered in matte white-gray clay, heavily desaturated. A tiny white helicopter in the upper right casts a searchlight cone onto the trees. A faint grid of search lines is drawn across the mountains in thin white. Deep in a ravine, outside the searchlight, one tiny campsite glows bright saturated amber-orange, the only color in the image. Clean render, dramatic shadows, tilt-shift depth of field. Leave the left third dark and clear for text. No text, no logos.
 ```
 Overlay: "200 AGENTS" in a white box label + one white arrow to the campsite.
+
+## Description credits (required: keep in the YouTube description)
+Archival material used briefly with commentary:
+- Photos: Atlanta Journal-Constitution, via Georgia State University Library / Digital Library of Georgia.
+- 1996 broadcast and front-page footage: excerpts via Retro Report.
+- Photos: Harrison Keely, CC BY 4.0, via Wikimedia Commons (if used in later chapters).
