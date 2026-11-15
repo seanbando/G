@@ -86,3 +86,15 @@ Viewers are beginners scrolling fast. Nerd-proof means never say anything false;
 - Everyday words only: no APR, credit mix, utilization, liquidity in the voice-over.
 - If a nerd detail makes the line harder, cut the detail rather than add it; put it in the description.
 - Test: could a 15-year-old repeat the line to a friend after one listen?
+
+## Pick the hook type from the idea (the body stays the same)
+The idea decides the opening; beats after the hook (YOU question, mechanism, re-hook/fake-out, payoff, question ending) stay.
+| The idea is... | Hook type | Template |
+|---|---|---|
+| A myth people believe | Common belief -> contradict -> why | "Broke people aren't bad with money, being broke just costs more." |
+| A habit that fails without one fix | Won't work -> unless | "Paying the minimum won't get you out of debt, unless..." |
+| A deal or choice with a smarter option | Better way -> best way -> re-hook | "0% sounds like the best deal, but there's a better one." |
+| A result YOU (or a real person) got | Results first -> what they did -> steps | "YOU paid off $5,000 in 10 months without a raise. Here's how." |
+| A journey from start to goal | A -> B -> how | "From $0 saved to $1,000 in 90 days." |
+| News / famous name drama (Afterhour) | Contradiction + real name + stakes | "Nvidia didn't lose a war or a customer. It lost $300B over one man." |
+Track "viewed vs. swiped away" per hook type to learn which opening this audience stays for.
