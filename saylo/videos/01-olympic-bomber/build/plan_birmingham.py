@@ -17,7 +17,7 @@ seg(496.85, 500.83, effect="stacked-highlight", ov={"title": "SET OFF BY|REMOTE 
 seg(500.83, 502.49, src="fh birmingham clinic aerial 1998.mp4")                     # "whoever did it was close enough to watch"
 seg(502.49, 506.75, card=[["SOMETHING THAT HADN'T HAPPENED", "type"], ["AT ANY OTHER SCENE", "amber"]])  # "And then something happens that hadn't happened at any of the other scenes."
 seg(506.75, 510.95, card=[["PEOPLE RUN TOWARD IT", "type"], ["OR THEY FREEZE", "amber"]])  # "When a bomb goes off, people run toward it, or they freeze."
-seg(510.95, 514.37, src="char-student.png", motion="push_in")                       # "A college student nearby noticed one guy doing neither."
+seg(510.95, 514.37, src="student from behind (from char-student).png", motion="push_in", fx=("flicker",))  # note #11: one figure from the reference sheet, not the sheet                       # "A college student nearby noticed one guy doing neither."
 seg(514.37, 520.01, src="E clip.mp4")                                               # "He was walking away from it. Not fast. Just strolling off…"
 seg(520.01, 522.49, src="E clip.mp4", **{"in": 5.6})                                # "That bugged the student enough to follow him."
 seg(522.49, 525.41, card=[["A SECOND WITNESS", "type"]])                            # "Another witness got involved, saw the man climb into"
