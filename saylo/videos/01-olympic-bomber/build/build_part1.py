@@ -17,8 +17,12 @@ MEDIA = os.path.join(VID, "media")
 OUT = os.path.join(VID, "render")
 os.environ.setdefault("SAYLO_EFFECTS", os.path.join(REPO, "_kit", "Faceless Studio", ".claude", "effects"))
 
+# Other chapters: build_part1.py <name> <plan_a.py> [plan_b.py ...]  -> render/<name>.mp4
+NAME = sys.argv[1] if len(sys.argv) > 2 else "part1"
+PLANS = sys.argv[2:] if len(sys.argv) > 2 else ["plan_cold_open.py", "plan_park.py"]
+
 segs, music, sfx, cues = [], [], [], []
-for name in ("plan_cold_open.py", "plan_park.py"):
+for name in PLANS:
     p = runpy.run_path(os.path.join(HERE, name))
     segs += p["S"]
     music += p["MUSIC"]
@@ -47,13 +51,16 @@ os.makedirs(OUT, exist_ok=True)
 plan = dict(assets=MEDIA, voiceover=os.path.join(VID, "voiceover-full.mp3"),
             music_dir=os.path.join(VID, "sound", "music"), sfx_dir=os.path.join(VID, "sound", "sfx"),
             segments=segs, music=music, sfx=sfx)
-pj = os.path.join(OUT, "part1.plan.json")
+pj = os.path.join(OUT, NAME + ".plan.json")
 json.dump(plan, open(pj, "w"), indent=1)
-open(os.path.join(OUT, "part1.cues.txt"), "w").write("\n".join(cues) + "\n")
+# cue times in the plans are on the full-video clock; the render starts at the first segment
+T0 = min(s["start"] for s in segs)
+cues = [f"{float(c.split()[0]) - T0:.2f} " + " ".join(c.split()[1:]) for c in cues]
+open(os.path.join(OUT, NAME + ".cues.txt"), "w").write("\n".join(cues) + "\n")
 
-raw = os.path.join(OUT, "part1_raw.mp4")
+raw = os.path.join(OUT, NAME + "_raw.mp4")
 subprocess.run([sys.executable, os.path.join(TOOLS, "assemble.py"), pj, raw], check=True)
-subprocess.run([sys.executable, os.path.join(TOOLS, "edit_video.py"), raw, os.path.join(OUT, "part1.cues.txt"),
-                os.path.join(OUT, "part1.mp4")], check=True)
-print("wrote", os.path.join(OUT, "part1.mp4"))
+subprocess.run([sys.executable, os.path.join(TOOLS, "edit_video.py"), raw, os.path.join(OUT, NAME + ".cues.txt"),
+                os.path.join(OUT, NAME + ".mp4")], check=True)
+print("wrote", os.path.join(OUT, NAME + ".mp4"))
 print("MISSING (placeholder cards):", missing or "none")
