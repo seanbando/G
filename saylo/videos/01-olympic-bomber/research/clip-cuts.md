@@ -27,3 +27,16 @@ Record these spans from the video (Snipping Tool, Win+Shift+R), then send them f
 
 ## Not used
 `court.mp4` (2:50) is Jewell testifying to a congressional committee, not a court. The script doesn't cover that hearing, so leave it out unless a line is added.
+
+## Cut from the Retro Report video (Nov 15, 2026)
+Cropped to remove the RETROREPORT watermark, TV-screen border, CNN logos and captions; 1080p; slight dark grade; audio leveled. **Mute Retro Report's own narrator** where it plays under the picture (26c, 27b, 30j, 36d): use those for the picture only. Real 1996 audio worth keeping: 23e (live TV), 29b (Jewell: "I did not do it"), 27c (anchor line).
+
+| File | Video in/out | Shot |
+|---|---|---|
+| 23e live tv - word of an explosion.mp4 | 0:05.5–0:14.5 | 23 |
+| 26c jewell on cnn as the hero.mp4 | 1:55.0–1:59.8 | 26 |
+| 27b newsstand - fbi has a suspect.mp4 | 4:47.6–4:52.7 | 27 (the actual AJC "FBI suspects 'hero' guard may have planted bomb" front page) |
+| 27c anchor - hero may be a villain.mp4 | 5:59.6–6:02.4 | 27/28 |
+| 29b jewell - i did not do it.mp4 | 5:28.0–5:40.3 | 29/30 |
+| 30j cameras surround apartment.mp4 | 5:40.3–5:45.5 | 30 |
+| 36d jewell walks free + letter clearing him.mp4 | 7:03.5–7:18.0 | 36 |
