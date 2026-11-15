@@ -23,8 +23,10 @@ Branch: `claude/inspiring-meitner-514uac` (repo seanbando/G).
 - Use the creator's animated location clips wherever their line comes up (L02, L03, L07–L10 uploaded; K, M uploaded).
 - M clip: only first ~2.5 s (later frames look like an explosion). L10: only first ~3 s (smoke).
 
-## Missing from Drive (creator said 15 clips were made; only 8 uploaded)
-Ask the creator to upload: `L01 murphy street`, `L04 payphone`, `L05 nantahala`, `L06 hidden camp`, `L11 andrews`, `L clip` (running/hands up), `N clip` (Jewell points at bench). Clips 16–30 (O…AD) not made yet (Google credits ran out; Higgsfield trial doesn't cover video; Kling free daily credits are the option). Ready batch: `build/higgsfield_batch_16_30.json`.
+## Clips that don't exist (confirmed Nov 15: only the 8 uploaded clips were ever saved)
+Don't ask for these again. Until the creator makes them, cover their lines with the matching AI still (`loc-*.png` from make-these-clips.md) using a slow push-in plus fog/flicker, or a template effect:
+`L01 murphy street` → loc-murphy-street still · `L04 payphone` → loc-payphone-1996 still · `L05 nantahala` → loc-nantahala still · `L06 hidden camp` → loc-hidden-camp still · `L11 andrews` → loc-andrews-1998 still · `N clip` → real Jewell photo in a film window (no animation).
+`L clip` (running, hands up) is the most important one to make (Kling free daily credits). Until it exists, "The man bolts… then gives up" = A clip with a punch-in and shake, NEVER the I clip. Clips 16–30 (O…AD) not made yet (Google credits ran out; Higgsfield trial doesn't cover video; Kling free daily credits are the option). Ready batch: `build/higgsfield_batch_16_30.json`.
 
 ## Next after the fixes
 Build The Wrong Man → Same Hands → Birmingham → Who He Was → The Hunt → Five Years → The Stop → The Deal → What It Actually Was → Outro, chapter by chapter, sending each for review. Plans live in `build/plan_*.py`; render with `assemble.py` then `edit_video.py`.
