@@ -113,14 +113,15 @@ roof_lbl = kit.text("SAVE-A-LOT", font="Montserrat-Bold", size=2.0, color="#FFFF
                     loc=(30, 76, 6.5), rot=(0, 0, 0), spacing=1.15, name="RoofLabel")
 
 # ------------------------------------------------------------------ characters
-car, CL = rt.car(m, (2, -38, 0), 180, name="Patrol")
-officer = rt.real_mannequin("Officer", (CL["seat"][0], CL["seat"][1], CL["seat"][2] - 0.95), 0, m["man"])
+car, CL = rt.police_car(m, (2, -38, 0), 180, name="Patrol")
+officer = rt.real_mannequin("Officer", (CL["seat"][0], CL["seat"][1], CL["seat"][2] - 0.95), -90, m["man"])
 kit.parent(officer["root"], car)
-rt.rpose(officer, "sit")
-officer_head = kit.empty((CL["seat"][0], CL["seat"][1] + 0.05, 1.38), "OfficerHead")
+rt.rpose(officer, "drive")
+officer_head = kit.empty((CL["seat"][0], CL["seat"][1] + 0.05, 1.3), "OfficerHead")
 kit.parent(officer_head, car)
 
-man = rt.real_mannequin("Subject", (34.9, 86.2, -rt.RDROP["crouch"]), -90, m["subject"])
+# crouched by the dumpsters, facing the car's side of the lot (real_mannequin faces +X at rot 0)
+man = rt.real_mannequin("Subject", (34.9, 86.2, -rt.RDROP["crouch"]), 162, m["subject"])
 rt.rpose(man, "crouch")
 
 ROUTE = [(2, 30, 0.2), (2, 60, 0.2), (15, 60, 0.2), (15, 90, 0.2), (23, 90, 0.2)]
@@ -173,17 +174,19 @@ elif SHOT == 6:
 elif SHOT in (7, 8):
     y0, y1 = (-20, -10) if SHOT == 7 else (-10, 4)
     car_along([(1, (2, y0), 180), (N, (2, y1), 180)])
-    head = (CL["seat"][0], CL["seat"][1], 1.42)
-    if SHOT == 7:
-        cam = kit.camera((1.7, -4.4, 2.1), look_at=(head[0], head[1], 1.15), lens=30)
-        kit.key(cam, "location", [(1, (1.7, -4.4, 2.1)), (N, (1.0, -3.0, 1.9))], ease="in_out")
-    else:
-        cam = kit.camera((2.4, -1.4, 1.45), look_at=head, lens=38)
-        kit.key(cam, "location", [(1, (2.4, -1.4, 1.45)), (N, (2.0, -0.4, 1.5))], ease="in_out")
+    head = (CL["seat"][0], CL["seat"][1] + 0.05, 1.25)
+    if SHOT == 7:      # through the windshield, pushing in on the driver
+        cam = kit.camera((1.0, -5.6, 1.85), look_at=(head[0], head[1], 1.1), lens=40)
+        kit.key(cam, "location", [(1, (1.0, -5.6, 1.85)), (N, (0.7, -4.2, 1.7))], ease="in_out")
+        face = kit.light("AREA", (0.4, -1.6, 1.6), head, power=35, color="#9FB4E8", size=0.8, name="FaceFill")
+        kit.parent(face, car)
+    else:              # through the driver's window, three-quarter on his face
+        cam = kit.camera((2.3, -1.1, 1.22), look_at=head, lens=40)
+        kit.key(cam, "location", [(1, (2.3, -1.1, 1.22)), (N, (2.0, -0.5, 1.26))], ease="in_out")
         rt.name_tag(cam, "JEFF POSTELL", "MURPHY POLICE OFFICER", start_frame=f(17.6))
     kit.parent(cam, car)
     kit.parent(kit.aim(cam), car)
-    dash = kit.light("AREA", (CL["seat"][0], -0.6, 1.1), head, power=40, color="#7FA6FF", size=0.4, name="DashGlow")
+    dash = kit.light("AREA", (CL["seat"][0], -0.62, 1.02), head, power=10, color="#7FA6FF", size=0.3, name="DashGlow")
     kit.parent(dash, car)
     dof = kit.depth_of_field(cam, focus=officer_head, fstop=2.2)
 
@@ -233,10 +236,10 @@ elif SHOT in (12, 13):
     # officer out of the car, standing by the driver door, flashlight raised
     officer["root"].parent = None
     officer["root"].location = (24.6, 92.0, 0)
-    officer["root"].rotation_euler = (0, 0, math.radians(-110))
+    officer["root"].rotation_euler = (0, 0, math.radians(-20))       # facing the dumpsters
     rt.rpose(officer, "flashlight")
-    flash.parent = officer["root"]                    # torch in his raised hand, in front of his body
-    flash.location = (0.3, -1.05, 1.45)               # just past his fingertips, so the arm can't block it
+    flash.parent = officer["root"]                    # torch in his raised right hand (he faces local +X)
+    flash.location = (1.05, -0.3, 1.45)               # just past his fingertips, so the arm can't block it
     if SHOT == 12:
         tgt.location = (34.9, 86.2, 0.7)
         cam = kit.camera((22.6, 94.4, 2.0), look_at=(34.9, 86.2, 0.8), lens=34)
@@ -250,8 +253,8 @@ elif SHOT in (12, 13):
                                           (bolt + 4, (35.6, 86.5, 0.0)), (stop, (39.6, 88.0, 0.0)), (N, (39.9, 88.1, 0.0))],
                 ease="in_out")
         # turns from facing the car (-X) to run off along the lot (+X+Y), then back round to face the officer
-        kit.key(man["root"], "rotation_euler", [(bolt - 3, (0, 0, math.radians(-90))), (bolt + 4, (0, 0, math.radians(-249))),
-                                                (stop, (0, 0, math.radians(-249))), (up + 9, (0, 0, math.radians(-104)))],
+        kit.key(man["root"], "rotation_euler", [(bolt - 3, (0, 0, math.radians(162))), (bolt + 4, (0, 0, math.radians(21))),
+                                                (stop, (0, 0, math.radians(21))), (up + 9, (0, 0, math.radians(166)))],
                 ease="in_out")
         rt.rrun_cycle(man, bolt + 2, stop - 2, period=12)
         rt.rpose(man, "stand", frame=stop)
@@ -261,7 +264,7 @@ elif SHOT in (12, 13):
         cl = tgt.constraints.new("COPY_LOCATION")
         cl.target, cl.subtarget = man["arm"], "spine.003"
         tr = officer["root"].constraints.new("LOCKED_TRACK")          # the officer turns with the runner
-        tr.target, tr.subtarget, tr.track_axis, tr.lock_axis = man["arm"], "spine.003", "TRACK_NEGATIVE_Y", "LOCK_Z"
+        tr.target, tr.subtarget, tr.track_axis, tr.lock_axis = man["arm"], "spine.003", "TRACK_X", "LOCK_Z"
         flash.data.energy = 14000
         cam = kit.camera((35.2, 94.6, 1.9), look_at=(36.0, 87.0, 0.9), lens=32)
         kit.key(cam, "location", [(1, (35.2, 94.6, 1.9)), (N, (36.6, 94.0, 1.8))], ease="linear")

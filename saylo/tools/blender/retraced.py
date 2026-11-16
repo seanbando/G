@@ -265,8 +265,9 @@ def pbr(aid, scale=1.0, sat=0.35, name=None):
     return mat
 
 
-# Real mannequin (CC0 rigged base mesh, Rigify metarig). Imported facing +X, soles at z=-1; wrapped in a root empty
-# that stands on loc and faces -Y turned by rot_z (same convention as mannequin()).
+# Real mannequin (CC0 rigged base mesh, Rigify metarig). Wrapped in a root empty that stands on loc.
+# FACING: at rot_z=0 it faces +X (measured), so it faces the direction at angle rot_z (degrees from +X):
+# rot_z = math.degrees(math.atan2(dy, dx)) to face (dx, dy). Driver in a car whose front is local -Y: rot_z=-90.
 # Bone rotations are in each bone's own axes (degrees): thigh/shin X- = forward / X+ = knee bend;
 # upper_arm/forearm X+ = forward / elbow bend; upper_arm.L Z+ / upper_arm.R Z- = out to the side; spine X+ = lean in.
 RPOSES = {
@@ -277,6 +278,9 @@ RPOSES = {
                "thigh.L": (-105, 0, 6), "thigh.R": (-92, 0, -6), "shin.L": (135, 0, 0), "shin.R": (125, 0, 0),
                "foot.L": (-25, 0, 0), "foot.R": (-25, 0, 0),
                "upper_arm.L": (40, 0, -5), "upper_arm.R": (50, 0, 5), "forearm.L": (70, 0, 0), "forearm.R": (60, 0, 0)},
+    "drive": {"spine.001": (-8, 0, 0), "thigh.L": (-80, 0, 4), "thigh.R": (-80, 0, -4), "shin.L": (22, 0, 0),
+              "shin.R": (22, 0, 0), "foot.L": (-10, 0, 0), "foot.R": (-10, 0, 0),
+              "upper_arm.L": (62, 0, -12), "upper_arm.R": (62, 0, 12), "forearm.L": (30, 0, 0), "forearm.R": (30, 0, 0)},
     "flashlight": {"upper_arm.R": (80, 0, 0), "forearm.R": (10, 0, 0), "upper_arm.L": (10, 0, -6)},
     "hands_up": {"upper_arm.L": (150, 0, 22), "upper_arm.R": (150, 0, -22), "forearm.L": (25, 0, 0),
                  "forearm.R": (25, 0, 0)},
@@ -386,6 +390,164 @@ def car(m, loc, rot_z, body="clay", name="Car"):
     kit.parent(beam, root)
     lights["beam"] = beam
     lights["seat"] = (0.4, 0.15, 0.55)     # driver seat, local to the car
+    return root, lights
+
+
+def _loft(name, rings, mat_idx=None, mats=None):
+    """Mesh through closed rings of equal length (each a list of (x, y, z)); caps both ends."""
+    import bmesh
+    me = bpy.data.meshes.new(name)
+    bm = bmesh.new()
+    vs = [[bm.verts.new(p) for p in r] for r in rings]
+    n = len(rings[0])
+    for a, b in zip(vs, vs[1:]):
+        for i in range(n):
+            bm.faces.new((a[i], a[(i + 1) % n], b[(i + 1) % n], b[i]))
+    bm.faces.new(list(reversed(vs[0])))
+    bm.faces.new(vs[-1])
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    bm.to_mesh(me)
+    bm.free()
+    ob = bpy.data.objects.new(name, me)
+    bpy.context.scene.collection.objects.link(ob)
+    for mt in mats or []:
+        me.materials.append(mt)
+    return ob
+
+
+def _strut(p0, p1, r, mat, name):
+    """Round bar between two points (pillars, push bar)."""
+    import mathutils
+    a, b = mathutils.Vector(p0), mathutils.Vector(p1)
+    bpy.ops.mesh.primitive_cylinder_add(vertices=12, radius=r, depth=(b - a).length, location=(a + b) / 2)
+    ob = bpy.context.active_object
+    ob.name = name
+    ob.rotation_mode = "QUATERNION"
+    ob.rotation_quaternion = (b - a).to_track_quat("Z", "Y")
+    kit.assign(ob, mat)
+    return ob
+
+
+def police_car(m, loc, rot_z, name="Patrol"):
+    """Detailed procedural police sedan (no CC0 model exists). Same contract as car(): front faces local -Y,
+    returns (root, {"head", "beam", "seat"}). Tinted glass all round so a seated mannequin reads through it.
+    Lightbar lenses are unlit (we don't show emergency lights the record doesn't mention)."""
+    root = kit.empty(loc, name)
+    root.rotation_euler = (0, 0, math.radians(rot_z))
+    paint = kit.matte("#E3E6EA", 0.28, name + ".Paint")
+    pb = next(n for n in paint.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+    for k, v in (("Coat Weight", 0.6), ("Coat Roughness", 0.05), ("Metallic", 0.1)):
+        if k in pb.inputs:
+            pb.inputs[k].default_value = v
+    black = kit.matte("#16181C", 0.3, name + ".Black")
+    trim = kit.matte("#0C0D0F", 0.6, name + ".Trim")
+    rubber = kit.matte("#101012", 0.85, name + ".Tyre")
+    chrome = kit.matte("#B8BCC2", 0.18, name + ".Rim")
+    cp = next(n for n in chrome.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+    cp.inputs["Metallic"].default_value = 1.0
+    glass = bpy.data.materials.new(name + ".Glass")
+    glass.use_nodes = True
+    gp = next(n for n in glass.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+    gp.inputs["Base Color"].default_value = (0.02, 0.025, 0.035, 1)
+    gp.inputs["Roughness"].default_value = 0.04
+    gp.inputs["Alpha"].default_value = 0.32
+    for attr, val in (("surface_render_method", "BLENDED"), ("blend_method", "BLEND")):
+        if hasattr(glass, attr):
+            try:
+                setattr(glass, attr, val)
+            except Exception:
+                pass
+    red = kit.matte("#5A0E10", 0.2, name + ".LensR")
+    blue = kit.matte("#0E1E5A", 0.2, name + ".LensB")
+    parts = []
+
+    # lower body: side profile (y, z) lofted across the width, with wheel arches; bevelled + smoothed
+    W, R_ARCH, WB = 0.93, 0.43, 1.45
+    prof = [(-2.47, 0.32), (-2.5, 0.55), (-2.42, 0.74), (-2.2, 0.84), (-1.0, 0.93), (1.6, 0.96), (2.3, 0.94),
+            (2.47, 0.84), (2.5, 0.58), (2.45, 0.32)]
+    arches = []
+    for cy in (WB, -WB):
+        arc = [(cy + R_ARCH * math.cos(t), 0.36 + R_ARCH * math.sin(t))
+               for t in [math.pi * i / 10 for i in range(0, 11)]]
+        arches.append(arc)
+    bottom = [(1.95, 0.32)] + arches[0] + [(0.95, 0.32), (-0.95, 0.32)] + arches[1] + [(-1.95, 0.32)]
+    loop = prof + bottom
+    rings = [[(x, y, z) for y, z in loop] for x in (-W, -W + 0.05, W - 0.05, W)]
+    for i, s in ((0, 0.97), (3, 0.97)):                 # slight tumblehome at the very sides
+        rings[i] = [(x, y * s + 0.0, z) for x, y, z in rings[i]]
+    body = _loft(name + ".body", rings, mats=[paint])
+    bv = body.modifiers.new("Bevel", "BEVEL")
+    bv.width, bv.segments, bv.limit_method = 0.05, 3, "ANGLE"
+    parts.append(body)
+    for p in body.data.polygons:
+        p.use_smooth = True
+    # black-and-white door panels and dark sills
+    for sx in (-1, 1):
+        parts.append(clay.box(0.02, 2.0, 0.42, (sx * (W + 0.005), 0.0, 0.6), black, name + ".door"))
+        parts.append(clay.box(0.03, 1.9, 0.08, (sx * (W + 0.01), 0.0, 0.36), trim, name + ".sill", bevel=False))
+        parts.append(clay.box(0.015, 0.003, 0.42, (sx * (W + 0.02), 0.05, 0.6), trim, name + ".seam", bevel=False))
+        parts.append(clay.box(0.03, 0.14, 0.03, (sx * (W + 0.02), -0.25, 0.78), chrome, name + ".handle", bevel=False))
+        parts.append(clay.box(0.03, 0.14, 0.03, (sx * (W + 0.02), 0.75, 0.78), chrome, name + ".handle", bevel=False))
+        parts.append(clay.box(0.14, 0.2, 0.1, (sx * (W + 0.07), -0.88, 1.08), black, name + ".mirror"))
+
+    # greenhouse: tinted glass loft + painted roof + pillars
+    g_bot = [(-0.86, -0.9, 0.94), (0.86, -0.9, 0.94), (0.86, 1.55, 0.97), (-0.86, 1.55, 0.97)]
+    g_top = [(-0.7, -0.1, 1.47), (0.7, -0.1, 1.47), (0.7, 0.95, 1.47), (-0.7, 0.95, 1.47)]
+    gl = _loft(name + ".glass", [g_bot, g_top], mats=[glass])
+    parts.append(gl)
+    parts.append(clay.box(1.44, 1.1, 0.05, (0, 0.42, 1.485), paint, name + ".roof"))
+    for sx in (-1, 1):
+        parts.append(_strut((sx * 0.86, -0.9, 0.94), (sx * 0.7, -0.1, 1.47), 0.035, black, name + ".Apillar"))
+        parts.append(_strut((sx * 0.85, 0.62, 0.96), (sx * 0.71, 0.62, 1.47), 0.04, black, name + ".Bpillar"))
+        parts.append(_strut((sx * 0.86, 1.55, 0.97), (sx * 0.7, 0.95, 1.47), 0.05, paint, name + ".Cpillar"))
+        parts.append(_strut((sx * 0.86, -0.9, 0.95), (sx * 0.86, 1.55, 0.97), 0.02, trim, name + ".belt"))
+    # interior: dash, steering wheel, seats (reads through the tinted glass)
+    parts.append(clay.box(1.62, 0.5, 0.2, (0, -0.95, 0.88), trim, name + ".dash"))
+    parts.append(_strut((0.4, -0.72, 0.86), (0.4, -0.56, 1.0), 0.025, trim, name + ".column"))
+    bpy.ops.mesh.primitive_torus_add(major_radius=0.18, minor_radius=0.018, location=(0.4, -0.55, 1.02),
+                                     rotation=(math.radians(62), 0, 0))
+    wheel = bpy.context.active_object
+    wheel.name = name + ".steering"
+    kit.assign(wheel, trim)
+    parts.append(wheel)
+    for sx in (0.4, -0.4):
+        parts.append(clay.box(0.52, 0.5, 0.12, (sx, 0.32, 0.5), trim, name + ".seat"))
+        parts.append(clay.box(0.52, 0.12, 0.62, (sx, 0.66, 0.82), trim, name + ".seatback", rot=(-12, 0, 0)))
+    # lightbar (unlit)
+    parts.append(clay.box(1.25, 0.3, 0.06, (0, 0.2, 1.53), trim, name + ".lb_base"))
+    parts.append(clay.box(0.6, 0.26, 0.1, (-0.31, 0.2, 1.6), red, name + ".lb_r"))
+    parts.append(clay.box(0.6, 0.26, 0.1, (0.31, 0.2, 1.6), blue, name + ".lb_b"))
+    # front: grille, push bar, plate; rear: bumper, plate
+    parts.append(clay.box(1.0, 0.04, 0.2, (0, -2.5, 0.62), trim, name + ".grille"))
+    parts.append(clay.box(1.7, 0.1, 0.16, (0, -2.5, 0.38), black, name + ".bumperF"))
+    parts.append(clay.box(1.7, 0.1, 0.16, (0, 2.5, 0.42), black, name + ".bumperR"))
+    for sx in (-0.45, 0.45):
+        parts.append(_strut((sx, -2.72, 0.32), (sx, -2.72, 0.8), 0.035, black, name + ".pushbar"))
+    parts.append(_strut((-0.45, -2.72, 0.72), (0.45, -2.72, 0.72), 0.03, black, name + ".pushbar"))
+    parts.append(_strut((-0.45, -2.72, 0.45), (0.45, -2.72, 0.45), 0.03, black, name + ".pushbar"))
+    for sx in (-0.45, 0.45):
+        parts.append(_strut((sx, -2.72, 0.6), (sx, -2.5, 0.6), 0.025, black, name + ".pushbar"))
+    # wheels: tyre, rim, hub
+    for sx in (-1, 1):
+        for cy in (-WB, WB):
+            parts.append(clay.cyl(0.34, 0.24, (sx * 0.8, cy, 0.34), rubber, name + ".wheel", rot=(0, 90, 0), verts=32))
+            parts.append(clay.cyl(0.21, 0.02, (sx * 0.925, cy, 0.34), chrome, name + ".rim", rot=(0, 90, 0), verts=24))
+            parts.append(clay.cyl(0.06, 0.03, (sx * 0.935, cy, 0.34), trim, name + ".hub", rot=(0, 90, 0), verts=12))
+    lights = {}
+    for x in (-0.66, 0.66):
+        hl = clay.box(0.34, 0.05, 0.11, (x, -2.475, 0.72), m["head"], name + ".hl", bevel=False)
+        tl = clay.box(0.36, 0.05, 0.12, (x, 2.475, 0.8), m["tail"], name + ".tl", bevel=False)
+        parts += [hl, tl]
+        lights.setdefault("head", []).append(hl)
+    for p in parts:
+        kit.parent(p, root)
+    spot_t = kit.empty((0, -14, 0), name + ".beamtarget")
+    kit.parent(spot_t, root)
+    beam = kit.light("SPOT", (0, -2.6, 0.72), spot_t, power=9000, color="#FFF0D0", size=1.0, name=name + ".beam")
+    beam.data.spot_size = math.radians(70)
+    kit.parent(beam, root)
+    lights["beam"] = beam
+    lights["seat"] = (0.4, 0.3, 0.54)         # driver hip point; real_mannequin root z = seat z - 0.95, pose "drive"
     return root, lights
 
 
