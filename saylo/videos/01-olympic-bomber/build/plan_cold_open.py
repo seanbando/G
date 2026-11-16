@@ -5,7 +5,7 @@ def seg(a, b, **k): S.append(dict(start=a, end=b, **k))
 # Hook re-cut (creator note: first 20 s was the same street + parked car). One shot per phrase, street only from 8.9 s.
 seg(0.00, 4.50, card=[["MAY 31, 2003", "type"], ["3:30 AM", "amber"]])                 # "3:30 in the morning. May 31st, 2003."
 seg(4.50, 8.90, effect="date-center", ov={"title": "MURPHY, NORTH CAROLINA", "subtitle": "A MOUNTAIN TOWN OF ABOUT 1,600", "backgroundImage": "loc-nantahala.jpg", "foreground": "#F3F1E9"})  # "Murphy, North Carolina, a mountain town of about 1,600 people"
-seg(8.90, 11.10, src="loc-murphy-street.png", motion="pull_out", fx=("fog", "flicker"))  # "where, at that hour" (no L01 clip)
+seg(8.90, 11.10, src="blender H_murphy_street.mp4")  # "where, at that hour": 3D clay diorama of Murphy's main street (build/blender/H_diorama_murphy_street.py)
 seg(11.10, 14.32, src="K clip.mp4")                                                     # "the only thing moving is the occasional patrol car"
 seg(14.32, 17.38, src="04b postell clip.mp4", **{"in": 1.0})                            # "The officer in that car is 21 years old"
 seg(17.38, 21.92, src="04 postell clip.mp4", tag=["JEFF POSTELL", "Murphy police officer, age 21"])  # "His name is Jeff Postell"
