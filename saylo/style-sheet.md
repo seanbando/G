@@ -118,6 +118,14 @@ Never use a transition inside the silent Jewell hold or on archival news clips.
 
 **100% rule (creator, Nov 15, 2026): the picture always shows what the narration is saying at that exact moment.** Shots are cut on word-level timestamps (`vo-words.json`), never on sentence or chunk timing. A clip made for one line is never reused under a different line it doesn't match (e.g. the dumpster-raid scene only plays under "go through the trash", never under "the man bolts"). If no matching visual exists for a line, use a typed card or a matching effect, and list the gap for the creator. Every asset the creator made (scenes A–J and later, animated location clips) gets used on the line it was made for.
 
+**Retraced look (creator, Nov 16, 2026: "copy his visuals + transitions"; supersedes the Template Library look where they conflict):**
+- Recreations are **3D mannequin scenes**: clean 3D sets of the real places, dark navy/gray light, everyone a faceless matte white/gray mannequin, **the subject (Rudolph) one glossy amber-orange mannequin** in every scene. Real people = real footage/photos or a white 3D clay bust with an amber rim light. Prompts: `videos/01-olympic-bomber/retraced-style-prompts.md`.
+- Maps = 3D white clay block/terrain models, key place lit amber, route line glows across, time stamp + timeline bar.
+- Chapter cards live inside the scene (street sign, wall lettering). Date stamps big white bold caps top-left. Quotes on a wall with an amber bar. Counters as icons ("6 SHOT" style).
+- Pace: ~25 cuts/min in the first third, ~15 after; median shot 2.6 s; 40+ cuts in the first 60 s.
+- Transitions: hard cuts; motion comes from the camera inside the clip (dolly, orbit, push through a door/window). White flash only on the blast. Fade to black only at the 2 biggest beats. Whips/zoom-throughs dropped.
+- Typewriter rule for text still applies (creator rule).
+
 Every script gets a shot list (`videos/NN-slug/shot-list.md`) before editing: one row per beat with visual, source, motion, transition and music cue.
 
 ## 9. WORKFLOW

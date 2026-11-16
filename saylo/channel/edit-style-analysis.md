@@ -60,3 +60,22 @@ Measured with a numpy prosody script (syllable-rate proxy, level, pitch via auto
 3. **Music and SFX** under every line.
 
 Closest of our 9 tested voices by pitch and steadiness: **Philip – Quiet Authority** (113 Hz, 3.2 st). All 9 are higher than this narrator.
+
+## Retraced: "Why an ER Doctor Shot 6 People in Washington DC" (Nov 16, 2026, creator's pick: "the exact look + transitions I want")
+Measured (360p copy, 10.9 min): **209 shots · mean 3.1 s · median 2.6 s · 35% under 2 s · 2% over 10 s · cuts/min 25.8 / 17.0 / 14.3 by third · 43 cuts in the first 60 s · 2 fades to black · 2 full silences.** Faster than Uncovering/fern (~13/min).
+
+What it looks like:
+- **~70% is 3D recreation** (Unreal/Blender look): real places rebuilt as clean 3D sets (street corner, gym, apartment, hallway, office), lit dark navy/gray with practical lights.
+- **People are faceless mannequins.** Everyone is white/gray matte; **the subject is one glossy colored mannequin** (red) so you always know who he is. Real people are shown as **3D clay busts** (white bust, red rim light) or in real interview/press footage.
+- **City/maps = 3D clay block models**: white-gray buildings, the key building lit in the accent color, a glowing route line draws across the blocks; top-down block map with a time stamp ("8:03 AM") and a timeline bar along the bottom.
+- **Chapter cards are built into the 3D scene**: "CHAPTER 01 / FIFTEENTH AND P" as a green street sign on the building; "SEVEN-OH-FOUR" in big letters on the wall.
+- **Date stamps**: big white bold caps top-left ("AUGUST 2024", "ABOUT 9:00 AM") over the 3D shot.
+- **Quotes**: projected on a 3D wall next to the mannequin, white text with a red vertical bar on the left.
+- **Connection web**: dark board, round icons (house, building, gavel, person) joined by thin white/red lines, labels, small timeline in the corner.
+- **Title card**: navy background, two-line title, a red line between two points ("THE WHITE HOUSE" ─── "15TH & P STREET NW"), sources line under it.
+- **Real footage**: interviews, press conferences, bodycam/news, a tweet card; always with a lower third (name + role) and burned-in subtitle line on interviews; news clips sometimes framed on a 3D wall/TV.
+- **Counters as icons**: "6 SHOT" + six red person icons over the block map.
+
+Transitions: **almost all hard cuts.** Motion comes from the 3D camera (slow dolly, orbit, crane, push through a window/door into the next room), not from editing effects. A white light flash on gunshots/impacts. Fades to black only at the 2 biggest beats. No whips, no zoom-throughs.
+
+What Saylo can do in the cloud: every 2D piece (date stamps, quote walls, connection web, title card with route line, icon counters, lower thirds, timeline bar) plus 3D-look clips generated from text/image prompts (mannequin style) by the creator in Kling/Higgsfield. Real Blender/Unreal renders need the creator's PC.
