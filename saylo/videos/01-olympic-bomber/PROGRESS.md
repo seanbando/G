@@ -3,6 +3,9 @@
 Start a new chat with: **"Continue the Olympic Bomber video. Read saylo/videos/01-olympic-bomber/PROGRESS.md and saylo/style-sheet.md first."**
 Branch: `claude/inspiring-meitner-514uac` (repo seanbando/G).
 
+## STATUS (Nov 16, 2026): DONE, creator is uploading FINAL v2 as-is
+Don't re-edit this video. From the NEXT video on, use the **Retraced look** (style-sheet §8 "Retraced look", full breakdown in `saylo/channel/edit-style-analysis.md`, prompt examples in `retraced-style-prompts.md`).
+
 ## Hard rules (creator)
 1. **100% rule:** the picture always shows what the narration says at that exact moment. Cut on word timestamps from `vo-words.json` (find a phrase: `python3 saylo/tools/words.py vo-words.json "the man bolts"`). Never put a clip under a line it wasn't made for.
 2. Use every scene/clip the creator made, on the line it was made for (`make-these-clips.md` says which line each is for).
