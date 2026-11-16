@@ -233,7 +233,7 @@ def main(argv):
         stamp = {f: os.path.getmtime(os.path.join(plan["assets"], f)) for f in [seg.get("src"), seg.get("bg")]
                  if f and os.path.exists(os.path.join(plan["assets"], f))}  # a re-cut source file re-renders its shot
         key = hashlib.sha1(json.dumps([{k: v for k, v in seg.items() if k != "start"}, stamp], sort_keys=True).encode()).hexdigest()[:10]
-        p = os.path.join(parts_dir, f"{i:04d}_{key}.mp4")
+        p = os.path.join(parts_dir, f"shot_{key}.mp4")   # no position in the name: inserting a shot never re-renders the others
         if not os.path.exists(p):
             print(f"render {i:04d} {seg['start']:.1f}-{seg['end']:.1f} {seg.get('src') or 'card'}", flush=True)
             render_segment(seg, plan["assets"], p, os.path.join(parts_dir, f"_{i:04d}"))

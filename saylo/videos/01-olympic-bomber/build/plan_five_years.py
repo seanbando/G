@@ -12,9 +12,8 @@ seg(760.30, 768.16, card=[["SOURCE:", "type"], ["RUDOLPH'S OWN ACCOUNT", "amber"
 seg(768.16, 774.96, effect="stacked-highlight", ov={"title": "HE HAS EVERY REASON|TO TELL IT THIS WAY", "backgroundImage": "H. Living rough.jpg", "accent": AMBER})  # "Keep that in your head… a tough guy surviving on his own"
 seg(774.96, 779.94, src="blender H_camps.mp4")                                                   # "According to those accounts, he moved between hidden camps on the slopes" (3D)
 seg(779.94, 782.24, src="L06 hidden camp.mp4")                                                   # "some of them close enough to look down on Murphy."
-seg(782.24, 785.42, src="H clip.mp4")                                                            # "He reportedly ate acorns. Salamanders."
-seg(785.42, 789.58, src="H clip.mp4", **{"in": 3.2})                                             # "Whatever he could hunt… people's gardens."
-seg(789.58, 794.80, card=[["STOLEN GRAIN", "type"], ["BURIED BARRELS OF FOOD", "amber"], ["AGENTS LATER FOUND THEM", "type"]])  # "He stole grain and buried barrels… agents later found them."
+seg(782.24, 784.32, src="H clip.mp4")                                                            # "He reportedly ate acorns."
+seg(784.32, 794.80, src="blender H_survival.mp4")  # "Salamanders. Whatever he could hunt… gardens. He stole grain and buried barrels… agents later found them." (3D survival table, build/blender/H_survival_table.py; creator asked for more at 13:24-13:34)
 # BITE 794.80: Postell (WLOS), "There's no telling how many times we've been right here, right on top of him and not know."
 seg(794.80, 799.96, src="66 swecker clip.mp4", tag=["CHRIS SWECKER", "Ran the FBI's Charlotte office"])  # "Chris Swecker, who ran the FBI's Charlotte office, also suspected"
 seg(799.96, 801.92, card=[["EMPTY VACATION CABINS", "type"], ["SUSPECTED", "amber"]])            # "he slipped into empty vacation cabins."
