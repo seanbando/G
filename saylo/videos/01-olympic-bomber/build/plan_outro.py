@@ -13,3 +13,5 @@ MUSIC = [dict(start=1063.0, end=1086.20, bed="bed-B.mp3", gain=-18, fade=2.5)]
 SFX = [(1063.1, "sfx-typewriter-keys-medium.mp3", -16), (1071.7, "sfx-typewriter-keys-short.mp3", -16),
        (1073.8, "sfx-typewriter-keys-short.mp3", -16), (1080.9, "sfx-typewriter-keys-short.mp3", -16)]
 CUES = ""
+# Dead air before the outro: 2.9 s -> ~1.2 s (after "Then one night, a rookie was.")
+TRIMS = [(1060.70, 1062.40)]

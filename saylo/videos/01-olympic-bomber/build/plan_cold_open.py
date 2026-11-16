@@ -44,6 +44,8 @@ SFX = [
     (86.2, "sfx-whoosh.mp3", -16), (92.1, "sfx-typewriter-keys-short.mp3", -16),
     (99.1, "sfx-typewriter-keys-short.mp3", -16), (100.7, "sfx-typewriter-keys-long.mp3", -16),
 ]
+# Dead air cut out of the narration (creator: "dead spaces"); everything after moves up. Hook pauses 1.35-1.45 s -> ~0.45 s.
+TRIMS = [(40.85, 41.75), (44.45, 45.40)]
 CUES = """59.64 punch
 63.62 zoomthru
 63.63 shake 0.25

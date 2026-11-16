@@ -6,8 +6,8 @@ def seg(a, b, **k): S.append(dict(start=a, end=b, **k))
 AMBER = "#E0A040"
 
 seg(979.92, 982.76, card=[["WHAT IT ACTUALLY WAS", "big"]])                                  # "Richard Jewell was never charged with anything,"
-seg(982.76, 987.50, src="15b jewell security at park 1996.mp4", **{"in": 0.5})              # "because he never did anything except notice a backpack and get people away from it." (real 1996)
-seg(987.50, 990.92, card=[["SUED SEVERAL NEWS OUTLETS", "type"], ["SETTLED WITH SOME", "amber"]])  # "He sued several news outlets and settled with some of them."
+seg(982.76, 987.25, src="15b jewell security at park 1996.mp4", **{"in": 0.5})              # "because he never did anything except notice a backpack and get people away from it." (real 1996)
+seg(987.25, 990.92, card=[["SUED SEVERAL NEWS OUTLETS", "type"], ["SETTLED WITH SOME", "amber"]])  # "He sued several news outlets and settled with some of them."
 seg(990.92, 995.76, src="81 jewell later clip.mp4", tag=["RICHARD JEWELL", "Back in police work, Georgia"])  # "He went back into police work in Georgia…"
 seg(995.76, 1000.44, card=[["AUGUST 2007", "type"], ["RICHARD JEWELL DIES AT 44", "amber"]])  # "He died in August 2007. Heart trouble. He was 44."
 seg(1000.44, 1005.10, src="Jewell later, in police uniform.jpg", motion="push_in")           # (silent hold)
@@ -36,4 +36,4 @@ SFX = [(980.0, "sfx-typewriter-keys-medium.mp3", -15), (980.0, "sfx-typewriter-d
 CUES = """979.92 whip right
 """
 # News bite after "…and get people away from it.": Jewell, Oct 28, 1996, "For 88 days, I lived a nightmare."
-BITES = [dict(at=987.50, src="bite jewell 88 days a nightmare 1996.mp4", dur=3.5)]
+BITES = [dict(at=987.25, src="bite jewell 88 days a nightmare 1996.mp4", dur=3.5)]

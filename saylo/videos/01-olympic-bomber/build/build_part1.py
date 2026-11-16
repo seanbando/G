@@ -28,14 +28,20 @@ NAME = sys.argv[1] if len(sys.argv) > 2 else "part1"
 PLANS = sys.argv[2:] if len(sys.argv) > 2 else ["plan_cold_open.py", "plan_park.py"]
 
 # ---- bites from every plan (they shift the whole timeline)
-BITES = []
+BITES, TRIMS = [], []   # TRIMS = [(a, b)]: dead air in the VO to cut out; everything after moves up
 for f in sorted(glob.glob(os.path.join(HERE, "plan_*.py"))):
-    BITES += runpy.run_path(f).get("BITES", [])
+    p_ = runpy.run_path(f)
+    BITES += p_.get("BITES", [])
+    TRIMS += [tuple(t) for t in p_.get("TRIMS", [])]
 BITES.sort(key=lambda b: b["at"])
+TRIMS.sort()
 
 def shift(t, include_at=True):
-    """VO-clock time -> output time. A shot starting exactly at a bite goes after it (include_at)."""
-    return t + sum(b["dur"] for b in BITES if (b["at"] <= t if include_at else b["at"] < t))
+    """VO-clock time -> output time. A shot starting exactly at a bite goes after it (include_at).
+    Time inside a trimmed gap collapses onto the gap's start."""
+    added = sum(b["dur"] for b in BITES if (b["at"] <= t if include_at else b["at"] < t))
+    removed = sum(min(t, b) - a for a, b in TRIMS if t > a)
+    return t + added - removed
 
 segs, music, sfx, cues, silence = [], [], [], [], []
 for name in PLANS:
@@ -44,7 +50,8 @@ for name in PLANS:
         for b in BITES:
             assert not (s["start"] < b["at"] < s["end"]), f"bite at {b['at']} falls inside shot {s['start']}-{s['end']}"
         s["start"], s["end"] = round(shift(s["start"]), 3), round(shift(s["end"], include_at=False), 3)
-        segs.append(s)
+        if s["end"] - s["start"] > 0.05:      # a shot entirely inside a trimmed gap disappears
+            segs.append(s)
     for b in p.get("BITES", []):
         a = round(shift(b["at"], include_at=False), 3)
         segs.append(dict(start=a, end=round(a + b["dur"], 3), src=b["src"], **{"in": b.get("in", 0.0)}))
@@ -77,21 +84,31 @@ os.makedirs(OUT, exist_ok=True)
 
 # ---- voiceover with the bites' own audio in the gaps (cached by the bite list)
 vo = VO
-if BITES:
-    sig = hashlib.sha1(json.dumps(BITES, sort_keys=True).encode()).hexdigest()[:10]
+if BITES or TRIMS:
+    sig = hashlib.sha1(json.dumps([BITES, TRIMS], sort_keys=True).encode()).hexdigest()[:10]
     vo = os.path.join(OUT, f"_vo_bites_{sig}.wav")
     if not os.path.exists(vo):
-        ins, parts, prev = ["-i", VO], [], 0.0
-        for k, b in enumerate(BITES, start=1):
-            ins += ["-i", os.path.join(MEDIA, b["src"])]
-            parts.append(f"[0:a]atrim={prev:.3f}:{b['at']:.3f},asetpts=PTS-STARTPTS,aformat=sample_rates=48000:channel_layouts=stereo[v{k}]")
-            parts.append(f"[{k}:a]atrim=0:{b['dur']:.3f},asetpts=PTS-STARTPTS,volume={b.get('gain', 0)}dB,"
-                         f"apad=whole_dur={b['dur']:.3f},afade=t=in:d=0.08,afade=t=out:st={b['dur'] - 0.15:.3f}:d=0.15,"
-                         f"aformat=sample_rates=48000:channel_layouts=stereo[b{k}]")
-            prev = b["at"]
-        parts.append(f"[0:a]atrim=start={prev:.3f},asetpts=PTS-STARTPTS,aformat=sample_rates=48000:channel_layouts=stereo[vend]")
-        order = "".join(f"[v{k}][b{k}]" for k in range(1, len(BITES) + 1)) + "[vend]"
-        graph = ";".join(parts) + f";{order}concat=n={2 * len(BITES) + 1}:v=0:a=1[out]"
+        # walk the VO: keep pieces, insert bites, skip trimmed dead air
+        events = [("bite", b["at"], b) for b in BITES] + [("trim", a, (a, b)) for a, b in TRIMS]
+        events.sort(key=lambda e: e[1])
+        ins, parts, order, prev, k = ["-i", VO], [], "", 0.0, 0
+        fmt = "aformat=sample_rates=48000:channel_layouts=stereo"
+        for kind, at, ev in events:
+            k += 1
+            parts.append(f"[0:a]atrim={prev:.3f}:{at:.3f},asetpts=PTS-STARTPTS,{fmt}[p{k}]")
+            order += f"[p{k}]"
+            if kind == "bite":
+                ins += ["-i", os.path.join(MEDIA, ev["src"])]
+                n = len(ins) // 2 - 1
+                parts.append(f"[{n}:a]atrim=0:{ev['dur']:.3f},asetpts=PTS-STARTPTS,volume={ev.get('gain', 0)}dB,"
+                             f"apad=whole_dur={ev['dur']:.3f},afade=t=in:d=0.08,afade=t=out:st={ev['dur'] - 0.15:.3f}:d=0.15,{fmt}[b{k}]")
+                order += f"[b{k}]"
+                prev = at
+            else:
+                prev = ev[1]
+        parts.append(f"[0:a]atrim=start={prev:.3f},asetpts=PTS-STARTPTS,{fmt}[pend]")
+        order += "[pend]"
+        graph = ";".join(parts) + f";{order}concat=n={order.count('[')}:v=0:a=1[out]"
         subprocess.run(["ffmpeg", "-hide_banner", "-loglevel", "error", "-y", *ins, "-filter_complex", graph,
                         "-map", "[out]", "-ar", "48000", vo], check=True)
 
