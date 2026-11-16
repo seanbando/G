@@ -11,7 +11,8 @@ $Chapters = @(
     @("birmingham", "plan_birmingham.py"),
     @("who_he_was", "plan_who_he_was.py"),
     @("hunt", "plan_hunt.py"),
-    @("five_years", "plan_five_years.py")
+    @("five_years", "plan_five_years.py"),
+    @("stop", "plan_stop.py")
 )
 foreach ($c in $Chapters) {
     if ($c[1]) { python "$here\build_part1.py" $c[0] $c[1] } else { python "$here\build_part1.py" }
