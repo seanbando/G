@@ -13,7 +13,7 @@ Prompt that produced the approved base:
 
 **Overlay (Canva):** "5 YEARS" centered in the dark sky at the top, Anton font, off-white, the "5" in the same amber as the beam. No arrow needed.
 **Finishing tweaks:** dim the white wall lamp above the door; darken the wall behind the figure ~10%.
-**FINAL (Nov 15, 2026): `thumbnail-final.jpg`** (1280x720, 157 KB, upload this). Made with `python saylo/tools/make_thumbnail.py thumbnail-base.webp thumbnail-final.jpg --text "5 YEARS" --amber "5" --accent "#F39A2B" --dim "835,410,150,0.65" --darken "1200,290,1672,790,0.10"`: real Anton font, "5" in the beam's amber, wall lamp dimmed, wall behind the figure darkened 10%. Phone preview: `thumbnail-final_phone.png`.
+**FINAL (Nov 15, 2026): `thumbnail-final.jpg`** (re-exported at 1920x1080, 4:4:4 colour, light sharpening, 375 KB, upload this; the first 1280x720 export looked blurry once posted on YouTube). Made with `python saylo/tools/make_thumbnail.py thumbnail-base.webp thumbnail-final.jpg --text "5 YEARS" --amber "5" --accent "#F39A2B" --dim "835,410,150,0.65" --darken "1200,290,1672,790,0.10"`: real Anton font, "5" in the beam's amber, wall lamp dimmed, wall behind the figure darkened 10%. Phone preview: `thumbnail-final_phone.png`.
 **Phone-size test:** passed (story reads at 168px wide). Bottom-right (timestamp area) is empty wall.
 
 Lessons from v1 of the image: the first render was too wide — the figure was a few pixels at phone size, and the light came from a wall lamp (read as a security light). Fixed by moving the camera close and adding the officer holding the flashlight.

@@ -6,7 +6,8 @@
 --dim     radial darkening of bright pixels (e.g. a lamp): centre x,y, radius r (px of the base), strength 0-1
 --darken  darken a box by `amount` (0.10 = 10%), sparing saturated (amber) pixels so the accent stays bright
 Text: Anton, off-white, centred in the top of the frame; the words listed in --amber are drawn in the accent
-colour (sampled from the brightest amber in the image unless --accent is given). Output: 1280x720 JPEG < 2 MB,
+colour (sampled from the brightest amber in the image unless --accent is given). Output: 1920x1080 JPEG < 2 MB
+(4:4:4 colour, light sharpening; --size / --sharpen to change),
 plus a 168 px-wide phone preview next to it (`*_phone.png`).
 """
 import argparse
@@ -29,6 +30,8 @@ def main():
     ap.add_argument("--darken", action="append", default=[])
     ap.add_argument("--cap", type=float, default=0.17, help="cap height as a share of the frame height")
     ap.add_argument("--top", type=float, default=0.06, help="top margin as a share of the frame height")
+    ap.add_argument("--size", default="1920x1080", help="output size, 16:9 (YouTube allows up to 2 MB)")
+    ap.add_argument("--sharpen", type=float, default=70, help="unsharp-mask strength in percent, 0 = off")
     a = ap.parse_args()
 
     im = Image.open(a.base).convert("RGB")
@@ -61,7 +64,12 @@ def main():
         iy, ix = np.unravel_index(np.argmax(score), score.shape)
         accent = tuple(int(c * 255) for c in px[iy, ix])
 
-    im = Image.fromarray((np.clip(px, 0, 1) * 255).astype(np.uint8)).resize((1280, 720), Image.LANCZOS)
+    # 1920x1080 by default: YouTube re-compresses thumbnails, and a bigger, sharper upload survives it far better
+    # than 1280x720 (creator: the 1280 version looked blurry once posted). Light unsharp mask after the resize.
+    OW, OH = (int(v) for v in a.size.lower().split("x"))
+    im = Image.fromarray((np.clip(px, 0, 1) * 255).astype(np.uint8)).resize((OW, OH), Image.LANCZOS)
+    if a.sharpen > 0:
+        im = im.filter(ImageFilter.UnsharpMask(radius=1.6, percent=int(a.sharpen), threshold=2))
     W, H = im.size
 
     # text: size the font so the cap height is `cap` of the frame
@@ -83,9 +91,9 @@ def main():
     sd = ImageDraw.Draw(shadow)
     xs = x
     for wd, ww in zip(words, widths):
-        sd.text((xs, y + 4), wd, font=font, fill=200)
+        sd.text((xs, y + 4 * H / 720), wd, font=font, fill=200)
         xs += ww + space
-    shadow = shadow.filter(ImageFilter.GaussianBlur(10))
+    shadow = shadow.filter(ImageFilter.GaussianBlur(10 * H / 720))
     im = Image.composite(Image.new("RGB", (W, H), (0, 0, 0)), im, shadow)
 
     d = ImageDraw.Draw(im)
@@ -95,7 +103,8 @@ def main():
 
     q = 95
     while True:
-        im.save(a.out, "JPEG", quality=q, optimize=True, progressive=True)
+        # subsampling=0 (4:4:4): full colour resolution, so the amber "5" and the beam keep hard edges
+        im.save(a.out, "JPEG", quality=q, optimize=True, progressive=True, subsampling=0)
         if os.path.getsize(a.out) < 2_000_000 or q <= 70:
             break
         q -= 5
