@@ -21,7 +21,9 @@ foreach ($s in $cfg.shots) {
     $name = "S{0:D2}" -f $s.id
     # the runner reuses %TEMP%\faceless-studio-shot-* frames for the same output name: clear them (PROGRESS gotcha)
     Get-ChildItem $env:TEMP -Directory -Filter "faceless-studio-shot-*" -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
-    $a = @($runner, (Join-Path $build "S_cold_open.py"), "--out", (Join-Path $out "$name.mp4"), "--frames", $n, "--arg", "shot=$($s.id)")
+    # shot 11 has its own hero set (S11_hero.py); every other shot comes from the shared world
+    $script = if ([int]$s.id -eq 11) { "S11_hero.py" } else { "S_cold_open.py" }
+    $a = @($runner, (Join-Path $build $script), "--out", (Join-Path $out "$name.mp4"), "--frames", $n, "--arg", "shot=$($s.id)")
     if ($Stills) { $a += @("--stills", [string][int]($n * 0.7)) }
     Write-Host "== $name ($n frames)"
     python @a

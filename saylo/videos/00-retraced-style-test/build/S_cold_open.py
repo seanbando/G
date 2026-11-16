@@ -35,25 +35,37 @@ def f(vo_time):
 rt.setup()
 m = rt.mats()
 rt.night()
+if SHOT >= 5:
+    rt.volume_fog(0.008)                              # street-level shots only (aerials sit past the fog range)
+
+# real CC0 textures (Poly Haven), pulled toward grey so the set stays near-monochrome
+asph = rt.pbr("asphalt_02", scale=3.0, sat=0.2)
+conc = rt.pbr("concrete_wall_004", scale=2.5, sat=0.25)
+side_m = rt.pbr("concrete_wall_004", scale=1.2, sat=0.15, name="SidewalkConc")
+brick = rt.pbr("brick_wall_08", scale=2.0, sat=0.2)
+dmp_m = rt.pbr("blue_metal_plate", scale=1.2, sat=0.25, name="DumpsterPaint")
+lamp = rt.instancer("street_lamp_01")
 
 # ------------------------------------------------------------------ the town (main street runs along +Y)
 kit.rect(900, 900, material=m["ground"], loc=(0, 0, 0), rot=(0, 0, 0), name="Ground")
-clay.box(8, 140, 0.04, (0, 0, 0.02), m["road"], "MainRoad", bevel=False)
-clay.box(66, 8, 0.04, (37, 60, 0.02), m["road"], "SideRoad", bevel=False)
+clay.box(8, 140, 0.04, (0, 0, 0.02), asph, "MainRoad", bevel=False)
+clay.box(66, 8, 0.04, (37, 60, 0.02), asph, "SideRoad", bevel=False)
 for x in (-5, 5):
-    clay.box(2, 128, 0.16, (x, -4, 0.08), m["clay_d"], "Sidewalk", bevel=False)
+    clay.box(2, 128, 0.16, (x, -4, 0.08), side_m, "Sidewalk", bevel=False)
 for i, y in enumerate(range(-52, 50, 12)):
     for side in (-1, 1):
         h = 5 + ((i * 7 + (side + 1) * 3) % 6)
         if side == -1 and y == -4:
             h = 9                                     # the lettered building
-        clay.box(10, 10, h, (side * 11, y, h / 2), m["wall"], "Block")
+        clay.box(10, 10, h, (side * 11, y, h / 2), brick if (i + side) % 3 == 0 else conc, "Block")
+        clay.box(10.3, 10.3, 0.3, (side * 11, y, h + 0.15), m["clay_d"], "Parapet", bevel=False)
         # dark windows on the street face (none on the lettered wall)
         for wz in ([] if (side == -1 and y == -4) else range(2, int(h) - 1, 2)):
             for wy in (-3, 0, 3):
                 clay.box(0.06, 1.4, 0.9, (side * 5.99, y + wy, wz + 0.4), m["dark"], "Window", bevel=False)
-    clay.streetlight(-5.2, y + 6, m, power=900, face=1)
-    clay.streetlight(5.2, y + 6, m, power=900, face=-1)
+    for sx in (-5.6, 5.6):                            # real lantern-top street lamps (3.9 m)
+        lamp((sx, y + 6, 0.16))
+        kit.light("SPOT", (sx, y + 6, 3.55), (sx, y + 6, 0), power=900, color="#FFCF8A", size=0.5, name="Lamp")
 
 # ring of clay mountain ridges (two rows of smooth peaks)
 for row, (r0, n) in enumerate(((150, 34), (205, 40))):
@@ -75,25 +87,41 @@ LET.append(kit.text("NORTH CAROLINA", font="Montserrat-Bold", size=0.62, extrude
 wash = kit.light("AREA", (-1.5, -4, 1.0), (-6, -4, 5), power=300, color="#E9DCC6", size=4, name="WallWash")
 
 # ------------------------------------------------------------------ the store and its back lot
-clay.box(24, 16, 6, (30, 76, 3), m["wall"], "Store")
+clay.box(24, 16, 6, (30, 76, 3), conc, "Store")
 clay.box(24.6, 16.6, 0.5, (30, 76, 6.2), m["clay_d"], "StoreParapet")
-clay.box(36, 14, 0.04, (30, 91, 0.02), m["road"], "BackLot", bevel=False)
-clay.box(6, 34, 0.04, (15, 79, 0.02), m["road"], "SideDrive", bevel=False)
-for i, x in enumerate((28.0, 30.4, 32.8)):
-    clay.box(2.2, 1.4, 1.4, (x, 85.3, 0.72), m["dumpster"], "Dumpster")
-    clay.box(2.3, 1.5, 0.08, (x, 85.3, 1.46), m["clay_d"], "Lid", rot=(8, 0, 0))
-kit.light("AREA", (30, 84.4, 5.0), (30, 88, 0), power=180, color="#C9D6FF", size=1.2, name="BackDoorLamp")
+clay.box(36, 14, 0.04, (30, 91, 0.02), asph, "BackLot", bevel=False)
+clay.box(6, 34, 0.04, (15, 79, 0.02), asph, "SideDrive", bevel=False)
+for x in (28.0, 30.4, 32.8):                          # built dumpsters (no CC0 one exists), real painted-metal texture
+    clay.box(2.2, 1.4, 1.35, (x, 85.3, 0.78), dmp_m, "Dumpster")
+    clay.box(2.3, 0.08, 0.2, (x, 86.03, 1.25), dmp_m, "Rim", bevel=False)
+    clay.box(2.3, 1.55, 0.06, (x, 85.3, 1.5), m["dark"], "Lid", rot=(-7, 0, 0))
+    for wx in (x - 0.85, x + 0.85):
+        clay.cyl(0.09, 0.08, (wx, 85.85, 0.1), m["dark"], "Caster", rot=(90, 0, 0))
+# the store's back wall faces +Y at y=84: loading door, lamp, AC, gutter, bins and bags
+rt.model("rollershutter_door", (23.5, 84.02, 0), 180, name="LoadingDoor")
+rt.model("security_light", (30.0, 84.05, 4.6), 180, name="SecLight")
+kit.light("SPOT", (30, 84.6, 4.4), (30, 88, 0), power=900, color="#E8EEFF", size=0.4, name="BackDoorLamp")
+rt.model("exterior_aircon_unit", (38.0, 84.45, 2.6), 180, name="AirCon")
+rt.model("modular_metal_gutter", (36.4, 84.1, 0), 180, name="Gutter")
+rt.model("metal_trash_can", (37.6, 84.8, 0), 0, name="Can")
+rt.model("trashbag", (38.4, 85.4, 0), 30, name="Bag1")
+rt.model("trashbag", (26.3, 85.6, 0), -40, name="Bag2")
+rt.model("plastic_crate_01", (20.4, 84.8, 0), 10, name="Crate1")
+rt.model("plastic_crate_01", (20.5, 84.8, 0.32), -5, name="Crate2")
+rt.model("utility_box_01", (41.0, 84.35, 0), 180, name="Utility")
 roof_lbl = kit.text("SAVE-A-LOT", font="Montserrat-Bold", size=2.0, color="#FFFFFF", strength=1.6, align="CENTER",
                     loc=(30, 76, 6.5), rot=(0, 0, 0), spacing=1.15, name="RoofLabel")
 
 # ------------------------------------------------------------------ characters
 car, CL = rt.car(m, (2, -38, 0), 180, name="Patrol")
-officer = rt.mannequin("Officer", (CL["seat"][0], CL["seat"][1], CL["seat"][2] + 0.08 - 0.93), 0, m["man"])
+officer = rt.real_mannequin("Officer", (CL["seat"][0], CL["seat"][1], CL["seat"][2] - 0.95), 0, m["man"])
 kit.parent(officer["root"], car)
-rt.pose(officer, "sit")
+rt.rpose(officer, "sit")
+officer_head = kit.empty((CL["seat"][0], CL["seat"][1] + 0.05, 1.38), "OfficerHead")
+kit.parent(officer_head, car)
 
-man = rt.mannequin("Subject", (34.9, 86.2, -rt.DROP["crouch"]), -90, m["subject"])
-rt.pose(man, "crouch")
+man = rt.real_mannequin("Subject", (34.9, 86.2, -rt.RDROP["crouch"]), -90, m["subject"])
+rt.rpose(man, "crouch")
 
 ROUTE = [(2, 30, 0.2), (2, 60, 0.2), (15, 60, 0.2), (15, 90, 0.2), (23, 90, 0.2)]
 
@@ -132,6 +160,7 @@ elif SHOT == 4:
     rt.typed(pop, f(7.38))
 
 elif SHOT == 5:
+    car.location = (2, -90, 0)                        # not parked yet: keep it out of the empty-street shot
     cam = kit.camera((1.5, -44, 1.6), look_at=(0, 30, 2.4), lens=30)
     kit.key(cam, "location", [(1, (1.5, -44, 1.6)), (N, (1.4, -37, 1.7))], ease="linear")
 
@@ -156,7 +185,7 @@ elif SHOT in (7, 8):
     kit.parent(kit.aim(cam), car)
     dash = kit.light("AREA", (CL["seat"][0], -0.6, 1.1), head, power=40, color="#7FA6FF", size=0.4, name="DashGlow")
     kit.parent(dash, car)
-    dof = kit.depth_of_field(cam, focus=officer["neck"], fstop=2.2)
+    dof = kit.depth_of_field(cam, focus=officer_head, fstop=2.2)
 
 elif SHOT == 9:
     route = rt.route_line(ROUTE, m["route"], f(21.75), f(24.0), depth=0.35)
@@ -177,12 +206,16 @@ elif SHOT == 10:
 
 if SHOT != 9:
     roof_lbl.hide_render = True
+if SHOT >= 10:
+    # cool moonlight over the back lot, so shapes still read once the headlights are off
+    kit.light("AREA", (30, 96, 14), (30, 88, 0), power=2200, color="#6F86C4", size=14, name="LotMoon")
+    kit.light("AREA", (31, 93, 2.0), (34.9, 86.2, 0.8), power=90, color="#9FB4E8", size=3, name="SubjectFill")
 if SHOT in (11, 12, 13):
     car.location, car.rotation_euler = (23, 90, 0), (0, 0, math.radians(90))
     CL["beam"].data.energy = 0.0
     tgt = kit.empty((36, 84.2, 0.3), "FlashTarget")
     beam_from = (24.6, 91.6, 1.45)
-    flash = rt.flashlight(beam_from, tgt, power=5200)
+    flash = rt.flashlight(beam_from, tgt, power=9000)
     flash.data.spot_size, flash.data.spot_blend = math.radians(18), 0.35
 
 if SHOT == 11:
@@ -201,7 +234,9 @@ elif SHOT in (12, 13):
     officer["root"].parent = None
     officer["root"].location = (24.6, 92.0, 0)
     officer["root"].rotation_euler = (0, 0, math.radians(-110))
-    rt.pose(officer, "flashlight")
+    rt.rpose(officer, "flashlight")
+    flash.parent = officer["root"]                    # torch in his raised hand, in front of his body
+    flash.location = (0.3, -1.05, 1.45)               # just past his fingertips, so the arm can't block it
     if SHOT == 12:
         tgt.location = (34.9, 86.2, 0.7)
         cam = kit.camera((22.6, 94.4, 2.0), look_at=(34.9, 86.2, 0.8), lens=34)
@@ -209,17 +244,25 @@ elif SHOT in (12, 13):
         kit.depth_of_field(cam, focus=12.3, fstop=3.2)
     else:
         bolt, stop, up = f(31.10), f(31.85), f(32.05)
-        rt.pose(man, "crouch", frame=1)
-        rt.pose(man, "crouch", frame=bolt - 3)
-        kit.key(man["root"], "location", [(1, (34.9, 86.2, -rt.DROP["crouch"])), (bolt - 3, (34.9, 86.2, -rt.DROP["crouch"])),
+        rt.rpose(man, "crouch", frame=1)
+        rt.rpose(man, "crouch", frame=bolt - 3)
+        kit.key(man["root"], "location", [(1, (34.9, 86.2, -rt.RDROP["crouch"])), (bolt - 3, (34.9, 86.2, -rt.RDROP["crouch"])),
                                           (bolt + 4, (35.6, 86.5, 0.0)), (stop, (39.6, 88.0, 0.0)), (N, (39.9, 88.1, 0.0))],
                 ease="in_out")
-        rt.run_cycle(man, bolt + 2, stop - 2, period=12)
-        rt.pose(man, "stand", frame=stop)
-        rt.pose(man, "hands_up", frame=up + 9)
-        kit.key(tgt, "location", [(1, (34.9, 86.2, 0.7)), (bolt + 4, (35.6, 86.5, 1.0)), (stop, (39.6, 88.0, 1.1)),
-                                  (N, (39.9, 88.1, 1.2))], ease="in_out")
-        flash.data.energy = 9000
+        # turns from facing the car (-X) to run off along the lot (+X+Y), then back round to face the officer
+        kit.key(man["root"], "rotation_euler", [(bolt - 3, (0, 0, math.radians(-90))), (bolt + 4, (0, 0, math.radians(-249))),
+                                                (stop, (0, 0, math.radians(-249))), (up + 9, (0, 0, math.radians(-104)))],
+                ease="in_out")
+        rt.rrun_cycle(man, bolt + 2, stop - 2, period=12)
+        rt.rpose(man, "stand", frame=stop)
+        rt.rpose(man, "hands_up", frame=up + 9)
+        # the beam is locked to his chest bone, so it stays on him through the whole run
+        tgt.location = (0, 0, 0)
+        cl = tgt.constraints.new("COPY_LOCATION")
+        cl.target, cl.subtarget = man["arm"], "spine.003"
+        tr = officer["root"].constraints.new("LOCKED_TRACK")          # the officer turns with the runner
+        tr.target, tr.subtarget, tr.track_axis, tr.lock_axis = man["arm"], "spine.003", "TRACK_NEGATIVE_Y", "LOCK_Z"
+        flash.data.energy = 14000
         cam = kit.camera((35.2, 94.6, 1.9), look_at=(36.0, 87.0, 0.9), lens=32)
         kit.key(cam, "location", [(1, (35.2, 94.6, 1.9)), (N, (36.6, 94.0, 1.8))], ease="linear")
         kit.key(kit.aim(cam), "location", [(1, (35.5, 86.6, 0.9)), (stop, (38.8, 87.8, 1.1)), (N, (39.4, 88.0, 1.2))],
