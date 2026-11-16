@@ -34,6 +34,27 @@ if mode == "andrews":
     kit.fade(lab, [(T_MILES, 0.0), (T_MILES + 8, 1.0)])
     cam = kit.camera((-6.0, -20.0, 12.0), look_at=(-3.5, -1.0, 0.5), lens=42)
     kit.key(cam, "location", [(1, (-6.0, -20.0, 12.0)), (end, (-4.0, -17.5, 10.5))], ease="in_out")
+elif mode == "camps":
+    # "he moved between hidden camps on the slopes": small amber tent markers drop onto the slopes around Murphy
+    T_C = kit.f(a.get("camps", 2.5, float))
+    zm = clay.pin(m, gz, mx, my, "MURPHY", 1, side=-1)
+    import random
+    random.seed(4)
+    spots = [(mx + 1.6, my + 1.8), (mx - 1.4, my + 2.4), (mx + 2.8, my + 0.2), (mx + 0.6, my + 3.4), (mx - 2.6, my + 0.9), (mx + 3.4, my + 2.6)]
+    for k, (x, y) in enumerate(spots):
+        z = gz(x, y)
+        bpy.ops.mesh.primitive_cone_add(vertices=4, radius1=0.32, depth=0.4, location=(x, y, z + 0.2), rotation=(0, 0, math.radians(45)))
+        tent = bpy.context.active_object
+        kit.assign(tent, kit.emission(clay.AMBER, 1.6, f"Camp{k}"))
+        t0 = T_C + k * 4
+        kit.key(tent, "location", [(t0 - 6, (x, y, z + 2.2)), (t0 + 3, (x, y, z + 0.2))], ease="expo")
+        kit.fade(tent, [(t0 - 6, 0.0), (t0, 1.0)])
+    lab = kit.text("HIDDEN CAMPS", font="Montserrat-Bold", size=0.6, spacing=1.15, color=clay.AMBER, strength=1.4,
+                   loc=(mx + 1.2, my + 1.0, zm + 2.3), rot=(70, 0, 0), name="Camps")
+    lab.visible_shadow = False
+    kit.fade(lab, [(T_C + 6, 0.0), (T_C + 16, 1.0)])
+    cam = kit.camera((mx - 2.0, my - 13.0, 9.0), look_at=(mx + 0.6, my + 1.4, 0.8), lens=45)
+    kit.key(cam, "location", [(1, (mx - 2.0, my - 13.0, 9.0)), (end, (mx - 1.0, my - 11.0, 7.6))], ease="in_out")
 else:
     T_OFF = kit.f(a.get("nothing", 2.74, float))
     cells = []
