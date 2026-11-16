@@ -24,6 +24,48 @@ Lessons from v1 of the image: the first render was too wide — the figure was a
 ```
 Overlay: "200 AGENTS" in a white box label + one white arrow to the campsite.
 
+## YouTube upload copy (FINAL v2, Nov 15, 2026)
+Chapter times are measured from the joined chapter files of FINAL v2 (18:31). Keywords and full description are in the upload message; the description below is the version to paste.
+
+```
+In 1996 a pipe bomb went off in Centennial Olympic Park during the Atlanta Olympics. The security guard who found it was treated as a hero for three days, then spent 88 days as the FBI's main suspect. The real bomber, Eric Rudolph, bombed three more times, and then disappeared into the mountains of western North Carolina for five years, with 200 federal agents and a $1 million reward looking for him.
+
+He was finally caught at 3:30 in the morning behind a grocery store in Murphy, North Carolina, by a 21-year-old rookie cop. This is why it took so long.
+
+0:00 3:30 AM in Murphy
+1:49 The Park
+4:07 The Wrong Man
+6:58 Same Hands
+7:59 Birmingham
+9:21 Who He Was
+10:23 The Hunt
+12:57 Five Years
+14:35 The Stop
+15:52 The Deal
+16:45 What It Actually Was
+18:10 One Question
+
+Do you think he really made it five years out there alone? Tell me in the comments.
+
+Sources: court records, the FBI's case history, the Justice Department's review of the Jewell investigation, and news reporting from the time.
+
+Archival footage and photos are used briefly, with commentary, for news reporting and education:
+- Photos: Atlanta Journal-Constitution, via Georgia State University Library / Digital Library of Georgia
+- 1996 broadcast and newspaper footage: Retro Report
+- 1996 footage: AP Archive
+- 1998 search and 2003 arrest footage: WYFF News 4
+- Jeff Postell interview and 2003 footage: WLOS News 13
+- Birmingham clinic aerial: Forgotten History
+- 2003 arrest footage: LIFE
+- Short scene from "Richard Jewell" (2019, Warner Bros. Pictures), shown on screen as a dramatization
+- Sound tower photo: Don Ramey Logan, CC BY-SA 4.0, via Wikimedia Commons
+- Public domain: FBI, U.S. Army, U.S. Department of Justice, Federal Bureau of Prisons
+
+Recreations and 3D scenes were made for this video. They're illustrations, not real footage, and they don't show anyone's real face.
+
+#TrueCrime #OlympicBomber #EricRudolph
+```
+
 ## Description credits (required: keep in the YouTube description)
 Archival material used briefly with commentary:
 - Photos: Atlanta Journal-Constitution, via Georgia State University Library / Digital Library of Georgia.
