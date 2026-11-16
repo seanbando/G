@@ -22,7 +22,8 @@ seg(805.14, 806.72, src="I clip.mp4")                                           
 seg(806.72, 810.06, src="blender H_savealot.mp4")                                                # "Which is exactly what he was doing behind the Save-A-Lot." (callback)
 seg(810.06, 812.00, card=[["HERE'S WHERE IT GETS", "type"], ["MURKY", "amber"]])                 # "Here's where it gets murky, though."
 seg(812.00, 817.44, src="04b postell clip.mp4", **{"in": 1.5})                                   # "When Postell found him, he didn't look like a guy who'd been eating salamanders"
-seg(817.44, 820.48, src="wlos rudolph perp walk 2003.mp4")                                       # "Clean-shaven, a recent haircut, fit." (real 2003)
+seg(817.44, 818.56, src="rudolph clean-shaven in custody 1.png", motion="push_in")               # "Clean-shaven," (creator's photo; replaces WLOS footage with a mustache)
+seg(818.56, 820.48, src="rudolph clean-shaven with marshals 2.jpg", motion="pull_out")           # "a recent haircut, fit."
 seg(820.48, 824.96, card=[["REPORTERS ASK:", "type"], ["WAS SOMEONE LOCAL HELPING HIM?", "amber"]])  # "Reporters started asking right away whether somebody local had been helping him."
 seg(824.96, 828.14, effect="stacked-highlight", ov={"title": "A HAIRCUT|ISN'T AN ACCOMPLICE", "backgroundImage": "loc-murphy-street.png", "accent": AMBER})  # "Maybe. But a haircut isn't an accomplice."
 seg(828.14, 836.06, card=[["BURIED BARRELS · STOLEN GRAIN", "type"], ["DUMPSTERS · EMPTY CABINS?", "amber"], ["OTHER WAYS TO EXPLAIN IT", "type"]])  # "Between the buried barrels… other ways to explain it."
