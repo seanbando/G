@@ -24,6 +24,13 @@ Lessons from v1 of the image: the first render was too wide — the figure was a
 ```
 Overlay: "200 AGENTS" in a white box label + one white arrow to the campsite.
 
+**MADE (Nov 16, 2026): `thumbnail-b.jpg`** (1920x1080, 432 KB). Built in Blender instead of an AI image (same clay
+look as the video, no credits): `build/blender/T_thumb_hunt.py` rendered at 2560x1440 → `thumbnail-b-base.png`, then
+`python saylo/tools/make_thumbnail.py thumbnail-b-base.png thumbnail-b.jpg --text "200 AGENTS" --amber "200" --accent "#F39A2B" --align left --left 0.045 --cap 0.15 --top 0.07 --arrow "0.255,0.33,0.348,0.815"`.
+Why: it says the title's "hard to catch" at a glance (200 agents, a helicopter searchlight on the wrong ridge, one
+tiny amber camp it keeps missing). A ("5 YEARS", the capture) shows the ending; B shows the problem. Phone test passed.
+**Use:** upload both in YouTube's Test & Compare (Studio → video → Thumbnail → "Test & compare"), let YouTube pick by watch time.
+
 ## YouTube upload copy (FINAL v2, Nov 15, 2026)
 Chapter times are measured from the joined chapter files of FINAL v2 (18:31).
 

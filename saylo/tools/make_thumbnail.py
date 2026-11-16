@@ -30,6 +30,9 @@ def main():
     ap.add_argument("--darken", action="append", default=[])
     ap.add_argument("--cap", type=float, default=0.17, help="cap height as a share of the frame height")
     ap.add_argument("--top", type=float, default=0.06, help="top margin as a share of the frame height")
+    ap.add_argument("--align", default="center", choices=["center", "left"], help="text position in the top of the frame")
+    ap.add_argument("--left", type=float, default=0.05, help="left margin (share of width) when --align left")
+    ap.add_argument("--arrow", default="", help="x0,y0,x1,y1 as shares of the frame: an off-white arrow pointing at x1,y1")
     ap.add_argument("--size", default="1920x1080", help="output size, 16:9 (YouTube allows up to 2 MB)")
     ap.add_argument("--sharpen", type=float, default=70, help="unsharp-mask strength in percent, 0 = off")
     a = ap.parse_args()
@@ -83,7 +86,7 @@ def main():
     space = font.getlength(" ")
     widths = [font.getlength(wd) for wd in words]
     total = sum(widths) + space * (len(words) - 1)
-    x = (W - total) / 2
+    x = (W - total) / 2 if a.align == "center" else a.left * W
     top_off = font.getbbox("H")[1]
     y = a.top * H - top_off
 
@@ -93,10 +96,28 @@ def main():
     for wd, ww in zip(words, widths):
         sd.text((xs, y + 4 * H / 720), wd, font=font, fill=200)
         xs += ww + space
+    arrow = None
+    if a.arrow:                             # shaft + head polygon, drawn into the shadow mask too
+        x0, y0, x1, y1 = [float(v) for v in a.arrow.split(",")]
+        x0, y0, x1, y1 = x0 * W, y0 * H, x1 * W, y1 * H
+        L = ((x1 - x0) ** 2 + (y1 - y0) ** 2) ** 0.5
+        ux, uy = (x1 - x0) / L, (y1 - y0) / L
+        nx, ny = -uy, ux
+        hw, hl, sw = 0.034 * H, 0.06 * H, 0.0095 * H     # head half-width, head length, shaft half-width
+        bx, by = x1 - ux * hl, y1 - uy * hl
+        shaft = [(x0 + nx * sw, y0 + ny * sw), (bx + nx * sw, by + ny * sw), (bx - nx * sw, by - ny * sw), (x0 - nx * sw, y0 - ny * sw)]
+        head = [(x1, y1), (bx + nx * hw, by + ny * hw), (bx - nx * hw, by - ny * hw)]
+        arrow = (shaft, head)
+        off = 4 * H / 720
+        for poly in arrow:
+            sd.polygon([(px_ + 0, py_ + off) for px_, py_ in poly], fill=200)
     shadow = shadow.filter(ImageFilter.GaussianBlur(10 * H / 720))
     im = Image.composite(Image.new("RGB", (W, H), (0, 0, 0)), im, shadow)
 
     d = ImageDraw.Draw(im)
+    if arrow:
+        for poly in arrow:
+            d.polygon(poly, fill=OFF_WHITE)
     for wd, ww in zip(words, widths):
         d.text((x, y), wd, font=font, fill=accent if wd in amber_words else OFF_WHITE)
         x += ww + space
