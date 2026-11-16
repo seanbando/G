@@ -91,7 +91,7 @@ elif mode == "camps":
         t0 = T_C + k * 4
         kit.key(tent, "location", [(t0 - 6, (x, y, z + 2.2)), (t0 + 3, (x, y, z + 0.2))], ease="expo")
         kit.fade(tent, [(t0 - 6, 0.0), (t0, 1.0)])
-    lab = kit.text("HIDDEN CAMPS", font="Montserrat-Bold", size=0.6, spacing=1.15, color=clay.AMBER, strength=1.4,
+    lab = kit.text(a.get("label", "HIDDEN CAMPS"),   # --arg label="BURIED EXPLOSIVES" reuses this shot for The Deal font="Montserrat-Bold", size=0.6, spacing=1.15, color=clay.AMBER, strength=1.4,
                    loc=(mx + 1.2, my + 1.0, zm + 2.3), rot=(70, 0, 0), name="Camps")
     lab.visible_shadow = False
     kit.fade(lab, [(T_C + 6, 0.0), (T_C + 16, 1.0)])

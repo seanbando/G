@@ -13,14 +13,21 @@ kit.setup(world="#05070A")
 kit.backdrop("#05070A", center="#1F1A12", distance=14)
 
 gold = kit.metal("#F2CD7E", roughness=0.24, name="Gold")
-num = kit.text("200+", font="Anton-Regular", size=2.4, extrude=0.16, bevel=0.03, material=gold, loc=(0, 0, 0.25), name="Figure")
-kit.number_count(num, 0, 200, 1, land, fmt="{:,.0f}+", ease="out")
+# reusable for any figure: --arg value=6 --arg suffix= --arg label="CONSECUTIVE LIFE SENTENCES" --arg sub="+ 120 YEARS"
+VALUE, SUFFIX = a.get("value", 200, float), a.get("suffix", "+")
+num = kit.text(f"{VALUE:,.0f}{SUFFIX}", font="Anton-Regular", size=2.4, extrude=0.16, bevel=0.03, material=gold, loc=(0, 0, 0.25), name="Figure")
+kit.number_count(num, 0, VALUE, 1, land, fmt="{:,.0f}" + SUFFIX, ease="out")
 kit.key(num, "scale", [(1, (0.9,) * 3), (land, (1.0,) * 3, "back"), (end, (1.025,) * 3)], ease="out")
 
 rule = kit.rect(0.001, 0.035, AMBER, loc=(0, -0.3, -1.15), name="Rule")
 kit.key(rule, "scale", [(land, (1, 1, 1)), (land + 12, (4600, 1, 1))], ease="expo")
-cap = kit.text("FEDERAL AGENTS", font="Montserrat-Bold", size=0.38, spacing=1.25, color="#E8E4DA", strength=1.5,
+cap = kit.text(a.get("label", "FEDERAL AGENTS"), font="Montserrat-Bold", size=0.38, spacing=1.25, color="#E8E4DA", strength=1.5,
                loc=(0, -0.3, -1.55), name="Label")
+if a.get("sub", ""):
+    sub_at = kit.f(a.get("sub_at", 2.2, float))
+    sub = kit.text(a.get("sub"), font="Montserrat-Bold", size=0.34, spacing=1.25, color=AMBER, strength=1.5,
+                   loc=(0, -0.3, -2.15), name="Sub")
+    kit.fade(sub, [(sub_at, 0.0), (sub_at + 10, 1.0)])
 kit.fade(cap, [(land + 2, 0.0), (land + 14, 1.0)])
 kit.key(cap, "location", [(land + 2, (0, -0.3, -1.65)), (land + 14, (0, -0.3, -1.55))], ease="out")
 

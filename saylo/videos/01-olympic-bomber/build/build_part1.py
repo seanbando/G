@@ -37,7 +37,7 @@ def shift(t, include_at=True):
     """VO-clock time -> output time. A shot starting exactly at a bite goes after it (include_at)."""
     return t + sum(b["dur"] for b in BITES if (b["at"] <= t if include_at else b["at"] < t))
 
-segs, music, sfx, cues = [], [], [], []
+segs, music, sfx, cues, silence = [], [], [], [], []
 for name in PLANS:
     p = runpy.run_path(os.path.join(HERE, name))
     for s in p["S"]:
@@ -51,6 +51,7 @@ for name in PLANS:
     for m in p["MUSIC"]:
         music.append(dict(m, start=round(shift(m["start"]), 3), end=round(shift(m["end"], include_at=False), 3)))
     sfx += [dict(at=round(shift(a), 3), file=f, gain=g) for a, f, g in p["SFX"]]
+    silence += [[round(shift(x), 3), round(shift(y, include_at=False), 3)] for x, y in p.get("SILENCE", [])]  # music fully out
     cues += [f"{shift(float(l.split()[0])):.2f} " + " ".join(l.split()[1:]) for l in p.get("CUES", "").splitlines() if l.strip()]
 segs.sort(key=lambda s: s["start"])
 
@@ -96,7 +97,7 @@ if BITES:
 
 plan = dict(assets=MEDIA, voiceover=vo,
             music_dir=os.path.join(VID, "sound", "music"), sfx_dir=os.path.join(VID, "sound", "sfx"),
-            segments=segs, music=music, sfx=sfx)
+            segments=segs, music=music, sfx=sfx, silence=silence)
 pj = os.path.join(OUT, NAME + ".plan.json")
 json.dump(plan, open(pj, "w"), indent=1)
 # cue times are on the full-video clock; the render starts at the first segment
