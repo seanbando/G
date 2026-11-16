@@ -1,6 +1,6 @@
 # Cable short edit (times from words-ricks.json)
 0.0 image 1.0 scripts/shorts/09-millisecond-race/video/board1-finished.png
-0.0 card 1.0 red $300,000,000 FOR 3 MILLISECONDS
+-0.2 card 1.2 red $300,000,000 FOR 3 MILLISECONDS  # starts settled so frame 1 is clean
 7.7 zoomthru
 13.7 whip left
 14.35 shake 0.25

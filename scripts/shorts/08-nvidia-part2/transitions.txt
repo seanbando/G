@@ -1,6 +1,6 @@
 # Nvidia part 2 edit (times in seconds, from words.json)
 0.0 image 0.95 scripts/shorts/08-nvidia-part2/video/board1-finished.png
-0.0 card 0.95 black NVIDIA WITHOUT JENSEN?
+-0.2 card 1.15 black NVIDIA WITHOUT JENSEN?  # starts settled so frame 1 is clean
 5.7 zoomthru
 7.7 whip left
 10.6 note 14.0 0.12 0.045 MONEY CHIEF = CFO, now also interim CEO
