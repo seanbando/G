@@ -25,12 +25,24 @@ Lessons from v1 of the image: the first render was too wide — the figure was a
 Overlay: "200 AGENTS" in a white box label + one white arrow to the campsite.
 
 ## YouTube upload copy (FINAL v2, Nov 15, 2026)
-Chapter times are measured from the joined chapter files of FINAL v2 (18:31). Keywords and full description are in the upload message; the description below is the version to paste.
+Chapter times are measured from the joined chapter files of FINAL v2 (18:31).
+
+SEO (vidIQ, Nov 15, 2026): "olympic bomber" ~3.8K searches/mo at low competition (41), "richard jewell" ~7.8K (64),
+"true crime documentary" ~1M (49), "fbi most wanted" ~22.6K, "centennial olympic park" ~13.8K (22); "eric rudolph"
+itself is under 750/mo. The most-viewed videos on this case are about Richard Jewell (60 Minutes 1.2M, NYT Retro Report
+925K), and "largest manhunt in US history" is the phrase the WRAL doc (205K) ranks on. So: the first two lines carry
+Olympic Bomber + Richard Jewell + Eric Rudolph + Centennial Olympic Park + 1996 Atlanta Olympics + manhunt, and the
+hashtags lead with #RichardJewell over #EricRudolph.
+
+Tags (456 characters, most important first):
+`olympic bomber, eric rudolph, richard jewell, olympic park bombing, centennial olympic park bombing, 1996 atlanta olympics bombing, atlanta olympic bombing, eric rudolph manhunt, eric rudolph capture, largest manhunt in us history, fbi ten most wanted, fbi most wanted, true crime documentary, manhunt documentary, olympic bomber documentary, richard jewell true story, jeff postell, murphy north carolina, nantahala national forest, on the run, true crime`
 
 ```
-In 1996 a pipe bomb went off in Centennial Olympic Park during the Atlanta Olympics. The security guard who found it was treated as a hero for three days, then spent 88 days as the FBI's main suspect. The real bomber, Eric Rudolph, bombed three more times, and then disappeared into the mountains of western North Carolina for five years, with 200 federal agents and a $1 million reward looking for him.
+The Olympic Bomber hid from the FBI for five years. In 1996 a pipe bomb exploded in Centennial Olympic Park during the Atlanta Olympics, and the FBI spent 88 days investigating the wrong man: Richard Jewell, the security guard who found the bomb and helped clear the crowd. The real bomber, Eric Rudolph, struck three more times, landed on the FBI's Ten Most Wanted list, and vanished into the mountains of western North Carolina in one of the largest manhunts in U.S. history.
 
-He was finally caught at 3:30 in the morning behind a grocery store in Murphy, North Carolina, by a 21-year-old rookie cop. This is why it took so long.
+He was finally caught at 3:30 in the morning behind a grocery store in Murphy, North Carolina, by Jeff Postell, a 21-year-old rookie cop. This true crime documentary covers the three things that made Eric Rudolph so hard to catch: the wrong man, a bomber with no name, and the Nantahala National Forest.
+
+From the Centennial Olympic Park bombing to the Sandy Springs and Otherside Lounge bombings around Atlanta and the Birmingham clinic bombing, here is how the case went cold, how the manhunt played out, and how it finally ended.
 
 0:00 3:30 AM in Murphy
 1:49 The Park
@@ -63,7 +75,7 @@ Archival footage and photos are used briefly, with commentary, for news reportin
 
 Recreations and 3D scenes were made for this video. They're illustrations, not real footage, and they don't show anyone's real face.
 
-#TrueCrime #OlympicBomber #EricRudolph
+#TrueCrime #OlympicBomber #RichardJewell #EricRudolph #Manhunt
 ```
 
 ## Description credits (required: keep in the YouTube description)
