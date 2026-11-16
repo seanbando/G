@@ -235,6 +235,24 @@ These come from how the channel's videos are made and don't change the rules abo
 3. **Check:** run `python3 tools/check_script.py <script.md>` and fix what it flags.
 4. **Golpo:** keep `onscreen_text_from_script_only` on so on-screen text matches the narration.
 
+## Channel rules: do and avoid
+
+Set by the creator. These sit above every other rule in this file.
+
+| Do | Avoid |
+|---|---|
+| A person writes each script, with a different structure each time | One template with the topic swapped in |
+| Your own voice, or a consistent human narrator | An AI voice on money or health topics |
+| Real numbers and on-screen sources | Unsourced "facts" |
+| 1–3 uploads a week | Daily mass uploads for our long forms |
+
+What this means in practice:
+
+- **Structure changes every video.** The Part 2 intro format ("This is how…" / "These are…") and the pause-and-guess beat are tools, not a fixed shape. Rotate structures (ladder, countdown, myth vs. fact, one story start to finish, before/after) and don't reuse the previous video's order of beats.
+- **The creator is the author.** Claude drafts and checks; the creator edits and approves every script before recording, and adds their own lines and opinions.
+- **Sources go on screen,** not just in the narration: a small source caption (for example "Source: UBS Global Wealth Report 2026") on every statistic. Golpo's `onscreen_text_from_script_only` setting only shows spoken words, so source captions are added in editing or the setting is turned off with source text listed in the visual instructions.
+- **Pace:** 1 to 3 uploads a week across long-form and shorts.
+
 ## Rule conflicts to decide (open)
 
 These rules pull against each other or against earlier decisions. Settle each once and record the answer here.
@@ -243,4 +261,4 @@ These rules pull against each other or against earlier decisions. Settle each on
 - **Speaker text only vs. drawing notes.** Part 2 says no visual directions; earlier scripts carried `[DRAW: …]` notes. Golpo draws from the narration, so drawing notes are optional.
 - **No one- or two-word sentences vs. existing character beats.** The finished long-form video has short character lines ("The market what?", "Seriously."). Proposed: follow the rule in new scripts; the long-form video stays as recorded unless the creator asks.
 - **Removing hedges vs. attribution.** Attribution such as "according to UBS" or a dated figure ("as of 2025") isn't hedging and stays; vague hedges ("some experts believe") go.
-- **"Human voice, not an AI voice."** The channel narrates with an ElevenLabs clone of the creator's own voice; decide whether that counts.
+- **"Human voice, not an AI voice" / "Avoid an AI voice on money topics."** The channel currently narrates with an ElevenLabs clone of the creator's own voice, and the characters (YOU, THE APP, THE MARKET MAKER and others) are stock AI voices. Decide: record the narration yourself, keep the clone, or keep the clone only for character lines.
