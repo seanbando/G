@@ -80,6 +80,47 @@ def patrol_car(loc, rot_z, m, mat_key="clay"):
     return car
 
 
+def mountains(m):
+    """The western-NC ridge terrain used by every mountains shot (same seed = same ridges). Returns ground_z(x, y)."""
+    bpy.ops.mesh.primitive_grid_add(x_subdivisions=220, y_subdivisions=160, size=1, location=(0, 0, 0))
+    terr = bpy.context.active_object
+    terr.scale = (24, 16, 1)
+    bpy.ops.object.transform_apply(scale=True)
+    tex = bpy.data.textures.new("Ridges", "CLOUDS")
+    tex.noise_scale, tex.noise_depth, tex.noise_basis = 2.6, 3, "ORIGINAL_PERLIN"
+    disp = terr.modifiers.new("Disp", "DISPLACE")
+    disp.texture, disp.strength, disp.mid_level = tex, 4.2, 0.5
+    sm = terr.modifiers.new("Smooth", "SMOOTH")
+    sm.factor, sm.iterations = 1.0, 6
+    kit.assign(terr, m["clay"])
+    bpy.ops.object.shade_smooth()
+    box(24.4, 16.4, 1.2, (0, 0, -1.4), m["clay_d"], "Base")
+
+    def ground_z(x, y):
+        dg = bpy.context.evaluated_depsgraph_get()
+        ok, loc, *_ = bpy.context.scene.ray_cast(dg, (x, y, 30), (0, 0, -1))
+        return loc.z if ok else 0.0
+    return ground_z
+
+
+# map positions on the mountains slab (schematic): Murphy west, Andrews ~15 mi NE, Topton beyond
+TOWNS = {"MURPHY": (-6.5, -2.5), "ANDREWS": (-0.8, 0.6), "TOPTON": (4.0, 3.0)}
+
+
+def pin(m, ground_z, x, y, label, t0, side=1, size=0.7):
+    z = ground_z(x, y)
+    post = cyl(0.04, 1.6, (x, y, z + 0.8), m["amber"], "PinPost")
+    head = sphere(0.16, (x, y, z + 1.65), kit.emission(AMBER, 2.0, "PinHead"), "PinHead")
+    for ob, zz in ((post, z + 0.8), (head, z + 1.65)):
+        kit.key(ob, "location", [(t0 - 6, (x, y, zz + 2.5)), (t0 + 4, (x, y, zz))], ease="expo")
+        kit.fade(ob, [(t0 - 6, 0.0), (t0, 1.0)])
+    tx = kit.text(label, font="Montserrat-Bold", size=size, spacing=1.15, color="#F4F1EA", strength=1.4,
+                  align="LEFT" if side > 0 else "RIGHT", loc=(x + 0.3 * side, y, z + 1.95), rot=(70, 0, 0), name=label)
+    kit.fade(tx, [(t0 + 2, 0.0), (t0 + 10, 1.0)])
+    tx.visible_shadow = False
+    return z
+
+
 def night_light(moon=0.55, key=1500):
     kit.light("SUN", (0, 0, 10), (2, 6, 0), power=moon, color="#B8C6E4", name="Moon")
     kit.light("AREA", (-10, -10, 12), (0, 1, 0), power=key, color="#D6DEEE", size=10, name="Key")
