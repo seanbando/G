@@ -1,5 +1,6 @@
 # Outro (VO 17:43-18:04, + 2 s tail). One question for the comments, the next video, a short subscribe ask.
-# The "NEXT: THE D.C. SNIPERS" card is where YouTube's end-screen video element goes (that video isn't made yet).
+# The "NEXT: THE D.C. SNIPERS" card is where YouTube's end-screen video element goes: link the channel's existing
+# D.C. Snipers video there (it's the creator's first upload).
 S = []
 def seg(a, b, **k): S.append(dict(start=a, end=b, **k))
 
