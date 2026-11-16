@@ -4,6 +4,7 @@ Everything for @watchsaylo lives here. Start every new chat (with Claude or GPT)
 
 | File | What it is |
 |---|---|
+| `PLAYBOOK.md` | Every rule, research step and prompt in pipeline order (task-manager source) |
 | `style-sheet.md` | The rules: channel, audience, voice, structure, blocked words, titles, thumbnails, workflow, GPT fact-check prompt |
 | `channel/channel-audit.md` | Where the channel stood on Nov 13, 2026 and why the sniper video worked |
 | `channel/competitor-analysis.md` | Uncovering / fern / Nexpo scripts, competitor thumbnails, title formats that work |
