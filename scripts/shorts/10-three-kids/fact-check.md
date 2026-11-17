@@ -1,16 +1,16 @@
-# Fact-check: three kids, $1,000 each (checked Nov 17, 2026)
+# Fact-check: three kids, $1,000 each (version A, checked Nov 17, 2026)
 
-Framing: a hypothetical ("Picture a dad..."), not a real family.
+Framing: hypothetical ("Picture a dad..."). No running image (creator choice).
 
-| Claim | Status | Source / math |
+| Claim | Status | Source |
 |---|---|---|
-| Savings at about 4% | Plausible today, not guaranteed for 30 years | Top high-yield savings ~4.35-4.40% APY (Bankrate, SwitchWize, Nov 2026); average savings account ~0.38% (FDIC). Rates are variable. |
-| Never loses a dollar | OK (nominal) | FDIC-insured savings; inflation still erodes it (description) |
-| Year one drops about 18%, like 2022 | Verified | S&P 500 total return 2022: -18.11% (SmartAsset); price-only about -19.4% |
-| Averages about 10% a year before inflation | Verified as a historical average | ~10.4-10.8% a year with dividends since 1957 (SmartAsset, Motley Fool/Damodaran, YCharts); ~6.5% after inflation |
-| Kid two ~$3,200 after 30 years | Math | $1,000 x 1.04^30 = $3,243 |
-| Kid three ~$13,000 after 30 years | Math | $1,000 x 0.82 x 1.10^29 = $13,008 |
-| Kid one $0 | Hypothetical | Spent |
+| Platform fees about 10-15% | Verified as a typical range | StockX ~9.5-10% by seller level, eBay ~12.9% final value fee, GOAT ~9.5-15% (seller guides; check current fee schedules) |
+| Some flips barely make anything | Verified (general) | Resellers note fees make low-margin flips unprofitable (Resell Calendar) |
+| A cheap used vending machine for ~$1,000 | Low end of the range | Used snack machines listed ~$1,000-$3,000 at the low end, many $3,000-$6,000 (ThePricer, vending.com); "cheap used" wording |
+| Can net about $50-$400 a month depending on the spot | Verified as an estimate range | $50-$400/month net after goods, location fees, maintenance; other estimates $75-$300 (VMFS USA, industry guides); location drives most of it |
+| S&P 500 averaged about 10% a year before inflation | Verified | ~10.4-10.8% with dividends since 1957; ~6.5% after inflation |
+| After one year, kid three about $1,100 | Math, at the average | $1,000 x 1.10 = $1,100 (one year can be negative, e.g. -18% in 2022) |
+| Reinvesting machine profit into the fund | Strategy, not a claim | Hypothetical choice |
 
-Wording rules kept: "averages", "before inflation", "if", hypothetical framing; no "guaranteed", no "grows 10%".
-Description note: "Hypothetical example. Savings at 4% APY (rates vary; the average savings account pays far less). Index fund: -18% in year 1 (S&P 500 total return, 2022), then a constant 10% a year (its long-run average since 1957, before inflation). Real returns vary year to year and past returns don't guarantee future results. Not financial advice."
+Avoided: any total for kids one and two (business results vary too much to state), "guaranteed", "grows 10%".
+Description note: "Hypothetical example. Resale fees vary by platform; vending profits vary widely by location (estimates ~$50-$400/month net per machine). S&P 500 averaged ~10% a year since 1957 before inflation; it can fall in any year. Not financial advice."
