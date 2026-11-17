@@ -14,3 +14,9 @@ The viewer's stand-in in every short; scripts talk to "you" and he acts it out.
 ## Supporting cast (described per video, not saved)
 - **The boss:** older bald man in a grey suit with a mustache (so he never looks like YOU in his black suit).
 - **News anchor:** TV anchor at a desk with a red BREAKING banner (Andrew's voice).
+
+## Three-kids cast (short 10, reusable)
+- KID 1 "the seller": `assets/characters/kid1-reference.png`: boy ~12, spiky bright red hair, freckles, worried look, red hoodie with white "1", blue jeans, white sneakers.
+- KID 2 "the late one": `assets/characters/kid2-reference.png`: girl ~12, curly black hair in a high puff, brown skin, yellow t-shirt with black "2", blue denim overalls, black wristwatch on her left wrist, white sneakers.
+- KID 3 "the holder": `assets/characters/kid3-reference.png`: boy ~12, neat brown hair, round thin glasses, calm smile, green t-shirt with white "3", khaki shorts, grey sneakers, hands in pockets.
+Always left to right 1, 2, 3. Charts use red / yellow / green for kids 1 / 2 / 3.
