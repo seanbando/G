@@ -41,3 +41,5 @@ S&P 500 total returns, dividends reinvested (YCharts annual total return; First 
 | 3 | Holds | $8,061 |
 "Ten times more": $8,061 / $770 = 10.5x. "Two years later the market crashed" = the 2008 drop (-37%), sold at year-end 2008.
 Description note: "Hypothetical family, real S&P 500 total returns (dividends reinvested) 2006-2025. Kid 1 sells at the end of 2008; kid 2 sells then and buys back at the end of 2009. Ignores taxes, fund fees and interest on cash. Past returns don't guarantee future results. Not financial advice."
+
+Returns check (Nov 17): 2013 32.39, 2015 1.38, 2018 -4.38, 2019 31.49 confirmed against Slickcharts' total-return table (same series as the others).
