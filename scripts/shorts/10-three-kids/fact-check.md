@@ -1,16 +1,16 @@
-# Fact-check: three kids, $1,000 each (version A, checked Nov 17, 2026)
+# Fact-check: Same $1,000, Same Fund, 3 Different Endings (checked Nov 17, 2026)
 
-Framing: hypothetical ("Picture a dad..."). No running image (creator choice).
+Framing: hypothetical family ("Picture a dad..."), real market returns. No running image (creator choice). Version A (flip / vend / invest) kept in script-version-a.md.
 
-| Claim | Status | Source |
-|---|---|---|
-| Platform fees about 10-15% | Verified as a typical range | StockX ~9.5-10% by seller level, eBay ~12.9% final value fee, GOAT ~9.5-15% (seller guides; check current fee schedules) |
-| Some flips barely make anything | Verified (general) | Resellers note fees make low-margin flips unprofitable (Resell Calendar) |
-| A cheap used vending machine for ~$1,000 | Low end of the range | Used snack machines listed ~$1,000-$3,000 at the low end, many $3,000-$6,000 (ThePricer, vending.com); "cheap used" wording |
-| Can net about $50-$400 a month depending on the spot | Verified as an estimate range | $50-$400/month net after goods, location fees, maintenance; other estimates $75-$300 (VMFS USA, industry guides); location drives most of it |
-| S&P 500 averaged about 10% a year before inflation | Verified | ~10.4-10.8% with dividends since 1957; ~6.5% after inflation |
-| After one year, kid three about $1,100 | Math, at the average | $1,000 x 1.10 = $1,100 (one year can be negative, e.g. -18% in 2022) |
-| Reinvesting machine profit into the fund | Strategy, not a claim | Hypothetical choice |
+S&P 500 total returns with dividends (First Trust 2025 recap, RBC Wealth Management; FactSet index data): 2022 -18.1%, 2023 +26.3%, 2024 +25.0%, 2025 +17.9%. Other calculators differ slightly (ETF proxies, data vintage).
 
-Avoided: any total for kids one and two (business results vary too much to state), "guaranteed", "grows 10%".
-Description note: "Hypothetical example. Resale fees vary by platform; vending profits vary widely by location (estimates ~$50-$400/month net per machine). S&P 500 averaged ~10% a year since 1957 before inflation; it can fall in any year. Not financial advice."
+| Claim | Math / source |
+|---|---|
+| Market fell about 18% in 2022 | -18.1% total return |
+| $1,000 -> $819 | 1000 x 0.819 |
+| Kid one keeps $819 (shoebox = no interest) | stays $819 |
+| Kid two buys back a year later, after a ~26% jump | sold end-2022, missed 2023 (+26.3%), reinvested end-2023: 819 x 1.25 x 1.179 = $1,207 |
+| Kid three holds | 819 x 1.263 x 1.25 x 1.179 = $1,524 |
+
+Simplifications for the description: annual returns (not daily prices), no taxes or fees, the shoebox earns nothing, and kid two's year in cash earns nothing.
+Description note: "Hypothetical family, real S&P 500 total returns: 2022 -18.1%, 2023 +26.3%, 2024 +25.0%, 2025 +17.9%. Ignores taxes, fees and interest on cash. Past returns don't guarantee future results. Not financial advice."

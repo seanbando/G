@@ -1,25 +1,27 @@
-Three Kids, $1,000 Each: Who Grows It Most?
+Same $1,000, Same Fund, 3 Different Endings
 
-Picture a dad who gives his three kids a thousand dollars each and says whoever grows it the most wins.
+Picture a dad putting a thousand dollars for each of his three kids into the same S and P five hundred fund, on the same day in January twenty twenty-two.
 
-YOU: Okay, so which kid wins?
+YOU: So they all end up with the same money, right?
 
-Kid one flips sneakers, but after platform fees of about ten to fifteen percent, some flips barely make anything.
+By the end of that year the market fell about eighteen percent, and each kid's thousand was worth eight hundred nineteen.
 
-Kid two buys a cheap used vending machine that can net fifty to four hundred dollars a month, depending on the spot.
+Kid one panics, sells, and keeps his eight hundred nineteen dollars in a shoebox.
 
-Kid three puts it all in an S and P five hundred index fund, which has averaged about ten percent a year before inflation.
+Kid two sells too, then buys back in a year later, after the market already jumped about twenty-six percent.
+
+Kid three does nothing and just holds.
 
 [PAUSE: 0.5 seconds. The fake-out.]
 
-After one year, kid three looks like he's losing, with about eleven hundred dollars.
+Right after the drop, kid one feels like the smart one, because his money stopped falling.
 
 [PAUSE: 0.4 seconds]
 
-But kid two puts his machine's profit into that same index fund every month.
+By the end of twenty twenty-five, kid one still has eight hundred nineteen, kid two has about twelve hundred, and kid three has about fifteen hundred twenty.
 
-Now the machine makes the money and the fund grows it, so he's scaling two ways at once.
+Same money, same fund, same day, and the only difference was what they did when it dropped.
 
 [PAUSE: 0.4 seconds]
 
-So if your dad handed you a thousand dollars, would you flip, vend or invest?
+So when your money drops, do you sell, wait or hold?
