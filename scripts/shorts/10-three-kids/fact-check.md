@@ -20,3 +20,10 @@ Returns used: 2022 -18.11%, 2023 +26.29%, 2024 +25.02%, 2025 +17.88% (S&P 500 to
 Recomputed here: kid one $818.90; kid two (sells end-2022, reinvests end-2023) $1,206.84; kid three (holds) $1,524.12. Matches the review.
 Dates made explicit: invest at the start of 2022, sell at year-end 2022, kid two buys back at the end of 2023.
 Remaining simplifications (description): index returns, not a specific fund (fees of ~0.03-0.1% a year shave a little); no taxes; cash earns no interest and loses buying power to inflation.
+
+## Kid-simple version (creator request: a 10-year-old can follow it)
+Same numbers, plainer words. Adult wording kept in script-reviewed-adult.md.
+- "fund owns tiny pieces of 500 big companies" = S&P 500 index fund.
+- "start of 2022", "a year later" = end of 2023 buy-back, "four years later" = end of 2025.
+- "almost double": $1,524 / $819 = 1.86x. "about twelve hundred" ($1,207), "about fifteen hundred" ($1,524).
+- Dividends reinvested are not said in the voice (too complex for the target); show on screen "real returns, dividends included" and in the description.

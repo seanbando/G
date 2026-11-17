@@ -1,27 +1,29 @@
 Same $1,000, Same Fund, 3 Different Endings
 
-Picture a dad investing a thousand dollars for each of his three kids, same S and P five hundred fund, right at the start of twenty twenty-two.
+Three kids got the same thousand dollars, in the same fund, on the same day, and one ended up with almost double.
 
-YOU: So they all end up with the same money, right?
+YOU: Wait, how? It's the same money!
 
-By year-end, even with dividends reinvested, each thousand is down to about eight hundred nineteen dollars.
+The fund owns tiny pieces of five hundred big companies, and all three kids bought in at the start of twenty twenty-two.
 
-Kid one panics, sells at year-end, and keeps the cash in a shoebox.
+That year the whole market dropped, so each thousand shrank to about eight hundred nineteen dollars.
 
-Kid two sells too, but buys back at the end of twenty twenty-three, after missing a twenty-six percent rebound.
+Kid one got scared, sold, and hid his eight hundred nineteen dollars in a shoebox.
 
-Kid three does nothing and just holds.
+Kid two got scared too, then jumped back in a year later, after the market had already climbed back up a lot.
+
+Kid three did nothing at all.
 
 [PAUSE: 0.5 seconds. The fake-out.]
 
-For a while, sitting in cash feels safer, because at least those eight hundred nineteen dollars can't fall with the market.
+At first, kid one felt like the smart one, because shoebox money can't drop.
 
 [PAUSE: 0.4 seconds]
 
-By the end of twenty twenty-five, kid one has about eight hundred nineteen dollars, kid two twelve hundred seven, and kid three fifteen hundred twenty-four.
+But four years later, kid one still has eight hundred nineteen dollars, kid two has about twelve hundred, and kid three has about fifteen hundred.
 
-Same starting money, same investment, but selling, and deciding when to come back, changed the outcome.
+Same money, same fund, same day, and the kid who did nothing won.
 
 [PAUSE: 0.4 seconds]
 
-So when your money drops, do you sell, wait or hold?
+So if your money dropped, would you sell, wait or hold?
