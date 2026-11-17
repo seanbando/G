@@ -3,67 +3,67 @@
   {
    "id": "VO-01",
    "start": 0.0,
-   "end": 8.889,
-   "text": "Three kids got the same thousand dollars, in the S and P five hundred, on the same day, and twenty years later, one had over ten times as much."
+   "end": 9.173,
+   "text": "Three college friends put the same thousand dollars into the S and P five hundred, on the same day, and twenty years later, one had over ten times as much."
   },
   {
    "id": "VO-02",
-   "start": 9.038,
-   "end": 11.293,
+   "start": 9.321,
+   "end": 11.576,
    "text": "Wait, how? It's the same money!"
   },
   {
    "id": "VO-03",
-   "start": 11.442,
-   "end": 16.34,
+   "start": 11.725,
+   "end": 16.959,
    "text": "That's tiny pieces of five hundred big companies, all bought at the start of two thousand six."
   },
   {
    "id": "VO-04",
-   "start": 16.44,
-   "end": 22.374,
+   "start": 17.058,
+   "end": 22.992,
    "text": "Then came the two thousand eight crash, and by year-end, each thousand was worth about seven hundred seventy."
   },
   {
    "id": "VO-05",
-   "start": 22.474,
-   "end": 26.179,
-   "text": "Kid one sells at year-end and hides the cash in a shoebox."
+   "start": 23.091,
+   "end": 26.512,
+   "text": "Jay sells at year-end and hides the cash in a shoebox."
   },
   {
    "id": "VO-06",
-   "start": 26.278,
-   "end": 32.446,
-   "text": "Kid two sells too, but buys back at the end of two thousand nine, after missing a twenty-six percent rebound."
+   "start": 26.611,
+   "end": 32.415,
+   "text": "Maya sells too, but buys back at the end of two thousand nine, after missing a twenty-six percent rebound."
   },
   {
    "id": "VO-07",
-   "start": 32.546,
-   "end": 34.412,
-   "text": "Kid three does nothing at all."
+   "start": 32.514,
+   "end": 34.069,
+   "text": "Sam does nothing at all."
   },
   {
    "id": "VO-08",
-   "start": 34.809,
-   "end": 38.852,
-   "text": "At first, kid one feels smart, because shoebox money can't crash."
+   "start": 34.466,
+   "end": 38.378,
+   "text": "At first, Jay feels smart, because shoebox money can't crash."
   },
   {
    "id": "VO-09",
-   "start": 39.189,
-   "end": 47.431,
-   "text": "By the end of twenty twenty-five, kid one has seven hundred seventy, kid two about sixty-four hundred, and kid three about eight thousand."
+   "start": 38.716,
+   "end": 46.464,
+   "text": "By the end of twenty twenty-five, Jay has seven hundred seventy, Maya about sixty-four hundred, and Sam about eight thousand."
   },
   {
    "id": "VO-10",
-   "start": 47.53,
-   "end": 51.365,
-   "text": "Same money, same day, and the kid who did nothing won."
+   "start": 46.563,
+   "end": 50.113,
+   "text": "Same money, same day, and the friend who did nothing won."
   },
   {
    "id": "VO-11",
-   "start": 51.703,
-   "end": 55.565,
+   "start": 50.45,
+   "end": 54.311,
    "text": "So if your money crashed, would you sell, wait or hold?"
   }
  ],
@@ -71,985 +71,949 @@
   {
    "text": "Three",
    "start": 0.0,
-   "end": 0.384,
+   "end": 0.362,
    "line": "VO-01"
   },
   {
-   "text": "kids",
-   "start": 0.384,
-   "end": 0.703,
+   "text": "college",
+   "start": 0.362,
+   "end": 0.845,
    "line": "VO-01"
   },
   {
-   "text": "got",
-   "start": 0.703,
-   "end": 0.959,
+   "text": "friends",
+   "start": 0.845,
+   "end": 1.327,
+   "line": "VO-01"
+  },
+  {
+   "text": "put",
+   "start": 1.327,
+   "end": 1.569,
    "line": "VO-01"
   },
   {
    "text": "the",
-   "start": 0.959,
-   "end": 1.215,
+   "start": 1.569,
+   "end": 1.81,
    "line": "VO-01"
   },
   {
    "text": "same",
-   "start": 1.215,
-   "end": 1.535,
+   "start": 1.81,
+   "end": 2.112,
    "line": "VO-01"
   },
   {
    "text": "thousand",
-   "start": 1.535,
-   "end": 2.11,
+   "start": 2.112,
+   "end": 2.655,
    "line": "VO-01"
   },
   {
-   "text": "dollars,",
-   "start": 2.11,
-   "end": 2.622,
+   "text": "dollars",
+   "start": 2.655,
+   "end": 3.139,
    "line": "VO-01"
   },
   {
-   "text": "in",
-   "start": 2.622,
-   "end": 2.814,
+   "text": "into",
+   "start": 3.139,
+   "end": 3.44,
    "line": "VO-01"
   },
   {
    "text": "the",
-   "start": 2.814,
-   "end": 3.07,
+   "start": 3.44,
+   "end": 3.681,
    "line": "VO-01"
   },
   {
    "text": "S",
-   "start": 3.07,
-   "end": 3.198,
+   "start": 3.681,
+   "end": 3.802,
    "line": "VO-01"
   },
   {
    "text": "and",
-   "start": 3.198,
-   "end": 3.454,
+   "start": 3.802,
+   "end": 4.043,
    "line": "VO-01"
   },
   {
    "text": "P",
-   "start": 3.454,
-   "end": 3.582,
+   "start": 4.043,
+   "end": 4.164,
    "line": "VO-01"
   },
   {
    "text": "five",
-   "start": 3.582,
-   "end": 3.901,
+   "start": 4.164,
+   "end": 4.466,
    "line": "VO-01"
   },
   {
    "text": "hundred,",
-   "start": 3.901,
-   "end": 4.413,
+   "start": 4.466,
+   "end": 4.949,
    "line": "VO-01"
   },
   {
    "text": "on",
-   "start": 4.413,
-   "end": 4.604,
+   "start": 4.949,
+   "end": 5.129,
    "line": "VO-01"
   },
   {
    "text": "the",
-   "start": 4.604,
-   "end": 4.86,
+   "start": 5.129,
+   "end": 5.371,
    "line": "VO-01"
   },
   {
    "text": "same",
-   "start": 4.86,
-   "end": 5.18,
+   "start": 5.371,
+   "end": 5.673,
    "line": "VO-01"
   },
   {
    "text": "day,",
-   "start": 5.18,
-   "end": 5.436,
+   "start": 5.673,
+   "end": 5.914,
    "line": "VO-01"
   },
   {
    "text": "and",
-   "start": 5.436,
-   "end": 5.692,
+   "start": 5.914,
+   "end": 6.155,
    "line": "VO-01"
   },
   {
    "text": "twenty",
-   "start": 5.692,
-   "end": 6.139,
+   "start": 6.155,
+   "end": 6.578,
    "line": "VO-01"
   },
   {
    "text": "years",
-   "start": 6.139,
-   "end": 6.523,
+   "start": 6.578,
+   "end": 6.94,
    "line": "VO-01"
   },
   {
    "text": "later,",
-   "start": 6.523,
-   "end": 6.907,
+   "start": 6.94,
+   "end": 7.302,
    "line": "VO-01"
   },
   {
    "text": "one",
-   "start": 6.907,
-   "end": 7.163,
+   "start": 7.302,
+   "end": 7.544,
    "line": "VO-01"
   },
   {
    "text": "had",
-   "start": 7.163,
-   "end": 7.418,
+   "start": 7.544,
+   "end": 7.785,
    "line": "VO-01"
   },
   {
    "text": "over",
-   "start": 7.418,
-   "end": 7.739,
+   "start": 7.785,
+   "end": 8.086,
    "line": "VO-01"
   },
   {
    "text": "ten",
-   "start": 7.739,
-   "end": 7.995,
+   "start": 8.086,
+   "end": 8.328,
    "line": "VO-01"
   },
   {
    "text": "times",
-   "start": 7.995,
-   "end": 8.378,
+   "start": 8.328,
+   "end": 8.69,
    "line": "VO-01"
   },
   {
    "text": "as",
-   "start": 8.378,
-   "end": 8.57,
+   "start": 8.69,
+   "end": 8.871,
    "line": "VO-01"
   },
   {
    "text": "much.",
-   "start": 8.57,
-   "end": 8.889,
+   "start": 8.871,
+   "end": 9.173,
    "line": "VO-01"
   },
   {
    "text": "Wait,",
-   "start": 9.038,
-   "end": 9.441,
+   "start": 9.321,
+   "end": 9.724,
    "line": "VO-02"
   },
   {
    "text": "how?",
-   "start": 9.441,
-   "end": 9.763,
+   "start": 9.724,
+   "end": 10.046,
    "line": "VO-02"
   },
   {
    "text": "It's",
-   "start": 9.763,
-   "end": 10.085,
+   "start": 10.046,
+   "end": 10.369,
    "line": "VO-02"
   },
   {
    "text": "the",
-   "start": 10.085,
-   "end": 10.407,
+   "start": 10.369,
+   "end": 10.69,
    "line": "VO-02"
   },
   {
    "text": "same",
-   "start": 10.407,
-   "end": 10.81,
+   "start": 10.69,
+   "end": 11.093,
    "line": "VO-02"
   },
   {
    "text": "money!",
-   "start": 10.81,
-   "end": 11.293,
+   "start": 11.093,
+   "end": 11.576,
    "line": "VO-02"
   },
   {
    "text": "That's",
-   "start": 11.442,
-   "end": 11.762,
+   "start": 11.725,
+   "end": 12.066,
    "line": "VO-03"
   },
   {
    "text": "tiny",
-   "start": 11.762,
-   "end": 12.028,
+   "start": 12.066,
+   "end": 12.351,
    "line": "VO-03"
   },
   {
    "text": "pieces",
-   "start": 12.028,
-   "end": 12.401,
+   "start": 12.351,
+   "end": 12.748,
    "line": "VO-03"
   },
   {
    "text": "of",
-   "start": 12.401,
-   "end": 12.56,
+   "start": 12.748,
+   "end": 12.919,
    "line": "VO-03"
   },
   {
    "text": "five",
-   "start": 12.56,
-   "end": 12.826,
+   "start": 12.919,
+   "end": 13.204,
    "line": "VO-03"
   },
   {
    "text": "hundred",
-   "start": 12.826,
-   "end": 13.252,
+   "start": 13.204,
+   "end": 13.659,
    "line": "VO-03"
   },
   {
    "text": "big",
-   "start": 13.252,
-   "end": 13.465,
+   "start": 13.659,
+   "end": 13.887,
    "line": "VO-03"
   },
   {
    "text": "companies,",
-   "start": 13.465,
-   "end": 13.998,
+   "start": 13.887,
+   "end": 14.456,
    "line": "VO-03"
   },
   {
    "text": "all",
-   "start": 13.998,
-   "end": 14.21,
+   "start": 14.456,
+   "end": 14.684,
    "line": "VO-03"
   },
   {
    "text": "bought",
-   "start": 14.21,
-   "end": 14.583,
+   "start": 14.684,
+   "end": 15.082,
    "line": "VO-03"
   },
   {
    "text": "at",
-   "start": 14.583,
-   "end": 14.743,
+   "start": 15.082,
+   "end": 15.252,
    "line": "VO-03"
   },
   {
    "text": "the",
-   "start": 14.743,
-   "end": 14.956,
+   "start": 15.252,
+   "end": 15.479,
    "line": "VO-03"
   },
   {
    "text": "start",
-   "start": 14.956,
-   "end": 15.276,
+   "start": 15.479,
+   "end": 15.822,
    "line": "VO-03"
   },
   {
    "text": "of",
-   "start": 15.276,
-   "end": 15.434,
+   "start": 15.822,
+   "end": 15.992,
    "line": "VO-03"
   },
   {
    "text": "two",
-   "start": 15.434,
-   "end": 15.648,
+   "start": 15.992,
+   "end": 16.219,
    "line": "VO-03"
   },
   {
    "text": "thousand",
-   "start": 15.648,
-   "end": 16.127,
+   "start": 16.219,
+   "end": 16.731,
    "line": "VO-03"
   },
   {
    "text": "six.",
-   "start": 16.127,
-   "end": 16.34,
+   "start": 16.731,
+   "end": 16.959,
    "line": "VO-03"
   },
   {
    "text": "Then",
-   "start": 16.44,
-   "end": 16.719,
+   "start": 17.058,
+   "end": 17.338,
    "line": "VO-04"
   },
   {
    "text": "came",
-   "start": 16.719,
-   "end": 16.999,
+   "start": 17.338,
+   "end": 17.618,
    "line": "VO-04"
   },
   {
    "text": "the",
-   "start": 16.999,
-   "end": 17.223,
+   "start": 17.618,
+   "end": 17.842,
    "line": "VO-04"
   },
   {
    "text": "two",
-   "start": 17.223,
-   "end": 17.448,
+   "start": 17.842,
+   "end": 18.066,
    "line": "VO-04"
   },
   {
    "text": "thousand",
-   "start": 17.448,
-   "end": 17.952,
+   "start": 18.066,
+   "end": 18.569,
    "line": "VO-04"
   },
   {
    "text": "eight",
-   "start": 17.952,
-   "end": 18.287,
+   "start": 18.569,
+   "end": 18.905,
    "line": "VO-04"
   },
   {
    "text": "crash,",
-   "start": 18.287,
-   "end": 18.623,
+   "start": 18.905,
+   "end": 19.242,
    "line": "VO-04"
   },
   {
    "text": "and",
-   "start": 18.623,
-   "end": 18.846,
+   "start": 19.242,
+   "end": 19.465,
    "line": "VO-04"
   },
   {
    "text": "by",
-   "start": 18.846,
-   "end": 19.015,
+   "start": 19.465,
+   "end": 19.634,
    "line": "VO-04"
   },
   {
    "text": "year-end,",
-   "start": 19.015,
-   "end": 19.463,
+   "start": 19.634,
+   "end": 20.081,
    "line": "VO-04"
   },
   {
    "text": "each",
-   "start": 19.463,
-   "end": 19.742,
+   "start": 20.081,
+   "end": 20.361,
    "line": "VO-04"
   },
   {
    "text": "thousand",
-   "start": 19.742,
-   "end": 20.246,
+   "start": 20.361,
+   "end": 20.865,
    "line": "VO-04"
   },
   {
    "text": "was",
-   "start": 20.246,
-   "end": 20.471,
+   "start": 20.865,
+   "end": 21.089,
    "line": "VO-04"
   },
   {
    "text": "worth",
-   "start": 20.471,
-   "end": 20.807,
+   "start": 21.089,
+   "end": 21.425,
    "line": "VO-04"
   },
   {
    "text": "about",
-   "start": 20.807,
-   "end": 21.142,
+   "start": 21.425,
+   "end": 21.76,
    "line": "VO-04"
   },
   {
    "text": "seven",
-   "start": 21.142,
-   "end": 21.479,
+   "start": 21.76,
+   "end": 22.097,
    "line": "VO-04"
   },
   {
    "text": "hundred",
-   "start": 21.479,
-   "end": 21.926,
+   "start": 22.097,
+   "end": 22.544,
    "line": "VO-04"
   },
   {
    "text": "seventy.",
-   "start": 21.926,
-   "end": 22.374,
+   "start": 22.544,
+   "end": 22.992,
    "line": "VO-04"
   },
   {
-   "text": "Kid",
-   "start": 22.474,
-   "end": 22.734,
-   "line": "VO-05"
-  },
-  {
-   "text": "one",
-   "start": 22.734,
-   "end": 22.993,
+   "text": "Jay",
+   "start": 23.091,
+   "end": 23.349,
    "line": "VO-05"
   },
   {
    "text": "sells",
-   "start": 22.993,
-   "end": 23.383,
+   "start": 23.349,
+   "end": 23.736,
    "line": "VO-05"
   },
   {
    "text": "at",
-   "start": 23.383,
-   "end": 23.579,
+   "start": 23.736,
+   "end": 23.931,
    "line": "VO-05"
   },
   {
    "text": "year-end",
-   "start": 23.579,
-   "end": 24.099,
+   "start": 23.931,
+   "end": 24.446,
    "line": "VO-05"
   },
   {
    "text": "and",
-   "start": 24.099,
-   "end": 24.359,
+   "start": 24.446,
+   "end": 24.704,
    "line": "VO-05"
   },
   {
    "text": "hides",
-   "start": 24.359,
-   "end": 24.75,
+   "start": 24.704,
+   "end": 25.092,
    "line": "VO-05"
   },
   {
    "text": "the",
-   "start": 24.75,
-   "end": 25.009,
+   "start": 25.092,
+   "end": 25.35,
    "line": "VO-05"
   },
   {
    "text": "cash",
-   "start": 25.009,
-   "end": 25.334,
+   "start": 25.35,
+   "end": 25.673,
    "line": "VO-05"
   },
   {
    "text": "in",
-   "start": 25.334,
-   "end": 25.529,
+   "start": 25.673,
+   "end": 25.866,
    "line": "VO-05"
   },
   {
    "text": "a",
-   "start": 25.529,
-   "end": 25.659,
+   "start": 25.866,
+   "end": 25.995,
    "line": "VO-05"
   },
   {
    "text": "shoebox.",
-   "start": 25.659,
-   "end": 26.179,
+   "start": 25.995,
+   "end": 26.512,
    "line": "VO-05"
   },
   {
-   "text": "Kid",
-   "start": 26.278,
-   "end": 26.512,
-   "line": "VO-06"
-  },
-  {
-   "text": "two",
-   "start": 26.512,
-   "end": 26.745,
+   "text": "Maya",
+   "start": 26.611,
+   "end": 26.893,
    "line": "VO-06"
   },
   {
    "text": "sells",
-   "start": 26.745,
-   "end": 27.093,
+   "start": 26.893,
+   "end": 27.231,
    "line": "VO-06"
   },
   {
    "text": "too,",
-   "start": 27.093,
-   "end": 27.326,
+   "start": 27.231,
+   "end": 27.456,
    "line": "VO-06"
   },
   {
    "text": "but",
-   "start": 27.326,
-   "end": 27.559,
+   "start": 27.456,
+   "end": 27.681,
    "line": "VO-06"
   },
   {
    "text": "buys",
-   "start": 27.559,
-   "end": 27.85,
+   "start": 27.681,
+   "end": 27.963,
    "line": "VO-06"
   },
   {
    "text": "back",
-   "start": 27.85,
-   "end": 28.141,
+   "start": 27.963,
+   "end": 28.245,
    "line": "VO-06"
   },
   {
    "text": "at",
-   "start": 28.141,
-   "end": 28.315,
+   "start": 28.245,
+   "end": 28.414,
    "line": "VO-06"
   },
   {
    "text": "the",
-   "start": 28.315,
-   "end": 28.548,
+   "start": 28.414,
+   "end": 28.639,
    "line": "VO-06"
   },
   {
    "text": "end",
-   "start": 28.548,
-   "end": 28.781,
+   "start": 28.639,
+   "end": 28.865,
    "line": "VO-06"
   },
   {
    "text": "of",
-   "start": 28.781,
-   "end": 28.955,
+   "start": 28.865,
+   "end": 29.034,
    "line": "VO-06"
   },
   {
    "text": "two",
-   "start": 28.955,
-   "end": 29.188,
+   "start": 29.034,
+   "end": 29.259,
    "line": "VO-06"
   },
   {
    "text": "thousand",
-   "start": 29.188,
-   "end": 29.712,
+   "start": 29.259,
+   "end": 29.766,
    "line": "VO-06"
   },
   {
    "text": "nine,",
-   "start": 29.712,
-   "end": 30.003,
+   "start": 29.766,
+   "end": 30.048,
    "line": "VO-06"
   },
   {
    "text": "after",
-   "start": 30.003,
-   "end": 30.352,
+   "start": 30.048,
+   "end": 30.386,
    "line": "VO-06"
   },
   {
    "text": "missing",
-   "start": 30.352,
-   "end": 30.817,
+   "start": 30.386,
+   "end": 30.838,
    "line": "VO-06"
   },
   {
    "text": "a",
-   "start": 30.817,
-   "end": 30.934,
+   "start": 30.838,
+   "end": 30.95,
    "line": "VO-06"
   },
   {
    "text": "twenty-six",
-   "start": 30.934,
-   "end": 31.516,
+   "start": 30.95,
+   "end": 31.513,
    "line": "VO-06"
   },
   {
    "text": "percent",
-   "start": 31.516,
-   "end": 31.981,
+   "start": 31.513,
+   "end": 31.964,
    "line": "VO-06"
   },
   {
    "text": "rebound.",
-   "start": 31.981,
-   "end": 32.446,
+   "start": 31.964,
+   "end": 32.415,
    "line": "VO-06"
   },
   {
-   "text": "Kid",
-   "start": 32.546,
-   "end": 32.795,
-   "line": "VO-07"
-  },
-  {
-   "text": "three",
-   "start": 32.795,
-   "end": 33.168,
+   "text": "Sam",
+   "start": 32.514,
+   "end": 32.774,
    "line": "VO-07"
   },
   {
    "text": "does",
-   "start": 33.168,
-   "end": 33.479,
+   "start": 32.774,
+   "end": 33.097,
    "line": "VO-07"
   },
   {
    "text": "nothing",
-   "start": 33.479,
-   "end": 33.976,
+   "start": 33.097,
+   "end": 33.616,
    "line": "VO-07"
   },
   {
    "text": "at",
-   "start": 33.976,
-   "end": 34.164,
+   "start": 33.616,
+   "end": 33.809,
    "line": "VO-07"
   },
   {
    "text": "all.",
-   "start": 34.164,
-   "end": 34.412,
+   "start": 33.809,
+   "end": 34.069,
    "line": "VO-07"
   },
   {
    "text": "At",
-   "start": 34.809,
-   "end": 35.004,
+   "start": 34.466,
+   "end": 34.668,
    "line": "VO-08"
   },
   {
    "text": "first,",
-   "start": 35.004,
-   "end": 35.396,
+   "start": 34.668,
+   "end": 35.073,
    "line": "VO-08"
   },
   {
-   "text": "kid",
-   "start": 35.396,
-   "end": 35.657,
-   "line": "VO-08"
-  },
-  {
-   "text": "one",
-   "start": 35.657,
-   "end": 35.918,
+   "text": "Jay",
+   "start": 35.073,
+   "end": 35.343,
    "line": "VO-08"
   },
   {
    "text": "feels",
-   "start": 35.918,
-   "end": 36.309,
+   "start": 35.343,
+   "end": 35.748,
    "line": "VO-08"
   },
   {
    "text": "smart,",
-   "start": 36.309,
-   "end": 36.7,
+   "start": 35.748,
+   "end": 36.152,
    "line": "VO-08"
   },
   {
    "text": "because",
-   "start": 36.7,
-   "end": 37.222,
+   "start": 36.152,
+   "end": 36.692,
    "line": "VO-08"
   },
   {
    "text": "shoebox",
-   "start": 37.222,
-   "end": 37.743,
+   "start": 36.692,
+   "end": 37.232,
    "line": "VO-08"
   },
   {
    "text": "money",
-   "start": 37.743,
-   "end": 38.134,
+   "start": 37.232,
+   "end": 37.636,
    "line": "VO-08"
   },
   {
    "text": "can't",
-   "start": 38.134,
-   "end": 38.461,
+   "start": 37.636,
+   "end": 37.974,
    "line": "VO-08"
   },
   {
    "text": "crash.",
-   "start": 38.461,
-   "end": 38.852,
+   "start": 37.974,
+   "end": 38.378,
    "line": "VO-08"
   },
   {
    "text": "By",
-   "start": 39.189,
-   "end": 39.375,
+   "start": 38.716,
+   "end": 38.909,
    "line": "VO-09"
   },
   {
    "text": "the",
-   "start": 39.375,
-   "end": 39.624,
+   "start": 38.909,
+   "end": 39.168,
    "line": "VO-09"
   },
   {
    "text": "end",
-   "start": 39.624,
-   "end": 39.871,
+   "start": 39.168,
+   "end": 39.426,
    "line": "VO-09"
   },
   {
    "text": "of",
-   "start": 39.871,
-   "end": 40.057,
+   "start": 39.426,
+   "end": 39.619,
    "line": "VO-09"
   },
   {
    "text": "twenty",
-   "start": 40.057,
-   "end": 40.491,
+   "start": 39.619,
+   "end": 40.072,
    "line": "VO-09"
   },
   {
    "text": "twenty-five,",
-   "start": 40.491,
-   "end": 41.172,
+   "start": 40.072,
+   "end": 40.782,
    "line": "VO-09"
   },
   {
-   "text": "kid",
-   "start": 41.172,
-   "end": 41.42,
-   "line": "VO-09"
-  },
-  {
-   "text": "one",
-   "start": 41.42,
-   "end": 41.668,
+   "text": "Jay",
+   "start": 40.782,
+   "end": 41.04,
    "line": "VO-09"
   },
   {
    "text": "has",
-   "start": 41.668,
-   "end": 41.916,
+   "start": 41.04,
+   "end": 41.299,
    "line": "VO-09"
   },
   {
    "text": "seven",
-   "start": 41.916,
-   "end": 42.287,
+   "start": 41.299,
+   "end": 41.685,
    "line": "VO-09"
   },
   {
    "text": "hundred",
-   "start": 42.287,
-   "end": 42.783,
+   "start": 41.685,
+   "end": 42.202,
    "line": "VO-09"
   },
   {
    "text": "seventy,",
-   "start": 42.783,
-   "end": 43.279,
+   "start": 42.202,
+   "end": 42.719,
    "line": "VO-09"
   },
   {
-   "text": "kid",
-   "start": 43.279,
-   "end": 43.527,
-   "line": "VO-09"
-  },
-  {
-   "text": "two",
-   "start": 43.527,
-   "end": 43.775,
+   "text": "Maya",
+   "start": 42.719,
+   "end": 43.041,
    "line": "VO-09"
   },
   {
    "text": "about",
-   "start": 43.775,
-   "end": 44.147,
+   "start": 43.041,
+   "end": 43.429,
    "line": "VO-09"
   },
   {
    "text": "sixty-four",
-   "start": 44.147,
-   "end": 44.767,
+   "start": 43.429,
+   "end": 44.075,
    "line": "VO-09"
   },
   {
    "text": "hundred,",
-   "start": 44.767,
-   "end": 45.262,
+   "start": 44.075,
+   "end": 44.591,
    "line": "VO-09"
   },
   {
    "text": "and",
-   "start": 45.262,
-   "end": 45.51,
+   "start": 44.591,
+   "end": 44.85,
    "line": "VO-09"
   },
   {
-   "text": "kid",
-   "start": 45.51,
-   "end": 45.758,
-   "line": "VO-09"
-  },
-  {
-   "text": "three",
-   "start": 45.758,
-   "end": 46.13,
+   "text": "Sam",
+   "start": 44.85,
+   "end": 45.108,
    "line": "VO-09"
   },
   {
    "text": "about",
-   "start": 46.13,
-   "end": 46.501,
+   "start": 45.108,
+   "end": 45.495,
    "line": "VO-09"
   },
   {
    "text": "eight",
-   "start": 46.501,
-   "end": 46.873,
+   "start": 45.495,
+   "end": 45.882,
    "line": "VO-09"
   },
   {
    "text": "thousand.",
-   "start": 46.873,
-   "end": 47.431,
+   "start": 45.882,
+   "end": 46.464,
    "line": "VO-09"
   },
   {
    "text": "Same",
-   "start": 47.53,
-   "end": 47.899,
+   "start": 46.563,
+   "end": 46.885,
    "line": "VO-10"
   },
   {
    "text": "money,",
-   "start": 47.899,
-   "end": 48.341,
+   "start": 46.885,
+   "end": 47.273,
    "line": "VO-10"
   },
   {
    "text": "same",
-   "start": 48.341,
-   "end": 48.71,
+   "start": 47.273,
+   "end": 47.596,
    "line": "VO-10"
   },
   {
    "text": "day,",
-   "start": 48.71,
-   "end": 49.005,
+   "start": 47.596,
+   "end": 47.853,
    "line": "VO-10"
   },
   {
    "text": "and",
-   "start": 49.005,
-   "end": 49.301,
+   "start": 47.853,
+   "end": 48.111,
    "line": "VO-10"
   },
   {
    "text": "the",
-   "start": 49.301,
-   "end": 49.595,
+   "start": 48.111,
+   "end": 48.37,
    "line": "VO-10"
   },
   {
-   "text": "kid",
-   "start": 49.595,
-   "end": 49.89,
+   "text": "friend",
+   "start": 48.37,
+   "end": 48.822,
    "line": "VO-10"
   },
   {
    "text": "who",
-   "start": 49.89,
-   "end": 50.186,
+   "start": 48.822,
+   "end": 49.079,
    "line": "VO-10"
   },
   {
    "text": "did",
-   "start": 50.186,
-   "end": 50.48,
+   "start": 49.079,
+   "end": 49.338,
    "line": "VO-10"
   },
   {
    "text": "nothing",
-   "start": 50.48,
-   "end": 51.071,
+   "start": 49.338,
+   "end": 49.854,
    "line": "VO-10"
   },
   {
    "text": "won.",
-   "start": 51.071,
-   "end": 51.365,
+   "start": 49.854,
+   "end": 50.113,
    "line": "VO-10"
   },
   {
    "text": "So",
-   "start": 51.703,
-   "end": 51.922,
+   "start": 50.45,
+   "end": 50.669,
    "line": "VO-11"
   },
   {
    "text": "if",
-   "start": 51.922,
-   "end": 52.14,
+   "start": 50.669,
+   "end": 50.887,
    "line": "VO-11"
   },
   {
    "text": "your",
-   "start": 52.14,
-   "end": 52.504,
+   "start": 50.887,
+   "end": 51.251,
    "line": "VO-11"
   },
   {
    "text": "money",
-   "start": 52.504,
-   "end": 52.942,
+   "start": 51.251,
+   "end": 51.688,
    "line": "VO-11"
   },
   {
    "text": "crashed,",
-   "start": 52.942,
-   "end": 53.524,
+   "start": 51.688,
+   "end": 52.272,
    "line": "VO-11"
   },
   {
    "text": "would",
-   "start": 53.524,
-   "end": 53.962,
+   "start": 52.272,
+   "end": 52.708,
    "line": "VO-11"
   },
   {
    "text": "you",
-   "start": 53.962,
-   "end": 54.253,
+   "start": 52.708,
+   "end": 53.0,
    "line": "VO-11"
   },
   {
    "text": "sell,",
-   "start": 54.253,
-   "end": 54.617,
+   "start": 53.0,
+   "end": 53.364,
    "line": "VO-11"
   },
   {
    "text": "wait",
-   "start": 54.617,
-   "end": 54.982,
+   "start": 53.364,
+   "end": 53.728,
    "line": "VO-11"
   },
   {
    "text": "or",
-   "start": 54.982,
-   "end": 55.201,
+   "start": 53.728,
+   "end": 53.947,
    "line": "VO-11"
   },
   {
    "text": "hold?",
-   "start": 55.201,
-   "end": 55.565,
+   "start": 53.947,
+   "end": 54.311,
    "line": "VO-11"
   }
  ]
