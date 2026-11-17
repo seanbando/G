@@ -21,6 +21,7 @@ This folder is the production home for the Saylo YouTube channel. Claude acts as
 New reference videos from competitors → use the `analyze-reference-video` skill (`.claude/skills/`) and `tools/analyze_edit.py`.
 
 ## Hard rules learned so far
+- **Voiceover must be flawless before editing starts:** `tools/check_vo.py` at 0 problems + the creator listens through once (style-sheet §3, "VOICEOVER GATE").
 - Never invent details (sensory "color", quotes, times, places). If it isn't sourced, cut it or mark it "reportedly".
 - Don't compress separate events into one. Don't turn a complicated investigation into a single-clue solution.
 - Don't claim investigators "looked in the wrong place" unless the record says so (the Rudolph fact-check caught this).

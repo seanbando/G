@@ -24,6 +24,12 @@ The click: **"I know what happened, but I never understood how they caught him."
 - Victims are named and treated with respect. Never sensationalized.
 - Signature ending: the truth is smaller and more ordinary than what people imagined.
 
+**VOICEOVER GATE: flawless or it doesn't ship (creator, Nov 17, 2026; hard rule, learned after video 01 went up with flaws).** The voiceover must play straight through perfectly: no stutters, no repeated or cut-off words, no wrong or missing words, no hesitations or delays mid-sentence, no dead air, no glued sentences with no breath, no line that suddenly rushes or drags, no volume jumps between chunks. Before ANY editing starts:
+1. Generate the voiceover, then transcribe the **final mixed file** with word timestamps (ElevenLabs scribe → `vo-words.json`).
+2. Run `python3 saylo/tools/check_vo.py vo-words.json voiceover-part1.txt voiceover-part2.txt --out vo-gate.md`. It must say **0 problems**. Every flagged line gets regenerated (same voice, seed and settings, with previous/next text) or its gap trimmed; then re-transcribe and re-run. Intentional holds must be written as `[PAUSE]` in the script, or they get flagged.
+3. Run the per-chunk loudness/pace check (`vo-check.md`) and fix outliers.
+4. The creator listens once, start to finish, and approves. Only then does the edit begin. If a flaw is found after editing has started, fix the voiceover first, then re-time the edit (word timings change).
+
 ## 4. STRUCTURE (18–22 min, ~2,900–3,400 words at ~160 wpm)
 | Time | Beat |
 |---|---|
