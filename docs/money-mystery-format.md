@@ -108,3 +108,9 @@ Never mix structures. Pick the ONE that fits the idea best and follow its beats 
 | Afterhour Theory | current drama with a famous name or company | contrarian hook + real name -> "But how?" -> you play the company (need -> asset) -> fast list -> twist that pulls the viewer in |
 Hook types (common belief, won't work unless, better way, results first, A to B) are openings inside the chosen structure, not extra structures.
 The recurring character YOU can appear in the drawings of any structure; YOU only speaks a line in Money Mystery.
+
+## Running image must be said early (creator feedback, Nov 17 2026)
+A metaphor that only appears in the drawings and then shows up in the last line feels random ("the seed that got stepped on" came out of nowhere).
+- Introduce the image in the voice-over by line 3 or 4 ("Picture your paycheck as a pizza", "It's like an escalator moving down").
+- Use it at least once in the middle, then flip it at the end.
+- If it can't be set up naturally, drop it and end on the plain payoff.
