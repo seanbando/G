@@ -27,3 +27,17 @@ Same numbers, plainer words. Adult wording kept in script-reviewed-adult.md.
 - "start of 2022", "a year later" = end of 2023 buy-back, "four years later" = end of 2025.
 - "almost double": $1,524 / $819 = 1.86x. "about twelve hundred" ($1,207), "about fifteen hundred" ($1,524).
 - Dividends reinvested are not said in the voice (too complex for the target); show on screen "real returns, dividends included" and in the description.
+
+## 20-year version (creator request, Nov 17 2026): start of 2006 to end of 2025
+4-year version kept in script-4-years.md.
+S&P 500 total returns, dividends reinvested (YCharts annual total return; First Trust; RBC):
+2006 15.79, 2007 5.49, 2008 -37.00, 2009 26.46, 2010 15.06, 2011 2.11, 2012 16.00, 2013 32.39, 2014 13.69, 2015 1.38, 2016 11.96, 2017 21.83, 2018 -4.38, 2019 31.49, 2020 18.40, 2021 28.71, 2022 -18.11, 2023 26.29, 2024 25.02, 2025 17.88.
+2006-2011 confirmed by search (YCharts, Crossing Wall Street); 2020 confirmed (First Trust); 2012-2019 and 2021 are the standard published figures, re-check against the YCharts table before posting.
+| Kid | Decision | End of 2025 |
+|---|---|---|
+| All | $1,000 at start of 2006 -> end of 2008 (after the crash) | $770 |
+| 1 | Sells end of 2008, keeps cash | $770 |
+| 2 | Sells end of 2008, misses 2009 (+26.46%), buys back end of 2009 | $6,374 |
+| 3 | Holds | $8,061 |
+"Ten times more": $8,061 / $770 = 10.5x. "Two years later the market crashed" = the 2008 drop (-37%), sold at year-end 2008.
+Description note: "Hypothetical family, real S&P 500 total returns (dividends reinvested) 2006-2025. Kid 1 sells at the end of 2008; kid 2 sells then and buys back at the end of 2009. Ignores taxes, fund fees and interest on cash. Past returns don't guarantee future results. Not financial advice."
