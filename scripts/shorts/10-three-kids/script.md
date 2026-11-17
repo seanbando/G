@@ -4,21 +4,21 @@ Picture a dad who gives his three kids a thousand dollars each and says whoever 
 
 YOU: Okay, so which kid wins?
 
-Kid one flips sneakers, buying pairs and reselling them, but after platform fees of about ten to fifteen percent, some flips barely make anything.
+Kid one flips sneakers, but after platform fees of about ten to fifteen percent, some flips barely make anything.
 
-Kid two buys a cheap used vending machine, and depending on the spot, it can net about fifty to four hundred dollars a month.
+Kid two buys a cheap used vending machine that can net fifty to four hundred dollars a month, depending on the spot.
 
 Kid three puts it all in an S and P five hundred index fund, which has averaged about ten percent a year before inflation.
 
 [PAUSE: 0.5 seconds. The fake-out.]
 
-After one year, kid three looks like he's losing, with about eleven hundred dollars, while his siblings are hustling.
+After one year, kid three looks like he's losing, with about eleven hundred dollars.
 
 [PAUSE: 0.4 seconds]
 
-But kid two does something smart, because every month his machine's profit goes into that same index fund.
+But kid two puts his machine's profit into that same index fund every month.
 
-Now the machine earns the money, and the fund keeps growing it, so he's scaling two ways at once.
+Now the machine makes the money and the fund grows it, so he's scaling two ways at once.
 
 [PAUSE: 0.4 seconds]
 
