@@ -83,7 +83,7 @@ const glow = new THREE.PointLight(0x40c46e, 30, 12); scene.add(glow);
 const ease = x => { x = Math.min(Math.max(x, 0), 1); return x * x * (3 - 2 * x); };
 let lastTxt = '';
 window.renderAt = (t) => {
-  const u = ease(t / (TT - 0.6));
+  const u = ease(t / (TT - 1.9));
   buildTube(Math.max(u, 0.003));
   const p = curve.getPointAt(Math.min(u, 0.999));
   const fi = u * (N - 1), i0 = Math.floor(fi), i1 = Math.min(N - 1, i0 + 1);

@@ -13,7 +13,7 @@
 22.17 punch
 41.23 punch
 44.69 shake 0.3
-7.42 note 14.68 0.08 0.04 Real S&P 500 total returns, dividends included
+7.42 note 14.68 0.66 0.036 Real S&P 500 total returns, dividends included
 24.14 push 27.05 1.06
 47.02 push 51.32 1.06
 1.5 punch
