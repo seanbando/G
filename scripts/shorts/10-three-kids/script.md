@@ -12,7 +12,7 @@ Jay sells at year-end and hides the cash in a shoebox.
 
 Maya sells too, but buys back at the end of two thousand nine, after missing a twenty-six percent rebound.
 
-Sam does nothing at all.
+Sam stays invested and lets his dividends reinvest.
 
 [PAUSE: 0.5 seconds. The fake-out.]
 

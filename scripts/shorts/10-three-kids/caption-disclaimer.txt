@@ -1,1 +1,1 @@
-Hypothetical illustration using S&P 500 total returns from 2006–2025, with dividends reinvested while invested. Assumes year-end transactions, no additional contributions, no cash interest, and no fees or taxes. Actual fund results vary. Past performance doesn’t guarantee future returns.
+Hypothetical example using S&P 500 total returns, 2006–2025. Assumes dividends reinvested while invested, year-end sales and reentry, no additional contributions, no cash interest, and no fees or taxes. Actual fund returns vary. Past performance doesn’t guarantee future results.

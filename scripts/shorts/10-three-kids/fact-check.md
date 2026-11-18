@@ -43,3 +43,9 @@ S&P 500 total returns, dividends reinvested (YCharts annual total return; First 
 Description note: "Hypothetical family, real S&P 500 total returns (dividends reinvested) 2006-2025. Kid 1 sells at the end of 2008; kid 2 sells then and buys back at the end of 2009. Ignores taxes, fund fees and interest on cash. Past returns don't guarantee future results. Not financial advice."
 
 Returns check (Nov 17): 2013 32.39, 2015 1.38, 2018 -4.38, 2019 31.49 confirmed against Slickcharts' total-return table (same series as the others).
+
+## Final review (Nov 18)
+- Hook "over ten times as much" = Sam ($8,061) vs Jay ($770); the opening board must pair those two visually (edit note: "SAM $8,061 vs JAY $770 = 10x").
+- VO-07 now "Sam stays invested and lets his dividends reinvest." (dividends are in the $8,061 total return).
+- Voice keeps rounded $770 / about $6,400 / about $8,000; screen shows $770 / $6,374 / $8,061.
+- Caption disclaimer updated (caption-disclaimer.txt).
