@@ -68,10 +68,19 @@ def main(words_json, display, out, max_words=3):
         for c, wgt in zip(chunks, weights):
             s = time_at(k, acc / total)
             first = re.sub(r"[^a-z0-9]", "", c[0].lower())
-            for j in range(ptr, len(ws)):  # snap to the real start of the same spoken word
-                if first and re.sub(r"[^a-z0-9]", "", ws[j]["text"].lower()) == first:
-                    s, ptr = ws[j]["start"], j + 1
+            NUM = {"1": "one", "2": "two", "3": "three", "4": "four", "5": "five", "6": "six", "7": "seven",
+                   "8": "eight", "9": "nine"}
+            key = NUM.get(first[:1], first) if first[:1].isdigit() and len(first) in (1, 3) else first
+            snapped = False
+            for j in range(ptr, min(len(ws), ptr + 6)):  # snap to the real start of the same spoken word
+                if key and re.sub(r"[^a-z0-9]", "", ws[j]["text"].lower()) == key:
+                    s, ptr, snapped = ws[j]["start"], j + 1, True
                     break
+            if not snapped:  # keep the word pointer moving with the estimate
+                while ptr < len(ws) and ws[ptr]["start"] < s:
+                    ptr += 1
+            if starts and s <= starts[-1] + 0.12:
+                s = starts[-1] + 0.12
             starts.append(s)
             acc += wgt
         ends = starts[1:] + [line["end"]]
