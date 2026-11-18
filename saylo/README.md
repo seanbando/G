@@ -9,6 +9,7 @@ Everything for @watchsaylo lives here. Start every new chat (with Claude or GPT)
 | `channel/channel-audit.md` | Where the channel stood on Nov 13, 2026 and why the sniper video worked |
 | `channel/competitor-analysis.md` | Uncovering / fern / Nexpo scripts, competitor thumbnails, title formats that work |
 | `ideas/scorecard.md` | How ideas are scored, plus the ranked list of next videos |
+| `videos/02-frein/` | Script, research, fact-check log, voiceover, footage sheet |
 | `videos/01-olympic-bomber/` | Script, package (title + thumbnail), fact-check log, thumbnail images |
 | `tools/check_saylo.py` | Scans a script for blocked words, length and sentence rhythm |
 | `CLAUDE.md` | Instructions Claude reads automatically when working in this folder |
