@@ -36,19 +36,37 @@ const pts = vals.map((v, i) => new THREE.Vector3(i * XS, yOf(v), 0));
 const grid = new THREE.GridHelper(N * XS * 2, N * 2, 0x2c3770, 0x1f2852); grid.position.set(N * XS / 2, -0.6, 0); scene.add(grid);
 
 // ribbon (extruded tube) built progressively
-const curve = new THREE.CatmullRomCurve3(pts, false, 'catmullrom', 0.1);
-const tubeMatUp = new THREE.MeshStandardMaterial({ color: 0x40c46e, emissive: 0x0f3a1e, roughness: 0.35, metalness: 0.2 });
-let tube = null;
+// straight chart segments (not a smooth "snake")
+const curve = new THREE.CurvePath();
+for (let i = 0; i < N - 1; i++) curve.add(new THREE.LineCurve3(pts[i], pts[i + 1]));
+const lineMat = new THREE.MeshBasicMaterial({ color: 0x5cf08c });
+const areaMat = new THREE.MeshBasicMaterial({ color: 0x40c46e, transparent: true, opacity: 0.22, side: THREE.DoubleSide, depthWrite: false });
+const FLOOR = -0.6;
+let tube = null, area = null;
+const nodeGeo = new THREE.SphereGeometry(0.2, 16, 8);
+const nodes = pts.map(p => { const m = new THREE.Mesh(nodeGeo, new THREE.MeshBasicMaterial({ color: 0xffffff })); m.position.copy(p); m.visible = false; scene.add(m); return m; });
+const stems = pts.map(p => { const g = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(p.x, FLOOR, 0), p]); const l = new THREE.Line(g, new THREE.LineBasicMaterial({ color: 0x3a4a8a })); l.visible = false; scene.add(l); return l; });
 function buildTube(frac) {
   if (tube) { scene.remove(tube); tube.geometry.dispose(); }
-  const segs = Math.max(2, Math.floor(frac * 400));
-  const sub = new THREE.CatmullRomCurve3(curve.getSpacedPoints(400).slice(0, segs + 1));
-  tube = new THREE.Mesh(new THREE.TubeGeometry(sub, segs, 0.42, 12, false), tubeMatUp);
+  if (area) { scene.remove(area); area.geometry.dispose(); }
+  const fi = frac * (N - 1);
+  const shown = pts.slice(0, Math.floor(fi) + 1);
+  const i0 = Math.min(Math.floor(fi), N - 2);
+  const tip = pts[i0].clone().lerp(pts[i0 + 1], fi - Math.floor(fi));
+  if (fi < N - 1) shown.push(tip);
+  const path = new THREE.CurvePath();
+  for (let i = 0; i < shown.length - 1; i++) path.add(new THREE.LineCurve3(shown[i], shown[i + 1]));
+  tube = new THREE.Mesh(new THREE.TubeGeometry(path, Math.max(4, shown.length * 12), 0.13, 8, false), lineMat);
   scene.add(tube);
+  const shape = new THREE.Shape();
+  shape.moveTo(shown[0].x, FLOOR);
+  shown.forEach(q => shape.lineTo(q.x, q.y));
+  shape.lineTo(shown[shown.length - 1].x, FLOOR);
+  area = new THREE.Mesh(new THREE.ShapeGeometry(shape), areaMat);
+  scene.add(area);
+  nodes.forEach((m, i) => m.visible = i <= Math.floor(fi));
+  stems.forEach((l, i) => l.visible = i <= Math.floor(fi));
 }
-// area "wall" under the line for depth
-const wallMat = new THREE.MeshBasicMaterial({ color: 0x40c46e, transparent: true, opacity: 0.12, side: THREE.DoubleSide });
-
 // labels
 function sprite(text, color, size = 150, w = 1024, h = 256) {
   const c = document.createElement('canvas'); c.width = w; c.height = h;
@@ -76,7 +94,7 @@ const counter = sprite('', '#40c46e', 170, 1400, 300); scene.add(counter);
 const LOSS = vals[vals.length-1] < START;
 const finalLbl = sprite('$' + Math.round(START).toLocaleString('en-US') + ' → $' + Math.round(vals[vals.length-1]).toLocaleString('en-US'), LOSS ? '#eb4852' : '#40c46e', 150, 1800, 300); scene.add(finalLbl);
 const title = sprite(TITLE, '#f5f5fa', 90, 2048, 256); scene.add(title);
-const dot = new THREE.Mesh(new THREE.SphereGeometry(0.55, 32, 16), new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x40c46e, emissiveIntensity: 0.9 }));
+const dot = new THREE.Mesh(new THREE.SphereGeometry(0.34, 32, 16), new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x40c46e, emissiveIntensity: 0.9 }));
 scene.add(dot);
 const glow = new THREE.PointLight(0x40c46e, 30, 12); scene.add(glow);
 
@@ -85,7 +103,8 @@ let lastTxt = '';
 window.renderAt = (t) => {
   const u = ease(t / (TT - 1.9));
   buildTube(Math.max(u, 0.003));
-  const p = curve.getPointAt(Math.min(u, 0.999));
+  const fiP = u * (N - 1), iP = Math.min(Math.floor(fiP), N - 2);
+  const p = pts[iP].clone().lerp(pts[iP + 1], Math.min(fiP - iP, 1));
   const fi = u * (N - 1), i0 = Math.floor(fi), i1 = Math.min(N - 1, i0 + 1);
   const v = vals[i0] + (vals[i1] - vals[i0]) * (fi - i0);
   const col = v < START ? '#eb4852' : '#40c46e';

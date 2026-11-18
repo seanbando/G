@@ -115,7 +115,7 @@ def scene_13k(t, t0, t1):
     bar(d, 330, 1450, 60, 200, GREY, "$1,000", "2013")
     bar(d, 750, 1450, h, 200, GRN, f"${val:,.0f}".replace("$13,000", "≈$13,000"), "TODAY")
     if t >= tk:
-        text(d, (W / 2, 540), "≈13x", int(150 * pop(t, tk)), GOLD, stroke=8)
+        text(d, (330, 1150), "≈13x", int(130 * pop(t, tk)), GOLD, stroke=8)
     return im
 
 
