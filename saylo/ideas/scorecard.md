@@ -20,7 +20,7 @@ Competition is weighted highest because a small channel can't outrank 60 Minutes
 | 2 | Whitey Bulger (1995–2011) | FBI stopped hunting him and hunted his girlfriend: daytime TV ads aimed at women | 3 | 5 | 4 | 5 | 4 | 5 | 84 | Next |
 | 3 | Christopher Dorner (2013) | Police shot at the wrong truck (newspaper delivery, two women) | 3 | 5 | 4 | 4 | 5 | 5 | 83 | Queued |
 | 4 | Austin bomber (2018) | 19 days, cracked by a FedEx store camera | 4 | 4 | 4 | 4 | 4 | 3 | 78 | |
-| 5 | Eric Frein (2014) | 48 days, 1,000 officers, inside the search zone | 3 | 4 | 5 | 3 | 4 | 4 | 76 | |
+| 5 | Eric Frein (2014) | 48 days, 1,000 officers, inside the search zone | 3 | 4 | 5 | 3 | 4 | 4 | 76 | **Video 02 — research next** |
 | 6 | Andrew Cunanan (1997) | Signed his real name and thumbprint on a pawn form nobody read | 4 | 3 | 3 | 5 | 3 | 4 | 73 | |
 | 7 | Dan Markel (2014) | The green Prius | 2 | 5 | 3 | 3 | 4 | 5 | 69 | |
 | 8 | Denise Huskins (2015) | The kidnapping police called a hoax | 1 | 5 | 3 | 3 | 4 | 5 | 64 | Too crowded (Netflix, 48 Hours 2026) |
