@@ -18,7 +18,8 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.abspath(os.path.join(HERE, "..", "..", ".."))
 W, H, FPS = 1080, 1920, 30
-AUDIO = os.path.join(ROOT, "audio", "three-kids-FULL-v2.mp3")
+AUDIO = os.path.join(ROOT, "audio", "three-kids-FULL-v3.mp3")
+RES3D = os.environ.get("RES3D")  # folder of 3D results frames (f0000.jpg...), starts at the VO-09 scene
 WORDS = json.load(open(os.path.join(HERE, "words.json")))
 F_BOLD = "/usr/share/fonts/opentype/inter/Inter-ExtraBold.otf"
 F_BLACK = "/usr/share/fonts/opentype/inter/Inter-Black.otf"
@@ -36,6 +37,7 @@ _fonts = {}
 
 
 def font(size, black=False):
+    size = max(1, int(size))
     k = (size, black)
     if k not in _fonts:
         _fonts[k] = ImageFont.truetype(F_BLACK if black else F_BOLD, size)
@@ -519,7 +521,14 @@ def main(out):
                             "-shortest", "-c:v", "libx264", "-crf", "18", "-preset", "medium", "-pix_fmt", "yuv420p",
                             "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], stdin=subprocess.PIPE)
     for i in range(n):
-        enc.stdin.write(shifted(frame_at(i / FPS)).tobytes())
+        t = i / FPS
+        t0 = LINES["VO-09"][0] - 0.1
+        idx = int(round((t - t0) * FPS))
+        f3 = os.path.join(RES3D, f"f{idx:04d}.jpg") if RES3D else None
+        if f3 and t0 <= t < LINES["VO-10"][0] - 0.05 and os.path.exists(f3):
+            enc.stdin.write(Image.open(f3).convert("RGB").resize((W, H)).tobytes())
+        else:
+            enc.stdin.write(shifted(frame_at(t)).tobytes())
     enc.stdin.close()
     enc.wait()
     print(out, n, "frames")

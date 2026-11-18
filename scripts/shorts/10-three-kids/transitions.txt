@@ -1,30 +1,28 @@
-# three friends edit cues
-9.27 zoomthru
-11.67 whip left
-17.0 zoomthru
-23.04 whip right
-26.55 zoomthru
-32.46 whip left
-36.01 zoomthru
-40.26 whip right
-48.11 zoomthru
-51.84 whip left
-8.08 punch
-18.9 shake 0.4
-21.75 punch
-25.99 shake 0.25
-30.94 punch
-42.38 punch
-44.31 punch
-46.44 punch
-50.66 punch
-11.92 push 16.95 1.06
-32.71 push 35.67 1.06
-52.09 push 56.05 1.06
-4.16 punch
-5.4 punch
-20.08 punch
-27.6 punch
-28.63 punch
-41.22 punch
-49.2 punch
+# three friends edit cues (v3 voice)
+6.18 zoomthru
+8.58 whip left
+15.7 zoomthru
+21.73 whip right
+25.24 zoomthru
+31.14 whip left
+34.69 zoomthru
+38.94 zoomthru
+46.78 zoomthru
+50.51 whip left
+4.87 punch
+20.45 punch
+29.63 punch
+49.33 punch
+17.59 shake 0.4
+24.68 shake 0.25
+8.83 push 15.65 1.06
+31.39 push 34.35 1.06
+50.76 push 54.72 1.06
+1.4 punch
+3.2 punch
+12.0 punch
+17.5 punch
+26.5 punch
+27.8 punch
+36.5 punch
+48.5 punch

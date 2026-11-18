@@ -7,6 +7,7 @@ const http = require('http');
 
 const out = process.argv[2];
 const secs = parseFloat(process.argv[3] || '5');
+const query = process.argv[4] || '';
 const FPS = 30;
 fs.mkdirSync(out, { recursive: true });
 
@@ -22,7 +23,7 @@ const server = http.createServer((req, res) => {
   const page = await browser.newPage({ viewport: { width: 1080, height: 1920 } });
   page.on('console', m => console.log('page:', m.text()));
   page.on('pageerror', e => console.log('error:', e.message));
-  await page.goto(`http://127.0.0.1:${port}/stacks.html`);
+  await page.goto(`http://127.0.0.1:${port}/stacks.html?${query}`);
   await page.waitForFunction('window.ready === true', null, { timeout: 30000 });
   const n = Math.round(secs * FPS);
   for (let i = 0; i < n; i++) {

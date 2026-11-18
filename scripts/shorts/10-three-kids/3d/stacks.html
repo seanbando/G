@@ -3,6 +3,9 @@
 <body>
 <script type="module">
 import * as THREE from './three.module.min.js';
+const Q = new URLSearchParams(location.search);
+const P = (k, d) => parseFloat(Q.get(k) ?? d);
+const TT = P('T', 5);
 
 const W = 1080, H = 1920;
 const renderer = new THREE.WebGLRenderer({ antialias: true, preserveDrawingBuffer: true });
@@ -43,9 +46,9 @@ scene.add(new THREE.Points(sg, new THREE.PointsMaterial({ color: 0x7080b0, size:
 
 // coin stacks: Jay $770 (red), Maya $6,374 (yellow), Sam $8,061 (green)
 const data = [
-  { name: 'JAY', amt: 770, color: 0xeb4852, x: -2.7, t0: 0.6 },
-  { name: 'MAYA', amt: 6374, color: 0xfacc40, x: 0, t0: 1.2 },
-  { name: 'SAM', amt: 8061, color: 0x40c46e, x: 2.7, t0: 1.8 },
+  { name: 'JAY', amt: 770, color: 0xeb4852, x: -2.7, t0: P('j', 0.6) },
+  { name: 'MAYA', amt: 6374, color: 0xfacc40, x: 0, t0: P('m', 1.2) },
+  { name: 'SAM', amt: 8061, color: 0x40c46e, x: 2.7, t0: P('s', 1.8) },
 ];
 const COIN_H = 0.22, PER_COIN = 250; // each coin = $250
 const coinGeo = new THREE.CylinderGeometry(1.0, 1.0, COIN_H * 0.92, 48);
@@ -93,13 +96,13 @@ const easeOutBack = x => { x = Math.min(Math.max(x, 0), 1); const c1 = 1.70158, 
 
 window.renderAt = (t) => {
   // camera: sweep around and rise
-  const a = -0.42 + 0.42 * ease(t / 5);
-  const r = 20 - 3 * ease(t / 5);
-  camera.position.set(Math.sin(a) * r, 4 + 3 * ease(t / 5), Math.cos(a) * r);
+  const a = -0.42 + 0.42 * ease(t / TT);
+  const r = 20 - 3 * ease(t / TT);
+  camera.position.set(Math.sin(a) * r, 4 + 3 * ease(t / TT), Math.cos(a) * r);
   camera.lookAt(0.3, 4.4, 0);
 
   stacks.forEach(s => {
-    const dur = 0.9 + s.n * 0.035;
+    const dur = 0.6 + s.n * 0.025;
     s.coins.forEach((m, i) => {
       const ti = s.t0 + (i / s.n) * dur;
       const u = ease((t - ti) / 0.35);
@@ -120,8 +123,8 @@ window.renderAt = (t) => {
     }
   });
   title.position.set(0, 11.2, -2); title.visible = t > 0.2;
-  const tk = easeOutBack((t - 3.9) / 0.45);
-  tag.visible = t > 3.9;
+  const tk = easeOutBack((t - P('tag', 3.9)) / 0.45);
+  tag.visible = t > P('tag', 3.9);
   tag.position.set(0, 9.0, 1.5); tag.scale.set(5.6 * tk, 1.75 * tk, 1);
   renderer.render(scene, camera);
   return renderer.domElement.toDataURL('image/jpeg', 0.92);
