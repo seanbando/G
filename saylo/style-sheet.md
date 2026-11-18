@@ -55,7 +55,7 @@ Mark a split point `[PART 2]` near the middle so each half fits under 10,000 cha
 in conclusion, it is important to note, furthermore, moreover, consequently, in summary, to wrap things up, let's dive in/into, without further ado, it is worth noting, conversely, notably, additionally, subsequently, unlocking the secrets, embark on a journey, game-changer, the ultimate guide, master the art of, in the vast landscape of, in the realm of, a rich tapestry, a testament to, beacon of hope, unleash the power of, elevate, navigating the complex world of, it depends on various factors, on one hand/on the other hand, it remains to be seen, ideally, typically, generally speaking, while it may seem, remember to always, it is crucial to ensure, by following these steps, foster a sense of, it is paramount that, have you ever wondered, in today's fast-paced world, in this digital age, in the modern world, welcome back to the channel, delve, landscape, testament, tapestry, realm, foster, underscore, nuanced, crucial, paramount, unlock, unleash, elevate, optimization, leverage, holistic, synergy, robust, streamline, revolutionize.
 Also avoid: "This isn't just X, it's Y", "carefully orchestrated", "multifaceted", superhero/video game analogies.
 
-**Source captions (every piece of real footage, photo or document):** small text, bottom-right, no box — JetBrains Mono Medium 22px, off-white at ~67% opacity, 70px from the right edge, 60px from the bottom (house style from the editing style pack). Format: *what it is · date · credit (license) · changes made* — e.g. `Lake City Way, 2016 · SounderBruce (CC BY-SA 4.0) · rain added`. On screen for the whole clip. Make one with `python3 saylo/tools/make_source_tag.py "TEXT" out.png`. Don't paint out or blur the original outlet's logo — frame around it if needed.
+**Source watermark (every piece of real footage, photo or document):** the **source's name only**, nothing else — e.g. `WNEP`, `FBI`, `Pa. Supreme Court`. Small text, bottom-right, no box: JetBrains Mono Medium 22px, off-white at ~67% opacity, 70px from the right edge, 60px from the bottom. On screen for the whole clip. Creative Commons images are the one exception: their license requires the author and license, so they read `SounderBruce · CC BY-SA 4.0`. Make one with `python3 saylo/tools/make_source_tag.py "WNEP"`; ready-made ones are in `assets/source-tags/`. Don't paint out or blur the original outlet's logo.
 
 **Clips (copyright):** short, and always as commentary — set it up, play it, break it down. Prefer government/court sources. No news-agency footage with logos, no music baked into clips. Only licensed music.
 
@@ -65,6 +65,14 @@ Also avoid: "This isn't just X, it's Y", "carefully orchestrated", "multifaceted
 - Victims' names: slowest pace, plain delivery, no dramatic emphasis.
 - TTS files: spell out every number, time and date ("twelve fifty-eight", "nineteen ninety-six"); spell out uncommon abbreviations (G-B-I, A-T-and-T, nine-one-one, U-S). Keep each file under 10,000 characters; split at a section break.
 - Each video gets a `voiceover-partN-directed.md` (energy/pace/emotion per section + beat notes) alongside the TTS text. Example: `videos/01-olympic-bomber/`.
+
+**VOICEOVER GATE: flawless or it doesn't ship (creator, Nov 17, 2026; hard rule, learned after video 01 went up with flaws).** The voiceover must play straight through perfectly: no stutters, no repeated or cut-off words, no wrong or missing words, no hesitations or delays mid-sentence, no dead air, no glued sentences with no breath, no line that suddenly rushes or drags, no volume jumps between chunks. Before ANY editing starts:
+1. Generate the voiceover, then transcribe the **final mixed file** with word timestamps (ElevenLabs scribe → `vo-words.json`).
+2. Run `python3 saylo/tools/check_vo.py vo-words.json voiceover-part1.txt voiceover-part2.txt --out vo-gate.md`. It must say **0 problems**. Every flagged line gets regenerated (same voice, seed and settings, with previous/next text) or its gap trimmed; then re-transcribe and re-run. Intentional holds must be written as `[PAUSE]` in the script, or they get flagged.
+3. Run the per-chunk loudness/pace check (`vo-check.md`) and fix outliers.
+4. The creator listens once, start to finish, and approves. Only then does the edit begin. If a flaw is found after editing has started, fix the voiceover first, then re-time the edit (word timings change).
+
+Pauses written in the voice direction (★ beats, the final hold) are added in the edit **after** the gate passes, so the raw voiceover shouldn't contain them.
 
 ## 6. TITLES
 **Rule:** name the case clearly, reveal one surprising fact, leave the explanation for the video.

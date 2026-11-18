@@ -4,12 +4,12 @@ Matches the house style from the editing style pack: JetBrains Mono Medium 22px,
 off-white (232,230,225) at ~67% opacity, no box, 70px from the right edge and
 60px from the bottom. Put it on the track above the clip for the whole clip.
 
-Format: what it is · date · credit (license) · changes you made
-  "Arrest of Eric Frein · Oct 30, 2014 · WNEP"
-  "Lake City Way, 2016 · SounderBruce (CC BY-SA 4.0) · rain added"
+Content: the source name only, e.g. "WNEP" or "FBI". Creative Commons: "Author · CC BY-SA 4.0".
+  "WNEP"
+  "SounderBruce · CC BY-SA 4.0"
 
 Usage:
-  python3 saylo/tools/make_source_tag.py "Arrest of Eric Frein · Oct 30, 2014 · WNEP" [out.png]
+  python3 saylo/tools/make_source_tag.py "WNEP" [out.png]
 """
 import os
 import re

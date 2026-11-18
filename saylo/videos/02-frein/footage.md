@@ -1,19 +1,19 @@
 # 02 — Footage & Clippings Sheet
 
 ## ⭐ MUST-GRAB — priority order (the editor downloads these first)
-| # | What | Why it matters | Link | Caption file |
+| # | What | Why it matters | Link | Watermark |
 |---|---|---|---|---|
-| 1 | **"Slain cop's cuffs used to arrest Frein"** — look for Commissioner Noonan saying it on camera | The title, the thumbnail and the ending in one clip | https://www.youtube.com/watch?v=bwKWz8l2GWE (backups: https://www.youtube.com/watch?v=x5X5GqPqFv8 · https://www.youtube.com/watch?v=KD019Frv5UY) | c11 |
-| 2 | **WNEP: Frein taken into custody** | Real arrest footage for the cold open / The Hangar | https://www.youtube.com/watch?v=8z7RgDAy5sk | c01 |
-| 3 | **Bivens reading the journal pages** (Oct 2014 briefing) | "Got a shot around 11 p.m. and took it" — said on camera by police | https://www.youtube.com/watch?v=a4S_bnXV_dw | c07 |
-| 4 | **Malkowski / Marshals interview** | "I saw the black hat" in his own voice | https://www.youtube.com/watch?v=BnrDHAu5Iro (backup https://www.youtube.com/watch?v=KczYKvrduew) | c02 |
-| 5 | **Birchwood resort / hangar walk-throughs** (ask creator) | Real location for the cold open | https://www.youtube.com/watch?v=9E2ItWUPMjQ · https://www.youtube.com/watch?v=vedO33dFDoU · https://www.youtube.com/watch?v=SYvcVzvxlKI | c13 |
-| 6 | **Schools closed / search scale** | The Search section | https://www.youtube.com/watch?v=piFmhY-64P4 · https://www.youtube.com/watch?v=NXpQDGIBDyQ | c05, c06 |
-| 7 | **Pipe bombs briefing** | What He Left Behind | https://www.youtube.com/watch?v=UZf_J29DKvI | c08 |
-| 8 | **Trial / families leaving court / DA reaction** | The Verdict | https://www.youtube.com/watch?v=OXhCzCdbMRs · https://www.youtube.com/watch?v=4Ona7PTy6wQ · https://www.youtube.com/watch?v=WgaM7pgIqx8 | c09 |
-| 9 | **Execution notice coverage** | The Confession (2020 date + stay) | https://www.youtube.com/watch?v=9VEkR-PSQZc | c12 |
-| 10 | **Pa. Supreme Court opinion (PDF/page)** | Highlight the silence ruling + p. 29 DNA/ballistics/handwriting | https://law.justia.com/cases/pennsylvania/supreme-court/2019/745-cap.html | c10 |
-| 11 | **FBI Ten Most Wanted release + poster** | Wanted poster still | https://www.fbi.gov/philadelphia/press-releases/2014/alleged-shooter-of-two-pennsylvania-state-troopers-added-to-fbis-ten-most-wanted-fugitives-list | c03 |
+| 1 | **"Slain cop's cuffs used to arrest Frein"** — look for Commissioner Noonan saying it on camera | The title, the thumbnail and the ending in one clip | https://www.youtube.com/watch?v=bwKWz8l2GWE (backups: https://www.youtube.com/watch?v=x5X5GqPqFv8 · https://www.youtube.com/watch?v=KD019Frv5UY) | (channel on the clip) |
+| 2 | **WNEP: Frein taken into custody** | Real arrest footage for the cold open / The Hangar | https://www.youtube.com/watch?v=8z7RgDAy5sk | WNEP |
+| 3 | **Bivens reading the journal pages** (Oct 2014 briefing) | "Got a shot around 11 p.m. and took it" — said on camera by police | https://www.youtube.com/watch?v=a4S_bnXV_dw | (channel on the clip) |
+| 4 | **Malkowski / Marshals interview** | "I saw the black hat" in his own voice | https://www.youtube.com/watch?v=BnrDHAu5Iro (backup https://www.youtube.com/watch?v=KczYKvrduew) | Fox News |
+| 5 | **Birchwood resort / hangar walk-throughs** (ask creator) | Real location for the cold open | https://www.youtube.com/watch?v=9E2ItWUPMjQ · https://www.youtube.com/watch?v=vedO33dFDoU · https://www.youtube.com/watch?v=SYvcVzvxlKI | (creator name) |
+| 6 | **Schools closed / search scale** | The Search section | https://www.youtube.com/watch?v=piFmhY-64P4 · https://www.youtube.com/watch?v=NXpQDGIBDyQ | (channel on the clip) |
+| 7 | **Pipe bombs briefing** | What He Left Behind | https://www.youtube.com/watch?v=UZf_J29DKvI | (channel on the clip) |
+| 8 | **Trial / families leaving court / DA reaction** | The Verdict | https://www.youtube.com/watch?v=OXhCzCdbMRs · https://www.youtube.com/watch?v=4Ona7PTy6wQ · https://www.youtube.com/watch?v=WgaM7pgIqx8 | (channel on the clip) |
+| 9 | **Execution notice coverage** | The Confession (2020 date + stay) | https://www.youtube.com/watch?v=9VEkR-PSQZc | (channel on the clip) |
+| 10 | **Pa. Supreme Court opinion (PDF/page)** | Highlight the silence ruling + p. 29 DNA/ballistics/handwriting | https://law.justia.com/cases/pennsylvania/supreme-court/2019/745-cap.html | Pa. Supreme Court |
+| 11 | **FBI Ten Most Wanted release + poster** | Wanted poster still | https://www.fbi.gov/philadelphia/press-releases/2014/alleged-shooter-of-two-pennsylvania-state-troopers-added-to-fbis-ten-most-wanted-fugitives-list | FBI |
 
 ## Free stills (Wikimedia Commons — credit per the license on each page)
 | Use | File page |
@@ -22,14 +22,14 @@
 | PSP cruiser reference (era-close) | https://commons.wikimedia.org/wiki/File:White_PA_State_Police_Taurus.jpg · https://commons.wikimedia.org/wiki/Category:Pennsylvania_State_Police |
 | Canadensis (his hometown) | https://commons.wikimedia.org/wiki/File:Canadensis_Pennsylvania_from_West.jpg |
 | Pocono forest / scale | https://commons.wikimedia.org/wiki/File:Big_Pocono_State_Park_view_south_from_Camelback_Mountain.jpg · https://commons.wikimedia.org/wiki/Category:Tannersville_Cranberry_Bog (bog forest right by Tannersville) |
-Caption format for these: `Pike County Courthouse, Milford, 2011 · [author] (CC BY-SA 3.0)`
+Watermark for these: `[Author] · CC BY-SA 3.0` (the license requires author + license).
 
 ## Downloading
 This cloud session can't download the files: YouTube, Justia, court sites and archive.org are blocked by its network settings, and Wikimedia is rate-limiting it. The editing session or the creator grabs them. For each clip, keep only the 3–6 seconds used and note the in/out times in the "Pick" column below.
 
 How to use: go down the script in order. For each beat, pull 3–6 seconds from the listed source (set up → play → break down in VO), or build the RECREATE scene. I found these through search; I couldn't watch them from here, so **watch each one and note the exact in/out times** in the "Pick" column.
 
-Every real clip/photo/document gets a source caption (house style: small text, bottom-right). Ready-made ones are in `captions/` (c01–c13) — check each date against the actual clip before use; c13 needs the creator's name. Make more with `saylo/tools/make_source_tag.py`.
+Every real clip/photo/document gets a source watermark — **the source's name only** (bottom-right, house style). Ready-made: `saylo/assets/source-tags/source-<outlet>.png`; make others with `saylo/tools/make_source_tag.py "NAME"`.
 
 Rights key: 🟢 government/court (public domain or public record) · 🟡 news station (short commentary use only, crop logos, no music) · 🟠 independent creator (ask permission — usually a quick DM — or don't use) · 🔴 avoid
 

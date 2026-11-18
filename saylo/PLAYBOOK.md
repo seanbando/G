@@ -155,6 +155,7 @@ Plan in runs of 3 related videos so YouTube learns the lane.
 ☐ Write `voiceover-partN-directed.md` (energy/pace/emotion per section + beat notes + pronunciations).
 ☐ Build TTS files (`voiceover-partNa/b-tts.txt`).
 ☐ Test pronunciations, generate the cold open first, review, then generate the rest.
+☐ **Voiceover gate (hard rule):** transcribe the final mixed VO with word timestamps (`vo-words.json`), run `python3 saylo/tools/check_vo.py vo-words.json voiceover-part1.txt voiceover-part2.txt --out vo-gate.md` → must be **0 problems**; fix and re-run; creator listens once start to finish. No editing before this passes.
 
 ---
 

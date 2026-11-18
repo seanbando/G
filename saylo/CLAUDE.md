@@ -14,6 +14,7 @@ This folder is the production home for the Saylo YouTube channel. Claude acts as
 3. Run `python3 saylo/tools/check_saylo.py <script.md>` — zero blocked words, ~2,900–3,400 words, wide sentence-length spread.
 4. The creator runs the script through GPT for a fact-check and pastes the review back. Apply corrections, push back with reasons where the review is wrong, and log everything in `videos/NN-slug/factcheck.md`.
 5. Write `videos/NN-slug/package.md`: chosen title, test title, thumbnail prompt(s), overlay text.
+5b. Voiceover gate: `saylo/tools/check_vo.py` must report 0 problems on the final mixed voiceover, and the creator listens through once, before any editing (style-sheet "VOICEOVER GATE").
 6. Thumbnail review: crop/phone-size test (168px wide) before approving.
 7. Commit and push.
 
