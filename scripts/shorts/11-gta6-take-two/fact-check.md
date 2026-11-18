@@ -13,3 +13,9 @@
 
 Rules kept: no buy/sell advice, no "if you're smart buy", no launch-to-today returns presented as post-launch moves, only the verified GTA 5 launch used.
 Description: "Not financial advice. Past performance doesn't guarantee future results. Prices as of Nov 18, 2026."
+
+## Review fixes (Nov 18)
+- Line 4: about $13,000 ($17 close Sep 17, 2013 -> ~$220 today; StatMuse).
+- Line 5: dropped the unverified "$5,000" S&P figure; now qualitative ("far more than the S&P 500 did over the same years"), TTWO ~13x vs S&P well under that.
+- Line 7: "had already run from about $11 to $18 before GTA 5 launched" (~57% that year before release), not "biggest run".
+- Line 9: "Bank of America's price target is $330, while the lowest analyst target is $170."
