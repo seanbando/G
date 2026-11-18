@@ -132,3 +132,9 @@ The first 5 seconds need a VISUAL hook as strong as the spoken one. Never hold o
 - Each beat illustrates the exact word being said (e.g. "tomorrow" -> calendar NOV 19, "millions" -> crowd floods the screen, "buy the game" -> controller + money, "own" -> building rises + OWN stamp).
 - Add a cut, punch or whoosh on each beat; frame 1 stays the finished slam card.
 - After the hook: no still frame longer than about 1.5 s anywhere in the video.
+
+## RULE: measure every word's timing (creator rule, Nov 18 2026)
+Estimated word times drift by up to ~1 s (the "Millions" visual landed a full second early on the GTA short).
+- After the final voiceover is built, run `tools/stt_words.py <script.md> <track.mp3> <words.json>` (ElevenLabs speech-to-text, word timestamps; small credit cost, reused from cache on reruns).
+- Every visual beat, punch, sound effect and caption is cued from those measured times. Captions snap to the real start of the matching spoken word (`tools/make_captions.py`).
+- tools/word_times.py is only a free fallback for previews.

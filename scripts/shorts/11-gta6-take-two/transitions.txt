@@ -1,28 +1,26 @@
-# GTA short edit cues
-6.21 zoomthru
-8.09 whip left
-10.55 zoomthru
-17.89 whip right
-21.85 zoomthru
-26.57 whip left
-33.61 zoomthru
-38.57 whip right
-45.02 zoomthru
-4.24 punch
-14.82 punch
-24.25 punch
-31.53 punch
+# GTA short edit cues (measured word times)
+6.35 zoomthru
+8.19 whip left
+10.59 zoomthru
+17.95 whip right
+21.91 zoomthru
+26.61 whip left
+33.69 zoomthru
+38.63 whip right
+45.17 zoomthru
+14.56 punch
+24.4 punch
+31.36 punch
 34.98 punch
-42.66 punch
-40.47 punch
+42.4 punch
+40.44 punch
+1.35 punch
+2.55 zoomthru
+3.13 whip left
+4.27 punch
+4.79 shake 0.3
+5.12 push 6.3 1.1
+45.42 push 48.98 1.06
 13.5 punch
 30.0 punch
 41.0 punch
-45.27 push 49.07 1.06
-0.97 punch
-1.53 zoomthru
-2.4 whip left
-3.46 punch
-4.21 shake 0.3
-4.9 push 6.2 1.1
-5.55 punch
