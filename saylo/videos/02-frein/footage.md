@@ -2,6 +2,8 @@
 
 How to use: go down the script in order. For each beat, pull 3–6 seconds from the listed source (set up → play → break down in VO), or build the RECREATE scene. I found these through search; I couldn't watch them from here, so **watch each one and note the exact in/out times** in the "Pick" column.
 
+Every real clip/photo/document gets a Saylo source tag (`assets/source-tags/`, or make one with `saylo/tools/make_source_tag.py`).
+
 Rights key: 🟢 government/court (public domain or public record) · 🟡 news station (short commentary use only, crop logos, no music) · 🟠 independent creator (ask permission — usually a quick DM — or don't use) · 🔴 avoid
 
 | Script beat | Source | Link | Rights | Pick (fill in) |
