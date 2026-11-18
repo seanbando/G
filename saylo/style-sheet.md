@@ -24,6 +24,13 @@ The click: **"I know what happened, but I never understood how they caught him."
 - Victims are named and treated with respect. Never sensationalized.
 - Signature ending: the truth is smaller and more ordinary than what people imagined.
 
+**VOICEOVER GATE: flawless or it doesn't ship (creator, Nov 17, 2026; hard rule, learned after video 01 went up with flaws).** The voiceover must play straight through perfectly: no stutters, no repeated or cut-off words, no wrong or missing words, no hesitations or delays mid-sentence, no dead air, no glued sentences with no breath, no line that suddenly rushes or drags, no volume jumps between chunks. Before ANY editing starts:
+1. Generate the voiceover, then transcribe the **final mixed file** with word timestamps (ElevenLabs scribe → `vo-words.json`).
+2. Run `python3 saylo/tools/check_vo.py vo-words.json voiceover-part1.txt voiceover-part2.txt --out vo-gate.md`. It must say **0 problems**. Every flagged line gets regenerated (same voice, seed and settings, with previous/next text) or its gap trimmed; then re-transcribe and re-run. Intentional holds must be written as `[PAUSE]` in the script, or they get flagged.
+3. Run the per-chunk loudness/pace check (`vo-check.md`) and fix outliers.
+4. The creator listens once, start to finish, and approves. Only then does the edit begin. If a flaw is found after editing has started, fix the voiceover first, then re-time the edit (word timings change).
+Pauses written in the voice direction (★ beats, the final hold) are added in the edit **after** the gate passes, so the raw voiceover shouldn't contain them.
+
 ## 4. STRUCTURE (18–22 min, ~2,900–3,400 words at ~160 wpm)
 | Time | Beat |
 |---|---|
@@ -55,9 +62,9 @@ Mark a split point `[PART 2]` near the middle so each half fits under 10,000 cha
 in conclusion, it is important to note, furthermore, moreover, consequently, in summary, to wrap things up, let's dive in/into, without further ado, it is worth noting, conversely, notably, additionally, subsequently, unlocking the secrets, embark on a journey, game-changer, the ultimate guide, master the art of, in the vast landscape of, in the realm of, a rich tapestry, a testament to, beacon of hope, unleash the power of, elevate, navigating the complex world of, it depends on various factors, on one hand/on the other hand, it remains to be seen, ideally, typically, generally speaking, while it may seem, remember to always, it is crucial to ensure, by following these steps, foster a sense of, it is paramount that, have you ever wondered, in today's fast-paced world, in this digital age, in the modern world, welcome back to the channel, delve, landscape, testament, tapestry, realm, foster, underscore, nuanced, crucial, paramount, unlock, unleash, elevate, optimization, leverage, holistic, synergy, robust, streamline, revolutionize.
 Also avoid: "This isn't just X, it's Y", "carefully orchestrated", "multifaceted", superhero/video game analogies.
 
-**Source watermark (every piece of real footage, photo or document):** the **source's name only**, nothing else — e.g. `WNEP`, `FBI`, `Pa. Supreme Court`. Small text, bottom-right, no box: JetBrains Mono Medium 22px, off-white at ~67% opacity, 70px from the right edge, 60px from the bottom. On screen for the whole clip. Creative Commons images are the one exception: their license requires the author and license, so they read `SounderBruce · CC BY-SA 4.0`. Make one with `python3 saylo/tools/make_source_tag.py "WNEP"`; ready-made ones are in `assets/source-tags/`. Don't paint out or blur the original outlet's logo.
+**Source watermark (every piece of real footage, photo or document):** the **source's name only**, nothing else — e.g. `WNEP`, `FBI`, `Pa. Supreme Court`. Small text, bottom-right, no box: JetBrains Mono Medium 22px, off-white at ~67% opacity, 70px from the right edge, 60px from the bottom. On screen for the whole clip. Creative Commons images are the one exception: their license requires the author and license, so they read `SounderBruce · CC BY-SA 4.0`. Make one with `python3 saylo/tools/make_source_tag.py "WNEP"`; ready-made ones are in `assets/source-tags/`.
 
-**Clips (copyright):** short, and always as commentary — set it up, play it, break it down. Prefer government/court sources. No news-agency footage with logos, no music baked into clips. Only licensed music.
+**Clips (copyright):** **Real news footage first, always, whenever it exists:** over stock footage or AI recreations (creator's rule, Nov 14, 2026). Use recreations only where no real footage exists. Keep each clip short (under ~10s) and always as commentary: set it up, play it, break it down. Crop network logos out of the frame where you can, but don't paint over or blur them (removing a broadcaster's mark can cause its own copyright problem); our source watermark credits them. No clips with music baked in. Only licensed music.
 
 ## 5b. VOICEOVER
 - Calm investigator, ~150 wpm baseline (range 140–165). Low-mid pitch, sentences land down. Energy never above 4/5; the darkest lines are the quietest.
@@ -65,14 +72,6 @@ Also avoid: "This isn't just X, it's Y", "carefully orchestrated", "multifaceted
 - Victims' names: slowest pace, plain delivery, no dramatic emphasis.
 - TTS files: spell out every number, time and date ("twelve fifty-eight", "nineteen ninety-six"); spell out uncommon abbreviations (G-B-I, A-T-and-T, nine-one-one, U-S). Keep each file under 10,000 characters; split at a section break.
 - Each video gets a `voiceover-partN-directed.md` (energy/pace/emotion per section + beat notes) alongside the TTS text. Example: `videos/01-olympic-bomber/`.
-
-**VOICEOVER GATE: flawless or it doesn't ship (creator, Nov 17, 2026; hard rule, learned after video 01 went up with flaws).** The voiceover must play straight through perfectly: no stutters, no repeated or cut-off words, no wrong or missing words, no hesitations or delays mid-sentence, no dead air, no glued sentences with no breath, no line that suddenly rushes or drags, no volume jumps between chunks. Before ANY editing starts:
-1. Generate the voiceover, then transcribe the **final mixed file** with word timestamps (ElevenLabs scribe → `vo-words.json`).
-2. Run `python3 saylo/tools/check_vo.py vo-words.json voiceover-part1.txt voiceover-part2.txt --out vo-gate.md`. It must say **0 problems**. Every flagged line gets regenerated (same voice, seed and settings, with previous/next text) or its gap trimmed; then re-transcribe and re-run. Intentional holds must be written as `[PAUSE]` in the script, or they get flagged.
-3. Run the per-chunk loudness/pace check (`vo-check.md`) and fix outliers.
-4. The creator listens once, start to finish, and approves. Only then does the edit begin. If a flaw is found after editing has started, fix the voiceover first, then re-time the edit (word timings change).
-
-Pauses written in the voice direction (★ beats, the final hold) are added in the edit **after** the gate passes, so the raw voiceover shouldn't contain them.
 
 ## 6. TITLES
 **Rule:** name the case clearly, reveal one surprising fact, leave the explanation for the video.
@@ -105,8 +104,53 @@ Never: claims the video can't back up, vague "the mystery of" titles, "Full Docu
 ```
 Text goes on in Canva afterward (AI tools mangle lettering). Approved example: `videos/01-olympic-bomber/`.
 
+**Narrator voice:** **Saylo new** — the creator's own Yaboy clone remixed deeper and steadier (ElevenLabs `MB346AXfvAnxXiEMXWHX`), `eleven_v4`, stability 0.4 / similarity 0.8 / style 0.2. Matches the Boston-bombers reference narrator (~95–100 Hz, steady pitch). Use the same voice on every video. Extra energy in the hook comes from music/SFX and dense visuals, not speed. Keep the original Yaboy for CashleyFinance.
+
 ## 8. VISUAL STYLE
 Case-file look: timestamp cards in a typewriter font (`MAY 31, 2003 · 3:30 AM · MURPHY, NC`), dark maps with the accent color for routes and scenes, documents with a highlighter sweep on the key line, silence at the reveal.
+
+**Editing rules** (measured from Uncovering + fern, see `channel/edit-style-analysis.md`):
+| Rule | Target |
+|---|---|
+| Overall pace | ~13 cuts/min, median shot ~3–3.5s, average ~4.5s. A 20-min video ≈ 270 shots. |
+| Hook (first 60s) | 25–35 cuts — one every ~2s. Fastest part of the video. |
+| Short vs long | ~1/3 of shots under 2s; ~1 in 10 held 10s+ (maps being explained, emotional beats). |
+| Chapter breaks | Fade to black + chapter card. Only at chapters (~8–10 per video). Nowhere else. |
+| Music | Never stops, except 1–2 deliberate silent holds at the biggest emotional beat. |
+| Maps | Dark teal/near-black terrain or street map, route line draws itself in amber, pin icons, timestamp card in the corner, camera flies between pins. |
+| Documents | Slow push-in + amber highlighter sweep on the key line. |
+| People | Name tag (Anton, caps, off-white) the first time anyone appears. Real photos get a slow push-in or parallax. |
+| **All on-screen text** | **Typewriter effect on every piece of text, no exceptions:** timestamp cards, name tags, labels, counters, quotes, chapter cards, map labels, evidence-board text. Letters type on one by one (~25–35 characters/sec, fast enough to finish before the line it supports ends) with a blinking cursor at the end for 2–3 blinks, then the cursor disappears. Each type-on gets **typewriter keystroke SFX** matched to its length, plus a carriage-return "ding" only on chapter cards. Fonts stay as set (typewriter font for cards/labels, Anton for name tags); only the reveal is typed. |
+| Archival clips | Set up → play (short) → break down. Framed or with a lower third, never dropped in raw. |
+| Missing footage | AI/3D recreations (no real faces), maps, documents — never invent a scene the record doesn't support. |
+| Color grade | Dark, desaturated, cool shadows; amber is the only warm accent. |
+
+**Transitions** (same effects as the shorts, tuned calmer for long-form; tool: `saylo/tools/edit_video.py`):
+| Effect | Use it for | Limit |
+|---|---|---|
+| Hard cut | Default for everything | — |
+| `zoomthru` (punch-zoom + blur + flash through the cut) | Big reveals: "His real name was Eric Rudolph", "Eric Robert Rudolph" name reveal, booking photo | 3–5 per video |
+| `whip left/right` | Jumps between places or years: map pin → next pin, 1996 → 1998, back to the parking lot | ~1 per chapter |
+| `flash` | Only the blast cut and the camera-shutter on the booking photo | 2 per video |
+| `shake 0.2–0.3` | Lands with a boom SFX (name reveals, "That second one was for them", cell door) | with booms only |
+| `punch` | A number as it's spoken: $1,000,000, 88 days, 200 agents, 250 lbs, 6 life sentences | max ~1 per 20s |
+| `push` | Photos, documents, maps (100→115% over ~6s) | most stills |
+| `reframe` jump cuts | Hook only (first 60s), for energy | not after 1:00 |
+Never use a transition inside the silent Jewell hold or on archival news clips.
+
+**The Saylo look (locked Nov 15, 2026, after the style test):** the creator's Template Library effects carry the stills: case board / evidence wall (connections), press stack and article zoom (headlines, documents), film window (archival photos), photo timeline (sequences of dated photos), clock badge and territory/date maps (times and places), archive profiles (people). Plain photos with a push-in are only quick 2–3 s cutaways between them. Moving AI recreations (faceless, 5 s, same look as scenes A–J) cover beats with no real footage; real news footage always wins when it exists. Engine: `node .claude/effects/render_effect.mjs` from the Template Library (see `saylo/tools` notes).
+
+**100% rule (creator, Nov 15, 2026): the picture always shows what the narration is saying at that exact moment.** Shots are cut on word-level timestamps (`vo-words.json`), never on sentence or chunk timing. A clip made for one line is never reused under a different line it doesn't match (e.g. the dumpster-raid scene only plays under "go through the trash", never under "the man bolts"). If no matching visual exists for a line, use a typed card or a matching effect, and list the gap for the creator. Every asset the creator made (scenes A–J and later, animated location clips) gets used on the line it was made for.
+
+**Retraced look (creator, Nov 16, 2026: "copy his visuals + transitions"; supersedes the Template Library look where they conflict):**
+- Recreations are **3D mannequin scenes**: clean 3D sets of the real places, dark navy/gray light, everyone a faceless matte white/gray mannequin, **the subject (Rudolph) one glossy amber-orange mannequin** in every scene. Real people = real footage/photos or a white 3D clay bust with an amber rim light. Prompts: `videos/01-olympic-bomber/retraced-style-prompts.md`.
+- Maps = 3D white clay block/terrain models, key place lit amber, route line glows across, time stamp + timeline bar.
+- Chapter cards live inside the scene (street sign, wall lettering). Date stamps big white bold caps top-left. Quotes on a wall with an amber bar. Counters as icons ("6 SHOT" style).
+- Pace: ~25 cuts/min in the first third, ~15 after; median shot 2.6 s; 40+ cuts in the first 60 s.
+- Transitions: hard cuts; motion comes from the camera inside the clip (dolly, orbit, push through a door/window). White flash only on the blast. Fade to black only at the 2 biggest beats. Whips/zoom-throughs dropped.
+- Typewriter rule for text still applies (creator rule).
+
+Every script gets a shot list (`videos/NN-slug/shot-list.md`) before editing: one row per beat with visual, source, motion, transition and music cue.
 
 ## 9. WORKFLOW
 1. Pick and score the topic (scorecard: Competition ×5, Demand ×4, Outlier proof ×4, Originality ×3, Footage ×2, Depth ×2 = /100).
