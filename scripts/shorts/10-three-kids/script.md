@@ -1,6 +1,6 @@
 Same $1,000, Same S&P 500, 3 Different Endings
 
-Same thousand dollars, same S and P five hundred, and one friend ended with ten times as much.
+Same thousand dollars, same S and P five hundred, one friend ended with ten times as much.
 
 YOU: Wait, how is that possible?
 
