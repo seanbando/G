@@ -114,3 +114,14 @@ A metaphor that only appears in the drawings and then shows up in the last line 
 - Introduce the image in the voice-over by line 3 or 4 ("Picture your paycheck as a pizza", "It's like an escalator moving down").
 - Use it at least once in the middle, then flip it at the end.
 - If it can't be set up naturally, drop it and end on the plain payoff.
+
+## 14-point script check (from topicfinder.ai carousel, Nov 2026)
+Already strong: 02 open loops (YOU question + fake-out), 04 progression, 05 contrarian, 08 illustrate (one running image), 09 non-obvious insights, 10 shift a belief, 12 pattern interrupt (slam card, punches), 14 pay off the promise.
+Add to every script:
+- 01 Clear promise: the hook says exactly what they'll get ("one had over 10x as much", not "here's a crazy story").
+- 06 Call out the viewer in line 1 or 2 when it fits ("If you've ever paid the minimum...", "If you're 22 with $1,000...").
+- 07 Name the mechanism: give the lesson a short repeatable name ("the shoebox mistake", "key person risk", "escape velocity").
+- 11 Stack proof: one on-screen proof tag ("Real S&P 500 returns 2006-2025", "Source: Federal Reserve") so viewers trust the numbers.
+- 13 Shared enemy (fair, nerd-proof): fees, the minimum-payment trap, panic selling. Never a named company or person without facts.
+- 14+ Overdeliver: one bonus the viewer didn't expect (the statement warning box, "even coming back late cost Maya $1,700").
+- Roadmap (03) only for list videos ("3 things..."); stories use the cast/setup as the roadmap.
