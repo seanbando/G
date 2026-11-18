@@ -41,3 +41,11 @@ Views climbed to about 1,400 by hour 6 to 7, then flattened: distribution stoppe
 Sources of views: Reels tab 93.1%, Explore 6.8%, Feed 0.1% (almost all strangers scrolling).
 
 **Biggest leak: the first 3 seconds (about 28% gone).** The opening frame was a half-drawn board.
+
+## First paycheck short (Instagram, checked Nov 18 2026)
+2,103 views / 1,593 viewers, avg watch 22 s of 66 s (~33%), skip rate 33.6% (lower = good), likes 37 (2.3%), comments 0, shares 1, saves 2, reposts 2, follows 1.
+91% Reels tab, 7.8% Explore; 99.8% non-followers.
+Audience: 18-24 49.4%, 25-34 33.3% (82.7% in our target), 13-17 9.4%. US 62%, Canada 7.1%, Australia 6.2%, UK 2.5%.
+Retention: drop to ~55% by ~0:06, ~40% by ~0:25, ~20% at the end. Likes spike in the first seconds.
+Read: topic + hook work (best views, target age confirmed). Weak spots: early drop (first 6 s), length (66 s), 0 comments (no question/CTA), low shares.
+Fixes going forward: shorter (40-50 s), faster first answer, end on a one-word question, comment keyword CTA, share line in caption. Non-US viewers: keep US-specific tax claims labeled "in the US".
