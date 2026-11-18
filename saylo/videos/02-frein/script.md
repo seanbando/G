@@ -26,7 +26,9 @@ Eric Frein.
 
 For 48 days, he'd been the most wanted man in Pennsylvania. More than a thousand officers took part in the search at one point or another. There were roadblocks and closed schools, and a whole corner of the state was living under it. And it ends in a field next to an empty hangar, with a man in a black hat on the ground, saying his own name.
 
-But that isn't the part people in Pennsylvania still bring up. The part they remember happened after the marshals handed him over. We'll get there.
+Frein gave the marshal his real name. Then the marshals handed him over to the Pennsylvania State Police. And the troopers put something on him that belonged to Bryon Dickson.
+
+We'll get there.
 
 First, the question underneath all of this. How did one man stay out of reach for seven weeks while one of the biggest searches in the state's history went on around him? Part of the answer is that police believed he'd been preparing for this, as they put it at the time, for months or maybe years.
 
@@ -98,7 +100,7 @@ He belonged to a military reenactment group, the kind of hobby where people put 
 
 [VISUAL: RECREATE — faceless figure in a Cold War–style uniform standing alone in a gray forest]
 
-Bivens also told reporters that Frein had talked about wanting to commit mass murder. They weren't describing a man who'd snapped one night.
+Police also told reporters that Frein had talked about wanting to commit mass murder. They weren't describing a man who'd snapped one night.
 
 Police said Frein had been preparing for months, maybe years. His computer showed research on avoiding police manhunts, on law enforcement technology, and on survival. In his recorded statement after the arrest, he said he'd used Google Earth to look at State Police barracks near his home, and that he chose Blooming Grove because of the woods around it.
 
@@ -110,7 +112,7 @@ Hold onto that recorded statement, by the way. Years later, Pennsylvania's highe
 
 ## The Search
 
-The search that followed was enormous. Over its seven weeks, more than a thousand officers from State Police, the FBI, the U.S. Marshals and departments across the region took part. Barrett Township's own police department had six officers. Its chief said the operation was more than his department could have imagined.
+The search that followed was enormous. Over its seven weeks, more than a thousand officers from State Police, the FBI, the U.S. Marshals and departments across the region took part.
 
 [VISUAL: CLIP — short news footage of roadblocks and officers on a rural road — set up, play, break down]
 
@@ -184,33 +186,15 @@ Police also recovered a file on a storage drive. It was a letter addressed "Mom 
 
 That night, investigators questioned him on video. He called the killing an assassination, and the phrase that came out of that interview was that he'd wanted to "wake people up."
 
----
-
-## The Handoff
-
-Now, the part I told you about at the start.
-
-The U.S. Marshals had made the arrest. But this was a State Police case, and the man they'd caught had killed one of their own. So the Marshals handed Eric Frein over to the Pennsylvania State Police.
-
-And the troopers who took him put Corporal Bryon Dickson's handcuffs on him.
-
-[VISUAL: RECREATE — dusk, a state trooper beside a cruiser, close on wrists behind a back, the handcuffs bright amber, everything else gray]
-
-Then they put him in Dickson's patrol car, and they drove him back to Blooming Grove. Back to the barracks where Dickson was shot.
-
-[VISUAL: RECREATE — night, the cruiser with faint amber glow turning into the barracks lot, same angle as the earlier barracks shot. Music out.]
-
-State Police Commissioner Frank Noonan confirmed it. Pennsylvania's governor at the time, Tom Corbett, called it "very appropriate."
-
-I don't think it needs anything added.
-
-The next day was Halloween. After the arrest, Barrett Township officials told families that trick-or-treating could go ahead after all.
+Back in Barrett Township, the news spread fast. The next day was Halloween, and officials told families that trick-or-treating could go ahead after all.
 
 [VISUAL: RECREATE — a small-town street at dusk, porch lights coming on one by one in amber]
 
 ---
 
 ## The Verdict
+
+Before we go back to that night, here's how this ended in court.
 
 The trial came in April 2017, in Pike County. Alex Douglass testified. On April 19th, the jury convicted Eric Frein on all twelve counts, including first-degree murder of a law enforcement officer and terrorism.
 
@@ -226,38 +210,36 @@ On April 26th, the jury returned a death verdict. They found no mitigating circu
 
 Remember that recorded statement from the night of the arrest?
 
-On appeal, the Pennsylvania Supreme Court ruled that the trial judge should have kept it out. Police had kept questioning Frein after he had repeatedly said he wanted to remain silent.
+The jury heard Frein's confession. Two years later, Pennsylvania's highest court said the jury should never have heard it. Frein had repeatedly told investigators he wanted to stop talking. They kept going.
 
 [VISUAL: ARCHIVE — Pa. Supreme Court opinion, highlighter sweep on the ruling]
 
-But the court still upheld his conviction and his death sentence. The justices found the rest of the evidence so overwhelming that the error couldn't have affected the verdict. That evidence included the Jeep, the casings, the campsite, the pages in the trash bag, and the journal.
+But the rifle, the DNA and the handwritten pages were already enough. The conviction stood, and so did the death sentence.
 
-In January 2020, the U.S. Supreme Court declined to take the case. His lawyers have kept litigating since then, in post-conviction proceedings.
-
-He is on Pennsylvania's death row. Pennsylvania hasn't carried out an execution since 1999.
+In January 2020, the U.S. Supreme Court declined to take the case. That same year, the execution date Pennsylvania had set for him was stayed, and his lawyers have kept litigating since. Pennsylvania hasn't carried out an execution since 1999.
 
 ---
 
-## What It Actually Was
+## The Handoff
 
-Here's what stays with me about this one.
+Now go back to October 30th, 2014. The field, the hangar, the black hat.
 
-Eric Frein put a lot of work into a character. There was the Cold War soldier in the woods, the research on manhunts, the barracks studied on Google Earth, and the letter about a spark lighting a fire in the hearts of men.
+The U.S. Marshals had made the arrest. But this was a State Police case, and the man they'd caught had killed one of their own. So the Marshals handed Eric Frein over to the Pennsylvania State Police.
 
-[VISUAL: RECREATE — the reenactor figure from earlier, now small in a huge gray forest]
+And the troopers who took him put Corporal Bryon Dickson's handcuffs on him.
 
-Then there's his own notebook. "Slept like a human first time in two weeks." "A lot longer than I expected to last."
+[VISUAL: RECREATE — dusk, a state trooper beside a cruiser, close on wrists behind a back, the handcuffs bright amber, everything else gray]
 
-The revolution in that letter never came. What ended it was a team of marshals working through an abandoned property they'd been asked to clear, and a black hat coming out of the trees at dusk. He gave his real name lying in a field. The confession he gave that night turned out to be the one piece of evidence the courts said shouldn't have been used, and it didn't matter, because everything else was enough.
+Then they put him in Dickson's patrol car and drove him back to Blooming Grove. State Police Commissioner Frank Noonan confirmed it. Pennsylvania's governor at the time, Tom Corbett, called it "very appropriate."
 
-What people remember now isn't anything Frein wrote. They remember a pair of handcuffs, and a patrol car pulling back into the parking lot at Blooming Grove.
+Forty-eight days after Corporal Bryon Dickson was killed outside Blooming Grove, his patrol car pulled back into the barracks. Eric Frein was in the back seat, wearing Dickson's handcuffs.
 
-[VISUAL: RECREATE — empty barracks lot at night, the cruiser parked, one pole light. Hold. Silence.]
+[VISUAL: RECREATE — night, the cruiser with faint amber glow turning into the barracks lot, same angle as the earlier barracks shot. Music out. Hold for several seconds of silence.]
 
 ---
 
 ## Outro
 
-So here's my question for you. Do you think Frein was found because of the marshals' hunch, or was he just worn out by then? That line about it lasting "a lot longer than I expected" makes me go back and forth. Tell me what you think in the comments.
+So here's my question for you. The State Police chose to bring him back in Dickson's handcuffs, in Dickson's car. Was that the right call? Tell me what you think in the comments.
 
 If you want another one about a man who vanished into the woods with the whole country looking for him, watch my video on the Olympic Bomber, who stayed hidden for five years. And subscribe if you want more of these. There are plenty more coming.

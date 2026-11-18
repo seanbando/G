@@ -58,3 +58,15 @@ Other claims to verify:
 
 ## Removed during drafting (unverified)
 helicopters / tracking dogs / armored vehicles, "two-lane road", "back roads", "closed for years", father "retired Army"/"Serbian", widow's name
+
+## Round 1b — follow-up review (applied)
+- Opening tease rewritten per review, softened: "the troopers put something on him that belonged to Bryon Dickson" (not "had brought" — implies planning, undocumented)
+- Ending restructured: Verdict + Confession moved before the handoff as a flash-forward; narration ends on the cruiser pulling into Blooming Grove, then silence, then outro
+- Outro question changed (journal doesn't show he wanted to be caught): "Was that the right call?"
+- Cut: six-officer department, Southeast Europe trips, "on death row"
+- Added: 2020 execution date stayed (dated fact)
+- Mass-murder remark attributed to "police" (not specifically Bivens)
+
+## Verify
+- "the rifle, the DNA and the handwritten pages" — DNA came from the review; confirm it's in the Pa. Supreme Court opinion
+- 2020 execution date set and stayed (governor's notice / court stay)
