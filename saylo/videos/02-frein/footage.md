@@ -24,6 +24,21 @@
 | Pocono forest / scale | https://commons.wikimedia.org/wiki/File:Big_Pocono_State_Park_view_south_from_Camelback_Mountain.jpg · https://commons.wikimedia.org/wiki/Category:Tannersville_Cranberry_Bog (bog forest right by Tannersville) |
 Watermark for these: `[Author] · CC BY-SA 3.0` (the license requires author + license).
 
+## Collection status (Nov 18, 2026)
+Collected files: Google Drive → clips folder → **Frein** (https://drive.google.com/drive/folders/1hM8hqq97N2J1rKBEGVl5gBCJn8LeKy5N). Every source is logged in `sources-used.md`.
+
+**Fact-check flag (The Swamp):** the court opinion (p. 4) says the Jeep was "stuck in a retaining pond off Route 402", and WNEP says "retention pond". The script says "a swampy area", attributed to the court. Change it to "a retention pond" (or keep "swamp" only as Frein's own word from his notes) before recording.
+
+**New real-footage leads for recreation-only beats** (station pages with video; not checked from here, grab by hand):
+| Beat | Lead | Link |
+|---|---|---|
+| The Swamp: the Jeep | WNEP: "Man who found Frein's Jeep just happy to help" (Jim Novak, the dog walker) | https://www.wnep.com/article/news/local/pike-county/man-who-found-freins-jeep-just-happy-to-help/523-88c2fb27-6f09-4a4a-9bf5-77684eff6071 |
+| The Barracks: the day after | 6abc: "Pa. State Police identify trooper killed in ambush" (Sept 13, 2014) | https://6abc.com/post/pa-state-police-identify-trooper-killed-in-ambush/307198/ |
+| The Search: the woods | 6abc: "Ambush suspect could lose advantage as leaves fall" | https://6abc.com/post/ambush-suspect-could-lose-advantage-as-leaves-fall/349096/ |
+| The Search: schools | ABC7 NY: "Pocono schools scoured in search for trooper ambush suspect" | https://abc7ny.com/post/schools-searched-after-pa-trooper-ambush-suspect-spotted/360244/ |
+| Halloween: cancelled | 6abc: "Halloween canceled in Pa. town due to Eric Frein manhunt" · KDKA/CBS Pittsburgh: "Halloween Canceled As Police Continue Manhunt" | https://6abc.com/post/halloween-canceled-in-pa-town-due-to-frein-manhunt/345321/ · https://www.cbsnews.com/pittsburgh/news/halloween-canceled-as-police-continue-manhunt |
+| Cold open: backup for #02 | 6abc: "US Marshal describes moment Eric Frein was captured" | https://6abc.com/post/us-marshal-describes-moment-eric-frein-was-captured/373904/ |
+
 ## Downloading
 This cloud session can't download the files: YouTube, Justia, court sites and archive.org are blocked by its network settings, and Wikimedia is rate-limiting it. The editing session or the creator grabs them. For each clip, keep only the 3–6 seconds used and note the in/out times in the "Pick" column below.
 
@@ -50,14 +65,14 @@ Rights key: 🟢 government/court (public domain or public record) · 🟡 news 
 | The Search — balloon (optional) | "Police use surveillance balloon to search for Frein" | https://www.youtube.com/watch?v=MTKR4BnmpXQ | 🟡 | only if we add the balloon line (needs a source) |
 | The Search — cost | "Lawmaker: Millions being spent on effort to catch alleged trooper shooter" | https://www.youtube.com/watch?v=3FHn0C0QPEI | 🟡 | under the $11M line |
 | **What He Left Behind** — bombs | "Pipe bombs found in search for Pa. trooper ambush suspect" | https://www.youtube.com/watch?v=UZf_J29DKvI | 🟡 | briefing line, not the device close-up |
-| What He Left Behind — Oct 8 reading | "Police discovers journal of Pennsylvania cop killer suspect" | https://www.youtube.com/watch?v=a4S_bnXV_dw | 🟡 | **Bivens reading the pages** — exactly the Oct 8 line |
+| What He Left Behind — Oct 8 reading | "Police discovers journal of Pennsylvania cop killer suspect" | https://www.youtube.com/watch?v=a4S_bnXV_dw | 🟡 | ✅ GOT `20`: current headline "Police quote Frein's journal: 'Got a shot . . . took it'" + standfirst; highlight "got a shot around 11 pm and took it" |
 | Oct 8 reading (text source) | Inquirer, Oct 9 2014: "Police recount Frein letter: 'Got a shot, took it'" | https://www.inquirer.com/philly/news/20141009_Police_recount_Frein_letter___Got_a_shot__took_it_.html | 🟡 | headline screenshot, highlighter |
 | **The Hangar** — arrest | WNEP "Video shows Eric Matthew Frein taken into custody" | https://www.youtube.com/watch?v=8z7RgDAy5sk | 🟡 | **key real footage** — 3–5 s |
-| The Hangar — Halloween payoff | NBC "Capture… Saves Halloween" · CBS "What Frein's capture means for Halloween" | https://www.nbcnews.com/news/us-news/capture-accused-cop-killer-eric-frein-saves-halloween-n238021 · https://www.cbsnews.com/news/what-eric-freins-capture-means-for-halloween-in-pennsylvania-town | 🟡 | headline screenshots; see add-in C |
+| The Hangar — Halloween payoff | NBC "Capture… Saves Halloween" · CBS "What Frein's capture means for Halloween" | https://www.nbcnews.com/news/us-news/capture-accused-cop-killer-eric-frein-saves-halloween-n238021 · https://www.cbsnews.com/news/what-eric-freins-capture-means-for-halloween-in-pennsylvania-town | 🟡 | ✅ GOT `13b` CBS (AP) headline + Megliola "Trick-or-treating is on tomorrow night from 6 to 8". ❌ NBC page blocks automated browsers |
 | **The Verdict** | "Eric Frein stands trial for 2014 state trooper shootings" | https://www.youtube.com/watch?v=OXhCzCdbMRs | 🟡 | courthouse exterior, Milford |
 | The Verdict — families | "Tiffany Dickson and Alex Douglass leave Eric Frein hearing" | https://www.youtube.com/watch?v=4Ona7PTy6wQ | 🟡 | wide shot only, no faces held long |
 | The Verdict — DA | "Pike County DA Ray Tonkin responds to… Sentence of Death" | https://www.youtube.com/watch?v=WgaM7pgIqx8 | 🟡 | one line from the DA |
-| **The Confession** — ruling | Pa. Supreme Court opinion, Commonwealth v. Frein, 745 CAP (2019) | https://law.justia.com/cases/pennsylvania/supreme-court/2019/745-cap.html | 🟢 | screenshot + highlighter on the Miranda/silence ruling and the DNA/ballistics/handwriting passage (p. 29) |
+| **The Confession** — ruling | Pa. Supreme Court opinion, Commonwealth v. Frein, 745 CAP (2019) | https://law.justia.com/cases/pennsylvania/supreme-court/2019/745-cap.html | 🟢 | ✅ GOT: `19a` p. 28, highlight "Appellant unambiguously invoked his right to remain silent on multiple occasions… the trial court erred in denying Appellant's motion to suppress"; `19b` p. 29, highlight "Appellant's DNA was on the rifle" + "A handwriting expert testified that the pages bore Appellant's handwriting"; `19c` p. 1 caption. PDF: https://cases.justia.com/pennsylvania/supreme-court/2019-745-cap.pdf |
 | The Confession — execution notice | "Notice of execution signed…" | https://www.youtube.com/watch?v=9VEkR-PSQZc · https://www.youtube.com/watch?v=ETODTSX2Cc8 | 🟡 | under "Pennsylvania set an execution date…" |
 | **The Handoff** — the cuffs | "Slain cop's cuffs used to arrest Frein" | https://www.youtube.com/watch?v=bwKWz8l2GWE | 🟡 | the news line confirming it — then cut to the amber-cuffs diorama |
 | The Handoff — confirmation | "Police: Glad Frein won't hurt anyone else" / capture pressers | https://www.youtube.com/watch?v=x5X5GqPqFv8 · https://www.youtube.com/watch?v=KD019Frv5UY | 🟡 | look for Noonan saying it on camera — **best possible clip for this line** |
