@@ -24,3 +24,5 @@
 2.4 whip left
 3.46 punch
 4.21 shake 0.3
+4.9 push 6.2 1.1
+5.55 punch
