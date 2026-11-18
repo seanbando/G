@@ -1,0 +1,1020 @@
+{
+ "lines": [
+  {
+   "id": "VO-01",
+   "start": 0.0,
+   "end": 9.173,
+   "text": "Three college friends put the same thousand dollars into the S and P five hundred, on the same day, and twenty years later, one had over ten times as much."
+  },
+  {
+   "id": "VO-02",
+   "start": 9.321,
+   "end": 11.576,
+   "text": "Wait, how? It's the same money!"
+  },
+  {
+   "id": "VO-03",
+   "start": 11.725,
+   "end": 16.959,
+   "text": "That's tiny pieces of five hundred big companies, all bought at the start of two thousand six."
+  },
+  {
+   "id": "VO-04",
+   "start": 17.058,
+   "end": 22.992,
+   "text": "Then came the two thousand eight crash, and by year-end, each thousand was worth about seven hundred seventy."
+  },
+  {
+   "id": "VO-05",
+   "start": 23.091,
+   "end": 26.512,
+   "text": "Jay sells at year-end and hides the cash in a shoebox."
+  },
+  {
+   "id": "VO-06",
+   "start": 26.611,
+   "end": 32.415,
+   "text": "Maya sells too, but buys back at the end of two thousand nine, after missing a twenty-six percent rebound."
+  },
+  {
+   "id": "VO-07",
+   "start": 32.514,
+   "end": 34.069,
+   "text": "Sam does nothing at all."
+  },
+  {
+   "id": "VO-08",
+   "start": 34.466,
+   "end": 38.378,
+   "text": "At first, Jay feels smart, because shoebox money can't crash."
+  },
+  {
+   "id": "VO-09",
+   "start": 38.716,
+   "end": 46.464,
+   "text": "By the end of twenty twenty-five, Jay has seven hundred seventy, Maya about sixty-four hundred, and Sam about eight thousand."
+  },
+  {
+   "id": "VO-10",
+   "start": 46.563,
+   "end": 50.113,
+   "text": "Same money, same day, and the friend who did nothing won."
+  },
+  {
+   "id": "VO-11",
+   "start": 50.45,
+   "end": 54.311,
+   "text": "So if your money crashed, would you sell, wait or hold?"
+  }
+ ],
+ "words": [
+  {
+   "text": "Three",
+   "start": 0.0,
+   "end": 0.362,
+   "line": "VO-01"
+  },
+  {
+   "text": "college",
+   "start": 0.362,
+   "end": 0.845,
+   "line": "VO-01"
+  },
+  {
+   "text": "friends",
+   "start": 0.845,
+   "end": 1.327,
+   "line": "VO-01"
+  },
+  {
+   "text": "put",
+   "start": 1.327,
+   "end": 1.569,
+   "line": "VO-01"
+  },
+  {
+   "text": "the",
+   "start": 1.569,
+   "end": 1.81,
+   "line": "VO-01"
+  },
+  {
+   "text": "same",
+   "start": 1.81,
+   "end": 2.112,
+   "line": "VO-01"
+  },
+  {
+   "text": "thousand",
+   "start": 2.112,
+   "end": 2.655,
+   "line": "VO-01"
+  },
+  {
+   "text": "dollars",
+   "start": 2.655,
+   "end": 3.139,
+   "line": "VO-01"
+  },
+  {
+   "text": "into",
+   "start": 3.139,
+   "end": 3.44,
+   "line": "VO-01"
+  },
+  {
+   "text": "the",
+   "start": 3.44,
+   "end": 3.681,
+   "line": "VO-01"
+  },
+  {
+   "text": "S",
+   "start": 3.681,
+   "end": 3.802,
+   "line": "VO-01"
+  },
+  {
+   "text": "and",
+   "start": 3.802,
+   "end": 4.043,
+   "line": "VO-01"
+  },
+  {
+   "text": "P",
+   "start": 4.043,
+   "end": 4.164,
+   "line": "VO-01"
+  },
+  {
+   "text": "five",
+   "start": 4.164,
+   "end": 4.466,
+   "line": "VO-01"
+  },
+  {
+   "text": "hundred,",
+   "start": 4.466,
+   "end": 4.949,
+   "line": "VO-01"
+  },
+  {
+   "text": "on",
+   "start": 4.949,
+   "end": 5.129,
+   "line": "VO-01"
+  },
+  {
+   "text": "the",
+   "start": 5.129,
+   "end": 5.371,
+   "line": "VO-01"
+  },
+  {
+   "text": "same",
+   "start": 5.371,
+   "end": 5.673,
+   "line": "VO-01"
+  },
+  {
+   "text": "day,",
+   "start": 5.673,
+   "end": 5.914,
+   "line": "VO-01"
+  },
+  {
+   "text": "and",
+   "start": 5.914,
+   "end": 6.155,
+   "line": "VO-01"
+  },
+  {
+   "text": "twenty",
+   "start": 6.155,
+   "end": 6.578,
+   "line": "VO-01"
+  },
+  {
+   "text": "years",
+   "start": 6.578,
+   "end": 6.94,
+   "line": "VO-01"
+  },
+  {
+   "text": "later,",
+   "start": 6.94,
+   "end": 7.302,
+   "line": "VO-01"
+  },
+  {
+   "text": "one",
+   "start": 7.302,
+   "end": 7.544,
+   "line": "VO-01"
+  },
+  {
+   "text": "had",
+   "start": 7.544,
+   "end": 7.785,
+   "line": "VO-01"
+  },
+  {
+   "text": "over",
+   "start": 7.785,
+   "end": 8.086,
+   "line": "VO-01"
+  },
+  {
+   "text": "ten",
+   "start": 8.086,
+   "end": 8.328,
+   "line": "VO-01"
+  },
+  {
+   "text": "times",
+   "start": 8.328,
+   "end": 8.69,
+   "line": "VO-01"
+  },
+  {
+   "text": "as",
+   "start": 8.69,
+   "end": 8.871,
+   "line": "VO-01"
+  },
+  {
+   "text": "much.",
+   "start": 8.871,
+   "end": 9.173,
+   "line": "VO-01"
+  },
+  {
+   "text": "Wait,",
+   "start": 9.321,
+   "end": 9.724,
+   "line": "VO-02"
+  },
+  {
+   "text": "how?",
+   "start": 9.724,
+   "end": 10.046,
+   "line": "VO-02"
+  },
+  {
+   "text": "It's",
+   "start": 10.046,
+   "end": 10.369,
+   "line": "VO-02"
+  },
+  {
+   "text": "the",
+   "start": 10.369,
+   "end": 10.69,
+   "line": "VO-02"
+  },
+  {
+   "text": "same",
+   "start": 10.69,
+   "end": 11.093,
+   "line": "VO-02"
+  },
+  {
+   "text": "money!",
+   "start": 11.093,
+   "end": 11.576,
+   "line": "VO-02"
+  },
+  {
+   "text": "That's",
+   "start": 11.725,
+   "end": 12.066,
+   "line": "VO-03"
+  },
+  {
+   "text": "tiny",
+   "start": 12.066,
+   "end": 12.351,
+   "line": "VO-03"
+  },
+  {
+   "text": "pieces",
+   "start": 12.351,
+   "end": 12.748,
+   "line": "VO-03"
+  },
+  {
+   "text": "of",
+   "start": 12.748,
+   "end": 12.919,
+   "line": "VO-03"
+  },
+  {
+   "text": "five",
+   "start": 12.919,
+   "end": 13.204,
+   "line": "VO-03"
+  },
+  {
+   "text": "hundred",
+   "start": 13.204,
+   "end": 13.659,
+   "line": "VO-03"
+  },
+  {
+   "text": "big",
+   "start": 13.659,
+   "end": 13.887,
+   "line": "VO-03"
+  },
+  {
+   "text": "companies,",
+   "start": 13.887,
+   "end": 14.456,
+   "line": "VO-03"
+  },
+  {
+   "text": "all",
+   "start": 14.456,
+   "end": 14.684,
+   "line": "VO-03"
+  },
+  {
+   "text": "bought",
+   "start": 14.684,
+   "end": 15.082,
+   "line": "VO-03"
+  },
+  {
+   "text": "at",
+   "start": 15.082,
+   "end": 15.252,
+   "line": "VO-03"
+  },
+  {
+   "text": "the",
+   "start": 15.252,
+   "end": 15.479,
+   "line": "VO-03"
+  },
+  {
+   "text": "start",
+   "start": 15.479,
+   "end": 15.822,
+   "line": "VO-03"
+  },
+  {
+   "text": "of",
+   "start": 15.822,
+   "end": 15.992,
+   "line": "VO-03"
+  },
+  {
+   "text": "two",
+   "start": 15.992,
+   "end": 16.219,
+   "line": "VO-03"
+  },
+  {
+   "text": "thousand",
+   "start": 16.219,
+   "end": 16.731,
+   "line": "VO-03"
+  },
+  {
+   "text": "six.",
+   "start": 16.731,
+   "end": 16.959,
+   "line": "VO-03"
+  },
+  {
+   "text": "Then",
+   "start": 17.058,
+   "end": 17.338,
+   "line": "VO-04"
+  },
+  {
+   "text": "came",
+   "start": 17.338,
+   "end": 17.618,
+   "line": "VO-04"
+  },
+  {
+   "text": "the",
+   "start": 17.618,
+   "end": 17.842,
+   "line": "VO-04"
+  },
+  {
+   "text": "two",
+   "start": 17.842,
+   "end": 18.066,
+   "line": "VO-04"
+  },
+  {
+   "text": "thousand",
+   "start": 18.066,
+   "end": 18.569,
+   "line": "VO-04"
+  },
+  {
+   "text": "eight",
+   "start": 18.569,
+   "end": 18.905,
+   "line": "VO-04"
+  },
+  {
+   "text": "crash,",
+   "start": 18.905,
+   "end": 19.242,
+   "line": "VO-04"
+  },
+  {
+   "text": "and",
+   "start": 19.242,
+   "end": 19.465,
+   "line": "VO-04"
+  },
+  {
+   "text": "by",
+   "start": 19.465,
+   "end": 19.634,
+   "line": "VO-04"
+  },
+  {
+   "text": "year-end,",
+   "start": 19.634,
+   "end": 20.081,
+   "line": "VO-04"
+  },
+  {
+   "text": "each",
+   "start": 20.081,
+   "end": 20.361,
+   "line": "VO-04"
+  },
+  {
+   "text": "thousand",
+   "start": 20.361,
+   "end": 20.865,
+   "line": "VO-04"
+  },
+  {
+   "text": "was",
+   "start": 20.865,
+   "end": 21.089,
+   "line": "VO-04"
+  },
+  {
+   "text": "worth",
+   "start": 21.089,
+   "end": 21.425,
+   "line": "VO-04"
+  },
+  {
+   "text": "about",
+   "start": 21.425,
+   "end": 21.76,
+   "line": "VO-04"
+  },
+  {
+   "text": "seven",
+   "start": 21.76,
+   "end": 22.097,
+   "line": "VO-04"
+  },
+  {
+   "text": "hundred",
+   "start": 22.097,
+   "end": 22.544,
+   "line": "VO-04"
+  },
+  {
+   "text": "seventy.",
+   "start": 22.544,
+   "end": 22.992,
+   "line": "VO-04"
+  },
+  {
+   "text": "Jay",
+   "start": 23.091,
+   "end": 23.349,
+   "line": "VO-05"
+  },
+  {
+   "text": "sells",
+   "start": 23.349,
+   "end": 23.736,
+   "line": "VO-05"
+  },
+  {
+   "text": "at",
+   "start": 23.736,
+   "end": 23.931,
+   "line": "VO-05"
+  },
+  {
+   "text": "year-end",
+   "start": 23.931,
+   "end": 24.446,
+   "line": "VO-05"
+  },
+  {
+   "text": "and",
+   "start": 24.446,
+   "end": 24.704,
+   "line": "VO-05"
+  },
+  {
+   "text": "hides",
+   "start": 24.704,
+   "end": 25.092,
+   "line": "VO-05"
+  },
+  {
+   "text": "the",
+   "start": 25.092,
+   "end": 25.35,
+   "line": "VO-05"
+  },
+  {
+   "text": "cash",
+   "start": 25.35,
+   "end": 25.673,
+   "line": "VO-05"
+  },
+  {
+   "text": "in",
+   "start": 25.673,
+   "end": 25.866,
+   "line": "VO-05"
+  },
+  {
+   "text": "a",
+   "start": 25.866,
+   "end": 25.995,
+   "line": "VO-05"
+  },
+  {
+   "text": "shoebox.",
+   "start": 25.995,
+   "end": 26.512,
+   "line": "VO-05"
+  },
+  {
+   "text": "Maya",
+   "start": 26.611,
+   "end": 26.893,
+   "line": "VO-06"
+  },
+  {
+   "text": "sells",
+   "start": 26.893,
+   "end": 27.231,
+   "line": "VO-06"
+  },
+  {
+   "text": "too,",
+   "start": 27.231,
+   "end": 27.456,
+   "line": "VO-06"
+  },
+  {
+   "text": "but",
+   "start": 27.456,
+   "end": 27.681,
+   "line": "VO-06"
+  },
+  {
+   "text": "buys",
+   "start": 27.681,
+   "end": 27.963,
+   "line": "VO-06"
+  },
+  {
+   "text": "back",
+   "start": 27.963,
+   "end": 28.245,
+   "line": "VO-06"
+  },
+  {
+   "text": "at",
+   "start": 28.245,
+   "end": 28.414,
+   "line": "VO-06"
+  },
+  {
+   "text": "the",
+   "start": 28.414,
+   "end": 28.639,
+   "line": "VO-06"
+  },
+  {
+   "text": "end",
+   "start": 28.639,
+   "end": 28.865,
+   "line": "VO-06"
+  },
+  {
+   "text": "of",
+   "start": 28.865,
+   "end": 29.034,
+   "line": "VO-06"
+  },
+  {
+   "text": "two",
+   "start": 29.034,
+   "end": 29.259,
+   "line": "VO-06"
+  },
+  {
+   "text": "thousand",
+   "start": 29.259,
+   "end": 29.766,
+   "line": "VO-06"
+  },
+  {
+   "text": "nine,",
+   "start": 29.766,
+   "end": 30.048,
+   "line": "VO-06"
+  },
+  {
+   "text": "after",
+   "start": 30.048,
+   "end": 30.386,
+   "line": "VO-06"
+  },
+  {
+   "text": "missing",
+   "start": 30.386,
+   "end": 30.838,
+   "line": "VO-06"
+  },
+  {
+   "text": "a",
+   "start": 30.838,
+   "end": 30.95,
+   "line": "VO-06"
+  },
+  {
+   "text": "twenty-six",
+   "start": 30.95,
+   "end": 31.513,
+   "line": "VO-06"
+  },
+  {
+   "text": "percent",
+   "start": 31.513,
+   "end": 31.964,
+   "line": "VO-06"
+  },
+  {
+   "text": "rebound.",
+   "start": 31.964,
+   "end": 32.415,
+   "line": "VO-06"
+  },
+  {
+   "text": "Sam",
+   "start": 32.514,
+   "end": 32.774,
+   "line": "VO-07"
+  },
+  {
+   "text": "does",
+   "start": 32.774,
+   "end": 33.097,
+   "line": "VO-07"
+  },
+  {
+   "text": "nothing",
+   "start": 33.097,
+   "end": 33.616,
+   "line": "VO-07"
+  },
+  {
+   "text": "at",
+   "start": 33.616,
+   "end": 33.809,
+   "line": "VO-07"
+  },
+  {
+   "text": "all.",
+   "start": 33.809,
+   "end": 34.069,
+   "line": "VO-07"
+  },
+  {
+   "text": "At",
+   "start": 34.466,
+   "end": 34.668,
+   "line": "VO-08"
+  },
+  {
+   "text": "first,",
+   "start": 34.668,
+   "end": 35.073,
+   "line": "VO-08"
+  },
+  {
+   "text": "Jay",
+   "start": 35.073,
+   "end": 35.343,
+   "line": "VO-08"
+  },
+  {
+   "text": "feels",
+   "start": 35.343,
+   "end": 35.748,
+   "line": "VO-08"
+  },
+  {
+   "text": "smart,",
+   "start": 35.748,
+   "end": 36.152,
+   "line": "VO-08"
+  },
+  {
+   "text": "because",
+   "start": 36.152,
+   "end": 36.692,
+   "line": "VO-08"
+  },
+  {
+   "text": "shoebox",
+   "start": 36.692,
+   "end": 37.232,
+   "line": "VO-08"
+  },
+  {
+   "text": "money",
+   "start": 37.232,
+   "end": 37.636,
+   "line": "VO-08"
+  },
+  {
+   "text": "can't",
+   "start": 37.636,
+   "end": 37.974,
+   "line": "VO-08"
+  },
+  {
+   "text": "crash.",
+   "start": 37.974,
+   "end": 38.378,
+   "line": "VO-08"
+  },
+  {
+   "text": "By",
+   "start": 38.716,
+   "end": 38.909,
+   "line": "VO-09"
+  },
+  {
+   "text": "the",
+   "start": 38.909,
+   "end": 39.168,
+   "line": "VO-09"
+  },
+  {
+   "text": "end",
+   "start": 39.168,
+   "end": 39.426,
+   "line": "VO-09"
+  },
+  {
+   "text": "of",
+   "start": 39.426,
+   "end": 39.619,
+   "line": "VO-09"
+  },
+  {
+   "text": "twenty",
+   "start": 39.619,
+   "end": 40.072,
+   "line": "VO-09"
+  },
+  {
+   "text": "twenty-five,",
+   "start": 40.072,
+   "end": 40.782,
+   "line": "VO-09"
+  },
+  {
+   "text": "Jay",
+   "start": 40.782,
+   "end": 41.04,
+   "line": "VO-09"
+  },
+  {
+   "text": "has",
+   "start": 41.04,
+   "end": 41.299,
+   "line": "VO-09"
+  },
+  {
+   "text": "seven",
+   "start": 41.299,
+   "end": 41.685,
+   "line": "VO-09"
+  },
+  {
+   "text": "hundred",
+   "start": 41.685,
+   "end": 42.202,
+   "line": "VO-09"
+  },
+  {
+   "text": "seventy,",
+   "start": 42.202,
+   "end": 42.719,
+   "line": "VO-09"
+  },
+  {
+   "text": "Maya",
+   "start": 42.719,
+   "end": 43.041,
+   "line": "VO-09"
+  },
+  {
+   "text": "about",
+   "start": 43.041,
+   "end": 43.429,
+   "line": "VO-09"
+  },
+  {
+   "text": "sixty-four",
+   "start": 43.429,
+   "end": 44.075,
+   "line": "VO-09"
+  },
+  {
+   "text": "hundred,",
+   "start": 44.075,
+   "end": 44.591,
+   "line": "VO-09"
+  },
+  {
+   "text": "and",
+   "start": 44.591,
+   "end": 44.85,
+   "line": "VO-09"
+  },
+  {
+   "text": "Sam",
+   "start": 44.85,
+   "end": 45.108,
+   "line": "VO-09"
+  },
+  {
+   "text": "about",
+   "start": 45.108,
+   "end": 45.495,
+   "line": "VO-09"
+  },
+  {
+   "text": "eight",
+   "start": 45.495,
+   "end": 45.882,
+   "line": "VO-09"
+  },
+  {
+   "text": "thousand.",
+   "start": 45.882,
+   "end": 46.464,
+   "line": "VO-09"
+  },
+  {
+   "text": "Same",
+   "start": 46.563,
+   "end": 46.885,
+   "line": "VO-10"
+  },
+  {
+   "text": "money,",
+   "start": 46.885,
+   "end": 47.273,
+   "line": "VO-10"
+  },
+  {
+   "text": "same",
+   "start": 47.273,
+   "end": 47.596,
+   "line": "VO-10"
+  },
+  {
+   "text": "day,",
+   "start": 47.596,
+   "end": 47.853,
+   "line": "VO-10"
+  },
+  {
+   "text": "and",
+   "start": 47.853,
+   "end": 48.111,
+   "line": "VO-10"
+  },
+  {
+   "text": "the",
+   "start": 48.111,
+   "end": 48.37,
+   "line": "VO-10"
+  },
+  {
+   "text": "friend",
+   "start": 48.37,
+   "end": 48.822,
+   "line": "VO-10"
+  },
+  {
+   "text": "who",
+   "start": 48.822,
+   "end": 49.079,
+   "line": "VO-10"
+  },
+  {
+   "text": "did",
+   "start": 49.079,
+   "end": 49.338,
+   "line": "VO-10"
+  },
+  {
+   "text": "nothing",
+   "start": 49.338,
+   "end": 49.854,
+   "line": "VO-10"
+  },
+  {
+   "text": "won.",
+   "start": 49.854,
+   "end": 50.113,
+   "line": "VO-10"
+  },
+  {
+   "text": "So",
+   "start": 50.45,
+   "end": 50.669,
+   "line": "VO-11"
+  },
+  {
+   "text": "if",
+   "start": 50.669,
+   "end": 50.887,
+   "line": "VO-11"
+  },
+  {
+   "text": "your",
+   "start": 50.887,
+   "end": 51.251,
+   "line": "VO-11"
+  },
+  {
+   "text": "money",
+   "start": 51.251,
+   "end": 51.688,
+   "line": "VO-11"
+  },
+  {
+   "text": "crashed,",
+   "start": 51.688,
+   "end": 52.272,
+   "line": "VO-11"
+  },
+  {
+   "text": "would",
+   "start": 52.272,
+   "end": 52.708,
+   "line": "VO-11"
+  },
+  {
+   "text": "you",
+   "start": 52.708,
+   "end": 53.0,
+   "line": "VO-11"
+  },
+  {
+   "text": "sell,",
+   "start": 53.0,
+   "end": 53.364,
+   "line": "VO-11"
+  },
+  {
+   "text": "wait",
+   "start": 53.364,
+   "end": 53.728,
+   "line": "VO-11"
+  },
+  {
+   "text": "or",
+   "start": 53.728,
+   "end": 53.947,
+   "line": "VO-11"
+  },
+  {
+   "text": "hold?",
+   "start": 53.947,
+   "end": 54.311,
+   "line": "VO-11"
+  }
+ ]
+}

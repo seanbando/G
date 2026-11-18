@@ -22,7 +22,7 @@ At first, Jay feels smart, because shoebox money can't crash.
 
 By the end of twenty twenty-five, Jay has seven hundred seventy, Maya about sixty-four hundred, and Sam about eight thousand.
 
-Same money, same day, and the friend who did nothing won.
+Same money, same day, and the friend who stayed in won.
 
 [PAUSE: 0.4 seconds]
 
