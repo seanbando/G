@@ -1,28 +1,23 @@
-# three friends edit cues (v3 voice)
-6.18 zoomthru
-8.58 whip left
-15.7 zoomthru
-21.73 whip right
-25.24 zoomthru
-31.14 whip left
-34.69 zoomthru
-38.94 zoomthru
-46.78 zoomthru
-50.51 whip left
-4.87 punch
-20.45 punch
-29.63 punch
-49.33 punch
-17.59 shake 0.4
-24.68 shake 0.25
-8.83 push 15.65 1.06
-31.39 push 34.35 1.06
-50.76 push 54.72 1.06
-1.4 punch
+# three friends v4 edit cues
+5.54 zoomthru
+7.27 zoomthru
+14.73 whip right
+18.32 zoomthru
+23.89 whip left
+27.39 zoomthru
+31.59 zoomthru
+39.57 whip right
+46.77 whip left
+4.33 punch
+17.75 shake 0.25
+22.17 punch
+41.23 punch
+44.69 shake 0.3
+7.42 note 14.68 0.08 0.04 Real S&P 500 total returns, dividends included
+24.14 push 27.05 1.06
+47.02 push 51.32 1.06
+1.5 punch
 3.2 punch
-12.0 punch
-17.5 punch
-26.5 punch
-27.8 punch
-36.5 punch
-48.5 punch
+20.5 punch
+29.0 punch
+30.6 punch

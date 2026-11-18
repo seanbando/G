@@ -70,10 +70,11 @@ for (let i = 0; i < N; i++) {
 }
 const crashI = RET.findIndex(r => r < -30) + 1; // end of crash year
 const crash = sprite('2008 CRASH −37%', '#eb4852', 120, 1400, 256);
-crash.position.set(crashI * XS, pts[crashI].y - 1.6, 0.5); crash.scale.set(5.2, 0.95, 1); scene.add(crash);
+crash.position.set(crashI * XS - 0.6, pts[crashI].y - 1.5, 1.2); crash.scale.set(5.2, 0.95, 1); scene.add(crash);
 
 const counter = sprite('', '#40c46e', 170, 1400, 300); scene.add(counter);
-const finalLbl = sprite('$1,000 → $' + Math.round(vals[vals.length-1]).toLocaleString('en-US'), '#40c46e', 150, 1800, 300); scene.add(finalLbl);
+const LOSS = vals[vals.length-1] < START;
+const finalLbl = sprite('$' + Math.round(START).toLocaleString('en-US') + ' → $' + Math.round(vals[vals.length-1]).toLocaleString('en-US'), LOSS ? '#eb4852' : '#40c46e', 150, 1800, 300); scene.add(finalLbl);
 const title = sprite(TITLE, '#f5f5fa', 90, 2048, 256); scene.add(title);
 const dot = new THREE.Mesh(new THREE.SphereGeometry(0.55, 32, 16), new THREE.MeshStandardMaterial({ color: 0xffffff, emissive: 0x40c46e, emissiveIntensity: 0.9 }));
 scene.add(dot);
@@ -100,18 +101,19 @@ window.renderAt = (t) => {
   const back = ease((t - (TT - 1.6)) / 1.3);
   const chase = new THREE.Vector3(p.x - 9, p.y + 4, 18);
   const look = new THREE.Vector3(p.x - 1, p.y + 1.5, 0);
-  const endPos = new THREE.Vector3(-7, 4, 9);
-  const endLook = new THREE.Vector3(pts[N - 1].x * 0.75, pts[N - 1].y * 0.7, -2);
+  const span = pts[N - 1].x;
+  const endPos = N > 8 ? new THREE.Vector3(-7, 4, 9) : new THREE.Vector3(span / 2 - 2, 3.5, 13);
+  const endLook = N > 8 ? new THREE.Vector3(pts[N - 1].x * 0.75, pts[N - 1].y * 0.7, -2) : new THREE.Vector3(span / 2, 0.8, 0);
   camera.position.copy(chase.lerp(endPos, back));
   camera.lookAt(look.lerp(endLook, back));
-  title.position.set(camera.position.x + 4, camera.position.y + 7.5, camera.position.z - 14); title.scale.set(9, 1.1, 1);
+  { const dd = new THREE.Vector3(); camera.getWorldDirection(dd); title.position.copy(camera.position).add(dd.multiplyScalar(14)).add(camera.up.clone().multiplyScalar(8.3)); title.scale.set(8.5, 1.05, 1); }
   scene.fog.far = 60 + back * 90;
   finalLbl.visible = back > 0.35;
   if (finalLbl.visible) {
     const dir = new THREE.Vector3(); camera.getWorldDirection(dir);
     const up = camera.up.clone();
-    finalLbl.position.copy(camera.position).add(dir.multiplyScalar(14)).add(up.multiplyScalar(6.2));
-    const k = ease((back - 0.35) / 0.3); finalLbl.scale.set(9 * k, 2.2 * k, 1);
+    finalLbl.position.copy(camera.position).add(dir.multiplyScalar(14)).add(up.multiplyScalar(5.6));
+    const k = ease((back - 0.35) / 0.3); finalLbl.scale.set(8 * k, 1.95 * k, 1);
     counter.visible = false;
   } else counter.visible = true;
   renderer.render(scene, camera);

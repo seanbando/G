@@ -1,12 +1,11 @@
 # What viewers read (captions)
-VO-01 Three friends, same $1,000, same day. 20 years later, one had 10x as much.
-VO-02 Wait, how? It's the same money!
-VO-03 They all bought the S&P 500, tiny pieces of 500 big companies, at the start of 2006.
-VO-04 Then came the 2008 crash, and by year-end, each $1,000 was worth about $770.
-VO-05 Jay sells at year-end and hides the cash in a shoebox.
-VO-06 Maya sells too, but buys back at the end of 2009, after missing a 26% rebound.
-VO-07 Sam stays invested and lets his dividends reinvest.
-VO-08 At first, Jay feels smart, because shoebox money can't crash.
-VO-09 By the end of 2025, Jay has $770, Maya about $6,400, and Sam about $8,000.
-VO-10 Same money, same day, and the friend who stayed in won.
-VO-11 So if your money crashed, would you sell, wait or hold?
+VO-01 Same $1,000, same S&P 500, one friend ended with 10x as much.
+VO-02 Wait, how is that possible?
+VO-03 They all bought in at the start of 2006, then the 2008 crash cut each $1,000 to about $770.
+VO-04 Jay sells at year-end and hides the cash in a shoebox.
+VO-05 Maya sells too, then buys back a year later, after missing a 26% rebound.
+VO-06 Sam stays invested and lets his dividends reinvest.
+VO-07 At first, Jay feels smart, because shoebox money can't crash.
+VO-08 By the end of 2025, Jay has $770, Maya about $6,400, and Sam about $8,000.
+VO-09 Selling in a crash is the shoebox mistake, and coming back just 1 year late cost Maya about $1,700.
+VO-10 So if your money crashed tomorrow, would you sell, wait or hold?
