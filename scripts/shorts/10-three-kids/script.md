@@ -1,10 +1,10 @@
 Same $1,000, Same S&P 500, 3 Different Endings
 
-Same thousand dollars, same S and P five hundred, same day, and twenty years later, one friend had ten times more.
+Three friends, same thousand dollars, same day. Twenty years later, one had ten times as much.
 
 YOU: Wait, how? It's the same money!
 
-That's tiny pieces of five hundred big companies, all bought at the start of two thousand six.
+They all bought the S and P five hundred, tiny pieces of five hundred big companies, at the start of two thousand six.
 
 Then came the two thousand eight crash, and by year-end, each thousand was worth about seven hundred seventy.
 
