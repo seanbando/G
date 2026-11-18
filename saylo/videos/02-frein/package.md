@@ -3,9 +3,16 @@
 **Title:** They Cuffed Him With the Handcuffs of the Trooper He Killed
 **Test against:** Why the Pennsylvania Cop Killer Was So Hard to Catch
 
-> Blocker: the handcuffs detail must be confirmed with a direct source (State Police / press conference) before this package is final.
+> Handcuffs fact confirmed (Noonan). Title and "HIS CUFFS" locked.
 
-## Thumbnail A (main, v2 — creator's direction: a clear arrest)
+## Thumbnail A (main, v3 — after fact-check: the State Police handoff moment)
+Accuracy note: the U.S. Marshals made the arrest; **State Police troopers** put Dickson's cuffs on him after the handoff. Show a state trooper, not marshals.
+```
+3D miniature diorama at dusk, 16:9, camera close and low. A Pennsylvania State Police cruiser parked at the edge of a field beside an abandoned airplane hangar, dark pine woods behind. A state trooper stands beside the open rear door of the cruiser, holding a handcuffed man by the arm; the man's face is turned away and hidden. Close and large in the right-center: the man's wrists behind his back in handcuffs that are bright saturated amber-orange, the only color in the image. Everything else is matte white-gray clay, heavily desaturated, fading to dark gray. Top third of the frame dark and empty for text. Clean render, high contrast, tilt-shift depth of field. No text, no logos, no visible faces, no blood.
+```
+Text: **HIS CUFFS** (Anton, white; "CUFFS" in amber).
+
+## Thumbnail A-v2 (superseded) — marshals cuffing him in the grass
 ```
 3D miniature diorama, 16:9, camera close and low, early morning light. A grassy clearing beside an abandoned airplane hangar at the edge of a dark pine forest. In the right-center, large and clearly readable: a man lying face down in the grass, hands behind his back, while two police officers kneel on either side of him, one snapping handcuffs onto his wrists. The man's face is turned away and hidden. The handcuffs are bright saturated amber-orange, the only color in the image. Everything else is matte white-gray clay, heavily desaturated. Background: the hangar and pine trees fading to dark gray. Top third of the frame dark and empty for text. Clean render, high contrast, tilt-shift depth of field. No text, no logos, no visible faces, no blood.
 ```

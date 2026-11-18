@@ -1,5 +1,35 @@
 # 02 — Fact-check Log
 
+## Round 1 — GPT review (Nov 18, 2026) — applied, script rewritten
+| Issue | Fix |
+|---|---|
+| Why marshals were at the airfield | State Police asked them to clear the abandoned resort; ~2 hours in, Malkowski + two team members approached the hangar. Removed "one question" framing. |
+| Arrest card | 6:07 PM · NEAR TANNERSVILLE (FBI); hat kept black in recreation |
+| "About an hour later, on the drive back" | Cut. Sequence: capture → handoff → Dickson's cuffs → transport in Dickson's assigned cruiser |
+| "The car he'd been walking toward" | Cut. Plant is now "his own assigned cruiser"; "heading toward his patrol car" attributed to early accounts |
+| Douglass arrival/lobby | Arrived with three troopers, gym bag to his vehicle, heard noise, approached Dickson; got himself into lobby; two troopers pulled him inside. Dickson died after officers/EMS tried to save him. Time: "shortly before 11" |
+| Surgeries | Douglass's own account: 16 surgeries by Mar 28, 2015, another scheduled |
+| "Months later" | "Weeks later"; Bivens read pages publicly Oct 8 |
+| Jeep | Sunday Sept 14 (court); "within days"; black rifle case + two spent cartridge casings + license; registered to his parents. Cut 911 detail, face paint, "45 more days" |
+| Planning | "months, maybe years" (police at the time) |
+| The box | 5 sq mi = one stage; Snow Hill Falls one area among others; sighting of a man police believed was Frein. Cut "1,000 in a box", single shrinking perimeter, deadly force line, falling-leaves plan |
+| Halloween | Barrett Twp canceled door-to-door trick-or-treating; allowed after arrest, next night — now a payoff |
+| Campsite | One Sept 29 discovery: clothing, checkbook, ammunition, two explosive devices. Trash bag (3 torn pages describing attack) collected next day. Cut cellphone, second bomb discovery, trip-wire visual |
+| Journal | Longer journal found at hangar after capture. "slept like a human…" = Sept 25; "30 days. A lot longer than I expected to last." = Oct 11 |
+| Map/mileage | Place names only; wrong-airport anecdote cut |
+| Injuries | Both accounts attributed (early account: nobody hurt; marshals: pavement) |
+| Letter | Created Dec 29, 2013; last accessed Oct 6, 2014; dates don't show when lines were written |
+| Verdict | Convicted Apr 19, 2017; Tiffany Dickson testified Apr 20 (penalty phase); parents testified; death verdict Apr 26, no mitigating circumstances; formal sentence Apr 27 |
+| Appeal | Pa. Supreme Court: recorded statements should have been excluded (questioning continued after he repeatedly invoked right to remain silent); conviction upheld as harmless error given overwhelming evidence; counsel issue not decided. SCOTUS denied Jan 13, 2020; post-conviction litigation followed |
+
+## Still to verify (new lines in the rewrite)
+- The marshals' "hunch" quote placement is fine, but confirm they were not acting on a tip (single-source in first research)
+- Barrett Township reopened trick-or-treating the night after the arrest (as provided in review — get the source link)
+- Tiffany Dickson spelling; parents both testified asking for his life
+- Bivens = the person who read the pages on Oct 8 and made the "role in real life" and mass-murder remarks
+- Barracks has its own assigned cruiser for Dickson (Frein rode in Dickson's assigned car)
+
+
 ## Send to GPT before recording (use the fact-check prompt in style-sheet.md)
 Priority claims (title/ending depend on them):
 - Frein cuffed with Cpl. Dickson's handcuffs, driven in Dickson's patrol car to Blooming Grove barracks (Noonan); Corbett "very appropriate"
