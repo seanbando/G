@@ -49,3 +49,9 @@ Returns check (Nov 17): 2013 32.39, 2015 1.38, 2018 -4.38, 2019 31.49 confirmed 
 - VO-07 now "Sam stays invested and lets his dividends reinvest." (dividends are in the $8,061 total return).
 - Voice keeps rounded $770 / about $6,400 / about $8,000; screen shows $770 / $6,374 / $8,061.
 - Caption disclaimer updated (caption-disclaimer.txt).
+
+## v4 script (Nov 18): new rules applied
+- Hook "ten times as much": $8,061 / $770 = 10.5x (Sam vs Jay).
+- "The shoebox mistake" = named mechanism for selling in a crash (our label, not a claim).
+- +1 bonus: "coming back just one year late cost Maya about seventeen hundred": $8,061 - $6,374 = $1,687 (Maya missed 2009's +26.46%).
+- Proof tag on screen: "Real S&P 500 total returns, 2006–2025".

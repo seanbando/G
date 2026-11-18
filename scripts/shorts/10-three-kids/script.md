@@ -1,16 +1,14 @@
 Same $1,000, Same S&P 500, 3 Different Endings
 
-Three friends, same thousand dollars, same day. Twenty years later, one had ten times as much.
+Same thousand dollars, same S and P five hundred, and one friend ended with ten times as much.
 
-YOU: Wait, how? It's the same money!
+YOU: Wait, how is that possible?
 
-They all bought the S and P five hundred, tiny pieces of five hundred big companies, at the start of two thousand six.
-
-Then came the two thousand eight crash, and by year-end, each thousand was worth about seven hundred seventy.
+They all bought in at the start of two thousand six, then the two thousand eight crash cut each thousand to about seven hundred seventy.
 
 Jay sells at year-end and hides the cash in a shoebox.
 
-Maya sells too, but buys back at the end of two thousand nine, after missing a twenty-six percent rebound.
+Maya sells too, then buys back a year later, after missing a twenty-six percent rebound.
 
 Sam stays invested and lets his dividends reinvest.
 
@@ -22,8 +20,8 @@ At first, Jay feels smart, because shoebox money can't crash.
 
 By the end of twenty twenty-five, Jay has seven hundred seventy, Maya about sixty-four hundred, and Sam about eight thousand.
 
-Same money, same day, and the friend who stayed in won.
+Selling in a crash is the shoebox mistake, and coming back just one year late cost Maya about seventeen hundred.
 
 [PAUSE: 0.4 seconds]
 
-So if your money crashed, would you sell, wait or hold?
+So if your money crashed tomorrow, would you sell, wait or hold?
