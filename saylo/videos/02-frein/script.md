@@ -24,9 +24,9 @@ The marshals order him to the ground. He doesn't run, and he doesn't fight. He i
 
 Eric Frein.
 
-For 48 days, he'd been the most wanted man in Pennsylvania. More than a thousand officers took part in the search at one point or another. There were roadblocks and closed schools, and a whole corner of the state was living under it. And it ends in a field next to an empty hangar, with a man in a black hat on the ground, saying his own name.
+For 48 days, he'd been the most wanted man in Pennsylvania. More than a thousand officers took part in the search at one point or another. There were roadblocks and closed schools, and a whole corner of the state was living under it. And it ends in a field next to an empty hangar.
 
-Frein gave the marshal his real name. Then the marshals handed him over to the Pennsylvania State Police. And the troopers put something on him that belonged to Bryon Dickson.
+Then the marshals handed him over to the Pennsylvania State Police. And the troopers put something on him that belonged to Bryon Dickson.
 
 We'll get there.
 
@@ -214,9 +214,9 @@ The jury heard Frein's confession. Two years later, Pennsylvania's highest court
 
 [VISUAL: ARCHIVE — Pa. Supreme Court opinion, highlighter sweep on the ruling]
 
-But the rifle, the DNA and the handwritten pages were already enough. The conviction stood, and so did the death sentence.
+The rifle from the hangar fired the bullets that killed Dickson and wounded Douglass. Frein's DNA was on it. The handwriting on the torn pages was his. The court ruled that the confession hadn't changed the verdict. The conviction stood, and so did the death sentence.
 
-In January 2020, the U.S. Supreme Court declined to take the case. That same year, the execution date Pennsylvania had set for him was stayed, and his lawyers have kept litigating since. Pennsylvania hasn't carried out an execution since 1999.
+In January 2020, the U.S. Supreme Court declined to take the case. Pennsylvania set an execution date for June 22nd, 2020. Ten days before it, a Pike County judge put the execution on hold so Frein could continue challenging his conviction and sentence. Pennsylvania hasn't carried out an execution since 1999.
 
 ---
 
