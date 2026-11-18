@@ -1,6 +1,6 @@
 Same $1,000, Same S&P 500, 3 Different Endings
 
-Three college friends put the same thousand dollars into the S and P five hundred, on the same day, and twenty years later, one had over ten times as much.
+Same thousand dollars, same S and P five hundred, same day, and twenty years later, one friend had ten times more.
 
 YOU: Wait, how? It's the same money!
 
