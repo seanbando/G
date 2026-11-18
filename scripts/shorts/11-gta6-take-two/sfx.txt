@@ -1,5 +1,4 @@
 0.0 audio/elon-80-billion-sfx/boom.mp3 0.5
-4.24 audio/elon-80-billion-sfx/pop.mp3 0.4
 14.82 audio/elon-80-billion-sfx/register.mp3 0.45
 24.25 audio/elon-80-billion-sfx/stamp.mp3 0.4
 31.53 audio/elon-80-billion-sfx/pop.mp3 0.4
@@ -16,3 +15,8 @@
 33.51 audio/first-paycheck-whoosh/zoomwhoosh.mp3 0.4
 38.47 audio/first-paycheck-whoosh/whipswish.mp3 0.4
 44.92 audio/first-paycheck-whoosh/zoomwhoosh.mp3 0.4
+1.0 audio/elon-80-billion-sfx/stamp.mp3 0.35
+1.46 audio/first-paycheck-whoosh/zoomwhoosh.mp3 0.35
+2.43 audio/elon-80-billion-sfx/register.mp3 0.35
+3.49 audio/elon-80-billion-sfx/pop.mp3 0.35
+4.24 audio/elon-80-billion-sfx/impact.mp3 0.4

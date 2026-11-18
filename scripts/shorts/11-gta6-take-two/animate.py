@@ -61,19 +61,58 @@ def bar(d, cx, by, h, w, col, top_text=None, bot_text=None, size=60):
         text(d, (cx, by + 55), bot_text, 46, WHITE)
 
 
+def person_icon(d, cx, cy, s, col):
+    d.ellipse((cx - 22 * s, cy - 70 * s, cx + 22 * s, cy - 26 * s), fill=col)
+    d.rounded_rectangle((cx - 34 * s, cy - 20 * s, cx + 34 * s, cy + 40 * s), int(22 * s), fill=col)
+
+
 def scene_hook(t, t0, t1):
+    """Visual hook: something new on screen on every key word (about every 0.6-0.9 s)."""
     im = base(); d = ImageDraw.Draw(im)
-    label(d, W / 2, 230, "GTA 6 · NOV 19", 84, (240, 240, 245))
-    k1 = pop(t, t0 + 0.6)
-    if k1:
-        controller(d, 280, 900, 0.85 * k1)
-        text(d, (280, 1100), "THE GAME", int(60 * k1), WHITE)
-        text(d, (280, 1180), "millions buy it", int(40 * k1), GREY)
-    k2 = pop(t, wt("VO-01", "own") - 0.1)
-    if k2:
-        building(d, 800, 1260, 0.95 * k2)
-        text(d, (800, 1330), "a few OWN it", int(46 * k2), GRN)
-    text(d, (540, 900), "vs", 80, GOLD)
+    T_TOM, T_MIL, T_BUY, T_BUT = wt("VO-01", "tomorrow"), wt("VO-01", "millions"), wt("VO-01", "buy"), wt("VO-01", "but")
+    T_SOME, T_OWN, T_CO = wt("VO-01", "some"), wt("VO-01", "own"), wt("VO-01", "company")
+    if t < T_MIL - 0.05:  # beat 1: calendar flips to NOV 19, TOMORROW stamp
+        k = pop(t, 0.5)
+        d.rounded_rectangle((290, 560, 790, 1160), 40, fill=(245, 245, 250))
+        d.rectangle((290, 560, 790, 700), fill=RED)
+        text(d, (540, 630), "NOV", int(90 * max(k, 0.3)), WHITE)
+        text(d, (540, 920), "19", int(300 * max(k, 0.3)), (20, 20, 30))
+        k2 = pop(t, T_TOM - 0.05)
+        if k2:
+            label(d, 540, 1260, "GTA 6 · TOMORROW", int(80 * k2), GOLD)
+    elif t < T_BUY - 0.05:  # beat 2: crowd floods the screen
+        n = int(min(1.0, (t - T_MIL + 0.05) / 0.6) * 48)
+        for i in range(n):
+            r, c = divmod(i, 6)
+            person_icon(d, 140 + c * 160, 520 + r * 150, 0.95, (110, 170, 255) if (r + c) % 3 else (90, 140, 230))
+        label(d, W / 2, 330, "MILLIONS", int(110 * pop(t, T_MIL)), (110, 170, 255))
+    elif t < T_BUT - 0.05:  # beat 3: they buy the game, $ flying in
+        k = pop(t, T_BUY - 0.05)
+        controller(d, W / 2, 900, 1.6 * k)
+        for i in range(6):
+            u = ((t - T_BUY) * 1.6 + i / 6) % 1.0
+            x = 160 + i * 150
+            text(d, (x, 1350 - u * 380), "$", 70, GRN, stroke=5)
+        label(d, W / 2, 330, "BUY THE GAME", int(96 * k), (110, 170, 255))
+    elif t < T_OWN - 0.05:  # beat 4: "but some people" - crowd thins to a gold few
+        controller(d, 250, 620, 0.8)
+        text(d, (250, 760), "THE GAME", 48, WHITE)
+        k = pop(t, T_SOME - 0.05)
+        for i in range(3):
+            person_icon(d, 620 + i * 150, 1150, 1.3 * max(k, 0.01), GOLD)
+        if k:
+            label(d, 770, 870, "A FEW PEOPLE", int(64 * k), GOLD)
+    else:  # beat 5: they OWN the company
+        controller(d, 250, 620, 0.8)
+        text(d, (250, 760), "THE GAME", 48, WHITE)
+        rise = ease((t - T_OWN + 0.05) / 0.45)
+        building(d, 780, 1550 + (1 - rise) * 700, 0.9, "THE COMPANY", PURPLE)
+        k = pop(t, T_OWN)
+        if k:
+            text(d, (330, 1150), "OWN", int(180 * k), GRN, stroke=10)
+        k2 = pop(t, T_CO)
+        if k2:
+            text(d, (330, 1320), "it", int(90 * k2), GRN, stroke=6)
     return im
 
 
@@ -212,7 +251,7 @@ def scene_question(t, t0):
 def frame_at(t):
     L = LINES
     if t < L["VO-02"][0] - 0.05:
-        im = scene_hook(max(t, 2.6) if t < 0.6 else t, 0, L["VO-01"][1])
+        im = scene_hook(max(t, 1.2) if t < 0.6 else t, 0, L["VO-01"][1])
     elif t < L["VO-03"][0] - 0.05:
         im = scene_you(t, L["VO-02"][0])
     elif t < L["VO-04"][0] - 0.05:

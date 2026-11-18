@@ -15,9 +15,12 @@
 34.98 punch
 42.66 punch
 40.47 punch
-1.6 punch
-3.4 punch
 13.5 punch
 30.0 punch
 41.0 punch
 45.27 push 49.07 1.06
+0.97 punch
+1.53 zoomthru
+2.4 whip left
+3.46 punch
+4.21 shake 0.3

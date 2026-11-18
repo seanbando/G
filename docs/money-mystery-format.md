@@ -125,3 +125,10 @@ Add to every script:
 - 13 Shared enemy (fair, nerd-proof): fees, the minimum-payment trap, panic selling. Never a named company or person without facts.
 - 14+ Overdeliver: one bonus the viewer didn't expect (the statement warning box, "even coming back late cost Maya $1,700").
 - Roadmap (03) only for list videos ("3 things..."); stories use the cast/setup as the roadmap.
+
+## RULE: visual hook + verbal hook (creator rule, Nov 18 2026)
+The first 5 seconds need a VISUAL hook as strong as the spoken one. Never hold one frame in the hook.
+- Something new appears on screen on every key word of the hook line (about every 0.5-1 s): a new object, a number slam, a scene swap.
+- Each beat illustrates the exact word being said (e.g. "tomorrow" -> calendar NOV 19, "millions" -> crowd floods the screen, "buy the game" -> controller + money, "own" -> building rises + OWN stamp).
+- Add a cut, punch or whoosh on each beat; frame 1 stays the finished slam card.
+- After the hook: no still frame longer than about 1.5 s anywhere in the video.
