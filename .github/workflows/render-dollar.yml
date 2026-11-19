@@ -1,0 +1,75 @@
+# Renders the $1 cartoon short (remotion/ DollarShort) on GitHub's runners: 30 chunks of 69 frames in parallel
+# (software WebGL, no GPU needed), then joins them, muxes the finished sound mix and attaches final.mp4 to a release.
+name: render-dollar
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [claude/sweet-archimedes-50fpqv]
+    paths: [".github/workflows/render-dollar.yml", ".github/render-trigger"]
+
+permissions:
+  contents: write
+
+jobs:
+  chunk:
+    runs-on: ubuntu-latest
+    timeout-minutes: 300
+    strategy:
+      fail-fast: false
+      matrix:
+        part: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]
+    defaults:
+      run:
+        working-directory: remotion
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: remotion/package-lock.json
+      - run: npm ci
+      - run: mkdir -p public out
+      - run: npx remotion browser ensure
+      - name: Render frames
+        run: |
+          A=$(( ${{ matrix.part }} * 69 ))
+          B=$(( A + 68 ))
+          if [ $B -gt 2069 ]; then B=2069; fi
+          echo "frames $A-$B"
+          npx remotion render src/index.ts DollarShort out/part.mp4 --frames=$A-$B --gl=swangle --concurrency=4 \
+            --scale=1.3333333333333333 --codec=h264 --crf=16 --timeout=900000 --log=error
+          mv out/part.mp4 out/part_$(printf %02d ${{ matrix.part }}).mp4
+      - uses: actions/upload-artifact@v4
+        with:
+          name: part-${{ matrix.part }}
+          path: remotion/out/part_*.mp4
+          retention-days: 3
+
+  assemble:
+    needs: chunk
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          path: parts
+          merge-multiple: true
+      - run: sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
+      - name: Join chunks and mux the sound
+        run: |
+          ls parts | sort > /dev/null
+          for f in $(ls parts/part_*.mp4 | sort); do echo "file '$PWD/$f'"; done > list.txt
+          cat list.txt
+          ffmpeg -v error -y -f concat -safe 0 -i list.txt -map 0:v:0 -c copy video.mp4
+          ffmpeg -v error -y -i video.mp4 -i shorts/one-dollar/audio/mix.flac -map 0:v:0 -map 1:a:0 -c:v copy \
+            -c:a aac -b:a 320k -movflags +faststart -t 69 final.mp4
+          ffprobe -v error -show_entries stream=codec_name,width,height,nb_frames:format=duration final.mp4
+      - name: Attach to a release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG=dollar-render-${{ github.run_number }}
+          gh release create "$TAG" final.mp4 --repo "${{ github.repository }}" --target "${{ github.sha }}" \
+            --prerelease --title "\$1 short render ${{ github.run_number }}" --notes "Automated render of the DollarShort composition."
