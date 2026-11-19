@@ -50,7 +50,7 @@ Status: ✅ have it · 🗺 we build (map from OpenStreetMap data) · 🃏 we bu
 | P42 | 7:12 | Cost about $11 million | Number build "$11,000,000" over cruisers-in-field photo | 🃏 + ✅ `33` |
 | P43 | 7:19 | Oct 30, Day 48 | Card "DAY 48" | 🃏 |
 | P44 | 7:22 | Why the marshals were at the airfield: Birchwood-Pocono Airpark | Map: barracks pin → Birchwood-Pocono Airpark pin (place names only) | 🗺 |
-| P45 | 7:35 | Malkowski: "We just had a hunch…" | **Malkowski bite** (`02` has "Once I saw movement…"; the "hunch" quote is typed if no clip says it) | ✅ `02` + 🃏 |
+| P45 | 7:35 | Malkowski: "We just had a hunch…" | **Malkowski bite** (`02` has "Once I saw movement…"; the "hunch" quote is typed if no clip says it) | 🃏 quote card over `p-malkowski` (Fox clip with the "hunch" line is gone, Nov 19); his own voice is used at P02–P04 via `02` |
 | P46 | 7:42 | The black hat, the order, his name | Fast recap of the cold-open 3D shots | 🧊 (reuse) |
 | P47 | 7:47 | Accounts disagree: scraped face | AP perp-walk photo (face visible, cuts) — keep short, no zoom on injuries | ✅ `32` ⚠️ |
 | P48 | 8:04 | Weapons and the notebook in the hangar | 3D hangar interior: rifle case, sleeping area, notebook | 🧊 |
