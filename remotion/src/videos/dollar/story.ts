@@ -82,7 +82,7 @@ export const SHOTS: ShotDef[] = [
   { id: 14, a: 1527, b: 1604, light: "day", crowd: "snowball", tau: id_ }, // the snowball
   { id: 15, a: 1604, b: 1709, light: "day", crowd: "full", tau: id_ }, // the last day = the 48 before it
   { id: 16, a: 1709, b: 1897, light: "day", crowd: "slow", tau: id_ },  // 350 years at 10 %
-  { id: 17, a: 1897, b: 1978, light: "golden", crowd: "full", tau: id_ }, // forty-nine days
+  { id: 17, a: 1897, b: 1978, light: "day", crowd: "full", tau: id_ }, // forty-nine days
   { id: 18, a: 1978, b: TOTAL, light: "golden", crowd: "end", tau: id_ }, // or 350 years: keep the dollar
 ];
 /** crossfades (frames) at place/time changes; a white 4-frame flash after the hook */
@@ -183,7 +183,7 @@ const S4b = (f: number) => dolly([TX + 1.1, TY + 0.5, TZ - 1.05], [TX, TY + 0.03
 const S5a = (f: number) => dolly([OX + 3.6, D0 + 1.6, OZ - 2.4], [OX, D0 + 1.3, OZ], pushK(f, 326, 0.0025), { fov: 40 });
 const S5b = (f: number) => dolly([OX + 1.9, D0 + 1.45, OZ - 1.2], [OX + 0.15, D0 + 1.25, OZ], pushK(f, 422, 0.002, 0.006, 30), { fov: 36, roll: 0.04 });
 // shot 6: the house bursting with money; the owner in front
-const S6a = (f: number) => dolly([7.5, D0 + 2.6, -60.5], [-5.2, D0 + 3.0, -50], pushK(f, 456, 0.0025), { fov: 44 });
+const S6a = (f: number) => dolly([4.8, D0 + 2.4, -62], [-4.6, D0 + 2.9, -50.5], pushK(f, 456, 0.0025), { fov: 46 });
 const S6b = (f: number) => dolly([4.6, D0 + 1.9, -57], [-4.6, D0 + 2.6, -50.5], pushK(f, 534, 0.002, 0.006, 30), { fov: 42, roll: -0.04 });
 // shot 7: low in the street, waist-deep neighbours; up over the street on "The street is full of money"
 const S7a = (f: number) => dolly([2.2, D0 + 3.3, -39.5], [-0.6, D0 + 2.3, -58], pushK(f, 582, 0.0025), { fov: 42 });
@@ -193,7 +193,7 @@ const S8a = (f: number) => zoom([9, D0 + 3.2, -33.2], [0, D0 + 13, -84], 48, pus
 const S8b = (f: number) => zoom([9, D0 + 3.2, -33.2], [0, D0 + 15.5, -84], 42, pushK(f, 750, 0.0015, 0.006, 35));
 // shot 9: the richest person on his (smaller) pile, our hill towering beside him
 const RH = HEAPS.rich, RT: V3 = [RH.x, D0 + RH.H, RH.z];
-const S9a = (f: number) => dolly([RT[0] + 4.2, RT[1] + 1.7, RT[2] + 5.4], [RT[0] - 3.5, RT[1] + 2.6, RT[2] - 3.2], pushK(f, 815, 0.003), { fov: 44, roll: 0.035 });
+const S9a = (f: number) => dolly([RT[0] + 4.6, RT[1] + 2.6, RT[2] + 5.0], [RT[0] - 2.2, RT[1] + 0.6, RT[2] - 2.4], pushK(f, 815, 0.003), { fov: 46, roll: 0.035 });
 // shot 10: aerial, near bank buried, far bank untouched; tilt across to the far bank on "Just over half"
 const S10a = (f: number) => zoom([30, 175, 205], [0, 14, -70], 46, pushK(f, 880, 0.002));
 const S10b = (f: number) => zoom([30, 175, 205], [0, 4, 30], 50, pushK(f, 981, 0.0018));
@@ -204,16 +204,17 @@ const S11b = (f: number) => zoom([60, 260, 330], [0, 12, -20], 46, pushK(f, 1226
 const S13a = (f: number) => dolly([OX + 3.4, D0 + 1.25, OZ - 2.4], [OX - 0.5, D0 + 1.0, OZ + 0.2], pushK(f, 1358, 0.0025), { fov: 40 });
 const S13b = (f: number) => dolly([OX + 1.7, D0 + 1.2, OZ - 1.2], [OX - 0.1, D0 + 1.05, OZ], pushK(f, 1457, 0.002, 0.006, 30), { fov: 36, roll: -0.04 });
 // shot 14: the money snowball rolling down the mountain (side view, following)
-const S14a = (f: number) => { const s = snowball(f); return { pos: [s.x + 34 + 2 * s.r, D0 + 30 + s.r, s.z + 6] as V3, look: [s.x, D0 + 16 + 0.5 * s.r, s.z + 4] as V3, fov: 44 }; };
+const S14a = (f: number) => { const s = snowball(f); return { pos: [s.x + 46 + 3 * s.r, D0 + 62 + 1.5 * s.r, s.z + 14] as V3, look: [s.x, D0 + 36, s.z + 6] as V3, fov: 44 }; };
 // shot 15: the two equal halves, gliding from the near (48 days) to the far (the last day)
-const S15a = (f: number) => zoom([150, 120, 0], [0, 10, -110], 50, pushK(f, 1600, 0.0015));
-const S15b = (f: number) => zoom([150, 120, 0], [0, 10, 110], 50, pushK(f, 1660, 0.0015));
+const S15a = (f: number) => zoom([40, 240, 310], [0, 20, -125], 48, pushK(f, 1600, 0.0015));
+const S15b = (f: number) => zoom([40, 240, 310], [0, 10, 95], 48, pushK(f, 1660, 0.0015));
 // shot 16: 350 years at the table: the tree grows, the beard grows; closer on "three hundred fifty years"
-const S16a = (f: number) => dolly([OX + 6.5, D0 + 2.2, OZ - 4.8], [OX - 0.6, D0 + 1.8, OZ + 0.6], pushK(f, 1705, 0.002), { fov: 42 });
-const S16b = (f: number) => dolly([OX + 2.6, D0 + 1.35, OZ - 1.9], [OX - 0.2, D0 + 1.15, OZ], pushK(f, 1799, 0.002, 0.006, 30), { fov: 38, roll: 0.04 });
+const SIT: V3 = [TX - 1.0, D0, TZ + 0.02];
+const S16a = (f: number) => dolly([TX + 4.6, D0 + 2.3, TZ - 3.6], [TX - 1.4, D0 + 2.0, TZ + 1.0], pushK(f, 1705, 0.002), { fov: 46 });
+const S16b = (f: number) => dolly([SIT[0] + 2.6, D0 + 1.75, SIT[2] - 1.5], [SIT[0], D0 + 1.0, SIT[2]], pushK(f, 1799, 0.002, 0.006, 30), { fov: 40, roll: 0.04 });
 // shot 18: golden, the owner keeps the dollar; crane out over the street
 const S18a = (f: number) => dolly([OX + 2.4, D0 + 1.45, OZ - 1.9], [OX, D0 + 1.3, OZ], pushK(f, 1976, 0.0025), { fov: 38 });
-const S18b = (f: number) => { const a = S18a(2020), u = glide((f - 2020) / 50); return { pos: [a.pos[0] + 5 * u, a.pos[1] + 9 * u, a.pos[2] - 7 * u] as V3, look: [a.look[0], a.look[1] + 1.5 * u, a.look[2] - 3 * u] as V3, fov: 38 + 6 * u, roll: 0 }; };
+const S18b = (f: number) => { const a = S18a(2020), u = glide((f - 2020) / 50); return { pos: [a.pos[0] + 3 * u, a.pos[1] + 6 * u, a.pos[2] - 5 * u] as V3, look: [a.look[0], a.look[1] - 0.3 * u, a.look[2]] as V3, fov: 38 + 4 * u, roll: 0 }; };
 
 const CAMS: Record<number, Key[]> = {
   1: [{ f: 0, s: S1a }, { f: 30, dur: 40, s: S1b }],
@@ -264,6 +265,7 @@ export const keyEnd = (id: number, f: number) => {
 // ---------------- lens: depth of field + foreground framing ----------------
 export type Dof = { f: number; dur?: number; cInf: number; focus?: (f: number) => V3 };
 const ownerEyes = (): V3 => [OX, D0 + 1.62, OZ];
+const sitEyes = (): V3 => [TX - 1.0, D0 + 1.25, TZ];
 const bill = (): V3 => [TX, TY + 0.02, TZ];
 export const DOF: Dof[] = [
   { f: 0, cInf: 15, focus: bill },          // hook CU of the bill: the house far behind is soft
@@ -281,8 +283,8 @@ export const DOF: Dof[] = [
   { f: 1362, cInf: 11, focus: ownerEyes },   // luckily
   { f: 1457, cInf: 13, focus: ownerEyes },   // unluckily
   { f: 1527, cInf: 0 },                      // snowball, halves
-  { f: 1709, cInf: 7, focus: ownerEyes },    // 350 years (the tree must read)
-  { f: 1799, cInf: 12, focus: ownerEyes },
+  { f: 1709, cInf: 6, focus: sitEyes },      // 350 years (the tree must read)
+  { f: 1799, cInf: 12, focus: sitEyes },
   { f: 1897, cInf: 0 },                      // golden aerial
   { f: 1978, cInf: 12, focus: ownerEyes },   // keep the dollar
   { f: 2020, dur: 50, cInf: 0 },             // crane out
@@ -301,7 +303,6 @@ export const focusAt = (id: number, f: number): V3 => {
 /** near framing objects (Kenney kit names; the kit is not in the skill download, so only vegetation kinds draw) */
 export type Fg = { a: number; b: number; kit: string; pos: V3; s?: number; yaw?: number };
 export const FOREGROUND: Fg[] = [
-  { a: 1709, b: 1799, kit: "plant_bushDetailed", pos: [OX + 3.6, D0, OZ - 2.4], s: 1.1, yaw: 0.4 }, // 350 years: a bush in the near corner
 ];
 
 // bridge anchorage (the town's bridge geometry still reads these)

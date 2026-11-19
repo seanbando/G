@@ -63,7 +63,9 @@ const haloTex = () => ctex("sunHalo", 256, 256, (g) => {
 });
 /** per-shot sun override (lighting.md 9.1 notes: front-light the town wide); story.ts ShotDef sunAz/sunEl win if present */
 // shot 12: the park is ringed by trees and houses, so a low sun ahead-right puts the whole lawn in their shadow
-const SUN_SHOT: Record<number, { az?: number; el?: number }> = {};
+// golden wides and the crane look down and away from a low backlight, so every face toward the lens fell into violet shade:
+// light them from behind the camera instead (the summit shot keeps the backlit sun disc)
+const SUN_SHOT: Record<number, { az?: number; el?: number }> = { 18: { az: 140, el: 32 } };
 const SIGN_AT: V3 = [2.25, D0, -30.9]; // the bridge short's sign (kept hidden)
 const smokeTex = () => ctex("smoke", 256, 256, (g) => {
   const p = new Pen(g);

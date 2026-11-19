@@ -618,16 +618,15 @@ export const bodyFront = (p: Pen, o: Outfit, opts: FrontOpts) => {
   p.inkRing(hp, ow, thick);
   hatOn(p, o, hp, H, 300, hc, light, seed, facing, false);
   const brim = !!o.hat && o.hat !== "hair" && o.hat !== "bonnet" && o.hat !== "cap";
-  faceFront(p, 300, hc, W, expr, facing, look, lid, brim, skin, o.moustache, o.build === "stout");
-  if (o.beard && o.beard > 0.02) { // a white beard from under the mouth, down over the jacket as the years pass
-    const L = (0.15 + 1.25 * o.beard) * HH, bw = (0.32 + 0.12 * o.beard) * W, y0 = hc + 0.3 * H.b;
+  if (o.beard && o.beard > 0.02) { // white beard from cheek to cheek, flowing down over the jacket; the face is drawn on top
+    const L = (0.35 + 1.0 * o.beard) * HH, bw = 0.9 * W, y0 = hc + 0.05 * H.b;
     const pts: P2[] = [];
-    for (let i = 0; i <= 16; i++) { const a = Math.PI * (i / 16); pts.push([300 - Math.cos(a) * bw / 2, y0 + Math.sin(a) * 0.12 * HH]); }
-    pts.push([300 + 0.28 * bw, y0 + 0.55 * L], [300 + 0.08 * bw, y0 + L], [300 - 0.06 * bw, y0 + 0.93 * L], [300 - 0.3 * bw, y0 + 0.5 * L]);
-    p.poly(pts, "#f3f1ec", ow * 0.8);
-    p.stroke([[300 - 0.1 * bw, y0 + 0.25 * L], [300, y0 + 0.6 * L]], 1.5 * u, "#c9c6bf");
-    p.stroke([[300 + 0.12 * bw, y0 + 0.22 * L], [300 + 0.06 * bw, y0 + 0.55 * L]], 1.5 * u, "#c9c6bf");
+    for (let i = 0; i <= 18; i++) { const a = Math.PI * (i / 18); pts.push([300 - Math.cos(a) * bw / 2, y0 + Math.sin(a) * 0.55 * H.b]); }
+    pts.push([300 + 0.3 * bw, y0 + 0.6 * L], [300 + 0.08 * bw, y0 + L], [300 - 0.08 * bw, y0 + 0.92 * L], [300 - 0.3 * bw, y0 + 0.55 * L]);
+    p.poly(pts, "#f3f1ec", ow);
+    for (const [dx, k] of [[-0.18, 0.45], [0.02, 0.7], [0.2, 0.5]] as const) p.stroke([[300 + dx * bw, y0 + 0.5 * H.b + 0.15 * L], [300 + dx * 0.8 * bw, y0 + k * L]], 1.6 * u, "#c9c6bf");
   }
+  faceFront(p, 300, hc, W, expr, facing, look, lid, brim, skin, o.moustache, o.build === "stout");
   p.rot = null;
 };
 

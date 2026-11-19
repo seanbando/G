@@ -28,9 +28,9 @@ const drawBill = (g: CanvasRenderingContext2D, x: number, y: number, w: number, 
 export const billTex = () => ctex("bill", 512, 220, (g) => drawBill(g, 256, 110, 504, 212, 0));
 /** a tile of heaped bills: hundreds of overlapping bills at random angles, darker deeper down, wrapping seamlessly */
 export const heapTex = () => ctex("moneyHeap", 1024, 1024, (g, r) => {
-  g.fillStyle = "#4f7d49"; g.fillRect(0, 0, 1024, 1024);
+  g.fillStyle = "#4f806a"; g.fillRect(0, 0, 1024, 1024);
   for (let layer = 0; layer < 3; layer++) for (let i = 0; i < 260; i++) {
-    const x = r() * 1024, y = r() * 1024, w = 150 + r() * 30, rot = r() * Math.PI, tone = 0.62 + 0.12 * layer + 0.12 * r();
+    const x = r() * 1024, y = r() * 1024, w = 150 + r() * 30, rot = r() * Math.PI, tone = 0.7 + 0.1 * layer + 0.12 * r();
     for (const ox of [-1024, 0, 1024]) for (const oy of [-1024, 0, 1024]) {
       if (x + ox < -120 || x + ox > 1144 || y + oy < -120 || y + oy > 1144) continue;
       drawBill(g, x + ox, y + oy, w, w * 0.43, rot, tone);
@@ -67,7 +67,8 @@ export const heapH = (h: HeapDef, k: number, x: number, z: number) => {
   const base = plateau * (1 - h.peak) + peak * h.peak;
   const sc = Math.max(1.2, Math.min(ax, az) * 0.22);
   const lump = (noise(x / sc, z / sc, h.seed) - 0.5) * 0.5 + (noise(x / (sc * 0.37), z / (sc * 0.37), h.seed + 9) - 0.5) * 0.22;
-  return H * base + Math.min(H * 0.12, 0.35 + H * 0.06) * lump * Math.min(1, d * 3) * (base > 0.02 ? 1 : 0);
+  const amp = H > 10 ? H * 0.16 : Math.min(H * 0.12, 0.35 + H * 0.06);
+  return H * base + amp * lump * Math.min(1, d * 3) * (base > 0.02 ? 1 : 0);
 };
 
 class Heap {
@@ -117,7 +118,7 @@ export class Money {
   constructor(parent: THREE.Object3D) {
     const R = this.root; parent.add(R);
     const ht = heapTex(); ht.anisotropy = 16;
-    const heapM = lam("moneyHeapM", () => ({ map: ht, color: "#b4d99a" })); // green tint: from afar the bills must still average to money-green, not sand
+    const heapM = lam("moneyHeapM", () => ({ map: ht, color: "#cdeccf" })); // green tint: from afar the bills must still average to money-green, not sand
     for (const [name, def] of Object.entries(HEAPS)) this.heaps[name] = new Heap(def, R, heapM);
     // kitchen table + two chairs (wood, checked cloth)
     const wood = lam("tableWood", () => ({ color: "#a8724a" })), cloth = lam("tableCloth", () => ({ map: clothTex() }));
@@ -139,8 +140,10 @@ export class Money {
     this.stack = new THREE.InstancedMesh(new THREE.BoxGeometry(BILL_W, BILL_T, BILL_D), billM, 300);
     this.stack.castShadow = true; this.stack.receiveShadow = true; this.stack.frustumCulled = false; R.add(this.stack);
     // the money snowball
-    const bt = heapTex().clone(); bt.repeat.set(3, 1.5); bt.needsUpdate = true;
-    this.ball = new THREE.Mesh(new THREE.SphereGeometry(1, 48, 24), lam("moneyBall", () => ({ map: bt })));
+    // same money material as the heaps (its own cloned texture rendered flat grey): bills tile across the sphere
+    const ballG = new THREE.SphereGeometry(1, 48, 24), uvb = ballG.attributes.uv as THREE.BufferAttribute;
+    for (let i = 0; i < uvb.count; i++) uvb.setXY(i, uvb.getX(i) * 2.5, uvb.getY(i) * 1.25);
+    this.ball = new THREE.Mesh(ballG, heapM);
     this.ball.castShadow = true; this.ball.visible = false; R.add(this.ball);
     // the 350-year tree beside the table: tapered trunk + clustered round canopy, grown by scale
     const bark = lam("barkHD", () => ({ color: "#8f5d3b" })), leaf = lam("treeLeaf", () => ({ color: "#5aa83c" })), leaf2 = lam("treeLeaf2", () => ({ color: "#4c9a37" }));

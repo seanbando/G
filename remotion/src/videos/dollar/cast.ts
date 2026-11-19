@@ -10,7 +10,7 @@ import {
 } from "./toon";
 import {
   FPS, D0, FILES, ROW_GAP, COUNT, PARK, SHOTS, SNAP, DROP0, DROP1, DROP_H, V3, front, marchPhase, stomp, deckY, dropW, dropU, shapeZ,
-  smooth, clamp01, BridgeState, OWNER, SUMMIT, HEAPS, TABLE, Scene, growAt,
+  smooth, clamp01, BridgeState, OWNER, SUMMIT, HEAPS, TABLE, Scene, growAt, snowball,
 } from "./story";
 import { heapH } from "./money";
 import { LIGHTS } from "./lights";
@@ -278,10 +278,10 @@ export const stage = (id: number, t: number, _b: BridgeState, cam: CamInfo): Sta
     }
     case "wallet":
       owner(cam, t, out, OX, D0, OZ, { mode: "stand", expr: after(t, 14.12) ? "laugh" : after(t, 11.94) ? "grin" : "smile", prop: after(t, 11.94) ? "fatwallet" : "wallet" });
-      if (after(t, 11.94)) bills(out, t, 6, 10, [OX + 0.45, D0 + 1.35, OZ - 0.1], [0.2, 0.1, 0.2], [0.3, 1.6, -0.2], 1.1, 0.22);
+      if (after(t, 11.94)) bills(out, t, 4, 10, [OX - 0.15, D0 + 1.2, OZ - 0.2], [0.15, 0.1, 0.15], [-0.9, 1.3, 0.1], 1.0, 0.16);
       break;
     case "house": {
-      owner(cam, t, out, -1.6, D0, -55.2, { mode: "stand", expr: after(t, 17.86) ? "shock" : "grin", look: -1 });
+      owner(cam, t, out, -2.4, D0, -54.2, { mode: "stand", expr: after(t, 17.86) ? "shock" : "grin", look: -1 });
       // bills pour out of the windows and the door of the owner's house (front at x = -6)
       for (const [y, z] of [[D0 + 3.6, -48.6], [D0 + 3.6, -53.4], [D0 + 6.4, -48.6], [D0 + 6.4, -53.4], [D0 + 1.4, -51]] as const)
         bills(out, t, 9, Math.round(z * 10 + y), [-5.7, y, z], [0.2, 0.4, 0.9], [2.4, 1.2, 0], 1.3, 0.36);
@@ -308,9 +308,14 @@ export const stage = (id: number, t: number, _b: BridgeState, cam: CamInfo): Sta
       owner(cam, t, out, hl.x, D0 + hl.H - 0.1, hl.z, { mode: "stand", expr: "laugh", prop: "bill" }, 0, 1.6);
       break;
     }
+    case "snowball": { // bills flung off the rolling money ball
+      const sb = snowball(f), y = D0 + Math.max(0, heapH(HEAPS.near, 1, sb.x, sb.z)) + sb.r;
+      bills(out, t, 16, 61, [sb.x, y, sb.z - sb.r * 0.6], [sb.r * 1.6, sb.r, sb.r], [0.5, 2.2, -1.6], 0.9, 1.3 + 0.3 * sb.r);
+      break;
+    }
     case "slow": {
       const g = growAt(f);
-      owner(cam, t, out, TABLE[0] + 1.0, D0, TABLE[2] - 0.02, { mode: "sit", expr: g > 0.75 ? "dazed" : "neutral" }, g);
+      owner(cam, t, out, TABLE[0] - 1.0, D0, TABLE[2] + 0.02, { mode: "sit", expr: g > 0.75 ? "smile_closed" : "neutral" }, g);
       break;
     }
     case "end":

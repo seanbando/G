@@ -14,7 +14,7 @@ SHOTS = {
     5: (326, 458, "day", "wallet"), 6: (458, 584, "day", "house"), 7: (584, 717, "day", "street"), 8: (717, 817, "day", "hill"),
     9: (817, 882, "day", "rich"), 10: (882, 1150, "day", "half"), 11: (1150, 1292, "day", "full"), 12: (1292, 1362, "golden", "summit"),
     13: (1362, 1527, "day", "table"), 14: (1527, 1604, "day", "snowball"), 15: (1604, 1709, "day", "full"),
-    16: (1709, 1897, "day", "slow"), 17: (1897, 1978, "golden", "full"), 18: (1978, TOTAL, "golden", "end"),
+    16: (1709, 1897, "day", "slow"), 17: (1897, 1978, "day", "full"), 18: (1978, TOTAL, "golden", "end"),
 }
 XFADE = {12: 8, 13: 8, 16: 8, 17: 8}
 # hard cuts inside shots (camera keys with cut: true) and the shot changes: a soft whoosh lives on the big reframes
