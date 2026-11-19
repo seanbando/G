@@ -41,6 +41,8 @@ At 12:58, a call comes into 911 from a payphone a few blocks away. A man, very c
 
 He said 30 minutes. It went off at about 1:20.
 
+There's a detail hiding in that phone call, by the way. Months from now, it'll matter more than anything else about Richard Jewell. We'll get there.
+
 [VISUAL: the bench, highlight sweep]
 
 Three pipe bombs, packed with nails. Alice Hawthorne, 44, from Albany, Georgia, was killed — she'd come down with her 14-year-old daughter, Fallon, who was hurt in the blast. Over a hundred other people were injured. A Turkish TV cameraman named Melih Uzunyol had a heart attack running to film it, and died.
@@ -81,7 +83,7 @@ The question of whether Jewell could have done it didn't need a profile. It need
 
 On October 26th, 1996 — 88 days in — the U.S. Attorney's office sent his lawyers a letter saying he was no longer a target. Attorney General Janet Reno later said publicly she was sorry about the leak.
 
-That's three months with the investigation's attention on the wrong man. And the real bomber wasn't finished.
+That's three months with the investigation's attention on the wrong man. That's the first reason he was so hard to catch. And the real bomber wasn't finished.
 
 ---
 
@@ -121,6 +123,8 @@ I want to point that out, because it's the whole story in miniature. Two years o
 
 The truck comes back to a 31-year-old from western North Carolina. Eric Robert Rudolph.
 
+A year and a half after Atlanta, the bomber finally has a name. That's reason number two — for most of that time, nobody could put one on him.
+
 ---
 
 ## Who He Was
@@ -133,7 +137,7 @@ According to reporting from the time, the family spent part of the 1980s around 
 
 Then he went home. Back to the woods.
 
-People who knew him said the same thing over and over — he knew that forest. Hunting, camping, the old logging roads, the hollows. About a week after Birmingham, agents found his gray Nissan abandoned near Murphy.
+People who knew him said the same thing over and over — he knew that forest. Hunting, camping, the old logging roads, the hollows. About a week after Birmingham, agents found his gray Nissan abandoned near Murphy. Hold onto the name of that town. It comes back at the very end of this story.
 
 And he was just gone. Into more than half a million acres of mountain that he knew better than anyone looking for him.
 
@@ -142,6 +146,10 @@ And he was just gone. Into more than half a million acres of mountain that he kn
 ---
 
 ## The Hunt
+
+One thing to keep in mind through this next part. The person who finally found Eric Rudolph isn't anyone you're about to hear about — not an agent, not a tracker, not a tipster chasing the reward. When this manhunt started, he was a teenager.
+
+Which brings us to the third reason.
 
 May 1998, the FBI puts him on the Ten Most Wanted list. One million dollars. He's charged for Birmingham first, and later that year for the Atlanta bombings too, Olympic park included.
 

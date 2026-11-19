@@ -24,6 +24,13 @@ The click: **"I know what happened, but I never understood how they caught him."
 - Victims are named and treated with respect. Never sensationalized.
 - Signature ending: the truth is smaller and more ordinary than what people imagined.
 
+**VOICEOVER GATE: flawless or it doesn't ship (creator, Nov 17, 2026; hard rule, learned after video 01 went up with flaws).** The voiceover must play straight through perfectly: no stutters, no repeated or cut-off words, no wrong or missing words, no hesitations or delays mid-sentence, no dead air, no glued sentences with no breath, no line that suddenly rushes or drags, no volume jumps between chunks. Before ANY editing starts:
+1. Generate the voiceover, then transcribe the **final mixed file** with word timestamps (ElevenLabs scribe → `vo-words.json`).
+2. Run `python3 saylo/tools/check_vo.py vo-words.json voiceover-part1-tts.txt voiceover-part2-tts.txt --audio voiceover-full.mp3 --timings vo-timings.tsv --config vo-config.json --out vo-gate.md`. Gaps are measured from the real audio; chapter breaks (≤2.3 s) and the beats listed in `vo-config.json` are allowed; names the transcriber spells differently but that sound the same go in `vo-config.json` "aliases" (e.g. Dixon=Dickson). Pace = syllables per second of speech, normal 3.3–6.3. **No silence over ~0.9 s anywhere in the voiceover, chapter breaks included** (creator, Nov 19, 2026: 1.35 s+ pauses read as dead space). Dramatic holds and music breathers are added in the edit, under picture, not as dead air in the voice track. It must say **0 problems**. Every flagged line gets regenerated (same voice and settings, a new seed in `vo-config.json` "chunk_settings", with previous/next text), or slowed with `"tempo": 0.88` if it keeps reading rushed, or its gap trimmed; then re-transcribe and re-run. Intentional holds must be written as `[PAUSE]` in the script, or they get flagged.
+3. Run the per-chunk loudness/pace check (`vo-check.md`) and fix outliers.
+4. The creator listens once, start to finish, and approves. Only then does the edit begin. If a flaw is found after editing has started, fix the voiceover first, then re-time the edit (word timings change).
+Short beats from the voice direction (about 1 s) go into the voiceover through `vo-config.json` "beats" and are allowed by the gate. Long holds (the final silence, music-out moments) are added in the edit **after** the gate passes.
+
 ## 4. STRUCTURE (18–22 min, ~2,900–3,400 words at ~160 wpm)
 | Time | Beat |
 |---|---|
@@ -35,6 +42,13 @@ The click: **"I know what happened, but I never understood how they caught him."
 | 16:00–18:00 | The reveal, then a replay of the case with that fact in hand |
 | 18:00–end | Aftermath, the ordinary truth, a closing line |
 | Outro (~30s) | One specific question for comments + one related Saylo video + short subscribe ask |
+
+**Hooks & payoffs (retention):**
+- Open a new forward hook at least every 2–3 minutes. No stretch over ~3 minutes without one (biography and "the search" sections are where gaps happen).
+- If the hook promises a list ("three reasons"), call out each one when it lands ("That's reason number two").
+- At least one "hold onto that" plant in the first third that pays off near the end.
+- Re-hook at the start of Part 2 with a teaser about the ending.
+- Use only facts for teasers — a hook can't promise something the script doesn't deliver.
 
 Mark a split point `[PART 2]` near the middle so each half fits under 10,000 characters for voice tools.
 
@@ -48,7 +62,16 @@ Mark a split point `[PART 2]` near the middle so each half fits under 10,000 cha
 in conclusion, it is important to note, furthermore, moreover, consequently, in summary, to wrap things up, let's dive in/into, without further ado, it is worth noting, conversely, notably, additionally, subsequently, unlocking the secrets, embark on a journey, game-changer, the ultimate guide, master the art of, in the vast landscape of, in the realm of, a rich tapestry, a testament to, beacon of hope, unleash the power of, elevate, navigating the complex world of, it depends on various factors, on one hand/on the other hand, it remains to be seen, ideally, typically, generally speaking, while it may seem, remember to always, it is crucial to ensure, by following these steps, foster a sense of, it is paramount that, have you ever wondered, in today's fast-paced world, in this digital age, in the modern world, welcome back to the channel, delve, landscape, testament, tapestry, realm, foster, underscore, nuanced, crucial, paramount, unlock, unleash, elevate, optimization, leverage, holistic, synergy, robust, streamline, revolutionize.
 Also avoid: "This isn't just X, it's Y", "carefully orchestrated", "multifaceted", superhero/video game analogies.
 
-**Clips (copyright):** **Real news footage first, always, whenever it exists:** over stock footage or AI recreations (creator's rule, Nov 14, 2026). Use recreations only where no real footage exists. Keep each clip short (under ~10s) and always as commentary: set it up, play it, break it down. Crop or blur network logos where you can, no clips with music baked in. Only licensed music.
+**Source watermark (every piece of real footage, photo or document):** the **source's name only**, nothing else — e.g. `WNEP`, `FBI`, `Pa. Supreme Court`. Small text, bottom-right, no box: JetBrains Mono Medium 22px, off-white at ~67% opacity, 70px from the right edge, 60px from the bottom. On screen for the whole clip. Creative Commons images are the one exception: their license requires the author and license, so they read `SounderBruce · CC BY-SA 4.0`. Make one with `python3 saylo/tools/make_source_tag.py "WNEP"`; ready-made ones are in `assets/source-tags/`.
+
+**Clips (copyright):** **Real news footage first, always, whenever it exists:** over stock footage or AI recreations (creator's rule, Nov 14, 2026). Use recreations only where no real footage exists. Keep each clip short (under ~10s) and always as commentary: set it up, play it, break it down. Crop network logos out of the frame where you can, but don't paint over or blur them (removing a broadcaster's mark can cause its own copyright problem); our source watermark credits them. No clips with music baked in. Only licensed music.
+
+## 5b. VOICEOVER
+- Calm investigator, ~150 wpm baseline (range 140–165). Low-mid pitch, sentences land down. Energy never above 4/5; the darkest lines are the quietest.
+- Silence is the main effect: pauses are added in the edit. Cut music entirely at 3–5 key lines per part.
+- Victims' names: slowest pace, plain delivery, no dramatic emphasis.
+- TTS files: spell out every number, time and date ("twelve fifty-eight", "nineteen ninety-six"); spell out uncommon abbreviations (G-B-I, A-T-and-T, nine-one-one, U-S). Keep each file under 10,000 characters; split at a section break.
+- Each video gets a `voiceover-partN-directed.md` (energy/pace/emotion per section + beat notes) alongside the TTS text. Example: `videos/01-olympic-bomber/`.
 
 ## 6. TITLES
 **Rule:** name the case clearly, reveal one surprising fact, leave the explanation for the video.
@@ -68,6 +91,7 @@ Never: claims the video can't back up, vague "the mystery of" titles, "Full Docu
 ## 7. THUMBNAILS
 - Gray/desaturated base with ONE fully saturated accent: amber-orange (the niche uses red, so orange stands out in the sidebar). Used on every video.
 - Preferred look: 3D isometric miniature diorama of the real place (matte white-gray clay), with the key detail, route or figure in amber. Proven by Uncovering's top outliers (escape route, North Tower, Pizza Hut).
+- **The thumbnail must show the title's key object or action** (not just the mood). Viewers should get the title's story from the image alone. Titles built around a physical object beat abstract titles because they can be drawn.
 - One object or scene. 2–3 words max, heavy condensed font (Anton), white with one amber word. Text adds to the title, never repeats it.
 - One clean white hand-drawn arrow or circle pointing at the key detail is fine. No cluttered arrows, no shocked faces.
 - Must read on a phone and on a TV. Squint test before upload.

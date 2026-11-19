@@ -75,13 +75,28 @@ LOCKED = {
 }
 
 
+def tts_paragraphs(video):
+    """Spoken versions (numbers spelled out) from voiceover-part*-tts.txt, if the video has them."""
+    files = sorted(f for f in os.listdir(video) if re.fullmatch(r"voiceover-part\d+-tts\.txt", f))
+    paras = []
+    for f in files:
+        paras += [p.strip() for p in re.split(r"\n\s*\n", open(os.path.join(video, f)).read())
+                  if p.strip() and not p.strip().startswith("[")]
+    return paras
+
+
 def chunks_from_script(path):
     text = open(path).read().split("\n---\n", 1)[1]
-    chapter, out = "Cold open", []
+    tts = tts_paragraphs(os.path.dirname(path) or ".")
+    chapter, out, n = "Cold open", [], 0
     for para in re.split(r"\n\s*\n", text):
         para = para.strip()
         if not para or para == "---" or para.startswith("[VISUAL") or para == "[PART 2]":
             continue
+        if not para.startswith("## ") and tts:
+            if n >= len(tts):
+                sys.exit("voiceover-part*-tts.txt has fewer paragraphs than script.md")
+            para, n = tts[n], n + 1
         if para.startswith("## "):
             chapter = para[3:].strip()
             out.append(("CHAPTER", chapter))
@@ -110,14 +125,31 @@ def chunks_from_script(path):
     return units
 
 
+def load_config(video):
+    """Per-video extras in <video>/vo-config.json: {"spoken": {...}, "beats": {...}}."""
+    path = os.path.join(video, "vo-config.json")
+    if os.path.exists(path):
+        cfg = json.load(open(path))
+        SPOKEN.update(cfg.get("spoken", {}))
+        BEATS.update(cfg.get("beats", {}))
+        CHUNK.update(cfg.get("chunk_settings", {}))
+        GAPS.update(cfg.get("gaps", {}))
+
+
 def spoken(t):
     for a, b in SPOKEN.items():
         t = t.replace(a, b)
     return t
 
 
+GAPS = {}   # vo-config.json "gaps": {"chapter": 0.75, "paragraph": 0.5}
+CHUNK = {}  # per-chunk overrides from vo-config.json "chunk_settings": {"016": {"speed": 1.05, "seed": 2002}}
+
+
 def generate(unit, prev_text, next_text, out_path):
-    body = {"text": spoken(unit["text"]), "model_id": MODEL, "voice_settings": SETTINGS, "seed": SEED}
+    o = CHUNK.get(unit["id"], {})
+    settings = dict(SETTINGS, **{k: v for k, v in o.items() if k not in ("seed", "tempo")})
+    body = {"text": spoken(unit["text"]), "model_id": MODEL, "voice_settings": settings, "seed": o.get("seed", SEED)}
     if prev_text:
         body["previous_text"] = spoken(prev_text)
     if next_text:
@@ -156,12 +188,17 @@ def build(video, units):
     vo, tmp = os.path.join(video, "vo"), os.path.join(video, "vo", "_tmp")
     os.makedirs(tmp, exist_ok=True)
     trim = "silenceremove=start_periods=1:start_threshold=-50dB,areverse,silenceremove=start_periods=1:start_threshold=-50dB,areverse"
-    gaps = {"none": 0, "sentence": GAP_SENTENCE, "paragraph": GAP_PARAGRAPH, "chapter": GAP_CHAPTER}
+    gaps = {"none": 0, "sentence": GAP_SENTENCE, "paragraph": GAP_PARAGRAPH, "chapter": GAP_CHAPTER, **GAPS}
     listing, t, rows, stats = [], 0.0, [], []
     for u in units:
         wav = os.path.join(tmp, f"{u['id']}.wav")
         ff("-i", os.path.join(vo, f"VO-{u['id']}.mp3"), "-af", trim, "-ar", "44100", "-ac", "1", wav)
         shorten_pauses(wav)
+        tempo = CHUNK.get(u["id"], {}).get("tempo")
+        if tempo:  # slow a line that reads rushed (pitch kept), e.g. 0.88
+            slow = wav.replace(".wav", "-t.wav")
+            ff("-i", wav, "-af", f"atempo={tempo}", slow)
+            os.replace(slow, wav)
         prev_text = next((r[4] for r in reversed(rows) if r[0] != "CLIP"), "")
         gap = gaps[u["gap_before"]] + (BEATS_after(prev_text) if rows else 0) + LOCKED.get(u["text"], {}).get("pre", 0)
         if gap:
@@ -234,7 +271,10 @@ def shorten_pauses(wav, threshold_db=-45, longest=0.6, keep=0.45):
 
 
 def BEATS_after(text):
-    return next((v for k, v in BEATS.items() if text.endswith(k)), 0)
+    """Exact match first (a one-line beat like "Eric Frein." must not fire on every line ending in it)."""
+    if text in BEATS:
+        return BEATS[text]
+    return next((v for k, v in BEATS.items() if len(k) > 15 and text.endswith(k)), 0)
 
 
 def mmss(s):
@@ -266,6 +306,7 @@ def main(argv):
     redo = set()
     if "--redo" in argv:
         redo = {x.strip().zfill(3) for x in argv[argv.index("--redo") + 1].split(",")}
+    load_config(video)
     units = chunks_from_script(os.path.join(video, "script.md"))
     vo = os.path.join(video, "vo")
     os.makedirs(vo, exist_ok=True)

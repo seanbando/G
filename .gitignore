@@ -8,5 +8,6 @@ __pycache__/
 /_kit/
 saylo/videos/*/media/
 saylo/videos/*/render/
+saylo/videos/*/footage/
 
 /.videohub/

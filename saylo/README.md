@@ -4,11 +4,13 @@ Everything for @watchsaylo lives here. Start every new chat (with Claude or GPT)
 
 | File | What it is |
 |---|---|
+| `PLAYBOOK.md` | Every rule, research step and prompt in pipeline order (task-manager source) |
 | `style-sheet.md` | The rules: channel, audience, voice, structure, blocked words, titles, thumbnails, workflow, GPT fact-check prompt |
 | `channel/channel-audit.md` | Where the channel stood on Nov 13, 2026 and why the sniper video worked |
 | `channel/competitor-analysis.md` | Uncovering / fern / Nexpo scripts, competitor thumbnails, title formats that work |
 | `channel/edit-style-analysis.md` | Measured editing of Uncovering + fern videos: cuts/min, shot lengths, maps, documents, holds, silences |
 | `ideas/scorecard.md` | How ideas are scored, plus the ranked list of next videos |
+| `videos/02-frein/` | Script, research, fact-check log, voiceover, footage sheet |
 | `videos/01-olympic-bomber/` | Script, package (title + thumbnail), fact-check log, thumbnail images |
 | `tools/check_saylo.py` | Scans a script for blocked words, length and sentence rhythm |
 | `tools/analyze_edit.py` | Measures a reference video's editing (cuts, pacing, fades, silences) + contact sheets |
@@ -18,9 +20,10 @@ Everything for @watchsaylo lives here. Start every new chat (with Claude or GPT)
 ## Video pipeline
 | # | Video | Status |
 |---|---|---|
-| 01 | Why the Olympic Bomber Was So Hard to Catch | Script fact-checked once. Re-check new hook (18 months), then record. Thumbnail approved — finish text in Canva. Edit plan + shot list done — gather footage, then record VO and edit. |
-| 02 | Whitey Bulger (scorecard #2) | Not started |
-| 03 | Christopher Dorner (scorecard #3) | Not started |
+| 01 | Why the Olympic Bomber Was So Hard to Catch | Posted. |
+| 02 | They Cuffed Him With the Handcuffs of the Trooper He Killed (Eric Frein) | Script fact-checked and locked (~13 min). VO text + direction ready. Footage: `download-list.md`. Next: generate VO → voiceover gate → edit. |
+| 03 | Whitey Bulger (scorecard #2) | Not started |
+| 04 | Christopher Dorner (scorecard #3) | Not started |
 
 ## Check a script
 ```bash
