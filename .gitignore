@@ -10,3 +10,6 @@ __pycache__/
 
 # Bulky intermediates for the cartoon shorts
 shorts/*/voice/*.wav
+shorts/*/audio/*.wav
+shorts/*/audio/_cache/
+shorts/*/audio/__pycache__/
