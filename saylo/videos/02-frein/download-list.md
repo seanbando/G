@@ -8,8 +8,8 @@ Every file gets the matching watermark from `saylo/assets/source-tags/` (use the
 |---|---|---|---|---|---|
 | ☐ | 01 | https://www.youtube.com/watch?v=9E2ItWUPMjQ · https://www.youtube.com/watch?v=vedO33dFDoU · https://www.youtube.com/watch?v=SYvcVzvxlKI | Wide shots of the abandoned hangar, the field and the old runway at Birchwood. **Message the creator for permission first.** | 3 shots, 4–6 s each | "abandoned Birchwood Pocono airpark hangar" |
 | ☑ | 02 | https://www.youtube.com/watch?v=BnrDHAu5Iro (backup https://www.youtube.com/watch?v=KczYKvrduew) | Marshal Scott Malkowski on camera describing the capture, ideally "I saw the black hat" or the "hunch" line | the quote | "Malkowski Frein marshals interview" |
-| ☐ | 03 | https://www.youtube.com/watch?v=11klF2ZWG4Y | Blooming Grove barracks exterior, police tape, the night after | 2 shots | "Blooming Grove barracks ambush 2014" |
-| ☐ | 04 | https://www.youtube.com/watch?v=19kq4xlahxQ · https://www.youtube.com/watch?v=IHcItSuJUCM | Honor guard / flag / procession. **No family close-ups.** | 1–2 shots | "Cpl Bryon Dickson funeral" |
+| ☑ | 03 | https://www.youtube.com/watch?v=11klF2ZWG4Y | Blooming Grove barracks exterior, police tape, the night after | 2 shots | "Blooming Grove barracks ambush 2014" |
+| ☑ | 04 | https://www.youtube.com/watch?v=19kq4xlahxQ · https://www.youtube.com/watch?v=IHcItSuJUCM | Honor guard / flag / procession. **No family close-ups.** | 1–2 shots | "Cpl Bryon Dickson funeral" |
 | ☑ | 05 | https://www.youtube.com/watch?v=_crJaLFvEKw | The moment police name Frein / show his photo | 3–5 s | "police identify suspect Pennsylvania barracks shooting Frein" |
 | ☑ | 06 | https://www.youtube.com/watch?v=piFmhY-64P4 | Schools closed / empty school / anchor saying it | 3–5 s | "Frein manhunt schools close Pocono" |
 | ☑ | 07 | https://www.youtube.com/watch?v=NXpQDGIBDyQ · https://www.youtube.com/watch?v=Iah2sDnXImE | Roadblocks, officers on rural roads, armored vehicles, Bivens at the podium | 3–4 shots | "Frein manhunt roadblock" |
