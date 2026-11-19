@@ -1,0 +1,5006 @@
+[
+ {
+  "i": 0,
+  "start": 0.0,
+  "length": 0.5,
+  "move": "push-in",
+  "move_speed": 0.833,
+  "brightness": 96.6,
+  "contrast": 41.0,
+  "saturation": 135.8,
+  "warmth": -18.7,
+  "vignette": 66.4,
+  "highlights": 0.019,
+  "shadows": 0.066,
+  "palette": [
+   [
+    "#3f335a",
+    0.37
+   ],
+   [
+    "#0d0f31",
+    0.29
+   ],
+   [
+    "#69557a",
+    0.26
+   ],
+   [
+    "#998342",
+    0.06
+   ],
+   [
+    "#dfdcb8",
+    0.02
+   ]
+  ]
+ },
+ {
+  "i": 1,
+  "start": 0.5,
+  "length": 0.9,
+  "move": "push-in",
+  "move_speed": 1.227,
+  "brightness": 89.4,
+  "contrast": 59.7,
+  "saturation": 120.9,
+  "warmth": 22.7,
+  "vignette": 34.0,
+  "highlights": 0.044,
+  "shadows": 0.236,
+  "palette": [
+   [
+    "#2f4426",
+    0.31
+   ],
+   [
+    "#101814",
+    0.29
+   ],
+   [
+    "#695855",
+    0.24
+   ],
+   [
+    "#b2af20",
+    0.11
+   ],
+   [
+    "#d1d7d3",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 2,
+  "start": 1.4,
+  "length": 0.77,
+  "move": "tilt-up",
+  "move_speed": 1.287,
+  "brightness": 75.0,
+  "contrast": 66.2,
+  "saturation": 110.2,
+  "warmth": 6.1,
+  "vignette": 90.8,
+  "highlights": 0.067,
+  "shadows": 0.365,
+  "palette": [
+   [
+    "#0c1712",
+    0.47
+   ],
+   [
+    "#354438",
+    0.33
+   ],
+   [
+    "#dee3e1",
+    0.09
+   ],
+   [
+    "#94a510",
+    0.08
+   ],
+   [
+    "#8a928e",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 3,
+  "start": 2.17,
+  "length": 0.17,
+  "move": "pull-back",
+  "move_speed": 6.819,
+  "brightness": 94.5,
+  "contrast": 62.8,
+  "saturation": 124.9,
+  "warmth": 9.0,
+  "vignette": 101.0,
+  "highlights": 0.06,
+  "shadows": 0.188,
+  "palette": [
+   [
+    "#11191a",
+    0.35
+   ],
+   [
+    "#394347",
+    0.33
+   ],
+   [
+    "#767e17",
+    0.16
+   ],
+   [
+    "#9bb38d",
+    0.1
+   ],
+   [
+    "#ddebde",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 4,
+  "start": 2.33,
+  "length": 0.93,
+  "move": "push-in",
+  "move_speed": 0.822,
+  "brightness": 64.7,
+  "contrast": 62.3,
+  "saturation": 121.7,
+  "warmth": -1.3,
+  "vignette": 116.9,
+  "highlights": 0.042,
+  "shadows": 0.443,
+  "palette": [
+   [
+    "#06060b",
+    0.48
+   ],
+   [
+    "#515567",
+    0.24
+   ],
+   [
+    "#3a373c",
+    0.2
+   ],
+   [
+    "#b7b824",
+    0.05
+   ],
+   [
+    "#dce0d9",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 5,
+  "start": 3.27,
+  "length": 1.03,
+  "move": "push-in",
+  "move_speed": 0.745,
+  "brightness": 96.1,
+  "contrast": 77.5,
+  "saturation": 87.3,
+  "warmth": 10.0,
+  "vignette": 166.1,
+  "highlights": 0.126,
+  "shadows": 0.291,
+  "palette": [
+   [
+    "#121a16",
+    0.39
+   ],
+   [
+    "#3b5036",
+    0.32
+   ],
+   [
+    "#e5e7e4",
+    0.15
+   ],
+   [
+    "#aabf15",
+    0.07
+   ],
+   [
+    "#939a99",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 6,
+  "start": 4.3,
+  "length": 0.17,
+  "move": "pull-back",
+  "move_speed": 9.299,
+  "brightness": 104.9,
+  "contrast": 70.0,
+  "saturation": 103.0,
+  "warmth": 9.5,
+  "vignette": 136.4,
+  "highlights": 0.084,
+  "shadows": 0.178,
+  "palette": [
+   [
+    "#3b4e40",
+    0.34
+   ],
+   [
+    "#12171e",
+    0.31
+   ],
+   [
+    "#8ba51c",
+    0.12
+   ],
+   [
+    "#9fae97",
+    0.12
+   ],
+   [
+    "#dae4d9",
+    0.1
+   ]
+  ]
+ },
+ {
+  "i": 7,
+  "start": 4.47,
+  "length": 0.77,
+  "move": "pull-back",
+  "move_speed": 0.969,
+  "brightness": 87.9,
+  "contrast": 59.6,
+  "saturation": 138.0,
+  "warmth": 10.1,
+  "vignette": 69.4,
+  "highlights": 0.042,
+  "shadows": 0.254,
+  "palette": [
+   [
+    "#091013",
+    0.4
+   ],
+   [
+    "#4b4d5e",
+    0.36
+   ],
+   [
+    "#7c761f",
+    0.16
+   ],
+   [
+    "#cbd0ca",
+    0.05
+   ],
+   [
+    "#d7d527",
+    0.03
+   ]
+  ]
+ },
+ {
+  "i": 8,
+  "start": 5.24,
+  "length": 0.17,
+  "move": "pull-back",
+  "move_speed": 6.484,
+  "brightness": 101.6,
+  "contrast": 58.6,
+  "saturation": 116.4,
+  "warmth": 7.0,
+  "vignette": 89.2,
+  "highlights": 0.063,
+  "shadows": 0.158,
+  "palette": [
+   [
+    "#3a4056",
+    0.35
+   ],
+   [
+    "#0b160c",
+    0.22
+   ],
+   [
+    "#686967",
+    0.2
+   ],
+   [
+    "#868b19",
+    0.15
+   ],
+   [
+    "#cce0c2",
+    0.08
+   ]
+  ]
+ },
+ {
+  "i": 9,
+  "start": 5.4,
+  "length": 0.9,
+  "move": "shake",
+  "move_speed": 1.498,
+  "brightness": 85.4,
+  "contrast": 58.3,
+  "saturation": 126.8,
+  "warmth": 20.1,
+  "vignette": 44.7,
+  "highlights": 0.044,
+  "shadows": 0.232,
+  "palette": [
+   [
+    "#121f15",
+    0.39
+   ],
+   [
+    "#3f413f",
+    0.35
+   ],
+   [
+    "#7a722d",
+    0.12
+   ],
+   [
+    "#b2b31c",
+    0.08
+   ],
+   [
+    "#d3d8d0",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 10,
+  "start": 6.3,
+  "length": 1.17,
+  "move": "shake",
+  "move_speed": 1.637,
+  "brightness": 105.2,
+  "contrast": 64.5,
+  "saturation": 116.9,
+  "warmth": -6.4,
+  "vignette": 126.5,
+  "highlights": 0.096,
+  "shadows": 0.135,
+  "palette": [
+   [
+    "#1d1e29",
+    0.39
+   ],
+   [
+    "#594864",
+    0.38
+   ],
+   [
+    "#a18c2f",
+    0.1
+   ],
+   [
+    "#cfd1d5",
+    0.1
+   ],
+   [
+    "#0964f6",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 11,
+  "start": 7.47,
+  "length": 1.0,
+  "move": "pull-back",
+  "move_speed": 0.902,
+  "brightness": 92.3,
+  "contrast": 59.9,
+  "saturation": 110.1,
+  "warmth": 1.0,
+  "vignette": 52.8,
+  "highlights": 0.058,
+  "shadows": 0.187,
+  "palette": [
+   [
+    "#363241",
+    0.38
+   ],
+   [
+    "#0e1014",
+    0.24
+   ],
+   [
+    "#6d5373",
+    0.21
+   ],
+   [
+    "#d2cfda",
+    0.1
+   ],
+   [
+    "#958c20",
+    0.07
+   ]
+  ]
+ },
+ {
+  "i": 12,
+  "start": 8.47,
+  "length": 0.83,
+  "move": "shake",
+  "move_speed": 1.879,
+  "brightness": 102.2,
+  "contrast": 57.9,
+  "saturation": 118.3,
+  "warmth": 14.4,
+  "vignette": 120.7,
+  "highlights": 0.076,
+  "shadows": 0.092,
+  "palette": [
+   [
+    "#403444",
+    0.36
+   ],
+   [
+    "#705970",
+    0.24
+   ],
+   [
+    "#1a141f",
+    0.22
+   ],
+   [
+    "#af821d",
+    0.12
+   ],
+   [
+    "#d8d7de",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 13,
+  "start": 9.3,
+  "length": 1.1,
+  "move": "push-in",
+  "move_speed": 0.704,
+  "brightness": 96.4,
+  "contrast": 55.4,
+  "saturation": 104.6,
+  "warmth": 0.2,
+  "vignette": 69.9,
+  "highlights": 0.054,
+  "shadows": 0.122,
+  "palette": [
+   [
+    "#3a3043",
+    0.42
+   ],
+   [
+    "#6f566f",
+    0.28
+   ],
+   [
+    "#110f14",
+    0.17
+   ],
+   [
+    "#c8c4db",
+    0.08
+   ],
+   [
+    "#a5942a",
+    0.05
+   ]
+  ]
+ },
+ {
+  "i": 14,
+  "start": 10.4,
+  "length": 1.77,
+  "move": "pan-right",
+  "move_speed": 1.449,
+  "brightness": 101.7,
+  "contrast": 47.9,
+  "saturation": 120.3,
+  "warmth": -1.1,
+  "vignette": 67.5,
+  "highlights": 0.031,
+  "shadows": 0.047,
+  "palette": [
+   [
+    "#675170",
+    0.32
+   ],
+   [
+    "#453446",
+    0.31
+   ],
+   [
+    "#10102f",
+    0.23
+   ],
+   [
+    "#9c8b26",
+    0.08
+   ],
+   [
+    "#c4c1ce",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 15,
+  "start": 12.17,
+  "length": 0.5,
+  "move": "push-in",
+  "move_speed": 0.703,
+  "brightness": 87.6,
+  "contrast": 61.1,
+  "saturation": 140.9,
+  "warmth": 31.3,
+  "vignette": 74.7,
+  "highlights": 0.028,
+  "shadows": 0.279,
+  "palette": [
+   [
+    "#110e10",
+    0.37
+   ],
+   [
+    "#564151",
+    0.34
+   ],
+   [
+    "#93532a",
+    0.15
+   ],
+   [
+    "#85a20a",
+    0.1
+   ],
+   [
+    "#ddddce",
+    0.03
+   ]
+  ]
+ },
+ {
+  "i": 16,
+  "start": 12.67,
+  "length": 0.53,
+  "move": "shake",
+  "move_speed": 1.936,
+  "brightness": 88.4,
+  "contrast": 61.1,
+  "saturation": 127.5,
+  "warmth": 33.7,
+  "vignette": 68.6,
+  "highlights": 0.034,
+  "shadows": 0.252,
+  "palette": [
+   [
+    "#150f10",
+    0.33
+   ],
+   [
+    "#4e3a49",
+    0.32
+   ],
+   [
+    "#7d3f1d",
+    0.19
+   ],
+   [
+    "#a78336",
+    0.11
+   ],
+   [
+    "#dfe1db",
+    0.05
+   ]
+  ]
+ },
+ {
+  "i": 17,
+  "start": 13.21,
+  "length": 1.27,
+  "move": "shake",
+  "move_speed": 0.769,
+  "brightness": 90.4,
+  "contrast": 69.7,
+  "saturation": 135.8,
+  "warmth": 37.5,
+  "vignette": 139.1,
+  "highlights": 0.063,
+  "shadows": 0.3,
+  "palette": [
+   [
+    "#0a0806",
+    0.29
+   ],
+   [
+    "#372d2a",
+    0.27
+   ],
+   [
+    "#96571b",
+    0.24
+   ],
+   [
+    "#776865",
+    0.14
+   ],
+   [
+    "#efece2",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 18,
+  "start": 14.47,
+  "length": 0.6,
+  "move": "push-in",
+  "move_speed": 0.723,
+  "brightness": 90.7,
+  "contrast": 57.0,
+  "saturation": 133.3,
+  "warmth": 13.6,
+  "vignette": 92.8,
+  "highlights": 0.044,
+  "shadows": 0.198,
+  "palette": [
+   [
+    "#47313f",
+    0.32
+   ],
+   [
+    "#120c13",
+    0.29
+   ],
+   [
+    "#705373",
+    0.26
+   ],
+   [
+    "#9f8c1a",
+    0.09
+   ],
+   [
+    "#d3d4d6",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 19,
+  "start": 15.07,
+  "length": 0.9,
+  "move": "shake",
+  "move_speed": 1.989,
+  "brightness": 88.6,
+  "contrast": 69.1,
+  "saturation": 143.5,
+  "warmth": 36.2,
+  "vignette": 64.8,
+  "highlights": 0.064,
+  "shadows": 0.303,
+  "palette": [
+   [
+    "#171515",
+    0.49
+   ],
+   [
+    "#844512",
+    0.22
+   ],
+   [
+    "#5b5755",
+    0.17
+   ],
+   [
+    "#d5d6d1",
+    0.06
+   ],
+   [
+    "#b8cf29",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 20,
+  "start": 15.97,
+  "length": 1.17,
+  "move": "shake",
+  "move_speed": 0.813,
+  "brightness": 109.8,
+  "contrast": 69.9,
+  "saturation": 145.7,
+  "warmth": 46.4,
+  "vignette": 41.2,
+  "highlights": 0.095,
+  "shadows": 0.198,
+  "palette": [
+   [
+    "#191513",
+    0.31
+   ],
+   [
+    "#743e0b",
+    0.24
+   ],
+   [
+    "#5c5462",
+    0.22
+   ],
+   [
+    "#bcb312",
+    0.12
+   ],
+   [
+    "#d6cdd5",
+    0.1
+   ]
+  ]
+ },
+ {
+  "i": 21,
+  "start": 17.14,
+  "length": 3.24,
+  "move": "shake",
+  "move_speed": 1.035,
+  "brightness": 140.2,
+  "contrast": 54.2,
+  "saturation": 79.6,
+  "warmth": -27.0,
+  "vignette": -19.7,
+  "highlights": 0.063,
+  "shadows": 0.01,
+  "palette": [
+   [
+    "#0f3646",
+    0.28
+   ],
+   [
+    "#9ca198",
+    0.23
+   ],
+   [
+    "#717773",
+    0.21
+   ],
+   [
+    "#bfcccd",
+    0.19
+   ],
+   [
+    "#67bfc8",
+    0.1
+   ]
+  ]
+ },
+ {
+  "i": 22,
+  "start": 20.38,
+  "length": 1.2,
+  "move": "pull-back",
+  "move_speed": 0.855,
+  "brightness": 156.9,
+  "contrast": 64.8,
+  "saturation": 67.3,
+  "warmth": -24.0,
+  "vignette": 101.4,
+  "highlights": 0.191,
+  "shadows": 0.045,
+  "palette": [
+   [
+    "#93a8a4",
+    0.23
+   ],
+   [
+    "#617a75",
+    0.22
+   ],
+   [
+    "#dee0d5",
+    0.2
+   ],
+   [
+    "#172d33",
+    0.19
+   ],
+   [
+    "#8bd6da",
+    0.16
+   ]
+  ]
+ },
+ {
+  "i": 23,
+  "start": 21.58,
+  "length": 1.6,
+  "move": "tilt-up",
+  "move_speed": 0.882,
+  "brightness": 113.7,
+  "contrast": 72.1,
+  "saturation": 127.1,
+  "warmth": -22.2,
+  "vignette": 117.1,
+  "highlights": 0.122,
+  "shadows": 0.124,
+  "palette": [
+   [
+    "#0c2735",
+    0.53
+   ],
+   [
+    "#a0bcbc",
+    0.2
+   ],
+   [
+    "#737b78",
+    0.15
+   ],
+   [
+    "#e6eae6",
+    0.08
+   ],
+   [
+    "#f5ee52",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 24,
+  "start": 23.18,
+  "length": 0.73,
+  "move": "push-in",
+  "move_speed": 0.32,
+  "brightness": 55.9,
+  "contrast": 68.6,
+  "saturation": 60.8,
+  "warmth": 0.3,
+  "vignette": 99.5,
+  "highlights": 0.058,
+  "shadows": 0.521,
+  "palette": [
+   [
+    "#010202",
+    0.41
+   ],
+   [
+    "#3e464a",
+    0.23
+   ],
+   [
+    "#1f2426",
+    0.21
+   ],
+   [
+    "#dcded0",
+    0.1
+   ],
+   [
+    "#87a825",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 25,
+  "start": 23.91,
+  "length": 0.67,
+  "move": "pull-back",
+  "move_speed": 0.644,
+  "brightness": 179.3,
+  "contrast": 49.1,
+  "saturation": 100.0,
+  "warmth": -16.9,
+  "vignette": 82.7,
+  "highlights": 0.246,
+  "shadows": 0.005,
+  "palette": [
+   [
+    "#dbd8ae",
+    0.26
+   ],
+   [
+    "#59b5d8",
+    0.25
+   ],
+   [
+    "#9d9e7f",
+    0.21
+   ],
+   [
+    "#486e78",
+    0.18
+   ],
+   [
+    "#622822",
+    0.09
+   ]
+  ]
+ },
+ {
+  "i": 26,
+  "start": 24.58,
+  "length": 1.03,
+  "move": "pull-back",
+  "move_speed": 0.732,
+  "brightness": 175.7,
+  "contrast": 49.5,
+  "saturation": 23.1,
+  "warmth": -9.1,
+  "vignette": 75.1,
+  "highlights": 0.219,
+  "shadows": 0.004,
+  "palette": [
+   [
+    "#bbc9c7",
+    0.27
+   ],
+   [
+    "#98a59f",
+    0.25
+   ],
+   [
+    "#717a78",
+    0.21
+   ],
+   [
+    "#e1ecea",
+    0.21
+   ],
+   [
+    "#364443",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 27,
+  "start": 25.61,
+  "length": 1.0,
+  "move": "push-in",
+  "move_speed": 0.344,
+  "brightness": 89.9,
+  "contrast": 65.6,
+  "saturation": 122.7,
+  "warmth": -1.1,
+  "vignette": 114.6,
+  "highlights": 0.098,
+  "shadows": 0.185,
+  "palette": [
+   [
+    "#161628",
+    0.42
+   ],
+   [
+    "#2f324f",
+    0.38
+   ],
+   [
+    "#aa5028",
+    0.08
+   ],
+   [
+    "#e1e4e5",
+    0.06
+   ],
+   [
+    "#f1625a",
+    0.05
+   ]
+  ]
+ },
+ {
+  "i": 28,
+  "start": 26.61,
+  "length": 1.5,
+  "move": "shake",
+  "move_speed": 0.981,
+  "brightness": 114.3,
+  "contrast": 72.8,
+  "saturation": 111.5,
+  "warmth": 23.3,
+  "vignette": 50.4,
+  "highlights": 0.123,
+  "shadows": 0.157,
+  "palette": [
+   [
+    "#1b1825",
+    0.34
+   ],
+   [
+    "#4b3f44",
+    0.29
+   ],
+   [
+    "#d55146",
+    0.17
+   ],
+   [
+    "#d2d3c9",
+    0.11
+   ],
+   [
+    "#8b9497",
+    0.09
+   ]
+  ]
+ },
+ {
+  "i": 29,
+  "start": 28.11,
+  "length": 0.17,
+  "move": "push-in",
+  "move_speed": 4.948,
+  "brightness": 123.6,
+  "contrast": 72.0,
+  "saturation": 130.7,
+  "warmth": 13.8,
+  "vignette": 166.7,
+  "highlights": 0.167,
+  "shadows": 0.11,
+  "palette": [
+   [
+    "#253257",
+    0.3
+   ],
+   [
+    "#171522",
+    0.25
+   ],
+   [
+    "#a34328",
+    0.23
+   ],
+   [
+    "#eaebeb",
+    0.15
+   ],
+   [
+    "#b09c82",
+    0.07
+   ]
+  ]
+ },
+ {
+  "i": 30,
+  "start": 28.28,
+  "length": 0.97,
+  "move": "pull-back",
+  "move_speed": 0.535,
+  "brightness": 82.5,
+  "contrast": 65.3,
+  "saturation": 143.8,
+  "warmth": -17.8,
+  "vignette": 79.6,
+  "highlights": 0.06,
+  "shadows": 0.393,
+  "palette": [
+   [
+    "#100d18",
+    0.48
+   ],
+   [
+    "#1e2e57",
+    0.2
+   ],
+   [
+    "#37487d",
+    0.17
+   ],
+   [
+    "#dcddd4",
+    0.08
+   ],
+   [
+    "#aa4330",
+    0.07
+   ]
+  ]
+ },
+ {
+  "i": 31,
+  "start": 29.25,
+  "length": 1.03,
+  "move": "tilt-down",
+  "move_speed": 0.681,
+  "brightness": 86.0,
+  "contrast": 67.4,
+  "saturation": 118.8,
+  "warmth": -10.7,
+  "vignette": 118.3,
+  "highlights": 0.092,
+  "shadows": 0.267,
+  "palette": [
+   [
+    "#0d0c17",
+    0.32
+   ],
+   [
+    "#2b283c",
+    0.3
+   ],
+   [
+    "#2c406c",
+    0.21
+   ],
+   [
+    "#d9dbd9",
+    0.09
+   ],
+   [
+    "#cc5e3c",
+    0.08
+   ]
+  ]
+ },
+ {
+  "i": 32,
+  "start": 30.28,
+  "length": 2.57,
+  "move": "pull-back",
+  "move_speed": 1.109,
+  "brightness": 138.4,
+  "contrast": 64.7,
+  "saturation": 72.9,
+  "warmth": -25.1,
+  "vignette": 103.5,
+  "highlights": 0.16,
+  "shadows": 0.025,
+  "palette": [
+   [
+    "#4f5f64",
+    0.31
+   ],
+   [
+    "#1f2e33",
+    0.2
+   ],
+   [
+    "#72908f",
+    0.2
+   ],
+   [
+    "#8bcace",
+    0.17
+   ],
+   [
+    "#e9e2da",
+    0.13
+   ]
+  ]
+ },
+ {
+  "i": 33,
+  "start": 32.85,
+  "length": 0.2,
+  "move": "static",
+  "move_speed": 0.027,
+  "brightness": 167.6,
+  "contrast": 40.9,
+  "saturation": 88.7,
+  "warmth": -57.6,
+  "vignette": 114.1,
+  "highlights": 0.084,
+  "shadows": 0.002,
+  "palette": [
+   [
+    "#7eabbf",
+    0.25
+   ],
+   [
+    "#92c4da",
+    0.21
+   ],
+   [
+    "#6b92a3",
+    0.2
+   ],
+   [
+    "#547585",
+    0.18
+   ],
+   [
+    "#3e5964",
+    0.15
+   ]
+  ]
+ },
+ {
+  "i": 34,
+  "start": 33.05,
+  "length": 0.67,
+  "move": "push-in",
+  "move_speed": 0.572,
+  "brightness": 150.5,
+  "contrast": 59.7,
+  "saturation": 61.2,
+  "warmth": -20.1,
+  "vignette": 90.9,
+  "highlights": 0.162,
+  "shadows": 0.03,
+  "palette": [
+   [
+    "#506364",
+    0.26
+   ],
+   [
+    "#7b8f8e",
+    0.25
+   ],
+   [
+    "#93c4c7",
+    0.2
+   ],
+   [
+    "#e1e1d4",
+    0.16
+   ],
+   [
+    "#222f32",
+    0.12
+   ]
+  ]
+ },
+ {
+  "i": 35,
+  "start": 33.72,
+  "length": 0.87,
+  "move": "pull-back",
+  "move_speed": 1.836,
+  "brightness": 175.5,
+  "contrast": 59.9,
+  "saturation": 69.3,
+  "warmth": 49.1,
+  "vignette": 127.3,
+  "highlights": 0.266,
+  "shadows": 0.057,
+  "palette": [
+   [
+    "#d3d4d1",
+    0.27
+   ],
+   [
+    "#a8a9a6",
+    0.25
+   ],
+   [
+    "#ede10c",
+    0.21
+   ],
+   [
+    "#717873",
+    0.2
+   ],
+   [
+    "#1f1c0c",
+    0.08
+   ]
+  ]
+ },
+ {
+  "i": 36,
+  "start": 34.58,
+  "length": 2.2,
+  "move": "pull-back",
+  "move_speed": 1.548,
+  "brightness": 132.0,
+  "contrast": 64.4,
+  "saturation": 154.1,
+  "warmth": -22.8,
+  "vignette": 57.3,
+  "highlights": 0.106,
+  "shadows": 0.105,
+  "palette": [
+   [
+    "#2f7126",
+    0.27
+   ],
+   [
+    "#467489",
+    0.23
+   ],
+   [
+    "#0e2221",
+    0.21
+   ],
+   [
+    "#84b5cd",
+    0.15
+   ],
+   [
+    "#55d42f",
+    0.14
+   ]
+  ]
+ },
+ {
+  "i": 37,
+  "start": 36.78,
+  "length": 3.17,
+  "move": "push-in",
+  "move_speed": 1.437,
+  "brightness": 101.0,
+  "contrast": 60.0,
+  "saturation": 95.7,
+  "warmth": -4.5,
+  "vignette": 111.1,
+  "highlights": 0.063,
+  "shadows": 0.143,
+  "palette": [
+   [
+    "#5b7073",
+    0.29
+   ],
+   [
+    "#102213",
+    0.27
+   ],
+   [
+    "#35434a",
+    0.26
+   ],
+   [
+    "#8fb1a8",
+    0.11
+   ],
+   [
+    "#e3db3b",
+    0.07
+   ]
+  ]
+ },
+ {
+  "i": 38,
+  "start": 39.95,
+  "length": 1.13,
+  "move": "shake",
+  "move_speed": 1.284,
+  "brightness": 173.9,
+  "contrast": 51.3,
+  "saturation": 102.1,
+  "warmth": 62.1,
+  "vignette": 101.6,
+  "highlights": 0.216,
+  "shadows": 0.013,
+  "palette": [
+   [
+    "#bcaf84",
+    0.31
+   ],
+   [
+    "#867b51",
+    0.25
+   ],
+   [
+    "#e7dfc1",
+    0.25
+   ],
+   [
+    "#a15405",
+    0.11
+   ],
+   [
+    "#432d11",
+    0.07
+   ]
+  ]
+ },
+ {
+  "i": 39,
+  "start": 41.09,
+  "length": 1.5,
+  "move": "shake",
+  "move_speed": 1.382,
+  "brightness": 165.8,
+  "contrast": 56.9,
+  "saturation": 114.7,
+  "warmth": 66.7,
+  "vignette": 75.1,
+  "highlights": 0.195,
+  "shadows": 0.021,
+  "palette": [
+   [
+    "#847a58",
+    0.26
+   ],
+   [
+    "#c7b788",
+    0.25
+   ],
+   [
+    "#e1ddc5",
+    0.2
+   ],
+   [
+    "#af6605",
+    0.16
+   ],
+   [
+    "#44280c",
+    0.14
+   ]
+  ]
+ },
+ {
+  "i": 40,
+  "start": 42.59,
+  "length": 1.9,
+  "move": "shake",
+  "move_speed": 0.923,
+  "brightness": 172.6,
+  "contrast": 51.9,
+  "saturation": 37.6,
+  "warmth": 3.3,
+  "vignette": 93.4,
+  "highlights": 0.206,
+  "shadows": 0.014,
+  "palette": [
+   [
+    "#daddd4",
+    0.37
+   ],
+   [
+    "#a1a69e",
+    0.29
+   ],
+   [
+    "#627078",
+    0.24
+   ],
+   [
+    "#38382b",
+    0.07
+   ],
+   [
+    "#f7d923",
+    0.02
+   ]
+  ]
+ },
+ {
+  "i": 41,
+  "start": 44.49,
+  "length": 0.17,
+  "move": "pull-back",
+  "move_speed": 4.477,
+  "brightness": 184.9,
+  "contrast": 43.8,
+  "saturation": 5.4,
+  "warmth": 1.0,
+  "vignette": 121.0,
+  "highlights": 0.265,
+  "shadows": 0.0,
+  "palette": [
+   [
+    "#d1d3d0",
+    0.24
+   ],
+   [
+    "#eeefed",
+    0.21
+   ],
+   [
+    "#b5b7b4",
+    0.2
+   ],
+   [
+    "#949794",
+    0.18
+   ],
+   [
+    "#717471",
+    0.17
+   ]
+  ]
+ },
+ {
+  "i": 42,
+  "start": 44.65,
+  "length": 2.63,
+  "move": "push-in",
+  "move_speed": 0.447,
+  "brightness": 117.8,
+  "contrast": 66.8,
+  "saturation": 73.0,
+  "warmth": -13.4,
+  "vignette": -38.0,
+  "highlights": 0.045,
+  "shadows": 0.187,
+  "palette": [
+   [
+    "#191717",
+    0.29
+   ],
+   [
+    "#71797a",
+    0.22
+   ],
+   [
+    "#859eac",
+    0.19
+   ],
+   [
+    "#bcc7c2",
+    0.17
+   ],
+   [
+    "#404e5b",
+    0.13
+   ]
+  ]
+ },
+ {
+  "i": 43,
+  "start": 47.29,
+  "length": 0.37,
+  "move": "push-in",
+  "move_speed": 1.387,
+  "brightness": 162.6,
+  "contrast": 60.4,
+  "saturation": 40.3,
+  "warmth": -2.2,
+  "vignette": 91.5,
+  "highlights": 0.186,
+  "shadows": 0.046,
+  "palette": [
+   [
+    "#abb4b3",
+    0.28
+   ],
+   [
+    "#e2e5e2",
+    0.26
+   ],
+   [
+    "#898275",
+    0.24
+   ],
+   [
+    "#202324",
+    0.11
+   ],
+   [
+    "#45596e",
+    0.11
+   ]
+  ]
+ },
+ {
+  "i": 44,
+  "start": 47.65,
+  "length": 1.37,
+  "move": "push-in",
+  "move_speed": 0.771,
+  "brightness": 170.9,
+  "contrast": 54.9,
+  "saturation": 141.3,
+  "warmth": 90.2,
+  "vignette": 94.5,
+  "highlights": 0.224,
+  "shadows": 0.012,
+  "palette": [
+   [
+    "#c0aa71",
+    0.25
+   ],
+   [
+    "#83774d",
+    0.25
+   ],
+   [
+    "#d1510e",
+    0.22
+   ],
+   [
+    "#502f11",
+    0.15
+   ],
+   [
+    "#eae3ca",
+    0.13
+   ]
+  ]
+ },
+ {
+  "i": 45,
+  "start": 49.02,
+  "length": 0.57,
+  "move": "shake",
+  "move_speed": 1.348,
+  "brightness": 160.1,
+  "contrast": 62.7,
+  "saturation": 135.3,
+  "warmth": 75.7,
+  "vignette": 117.5,
+  "highlights": 0.198,
+  "shadows": 0.046,
+  "palette": [
+   [
+    "#c43c10",
+    0.21
+   ],
+   [
+    "#7a7152",
+    0.21
+   ],
+   [
+    "#b8a473",
+    0.2
+   ],
+   [
+    "#3b210d",
+    0.19
+   ],
+   [
+    "#e3dec3",
+    0.18
+   ]
+  ]
+ },
+ {
+  "i": 46,
+  "start": 49.59,
+  "length": 0.6,
+  "move": "shake",
+  "move_speed": 1.356,
+  "brightness": 162.9,
+  "contrast": 58.8,
+  "saturation": 149.2,
+  "warmth": 88.1,
+  "vignette": 91.4,
+  "highlights": 0.202,
+  "shadows": 0.028,
+  "palette": [
+   [
+    "#8c7d54",
+    0.31
+   ],
+   [
+    "#dcd4b6",
+    0.21
+   ],
+   [
+    "#42280e",
+    0.17
+   ],
+   [
+    "#bc7114",
+    0.17
+   ],
+   [
+    "#ca270b",
+    0.13
+   ]
+  ]
+ },
+ {
+  "i": 47,
+  "start": 50.19,
+  "length": 1.1,
+  "move": "shake",
+  "move_speed": 1.225,
+  "brightness": 161.3,
+  "contrast": 57.3,
+  "saturation": 155.6,
+  "warmth": 85.4,
+  "vignette": 72.0,
+  "highlights": 0.198,
+  "shadows": 0.023,
+  "palette": [
+   [
+    "#ad7211",
+    0.25
+   ],
+   [
+    "#7a8166",
+    0.24
+   ],
+   [
+    "#483314",
+    0.21
+   ],
+   [
+    "#dcd3be",
+    0.18
+   ],
+   [
+    "#e03b0f",
+    0.13
+   ]
+  ]
+ },
+ {
+  "i": 48,
+  "start": 51.29,
+  "length": 1.3,
+  "move": "push-in",
+  "move_speed": 1.831,
+  "brightness": 170.7,
+  "contrast": 64.4,
+  "saturation": 83.7,
+  "warmth": 39.4,
+  "vignette": 131.5,
+  "highlights": 0.238,
+  "shadows": 0.093,
+  "palette": [
+   [
+    "#bdbb95",
+    0.4
+   ],
+   [
+    "#eaead5",
+    0.27
+   ],
+   [
+    "#837d57",
+    0.16
+   ],
+   [
+    "#1c0c02",
+    0.11
+   ],
+   [
+    "#821c05",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 49,
+  "start": 52.59,
+  "length": 0.73,
+  "move": "push-in",
+  "move_speed": 0.75,
+  "brightness": 173.2,
+  "contrast": 61.7,
+  "saturation": 184.9,
+  "warmth": 119.8,
+  "vignette": 127.4,
+  "highlights": 0.317,
+  "shadows": 0.036,
+  "palette": [
+   [
+    "#5e2d04",
+    0.24
+   ],
+   [
+    "#a87b09",
+    0.22
+   ],
+   [
+    "#ec2d03",
+    0.22
+   ],
+   [
+    "#e1e0c4",
+    0.18
+   ],
+   [
+    "#898654",
+    0.14
+   ]
+  ]
+ },
+ {
+  "i": 50,
+  "start": 53.32,
+  "length": 0.57,
+  "move": "push-in",
+  "move_speed": 0.786,
+  "brightness": 157.7,
+  "contrast": 66.4,
+  "saturation": 147.6,
+  "warmth": 79.8,
+  "vignette": 69.2,
+  "highlights": 0.208,
+  "shadows": 0.055,
+  "palette": [
+   [
+    "#ccc7a6",
+    0.33
+   ],
+   [
+    "#80310b",
+    0.2
+   ],
+   [
+    "#35180a",
+    0.17
+   ],
+   [
+    "#77715a",
+    0.15
+   ],
+   [
+    "#f15114",
+    0.14
+   ]
+  ]
+ },
+ {
+  "i": 51,
+  "start": 53.89,
+  "length": 0.57,
+  "move": "push-in",
+  "move_speed": 1.654,
+  "brightness": 176.8,
+  "contrast": 58.9,
+  "saturation": 63.6,
+  "warmth": 30.3,
+  "vignette": 124.5,
+  "highlights": 0.249,
+  "shadows": 0.063,
+  "palette": [
+   [
+    "#e6e7de",
+    0.32
+   ],
+   [
+    "#c0c0a1",
+    0.3
+   ],
+   [
+    "#919274",
+    0.22
+   ],
+   [
+    "#853506",
+    0.09
+   ],
+   [
+    "#180e07",
+    0.08
+   ]
+  ]
+ },
+ {
+  "i": 52,
+  "start": 54.46,
+  "length": 1.1,
+  "move": "shake",
+  "move_speed": 1.324,
+  "brightness": 161.6,
+  "contrast": 62.4,
+  "saturation": 156.0,
+  "warmth": 88.6,
+  "vignette": 112.6,
+  "highlights": 0.207,
+  "shadows": 0.038,
+  "palette": [
+   [
+    "#d7d3bb",
+    0.26
+   ],
+   [
+    "#933805",
+    0.22
+   ],
+   [
+    "#d67a1d",
+    0.2
+   ],
+   [
+    "#7c774f",
+    0.18
+   ],
+   [
+    "#33220b",
+    0.15
+   ]
+  ]
+ },
+ {
+  "i": 53,
+  "start": 55.56,
+  "length": 0.47,
+  "move": "push-in",
+  "move_speed": 0.669,
+  "brightness": 74.2,
+  "contrast": 61.5,
+  "saturation": 131.7,
+  "warmth": 12.5,
+  "vignette": 12.8,
+  "highlights": 0.012,
+  "shadows": 0.341,
+  "palette": [
+   [
+    "#110b0c",
+    0.38
+   ],
+   [
+    "#3e2739",
+    0.32
+   ],
+   [
+    "#b8aeb2",
+    0.18
+   ],
+   [
+    "#59260e",
+    0.11
+   ],
+   [
+    "#179946",
+    0.01
+   ]
+  ]
+ },
+ {
+  "i": 54,
+  "start": 56.02,
+  "length": 0.57,
+  "move": "pull-back",
+  "move_speed": 1.801,
+  "brightness": 83.6,
+  "contrast": 66.4,
+  "saturation": 140.6,
+  "warmth": 26.8,
+  "vignette": 4.3,
+  "highlights": 0.023,
+  "shadows": 0.338,
+  "palette": [
+   [
+    "#15070a",
+    0.37
+   ],
+   [
+    "#a89494",
+    0.25
+   ],
+   [
+    "#412736",
+    0.24
+   ],
+   [
+    "#4d1609",
+    0.09
+   ],
+   [
+    "#cb1f10",
+    0.05
+   ]
+  ]
+ },
+ {
+  "i": 55,
+  "start": 56.59,
+  "length": 0.63,
+  "move": "push-in",
+  "move_speed": 0.921,
+  "brightness": 115.2,
+  "contrast": 60.2,
+  "saturation": 141.6,
+  "warmth": -41.5,
+  "vignette": 90.9,
+  "highlights": 0.07,
+  "shadows": 0.14,
+  "palette": [
+   [
+    "#5f4a9a",
+    0.35
+   ],
+   [
+    "#272159",
+    0.31
+   ],
+   [
+    "#0d0c1a",
+    0.19
+   ],
+   [
+    "#d8dbe6",
+    0.09
+   ],
+   [
+    "#357351",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 56,
+  "start": 57.23,
+  "length": 0.87,
+  "move": "shake",
+  "move_speed": 2.052,
+  "brightness": 127.5,
+  "contrast": 81.2,
+  "saturation": 81.0,
+  "warmth": -17.5,
+  "vignette": 129.4,
+  "highlights": 0.175,
+  "shadows": 0.217,
+  "palette": [
+   [
+    "#dedee0",
+    0.3
+   ],
+   [
+    "#0a0a12",
+    0.23
+   ],
+   [
+    "#1e1e51",
+    0.22
+   ],
+   [
+    "#625c79",
+    0.13
+   ],
+   [
+    "#aaa9b2",
+    0.12
+   ]
+  ]
+ },
+ {
+  "i": 57,
+  "start": 58.09,
+  "length": 0.83,
+  "move": "pull-back",
+  "move_speed": 2.307,
+  "brightness": 119.7,
+  "contrast": 42.8,
+  "saturation": 156.4,
+  "warmth": -58.8,
+  "vignette": 49.1,
+  "highlights": 0.041,
+  "shadows": 0.031,
+  "palette": [
+   [
+    "#2d2d80",
+    0.4
+   ],
+   [
+    "#19184b",
+    0.33
+   ],
+   [
+    "#6a5495",
+    0.17
+   ],
+   [
+    "#d6d7e3",
+    0.06
+   ],
+   [
+    "#387a55",
+    0.05
+   ]
+  ]
+ },
+ {
+  "i": 58,
+  "start": 58.93,
+  "length": 0.87,
+  "move": "push-in",
+  "move_speed": 0.451,
+  "brightness": 102.2,
+  "contrast": 67.4,
+  "saturation": 152.1,
+  "warmth": -45.2,
+  "vignette": 124.8,
+  "highlights": 0.097,
+  "shadows": 0.23,
+  "palette": [
+   [
+    "#242a87",
+    0.35
+   ],
+   [
+    "#07091e",
+    0.34
+   ],
+   [
+    "#373544",
+    0.18
+   ],
+   [
+    "#e7e7e9",
+    0.12
+   ],
+   [
+    "#9b96b1",
+    0.02
+   ]
+  ]
+ },
+ {
+  "i": 59,
+  "start": 59.79,
+  "length": 1.37,
+  "move": "push-in",
+  "move_speed": 1.316,
+  "brightness": 131.9,
+  "contrast": 68.4,
+  "saturation": 148.3,
+  "warmth": -64.7,
+  "vignette": 83.9,
+  "highlights": 0.066,
+  "shadows": 0.157,
+  "palette": [
+   [
+    "#1f666a",
+    0.32
+   ],
+   [
+    "#38c1c6",
+    0.3
+   ],
+   [
+    "#09170f",
+    0.2
+   ],
+   [
+    "#aab1ad",
+    0.16
+   ],
+   [
+    "#9ac70e",
+    0.02
+   ]
+  ]
+ },
+ {
+  "i": 60,
+  "start": 61.16,
+  "length": 1.07,
+  "move": "shake",
+  "move_speed": 1.654,
+  "brightness": 143.3,
+  "contrast": 57.5,
+  "saturation": 148.0,
+  "warmth": -64.8,
+  "vignette": 87.6,
+  "highlights": 0.025,
+  "shadows": 0.073,
+  "palette": [
+   [
+    "#34b4ba",
+    0.33
+   ],
+   [
+    "#15635d",
+    0.27
+   ],
+   [
+    "#c3c3c3",
+    0.15
+   ],
+   [
+    "#0a2024",
+    0.14
+   ],
+   [
+    "#92967e",
+    0.11
+   ]
+  ]
+ },
+ {
+  "i": 61,
+  "start": 62.23,
+  "length": 1.07,
+  "move": "shake",
+  "move_speed": 1.305,
+  "brightness": 115.4,
+  "contrast": 72.0,
+  "saturation": 151.6,
+  "warmth": -46.8,
+  "vignette": 75.6,
+  "highlights": 0.046,
+  "shadows": 0.268,
+  "palette": [
+   [
+    "#071115",
+    0.31
+   ],
+   [
+    "#2ab2b8",
+    0.22
+   ],
+   [
+    "#848e75",
+    0.18
+   ],
+   [
+    "#136366",
+    0.17
+   ],
+   [
+    "#c3b3c3",
+    0.12
+   ]
+  ]
+ },
+ {
+  "i": 62,
+  "start": 63.29,
+  "length": 4.0,
+  "move": "pan-left",
+  "move_speed": 1.014,
+  "brightness": 136.0,
+  "contrast": 69.7,
+  "saturation": 144.3,
+  "warmth": -64.1,
+  "vignette": 118.6,
+  "highlights": 0.092,
+  "shadows": 0.164,
+  "palette": [
+   [
+    "#2da9b2",
+    0.3
+   ],
+   [
+    "#16737f",
+    0.21
+   ],
+   [
+    "#08130f",
+    0.2
+   ],
+   [
+    "#728170",
+    0.15
+   ],
+   [
+    "#e3e6e5",
+    0.13
+   ]
+  ]
+ },
+ {
+  "i": 63,
+  "start": 67.3,
+  "length": 0.47,
+  "move": "push-in",
+  "move_speed": 1.041,
+  "brightness": 163.6,
+  "contrast": 49.0,
+  "saturation": 48.5,
+  "warmth": -16.4,
+  "vignette": 81.7,
+  "highlights": 0.12,
+  "shadows": 0.018,
+  "palette": [
+   [
+    "#737c72",
+    0.3
+   ],
+   [
+    "#a2ada5",
+    0.3
+   ],
+   [
+    "#d8e2db",
+    0.17
+   ],
+   [
+    "#55b5b3",
+    0.16
+   ],
+   [
+    "#27312b",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 64,
+  "start": 67.76,
+  "length": 0.83,
+  "move": "shake",
+  "move_speed": 0.89,
+  "brightness": 140.2,
+  "contrast": 58.8,
+  "saturation": 78.3,
+  "warmth": -18.0,
+  "vignette": 48.6,
+  "highlights": 0.092,
+  "shadows": 0.07,
+  "palette": [
+   [
+    "#648c85",
+    0.3
+   ],
+   [
+    "#9db4ad",
+    0.25
+   ],
+   [
+    "#3b584d",
+    0.24
+   ],
+   [
+    "#eaebe4",
+    0.11
+   ],
+   [
+    "#161f19",
+    0.11
+   ]
+  ]
+ },
+ {
+  "i": 65,
+  "start": 68.6,
+  "length": 0.73,
+  "move": "push-in",
+  "move_speed": 0.546,
+  "brightness": 153.6,
+  "contrast": 44.5,
+  "saturation": 58.8,
+  "warmth": -22.3,
+  "vignette": 72.8,
+  "highlights": 0.071,
+  "shadows": 0.023,
+  "palette": [
+   [
+    "#94aba2",
+    0.38
+   ],
+   [
+    "#6b756a",
+    0.28
+   ],
+   [
+    "#35928d",
+    0.18
+   ],
+   [
+    "#d5e2db",
+    0.12
+   ],
+   [
+    "#192421",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 66,
+  "start": 69.33,
+  "length": 0.53,
+  "move": "pull-back",
+  "move_speed": 1.841,
+  "brightness": 125.7,
+  "contrast": 59.3,
+  "saturation": 127.5,
+  "warmth": -40.8,
+  "vignette": 152.9,
+  "highlights": 0.152,
+  "shadows": 0.028,
+  "palette": [
+   [
+    "#27635d",
+    0.37
+   ],
+   [
+    "#38867f",
+    0.26
+   ],
+   [
+    "#183735",
+    0.19
+   ],
+   [
+    "#f0f1e7",
+    0.13
+   ],
+   [
+    "#d6ceb4",
+    0.05
+   ]
+  ]
+ },
+ {
+  "i": 67,
+  "start": 69.86,
+  "length": 1.07,
+  "move": "shake",
+  "move_speed": 1.456,
+  "brightness": 151.8,
+  "contrast": 52.6,
+  "saturation": 68.6,
+  "warmth": -12.5,
+  "vignette": 38.8,
+  "highlights": 0.096,
+  "shadows": 0.037,
+  "palette": [
+   [
+    "#bfcfc4",
+    0.32
+   ],
+   [
+    "#3d726d",
+    0.28
+   ],
+   [
+    "#889a91",
+    0.27
+   ],
+   [
+    "#1d2923",
+    0.08
+   ],
+   [
+    "#95581b",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 68,
+  "start": 70.93,
+  "length": 0.37,
+  "move": "push-in",
+  "move_speed": 1.818,
+  "brightness": 148.1,
+  "contrast": 55.9,
+  "saturation": 98.0,
+  "warmth": 1.1,
+  "vignette": 97.0,
+  "highlights": 0.149,
+  "shadows": 0.019,
+  "palette": [
+   [
+    "#6a778b",
+    0.29
+   ],
+   [
+    "#885b32",
+    0.22
+   ],
+   [
+    "#3e2f2c",
+    0.19
+   ],
+   [
+    "#879ecd",
+    0.19
+   ],
+   [
+    "#e7e2d2",
+    0.1
+   ]
+  ]
+ },
+ {
+  "i": 69,
+  "start": 71.3,
+  "length": 1.13,
+  "move": "tilt-down",
+  "move_speed": 1.355,
+  "brightness": 175.6,
+  "contrast": 53.2,
+  "saturation": 77.0,
+  "warmth": -23.8,
+  "vignette": 134.1,
+  "highlights": 0.27,
+  "shadows": 0.007,
+  "palette": [
+   [
+    "#6179a6",
+    0.3
+   ],
+   [
+    "#3b4c6c",
+    0.28
+   ],
+   [
+    "#eeefeb",
+    0.19
+   ],
+   [
+    "#cececa",
+    0.17
+   ],
+   [
+    "#f47748",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 70,
+  "start": 72.43,
+  "length": 2.07,
+  "move": "shake",
+  "move_speed": 1.589,
+  "brightness": 151.1,
+  "contrast": 64.1,
+  "saturation": 115.7,
+  "warmth": -9.5,
+  "vignette": 127.5,
+  "highlights": 0.185,
+  "shadows": 0.039,
+  "palette": [
+   [
+    "#758fc8",
+    0.29
+   ],
+   [
+    "#70482b",
+    0.24
+   ],
+   [
+    "#dad4be",
+    0.2
+   ],
+   [
+    "#34376a",
+    0.17
+   ],
+   [
+    "#261a1b",
+    0.1
+   ]
+  ]
+ },
+ {
+  "i": 71,
+  "start": 74.5,
+  "length": 0.17,
+  "move": "pull-back",
+  "move_speed": 7.363,
+  "brightness": 126.2,
+  "contrast": 63.4,
+  "saturation": 99.4,
+  "warmth": -9.1,
+  "vignette": 12.3,
+  "highlights": 0.082,
+  "shadows": 0.042,
+  "palette": [
+   [
+    "#242f2e",
+    0.42
+   ],
+   [
+    "#496797",
+    0.19
+   ],
+   [
+    "#d4d9d6",
+    0.17
+   ],
+   [
+    "#a7aa7e",
+    0.12
+   ],
+   [
+    "#7f7b4c",
+    0.1
+   ]
+  ]
+ },
+ {
+  "i": 72,
+  "start": 74.67,
+  "length": 1.4,
+  "move": "pan-left",
+  "move_speed": 0.765,
+  "brightness": 65.3,
+  "contrast": 48.7,
+  "saturation": 155.1,
+  "warmth": -4.5,
+  "vignette": 108.5,
+  "highlights": 0.018,
+  "shadows": 0.344,
+  "palette": [
+   [
+    "#192e20",
+    0.39
+   ],
+   [
+    "#060e0a",
+    0.26
+   ],
+   [
+    "#0c7922",
+    0.18
+   ],
+   [
+    "#3e6440",
+    0.14
+   ],
+   [
+    "#d5e44f",
+    0.02
+   ]
+  ]
+ },
+ {
+  "i": 73,
+  "start": 76.07,
+  "length": 0.3,
+  "move": "pull-back",
+  "move_speed": 2.478,
+  "brightness": 100.5,
+  "contrast": 85.8,
+  "saturation": 137.3,
+  "warmth": -4.4,
+  "vignette": 96.6,
+  "highlights": 0.11,
+  "shadows": 0.391,
+  "palette": [
+   [
+    "#040810",
+    0.44
+   ],
+   [
+    "#d3d6d7",
+    0.19
+   ],
+   [
+    "#3e492f",
+    0.17
+   ],
+   [
+    "#a39a8e",
+    0.16
+   ],
+   [
+    "#3a7cd2",
+    0.03
+   ]
+  ]
+ },
+ {
+  "i": 74,
+  "start": 76.37,
+  "length": 0.17,
+  "move": "pull-back",
+  "move_speed": 4.043,
+  "brightness": 113.9,
+  "contrast": 89.7,
+  "saturation": 128.0,
+  "warmth": -20.6,
+  "vignette": 135.0,
+  "highlights": 0.163,
+  "shadows": 0.353,
+  "palette": [
+   [
+    "#050710",
+    0.41
+   ],
+   [
+    "#a4a5a7",
+    0.18
+   ],
+   [
+    "#726f68",
+    0.17
+   ],
+   [
+    "#dbd2da",
+    0.15
+   ],
+   [
+    "#1d6ae6",
+    0.09
+   ]
+  ]
+ },
+ {
+  "i": 75,
+  "start": 76.53,
+  "length": 0.33,
+  "move": "push-in",
+  "move_speed": 1.284,
+  "brightness": 97.2,
+  "contrast": 86.6,
+  "saturation": 134.8,
+  "warmth": -7.1,
+  "vignette": 138.9,
+  "highlights": 0.141,
+  "shadows": 0.42,
+  "palette": [
+   [
+    "#070713",
+    0.51
+   ],
+   [
+    "#989a9d",
+    0.18
+   ],
+   [
+    "#e3cee0",
+    0.15
+   ],
+   [
+    "#817842",
+    0.1
+   ],
+   [
+    "#093086",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 76,
+  "start": 76.87,
+  "length": 0.17,
+  "move": "push-in",
+  "move_speed": 6.903,
+  "brightness": 135.7,
+  "contrast": 80.9,
+  "saturation": 95.0,
+  "warmth": -9.0,
+  "vignette": 130.4,
+  "highlights": 0.163,
+  "shadows": 0.194,
+  "palette": [
+   [
+    "#d3d3d5",
+    0.33
+   ],
+   [
+    "#8c8881",
+    0.24
+   ],
+   [
+    "#04050c",
+    0.22
+   ],
+   [
+    "#424442",
+    0.14
+   ],
+   [
+    "#1f5eb4",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 77,
+  "start": 77.03,
+  "length": 0.63,
+  "move": "pan-right",
+  "move_speed": 2.075,
+  "brightness": 129.0,
+  "contrast": 85.4,
+  "saturation": 101.1,
+  "warmth": -6.8,
+  "vignette": 123.5,
+  "highlights": 0.181,
+  "shadows": 0.24,
+  "palette": [
+   [
+    "#04050f",
+    0.28
+   ],
+   [
+    "#e3e4e4",
+    0.22
+   ],
+   [
+    "#b3b4b0",
+    0.19
+   ],
+   [
+    "#6c7d8c",
+    0.16
+   ],
+   [
+    "#45343c",
+    0.15
+   ]
+  ]
+ },
+ {
+  "i": 78,
+  "start": 77.67,
+  "length": 0.57,
+  "move": "shake",
+  "move_speed": 2.728,
+  "brightness": 132.9,
+  "contrast": 87.3,
+  "saturation": 100.0,
+  "warmth": 6.1,
+  "vignette": 160.5,
+  "highlights": 0.228,
+  "shadows": 0.243,
+  "palette": [
+   [
+    "#0b0b15",
+    0.34
+   ],
+   [
+    "#dce2e1",
+    0.21
+   ],
+   [
+    "#9ba7ad",
+    0.2
+   ],
+   [
+    "#687371",
+    0.17
+   ],
+   [
+    "#ea8b3c",
+    0.09
+   ]
+  ]
+ },
+ {
+  "i": 79,
+  "start": 78.23,
+  "length": 0.17,
+  "move": "pull-back",
+  "move_speed": 8.629,
+  "brightness": 74.6,
+  "contrast": 76.7,
+  "saturation": 166.7,
+  "warmth": -7.0,
+  "vignette": 57.6,
+  "highlights": 0.05,
+  "shadows": 0.523,
+  "palette": [
+   [
+    "#040511",
+    0.6
+   ],
+   [
+    "#6f8293",
+    0.17
+   ],
+   [
+    "#c0cbcd",
+    0.09
+   ],
+   [
+    "#414c54",
+    0.07
+   ],
+   [
+    "#b66826",
+    0.07
+   ]
+  ]
+ },
+ {
+  "i": 80,
+  "start": 78.4,
+  "length": 1.6,
+  "move": "push-in",
+  "move_speed": 1.134,
+  "brightness": 60.0,
+  "contrast": 74.6,
+  "saturation": 173.6,
+  "warmth": -3.1,
+  "vignette": 69.1,
+  "highlights": 0.065,
+  "shadows": 0.672,
+  "palette": [
+   [
+    "#060810",
+    0.73
+   ],
+   [
+    "#a08da4",
+    0.09
+   ],
+   [
+    "#585152",
+    0.08
+   ],
+   [
+    "#e9d6e4",
+    0.07
+   ],
+   [
+    "#8db220",
+    0.03
+   ]
+  ]
+ },
+ {
+  "i": 81,
+  "start": 80.0,
+  "length": 1.1,
+  "move": "pull-back",
+  "move_speed": 1.229,
+  "brightness": 91.1,
+  "contrast": 71.0,
+  "saturation": 214.4,
+  "warmth": -45.2,
+  "vignette": 135.2,
+  "highlights": 0.114,
+  "shadows": 0.235,
+  "palette": [
+   [
+    "#030724",
+    0.43
+   ],
+   [
+    "#0d1e4f",
+    0.33
+   ],
+   [
+    "#90d566",
+    0.12
+   ],
+   [
+    "#29aaed",
+    0.07
+   ],
+   [
+    "#247023",
+    0.05
+   ]
+  ]
+ },
+ {
+  "i": 82,
+  "start": 81.1,
+  "length": 0.47,
+  "move": "shake",
+  "move_speed": 2.058,
+  "brightness": 86.5,
+  "contrast": 72.4,
+  "saturation": 198.1,
+  "warmth": 23.3,
+  "vignette": 39.5,
+  "highlights": 0.074,
+  "shadows": 0.446,
+  "palette": [
+   [
+    "#090f19",
+    0.49
+   ],
+   [
+    "#10551a",
+    0.24
+   ],
+   [
+    "#959714",
+    0.13
+   ],
+   [
+    "#d4c528",
+    0.1
+   ],
+   [
+    "#f0f3ee",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 83,
+  "start": 81.57,
+  "length": 0.37,
+  "move": "push-in",
+  "move_speed": 1.454,
+  "brightness": 152.5,
+  "contrast": 62.6,
+  "saturation": 52.5,
+  "warmth": -6.4,
+  "vignette": 86.2,
+  "highlights": 0.192,
+  "shadows": 0.048,
+  "palette": [
+   [
+    "#66756d",
+    0.3
+   ],
+   [
+    "#c6e0e2",
+    0.25
+   ],
+   [
+    "#95a6a3",
+    0.25
+   ],
+   [
+    "#2b2f2b",
+    0.16
+   ],
+   [
+    "#afb70a",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 84,
+  "start": 81.94,
+  "length": 0.17,
+  "move": "pull-back",
+  "move_speed": 5.33,
+  "brightness": 118.7,
+  "contrast": 77.7,
+  "saturation": 133.7,
+  "warmth": 14.7,
+  "vignette": 169.1,
+  "highlights": 0.113,
+  "shadows": 0.266,
+  "palette": [
+   [
+    "#04081d",
+    0.37
+   ],
+   [
+    "#909c88",
+    0.21
+   ],
+   [
+    "#c3cbb8",
+    0.18
+   ],
+   [
+    "#57634f",
+    0.14
+   ],
+   [
+    "#b9bb0c",
+    0.11
+   ]
+  ]
+ },
+ {
+  "i": 85,
+  "start": 82.1,
+  "length": 1.0,
+  "move": "push-in",
+  "move_speed": 1.725,
+  "brightness": 114.7,
+  "contrast": 83.3,
+  "saturation": 144.3,
+  "warmth": -24.4,
+  "vignette": 155.1,
+  "highlights": 0.179,
+  "shadows": 0.294,
+  "palette": [
+   [
+    "#04091d",
+    0.44
+   ],
+   [
+    "#e1e9d2",
+    0.21
+   ],
+   [
+    "#97a396",
+    0.14
+   ],
+   [
+    "#025da0",
+    0.11
+   ],
+   [
+    "#5c6a57",
+    0.1
+   ]
+  ]
+ },
+ {
+  "i": 86,
+  "start": 83.1,
+  "length": 0.47,
+  "move": "pull-back",
+  "move_speed": 1.042,
+  "brightness": 126.1,
+  "contrast": 58.3,
+  "saturation": 149.8,
+  "warmth": -68.6,
+  "vignette": 89.5,
+  "highlights": 0.114,
+  "shadows": 0.058,
+  "palette": [
+   [
+    "#3b4385",
+    0.46
+   ],
+   [
+    "#1b2049",
+    0.39
+   ],
+   [
+    "#0d65ef",
+    0.08
+   ],
+   [
+    "#d9dde0",
+    0.05
+   ],
+   [
+    "#e67532",
+    0.02
+   ]
+  ]
+ },
+ {
+  "i": 87,
+  "start": 83.57,
+  "length": 3.24,
+  "move": "shake",
+  "move_speed": 3.961,
+  "brightness": 138.4,
+  "contrast": 75.5,
+  "saturation": 135.9,
+  "warmth": -60.0,
+  "vignette": 158.1,
+  "highlights": 0.207,
+  "shadows": 0.123,
+  "palette": [
+   [
+    "#343a6b",
+    0.31
+   ],
+   [
+    "#0c0d2f",
+    0.25
+   ],
+   [
+    "#218de7",
+    0.17
+   ],
+   [
+    "#dbd9db",
+    0.14
+   ],
+   [
+    "#948e99",
+    0.13
+   ]
+  ]
+ },
+ {
+  "i": 88,
+  "start": 86.81,
+  "length": 0.4,
+  "move": "pull-back",
+  "move_speed": 1.023,
+  "brightness": 125.8,
+  "contrast": 47.9,
+  "saturation": 130.6,
+  "warmth": -55.3,
+  "vignette": 86.7,
+  "highlights": 0.05,
+  "shadows": 0.035,
+  "palette": [
+   [
+    "#293060",
+    0.35
+   ],
+   [
+    "#61688a",
+    0.27
+   ],
+   [
+    "#2e3898",
+    0.22
+   ],
+   [
+    "#0f102c",
+    0.1
+   ],
+   [
+    "#d7d8d0",
+    0.07
+   ]
+  ]
+ },
+ {
+  "i": 89,
+  "start": 87.2,
+  "length": 1.3,
+  "move": "shake",
+  "move_speed": 1.873,
+  "brightness": 134.5,
+  "contrast": 66.3,
+  "saturation": 126.5,
+  "warmth": -29.4,
+  "vignette": 121.4,
+  "highlights": 0.136,
+  "shadows": 0.097,
+  "palette": [
+   [
+    "#0d1242",
+    0.28
+   ],
+   [
+    "#6777a5",
+    0.25
+   ],
+   [
+    "#255c40",
+    0.24
+   ],
+   [
+    "#cfd4d4",
+    0.18
+   ],
+   [
+    "#d1ab3b",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 90,
+  "start": 88.5,
+  "length": 0.6,
+  "move": "tilt-up",
+  "move_speed": 0.593,
+  "brightness": 128.5,
+  "contrast": 60.8,
+  "saturation": 123.8,
+  "warmth": -42.2,
+  "vignette": 104.1,
+  "highlights": 0.134,
+  "shadows": 0.049,
+  "palette": [
+   [
+    "#171d55",
+    0.46
+   ],
+   [
+    "#464d74",
+    0.26
+   ],
+   [
+    "#e8eae7",
+    0.12
+   ],
+   [
+    "#7b91b5",
+    0.11
+   ],
+   [
+    "#babe40",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 91,
+  "start": 89.11,
+  "length": 3.57,
+  "move": "shake",
+  "move_speed": 1.461,
+  "brightness": 175.4,
+  "contrast": 50.0,
+  "saturation": 73.4,
+  "warmth": -9.3,
+  "vignette": 106.2,
+  "highlights": 0.203,
+  "shadows": 0.011,
+  "palette": [
+   [
+    "#dfe1de",
+    0.26
+   ],
+   [
+    "#a2a4a2",
+    0.24
+   ],
+   [
+    "#455b63",
+    0.22
+   ],
+   [
+    "#4a9eb9",
+    0.18
+   ],
+   [
+    "#becf17",
+    0.1
+   ]
+  ]
+ },
+ {
+  "i": 92,
+  "start": 92.67,
+  "length": 0.43,
+  "move": "tilt-down",
+  "move_speed": 1.334,
+  "brightness": 88.6,
+  "contrast": 84.1,
+  "saturation": 133.7,
+  "warmth": 4.5,
+  "vignette": 94.6,
+  "highlights": 0.102,
+  "shadows": 0.442,
+  "palette": [
+   [
+    "#06060e",
+    0.45
+   ],
+   [
+    "#cccdca",
+    0.22
+   ],
+   [
+    "#282a3b",
+    0.21
+   ],
+   [
+    "#798f44",
+    0.08
+   ],
+   [
+    "#db3128",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 93,
+  "start": 93.11,
+  "length": 0.17,
+  "move": "tilt-down",
+  "move_speed": 5.829,
+  "brightness": 113.9,
+  "contrast": 88.2,
+  "saturation": 116.9,
+  "warmth": 13.9,
+  "vignette": 140.5,
+  "highlights": 0.138,
+  "shadows": 0.34,
+  "palette": [
+   [
+    "#090910",
+    0.41
+   ],
+   [
+    "#d9dad7",
+    0.2
+   ],
+   [
+    "#9f9e9c",
+    0.2
+   ],
+   [
+    "#6b7c32",
+    0.15
+   ],
+   [
+    "#ed3c27",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 94,
+  "start": 93.27,
+  "length": 0.9,
+  "move": "pan-right",
+  "move_speed": 0.562,
+  "brightness": 111.6,
+  "contrast": 87.5,
+  "saturation": 116.1,
+  "warmth": 16.2,
+  "vignette": 71.6,
+  "highlights": 0.11,
+  "shadows": 0.35,
+  "palette": [
+   [
+    "#0f0b11",
+    0.45
+   ],
+   [
+    "#d1d1cf",
+    0.26
+   ],
+   [
+    "#8f8e8f",
+    0.18
+   ],
+   [
+    "#8eb40b",
+    0.06
+   ],
+   [
+    "#c61e17",
+    0.05
+   ]
+  ]
+ },
+ {
+  "i": 95,
+  "start": 94.17,
+  "length": 1.63,
+  "move": "shake",
+  "move_speed": 0.813,
+  "brightness": 104.2,
+  "contrast": 86.5,
+  "saturation": 128.0,
+  "warmth": 19.8,
+  "vignette": 118.6,
+  "highlights": 0.107,
+  "shadows": 0.366,
+  "palette": [
+   [
+    "#020208",
+    0.34
+   ],
+   [
+    "#828980",
+    0.21
+   ],
+   [
+    "#c9cbc7",
+    0.19
+   ],
+   [
+    "#2e2328",
+    0.14
+   ],
+   [
+    "#dc1f17",
+    0.1
+   ]
+  ]
+ },
+ {
+  "i": 96,
+  "start": 95.81,
+  "length": 0.8,
+  "move": "shake",
+  "move_speed": 1.591,
+  "brightness": 106.1,
+  "contrast": 99.0,
+  "saturation": 202.6,
+  "warmth": 68.4,
+  "vignette": 217.8,
+  "highlights": 0.218,
+  "shadows": 0.492,
+  "palette": [
+   [
+    "#05040c",
+    0.51
+   ],
+   [
+    "#d6130e",
+    0.36
+   ],
+   [
+    "#41563d",
+    0.05
+   ],
+   [
+    "#eeecec",
+    0.04
+   ],
+   [
+    "#a19691",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 97,
+  "start": 96.61,
+  "length": 0.17,
+  "move": "tilt-down",
+  "move_speed": 9.263,
+  "brightness": 113.6,
+  "contrast": 84.1,
+  "saturation": 149.9,
+  "warmth": 44.5,
+  "vignette": 97.7,
+  "highlights": 0.135,
+  "shadows": 0.315,
+  "palette": [
+   [
+    "#0e080d",
+    0.38
+   ],
+   [
+    "#c1150f",
+    0.23
+   ],
+   [
+    "#9b918e",
+    0.17
+   ],
+   [
+    "#5b5f4f",
+    0.13
+   ],
+   [
+    "#e4e2e1",
+    0.09
+   ]
+  ]
+ },
+ {
+  "i": 98,
+  "start": 96.78,
+  "length": 1.5,
+  "move": "tilt-down",
+  "move_speed": 0.209,
+  "brightness": 110.8,
+  "contrast": 84.0,
+  "saturation": 131.9,
+  "warmth": 30.6,
+  "vignette": 120.3,
+  "highlights": 0.121,
+  "shadows": 0.318,
+  "palette": [
+   [
+    "#110d10",
+    0.43
+   ],
+   [
+    "#a4a7a0",
+    0.17
+   ],
+   [
+    "#c31b12",
+    0.16
+   ],
+   [
+    "#6d7864",
+    0.15
+   ],
+   [
+    "#e2e3e0",
+    0.1
+   ]
+  ]
+ },
+ {
+  "i": 99,
+  "start": 98.28,
+  "length": 2.1,
+  "move": "push-in",
+  "move_speed": 1.082,
+  "brightness": 99.6,
+  "contrast": 82.8,
+  "saturation": 134.0,
+  "warmth": 20.4,
+  "vignette": 32.3,
+  "highlights": 0.09,
+  "shadows": 0.388,
+  "palette": [
+   [
+    "#0c0b11",
+    0.48
+   ],
+   [
+    "#898c89",
+    0.19
+   ],
+   [
+    "#caccc8",
+    0.14
+   ],
+   [
+    "#d34e2f",
+    0.1
+   ],
+   [
+    "#617c1a",
+    0.09
+   ]
+  ]
+ },
+ {
+  "i": 100,
+  "start": 100.38,
+  "length": 3.04,
+  "move": "shake",
+  "move_speed": 1.625,
+  "brightness": 163.8,
+  "contrast": 60.5,
+  "saturation": 177.7,
+  "warmth": 107.8,
+  "vignette": 78.5,
+  "highlights": 0.186,
+  "shadows": 0.035,
+  "palette": [
+   [
+    "#a94b0f",
+    0.29
+   ],
+   [
+    "#d98522",
+    0.22
+   ],
+   [
+    "#472109",
+    0.21
+   ],
+   [
+    "#dcd5c5",
+    0.15
+   ],
+   [
+    "#898256",
+    0.13
+   ]
+  ]
+ },
+ {
+  "i": 101,
+  "start": 103.41,
+  "length": 0.17,
+  "move": "push-in",
+  "move_speed": 0.573,
+  "brightness": 86.5,
+  "contrast": 42.7,
+  "saturation": 125.0,
+  "warmth": 21.2,
+  "vignette": 90.1,
+  "highlights": 0.02,
+  "shadows": 0.101,
+  "palette": [
+   [
+    "#341a21",
+    0.45
+   ],
+   [
+    "#57364a",
+    0.35
+   ],
+   [
+    "#755a67",
+    0.16
+   ],
+   [
+    "#cfc11f",
+    0.03
+   ],
+   [
+    "#e6d4be",
+    0.02
+   ]
+  ]
+ },
+ {
+  "i": 102,
+  "start": 103.58,
+  "length": 0.83,
+  "move": "push-in",
+  "move_speed": 0.603,
+  "brightness": 60.1,
+  "contrast": 42.8,
+  "saturation": 176.8,
+  "warmth": -14.4,
+  "vignette": 75.5,
+  "highlights": 0.02,
+  "shadows": 0.392,
+  "palette": [
+   [
+    "#120c19",
+    0.51
+   ],
+   [
+    "#1c0c42",
+    0.27
+   ],
+   [
+    "#353154",
+    0.17
+   ],
+   [
+    "#acc120",
+    0.03
+   ],
+   [
+    "#e5e3dc",
+    0.02
+   ]
+  ]
+ },
+ {
+  "i": 103,
+  "start": 104.41,
+  "length": 0.7,
+  "move": "push-in",
+  "move_speed": 0.735,
+  "brightness": 78.9,
+  "contrast": 70.6,
+  "saturation": 153.1,
+  "warmth": 13.9,
+  "vignette": 101.7,
+  "highlights": 0.072,
+  "shadows": 0.389,
+  "palette": [
+   [
+    "#0a0f10",
+    0.42
+   ],
+   [
+    "#252139",
+    0.29
+   ],
+   [
+    "#6c7b15",
+    0.11
+   ],
+   [
+    "#d3d1d3",
+    0.1
+   ],
+   [
+    "#b1c112",
+    0.08
+   ]
+  ]
+ },
+ {
+  "i": 104,
+  "start": 105.11,
+  "length": 0.97,
+  "move": "shake",
+  "move_speed": 1.721,
+  "brightness": 87.0,
+  "contrast": 80.0,
+  "saturation": 133.5,
+  "warmth": 9.3,
+  "vignette": 143.4,
+  "highlights": 0.128,
+  "shadows": 0.372,
+  "palette": [
+   [
+    "#09180d",
+    0.49
+   ],
+   [
+    "#2b2b33",
+    0.22
+   ],
+   [
+    "#e6e5e9",
+    0.15
+   ],
+   [
+    "#9aa40d",
+    0.09
+   ],
+   [
+    "#9d8798",
+    0.05
+   ]
+  ]
+ },
+ {
+  "i": 105,
+  "start": 106.08,
+  "length": 0.93,
+  "move": "push-in",
+  "move_speed": 0.447,
+  "brightness": 91.9,
+  "contrast": 71.8,
+  "saturation": 170.6,
+  "warmth": 0.1,
+  "vignette": 146.6,
+  "highlights": 0.109,
+  "shadows": 0.275,
+  "palette": [
+   [
+    "#0d0f2a",
+    0.6
+   ],
+   [
+    "#6a2012",
+    0.14
+   ],
+   [
+    "#615f92",
+    0.1
+   ],
+   [
+    "#ede8ca",
+    0.1
+   ],
+   [
+    "#d78e58",
+    0.05
+   ]
+  ]
+ },
+ {
+  "i": 106,
+  "start": 107.01,
+  "length": 1.07,
+  "move": "push-in",
+  "move_speed": 1.598,
+  "brightness": 152.6,
+  "contrast": 79.2,
+  "saturation": 96.5,
+  "warmth": 22.6,
+  "vignette": 133.0,
+  "highlights": 0.265,
+  "shadows": 0.166,
+  "palette": [
+   [
+    "#d3d2d0",
+    0.38
+   ],
+   [
+    "#323560",
+    0.2
+   ],
+   [
+    "#160f1c",
+    0.2
+   ],
+   [
+    "#e24340",
+    0.14
+   ],
+   [
+    "#a19c2f",
+    0.08
+   ]
+  ]
+ },
+ {
+  "i": 107,
+  "start": 108.08,
+  "length": 0.17,
+  "move": "pull-back",
+  "move_speed": 7.653,
+  "brightness": 110.2,
+  "contrast": 61.6,
+  "saturation": 128.4,
+  "warmth": 2.3,
+  "vignette": 97.9,
+  "highlights": 0.037,
+  "shadows": 0.075,
+  "palette": [
+   [
+    "#1e182f",
+    0.47
+   ],
+   [
+    "#5c568b",
+    0.19
+   ],
+   [
+    "#bb8b56",
+    0.13
+   ],
+   [
+    "#b9acbc",
+    0.12
+   ],
+   [
+    "#763325",
+    0.09
+   ]
+  ]
+ },
+ {
+  "i": 108,
+  "start": 108.25,
+  "length": 2.73,
+  "move": "shake",
+  "move_speed": 1.425,
+  "brightness": 98.8,
+  "contrast": 56.0,
+  "saturation": 121.7,
+  "warmth": -5.3,
+  "vignette": 72.2,
+  "highlights": 0.037,
+  "shadows": 0.108,
+  "palette": [
+   [
+    "#28294c",
+    0.39
+   ],
+   [
+    "#121126",
+    0.26
+   ],
+   [
+    "#7c584c",
+    0.14
+   ],
+   [
+    "#af967d",
+    0.14
+   ],
+   [
+    "#cec8cc",
+    0.07
+   ]
+  ]
+ },
+ {
+  "i": 109,
+  "start": 110.98,
+  "length": 1.13,
+  "move": "pull-back",
+  "move_speed": 1.627,
+  "brightness": 88.2,
+  "contrast": 57.9,
+  "saturation": 143.5,
+  "warmth": -9.1,
+  "vignette": 88.8,
+  "highlights": 0.063,
+  "shadows": 0.178,
+  "palette": [
+   [
+    "#0f1029",
+    0.39
+   ],
+   [
+    "#37375b",
+    0.33
+   ],
+   [
+    "#a57c67",
+    0.11
+   ],
+   [
+    "#44140c",
+    0.11
+   ],
+   [
+    "#e2ddd9",
+    0.07
+   ]
+  ]
+ },
+ {
+  "i": 110,
+  "start": 112.12,
+  "length": 2.57,
+  "move": "push-in",
+  "move_speed": 1.036,
+  "brightness": 153.1,
+  "contrast": 70.7,
+  "saturation": 55.5,
+  "warmth": -15.8,
+  "vignette": 152.9,
+  "highlights": 0.181,
+  "shadows": 0.104,
+  "palette": [
+   [
+    "#bec6c4",
+    0.26
+   ],
+   [
+    "#365a5e",
+    0.24
+   ],
+   [
+    "#e0e8e8",
+    0.21
+   ],
+   [
+    "#969f9d",
+    0.15
+   ],
+   [
+    "#0d1619",
+    0.13
+   ]
+  ]
+ },
+ {
+  "i": 111,
+  "start": 114.68,
+  "length": 2.6,
+  "move": "shake",
+  "move_speed": 0.723,
+  "brightness": 113.8,
+  "contrast": 60.5,
+  "saturation": 87.8,
+  "warmth": -26.9,
+  "vignette": 81.1,
+  "highlights": 0.029,
+  "shadows": 0.1,
+  "palette": [
+   [
+    "#405356",
+    0.27
+   ],
+   [
+    "#1b2627",
+    0.26
+   ],
+   [
+    "#5f7d81",
+    0.21
+   ],
+   [
+    "#c5baae",
+    0.14
+   ],
+   [
+    "#4ebfc2",
+    0.12
+   ]
+  ]
+ },
+ {
+  "i": 112,
+  "start": 117.28,
+  "length": 0.7,
+  "move": "push-in",
+  "move_speed": 0.298,
+  "brightness": 125.5,
+  "contrast": 67.9,
+  "saturation": 120.0,
+  "warmth": -1.0,
+  "vignette": 126.3,
+  "highlights": 0.084,
+  "shadows": 0.136,
+  "palette": [
+   [
+    "#1c1d1e",
+    0.27
+   ],
+   [
+    "#556569",
+    0.25
+   ],
+   [
+    "#32959a",
+    0.21
+   ],
+   [
+    "#c6792d",
+    0.16
+   ],
+   [
+    "#daccc0",
+    0.11
+   ]
+  ]
+ },
+ {
+  "i": 113,
+  "start": 117.98,
+  "length": 1.03,
+  "move": "shake",
+  "move_speed": 0.958,
+  "brightness": 150.4,
+  "contrast": 54.1,
+  "saturation": 131.5,
+  "warmth": 19.8,
+  "vignette": 75.9,
+  "highlights": 0.12,
+  "shadows": 0.038,
+  "palette": [
+   [
+    "#9b6220",
+    0.34
+   ],
+   [
+    "#36858e",
+    0.23
+   ],
+   [
+    "#2a3632",
+    0.15
+   ],
+   [
+    "#e1e0d9",
+    0.15
+   ],
+   [
+    "#8c939b",
+    0.13
+   ]
+  ]
+ },
+ {
+  "i": 114,
+  "start": 119.02,
+  "length": 1.13,
+  "move": "push-in",
+  "move_speed": 0.434,
+  "brightness": 93.3,
+  "contrast": 69.5,
+  "saturation": 129.8,
+  "warmth": -29.7,
+  "vignette": 173.0,
+  "highlights": 0.114,
+  "shadows": 0.229,
+  "palette": [
+   [
+    "#122639",
+    0.29
+   ],
+   [
+    "#1f4263",
+    0.22
+   ],
+   [
+    "#0c0c0c",
+    0.21
+   ],
+   [
+    "#717c88",
+    0.16
+   ],
+   [
+    "#f1f3f2",
+    0.12
+   ]
+  ]
+ },
+ {
+  "i": 115,
+  "start": 120.15,
+  "length": 0.77,
+  "move": "pull-back",
+  "move_speed": 1.334,
+  "brightness": 124.5,
+  "contrast": 64.8,
+  "saturation": 152.0,
+  "warmth": -33.6,
+  "vignette": 64.4,
+  "highlights": 0.059,
+  "shadows": 0.116,
+  "palette": [
+   [
+    "#226f74",
+    0.31
+   ],
+   [
+    "#161e26",
+    0.29
+   ],
+   [
+    "#41b0b4",
+    0.18
+   ],
+   [
+    "#ad7336",
+    0.12
+   ],
+   [
+    "#dcd1c1",
+    0.1
+   ]
+  ]
+ },
+ {
+  "i": 116,
+  "start": 120.92,
+  "length": 1.23,
+  "move": "shake",
+  "move_speed": 1.124,
+  "brightness": 118.2,
+  "contrast": 66.9,
+  "saturation": 105.0,
+  "warmth": -19.9,
+  "vignette": 106.3,
+  "highlights": 0.064,
+  "shadows": 0.157,
+  "palette": [
+   [
+    "#212826",
+    0.36
+   ],
+   [
+    "#516d6f",
+    0.26
+   ],
+   [
+    "#47adb0",
+    0.21
+   ],
+   [
+    "#c8bfc4",
+    0.1
+   ],
+   [
+    "#cd7c34",
+    0.07
+   ]
+  ]
+ },
+ {
+  "i": 117,
+  "start": 122.15,
+  "length": 0.8,
+  "move": "shake",
+  "move_speed": 0.512,
+  "brightness": 121.0,
+  "contrast": 67.0,
+  "saturation": 134.0,
+  "warmth": -32.8,
+  "vignette": 121.9,
+  "highlights": 0.118,
+  "shadows": 0.136,
+  "palette": [
+   [
+    "#3a8d90",
+    0.33
+   ],
+   [
+    "#2f4f47",
+    0.32
+   ],
+   [
+    "#151414",
+    0.18
+   ],
+   [
+    "#e1e3e1",
+    0.15
+   ],
+   [
+    "#e6d42d",
+    0.02
+   ]
+  ]
+ },
+ {
+  "i": 118,
+  "start": 122.95,
+  "length": 0.53,
+  "move": "pan-right",
+  "move_speed": 1.11,
+  "brightness": 128.4,
+  "contrast": 73.8,
+  "saturation": 88.4,
+  "warmth": -19.4,
+  "vignette": 136.4,
+  "highlights": 0.174,
+  "shadows": 0.163,
+  "palette": [
+   [
+    "#2f8281",
+    0.25
+   ],
+   [
+    "#171e23",
+    0.24
+   ],
+   [
+    "#554d3b",
+    0.22
+   ],
+   [
+    "#c8d0d0",
+    0.15
+   ],
+   [
+    "#e9efef",
+    0.15
+   ]
+  ]
+ },
+ {
+  "i": 119,
+  "start": 123.49,
+  "length": 0.37,
+  "move": "push-in",
+  "move_speed": 1.152,
+  "brightness": 119.7,
+  "contrast": 82.5,
+  "saturation": 71.5,
+  "warmth": -1.7,
+  "vignette": 160.7,
+  "highlights": 0.148,
+  "shadows": 0.275,
+  "palette": [
+   [
+    "#0f1315",
+    0.3
+   ],
+   [
+    "#375156",
+    0.24
+   ],
+   [
+    "#dde3e3",
+    0.23
+   ],
+   [
+    "#a8acab",
+    0.16
+   ],
+   [
+    "#a9841d",
+    0.07
+   ]
+  ]
+ },
+ {
+  "i": 120,
+  "start": 123.85,
+  "length": 0.17,
+  "move": "pull-back",
+  "move_speed": 3.56,
+  "brightness": 113.6,
+  "contrast": 56.3,
+  "saturation": 108.5,
+  "warmth": -15.3,
+  "vignette": 65.0,
+  "highlights": 0.023,
+  "shadows": 0.092,
+  "palette": [
+   [
+    "#3a4b4a",
+    0.28
+   ],
+   [
+    "#132427",
+    0.2
+   ],
+   [
+    "#9b8769",
+    0.2
+   ],
+   [
+    "#2a8085",
+    0.19
+   ],
+   [
+    "#b2bbb1",
+    0.13
+   ]
+  ]
+ },
+ {
+  "i": 121,
+  "start": 124.02,
+  "length": 1.87,
+  "move": "shake",
+  "move_speed": 1.315,
+  "brightness": 118.3,
+  "contrast": 70.0,
+  "saturation": 104.9,
+  "warmth": -25.7,
+  "vignette": 105.9,
+  "highlights": 0.12,
+  "shadows": 0.134,
+  "palette": [
+   [
+    "#335355",
+    0.42
+   ],
+   [
+    "#0e1a1d",
+    0.2
+   ],
+   [
+    "#d8dbda",
+    0.18
+   ],
+   [
+    "#349397",
+    0.11
+   ],
+   [
+    "#b0aa8f",
+    0.1
+   ]
+  ]
+ },
+ {
+  "i": 122,
+  "start": 125.89,
+  "length": 1.3,
+  "move": "push-in",
+  "move_speed": 0.598,
+  "brightness": 135.4,
+  "contrast": 70.3,
+  "saturation": 95.4,
+  "warmth": -13.0,
+  "vignette": 135.9,
+  "highlights": 0.138,
+  "shadows": 0.066,
+  "palette": [
+   [
+    "#233130",
+    0.32
+   ],
+   [
+    "#dadbd6",
+    0.22
+   ],
+   [
+    "#27696c",
+    0.21
+   ],
+   [
+    "#8ca8ae",
+    0.14
+   ],
+   [
+    "#b49a5a",
+    0.11
+   ]
+  ]
+ },
+ {
+  "i": 123,
+  "start": 127.19,
+  "length": 1.33,
+  "move": "pull-back",
+  "move_speed": 1.943,
+  "brightness": 166.4,
+  "contrast": 66.8,
+  "saturation": 62.8,
+  "warmth": -16.2,
+  "vignette": 161.5,
+  "highlights": 0.258,
+  "shadows": 0.031,
+  "palette": [
+   [
+    "#c9c2c4",
+    0.28
+   ],
+   [
+    "#e8e9e7",
+    0.26
+   ],
+   [
+    "#1f6569",
+    0.19
+   ],
+   [
+    "#162d30",
+    0.14
+   ],
+   [
+    "#a09f9e",
+    0.12
+   ]
+  ]
+ },
+ {
+  "i": 124,
+  "start": 128.52,
+  "length": 1.13,
+  "move": "shake",
+  "move_speed": 0.969,
+  "brightness": 121.4,
+  "contrast": 71.6,
+  "saturation": 101.9,
+  "warmth": -29.1,
+  "vignette": 127.7,
+  "highlights": 0.149,
+  "shadows": 0.11,
+  "palette": [
+   [
+    "#2f4d50",
+    0.32
+   ],
+   [
+    "#152124",
+    0.22
+   ],
+   [
+    "#dde0dd",
+    0.22
+   ],
+   [
+    "#2c8a90",
+    0.18
+   ],
+   [
+    "#a1937a",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 125,
+  "start": 129.66,
+  "length": 1.23,
+  "move": "shake",
+  "move_speed": 0.751,
+  "brightness": 129.6,
+  "contrast": 77.9,
+  "saturation": 80.7,
+  "warmth": 1.4,
+  "vignette": 94.5,
+  "highlights": 0.151,
+  "shadows": 0.195,
+  "palette": [
+   [
+    "#181e1f",
+    0.33
+   ],
+   [
+    "#a4aba8",
+    0.2
+   ],
+   [
+    "#e7e8e2",
+    0.18
+   ],
+   [
+    "#447073",
+    0.18
+   ],
+   [
+    "#a8823e",
+    0.11
+   ]
+  ]
+ },
+ {
+  "i": 126,
+  "start": 130.89,
+  "length": 1.1,
+  "move": "shake",
+  "move_speed": 1.654,
+  "brightness": 102.8,
+  "contrast": 64.5,
+  "saturation": 149.1,
+  "warmth": -45.2,
+  "vignette": 120.3,
+  "highlights": 0.07,
+  "shadows": 0.188,
+  "palette": [
+   [
+    "#164956",
+    0.31
+   ],
+   [
+    "#0d1921",
+    0.31
+   ],
+   [
+    "#2f838e",
+    0.21
+   ],
+   [
+    "#dce1e0",
+    0.11
+   ],
+   [
+    "#a2a38d",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 127,
+  "start": 131.99,
+  "length": 0.17,
+  "move": "pull-back",
+  "move_speed": 7.517,
+  "brightness": 156.4,
+  "contrast": 53.8,
+  "saturation": 107.5,
+  "warmth": -28.1,
+  "vignette": 134.1,
+  "highlights": 0.174,
+  "shadows": 0.001,
+  "palette": [
+   [
+    "#dae1dd",
+    0.28
+   ],
+   [
+    "#175a5f",
+    0.26
+   ],
+   [
+    "#309298",
+    0.19
+   ],
+   [
+    "#a99a74",
+    0.14
+   ],
+   [
+    "#736d54",
+    0.13
+   ]
+  ]
+ },
+ {
+  "i": 128,
+  "start": 132.16,
+  "length": 2.17,
+  "move": "push-in",
+  "move_speed": 0.705,
+  "brightness": 176.4,
+  "contrast": 47.8,
+  "saturation": 100.9,
+  "warmth": 60.4,
+  "vignette": 93.8,
+  "highlights": 0.209,
+  "shadows": 0.001,
+  "palette": [
+   [
+    "#a37a4c",
+    0.27
+   ],
+   [
+    "#e2e2df",
+    0.25
+   ],
+   [
+    "#cd9c62",
+    0.23
+   ],
+   [
+    "#795b35",
+    0.2
+   ],
+   [
+    "#364155",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 129,
+  "start": 134.32,
+  "length": 0.7,
+  "move": "push-in",
+  "move_speed": 0.63,
+  "brightness": 107.5,
+  "contrast": 64.6,
+  "saturation": 102.2,
+  "warmth": -30.3,
+  "vignette": 47.4,
+  "highlights": 0.06,
+  "shadows": 0.198,
+  "palette": [
+   [
+    "#0d1519",
+    0.24
+   ],
+   [
+    "#304849",
+    0.22
+   ],
+   [
+    "#6a6f6d",
+    0.21
+   ],
+   [
+    "#35999d",
+    0.21
+   ],
+   [
+    "#ced3c9",
+    0.12
+   ]
+  ]
+ },
+ {
+  "i": 130,
+  "start": 135.03,
+  "length": 2.1,
+  "move": "pan-right",
+  "move_speed": 0.574,
+  "brightness": 127.1,
+  "contrast": 67.8,
+  "saturation": 87.1,
+  "warmth": -20.2,
+  "vignette": 61.3,
+  "highlights": 0.071,
+  "shadows": 0.155,
+  "palette": [
+   [
+    "#64989e",
+    0.33
+   ],
+   [
+    "#14191c",
+    0.23
+   ],
+   [
+    "#425b60",
+    0.22
+   ],
+   [
+    "#cacac5",
+    0.17
+   ],
+   [
+    "#e4534e",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 131,
+  "start": 137.13,
+  "length": 1.17,
+  "move": "shake",
+  "move_speed": 1.018,
+  "brightness": 98.2,
+  "contrast": 53.0,
+  "saturation": 98.6,
+  "warmth": -27.1,
+  "vignette": 57.0,
+  "highlights": 0.054,
+  "shadows": 0.1,
+  "palette": [
+   [
+    "#354b4f",
+    0.43
+   ],
+   [
+    "#36797d",
+    0.24
+   ],
+   [
+    "#121b1c",
+    0.18
+   ],
+   [
+    "#8e8770",
+    0.09
+   ],
+   [
+    "#dfdfda",
+    0.07
+   ]
+  ]
+ },
+ {
+  "i": 132,
+  "start": 138.29,
+  "length": 0.17,
+  "move": "push-in",
+  "move_speed": 0.346,
+  "brightness": 64.7,
+  "contrast": 41.6,
+  "saturation": 139.9,
+  "warmth": -4.6,
+  "vignette": 53.5,
+  "highlights": 0.019,
+  "shadows": 0.265,
+  "palette": [
+   [
+    "#19121b",
+    0.46
+   ],
+   [
+    "#2e2d40",
+    0.41
+   ],
+   [
+    "#5f5a69",
+    0.06
+   ],
+   [
+    "#748418",
+    0.04
+   ],
+   [
+    "#d5cfcc",
+    0.03
+   ]
+  ]
+ },
+ {
+  "i": 133,
+  "start": 138.46,
+  "length": 1.97,
+  "move": "tilt-up",
+  "move_speed": 0.806,
+  "brightness": 66.2,
+  "contrast": 51.5,
+  "saturation": 144.9,
+  "warmth": -4.6,
+  "vignette": 72.0,
+  "highlights": 0.039,
+  "shadows": 0.34,
+  "palette": [
+   [
+    "#161221",
+    0.63
+   ],
+   [
+    "#302f52",
+    0.23
+   ],
+   [
+    "#949d20",
+    0.05
+   ],
+   [
+    "#69251c",
+    0.05
+   ],
+   [
+    "#d9c7d9",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 134,
+  "start": 140.43,
+  "length": 0.17,
+  "move": "push-in",
+  "move_speed": 4.504,
+  "brightness": 149.5,
+  "contrast": 82.8,
+  "saturation": 88.7,
+  "warmth": 13.7,
+  "vignette": 175.2,
+  "highlights": 0.256,
+  "shadows": 0.169,
+  "palette": [
+   [
+    "#1c1329",
+    0.34
+   ],
+   [
+    "#e6dfe7",
+    0.24
+   ],
+   [
+    "#c1b2c5",
+    0.22
+   ],
+   [
+    "#c02126",
+    0.13
+   ],
+   [
+    "#876c86",
+    0.07
+   ]
+  ]
+ },
+ {
+  "i": 135,
+  "start": 140.59,
+  "length": 0.5,
+  "move": "shake",
+  "move_speed": 2.455,
+  "brightness": 161.8,
+  "contrast": 69.1,
+  "saturation": 74.6,
+  "warmth": 24.0,
+  "vignette": 94.0,
+  "highlights": 0.222,
+  "shadows": 0.056,
+  "palette": [
+   [
+    "#e4e4e3",
+    0.27
+   ],
+   [
+    "#271c35",
+    0.25
+   ],
+   [
+    "#bbb5ba",
+    0.24
+   ],
+   [
+    "#b62023",
+    0.18
+   ],
+   [
+    "#7a6f75",
+    0.06
+   ]
+  ]
+ },
+ {
+  "i": 136,
+  "start": 141.09,
+  "length": 1.57,
+  "move": "pull-back",
+  "move_speed": 1.764,
+  "brightness": 56.6,
+  "contrast": 42.7,
+  "saturation": 173.1,
+  "warmth": -2.8,
+  "vignette": 50.6,
+  "highlights": 0.021,
+  "shadows": 0.372,
+  "palette": [
+   [
+    "#110814",
+    0.44
+   ],
+   [
+    "#23203a",
+    0.37
+   ],
+   [
+    "#4a1123",
+    0.12
+   ],
+   [
+    "#bdadd7",
+    0.04
+   ],
+   [
+    "#807528",
+    0.03
+   ]
+  ]
+ },
+ {
+  "i": 137,
+  "start": 142.66,
+  "length": 3.84,
+  "move": "push-in",
+  "move_speed": 1.062,
+  "brightness": 107.1,
+  "contrast": 45.1,
+  "saturation": 224.6,
+  "warmth": 90.1,
+  "vignette": 89.4,
+  "highlights": 0.067,
+  "shadows": 0.036,
+  "palette": [
+   [
+    "#622309",
+    0.37
+   ],
+   [
+    "#792a0b",
+    0.31
+   ],
+   [
+    "#481705",
+    0.22
+   ],
+   [
+    "#f09d7a",
+    0.07
+   ],
+   [
+    "#0a0200",
+    0.04
+   ]
+  ]
+ },
+ {
+  "i": 138,
+  "start": 146.5,
+  "length": 3.03,
+  "move": "pan-left",
+  "move_speed": 1.114,
+  "brightness": 69.2,
+  "contrast": 37.3,
+  "saturation": 143.2,
+  "warmth": 6.7,
+  "vignette": 49.6,
+  "highlights": 0.007,
+  "shadows": 0.151,
+  "palette": [
+   [
+    "#40213c",
+    0.46
+   ],
+   [
+    "#28121e",
+    0.41
+   ],
+   [
+    "#6d609e",
+    0.07
+   ],
+   [
+    "#6f4f10",
+    0.05
+   ],
+   [
+    "#d8d1e3",
+    0.01
+   ]
+  ]
+ }
+]

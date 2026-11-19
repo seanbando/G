@@ -1,0 +1,16 @@
+{
+ "shots": 38,
+ "moves": {
+  "tilt-up": 2,
+  "shake": 4,
+  "push-in": 26,
+  "pull-back": 6
+ },
+ "brightness": 111.3,
+ "contrast": 56.2,
+ "saturation": 121.5,
+ "warmth": -19.2,
+ "vignette": 104.4,
+ "highlights": 0.068,
+ "shadows": 0.132
+}
