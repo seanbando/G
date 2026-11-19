@@ -28,9 +28,9 @@ const drawBill = (g: CanvasRenderingContext2D, x: number, y: number, w: number, 
 export const billTex = () => ctex("bill", 512, 220, (g) => drawBill(g, 256, 110, 504, 212, 0));
 /** a tile of heaped bills: hundreds of overlapping bills at random angles, darker deeper down, wrapping seamlessly */
 export const heapTex = () => ctex("moneyHeap", 1024, 1024, (g, r) => {
-  g.fillStyle = "#6f9365"; g.fillRect(0, 0, 1024, 1024);
+  g.fillStyle = "#4f7d49"; g.fillRect(0, 0, 1024, 1024);
   for (let layer = 0; layer < 3; layer++) for (let i = 0; i < 260; i++) {
-    const x = r() * 1024, y = r() * 1024, w = 150 + r() * 30, rot = r() * Math.PI, tone = 0.72 + 0.12 * layer + 0.12 * r();
+    const x = r() * 1024, y = r() * 1024, w = 150 + r() * 30, rot = r() * Math.PI, tone = 0.62 + 0.12 * layer + 0.12 * r();
     for (const ox of [-1024, 0, 1024]) for (const oy of [-1024, 0, 1024]) {
       if (x + ox < -120 || x + ox > 1144 || y + oy < -120 || y + oy > 1144) continue;
       drawBill(g, x + ox, y + oy, w, w * 0.43, rot, tone);
@@ -117,7 +117,7 @@ export class Money {
   constructor(parent: THREE.Object3D) {
     const R = this.root; parent.add(R);
     const ht = heapTex(); ht.anisotropy = 16;
-    const heapM = lam("moneyHeapM", () => ({ map: ht }));
+    const heapM = lam("moneyHeapM", () => ({ map: ht, color: "#b4d99a" })); // green tint: from afar the bills must still average to money-green, not sand
     for (const [name, def] of Object.entries(HEAPS)) this.heaps[name] = new Heap(def, R, heapM);
     // kitchen table + two chairs (wood, checked cloth)
     const wood = lam("tableWood", () => ({ color: "#a8724a" })), cloth = lam("tableCloth", () => ({ map: clothTex() }));
