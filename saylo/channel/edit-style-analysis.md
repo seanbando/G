@@ -64,6 +64,9 @@ Closest of our 9 tested voices by pitch and steadiness: **Philip – Quiet Autho
 ## Retraced: "Why an ER Doctor Shot 6 People in Washington DC" (Nov 16, 2026, creator's pick: "the exact look + transitions I want")
 Measured (360p copy, 10.9 min): **209 shots · mean 3.1 s · median 2.6 s · 35% under 2 s · 2% over 10 s · cuts/min 25.8 / 17.0 / 14.3 by third · 43 cuts in the first 60 s · 2 fades to black · 2 full silences.** Faster than Uncovering/fern (~13/min).
 
+
+Reference files: frame sheets in `saylo/channel/reference/` (`retraced-hook-first-60s.jpg` every 2 s, `retraced-overview.jpg` every 20 s, `retraced-first-2min-6fps.jpg` six frames a second to see the cuts). The video itself: https://youtu.be/Z9aLq9Ok108 (Retraced, "Why an ER Doctor Shot 6 People in Washington DC"); the creator keeps a 360p copy, not in git.
+
 What it looks like:
 - **~70% is 3D recreation** (Unreal/Blender look): real places rebuilt as clean 3D sets (street corner, gym, apartment, hallway, office), lit dark navy/gray with practical lights.
 - **People are faceless mannequins.** Everyone is white/gray matte; **the subject is one glossy colored mannequin** (red) so you always know who he is. Real people are shown as **3D clay busts** (white bust, red rim light) or in real interview/press footage.
