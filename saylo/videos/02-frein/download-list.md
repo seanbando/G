@@ -12,7 +12,7 @@ Every file gets the matching watermark from `saylo/assets/source-tags/` (use the
 | ☐ | 04 | https://www.youtube.com/watch?v=19kq4xlahxQ · https://www.youtube.com/watch?v=IHcItSuJUCM | Honor guard / flag / procession. **No family close-ups.** | 1–2 shots | "Cpl Bryon Dickson funeral" |
 | ☑ | 05 | https://www.youtube.com/watch?v=_crJaLFvEKw | The moment police name Frein / show his photo | 3–5 s | "police identify suspect Pennsylvania barracks shooting Frein" |
 | ☑ | 06 | https://www.youtube.com/watch?v=piFmhY-64P4 | Schools closed / empty school / anchor saying it | 3–5 s | "Frein manhunt schools close Pocono" |
-| ☐ | 07 | https://www.youtube.com/watch?v=NXpQDGIBDyQ · https://www.youtube.com/watch?v=Iah2sDnXImE | Roadblocks, officers on rural roads, armored vehicles, Bivens at the podium | 3–4 shots | "Frein manhunt roadblock" |
+| ☑ | 07 | https://www.youtube.com/watch?v=NXpQDGIBDyQ · https://www.youtube.com/watch?v=Iah2sDnXImE | Roadblocks, officers on rural roads, armored vehicles, Bivens at the podium | 3–4 shots | "Frein manhunt roadblock" |
 | ☐ | 08 | https://www.youtube.com/watch?v=3FHn0C0QPEI | Anything about the cost of the search | 3 s | "Frein manhunt cost million" |
 | ☑ | 09 | https://www.youtube.com/watch?v=UZf_J29DKvI | Bivens briefing about the explosives (not a close-up of the devices) | 4 s | "Frein pipe bombs found" |
 | ☑ | 10 | https://www.youtube.com/watch?v=a4S_bnXV_dw | **Bivens reading the journal pages out loud** — "got a shot around 11 p.m. and took it" if it's on camera | the line | "Bivens reads Frein journal" |
