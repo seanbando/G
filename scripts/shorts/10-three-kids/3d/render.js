@@ -15,7 +15,7 @@ const root = __dirname;
 const server = http.createServer((req, res) => {
   const f = path.join(root, decodeURIComponent(req.url.split('?')[0]));
   if (!f.startsWith(root) || !fs.existsSync(f)) { res.writeHead(404); return res.end(); }
-  const type = f.endsWith('.js') ? 'text/javascript' : 'text/html';
+  const type = f.endsWith('.js') ? 'text/javascript' : f.endsWith('.png') ? 'image/png' : 'text/html';
   res.writeHead(200, { 'Content-Type': type }); fs.createReadStream(f).pipe(res);
 }).listen(0, async () => {
   const port = server.address().port;
