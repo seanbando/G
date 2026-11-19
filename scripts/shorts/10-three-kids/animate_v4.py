@@ -61,6 +61,9 @@ T_26 = word_time("VO-05", "twenty-six")
 T_2009 = word_time("VO-05", "later")
 T_MISTAKE = word_time("VO-09", "shoebox")
 T_MAYA_COST = word_time("VO-09", "maya")
+T_JAY9 = word_time("VO-08", "jay")
+T_MAYA9 = word_time("VO-08", "maya")
+T_SAM9 = word_time("VO-08", "sam")
 
 random.seed(7)
 STARS = [(random.randint(0, W), random.randint(0, H), random.choice([2, 2, 3])) for _ in range(140)]

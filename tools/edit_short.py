@@ -10,6 +10,10 @@ Cue lines ("#" starts a comment):
     <time> shake [seconds]     camera shake starting at <time> (default 0.25 s)
     <time> punch               quick zoom-in on a word, easing back out
     <time> push <end> <zoom>   slow push-in from <time> to <end> up to <zoom> (e.g. 1.08)
+    <time> cam <end> <z0> <z1> <x> <y>
+                               camera framing for a shot: zoom eases from z0 to z1 between
+                               <time> and <end>, aimed at (x, y) (fractions of the frame),
+                               kept inside the frame; tools/auto_camera.py writes these
     <time> reframe <0|1|2>     jump to a slightly different framing until the next reframe
                                (0 = full frame, 1 = 7% in, upper left, 2 = 10% in, lower right),
                                like a quick cut; tools/auto_punch.py writes these
@@ -128,6 +132,15 @@ def state(t, cues):
         elif kind == "focus":
             end, z, fx, fy = (float(a) for a in args[:4])
             if c <= t <= end:
+                zoom *= z
+                dx += 0.5 - fx
+                dy += 0.5 - fy
+        elif kind == "cam":
+            end, z0, z1, fx, fy = (float(a) for a in args[:5])
+            if c <= t < end:
+                z = z0 + (z1 - z0) * ((t - c) / max(end - c, 1e-3))
+                fx = min(max(fx, 0.5 / z), 1 - 0.5 / z)
+                fy = min(max(fy, 0.5 / z), 1 - 0.5 / z)
                 zoom *= z
                 dx += 0.5 - fx
                 dy += 0.5 - fy

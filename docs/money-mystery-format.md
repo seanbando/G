@@ -138,3 +138,10 @@ Estimated word times drift by up to ~1 s (the "Millions" visual landed a full se
 - After the final voiceover is built, run `tools/stt_words.py <script.md> <track.mp3> <words.json>` (ElevenLabs speech-to-text, word timestamps; small credit cost, reused from cache on reruns).
 - Every visual beat, punch, sound effect and caption is cued from those measured times. Captions snap to the real start of the matching spoken word (`tools/make_captions.py`).
 - tools/word_times.py is only a free fallback for previews.
+
+## RULE: the camera never sits still (from the 30 fps reference analysis, Nov 19 2026)
+Reference shorts have under 1% still frames; ours had 39-55%. Every edit now runs `tools/auto_camera.py`:
+- a new framing on every caption phrase (wide / medium / close, aimed at the content so nothing is cropped),
+- a slow push-in or pull-back on every shot,
+- `--calm` ranges keep 3D scenes and number reveals at full frame (still drifting).
+Check with `tools/analyze_frames.py`: dead-still frames under 5%. Master at -13 LUFS.
