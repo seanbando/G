@@ -132,6 +132,7 @@ def load_config(video):
         cfg = json.load(open(path))
         SPOKEN.update(cfg.get("spoken", {}))
         BEATS.update(cfg.get("beats", {}))
+        CHUNK.update(cfg.get("chunk_settings", {}))
 
 
 def spoken(t):
@@ -140,8 +141,13 @@ def spoken(t):
     return t
 
 
+CHUNK = {}  # per-chunk overrides from vo-config.json "chunk_settings": {"016": {"speed": 1.05, "seed": 2002}}
+
+
 def generate(unit, prev_text, next_text, out_path):
-    body = {"text": spoken(unit["text"]), "model_id": MODEL, "voice_settings": SETTINGS, "seed": SEED}
+    o = CHUNK.get(unit["id"], {})
+    settings = dict(SETTINGS, **{k: v for k, v in o.items() if k not in ("seed", "tempo")})
+    body = {"text": spoken(unit["text"]), "model_id": MODEL, "voice_settings": settings, "seed": o.get("seed", SEED)}
     if prev_text:
         body["previous_text"] = spoken(prev_text)
     if next_text:
@@ -186,6 +192,11 @@ def build(video, units):
         wav = os.path.join(tmp, f"{u['id']}.wav")
         ff("-i", os.path.join(vo, f"VO-{u['id']}.mp3"), "-af", trim, "-ar", "44100", "-ac", "1", wav)
         shorten_pauses(wav)
+        tempo = CHUNK.get(u["id"], {}).get("tempo")
+        if tempo:  # slow a line that reads rushed (pitch kept), e.g. 0.88
+            slow = wav.replace(".wav", "-t.wav")
+            ff("-i", wav, "-af", f"atempo={tempo}", slow)
+            os.replace(slow, wav)
         prev_text = next((r[4] for r in reversed(rows) if r[0] != "CLIP"), "")
         gap = gaps[u["gap_before"]] + (BEATS_after(prev_text) if rows else 0) + LOCKED.get(u["text"], {}).get("pre", 0)
         if gap:
@@ -258,7 +269,10 @@ def shorten_pauses(wav, threshold_db=-45, longest=0.6, keep=0.45):
 
 
 def BEATS_after(text):
-    return next((v for k, v in BEATS.items() if text.endswith(k)), 0)
+    """Exact match first (a one-line beat like "Eric Frein." must not fire on every line ending in it)."""
+    if text in BEATS:
+        return BEATS[text]
+    return next((v for k, v in BEATS.items() if len(k) > 15 and text.endswith(k)), 0)
 
 
 def mmss(s):

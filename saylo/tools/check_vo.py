@@ -6,6 +6,13 @@ ZERO problems (and the creator has listened once start to finish).
 
 Usage:
   python3 saylo/tools/check_vo.py WORDS.json SCRIPT.txt [SCRIPT2.txt ...] [--out report.md]
+        [--audio voiceover-full.mp3] [--timings vo-timings.tsv] [--config vo-config.json]
+        [--alias Erik=Eric --alias Dixon=Dickson]
+
+--audio    measure every flagged gap from the real audio (transcript timestamps drift)
+--timings  chapter breaks from generate_vo (up to CHAPTER_GAP s allowed there)
+--config   vo-config.json: "beats" lines may hold up to beat + 1.0 s; "aliases" too
+--alias    names the transcriber spells differently but that sound the same
 
 WORDS.json = [{"w": "Three", "s": 0.06, "e": 0.24}, ...]  (ElevenLabs scribe
 word timestamps of the FINAL mixed voiceover file, e.g. vo-words.json).
@@ -18,12 +25,17 @@ import json, re, sys, statistics, difflib
 MID_GAP = 0.75     # silence inside a sentence longer than this = delay/hesitation
 END_GAP = 1.60     # silence between sentences longer than this = dead air
 RUSHED = 0.06      # less than this between sentences = no breath, sounds glued
-PACE_SD = 2.2      # sentence pace this many SDs from the mean = rushed/dragging
+SLOW, FAST = 3.3, 6.3  # articulation rate (syllables per second of speech): normal narration sits ~4-6
+CHAPTER_GAP = 2.3  # longest allowed silence at a chapter break
+
+
+ALIAS = {}
 
 
 def norm(t):
     t = t.lower().replace("’", "'")
-    return re.sub(r"[^a-z0-9']", "", t)
+    t = re.sub(r"[^a-z0-9']", "", t)
+    return ALIAS.get(t, t)
 
 
 CONTRACT = {"'ve": " have", "'ll": " will", "'re": " are", "'d": " would", "n't": " not", "'m": " am"}
@@ -67,6 +79,48 @@ def main():
     out = None
     if "--out" in args:
         i = args.index("--out"); out = args[i + 1]; del args[i:i + 2]
+    def opt(name, many=False):
+        vals = []
+        while name in args:
+            i = args.index(name); vals.append(args[i + 1]); del args[i:i + 2]
+        return vals if many else (vals[0] if vals else None)
+    audio, timings, config = opt("--audio"), opt("--timings"), opt("--config")
+    beats = {}
+    if config:
+        cfg = json.load(open(config))
+        beats = cfg.get("beats", {})
+        for a, b in cfg.get("aliases", {}).items():
+            ALIAS[norm(a)] = norm(b)
+    for a in opt("--alias", True):
+        x, y = a.split("=")
+        ALIAS[norm(x)] = norm(y)
+    chapter_starts = []
+    if timings:
+        prev = None
+        for line in open(timings).read().splitlines()[1:]:
+            c = line.split("\t")
+            if prev is not None and c[1] != prev:
+                m, sec = c[2].split(":"); chapter_starts.append(int(m) * 60 + float(sec))
+            prev = c[1]
+    sil = []
+    if audio:
+        import subprocess
+        log = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", audio, "-af", "silencedetect=n=-40dB:d=0.04", "-f", "null", "-"],
+                             capture_output=True, text=True).stderr
+        st_ = [float(x) for x in re.findall(r"silence_start: ([0-9.]+)", log)]
+        en_ = [float(x) for x in re.findall(r"silence_end: ([0-9.]+)", log)]
+        sil = list(zip(st_, en_))
+
+    def real_gap(a, b):
+        """Longest true silence between two word timestamps (falls back to the transcript)."""
+        if not sil:
+            return b - a
+        best = 0.0
+        for s0, s1 in sil:
+            if s1 > a - 0.25 and s0 < b + 0.25:
+                best = max(best, min(s1, b + 0.25) - max(s0, a - 0.25))
+        return best
+
     words = json.load(open(args[0]))
     stoks = script_tokens(args[1:])
     v = [norm(w["w"]) for w in words]
@@ -110,6 +164,16 @@ def main():
         is_end, pause_ok = end_after.get(i, (bool(re.search(r"[.!?]$", words[i]["w"])), False))
         if pause_ok:
             continue
+        if gap > MID_GAP or gap < RUSHED:
+            gap = real_gap(words[i]["e"], words[i + 1]["s"])
+        at_chapter = any(abs(c - words[i + 1]["s"]) < 1.0 for c in chapter_starts)
+        if at_chapter and gap <= CHAPTER_GAP:
+            continue
+        tail = " ".join(w["w"] for w in words[max(0, i - 12):i + 1])
+        beat = next((v for k, v in beats.items() if norm(tail.split()[-1]) == norm(k.split()[-1]) and
+                     " ".join(norm(x) for x in tail.split()).endswith(" ".join(norm(x) for x in k.split()))), None)
+        if beat is not None and gap <= beat + 1.0 + (CHAPTER_GAP if at_chapter else 0):
+            continue
         if not is_end and gap > MID_GAP and not words[i]["w"].endswith((",", ":", ";")):
             problems.append((words[i]["e"], "DELAY", f'{gap:.2f}s silence inside a sentence after "{words[i]["w"]}"'))
         elif not is_end and gap > MID_GAP * 1.6:
@@ -119,20 +183,28 @@ def main():
         elif is_end and gap < RUSHED:
             problems.append((words[i]["e"], "GLUED", f'no breath after "{words[i]["w"]}" ({gap:.2f}s)'))
 
-    # 4. sentence pace outliers
+    # 4. sentence pace outliers: articulation rate (syllables per second of actual speech,
+    #    pauses over 0.2 s left out), so list commas and datelines don't read as "dragging"
+    def syl(w):
+        w = re.sub(r"[^a-z]", "", w.lower())
+        n = len(re.findall(r"[aeiouy]+", w)) - (1 if w.endswith("e") and not w.endswith(("le", "ee")) and len(w) > 3 else 0)
+        return max(1, n)
     sents, cur = [], []
     for w in words:
         cur.append(w)
-        if re.search(r"[.!?]$", w["w"]):
+        if re.search(r"[.!?][\"”]?$", w["w"]):
             sents.append(cur); cur = []
-    rates = [(len(x) / max(0.3, x[-1]["e"] - x[0]["s"]), x) for x in sents if len(x) >= 7]
-    if len(rates) > 5:
-        mu = statistics.mean(r for r, _ in rates); sd = statistics.pstdev(r for r, _ in rates)
-        for r, x in rates:
-            if abs(r - mu) > PACE_SD * sd:
-                kind = "RUSHED" if r > mu else "DRAGGING"
-                txt = " ".join(w["w"] for w in x)
-                problems.append((x[0]["s"], kind, f"{r * 60:.0f} wpm (avg {mu * 60:.0f}): {txt[:90]}"))
+    rates = []
+    for x in sents:
+        if len(x) < 6:
+            continue
+        talk = sum(w["e"] - w["s"] for w in x) + sum(min(b["s"] - a["e"], 0.2) for a, b in zip(x, x[1:]) if b["s"] > a["e"])
+        rates.append((sum(syl(w["w"]) for w in x) / max(0.3, talk), x))
+    for r, x in rates:
+        if r > FAST or r < SLOW:
+            kind = "RUSHED" if r > FAST else "DRAGGING"
+            txt = " ".join(w["w"] for w in x)
+            problems.append((x[0]["s"], kind, f"{r:.1f} syllables/s of speech (normal {SLOW}-{FAST}): {txt[:90]}"))
 
     problems.sort()
     lines = [f"# Voiceover gate: {len(problems)} problem(s)", ""]
