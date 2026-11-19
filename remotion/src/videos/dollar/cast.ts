@@ -206,11 +206,13 @@ const person = (cam: CamInfo, who: Who, x: number, y: number, z: number, view: {
  *  stretched AWAY from the sun, length ~1.6 m / tan(sun elevation), capped. Golden: world.ts casts real card shadows. */
 const CONTACT: Record<"day" | "golden", [number, number, number]> = { day: [0.2, 0.21, 0.33], golden: [0.24, 0.2, 0.33] };
 const TAIL: [number, number, number] = [0.42, 0.44, 0.62];
+/** look fix: day cards now cast real sun shadows (lights.ts actorShadow), so the painted tail is not drawn */
+const DAY_CARD_SHADOW = false; // tried true (real card shadows by day): left the next golden shot's floor in shadow for ~1 s
 const toSrgb = (v: number) => { const c = clamp01(v); return c <= 0.0031308 ? 12.92 * c : 1.055 * c ** (1 / 2.4) - 0.055; };
 const hexOf = (c: [number, number, number], k: number) => "#" + c.map((v) => Math.round(255 * toSrgb(1 - (1 - v) * k)).toString(16).padStart(2, "0")).join("");
 const blob = (out: Stage, x: number, y: number, z: number, sc = 1, k = 1) => {
   const hl = Math.hypot(SUN.x, SUN.z) || 1, ox = -SUN.x / hl, oz = -SUN.z / hl, rot = Math.atan2(-ox, -oz);
-  if (LNAME === "day") {
+  if (LNAME === "day" && !DAY_CARD_SHADOW) {
     const el = Math.asin(Math.min(0.99, Math.max(0.1, SUN.y)));
     const len = Math.min(2.4, Math.max(0.5, 1.6 / Math.tan(el))) * sc, h = len + 0.55 * sc, c = 0.3 * h; // feet at v = .2 of the card
     const tc = hexOf(TAIL, k);

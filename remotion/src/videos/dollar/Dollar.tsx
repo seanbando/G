@@ -60,7 +60,8 @@ const Inner: React.FC<{ id: number; kit: Kit }> = ({ id, kit }) => {
     grade: new GradeEffect(GRADES.day, GRADE_STRENGTH.day),
     grain: new GrainEffect({ amount: 0.025, cellPx: 1.5 }), // film grain, OFF by default (inputProps post.grain): the reference measures no grain and it quadruples the file size
   }), [camera, scene]);
-  useEffect(() => () => fx.ink.dispose(), [fx]);
+  // <primitive dispose={null}> sets fx.ink.dispose = null, so call the class method itself (crashed at frame ~1296)
+  useEffect(() => () => InkPass.prototype.dispose.call(fx.ink), [fx]);
   const post = useMemo(() => (
     <EffectComposer multisampling={4}>
       {on.ink ? <primitive object={fx.ink} dispose={null} /> : null}
@@ -74,6 +75,9 @@ const Inner: React.FC<{ id: number; kit: Kit }> = ({ id, kit }) => {
   ), [fx, on]);
   const cam = camera as THREE.PerspectiveCamera;
   target.copy(world.update(id, f, cam, scene));
+  // look fix: lines fade out where the haze has eaten the fill, so far trees never show as bare outlines
+  const fg = scene.fog as THREE.Fog | null;
+  if (fg && fg.isFog) fx.ink.set({ fadeNear: fg.near + 0.4 * (fg.far - fg.near), fadeFar: fg.near + 0.8 * (fg.far - fg.near) });
   noInkFallback(world.root);
   // thin-lens focus: distance along the view axis to the shot's focus point (default: the camera's look target)
   const d = dofAt(f);

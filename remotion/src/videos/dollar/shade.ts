@@ -56,6 +56,45 @@ export function twoTone<T extends THREE.MeshLambertMaterial | THREE.MeshPhongMat
   return m;
 }
 
+// ---------------- anti-tiling (look fix: repeats read as fake) ----------------
+const AT_NOISE = /* glsl */ `
+varying vec3 vAtWP;
+float atH( vec2 p ) { return fract( sin( dot( p, vec2( 127.1, 311.7 ) ) ) * 43758.5453 ); }
+float atNoise( vec2 p ) {
+  vec2 i = floor( p ), f = fract( p ); vec2 u = f * f * ( 3.0 - 2.0 * f );
+  return mix( mix( atH( i ), atH( i + vec2( 1.0, 0.0 ) ), u.x ), mix( atH( i + vec2( 0.0, 1.0 ) ), atH( i + vec2( 1.0, 1.0 ) ), u.x ), u.y );
+}`;
+/** Breaks up a repeating map on big ground surfaces: blends the map with a rotated, rescaled copy of itself by a
+ *  world-space noise (so the tile grid never lines up), and adds slow light/dark (and warm/dry) patches tens of
+ *  metres across, which also keep the far field from mipmapping to one flat colour. Chains after twoTone(). */
+export function antiTile<T extends THREE.Material>(m: T, o: { cell: number; macro: number; amp: number; dry?: number }): T {
+  const prev = m.onBeforeCompile.bind(m);
+  const key = m.customProgramCacheKey.bind(m);
+  m.onBeforeCompile = (sh, r) => {
+    prev(sh, r);
+    sh.vertexShader = sh.vertexShader
+      .replace("#include <common>", "#include <common>\nvarying vec3 vAtWP;")
+      .replace("#include <project_vertex>", "#include <project_vertex>\nvAtWP = ( modelMatrix * vec4( transformed, 1.0 ) ).xyz;");
+    sh.fragmentShader = sh.fragmentShader
+      .replace("#include <common>", "#include <common>\n" + AT_NOISE)
+      .replace("#include <map_fragment>", /* glsl */ `
+#ifdef USE_MAP
+  vec2 atP = vAtWP.xz;
+  float atSel = smoothstep( 0.3, 0.7, atNoise( atP / ${o.cell.toFixed(2)} ) );
+  vec2 atUv2 = mat2( 0.8, -0.6, 0.6, 0.8 ) * vMapUv * 0.73 + vec2( 0.37, 0.71 );
+  vec4 sampledDiffuseColor = mix( texture2D( map, vMapUv ), texture2D( map, atUv2 ), atSel );
+  float atMac = 0.6 * atNoise( atP / ${o.macro.toFixed(2)} + 13.1 ) + 0.4 * atNoise( atP / ${(o.macro * 0.31).toFixed(2)} + 4.2 );
+  sampledDiffuseColor.rgb *= mix( ${(1 - o.amp).toFixed(3)}, ${(1 + o.amp).toFixed(3)}, atMac );
+  float atDry = smoothstep( 0.62, 0.9, atNoise( atP / ${(o.macro * 0.7).toFixed(2)} + 31.7 ) ) * ${(o.dry ?? 0).toFixed(3)};
+  sampledDiffuseColor.rgb = mix( sampledDiffuseColor.rgb, sampledDiffuseColor.rgb * vec3( 1.12, 1.02, 0.7 ), atDry );
+  diffuseColor *= sampledDiffuseColor;
+#endif`);
+  };
+  m.customProgramCacheKey = () => key() + "_at" + o.cell + "_" + o.macro + "_" + o.amp + "_" + (o.dry ?? 0);
+  m.needsUpdate = true;
+  return m;
+}
+
 // ---------------- tone-map inversion ----------------
 // The composer ends in PBR-Neutral tone mapping, so a colour written to the scene buffer is NOT what lands on screen
 // (toe: -0.04 linear offset, shoulder above 0.76). Self-lit things whose on-screen colour is a measured target (sky,

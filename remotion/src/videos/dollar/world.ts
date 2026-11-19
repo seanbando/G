@@ -8,7 +8,7 @@ import { Batch, Strand, boxGeo, V, lam, buildTown, flagTex, Kit, Ray, kitClone }
 import { beam, bed, rep, ctex, planksHD, beamHD, stoneHD, cobbleHD, grassHD, chainHD, waterNear, waterFar, cloudHD } from "./paint";
 import { Pen, fxSign } from "./toon";
 import { LIGHTS, LOOK, LightPreset } from "./lights";
-import { TONE, CHAR, LFB, twoTone, untone } from "./shade";
+import { TONE, CHAR, LFB, twoTone, untone, antiTile } from "./shade";
 import { NOINK } from "./ink";
 import { Pool, Actor, Fx, stage, SU_SWING } from "./cast";
 import { Money } from "./money";
@@ -159,7 +159,7 @@ export class World {
     // ---- ground, river, quays (static batch) ----
     const b = new Batch();
     // HD painted textures (textures.md 5.1/5.2); every material is two-tone via lam() (shade.ts)
-    M.grass = lam("grassHD", () => ({ map: grassHD() }));
+    M.grass = antiTile(lam("grassHD", () => ({ map: grassHD() })), { cell: 9, macro: 60, amp: 0.16, dry: 0.55 }); // look fix: no visible tiling, patchy field
     M.cobble = lam("cobbleHD", () => ({ map: cobbleHD() }));
     M.wall = lam("wallHD", () => ({ map: stoneHD("wallHD", ["#c9bcaa", "#bfb19f", "#d1c5b4", "#b8aa97"], "#958776") }));
     M.cope = lam("copeHD", () => ({ map: stoneHD("copeHD", ["#e6dccd", "#ddd3c3", "#ece4d6", "#d6cbba"], "#aea293") }));
@@ -381,7 +381,7 @@ export class World {
     this.sky.position.copy(cam.position);
     untone(L.fog, this.fog.color);
     // aerials over the money mountains: the fog is measured for street level, so it stretches with the lens height
-    const fk = Math.max(1, (cam.position.y - D0) / 14);
+    const fk = Math.max(1, ((cam.position.y - D0) / 14) ** 0.6); // look fix: was linear, so high aerials lost all haze
     this.fog.near = L.fogNear * fk; this.fog.far = L.fogFar * fk;
     scene.fog = this.fog; scene.background = null;
     const showSun = s.light === "golden";

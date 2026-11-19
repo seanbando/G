@@ -3,6 +3,7 @@
 // textures are painted on canvases with their seams as dark tints (no captions or numbers anywhere).
 import * as THREE from "three";
 import { lam, V } from "./build";
+
 import { ctex, rng } from "./paint";
 import { D0, HEAPS, HeapDef, TABLE, TABLE_TOP, V3, heapsAt, tableBills, snowball, growAt, clamp01 } from "./story";
 
@@ -27,12 +28,14 @@ const drawBill = (g: CanvasRenderingContext2D, x: number, y: number, w: number, 
 };
 export const billTex = () => ctex("bill", 512, 220, (g) => drawBill(g, 256, 110, 504, 212, 0));
 /** a tile of heaped bills: hundreds of overlapping bills at random angles, darker deeper down, wrapping seamlessly */
-export const heapTex = () => ctex("moneyHeap", 1024, 1024, (g, r) => {
-  g.fillStyle = "#4f806a"; g.fillRect(0, 0, 1024, 1024);
-  for (let layer = 0; layer < 3; layer++) for (let i = 0; i < 260; i++) {
-    const x = r() * 1024, y = r() * 1024, w = 150 + r() * 30, rot = r() * Math.PI, tone = 0.7 + 0.1 * layer + 0.12 * r();
-    for (const ox of [-1024, 0, 1024]) for (const oy of [-1024, 0, 1024]) {
-      if (x + ox < -120 || x + ox > 1144 || y + oy < -120 || y + oy > 1144) continue;
+// look fix: 2048 px tile (4x the bills) shown over twice the metres: same bill size, the repeat is half as frequent
+const HT = 2048;
+export const heapTex = () => ctex("moneyHeap2k", HT, HT, (g, r) => {
+  g.fillStyle = "#4f806a"; g.fillRect(0, 0, HT, HT);
+  for (let layer = 0; layer < 3; layer++) for (let i = 0; i < 260 * (HT / 1024) ** 2; i++) {
+    const x = r() * HT, y = r() * HT, w = 150 + r() * 30, rot = r() * Math.PI, tone = 0.68 + 0.1 * layer + 0.16 * r();
+    for (const ox of [-HT, 0, HT]) for (const oy of [-HT, 0, HT]) {
+      if (x + ox < -120 || x + ox > HT + 120 || y + oy < -120 || y + oy > HT + 120) continue;
       drawBill(g, x + ox, y + oy, w, w * 0.43, rot, tone);
     }
   }
@@ -92,7 +95,7 @@ class Heap {
     this.mesh.visible = k > 0;
     if (k <= 0 || Math.abs(k - this.k) < 1e-4) return;
     this.k = k;
-    const h = this.def, s = 0.55 + 0.45 * k, ex = h.ax * s * 1.06, ez = h.az * s * 1.06, tile = Math.max(2.4, Math.min(h.ax, h.az) * 0.12);
+    const h = this.def, s = 0.55 + 0.45 * k, ex = h.ax * s * 1.06, ez = h.az * s * 1.06, tile = (HT / 1024) * Math.max(2.4, Math.min(h.ax, h.az) * 0.12);
     const pos = this.mesh.geometry.attributes.position.array as Float32Array, uv = this.mesh.geometry.attributes.uv.array as Float32Array;
     for (let j = 0; j <= N; j++) for (let i = 0; i <= N; i++) {
       const x = h.x - ex + (2 * ex * i) / N, z = h.z - ez + (2 * ez * j) / N, y = heapH(h, k, x, z);
@@ -118,6 +121,7 @@ export class Money {
   constructor(parent: THREE.Object3D) {
     const R = this.root; parent.add(R);
     const ht = heapTex(); ht.anisotropy = 16;
+    // (antiTile here turned the golden summit floor dark blue in sequential renders, so the heap keeps its own tile)
     const heapM = lam("moneyHeapM", () => ({ map: ht, color: "#cdeccf" })); // green tint: from afar the bills must still average to money-green, not sand
     for (const [name, def] of Object.entries(HEAPS)) this.heaps[name] = new Heap(def, R, heapM);
     // kitchen table + two chairs (wood, checked cloth)

@@ -289,11 +289,13 @@ export const DOF: Dof[] = [
   { f: 1978, cInf: 12, focus: ownerEyes },   // keep the dollar
   { f: 2020, dur: 50, cInf: 0 },             // crane out
 ];
+/** look fix: the measured blur made the full-size town read as a miniature; keep 55 % of it */
+const DOF_K = 0.55;
 export const dofAt = (f: number) => {
   let i = 0; while (i + 1 < DOF.length && f >= DOF[i + 1].f) i++;
   const d = DOF[i], p = DOF[Math.max(0, i - 1)];
   const k = d.dur ? Math.min(1, (f - d.f) / d.dur) : 1;
-  return { cInf: p.cInf + (d.cInf - p.cInf) * k, focus: d.focus };
+  return { cInf: DOF_K * (p.cInf + (d.cInf - p.cInf) * k), focus: d.focus };
 };
 export const focusAt = (id: number, f: number): V3 => {
   const d = dofAt(f);

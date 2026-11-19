@@ -497,16 +497,16 @@ export const roofHD = (col: string, slate = false) => ctex("roofHD" + col, 1024,
  *  Ours had the right hue (#6dad37) but only fine uniform noise (autocorrelation 6 px). */
 export const grassHD = () => ctex("grassHD", 1024, 1024, (g, r) => {
   const S = 1024;
-  g.fillStyle = "#73b23d"; g.fillRect(0, 0, S, S);
+  g.fillStyle = "#6a904e"; g.fillRect(0, 0, S, S); // look fix: was #73b23d (lime; the day grade saturates it further)
   for (let i = 0; i < 16; i++) {
     const x = U(r, 0, S), y = U(r, 0, S), rad = U(r, 120, 320), light = r() > 0.5;
-    wrap2(S, S, x, y, rad * 1.4, (xx, yy) => blotch(g, xx, yy, rad, 1.4, light ? "140,198,80" : "92,154,48", 0.35));
+    wrap2(S, S, x, y, rad * 1.4, (xx, yy) => blotch(g, xx, yy, rad, 1.4, light ? "124,160,92" : "80,114,58", 0.35));
   }
   g.lineWidth = 2; g.lineCap = "round"; g.lineJoin = "round";
   for (let i = 0; i < 1400; i++) { // tufts ~90 per m2
     const x = U(r, 0, S), y = U(r, 0, S), h = U(r, 7, 16), lean = U(r, -3, 3), light = r() < 0.4;
     wrap2(S, S, x, y, 20, (xx, yy) => {
-      g.strokeStyle = light ? "rgba(165,218,98,0.35)" : "rgba(78,138,38,0.45)";
+      g.strokeStyle = light ? "rgba(146,180,108,0.35)" : "rgba(68,104,48,0.45)";
       g.beginPath(); g.moveTo(xx - 3 + lean, yy - h); g.lineTo(xx, yy); g.lineTo(xx + 3 + lean, yy - h * 0.8); g.stroke();
     });
   }
@@ -655,7 +655,7 @@ export const waterMarks = (key: string, nCrest: number, nGlint: number) => ctex(
   g.globalCompositeOperation = "source-over";
 });
 export const waterNear = () => waterMarks("near", 28, 5);  // ~0.3 % crest area
-export const waterFar = () => waterMarks("far", 220, 30);  // ~2.5 % crest + glints, at 40 m tiles
+export const waterFar = () => waterMarks("far", 120, 14); // look fix: was 220/30, read as scratches from the air  // ~2.5 % crest + glints, at 40 m tiles
 
 /** Cloud sprite, 1024 x 512, three painted tones and a flat soft bottom, no outline.
  *  Ref cumulus: lit crown #f1f6fc-#fbfafd (L* 96-98, warm in haze #faedd7), mid #dadae9-#e5edf9, lavender-blue
