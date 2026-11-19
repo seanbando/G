@@ -29,7 +29,7 @@ The click: **"I know what happened, but I never understood how they caught him."
 2. Run `python3 saylo/tools/check_vo.py vo-words.json voiceover-part1-tts.txt voiceover-part2-tts.txt --audio voiceover-full.mp3 --timings vo-timings.tsv --config vo-config.json --out vo-gate.md`. Gaps are measured from the real audio; chapter breaks (≤2.3 s) and the beats listed in `vo-config.json` are allowed; names the transcriber spells differently but that sound the same go in `vo-config.json` "aliases" (e.g. Dixon=Dickson). Pace = syllables per second of speech, normal 3.3–6.3. It must say **0 problems**. Every flagged line gets regenerated (same voice and settings, a new seed in `vo-config.json` "chunk_settings", with previous/next text), or slowed with `"tempo": 0.88` if it keeps reading rushed, or its gap trimmed; then re-transcribe and re-run. Intentional holds must be written as `[PAUSE]` in the script, or they get flagged.
 3. Run the per-chunk loudness/pace check (`vo-check.md`) and fix outliers.
 4. The creator listens once, start to finish, and approves. Only then does the edit begin. If a flaw is found after editing has started, fix the voiceover first, then re-time the edit (word timings change).
-Pauses written in the voice direction (★ beats, the final hold) are added in the edit **after** the gate passes, so the raw voiceover shouldn't contain them.
+Short beats from the voice direction (about 1 s) go into the voiceover through `vo-config.json` "beats" and are allowed by the gate. Long holds (the final silence, music-out moments) are added in the edit **after** the gate passes.
 
 ## 4. STRUCTURE (18–22 min, ~2,900–3,400 words at ~160 wpm)
 | Time | Beat |
