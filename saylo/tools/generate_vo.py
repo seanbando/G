@@ -133,6 +133,7 @@ def load_config(video):
         SPOKEN.update(cfg.get("spoken", {}))
         BEATS.update(cfg.get("beats", {}))
         CHUNK.update(cfg.get("chunk_settings", {}))
+        GAPS.update(cfg.get("gaps", {}))
 
 
 def spoken(t):
@@ -141,6 +142,7 @@ def spoken(t):
     return t
 
 
+GAPS = {}   # vo-config.json "gaps": {"chapter": 0.75, "paragraph": 0.5}
 CHUNK = {}  # per-chunk overrides from vo-config.json "chunk_settings": {"016": {"speed": 1.05, "seed": 2002}}
 
 
@@ -186,7 +188,7 @@ def build(video, units):
     vo, tmp = os.path.join(video, "vo"), os.path.join(video, "vo", "_tmp")
     os.makedirs(tmp, exist_ok=True)
     trim = "silenceremove=start_periods=1:start_threshold=-50dB,areverse,silenceremove=start_periods=1:start_threshold=-50dB,areverse"
-    gaps = {"none": 0, "sentence": GAP_SENTENCE, "paragraph": GAP_PARAGRAPH, "chapter": GAP_CHAPTER}
+    gaps = {"none": 0, "sentence": GAP_SENTENCE, "paragraph": GAP_PARAGRAPH, "chapter": GAP_CHAPTER, **GAPS}
     listing, t, rows, stats = [], 0.0, [], []
     for u in units:
         wav = os.path.join(tmp, f"{u['id']}.wav")

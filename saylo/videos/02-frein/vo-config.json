@@ -6,15 +6,15 @@
   "Seven weeks earlier. Friday night, September twelfth, twenty fourteen.": "Seven weeks earlier: Friday night, September twelfth, twenty fourteen."
  },
  "beats": {
-  "\"I saw the black hat.\"": 1.0,
-  "Eric Frein.": 1.2,
-  "and Dickson goes down outside the building.": 0.8,
-  "and they couldn't save him.": 1.0,
-  "and took it.\"": 0.8,
-  "What they didn't have was Eric Frein.": 1.2,
-  "\"slept like a human first time in two weeks.\"": 1.0,
-  "A lot longer than I expected to last.\"": 1.0,
-  "They kept going.": 0.8
+  "\"I saw the black hat.\"": 0.25,
+  "Eric Frein.": 0.25,
+  "and Dickson goes down outside the building.": 0.25,
+  "and they couldn't save him.": 0.25,
+  "and took it.\"": 0.25,
+  "What they didn't have was Eric Frein.": 0.25,
+  "\"slept like a human first time in two weeks.\"": 0.25,
+  "A lot longer than I expected to last.\"": 0.25,
+  "They kept going.": 0.25
  },
  "aliases": {
   "Erik": "Eric",
@@ -60,5 +60,10 @@
    "speed": 0.92,
    "tempo": 0.88
   }
+ },
+ "gaps": {
+  "chapter": 0.55,
+  "paragraph": 0.5,
+  "sentence": 0.28
  }
 }

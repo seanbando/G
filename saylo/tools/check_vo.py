@@ -23,10 +23,10 @@ Lines in [brackets] and markdown headings are ignored. A pause marked
 import json, re, sys, statistics, difflib
 
 MID_GAP = 0.75     # silence inside a sentence longer than this = delay/hesitation
-END_GAP = 1.60     # silence between sentences longer than this = dead air
+END_GAP = 0.90     # silence between sentences longer than this = dead air (creator: >1 s sounds dead)
 RUSHED = 0.06      # less than this between sentences = no breath, sounds glued
 SLOW, FAST = 3.3, 6.3  # articulation rate (syllables per second of speech): normal narration sits ~4-6
-CHAPTER_GAP = 2.3  # longest allowed silence at a chapter break
+CHAPTER_GAP = 1.0  # longest allowed silence at a chapter break (music carries the rest in the edit)
 
 
 ALIAS = {}
@@ -172,7 +172,7 @@ def main():
         tail = " ".join(w["w"] for w in words[max(0, i - 12):i + 1])
         beat = next((v for k, v in beats.items() if norm(tail.split()[-1]) == norm(k.split()[-1]) and
                      " ".join(norm(x) for x in tail.split()).endswith(" ".join(norm(x) for x in k.split()))), None)
-        if beat is not None and gap <= beat + 1.0 + (CHAPTER_GAP if at_chapter else 0):
+        if beat is not None and gap <= min(beat + 0.6, 1.0):
             continue
         if not is_end and gap > MID_GAP and not words[i]["w"].endswith((",", ":", ";")):
             problems.append((words[i]["e"], "DELAY", f'{gap:.2f}s silence inside a sentence after "{words[i]["w"]}"'))
