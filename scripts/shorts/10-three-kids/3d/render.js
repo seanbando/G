@@ -15,7 +15,7 @@ const root = __dirname;
 const server = http.createServer((req, res) => {
   const f = path.join(root, decodeURIComponent(req.url.split('?')[0]));
   if (!f.startsWith(root) || !fs.existsSync(f)) { res.writeHead(404); return res.end(); }
-  const type = f.endsWith('.js') ? 'text/javascript' : f.endsWith('.png') ? 'image/png' : 'text/html';
+  const type = f.endsWith('.js') ? 'text/javascript' : f.endsWith('.png') ? 'image/png' : f.endsWith('.json') ? 'application/json' : 'text/html';
   res.writeHead(200, { 'Content-Type': type }); fs.createReadStream(f).pipe(res);
 }).listen(0, async () => {
   const port = server.address().port;
@@ -26,10 +26,12 @@ const server = http.createServer((req, res) => {
   await page.goto(`http://127.0.0.1:${port}/${process.env.SCENE || 'stacks.html'}?${query}`);
   await page.waitForFunction('window.ready === true', null, { timeout: 30000 });
   const n = Math.round(secs * FPS);
-  for (let i = 0; i < n; i++) {
+  const times = process.env.TIMES ? process.env.TIMES.split(',').map(Number) : null;
+  const list = times ? times.map(t => Math.round(t * FPS)) : [...Array(n).keys()];
+  for (const i of list) {
     const url = await page.evaluate(t => window.renderAt(t), i / FPS);
     fs.writeFileSync(path.join(out, `f${String(i).padStart(4, '0')}.jpg`), Buffer.from(url.split(',')[1], 'base64'));
   }
   await browser.close(); server.close();
-  console.log('frames', n);
+  console.log('frames', list.length);
 });

@@ -172,7 +172,12 @@ def person(d, cx, by, s, who, mood="neutral", arms="down"):
     # face
     ey = hy - 5 * u
     for sx in (-1, 1):
-        d.ellipse((hx + sx * 28 * u - 7 * u, ey - 7 * u, hx + sx * 28 * u + 7 * u, ey + 7 * u), fill=(20, 20, 25))
+        if mood in ("shocked", "grin"):
+            er = 17 if mood == "shocked" else 11
+            d.ellipse((hx + sx * 28 * u - er * u, ey - er * u, hx + sx * 28 * u + er * u, ey + er * u), fill=(255, 255, 255), outline=(20, 20, 25), width=int(3 * u))
+            d.ellipse((hx + sx * 28 * u - 6 * u, ey - 6 * u, hx + sx * 28 * u + 6 * u, ey + 6 * u), fill=(20, 20, 25))
+        else:
+            d.ellipse((hx + sx * 28 * u - 7 * u, ey - 7 * u, hx + sx * 28 * u + 7 * u, ey + 7 * u), fill=(20, 20, 25))
         if who == "sam":
             d.ellipse((hx + sx * 28 * u - 22 * u, ey - 22 * u, hx + sx * 28 * u + 22 * u, ey + 22 * u), outline=(30, 30, 30), width=int(5 * u))
     if who == "sam":
@@ -186,9 +191,22 @@ def person(d, cx, by, s, who, mood="neutral", arms="down"):
             d.line((hx + sx * 14 * u, ey - 22 * u, hx + sx * 40 * u, ey - 30 * u), fill=(40, 25, 25), width=int(5 * u))
     elif mood == "smug":
         d.arc((hx - 26 * u, my - 18 * u, hx + 10 * u, my + 10 * u), 20, 150, fill=(40, 25, 25), width=int(6 * u))
+        for sx in (-1, 1):  # half-closed lids
+            d.rectangle((hx + sx * 28 * u - 10 * u, ey - 12 * u, hx + sx * 28 * u + 10 * u, ey - 1 * u), fill=(247, 206, 170) if who != "maya" else (150, 98, 66))
+    elif mood == "shocked":
+        d.ellipse((hx - 13 * u, my - 6 * u, hx + 13 * u, my + 22 * u), fill=(60, 20, 25))
+        for sx in (-1, 1):
+            d.line((hx + sx * 16 * u, ey - 30 * u, hx + sx * 42 * u, ey - 36 * u), fill=(40, 25, 25), width=int(5 * u))
+    elif mood == "grin":
+        d.chord((hx - 34 * u, my - 18 * u, hx + 34 * u, my + 26 * u), 0, 180, fill=(60, 20, 25))
+        d.rectangle((hx - 26 * u, my + 2 * u, hx + 26 * u, my + 9 * u), fill=(255, 255, 255))
+    elif mood == "cry":
+        d.arc((hx - 22 * u, my, hx + 22 * u, my + 26 * u), 200, 340, fill=(40, 25, 25), width=int(6 * u))
+        for sx in (-1, 1):
+            d.rounded_rectangle((hx + sx * 28 * u - 5 * u, ey + 8 * u, hx + sx * 28 * u + 5 * u, ey + 50 * u), int(4 * u), fill=(120, 190, 255))
     else:
         d.line((hx - 18 * u, my + 6 * u, hx + 18 * u, my + 6 * u), fill=(40, 25, 25), width=int(6 * u))
-    if mood == "worried":  # sweat drop
+    if mood in ("worried", "shocked"):  # sweat drop
         d.ellipse((hx + 70 * u, hy - 40 * u, hx + 86 * u, hy - 16 * u), fill=(120, 190, 255))
 
 

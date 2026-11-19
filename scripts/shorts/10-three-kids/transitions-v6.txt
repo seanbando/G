@@ -1,0 +1,19 @@
+5.67 zoomthru
+7.33 zoomthru
+14.89 whip right
+18.43 zoomthru
+24.01 whip left
+27.41 zoomthru
+31.59 zoomthru
+39.71 whip right
+46.89 whip left
+4.32 punch
+22.12 punch
+41.08 punch
+17.3 shake 0.25
+44.48 shake 0.3
+7.48 note 14.84 0.66 0.036 Real S&P 500 total returns, dividends included
+0.16 punch
+3.34 zoomthru
+28.86 punch
+47.34 punch
