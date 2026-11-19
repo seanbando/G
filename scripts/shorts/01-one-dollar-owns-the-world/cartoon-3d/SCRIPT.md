@@ -10,31 +10,22 @@ Made with the cartoon-3d-short skill. No captions or labels in the video; Englis
 - S&P 500 long-run return ~10% a year before inflation; a steady 10% takes ~356 years to pass $517 trillion. (Damodaran / NYU Stern; calculated.)
 - No real investment doubles every day.
 
-## Script (216 words, ~58 s at 3.7 words/s)
+## Script (approved, recorded: 175 words, 69.0 s; voice = take 2, trimmed, 1.05x)
 
-**Hook**
-One dollar, doubling every day, outgrows all the personal wealth on Earth. Guess how many days it takes.
+**Hook** One dollar, doubling every day, outgrows all the personal wealth on Earth. Guess how many days it takes.
 
-**Setting**
-Day zero. One crisp dollar bill on a kitchen table. Day one, it's two dollars, and its owner is already proud.
+**Setting** Day zero. One crisp dollar bill on a kitchen table.
 
-**Action**
-Day ten, it's one thousand twenty-four dollars. Fits in a wallet.
-Day twenty, just over a million. It needs the whole house.
-Day thirty, over a billion. The street is full of money.
-Day forty, one point one trillion dollars. That's more than the richest person alive, Elon Musk, at about eight hundred sixty-nine billion.
+**Action** Day ten, it's one thousand twenty-four dollars. Fits in a wallet. / Day twenty, just over a million. It needs the whole house. / Day thirty, over a billion. The street is full of money. / Day forty, one point one trillion dollars. More than the richest person alive.
 
-**Snap**
-Day forty-eight, two hundred eighty-one trillion. Just over half the world's personal wealth, about five hundred seventeen trillion dollars. Then one more doubling. Day forty-nine. Five hundred sixty-three trillion. The dollar is bigger than everyone.
+**Snap** Day forty-eight, two hundred eighty-one trillion. Just over half the world's personal wealth, about five hundred seventeen trillion dollars. Then one more doubling. Day forty-nine. Five hundred sixty-three trillion. The dollar is bigger than everyone.
 
-**Deadpan double line**
-Luckily, no real investment doubles every day. Unluckily, that includes yours.
+**Deadpan double line** Luckily, no real investment doubles every day. Unluckily, that includes yours.
 
-**Explanation**
-Doubling works like a snowball rolling downhill. Every turn it picks up as much as it already carries. So the last single day added as much as the forty-eight days before it combined.
+**Explanation** Doubling is a snowball rolling downhill. The last day alone added as much as the forty-eight before it.
 
-**Consequence**
-Real money grows slower. At the stock market's long-run average of roughly ten percent a year, the same trip takes around three hundred fifty years.
+**Consequence** At the stock market's average of roughly ten percent a year, the same trip takes about three hundred fifty years.
 
-**Callback twist**
-So the answer was forty-nine days. Or three hundred fifty years, if you want to keep the dollar.
+**Callback twist** So the answer was forty-nine days. Or three hundred fifty years, if you want to keep the dollar.
+
+Voice files: shorts/one-dollar/voice/ (voice.wav is gitignored; rebuild from voice_take2_raw.mp3 with: trim leading/trailing silence at -45 dB, atempo=1.05, apad 0.25 s, 48 kHz mono). Word timings: words.json.
