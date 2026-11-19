@@ -7,3 +7,6 @@ __pycache__/
 # Private style-reference stills for the cartoon-3d-short skill (never publish)
 .claude/skills/cartoon-3d-short/references/frames/
 .claude/skills/cartoon-3d-short/references/sheets/
+
+# Bulky intermediates for the cartoon shorts
+shorts/*/voice/*.wav
