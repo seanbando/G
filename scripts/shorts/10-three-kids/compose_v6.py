@@ -4,6 +4,7 @@ Usage: python3 compose_v6.py <film_dir> <chart_dir> <stacks_dir> <out.mp4>
 Chart and stacks windows get a slow push-in so they never sit still.
 """
 import json
+import math
 import subprocess
 import sys
 
@@ -54,6 +55,40 @@ def frame_from(dirname, i):
     return Image.open(f"{dirname}/f{i:04d}.jpg").convert("RGB").resize((W, H))
 
 
+LIFT = [min(255, int(12 + 243 * (v / 255) ** 0.58)) for v in range(256)] * 3  # raise black floor + mids
+_g = None
+
+
+def glow():
+    """Soft warm-violet centre light, screened over the set (refs: lit backgrounds, no dead black)."""
+    global _g
+    if _g is None:
+        import numpy as np
+        yy, xx = np.mgrid[0:H, 0:W]
+        r = np.sqrt(((xx - W / 2) / (W * 0.75)) ** 2 + ((yy - H * 0.45) / (H * 0.6)) ** 2)
+        a = np.clip(1 - r, 0, 1) ** 1.6
+        col = np.array([62, 44, 80])
+        _g = Image.fromarray((a[..., None] * col).astype("uint8"))
+    return _g
+
+
+def lift(im):
+    from PIL import ImageChops
+    from PIL import ImageEnhance
+    im = ImageChops.screen(im.point(LIFT), glow())
+    return ImageEnhance.Contrast(ImageEnhance.Color(im).enhance(1.3)).enhance(1.08)
+
+
+def handheld(im, t):
+    """Base zoom 1.05 with a slow two-sine drift so no frame is ever dead still."""
+    z = 1.05
+    cw, ch = W / z, H / z
+    dx = (W - cw) / 2 * (0.55 * math.sin(t * 2.1) + 0.35 * math.sin(t * 3.7 + 1.3))
+    dy = (H - ch) / 2 * (0.5 * math.sin(t * 1.7 + 0.4) + 0.3 * math.sin(t * 4.3))
+    x, y = (W - cw) / 2 + dx, (H - ch) / 2 + dy
+    return im.crop((int(x), int(y), int(x + cw), int(y + ch))).resize((W, H), Image.BILINEAR)
+
+
 def main(film, chart, stacks, out):
     import os
     n = len([f for f in os.listdir(film) if f.endswith(".jpg")])
@@ -70,12 +105,14 @@ def main(film, chart, stacks, out):
             im = card
         elif CHART[0] <= t < CHART[1]:
             k = min(int((t - CHART[0]) * FPS), nc - 1)
-            im = push(frame_from(chart, k), (t - CHART[0]) / (CHART[1] - CHART[0]))
+            im = push(frame_from(chart, k), (t - CHART[0]) / (CHART[1] - CHART[0]), 1.0, 1.22)
         elif STACKS[0] <= t < STACKS[1]:
             k = min(int((t - STACKS[0]) * FPS), ns - 1)
-            im = push(frame_from(stacks, k), (t - STACKS[0]) / (STACKS[1] - STACKS[0]), 1.0, 1.08, (0.5, 0.5))
+            im = push(frame_from(stacks, k), (t - STACKS[0]) / (STACKS[1] - STACKS[0]), 1.0, 1.2, (0.5, 0.5))
         else:
-            im = frame_from(film, i)
+            im = lift(frame_from(film, i))
+        if t >= SLAM:
+            im = handheld(im, t)
         enc.stdin.write(im.tobytes())
     enc.stdin.close()
     enc.wait()
