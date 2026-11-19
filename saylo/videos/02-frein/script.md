@@ -76,7 +76,7 @@ There was no suspect and no name. They didn't even have a vehicle.
 
 ## The Swamp
 
-That changed within days. On Sunday, September 14th, according to the court, a man walking his dog spotted a Jeep sitting partly underwater in a swampy area and reported it to State Police.
+That changed within days. On Sunday, September 14th, according to the court, a man walking his dog spotted a Jeep stuck in a retention pond, sitting partly underwater, and reported it to State Police.
 
 [VISUAL: RECREATE — Jeep nose-down in a dark pond, reeds, a small figure with a dog on the bank]
 

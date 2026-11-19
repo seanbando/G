@@ -70,3 +70,6 @@ helicopters / tracking dogs / armored vehicles, "two-lane road", "back roads", "
 ## Verify
 - "the rifle, the DNA and the handwritten pages" — DNA came from the review; confirm it's in the Pa. Supreme Court opinion
 - 2020 execution date set and stayed (governor's notice / court stay)
+
+## Nov 19, 2026: footage check
+- **The Swamp, Jeep location.** Script said "partly underwater in a swampy area" (attributed to the court). The court opinion (Commonwealth v. Frein, 745 CAP, p. 4) says the Jeep was "stuck in a retaining pond off Route 402"; WNEP's 2014 report says "retention pond… stuck in some swampy water". Changed to: "a Jeep stuck in a retention pond, sitting partly underwater". Frein's own note ("ended up in the swamp") stays as his word.

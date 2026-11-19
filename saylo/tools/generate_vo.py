@@ -75,13 +75,28 @@ LOCKED = {
 }
 
 
+def tts_paragraphs(video):
+    """Spoken versions (numbers spelled out) from voiceover-part*-tts.txt, if the video has them."""
+    files = sorted(f for f in os.listdir(video) if re.fullmatch(r"voiceover-part\d+-tts\.txt", f))
+    paras = []
+    for f in files:
+        paras += [p.strip() for p in re.split(r"\n\s*\n", open(os.path.join(video, f)).read())
+                  if p.strip() and not p.strip().startswith("[")]
+    return paras
+
+
 def chunks_from_script(path):
     text = open(path).read().split("\n---\n", 1)[1]
-    chapter, out = "Cold open", []
+    tts = tts_paragraphs(os.path.dirname(path) or ".")
+    chapter, out, n = "Cold open", [], 0
     for para in re.split(r"\n\s*\n", text):
         para = para.strip()
         if not para or para == "---" or para.startswith("[VISUAL") or para == "[PART 2]":
             continue
+        if not para.startswith("## ") and tts:
+            if n >= len(tts):
+                sys.exit("voiceover-part*-tts.txt has fewer paragraphs than script.md")
+            para, n = tts[n], n + 1
         if para.startswith("## "):
             chapter = para[3:].strip()
             out.append(("CHAPTER", chapter))
@@ -108,6 +123,15 @@ def chunks_from_script(path):
             kind = None
     units[0]["gap_before"] = "none"
     return units
+
+
+def load_config(video):
+    """Per-video extras in <video>/vo-config.json: {"spoken": {...}, "beats": {...}}."""
+    path = os.path.join(video, "vo-config.json")
+    if os.path.exists(path):
+        cfg = json.load(open(path))
+        SPOKEN.update(cfg.get("spoken", {}))
+        BEATS.update(cfg.get("beats", {}))
 
 
 def spoken(t):
@@ -266,6 +290,7 @@ def main(argv):
     redo = set()
     if "--redo" in argv:
         redo = {x.strip().zfill(3) for x in argv[argv.index("--redo") + 1].split(",")}
+    load_config(video)
     units = chunks_from_script(os.path.join(video, "script.md"))
     vo = os.path.join(video, "vo")
     os.makedirs(vo, exist_ok=True)
