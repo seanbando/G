@@ -4,6 +4,7 @@ Rule for this video: every line is a new 3D set, with new models, new character 
 Long lines are split into 2-3 shots (about 1-1.5 s each), so a new shot lands every 1-3 s.
 Times are estimates until the voiceover is measured; every action then gets locked to its word with speech-to-text.
 
+Visual hook: frame 1 is the hook scene itself, not a text card.
 Look: 2.5D. 3D sets, props, lights and particles, with flat 2D characters whose faces change on cue.
 The characters and sets are our own designs, not copied from any channel.
 Each era gets its own light colour:
@@ -25,16 +26,18 @@ Cast (new sprites, each with an expression set):
 
 ---
 
-## Board 1 · 0:00-0:03.4 · Hook
+## Board 1 · 0:00-0:03.4 · Hook (the visual acts out the hook, word by word)
 VO: "Ben Franklin gave Boston money to grow for two hundred years. Guess what it became."
 
-- Frame 1 is a finished slam card: "$4,500 → 200 YEARS → ?" over the blurred chest.
-- Set: dark 1790 study. Oak desk, quill and inkpot, a flickering candle (warm point light), a map of Boston pinned to the wall, dust in the candle light.
-- On "Ben Franklin": FRANKLIN (smug half-lids) signs a parchment will. Quill scratch, and the wax seal stamps down.
-- On "money": he drops a coin purse into the iron chest. Coins spill and glint.
-- On "two hundred years": the lid slams, the padlock snaps shut, and a carved "200 YEARS" brands into the lid with sparks. Shake.
-- On "Guess": whip-pan to a big neon "?" and Franklin winks.
-- Camera: wide, then a fast push-in to the chest, then a whip.
+- Frame 1 (finished, no text card): a 1790 candlelit study. FRANKLIN (smug half-lids) stands behind his desk, both hands on the lid of the iron chest, ready to slide it across. Through the window behind him, Boston's harbor and church steeple glow at dusk. A small brass plate on the chest reads "£1,000". The shot is fully lit and composed from the very first frame.
+- "Ben Franklin": push in on his face, and his glasses glint.
+- "gave Boston": he shoves the chest across the desk into the arms of the CLERK (proud), who stands in front of the window. The Boston skyline sits right behind them, so "Boston" reads instantly.
+- "money": the clerk flips the lid, and a wave of coins catches the candle light. Coin clink.
+- "to grow": the coins start stacking themselves inside the chest, a pile visibly rising out of it with a soft glow. Rising whoosh.
+- "for two hundred years": the lid slams and the padlock snaps. Then a hyper-timelapse: the candle melts and is replaced by a gas lamp, then a light bulb; the window flips from horse carts to cars to neon. The chest rusts, vines creep over it, dust piles up. A wall calendar rips through "1790 → 1890 → 1990". Time-rush sound.
+- "Guess what it became": silence, the camera rushes in on the old chest, light leaks out of the cracks in the lid, and the padlock rattles. Cut on the shake, with no answer yet.
+- Camera: a push-in, then a whip with the chest, then a locked-off timelapse with handheld drift, then a fast push.
+- Why it works: every word has its own picture, and the opening never shows a plain text card. The timelapse acts out "200 years" in about 1.5 s and sets up the chest as the running image.
 
 ## Board 2 · ~0:03.4-0:07 · 1790
 VO: "Seventeen ninety. A thousand pounds, about forty-five hundred dollars, goes into the chest."
