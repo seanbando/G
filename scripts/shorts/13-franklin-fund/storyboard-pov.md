@@ -1,6 +1,6 @@
 # Storyboard (POV): You Are the Money
 
-Script: script-pov.md (146 words, about 45 s at 196 wpm).
+Script: script-pov.md (143 words, about 44 s at 196 wpm).
 Times are estimates until the voiceover is recorded and measured with speech-to-text; every beat is then locked to its word.
 
 Structure: POV (second person, "you" are the thousand pounds), told in order through 1791 → 1891 → 1991. One structure only.
@@ -61,15 +61,17 @@ VO: "You're a thousand pounds. Locked in for two hundred years."
 | ~1.7 | "Locked in" | POV from the coin: the lid swings down over the camera and the light shrinks to a slit. Padlock snap. | POV, slight fisheye | lid slam, lock snap |
 | ~2.3 | "for two hundred years" | inside the dark chest: YOU (nervous) and a scratched tally on the wall counting up fast while a muffled clock ticks; "200 YEARS" glows on the inside of the lid | slow push | ticking, low drone |
 
-## Board 2 · ~3:00-7:30 · THE WILL, 1791
-VO: "Ben Franklin's will sends you to Boston. Seventeen ninety-one: about forty-five hundred dollars."
+## Board 2 · ~3:00-6:60 · THE BET (1791)
+VO: "Ben Franklin is betting you'll grow into millions. Boston gets the chest."
+The voice carries the stakes and the screen carries the facts: "1791" and "≈ $4,500" appear on screen only.
 
 | Time | Word | Shot / action | Camera | Sound |
 |---|---|---|---|---|
-| ~3.0 | "Ben Franklin's will" | the lid opens: FRANKLIN (smug) holds up a parchment will with a wax seal and winks at YOU | push to his face | parchment, light swell |
-| ~4.4 | "sends you to Boston" | the chest rides a horse cart down a foggy 1790s Boston harbor street (tall ships, lanterns); YOU peeks over the rim, excited | dolly with the cart | hooves, gulls |
-| ~5.6 | "Seventeen ninety-one" | a wooden "1791" sign swings down; the CLERK (proud) lifts YOU out of the chest | crane down | sign creak |
-| ~6.6 | "about forty-five hundred dollars" | YOU's tag flips like a station board: "£1,000" → "≈ $4,500"; YOU (smug) poses | punch | flip clack |
+| ~3.0 | "Ben Franklin" | the lid opens: FRANKLIN (smug) leans over the chest holding his wax-sealed will, glasses glinting in the candle light | push to his face | light swell |
+| ~3.7 | "is betting" | he slaps a betting slip onto the lid: "BET: £1,000 → MILLIONS"; YOU (wide-eyed) reads it | punch on the slip | slap, dice rattle |
+| ~4.4 | "you'll grow into millions" | dream bubble over YOU: YOU grows into a giant golden coin towering over a city skyline; YOU (grinning) dreams | float-in | magic chime |
+| ~5.4 | "Boston" | the bubble pops; the chest rides a horse cart down a foggy Boston harbor street (tall ships, lanterns); a "1791" sign swings down | crane down | pop, hooves, gulls |
+| ~6.1 | "gets the chest" | the CLERK (proud) catches the chest; YOU peeks over the rim as its tag flips "£1,000" → "≈ $4,500" | punch | catch thud, flip clack |
 
 ## Board 3 · ~7:30-12:20 · YOUR JOB
 VO: "Your job: get lent to young tradesmen at five percent, come back bigger, go out again."

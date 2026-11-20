@@ -33,3 +33,5 @@ Same facts as the corrected main script. New claims:
 - "Some borrowers pay you back... fewer tradesmen qualify, many struggle to repay, and you don't get lent out enough": matches the review (fewer eligible borrowers, repayment problems, money not continuously lent and compounded). OK.
 - "His math said almost four times that": £4,061,000 x $4.444 = $18.05M; $18.05M / $4.65M (court figure) = 3.9x. OK.
 - "The rest goes back in the dark" / "Light again" = the chest metaphor (the trust was actively managed; visual metaphor only).
+
+- POV line 2 changed to "Ben Franklin is betting you'll grow into millions. Boston gets the chest." Franklin's own projection was £4,061,000 after 200 years, so "millions" is his math. 1791 and ≈$4,500 shown on screen only.

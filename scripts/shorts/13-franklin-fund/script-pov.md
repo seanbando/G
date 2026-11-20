@@ -2,7 +2,7 @@ Ben Franklin's 200-Year Money Chest (POV: you are the money)
 
 You're a thousand pounds. Locked in for two hundred years.
 
-Ben Franklin's will sends you to Boston. Seventeen ninety-one: about forty-five hundred dollars.
+Ben Franklin is betting you'll grow into millions. Boston gets the chest.
 
 Your job: get lent to young tradesmen at five percent, come back bigger, go out again.
 
