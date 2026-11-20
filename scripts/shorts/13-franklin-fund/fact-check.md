@@ -16,3 +16,13 @@ Single city (Boston) for simplicity; Philadelphia (about $2M in 1990) goes in th
 
 Caveats for the caption: nominal dollars, not inflation-adjusted; pound-to-dollar comparison uses the 1790s rate ($4.44/£). Philadelphia's fund reached about $2M by 1990 and funded scholarships.
 Caption line: "Real story: Franklin's 1789 codicil. Figures are nominal, from city fund records as reported by historians; sources vary slightly."
+
+## Outside review (Nov 20, 2026), applied
+Sources cited by the reviewer: Massachusetts court record of the Franklin Fund final distribution (law.justia.com); Franklin Fund history document (upload.wikimedia.org).
+- Line 2: Franklin died in 1790, but Boston received the money ($4,444.44) in March 1791 → "1791".
+- Line 5: the first-century distribution was due in 1891 → "1891". $391,000 and "about two thirds" stand.
+- Line 8: the Boston trust's second century officially ended June 30, 1991 → "1991".
+- Line 9: "almost $5 million" supported; the court recorded $4,646,613.48 in the final distribution proceedings. "Less than a third" holds with the same pound-to-dollar rate.
+- Line 10: "safe, slow accounts" oversimplified (one early account earned about 5⅓%; later diversified securities). New line: "Fewer tradesmen qualified, many struggled to pay back, and the money didn't keep compounding like he planned."
+- Lines 3, 4, 6, 7 confirmed: 5% loans to young married tradesmen; projections £131,000 and £4,061,000; part of the first-century money helped found the technical school.
+- Line 11 is interpretation; the chest is a visual metaphor (the trust was actively managed).

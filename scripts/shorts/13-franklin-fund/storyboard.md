@@ -1,6 +1,7 @@
 # Storyboard v2: Ben Franklin's 200-Year Money Chest (locked to the recorded voiceover)
 
 Voiceover: audio/franklin-fund-FULL.mp3, 50.1 s, dead space cut.
+NOTE: lines 2, 5, 8 and 10 were corrected after an outside fact review (1791/1891/1991, line 10 wording); the times below are from the first take and get re-measured after the re-record.
 Word times are measured with speech-to-text (words.json). Times marked ~ were interpolated and get re-snapped after the build.
 
 Structure: Ricks (cold open on "He...", true story told in order, twist, lesson, question). One structure only.
@@ -46,15 +47,15 @@ VO: "He left a city a two-hundred-year bet. Guess how it ended."
 | 0.52 | "city" | whip to the CLERK (proud) catching the chest in front of the window. The Boston skyline fills the frame behind him. | whip-pan right | whoosh |
 | 0.88 | "a" | the lid flips open and coins catch the candle light; sparkle particles | quick punch-in | coin clink |
 | 1.00 | "two-hundred-year" | THE MAN's hand slaps a wax-sealed paper on the lid: "200 YEARS". The coins start stacking themselves and rising. | tilt down to the seal | paper slap and seal thud |
-| 1.90 | "bet." | the lid SLAMS and the padlock snaps. Hyper-timelapse in 0.4 s: candle → gas lamp → light bulb; the window goes horse carts → cars → neon; the chest rusts and moss creeps over it; the wall calendar rips 1790 → 1890 → 1990. | locked-off with drift, then a shake on the slam | lid slam, time-rush whoosh |
+| 1.90 | "bet." | the lid SLAMS and the padlock snaps. Hyper-timelapse in 0.4 s: candle → gas lamp → light bulb; the window goes horse carts → cars → neon; the chest rusts and moss creeps over it; the wall calendar rips 1791 → 1891 → 1991. | locked-off with drift, then a shake on the slam | lid slam, time-rush whoosh |
 | 2.32 | "Guess how it ended." | 1990 darkness. The ancient chest sits alone, light leaking from the cracks in the lid, the padlock rattling by itself. Cut before it opens. | fast push-in to the lock | heartbeat thump, rattle |
 
 ## Board 2 · 0:03.04-0:08.66 · 1790: INTO THE CHEST
-VO: "Seventeen ninety. A thousand pounds, about forty-five hundred dollars, goes into the chest."
+VO: "Seventeen ninety-one. A thousand pounds, about forty-five hundred dollars, goes into the chest."
 
 | Time | Word | Shot / action | Camera | Sound |
 |---|---|---|---|---|
-| 3.04 | "Seventeen ninety" | Boston harbor street at dusk: cobblestones, tall ships, oil lanterns, fog rolling off the water. A carved wooden sign "1790" swings down on chains into frame. | crane down from the ship masts | gulls, sign creak |
+| 3.04 | "Seventeen ninety-one" | Boston harbor street at dusk: cobblestones, tall ships, oil lanterns, fog rolling off the water. A carved wooden sign "1791" swings down on chains into frame. | crane down from the ship masts | gulls, sign creak |
 | ~4.10 | "A thousand pounds" | close-up: a gold coin stack rises out of the open chest, with a floating "£1,000" label | push-in on the coins | coin cascade |
 | ~5.76 | "about forty-five hundred dollars" | the label flips like a train-station board to "≈ $4,500" | small punch | flip clack |
 | ~7.68 | "goes into the chest" | the lid shuts. The CLERK (proud) loads it onto a horse-drawn cart. In a doorway behind, THE MAN watches in silhouette; his glasses glint once in the lantern light. | dolly alongside the cart | hooves, lid thud |
@@ -81,11 +82,11 @@ VO: "He did the math himself. One hundred years, a hundred thirty-one thousand p
 | 18.94 | "over four million" | the tower top glows in the clouds: "£4,061,000". The silhouetted arm points up proudly. | hold with drift | choir swell |
 
 ## Board 5 · 0:20.00-0:26.88 · 1890: FIRST OPENING
-VO: "Eighteen ninety. The chest opens. Three hundred ninety-one thousand dollars. Only two thirds of his math."
+VO: "Eighteen ninety-one. The chest opens. Three hundred ninety-one thousand dollars. Only two thirds of his math."
 
 | Time | Word | Shot / action | Camera | Sound |
 |---|---|---|---|---|
-| 20.00 | "Eighteen ninety" | a calendar flips in a blur of pages, 1790 → 1890. City hall vault: gas lamps with green-gold light, brass bars, a polished floor, and a portrait on the wall covered by a dusty sheet. | whip in | page flutter, gas hiss |
+| 20.00 | "Eighteen ninety-one" | a calendar flips in a blur of pages, 1791 → 1891. City hall vault: gas lamps with green-gold light, brass bars, a polished floor, and a portrait on the wall covered by a dusty sheet. | whip in | page flutter, gas hiss |
 | 21.40 | "The chest opens" | the scuffed chest's lid creaks up; a light beam shoots out with dust swirling in it. TREASURER (proud) leans in, monocle popping. | push-in on the lid | creak, light swell |
 | 22.38 | "Three hundred ninety-one thousand dollars" | a real money pile rises: "$391,000" | punch | hit |
 | 25.42 | "Only two thirds of his math" | a translucent ghost pile appears beside it, "HIS MATH ≈ $582,000". The real pile stops at a glowing "67%" line. TREASURER's face drops. | pull back to show both piles | sad trombone, short |
@@ -107,11 +108,11 @@ VO: "Part of it builds a trade school. The rest goes back in the chest."
 | 30.66 | "The rest goes back in the chest" | a thin stream of coins pours back into the chest; the lid shuts and dust puffs | push-in on the chest | coins, thud |
 
 ## Board 8 · 0:32.18-0:35.00 · 1990: SECOND OPENING
-VO: "Nineteen ninety. The chest opens again."
+VO: "Nineteen ninety-one. The chest opens again."
 
 | Time | Word | Shot / action | Camera | Sound |
 |---|---|---|---|---|
-| 32.18 | "Nineteen ninety" | a digital clock flips 1890 → 1990. 1990 Boston at night: neon, skyscrapers, car headlights streaking. Inside, a modern vault with a CRT monitor reading "FRANKLIN FUND". The ancient chest sits on a pedestal under a spotlight. | fast push through the city into the vault | synth stab, city hum |
+| 32.18 | "Nineteen ninety-one" | a digital clock flips 1891 → 1991. 1990 Boston at night: neon, skyscrapers, car headlights streaking. Inside, a modern vault with a CRT monitor reading "FRANKLIN FUND". The ancient chest sits on a pedestal under a spotlight. | fast push through the city into the vault | synth stab, city hum |
 | 33.94 | "The chest opens again" | OFFICIAL (anticipation, brick phone in hand) grips the lid. Drum roll; the lid lifts slowly and light floods out. | slow push with handheld tension | drum roll |
 
 ## Board 9 · 0:35.14-0:38.92 · THE REVEAL
@@ -124,14 +125,13 @@ VO: "Almost five million dollars. Less than a third of what his math promised."
 | 38.04 | "his math promised" | FRANKLIN's ghost rises above the chest, shocked, his glasses sliding down his nose | push to his face | ghostly whoosh |
 
 ## Board 10 · 0:39.10-0:44.12 · WHY (3 shots)
-VO: "Fewer tradesmen borrowed, many didn't pay back, and the money got parked in safe, slow accounts."
+VO: "Fewer tradesmen qualified, many struggled to pay back, and the money didn't keep compounding like he planned."
 
 | Time | Word | Shot / action | Camera | Sound |
 |---|---|---|---|---|
-| 39.10 | "Fewer tradesmen borrowed" | an empty loan desk with a "LOANS" sign. CLERK (bored) taps his fingers; the wall clock spins fast and cobwebs grow. | push-in | clock ticking fast |
-| 40.48 | "many didn't pay back" | night alley: BORROWER (sneaky) tiptoes away with a pouch; a red "UNPAID" stamp slams onto an IOU | whip and punch | stamp hit |
-| 41.60 | "and the money got parked" | coins slide into a bank vault marked "SAVINGS" | push | coins slide |
-| 42.86 | "in safe, slow accounts" | a snail crawls across a growth meter that barely moves; the money pile yawns (cartoon detail) | slow drift | snail squish, yawn |
+| 39.10 | "Fewer tradesmen qualified" | an empty loan desk with a "LOANS" sign. CLERK (bored) taps his fingers; the wall clock spins fast and cobwebs grow. | push-in | clock ticking fast |
+| 40.48 | "many struggled to pay back" | night alley: BORROWER (sneaky) tiptoes away with a pouch; a red "UNPAID" stamp slams onto an IOU | whip and punch | stamp hit |
+| 41.60 | "and the money didn't keep compounding like he planned" | the glowing loan loop from board 3 stutters: coins stop mid-air, gaps open in the circle, and a growth meter that should be climbing stalls and flickers | slow drift, then a small drop | record scratch, stall hum |
 
 ## Board 11 · 0:44.30-0:46.66 · THE LESSON
 VO: "The math never failed. People interrupted it."
@@ -151,7 +151,7 @@ VO: "So could you leave your money alone for twenty years? Yes or no."
 | 49.36 | "Yes or no." | two big buttons slam in, "YES" (green) and "NO" (red); a comment-bubble icon wiggles under them | small shake | double hit |
 
 ## Board 13 · 0:50.10-0:52.10 · SAVE + FOLLOW CARD (no voice)
-- 50.1-51.3: save card over the chest. "1790: $4,500 → 1890: $391,000 → 1990: ~$5,000,000 · His math: 3× more." A bookmark icon pulses with "SAVE THIS".
+- 50.1-51.3: save card over the chest. "1791: $4,444 → 1891: $391,000 → 1991: ~$4.6 million · His math: 3× more." A bookmark icon pulses with "SAVE THIS".
 - 51.3-52.1: "More true money bets → FOLLOW". The chest lid closes, then a loop cut back to frame 1.
 
 ---
