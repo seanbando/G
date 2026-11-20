@@ -1,14 +1,16 @@
 Ben Franklin's 200-Year Money Chest
 
-He gave a city money that had to grow for two hundred years. Guess what it became.
+He left a city a two-hundred-year bet. Guess how it ended.
 
 Seventeen ninety. A thousand pounds, about forty-five hundred dollars, goes into the chest.
 
-The man? Ben Franklin. His rule: lend it to young tradesmen at five percent, and keep lending the interest.
+His rule: lend it to young tradesmen at five percent, and keep lending the interest.
 
 He did the math himself. One hundred years, a hundred thirty-one thousand pounds. Two hundred years, over four million.
 
 Eighteen ninety. The chest opens. Three hundred ninety-one thousand dollars. Only two thirds of his math.
+
+The man who made the bet? Ben Franklin.
 
 Part of it builds a trade school. The rest goes back in the chest.
 

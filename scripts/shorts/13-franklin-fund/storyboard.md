@@ -28,16 +28,14 @@ Cast (new sprites, each with an expression set):
 
 ---
 
-## Board 1 · 0:00-0:04.5 · Hook (Ricks-style cold open: "He...", name held back until board 3)
-VO: "He gave a city money that had to grow for two hundred years. Guess what it became."
+## Board 1 · 0:00-0:03.5 · Hook (Ricks-style cold open: "He...", name held back until board 5, about 20 s in)
+VO: "He left a city a two-hundred-year bet. Guess how it ended."
 
 - Frame 1 (finished, no text card): a 1790 candlelit study, seen from behind a MAN in a brown coat. His face is hidden in shadow, both hands on the lid of the iron chest. Through the window, Boston's harbor and church steeple glow at dusk. A small brass plate on the chest reads "£1,000". Fully lit and composed from the very first frame.
-- "He gave": he slides the chest across the desk. We still only see his back and his hands.
-- "a city": the CLERK (proud) catches it in front of the window, with the Boston skyline right behind him.
-- "money": the lid flips open and a wave of coins catches the candle light. Coin clink.
-- "that had to grow": the coins stack themselves and the pile rises out of the chest with a soft glow. Rising whoosh.
-- "for two hundred years": the lid slams and the padlock snaps. Then a hyper-timelapse: the candle becomes a gas lamp, then a bulb; the window goes from horse carts to cars to neon; the chest rusts and vines grow over it; the calendar rips "1790 → 1890 → 1990".
-- "Guess what it became": silence, then a fast push in on the ancient 1990 chest as light leaks from the cracks and the lock rattles. Cut before the answer.
+- "He left": he slides the chest across the desk. We still only see his back and his hands.
+- "a city": the CLERK (proud) catches it in front of the window, with the Boston skyline right behind him. The lid flips and coins glint in the candle light. Coin clink.
+- "a two-hundred-year bet": he slaps a wax-sealed paper on the lid reading "200 YEARS", and the coins start stacking themselves and rising. Then the lid slams and the padlock snaps. Then a hyper-timelapse: the candle becomes a gas lamp, then a bulb; the window goes from horse carts to cars to neon; the chest rusts and vines grow over it; the calendar rips "1790 → 1890 → 1990".
+- "Guess how it ended": silence, then a fast push in on the ancient 1990 chest as light leaks from the cracks and the lock rattles. Cut before the answer.
 - Camera: a slow push from behind, then a whip with the chest, then the timelapse with drift, then a fast push. The man's face stays hidden.
 
 ## Board 2 · ~0:04.5-0:08 · 1790 (man still hidden)
@@ -49,32 +47,33 @@ VO: "Seventeen ninety. A thousand pounds, about forty-five hundred dollars, goes
 - CLERK (proud) rides a horse-drawn cart carrying the chest toward the town hall. In the doorway behind, the MAN in the brown coat watches, still in silhouette, his glasses catching the lantern light for one frame.
 - Camera: crane down from the masts, then dolly alongside the cart.
 
-## Board 3 · ~0:08-0:13.5 · The reveal + the rule (3 shots)
-VO: "The man? Ben Franklin. His rule: lend it to young tradesmen at five percent, and keep lending the interest."
+## Board 3 · ~0:07-0:11 · The rule (2 shots, man still hidden)
+VO: "His rule: lend it to young tradesmen at five percent, and keep lending the interest."
 
-0. "The man?": whip back to the doorway silhouette. "Ben Franklin": he steps into the lantern light and FRANKLIN's face is revealed (smug half-lids, glasses glint, the candle flares). A small "BEN FRANKLIN" nameplate drops in under him, with a hit sound.
-1. "His rule": Blacksmith forge. Glowing anvil, sparks, orange rim light. CLERK (serious) hands the BLACKSMITH (hopeful grin) a coin pouch, and a tag swings on it: "LOAN · 5%".
+1. "His rule": the MAN's silhouette points from the doorway (face still hidden). Then Blacksmith forge. Glowing anvil, sparks, orange rim light. CLERK (serious) hands the BLACKSMITH (hopeful grin) a coin pouch, and a tag swings on it: "LOAN · 5%".
 2. On "keep lending the interest": pull back to a mini Boston diorama. Glowing coins travel from the blacksmith back to the chest, then out to a carpenter, then a printer, then back again: a loop of light circling the town. Coins get added to the loop on each pass.
 
 - Camera: orbit the anvil, then a fast pull-back to the diorama.
 
-## Board 4 · ~0:13.5-0:18 · Franklin's math (2 shots)
+## Board 4 · ~0:11-0:16 · His math (2 shots, face still hidden)
 VO: "He did the math himself. One hundred years, a hundred thirty-one thousand pounds. Two hundred years, over four million."
 
-1. Study. FRANKLIN (excited, glasses glinting) scribbles on a parchment, and ink numbers float up off the page.
-2. On "one hundred years": a gold tower rises from the floor, labelled "100 YRS: £131,000". On "two hundred years": a second tower shoots up through the ceiling and the roof, labelled "200 YRS: £4,061,000". Franklin points up, grinning.
+1. Study, shot over the MAN's shoulder (face never shown: only his hand, the quill, and his glasses' reflection in the inkpot). He scribbles on a parchment, and ink numbers float up off the page.
+2. On "one hundred years": a gold tower rises from the floor, labelled "100 YRS: £131,000". On "two hundred years": a second tower shoots up through the ceiling and the roof, labelled "200 YRS: £4,061,000". His silhouetted arm points up.
 
 - Camera: tilt up following the tower out through the roof, with roof debris and a shake.
 
-## Board 5 · ~0:16-0:20 · 1890, first opening
-VO: "Eighteen ninety. The chest opens. Three hundred ninety-one thousand dollars. Only two thirds of his math."
+## Board 5 · ~0:16-0:23 · 1890, first opening + THE NAME REVEAL
+VO: "Eighteen ninety. The chest opens. Three hundred ninety-one thousand dollars. Only two thirds of his math. The man who made the bet? Ben Franklin."
 
-- Set: 1890 city hall vault. Gas lamps (green-gold light), brass fittings, polished floor, a portrait of Franklin on the wall.
+- Set: 1890 city hall vault. Gas lamps (green-gold light), brass fittings, polished floor, a portrait on the wall covered by a dusty sheet.
 - On "1890": a calendar flips 1790 → 1890 in a blur of pages.
 - On "the chest opens": the lid creaks up, a light beam shoots out, and dust swirls in it. TREASURER (proud) leans in.
 - On "$391,000": a real money pile with that label. Beside it stands a translucent "ghost" pile, Franklin's math (£131,000 ≈ $582,000). The real pile fills it to a 67% line.
-- On "two thirds": TREASURER's face drops. The Franklin portrait on the wall changes from smile to frown.
-- Camera: push in on the chest, then a whip to the portrait.
+- On "two thirds": TREASURER's face drops.
+- On "The man who made the bet?": whip to the covered portrait. The sheet slips off as the gas lamps flare.
+- On "Ben Franklin": the portrait is FRANKLIN (frowning at the 67% pile), with a gold "BEN FRANKLIN" nameplate slamming in under the frame. Hit sound and a punch-in. This is the first time his face is seen.
+- Camera: push in on the chest, then a whip to the portrait, then a punch-in on the face.
 
 ## Board 6 · ~0:20-0:23 · Trade school
 VO: "Part of it builds a trade school. The rest goes back in the chest."
