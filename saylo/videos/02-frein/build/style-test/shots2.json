@@ -1,0 +1,417 @@
+{
+ "vo": "saylo/videos/02-frein/voiceover-full.mp3",
+ "fps": 30,
+ "end": 52.8,
+ "out": "frein_cold_open_v2.mp4",
+ "dir": "shots2",
+ "types": [
+  [
+   0.15,
+   "medium"
+  ],
+  [
+   3.5,
+   "short"
+  ],
+  [
+   7.75,
+   "medium"
+  ],
+  [
+   20.1,
+   "medium"
+  ],
+  [
+   23.0,
+   "medium"
+  ],
+  [
+   38.6,
+   "short"
+  ],
+  [
+   39.66,
+   "medium"
+  ],
+  [
+   51.3,
+   "short"
+  ]
+ ],
+ "shots": [
+  {
+   "id": 1,
+   "start": 0.0,
+   "end": 0.94,
+   "kind": "open",
+   "line": "Thursday,",
+   "what": "high over the woods, fast push toward the airstrip; date stamp types on"
+  },
+  {
+   "id": 2,
+   "start": 0.94,
+   "end": 2.22,
+   "kind": "open",
+   "line": "October 30th,",
+   "what": "lower, flying up the runway toward the hangar"
+  },
+  {
+   "id": 3,
+   "start": 2.22,
+   "end": 3.46,
+   "kind": "open",
+   "line": "2014,",
+   "what": "ground level: cracked runway and weeds, push along the centre line"
+  },
+  {
+   "id": 4,
+   "start": 3.46,
+   "end": 5.34,
+   "kind": "open",
+   "line": "a little after six in the evening",
+   "what": "the hangar against the dusk sky, push in; 6:07 PM types on"
+  },
+  {
+   "id": 5,
+   "start": 5.34,
+   "end": 6.54,
+   "kind": "clip",
+   "line": "at a defunct airfield",
+   "what": "real: helicopter view of the actual hangar in the woods, police cars beside it",
+   "src": "hangar-screen-recording-2026-11-19.mp4",
+   "in": 22.0,
+   "out": 23.2,
+   "crop": "1248:702:560:0",
+   "tag": "source-wnep.png",
+   "push": 0.04
+  },
+  {
+   "id": 6,
+   "start": 6.54,
+   "end": 7.66,
+   "kind": "open",
+   "line": "near Tannersville",
+   "what": "object: the hangar's sliding door and rail, close push"
+  },
+  {
+   "id": 7,
+   "start": 7.66,
+   "end": 8.86,
+   "kind": "map",
+   "line": "in the Pocono Mountains",
+   "what": "clay road map from OpenStreetMap data, fast push toward the pin",
+   "tag": "source-openstreetmap.png"
+  },
+  {
+   "id": 8,
+   "start": 8.86,
+   "end": 10.1,
+   "kind": "map",
+   "line": "of Pennsylvania.",
+   "what": "map, close on the amber pin and the Tannersville label",
+   "tag": "source-openstreetmap.png"
+  },
+  {
+   "id": 9,
+   "start": 10.1,
+   "end": 10.66,
+   "kind": "open",
+   "line": "A team of",
+   "what": "low, in front of the line of marshals walking at the camera"
+  },
+  {
+   "id": 40,
+   "start": 10.66,
+   "end": 11.56,
+   "kind": "still",
+   "line": "US Marshals",
+   "what": "real: a fast flash of the actual team (freeze frame, quick push)",
+   "src": "Pa. breathes easier after capture of Eric Frein - CBS Evening News (720p, h264).mp4",
+   "at": 84.3,
+   "tag": "source-cbs-news.png",
+   "push": 0.09
+  },
+  {
+   "id": 10,
+   "start": 11.56,
+   "end": 12.44,
+   "kind": "open",
+   "line": "is working its way",
+   "what": "same line from the side, close, tracking with them"
+  },
+  {
+   "id": 11,
+   "start": 12.44,
+   "end": 14.02,
+   "kind": "open",
+   "line": "across the property.",
+   "what": "high angle of the line crossing the field by the runway, push down"
+  },
+  {
+   "id": 12,
+   "start": 14.02,
+   "end": 15.44,
+   "kind": "clip",
+   "line": "The state police asked them",
+   "what": "real: Malkowski at the map on the vehicle",
+   "src": "Pa. breathes easier after capture of Eric Frein - CBS Evening News (720p, h264).mp4",
+   "in": 80.5,
+   "out": 81.92,
+   "tag": "source-cbs-news.png",
+   "push": 0.03
+  },
+  {
+   "id": 13,
+   "start": 15.44,
+   "end": 16.66,
+   "kind": "open",
+   "line": "to clear this place,",
+   "what": "boots through the grass, low push"
+  },
+  {
+   "id": 14,
+   "start": 16.66,
+   "end": 17.8,
+   "kind": "clip",
+   "line": "an abandoned resort",
+   "what": "real: second helicopter angle on the hangar and its lot",
+   "src": "hangar-screen-recording-2026-11-19.mp4",
+   "in": 30.3,
+   "out": 31.44,
+   "crop": "1248:702:440:0",
+   "tag": "source-wnep.png",
+   "push": 0.04
+  },
+  {
+   "id": 15,
+   "start": 17.8,
+   "end": 19.22,
+   "kind": "image",
+   "line": "with an old airstrip,",
+   "what": "real photo: the cracked asphalt and the hangar (Reuters), push in",
+   "img": "media/photos/hangar-exterior.jpg",
+   "crop": "962:541:0:66",
+   "tag": "source-reuters.png",
+   "push": 0.06
+  },
+  {
+   "id": 16,
+   "start": 19.22,
+   "end": 20.04,
+   "kind": "open",
+   "line": "and they've been at it",
+   "what": "close behind one marshal's helmet and shoulders, walking"
+  },
+  {
+   "id": 17,
+   "start": 20.04,
+   "end": 21.74,
+   "kind": "open",
+   "line": "for about two hours.",
+   "what": "wide behind the team, hangar ahead; ABOUT 2 HOURS IN types on"
+  },
+  {
+   "id": 18,
+   "start": 21.74,
+   "end": 22.76,
+   "kind": "open",
+   "line": "Their commander,",
+   "what": "close push on the lead marshal mannequin"
+  },
+  {
+   "id": 19,
+   "start": 22.76,
+   "end": 25.0,
+   "kind": "clip",
+   "line": "a marshal named Scott Malkowski,",
+   "what": "real: Malkowski talking; name tag types on",
+   "src": "Pa. breathes easier after capture of Eric Frein - CBS Evening News (720p, h264).mp4",
+   "in": 84.75,
+   "out": 86.99,
+   "tag": "source-cbs-news.png",
+   "push": 0.02,
+   "zoom": 1.3,
+   "cx": 0.72,
+   "cy": 0.25,
+   "nametag": {
+    "name": "SCOTT MALKOWSKI",
+    "role": "DEPUTY U.S. MARSHAL",
+    "at": 23.0
+   }
+  },
+  {
+   "id": 20,
+   "start": 25.0,
+   "end": 26.32,
+   "kind": "open",
+   "line": "is walking toward the hangar",
+   "what": "behind three marshals, low dolly in, hangar ahead"
+  },
+  {
+   "id": 21,
+   "start": 26.32,
+   "end": 28.14,
+   "kind": "open",
+   "line": "with two members of his team",
+   "what": "the three from the front quarter, hangar door behind the camera side"
+  },
+  {
+   "id": 22,
+   "start": 28.14,
+   "end": 29.14,
+   "kind": "open",
+   "line": "when something moves",
+   "what": "close on the lead marshal's helmet, the tree line beyond"
+  },
+  {
+   "id": 23,
+   "start": 29.14,
+   "end": 30.76,
+   "kind": "open",
+   "line": "at the edge of the woods.",
+   "what": "the tree line, a small amber shape between the trunks, push"
+  },
+  {
+   "id": 24,
+   "start": 30.76,
+   "end": 31.82,
+   "kind": "open",
+   "line": "A man is coming out",
+   "what": "the amber figure steps out of the trees, push through the grass"
+  },
+  {
+   "id": 25,
+   "start": 31.82,
+   "end": 32.66,
+   "kind": "open",
+   "line": "of the trees,",
+   "what": "his legs through the grass, low side push"
+  },
+  {
+   "id": 26,
+   "start": 32.66,
+   "end": 34.56,
+   "kind": "open",
+   "line": "heading for the hangar. Later,",
+   "what": "high wide: amber figure crossing to the hangar, the three marshals watching"
+  },
+  {
+   "id": 27,
+   "start": 34.56,
+   "end": 36.2,
+   "kind": "clip",
+   "line": "telling reporters about it,",
+   "what": "real: Malkowski talking to reporters",
+   "src": "Pa. breathes easier after capture of Eric Frein - CBS Evening News (720p, h264).mp4",
+   "in": 86.99,
+   "out": 88.57,
+   "tag": "source-cbs-news.png",
+   "push": 0.02
+  },
+  {
+   "id": 28,
+   "start": 36.2,
+   "end": 37.64,
+   "kind": "clip",
+   "line": "Malkowski kept coming back",
+   "what": "real: Malkowski at the map, punched in",
+   "src": "Pa. breathes easier after capture of Eric Frein - CBS Evening News (720p, h264).mp4",
+   "in": 82.3,
+   "out": 83.74,
+   "tag": "source-cbs-news.png",
+   "zoom": 1.3,
+   "cx": 0.45,
+   "cy": 0.2,
+   "push": 0.03
+  },
+  {
+   "id": 29,
+   "start": 37.64,
+   "end": 38.58,
+   "kind": "open",
+   "line": "to one detail:",
+   "what": "behind the amber figure, pushing in toward his head"
+  },
+  {
+   "id": 30,
+   "start": 38.58,
+   "end": 39.64,
+   "kind": "open",
+   "line": "\"I saw",
+   "what": "over his shoulder: the quote types on the hangar wall ahead of him"
+  },
+  {
+   "id": 31,
+   "start": 39.64,
+   "end": 41.22,
+   "kind": "open",
+   "line": "the black hat.\"",
+   "what": "close on the black cap, wall and quote beyond"
+  },
+  {
+   "id": 32,
+   "start": 41.22,
+   "end": 42.38,
+   "kind": "open",
+   "line": "The marshals order him",
+   "what": "between two marshals' shoulders toward him, push"
+  },
+  {
+   "id": 33,
+   "start": 42.38,
+   "end": 43.62,
+   "kind": "open",
+   "line": "to the ground.",
+   "what": "side on: he goes down to his knees"
+  },
+  {
+   "id": 34,
+   "start": 43.62,
+   "end": 44.74,
+   "kind": "open",
+   "line": "He doesn't run,",
+   "what": "ground level along him, face down, push"
+  },
+  {
+   "id": 35,
+   "start": 44.74,
+   "end": 46.24,
+   "kind": "open",
+   "line": "and he doesn't fight.",
+   "what": "from the other side, marshals standing over him, push"
+  },
+  {
+   "id": 36,
+   "start": 46.24,
+   "end": 47.86,
+   "kind": "open",
+   "line": "He isn't carrying a gun.",
+   "what": "object: low and close on his open, empty hand, his other arm and the marshals behind"
+  },
+  {
+   "id": 37,
+   "start": 47.86,
+   "end": 49.26,
+   "kind": "open",
+   "line": "They ask him his name,",
+   "what": "low, a marshal standing over him, push up"
+  },
+  {
+   "id": 38,
+   "start": 49.26,
+   "end": 51.26,
+   "kind": "open",
+   "line": "and he gives them the real one:",
+   "what": "crane up and over: figure on the ground, ring of marshals"
+  },
+  {
+   "id": 39,
+   "start": 51.26,
+   "end": 52.8,
+   "kind": "photo",
+   "line": "Eric Frein.",
+   "what": "FBI photo, push; name types on",
+   "tag": "source-fbi.png"
+  }
+ ]
+}

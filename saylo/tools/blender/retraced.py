@@ -285,7 +285,18 @@ RPOSES = {
     "hands_up": {"upper_arm.L": (150, 0, 22), "upper_arm.R": (150, 0, -22), "forearm.L": (25, 0, 0),
                  "forearm.R": (25, 0, 0)},
 }
-RDROP = {"crouch": 0.5, "sit": 0.0}
+RPOSES.update({
+    # one knee down (right), left foot forward, arms a little away from the body
+    "kneel": {"thigh.L": (-92, 0, 0), "shin.L": (92, 0, 0), "thigh.R": (-4, 0, 0), "shin.R": (92, 0, 0),
+              "foot.R": (35, 0, 0), "upper_arm.L": (12, 0, -20), "upper_arm.R": (12, 0, 20),
+              "forearm.L": (10, 0, 0), "forearm.R": (10, 0, 0)},
+    # lying face down, arms out to the sides with open hands (use with prone())
+    "prone": {"upper_arm.L": (11, 0, 62), "upper_arm.R": (11, 0, -62), "forearm.L": (9, 0, 0), "forearm.R": (9, 0, 0),
+              "hand.L": (-14, 0, 0), "hand.R": (-14, 0, 0),      # arms down onto the ground, hands flat
+              "spine.004": (-12, 0, 0), "foot.L": (40, 0, 0), "foot.R": (40, 0, 0)},
+})
+RPOSES["relaxed"] = {"upper_arm.L": (4, 0, -24), "upper_arm.R": (4, 0, 24), "forearm.L": (14, 0, 0), "forearm.R": (14, 0, 0)}
+RDROP = {"crouch": 0.5, "sit": 0.0, "kneel": 0.47}
 
 
 def real_mannequin(name, loc=(0, 0, 0), rot_z=0.0, mat=None, subsurf=1):
@@ -340,6 +351,82 @@ def rrun_cycle(M, f0, f1, period=12, lean=14):
                   "forearm.L": (85, 0, 0), "forearm.R": (85, 0, 0)}, frame=f, ease="smooth")
         f += period // 2
         i += 1
+
+
+def rwalk_cycle(M, f0, f1, period=32, phase=0, lean=4):
+    """Walking cycle on the real mannequin between f0 and f1 (move the root yourself, about 1.3 m/s)."""
+    f, i = f0 - period, phase
+    while f <= f1 + period:
+        s = 1 if i % 2 == 0 else -1
+        rpose(M, {"spine.001": (lean, 0, 0),
+                  "thigh.L": (-24 * s, 0, 0), "thigh.R": (24 * s, 0, 0),
+                  "shin.L": (6 if s > 0 else 36, 0, 0), "shin.R": (36 if s > 0 else 6, 0, 0),
+                  "upper_arm.L": (-16 * s, 0, -24), "upper_arm.R": (16 * s, 0, 24),
+                  "forearm.L": (18, 0, 0), "forearm.R": (18, 0, 0)}, frame=f, ease="smooth")
+        f += period // 2
+        i += 1
+
+
+def prone(M, loc, rot_z):
+    """Lay the real mannequin face down at loc (feet at loc, head toward the direction rot_z, degrees from +X)."""
+    rpose(M, "prone")
+    M["root"].rotation_mode = "XYZ"
+    M["root"].location = (loc[0], loc[1], 0.17)
+    M["root"].rotation_euler = (0, math.radians(90), math.radians(rot_z))
+
+
+def attach(ob, M, bone):
+    """Fix a prop to one bone of the real mannequin, keeping where it is now. Call it in the rest pose, before rpose()."""
+    import mathutils
+    bpy.context.view_layer.update()
+    arm = M["arm"]
+    pb = arm.pose.bones[bone]
+    ob.parent, ob.parent_type, ob.parent_bone = arm, "BONE", bone
+    ob.matrix_parent_inverse = (arm.matrix_world @ pb.matrix @ mathutils.Matrix.Translation((0, pb.bone.length, 0))).inverted()
+    return ob
+
+
+def _on_body(M, ob, bone):
+    """ob was built in the mannequin's own frame (stands at 0, faces +X): move it onto M and fix it to bone."""
+    bpy.context.view_layer.update()
+    ob.matrix_world = M["root"].matrix_world @ ob.matrix_world
+    return attach(ob, M, bone)
+
+
+def _dome(loc, radii, mat, name):
+    """Upper half of an ellipsoid (rim at loc.z): a helmet shell or a close-fitting cap over the head."""
+    import bmesh
+    ob = clay.sphere(1.0, loc, mat, name, segs=28)
+    bm = bmesh.new()
+    bm.from_mesh(ob.data)
+    bmesh.ops.delete(bm, geom=[v for v in bm.verts if v.co.z < -0.02], context="VERTS")
+    bm.to_mesh(ob.data)
+    bm.free()
+    ob.scale = radii
+    for p in ob.data.polygons:
+        p.use_smooth = True
+    return ob
+
+
+def tactical(M, name="Gear"):
+    """Tactical kit for a white mannequin: helmet and a plate-carrier vest with pouches, in dark matte grey."""
+    g = kit.matte("#3C4047", 0.7, "GearGrey")
+    g2 = kit.matte("#2B2E33", 0.75, "GearDark")
+    # head of the base mesh: centre (0, 0, 1.85), about 0.21 deep, 0.17 wide, top at 1.95
+    helmet = _dome((-0.006, 0, 1.83), (0.123, 0.102, 0.133), g, name + ".helmet")
+    _on_body(M, helmet, "spine.005")
+    vest = clay.box(0.31, 0.36, 0.36, (0.025, 0, 1.43), g, name + ".vest")
+    _on_body(M, vest, "spine.003")
+    for y in (-0.11, 0.0, 0.11):
+        _on_body(M, clay.box(0.06, 0.085, 0.14, (0.2, y, 1.36), g2, name + ".pouch"), "spine.003")
+    _on_body(M, clay.box(0.08, 0.26, 0.2, (-0.16, 0, 1.47), g2, name + ".pack"), "spine.003")
+    return helmet
+
+
+def cap(M, color="#040404", name="Cap"):
+    """A plain close-fitting dark cap on the mannequin's head (no brim: the hat's shape is not in the record)."""
+    c = _dome((-0.006, 0, 1.8), (0.13, 0.106, 0.192), kit.matte(color, 0.85, name), name)   # pulled down to the ears
+    return _on_body(M, c, "spine.005")
 
 
 def volume_fog(density=0.012, color="#8FA3CC"):
@@ -660,3 +747,250 @@ def name_tag(cam, name, role, start_frame=1, d=4.0):
     typed(nm, start_frame)
     typed(rl, start_frame + int(len(name) / 30 * bpy.context.scene.render.fps) + 3, cursor=False)
     return nm
+
+
+def quote(cam, lines, who, start_frame=1, d=4.0, y=-0.18, cps=22):
+    """Retraced quote: white lines with an amber bar on the left, typed on; a small amber attribution under it."""
+    h, hw, hh = hud(cam, d)
+    size = hh * 0.135
+    x = -hw + hw * 0.1
+    y0 = hh * y
+    n = len(lines)
+    bar = kit.rect(size * 0.09, size * (1.25 * n + 0.75), AMBER, loc=(x - size * 0.45, y0 - size * 0.62 * (n - 1) - size * 0.2, 0),
+                   rot=(0, 0, 0), name="QuoteBar")
+    kit.parent(bar, h)
+    kit.fade(bar, [(start_frame - 4, 0.0), (start_frame, 1.0)])
+    fr = start_frame
+    fps = bpy.context.scene.render.fps
+    for i, ln in enumerate(lines):
+        t = kit.text(ln, font="Montserrat-Bold", size=size, spacing=1.04, color="#FFFFFF", strength=1.7, align="LEFT",
+                     loc=(x, y0 - i * size * 1.25, 0), rot=(0, 0, 0), name=f"Quote{i}")
+        kit.parent(t, h)
+        typed(t, fr, cps=cps, cursor=(i == n - 1))
+        fr += int(len(ln) / cps * fps) + 1
+    w = kit.text(who, font="Montserrat-Bold", size=size * 0.34, spacing=1.2, color=AMBER, strength=1.6, align="LEFT",
+                 loc=(x, y0 - n * size * 1.25 + size * 0.1, 0), rot=(0, 0, 0), name="QuoteWho")
+    kit.parent(w, h)
+    typed(w, fr + 3, cursor=False)
+    return bar
+
+
+# ------------------------------------------------------------------------------------------- v2: closer to Retraced
+def sky(name, strength=1.0, rot_z=0.0, sat=1.0):
+    """Light the set with a real sky (Poly Haven HDRI in _kit/assets/polyhaven/hdri/<name>.hdr, CC0)."""
+    w = bpy.context.scene.world
+    w.use_nodes = True
+    nt = w.node_tree
+    nt.nodes.clear()
+    out = nt.nodes.new("ShaderNodeOutputWorld")
+    bg = nt.nodes.new("ShaderNodeBackground")
+    env = nt.nodes.new("ShaderNodeTexEnvironment")
+    env.image = bpy.data.images.load(os.path.join(ASSETS, "polyhaven", "hdri", name + ".hdr"), check_existing=True)
+    tc = nt.nodes.new("ShaderNodeTexCoord")
+    mp = nt.nodes.new("ShaderNodeMapping")
+    mp.inputs["Rotation"].default_value = (0, 0, math.radians(rot_z))
+    hs = nt.nodes.new("ShaderNodeHueSaturation")
+    hs.inputs["Saturation"].default_value = sat
+    bg.inputs["Strength"].default_value = strength
+    nt.links.new(tc.outputs["Generated"], mp.inputs["Vector"])
+    nt.links.new(mp.outputs["Vector"], env.inputs["Vector"])
+    nt.links.new(env.outputs["Color"], hs.inputs["Color"])
+    nt.links.new(hs.outputs["Color"], bg.inputs["Color"])
+    nt.links.new(bg.outputs[0], out.inputs["Surface"])
+    return bg
+
+
+def gloss(color, rough=0.22, coat=0.7, name="Gloss"):
+    """Shop-mannequin plastic: smooth, a clear coat on top."""
+    mt = kit.matte(color, rough, name)
+    pb = next(n for n in mt.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+    for k, v in (("Coat Weight", coat), ("Coat Roughness", 0.06)):
+        if k in pb.inputs:
+            pb.inputs[k].default_value = v
+    return mt
+
+
+def garment(M, groups, zmin, zmax, mat, grow=0.02, name="Garment", share=0.5, exclude=False):
+    """Clothing cut from the mannequin's own mesh, so it fits and bends with every pose: the faces that belong to
+    the bones in `groups` and sit between zmin and zmax (metres above the feet, rest pose), pushed out by `grow`."""
+    import bmesh
+    bpy.context.view_layer.update()
+    body = M["body"]
+    g = body.copy()
+    g.data = body.data.copy()
+    g.name = name
+    for c in body.users_collection:
+        c.objects.link(g)
+    idx = {vg.index for vg in g.vertex_groups if vg.name in groups}
+    to_root = M["root"].matrix_world.inverted() @ body.matrix_world
+    bm = bmesh.new()
+    bm.from_mesh(g.data)
+    bmesh.ops.subdivide_edges(bm, edges=bm.edges[:], cuts=2, use_grid_fill=True)   # finer mesh = a clean hem line
+    bm.verts.ensure_lookup_table()
+    dl = bm.verts.layers.deform.active
+    drop = []
+    for v in bm.verts:
+        w = v[dl]
+        tot = sum(w.values()) or 1.0
+        z = (to_root @ v.co).z
+        part = sum(val for k, val in w.items() if k in idx) / tot
+        if exclude:
+            part = 1.0 - part
+        if part < share or not (zmin <= z <= zmax):
+            drop.append(v)
+    bmesh.ops.delete(bm, geom=drop, context="VERTS")
+    bm.to_mesh(g.data)
+    bm.free()
+    g.data.materials.clear()
+    g.data.materials.append(mat)
+    d = g.modifiers.new("Grow", "DISPLACE")
+    d.direction, d.strength, d.mid_level = "NORMAL", grow, 0.0
+    return g
+
+
+def marshal_kit(M, name="Kit", lettering=("POLICE", "U.S. MARSHAL")):
+    """Fitted tactical kit: dark vest and trousers cut from the body, a helmet shell cut from the head."""
+    dark = kit.matte("#23262B", 0.75, "KitDark")
+    mid = kit.matte("#3A3E45", 0.8, "KitMid")
+    arms = ("upper_arm.L", "upper_arm.R", "forearm.L", "forearm.R", "hand.L", "hand.R")
+    garment(M, arms, 1.06, 1.635, dark, 0.034, name + ".vest", share=0.25, exclude=True)        # everything but the arms
+    for x, w in ((0.185, 0.3), (-0.145, 0.32)):                                               # plate carrier front and back
+        _on_body(M, clay.box(0.05, w, 0.34, (x, 0, 1.39), dark, name + ".plate"), "spine.003")
+    for y in (-0.1, 0.0, 0.1):
+        _on_body(M, clay.box(0.05, 0.08, 0.12, (0.225, y, 1.3), mid, name + ".pouch"), "spine.003")
+    if lettering:                                      # what a marshal's vest carries: POLICE front, U.S. MARSHAL back
+        ink = kit.matte("#E6E6E2", 0.7, "VestInk")
+        fr = kit.text(lettering[0], font="Montserrat-Bold", size=0.062, spacing=1.1, material=ink, align="CENTER",
+                      loc=(0.2115, 0, 1.475), rot=(90, 0, 90), name=name + ".front")
+        bk = kit.text(lettering[1], font="Montserrat-Bold", size=0.043, spacing=1.08, material=ink, align="CENTER",
+                      loc=(-0.1715, 0, 1.45), rot=(90, 0, -90), name=name + ".back")
+        for t in (fr, bk):
+            t.visible_shadow = False
+            _on_body(M, t, "spine.003")
+    garment(M, arms, 0.09, 1.16, mid, 0.016, name + ".trousers", share=0.55, exclude=True)
+    _on_body(M, _dome((-0.006, 0, 1.835), (0.125, 0.106, 0.132), dark, name + ".helmet"), "spine.005")    # hard shell
+    _on_body(M, clay.box(0.035, 0.2, 0.012, (0.105, 0, 1.842), dark, name + ".brim", bevel=False), "spine.005")
+
+
+def beanie(M, color="#050505", name="Hat"):
+    """The black hat as a close-fitting knit cap cut from the head mesh (shape is not in the record: kept plain)."""
+    return garment(M, ("upper_arm.L", "upper_arm.R"), 1.855, 2.2, kit.matte(color, 0.9, name), 0.016, name, exclude=True)
+
+
+def tree_library(blend="trees.blend"):
+    """Poly Haven fir and pine scans prepared once into _kit/assets/<blend>: trees.blend = light (prep_trees.py),
+    trees_mid.blend = hero trees that keep their needles (prep_trees_mid.py). Returns {name: place(loc, rot_z, height)}."""
+    path = os.path.join(ASSETS, blend)
+    with bpy.data.libraries.load(path, link=False) as (src, dst):
+        dst.collections = list(src.collections)
+    out = {}
+    for col in dst.collections:
+        zs = [(o.matrix_world @ mathutils_vec(c)).z for o in col.objects for c in o.bound_box]
+        h = max(zs) - min(zs) or 1.0
+
+        def place(loc, rot_z=0.0, height=15.0, col=col, h=h):
+            e = bpy.data.objects.new(col.name, None)
+            e.instance_type, e.instance_collection = "COLLECTION", col
+            e.location, e.rotation_euler, e.scale = loc, (0, 0, math.radians(rot_z)), (height / h,) * 3
+            bpy.context.scene.collection.objects.link(e)
+            return e
+        out[col.name] = place
+    return out
+
+
+def mathutils_vec(c):
+    import mathutils
+    return mathutils.Vector(c)
+
+
+def haze(center, size, density=0.004, color="#9FB0CF"):
+    """A box of thin haze over the set (bounded, so the sky still lights the scene)."""
+    bpy.ops.mesh.primitive_cube_add(size=1, location=center)
+    ob = bpy.context.active_object
+    ob.name, ob.scale = "Haze", size
+    mt = bpy.data.materials.new("Haze")
+    mt.use_nodes = True
+    nt = mt.node_tree
+    nt.nodes.clear()
+    out = nt.nodes.new("ShaderNodeOutputMaterial")
+    vol = nt.nodes.new("ShaderNodeVolumePrincipled")
+    vol.inputs["Density"].default_value = density
+    vol.inputs["Color"].default_value = kit.rgb(color)
+    nt.links.new(vol.outputs[0], out.inputs["Volume"])
+    ob.data.materials.append(mt)
+    ob.visible_shadow = False
+    return ob
+
+
+def autumn_woods(seed=3):
+    """Stylised woods like the reference (blob canopies on trunks, a few dark pines), in muted late-October colours so
+    amber stays the colour of the subject alone. Returns a list of place(loc, rot_z, height) functions, one per shape."""
+    import random as _r
+    rnd = _r.Random(seed)
+    trunk = kit.matte("#2E2A27", 0.9, "TrunkBark")
+    leaf = [kit.matte(c, 0.95, f"Leaf{i}") for i, c in enumerate(("#2C2320", "#2F2A20", "#272523", "#22281F", "#30251D", "#292623"))]
+    pine = kit.matte("#1A231E", 0.95, "PineDark")
+    tex = bpy.data.textures.new("LeafLumps", "CLOUDS")
+    tex.noise_scale = 1.3
+    out = []
+
+    def collect(parts, name):
+        col = bpy.data.collections.new(name)
+        for o in parts:
+            for c in list(o.users_collection):
+                c.objects.unlink(o)
+            col.objects.link(o)
+
+        def place(loc, rot_z=0.0, height=14.0, col=col):
+            e = bpy.data.objects.new(col.name, None)
+            e.instance_type, e.instance_collection = "COLLECTION", col
+            e.location, e.rotation_euler, e.scale = loc, (0, 0, math.radians(rot_z)), (height / 14.0,) * 3
+            bpy.context.scene.collection.objects.link(e)
+            return e
+        return place
+
+    for v in range(6):                                 # broadleaf: trunk, limbs, lumpy canopy
+        m = leaf[v % len(leaf)]
+        parts = [clay.cyl(0.2, 6.0, (0, 0, 3.0), trunk, "Trunk", verts=8)]
+        for k in range(12):                            # canopy starts low and overlaps, so it reads as a mass, not a lollipop
+            ang, rad = rnd.uniform(0, math.tau), rnd.uniform(0.3, 3.0)
+            z = rnd.uniform(3.6, 12.5)
+            r = rnd.uniform(1.8, 3.0) * (1.0 - 0.035 * abs(z - 8.5))
+            bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=2, radius=r, location=(rad * math.cos(ang), rad * math.sin(ang), z))
+            b = bpy.context.active_object
+            b.scale = (1, 1, rnd.uniform(0.7, 0.95))
+            sub = b.modifiers.new("Round", "SUBSURF")
+            sub.levels = sub.render_levels = 1
+            d = b.modifiers.new("Lumps", "DISPLACE")
+            d.texture, d.strength = tex, 0.9
+            for pl in b.data.polygons:
+                pl.use_smooth = True
+            kit.assign(b, m if k % 3 else leaf[(v + 2) % len(leaf)])
+            parts.append(b)
+            if k % 3 == 0:
+                parts.append(_strut((0, 0, 2.8), (rad * 0.7 * math.cos(ang), rad * 0.7 * math.sin(ang), z - r * 0.5), 0.08, trunk, "Limb"))
+        out.append(collect(parts, f"Broadleaf{v}"))
+    for v in range(3):                                 # white pine: tall trunk, soft dark tiers
+        parts = [clay.cyl(0.22, 5.0, (0, 0, 2.5), trunk, "Trunk", verts=8)]
+        for k in range(10):
+            c = clay.cone(3.3 * (1 - 0.088 * k) * (1 + 0.1 * rnd.uniform(-1, 1)), 3.2, (0, 0, 2.6 + 1.2 * k), pine, "Tier", verts=14)
+            for pl in c.data.polygons:
+                pl.use_smooth = True
+            parts.append(c)
+        out.append(collect(parts, f"Pine{v}"))
+    for v in range(2):                                 # undergrowth: low lumps for the foot of a tree line
+        parts = []
+        for k in range(4):
+            bpy.ops.mesh.primitive_ico_sphere_add(subdivisions=2, radius=rnd.uniform(0.9, 1.5),
+                                                  location=(rnd.uniform(-1.6, 1.6), rnd.uniform(-1.2, 1.2), rnd.uniform(0.5, 1.1)))
+            b = bpy.context.active_object
+            sub = b.modifiers.new("Round", "SUBSURF")
+            sub.levels = sub.render_levels = 1
+            d = b.modifiers.new("Lumps", "DISPLACE")
+            d.texture, d.strength = tex, 0.6
+            for pl in b.data.polygons:
+                pl.use_smooth = True
+            kit.assign(b, leaf[(v * 2 + k) % len(leaf)])
+            parts.append(b)
+        out.append(collect(parts, f"Shrub{v}"))
+    return out

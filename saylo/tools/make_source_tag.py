@@ -19,7 +19,8 @@ from PIL import Image, ImageDraw, ImageFont
 
 W, H = 1920, 1080
 FONTS = ["/usr/share/fonts/truetype/jetbrains-mono/JetBrainsMono-Medium.ttf",
-         "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf"]
+         "/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf",
+         "C:/Windows/Fonts/consola.ttf"]            # Windows PC fallback (no JetBrains Mono installed)
 FILL = (232, 230, 225, 170)
 
 

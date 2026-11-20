@@ -65,6 +65,8 @@ Closest of our 9 tested voices by pitch and steadiness: **Philip – Quiet Autho
 Measured (360p copy, 10.9 min): **209 shots · mean 3.1 s · median 2.6 s · 35% under 2 s · 2% over 10 s · cuts/min 25.8 / 17.0 / 14.3 by third · 43 cuts in the first 60 s · 2 fades to black · 2 full silences.** Faster than Uncovering/fern (~13/min).
 
 
+**Frame-by-frame analysis (all 19,659 frames, every cut and camera move): `saylo/channel/retraced-frame-analysis.md`.** It supersedes the summary below where they differ (230 shots, 46 cuts in the first 60 s, 9 in 10 3D shots push in).
+
 Reference files: frame sheets in `saylo/channel/reference/` (`retraced-hook-first-60s.jpg` every 2 s, `retraced-overview.jpg` every 20 s, `retraced-first-2min-6fps.jpg` six frames a second to see the cuts). The video itself: https://youtu.be/Z9aLq9Ok108 (Retraced, "Why an ER Doctor Shot 6 People in Washington DC"); the creator keeps a 360p copy, not in git.
 
 What it looks like:
