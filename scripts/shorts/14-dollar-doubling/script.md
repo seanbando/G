@@ -20,7 +20,7 @@ You just broke the world.
 
 Now the catch. No real money doubles every day.
 
-The stock market's historical average is about ten percent a year. That doubles your money roughly every seven years.
+The S and P five hundred's historical average is about ten percent a year, including reinvested dividends. That doubles your money roughly every seven years.
 
 At that speed, one dollar becomes a million in about a hundred forty-five years.
 

@@ -20,3 +20,5 @@ Stack height = 2^day bills x 0.0043 in.
 | Question | a million today vs $1 doubling for 20 days | day 20 = $1,048,576, just over a million: a real debate | OK |
 
 Caption disclaimer: "Thought experiment. Stack heights use a US bill's 0.0043-inch thickness. The stock market's ~10% is a long-run historical average (S&P 500, dividends reinvested, before inflation), not a guarantee. Not financial advice."
+
+- Catch line reworded (creator, Nov 20): "The S&P 500's historical average is about 10% a year, including reinvested dividends." Matches the source basis (total return, nominal).
