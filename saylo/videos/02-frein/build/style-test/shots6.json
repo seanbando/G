@@ -97,11 +97,11 @@
    "start": 331.78,
    "end": 333.62,
    "line": "a thousand officers from state police,",
-   "what": "real photo: armed officers on a street",
+   "what": "real photo: a line of State Police troopers with rifles (credited to the Los Angeles Times, where the creator's copy was published)",
    "kind": "image",
-   "img": "media/photos/mcall-a.webp",
+   "img": "media/photos/ca-times-brightspot.jpg",
    "push": 0.045,
-   "tag": "source-the-morning-call.png"
+   "tag": "source-los-angeles-times.png"
   },
   {
    "id": 404,
@@ -244,14 +244,11 @@
    "start": 356.16,
    "end": 357.54,
    "line": "Roads were blocked.",
-   "what": "real: a trooper and cruiser blocking a road",
-   "kind": "clip",
-   "src": "E",
-   "in": 76.0,
-   "tag": "source-cbs-news.png",
-   "push": 0.025,
-   "crop": "1102:620:0:0",
-   "out": 77.38
+   "what": "real photo: two armed troopers at a roadside (OUTLET NOT CONFIRMED: needs its credit before the final render)",
+   "kind": "image",
+   "img": "media/photos/7Y7YM5UU.jpg",
+   "push": 0.06,
+   "credit_needed": true
   },
   {
    "id": 414,
@@ -612,11 +609,11 @@
    "start": 436.85,
    "end": 439.99,
    "line": "That doesn't count what the FBI and the Marshals spent.",
-   "what": "real photo: troopers and armoured trucks staged on a road",
+   "what": "real photo: two armoured police vehicles on a wooded road (OUTLET NOT CONFIRMED: needs its credit before the final render)",
    "kind": "image",
-   "img": "media/photos/TMC-FreinManhunt-troopers-stage.webp",
+   "img": "media/photos/34-armored-PPO235.jpg",
    "push": 0.045,
-   "tag": "source-the-morning-call.png"
+   "credit_needed": true
   },
   {
    "id": 440,

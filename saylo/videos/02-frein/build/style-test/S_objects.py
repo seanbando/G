@@ -36,12 +36,13 @@ def f(t):
     return kit.f(t - T0)
 
 
-kit.setup(world="#05070C", view="AgX", look="Medium High Contrast", bloom=0.3, motion_blur=0.3)
-table = kit.matte("#1A1D23", 0.45, "Table")
+kit.setup(world="#05070C", view="AgX", look="Medium High Contrast", bloom=0.3, motion_blur=0.3, policy_config=rt.QUALITY)
+table = rt.pbr("hangar_concrete_floor", scale=1.4, sat=0.25, name="EvidenceTable")      # worn concrete, not a flat plane
 clay.box(6, 4, 0.1, (0, 0, -0.05), table, "Table", bevel=False)
 LAMP = {"license": 70, "pages": 80, "notebook": 300, "casings": 160}.get(OBJ, 260)      # pale paper needs far less light than a black case
 kit.light("SPOT", (-0.9, -0.8, 1.5), (0, 0, 0.02), power=LAMP, color="#E9EEFF", size=0.5, name="Lamp").data.spot_size = math.radians(70)
-kit.light("AREA", (1.6, 1.2, 1.0), (0, 0, 0.05), power=18, color="#8FA6D8", size=2.0, name="Fill")
+kit.light("AREA", (1.6, 1.2, 1.0), (0, 0, 0.05), power=30, color="#8FA6D8", size=2.0, name="Fill")
+kit.light("AREA", (0.2, 1.4, 0.35), (0, 0, 0.04), power=22, color="#C9D6F2", size=0.8, name="Rim").data.specular_factor = 1.5
 black = kit.matte("#101216", 0.45, "CaseBlack")
 steel = kit.matte("#8A8E96", 0.3, "Steel")
 paper = kit.matte("#D8D2C2", 0.9, "Paper")
@@ -58,11 +59,21 @@ if OBJ == "case":
     clay.box(0.2, 0.05, 0.035, (0, -0.2, 0.06), black, "Handle")
     for y in (-0.1, 0.0, 0.1):
         clay.box(1.2, 0.012, 0.004, (0, y, 0.122), kit.matte("#1B1E24", 0.4, "Rib"), "Rib", bevel=False)
+    clay.box(1.26, 0.37, 0.006, (0, 0, 0.068), kit.matte("#05060A", 0.6, "Seam"), "Seam", bevel=False)      # lid seam
+    for x in (-0.5, 0.5):
+        clay.box(0.1, 0.02, 0.03, (x, 0.185, 0.07), steel, "Hinge", bevel=False)
+    for x in (-0.56, 0.56):
+        for y in (-0.15, 0.15):
+            clay.cyl(0.02, 0.012, (x, y, 0.126), steel, "Corner", verts=12)
     dist, lens = 2.3, 40
 elif OBJ == "casings":
     brass = kit.metal("#8D8778", 0.35, "DullBrass")
     for i, (x, y, rz) in enumerate(((-0.05, 0.0, 25), (0.07, 0.05, -40))):
-        c = clay.cyl(0.006, 0.051, (x, y, 0.006), brass, "Casing", rot=(0, 90, rz), verts=20)
+        c = clay.cyl(0.006, 0.04, (x, y, 0.006), brass, "Casing", rot=(0, 90, rz), verts=24)
+        cr_, sr_ = math.cos(math.radians(rz)), math.sin(math.radians(rz))
+        clay.cyl(0.0042, 0.012, (x + 0.026 * cr_, y + 0.026 * sr_, 0.006), brass, "Neck", rot=(0, 90, rz), verts=20)     # bottleneck
+        clay.cyl(0.0066, 0.0016, (x - 0.0205 * cr_, y - 0.0205 * sr_, 0.006), brass, "Rim", rot=(0, 90, rz), verts=24)    # rim
+        clay.cyl(0.0038, 0.0005, (x + 0.0322 * cr_, y + 0.0322 * sr_, 0.006), kit.matte("#07080A", 0.9, "Mouth"), "Mouth", rot=(0, 90, rz), verts=16)
     dist, lens = 0.42, 60
 elif OBJ == "license":
     card = clay.box(0.0856, 0.054, 0.001, (0, 0, 0.0006), kit.matte("#C9CCD2", 0.4, "Card"), "Card", rot=(0, 0, 12), bevel=False)
@@ -107,17 +118,31 @@ elif OBJ == "laptop":
     focus, dist, lens = (0, 0.12, 0.118), 0.86, 50
 elif OBJ == "cuffs":
     amber = rt.gloss(rt.SUBJECT, 0.14, 1.0, "CuffAmber")
+    amber_d = rt.gloss("#9A5A1C", 0.3, 0.6, "CuffAmberDark")
     for sx in (-1, 1):
-        bpy.ops.mesh.primitive_torus_add(major_radius=0.037, minor_radius=0.0045, location=(sx * 0.062, 0, 0.0045))
+        cx_ = sx * 0.07
+        for mr, z_ in ((0.038, 0.004), (0.038, 0.012)):      # the two bars of the fixed bow
+            bpy.ops.mesh.primitive_torus_add(major_radius=mr, minor_radius=0.0028, major_segments=64, location=(cx_, 0, z_))
+            kit.assign(bpy.context.active_object, amber)
+        bpy.ops.mesh.primitive_torus_add(major_radius=0.034, minor_radius=0.0032, major_segments=64, location=(cx_, 0.004, 0.008))
+        kit.assign(bpy.context.active_object, amber)          # the swinging ratchet arm, between them
+        lock = clay.box(0.034, 0.03, 0.02, (cx_ - sx * 0.04, 0, 0.01), amber, "Lock")
+        clay.cyl(0.003, 0.021, (cx_ - sx * 0.04, -0.006, 0.01), amber_d, "Keyhole", verts=12)
+        for k_ in range(6):                                # ratchet teeth
+            clay.box(0.002, 0.004, 0.006, (cx_ + sx * (0.02 + k_ * 0.003), 0.03 - k_ * 0.0016, 0.008), amber_d, "Tooth", bevel=False)
+    for k_ in range(3):                                    # chain links between the two locks
+        bpy.ops.mesh.primitive_torus_add(major_radius=0.0075, minor_radius=0.0018, location=((k_ - 1) * 0.011, 0, 0.008),
+                                         rotation=(math.radians(90 if k_ % 2 else 0), 0, 0))
+        bpy.context.active_object.scale = (1.35, 1, 1)
         kit.assign(bpy.context.active_object, amber)
-        clay.box(0.03, 0.022, 0.01, (sx * 0.062 - sx * 0.037, 0, 0.005), amber, "Lock")
-    for k in range(3):
-        bpy.ops.mesh.primitive_torus_add(major_radius=0.008, minor_radius=0.002, location=((k - 1) * 0.012, 0, 0.004),
-                                         rotation=(math.radians(90 if k % 2 else 0), 0, 0))
-        kit.assign(bpy.context.active_object, amber)
-    dist, lens = 0.5, 60
+    dist, lens = 0.52, 60
 elif OBJ == "checkbook":
-    clay.box(0.16, 0.075, 0.008, (0, 0, 0.004), kit.matte("#2B3A4A", 0.6, "Cheque"), "Checkbook", rot=(0, 0, -10))
+    cb = clay.box(0.16, 0.075, 0.008, (0, 0, 0.004), kit.matte("#22303E", 0.5, "ChequeCover"), "Checkbook", rot=(0, 0, -10))
+    cr_, sr_ = math.cos(math.radians(-10)), math.sin(math.radians(-10))
+    clay.box(0.158, 0.073, 0.004, (0.004 * cr_, 0.004 * sr_, 0.002), paper, "ChequePages", rot=(0, 0, -10), bevel=False)      # page edges showing
+    for k_ in range(3):                                # embossed lines on the cover (no bank name: none is in the record)
+        lx_, ly_ = -0.02, 0.012 - k_ * 0.012
+        clay.box(0.07 - k_ * 0.012, 0.003, 0.001, (lx_ * cr_ - ly_ * sr_, lx_ * sr_ + ly_ * cr_, 0.0086), kit.matte("#8A8E96", 0.3, "Emboss"), "Emboss", rot=(0, 0, -10), bevel=False)
     dist, lens = 0.55, 55
 elif OBJ == "bag":
     bag = clay.sphere(0.2, (0, 0, 0.15), kit.matte("#0C0D10", 0.25, "BagPlastic"), "Bag", scale=(1.0, 0.85, 0.75), segs=48)

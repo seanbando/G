@@ -37,7 +37,7 @@ def f(vo_time):
     return kit.f(vo_time - T0)
 
 
-kit.setup(world=rt.NAVY, view="AgX", look="Medium High Contrast", bloom=0.25, motion_blur=0.3)
+kit.setup(world=rt.NAVY, view="AgX", look="Medium High Contrast", bloom=0.25, motion_blur=0.3, policy_config=rt.QUALITY)
 rt.sky("evening_road_01_puresky", strength=0.3, rot_z=200, sat=0.8)
 kit.light("SUN", (-200, 40, 120), (0, 0, 0), power=0.45, color="#B9C8EC", name="SkyKey")
 
@@ -69,6 +69,9 @@ amber = rt.gloss(rt.SUBJECT, 0.14, 1.0, "SubjectGloss2")
 kit.rect(1600, 1600, material=ground, loc=(0, 0, 0), rot=(0, 0, 0), name="Ground")
 clay.box(18, 520, 0.06, (0, 0, 0.03), asph, "Runway", bevel=False)
 clay.box(52, 44, 0.06, (-13, 30, 0.025), asph, "Apron", bevel=False)      # the cracked asphalt lot in front of the doors
+# old asphalt along the hangar's north side, where he is stopped: the marshals' account has him face down on the pavement
+PAD = (-62.0, -30.0, 45.6, 66.0)
+clay.box(PAD[1] - PAD[0], PAD[3] - PAD[2], 0.06, ((PAD[0] + PAD[1]) / 2, (PAD[2] + PAD[3]) / 2, 0.025), asph, "NorthPad", bevel=False)
 for y in range(-240, 250, 30):
     clay.box(0.4, 9, 0.012, (0, y, 0.066), paint, "Dash", bevel=False)
 for sx in (-8.2, 8.2):
@@ -140,14 +143,14 @@ def clearing(x, y):
 
 
 placed, want, ext = 0, (8500 if SHOT in (1, 2) else 2600), (520 if SHOT in (1, 2) else 300)
-KEEP_OUT = 30.0 if SHOT in (22, 23, 24, 25, 119, 120) else 6.5   # simple trees stay away from the scanned ones
+KEEP_OUT = 6.5 if AERIAL else 30.0   # simple trees stay away from the scanned ones
 while placed < want:
     x, y = rnd.uniform(-ext, ext * 0.9), rnd.uniform(-ext * 0.9, ext)
     if clearing(x, y) or (x + 46) ** 2 + (y - 80) ** 2 < KEEP_OUT ** 2:
         continue                                      # the gap he walks out of stays open
     WOODS[rnd.randrange(len(WOODS))]((x, y, 0), rnd.uniform(0, 360), rnd.uniform(11, 19))
     placed += 1
-CLOSE_TREES = SHOT in (22, 23, 24, 25, 119, 120)                # the camera is near the tree line: scanned trees there
+CLOSE_TREES = not AERIAL                              # real scanned pines along the tree line in every ground-level shot                # the camera is near the tree line: scanned trees there
 for i in range(34):                                   # a full tree line along the north edge of the hangar field
     x = -94 + i * 2.9 + rnd.uniform(-0.8, 0.8)
     if -50.5 < x < -41.5 or (CLOSE_TREES and -66 < x < -26):
@@ -159,7 +162,11 @@ if CLOSE_TREES:
     # real scanned firs and pines with their needles (CC0, Poly Haven) around the gap he walks out of
     HERO = rt.tree_library("trees_mid.blend")
     for name, x, y, rz, h in (("FirMid", -56.5, 79.0, 20, 19), ("PineMid", -36.5, 80.5, 200, 21), ("FirMid", -30.0, 78.0, 110, 17),
-                              ("PineMid", -64.0, 81.0, 70, 20), ("FirMid", -46.5, 92.0, 250, 18), ("PineMid", -40.0, 96.0, 320, 20)):
+                              ("PineMid", -64.0, 81.0, 70, 20), ("FirMid", -46.5, 92.0, 250, 18), ("PineMid", -40.0, 96.0, 320, 20),
+                              ("PineMid", -74.0, 79.0, 140, 19), ("FirMid", -84.0, 80.0, 300, 20), ("FirMid", -20.0, 80.0, 60, 19),
+                              ("PineMid", -10.0, 79.0, 15, 21), ("FirMid", -96.0, 60.0, 100, 20), ("PineMid", -97.0, 36.0, 230, 21),
+                              ("FirMid", -96.0, 10.0, 330, 19), ("PineMid", 38.0, 40.0, 80, 20), ("FirMid", 40.0, 10.0, 190, 19),
+                              ("PineMid", 39.0, -30.0, 260, 21), ("FirMid", 38.0, -62.0, 40, 20)):
         HERO[name]((x, y, 0), rz, h)
 
 GX, GY = -46.0, 54.0                                  # where he ends up on the ground
@@ -177,8 +184,8 @@ if SHOT in ZONES:
     PRONE = SHOT >= 34
     for _ in range(1500):
         x, y = rnd.uniform(z[0], z[1]), rnd.uniform(z[2], z[3])
-        on_concrete = (abs(x) < 9) or (-46 < x < 0 and 22 < y < 38)
-        if on_concrete and rnd.random() < 0.88:
+        on_concrete = (abs(x) < 9) or (-46 < x < 0 and 22 < y < 38) or (PAD[0] < x < PAD[1] and PAD[2] < y < PAD[3])
+        if on_concrete and rnd.random() < 0.93:
             continue                                   # a few weeds through the cracks only
         if -63.2 < x < -36.8 and 14.8 < y < 45.2:
             continue                                   # not inside the hangar

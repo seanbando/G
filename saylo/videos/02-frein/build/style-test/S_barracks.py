@@ -36,9 +36,9 @@ def f(t):
     return kit.f(t - T0)
 
 
-kit.setup(world=rt.NAVY, view="AgX", look="Medium High Contrast", bloom=0.35, motion_blur=0.3)
-rt.sky("evening_road_01_puresky", strength=0.16 if V == "aerial" else 0.075, rot_z=200, sat=0.6)
-kit.light("SUN", (-120, 60, 140), (0, 0, 0), power=1.1 if V == "aerial" else 0.34, color="#9FB3E0", name="Moon")
+kit.setup(world=rt.NAVY, view="AgX", look="Medium High Contrast", bloom=0.35, motion_blur=0.3, policy_config=rt.QUALITY)
+rt.sky("evening_road_01_puresky", strength=0.2 if V == "aerial" else 0.16, rot_z=200, sat=0.6)
+kit.light("SUN", (-120, 60, 140), (0, 0, 0), power=1.3 if V == "aerial" else 0.8, color="#9FB3E0", name="Moon")
 
 ground = rt.pbr("forest_ground_04", scale=5.0, sat=0.4)
 asph = rt.pbr("asphalt_02", scale=4.0, sat=0.2)
@@ -82,11 +82,12 @@ for sx in (-2.3, 2.3):
     clay.cyl(0.07, 2.9, (DX + sx, DY - 2.4, 1.45), steel, "CanopyPost", verts=10)
 clay.box(6, 3.2, 0.12, (DX, DY - 1.6, 0.06), kit.matte("#8B8D90", 0.9, "Walk"), "Walk", bevel=False)
 lobby = kit.light("AREA", (DX, DY - 0.6, 1.6), (DX, DY - 6, 0.2), power=420, color="#FFD6A0", size=2.2, name="LobbySpill")
+kit.light("AREA", (4, -30, 9), (2, -8, 2.5), power=5200, color="#B9C8EC", size=24, name="FrontFill").data.specular_factor = 0.2
 # lot lamps: cool white pools (amber stays the accent colour)
 for lx, ly in ((-20, -30), (4, -32), (26, -28)):
     clay.cyl(0.09, 7, (lx, ly, 3.5), steel, "LampPole", verts=10)
     clay.box(0.9, 0.35, 0.14, (lx, ly + 0.5, 7.0), steel, "LampHead", bevel=False)
-    sp = kit.light("SPOT", (lx, ly + 0.5, 6.9), (lx, ly + 2.5, 0), power=5200, color="#DCE6FF", size=0.6, name="LotLamp")
+    sp = kit.light("SPOT", (lx, ly + 0.5, 6.9), (lx, ly + 2.5, 0), power=11000, color="#DCE6FF", size=0.6, name="LotLamp")
     sp.data.spot_size = math.radians(115)
 # the sign by the drive, facing the road
 SX, SY = 23.0, -45.0
@@ -132,10 +133,12 @@ for i in range(60):                                   # a dense edge right acros
     x = -88 + i * 3.0 + rnd.uniform(-0.8, 0.8)
     WOODS[rnd.randrange(len(WOODS))]((x, -60 - rnd.uniform(0, 3), 0), rnd.uniform(0, 360), rnd.uniform(12, 18))
     SHRUBS[i % 2]((x + rnd.uniform(-1, 1), -58.2 - rnd.uniform(0, 1), 0), rnd.uniform(0, 360), rnd.uniform(11, 16))
-if V in ("treeline", "treeline2", "wide", "vanish"):
+if not AERIAL and V != "pages":
     HERO = rt.tree_library("trees_mid.blend")
     for name, x, y, rz, h in (("FirMid", -6, -62, 20, 19), ("PineMid", 12, -63, 200, 21), ("FirMid", 26, -61, 110, 17),
-                              ("PineMid", -22, -62.5, 70, 20), ("FirMid", -36, -61, 250, 18)):
+                              ("PineMid", -22, -62.5, 70, 20), ("FirMid", -36, -61, 250, 18), ("PineMid", 40, -62, 310, 20),
+                              ("FirMid", -50, -62, 150, 19), ("PineMid", -46, -8, 30, 21), ("FirMid", -46, -30, 200, 19),
+                              ("PineMid", 46, -12, 100, 20), ("FirMid", 20, 16, 280, 20), ("PineMid", -8, 17, 60, 21), ("FirMid", -30, 15, 340, 19)):
         HERO[name]((x, y, 0), rz, h)
 if not AERIAL:
     rt.haze((0, -20, 12), (300, 300, 24), density=0.004)

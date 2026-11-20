@@ -78,3 +78,13 @@ card "RECORDED STATEMENT" → court opinion p. 28 with the highlighter (tease).
 - Known mistakes still open on the Barracks sheet (`shots4`): 215 first flash not visible · 219 gym bag not in frame (legs only) · 228 pages show no writing · 232 figure leaving into the trees is black.
 - Open on `shots5`: 306 used the station's own caption (moved to 122.0 s), 310/311 paper blown out (lamp lowered), 332 laptop text cut off (resized): all re-rendering in the run above, not yet checked.
 - Not yet done for any chapter after the cold open: rendering in motion.
+
+## Nov 20, 2026: creator decisions and look pass
+- **Pavement:** asphalt pad added along the hangar's north side; he is stopped, kneels and lies on it (matches the marshals' account). Affects cold-open shots 29-38.
+- **Card wording:** creator is fine with the summary cards as written.
+- **Unconfirmed photos:** creator says use them where they fit. Placed: `ca-times-brightspot.jpg` (shot 403, credited Los Angeles Times),
+  `34-armored-PPO235.jpg` (439) and `7Y7YM5UU.jpg` (413). **The last two still need an outlet name for their watermark before the final render** (`credit_needed` in the plan).
+- **Render quality:** raised from 1 to 16 samples at the creator's request (`rt.QUALITY`); roughly 3x slower per frame.
+- **Look:** barracks lit to read at night; evidence close-ups on a concrete surface with more detail; scanned pines along the tree lines in every ground-level shot.
+- **Cold open credit:** the Malkowski credit on the quote wall now finishes before the cut.
+- All stills sheets predate this look pass except the test tiles in `build/render/stills/look_fix.jpg`; re-run `stills.py` per chapter before rendering it.

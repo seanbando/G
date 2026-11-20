@@ -28,12 +28,15 @@ SUBJECT = "#E2852B"                # glossy amber-orange subject mannequin
 WHITE = "#D9DCE1"                  # everyone else
 NAVY = "#070B14"                   # world / sky
 OFF_WHITE = "#F4F1EA"
+# Render quality. The kit renders at 1 sample unless the creator asks otherwise. Creator, Nov 20, 2026, about the note
+# "Render quality is at the kit's lowest setting, so there is grain. Raising it needs your say-so": "lets fix these".
+QUALITY = {"render_samples_user_request": "lets fix these (render quality is at the kit's lowest setting, so there is grain)", "samples": 16}
 
 
 # ------------------------------------------------------------------------------------------- look
 def setup(bloom=0.3):
     """Start a Retraced shot: dark navy world, AgX, light bloom."""
-    sc = kit.setup(world=NAVY, view="AgX", look="Medium High Contrast", bloom=bloom, motion_blur=0.3)
+    sc = kit.setup(world=NAVY, view="AgX", look="Medium High Contrast", bloom=bloom, motion_blur=0.3, policy_config=QUALITY)
     return sc
 
 
