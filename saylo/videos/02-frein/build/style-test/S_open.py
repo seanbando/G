@@ -456,6 +456,11 @@ elif SHOT in (34, 35, 36, 37, 38):   # he is face down, head to the south, arms 
     man = rt.real_mannequin("Subject", (GX, GY, 0), -90, amber, subsurf=2)
     rt.beanie(man)
     rt.prone(man, (GX, GY + 0.9), -90)
+    # elbows on the ground, forearms and open hands lifted clear of it (creator, Nov 20: flat hands read as buried)
+    P_UP = dict(rt.RPOSES["prone"])
+    P_UP.update({"upper_arm.L": (-4, 0, 62), "upper_arm.R": (-4, 0, -62), "forearm.L": (-34, 0, 0), "forearm.R": (-34, 0, 0),
+                 "hand.L": (22, 0, 0), "hand.R": (22, 0, 0)})
+    rt.rpose(man, P_UP)
     ring = ((2.8, -1.7), (1.8, 1.8), (-1.7, 2.0), (-2.9, -1.4), (-0.3, -3.8))
     for i, (dx, dy) in enumerate(ring):
         marshal(f"M{i}", GX + dx, GY + dy, facing((dx, dy), (0, 0)))
@@ -466,21 +471,21 @@ elif SHOT in (34, 35, 36, 37, 38):   # he is face down, head to the south, arms 
         cam = push((GX - 4.6, GY + 2.6, 1.0), (GX, GY, 0.35), 0.1, lens=35, slide=(0.5, 0, 0.1))
         kit.depth_of_field(cam, focus=5.0, fstop=3.2)
     elif SHOT == 36:
-        # "He isn't carrying a gun": his open, empty hand, low and close, the other arm and the marshals' boots behind
-        # (the first version pushed straight down and the hand slid out of frame: creator note)
+        # "He isn't carrying a gun": both arms held up off the ground, palms turned up, fingers open and empty.
+        # (Creator, Nov 20: the hand lying flat read as buried in the ground.)
         bpy.context.view_layer.update()
         pb = man["arm"].pose.bones["hand.L"]
         hand = man["arm"].matrix_world @ ((pb.head + pb.tail) / 2)
         hx_, hy_ = hand.x, hand.y
         side = 1.0 if hx_ > GX else -1.0
-        p0 = (hx_ + side * 0.7, hy_ - 0.95, hand.z + 0.42)
-        cam = push(p0, (hx_ - side * 0.12, hy_, hand.z - 0.02), 0.09, lens=45, slide=(-side * 0.08, 0, -0.03))
-        kit.depth_of_field(cam, focus=1.15, fstop=2.8)
-        kit.key(cam.data.dof, "focus_distance", [(1, 1.18), (N, 1.0)], ease="linear")
-        kit.light("AREA", (hx_ + side * 0.9, hy_ - 0.2, 1.4), (hx_, hy_, 0.2), power=45, color="#C9D6F2", size=1.2, name="HandKey").data.specular_factor = 0.5
+        p0 = (hx_ + side * 0.95, hy_ - 1.15, hand.z + 0.38)
+        cam = push(p0, (hx_ - side * 0.2, hy_ + 0.05, hand.z - 0.02), 0.09, lens=45, slide=(-side * 0.08, 0, -0.03))
+        kit.depth_of_field(cam, focus=1.5, fstop=3.2)
+        kit.key(cam.data.dof, "focus_distance", [(1, 1.52), (N, 1.32)], ease="linear")
+        kit.light("AREA", (hx_ + side * 0.9, hy_ - 0.4, 1.5), (hx_, hy_, hand.z), power=60, color="#C9D6F2", size=1.2, name="HandKey").data.specular_factor = 0.5
     elif SHOT == 37:
-        cam = push((GX + 1.1, GY - 0.5, 0.3), (GX - 0.3, GY - 3.8, 1.5), 0.1, lens=28, slide=(0, 0, 0.12))
-        kit.depth_of_field(cam, focus=3.4, fstop=3.2)
+        cam = push((GX + 0.7, GY - 1.6, 0.3), (GX - 0.3, GY - 3.8, 1.5), 0.1, lens=28, slide=(0, 0, 0.12))      # in front of his head, clear of the raised hands
+        kit.depth_of_field(cam, focus=2.6, fstop=3.2)
     else:
         cam = kit.camera((GX + 1.6, GY - 4.6, 0.5), look_at=(GX, GY - 0.1, 0.35), lens=28)
         kit.key(cam, "location", [(1, (GX + 1.6, GY - 4.6, 0.5)), (N, (GX + 0.3, GY - 2.4, 8.5))], ease="in_out")   # crane up and over
