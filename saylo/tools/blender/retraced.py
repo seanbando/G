@@ -710,7 +710,7 @@ def hud(cam, d=4.0):
     return h, half_w, half_w * 9 / 16
 
 
-def date_stamp(cam, line, sub=None, start_frame=1, d=4.0):
+def date_stamp(cam, line, sub=None, start_frame=1, d=4.0, cps=30, sub_cps=30):
     """Big white bold caps, top-left (Retraced), typed on. sub: a small amber line under it."""
     h, hw, hh = hud(cam, d)
     size = hh * 0.2
@@ -718,12 +718,12 @@ def date_stamp(cam, line, sub=None, start_frame=1, d=4.0):
     t = kit.text(line, font="Montserrat-Bold", size=size, spacing=1.05, color="#FFFFFF", strength=1.7, align="LEFT",
                  loc=(x, y, 0), rot=(0, 0, 0), name="DateStamp")
     kit.parent(t, h)
-    typed(t, start_frame)
+    typed(t, start_frame, cps=cps)
     if sub:
         s = kit.text(sub, font="Montserrat-Bold", size=size * 0.38, spacing=1.2, color=AMBER, strength=1.6, align="LEFT",
                      loc=(x, y - size * 0.85, 0), rot=(0, 0, 0), name="DateSub")
         kit.parent(s, h)
-        typed(s, start_frame + int(len(line) / 30 * bpy.context.scene.render.fps) + 2, cursor=False)
+        typed(s, start_frame + int(len(line) / cps * bpy.context.scene.render.fps) + 2, cps=sub_cps, cursor=False)
     return t
 
 
@@ -994,3 +994,18 @@ def autumn_woods(seed=3):
             parts.append(b)
         out.append(collect(parts, f"Shrub{v}"))
     return out
+
+
+def trooper_kit(M, name="Trooper"):
+    """Pennsylvania State Police uniform on a grey mannequin: grey shirt, dark trousers, black tie, campaign hat."""
+    shirt = kit.matte("#8B9199", 0.75, "TrooperShirt")
+    dark = kit.matte("#1E2126", 0.8, "TrooperDark")
+    hat = kit.matte("#34373C", 0.8, "TrooperHat")
+    garment(M, ("hand.L", "hand.R"), 1.13, 1.645, shirt, 0.022, name + ".shirt", share=0.5, exclude=True)
+    garment(M, ("upper_arm.L", "upper_arm.R", "forearm.L", "forearm.R", "hand.L", "hand.R"), 0.09, 1.16, dark, 0.016,
+            name + ".trousers", share=0.55, exclude=True)
+    _on_body(M, clay.box(0.012, 0.05, 0.3, (0.168, 0, 1.42), dark, name + ".tie", bevel=False), "spine.003")
+    brim = clay.cyl(0.2, 0.014, (-0.004, 0, 1.925), hat, name + ".brim", verts=32)
+    crown = clay.cyl(0.098, 0.115, (-0.004, 0, 1.985), hat, name + ".crown", verts=24)
+    for ob in (brim, crown):
+        _on_body(M, ob, "spine.005")

@@ -25,10 +25,12 @@ SHOT = int(a.get("shot") or 1)
 CFG = json.load(open(os.path.join(HERE, a.get("cfg") or "shots2.json"), encoding="utf-8"))
 S = next(s for s in CFG["shots"] if s["id"] == SHOT)
 T0 = S["start"]
+SHOT = int(S.get("as", SHOT))                          # a later chapter can reuse a camera set-up by number
 N = a.frames
 FPS = CFG["fps"]
 DUR = (N - 1) / FPS
 AERIAL = SHOT in (1, 2, 11, 26)
+WOODS_SHOT = SHOT in (119, 120)                       # he is alone in the woods
 
 
 def f(vo_time):
@@ -138,14 +140,14 @@ def clearing(x, y):
 
 
 placed, want, ext = 0, (8500 if SHOT in (1, 2) else 2600), (520 if SHOT in (1, 2) else 300)
-KEEP_OUT = 30.0 if SHOT in (22, 23, 24, 25) else 6.5   # simple trees stay away from the scanned ones
+KEEP_OUT = 30.0 if SHOT in (22, 23, 24, 25, 119, 120) else 6.5   # simple trees stay away from the scanned ones
 while placed < want:
     x, y = rnd.uniform(-ext, ext * 0.9), rnd.uniform(-ext * 0.9, ext)
     if clearing(x, y) or (x + 46) ** 2 + (y - 80) ** 2 < KEEP_OUT ** 2:
         continue                                      # the gap he walks out of stays open
     WOODS[rnd.randrange(len(WOODS))]((x, y, 0), rnd.uniform(0, 360), rnd.uniform(11, 19))
     placed += 1
-CLOSE_TREES = SHOT in (22, 23, 24, 25)                # the camera is near the tree line: scanned trees there
+CLOSE_TREES = SHOT in (22, 23, 24, 25, 119, 120)                # the camera is near the tree line: scanned trees there
 for i in range(34):                                   # a full tree line along the north edge of the hangar field
     x = -94 + i * 2.9 + rnd.uniform(-0.8, 0.8)
     if -50.5 < x < -41.5 or (CLOSE_TREES and -66 < x < -26):
@@ -167,7 +169,7 @@ ZONES = {3: (-9, 9, -80, -30), 4: (-40, 8, 8, 44), 5: (6, 22, 38, 56), 6: (-38, 
          21: (-30, -8, 22, 40), 22: (-34, -12, 26, 60), 23: (-56, -34, 44, 80), 24: (-54, -38, 58, 80),
          25: (-56, -46.9, 62, 76), 29: (-52, -40, 46, 68), 30: (-54, -40, 45, 64), 31: (-54, -40, 45, 62),
          32: (-53, -39, 46, 60), 33: (-53, -38, 48, 60), 34: (-53, -39, 48, 60), 35: (-54, -39, 48, 61),
-         36: (-60, -32, 40, 68), 37: (-52, -40, 46, 58), 38: (-53, -39, 47, 61)}
+         36: (-60, -32, 40, 68), 119: (-56, -36, 62, 92), 120: (-56, -46.9, 62, 80), 37: (-52, -40, 46, 58), 38: (-53, -39, 47, 61)}
 if SHOT in ZONES:
     grass = rt.instancer("grass_medium_01", sat=0.4)
     grass2 = rt.instancer("grass_medium_02", sat=0.4)
@@ -443,7 +445,7 @@ elif SHOT in (32, 33):
         cam = push((GX + 5.6, GY + 0.9, 1.05), (GX, GY - 0.2, 0.95), 0.1, lens=40, slide=(0, -0.4, 0))
         kit.depth_of_field(cam, focus=5.5, fstop=2.8)
 
-else:   # 34-38: he is face down, head to the south, arms out, hands open and empty; marshals around him
+elif SHOT in (34, 35, 36, 37, 38):   # he is face down, head to the south, arms out, hands open and empty; marshals around him
     man = rt.real_mannequin("Subject", (GX, GY, 0), -90, amber, subsurf=2)
     rt.beanie(man)
     rt.prone(man, (GX, GY + 0.9), -90)
@@ -477,6 +479,28 @@ else:   # 34-38: he is face down, head to the south, arms out, hands open and em
         kit.key(cam, "location", [(1, (GX + 1.6, GY - 4.6, 0.5)), (N, (GX + 0.3, GY - 2.4, 8.5))], ease="in_out")   # crane up and over
         kit.depth_of_field(cam, focus=5, fstop=4)
         kit.key(cam.data.dof, "focus_distance", [(1, 4.8), (N, 8.6)], ease="in_out")
+
+if SHOT in (119, 120):
+    # the hook question: one man, alone, going back into the woods (heading north, away from the hangar)
+    y0 = 70.0 if SHOT == 119 else 74.0
+    man = rt.real_mannequin("Subject", (GX, y0, 0), 90, amber, subsurf=2)
+    rt.beanie(man)
+    rt.rwalk_cycle(man, 1, N, period=34)
+    d = 1.25 * DUR
+    kit.key(man["root"], "location", [(1, (GX, y0, 0)), (N, (GX, y0 + d, 0))], ease="linear")
+    if SHOT == 119:
+        cam = kit.camera((GX + 0.9, y0 - 7.5, 1.5), look_at=(GX, y0 + 1, 1.3), lens=40)
+        kit.key(cam, "location", [(1, (GX + 0.9, y0 - 7.5, 1.5)), (N, (GX + 0.6, y0 - 5.6 + d, 1.55))], ease="linear")
+        kit.key(kit.aim(cam), "location", [(1, (GX, y0 + 1, 1.3)), (N, (GX, y0 + 1 + d, 1.3))], ease="linear")
+        kit.depth_of_field(cam, focus=7.5, fstop=2.8)
+        kit.key(cam.data.dof, "focus_distance", [(1, 7.6), (N, 5.8)], ease="linear")
+    else:
+        cam = kit.camera((GX + 2.6, y0 + 1.5, 0.5), look_at=(GX, y0 + 0.3, 0.55), lens=35)
+        kit.key(cam, "location", [(1, (GX + 2.6, y0 + 1.5, 0.5)), (N, (GX + 2.1, y0 + 1.5 + d * 0.7, 0.52))], ease="linear")
+        kit.key(kit.aim(cam), "location", [(1, (GX, y0 + 0.3, 0.55)), (N, (GX, y0 + 0.3 + d, 0.55))], ease="linear")
+        kit.depth_of_field(cam, focus=2.9, fstop=2.8)
+        stamp(cam, "7 WEEKS", 83.7, "SEPT 12 \u2013 OCT 30, 2014", 84.1)
+    kit.light("AREA", (GX, y0 + 2, 7), (GX, y0 + 6, 1.2), power=420, color="#C9D6F2", size=6, name="GapLight").data.specular_factor = 0.0
 
 cam.data.clip_end = 3000
 kit.shake(cam, strength=0.006, speed=50)

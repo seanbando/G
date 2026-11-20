@@ -18,7 +18,7 @@ $dir = if ($cfg.dir) { $cfg.dir } else { "shots" }
 $out = Join-Path $vid "build\render\$dir"
 $extra = if ($Plan -ne "shots.json") { @("--arg", "cfg=$Plan") } else { @() }
 New-Item -ItemType Directory -Force $out | Out-Null
-$script = @{ "3d" = "S_airfield.py"; "open" = "S_open.py"; "map" = "S_map.py"; "photo" = "S_photo.py" }
+$script = @{ "3d" = "S_airfield.py"; "open" = "S_open.py"; "map" = "S_map.py"; "photo" = "S_photo.py"; "card" = "S_card.py"; "map2" = "S_map2.py"; "barracks" = "S_barracks.py"; "obj" = "S_objects.py" }
 Push-Location $studio
 foreach ($s in $cfg.shots) {
     if ($pick.Count -and ($pick -notcontains [int]$s.id)) { continue }
@@ -27,7 +27,7 @@ foreach ($s in $cfg.shots) {
     $name = "S{0:D2}" -f $s.id
     # the runner reuses %TEMP%\faceless-studio-shot-* frames for the same output name: clear them first
     Get-ChildItem $env:TEMP -Directory -Filter "faceless-studio-shot-*" -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
-    if ($s.kind -eq "still" -or $s.kind -eq "image") { continue }              # freeze frames are cut in assemble.py
+    if ($s.kind -eq "still" -or $s.kind -eq "image" -or $s.kind -eq "reuse") { continue }   # made in assemble.py              # freeze frames are cut in assemble.py
     if ($s.kind -eq "clip") {
         if ($s.nametag -and -not $Stills) {
             $a = @($runner, (Join-Path $build "O_tag.py"), "--out", (Join-Path $out "$name-tag.mov"), "--frames", $n, "--alpha",

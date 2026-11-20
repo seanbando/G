@@ -1,0 +1,505 @@
+{
+ "vo": "saylo/videos/02-frein/voiceover-full.mp3",
+ "fps": 30,
+ "start": 52.8,
+ "end": 108.9,
+ "out": "frein_s2_hook.mp4",
+ "dir": "shots3",
+ "types": [
+  [
+   52.9,
+   "short"
+  ],
+  [
+   62.9,
+   "short"
+  ],
+  [
+   75.7,
+   "medium"
+  ],
+  [
+   79.0,
+   "medium"
+  ],
+  [
+   79.85,
+   "medium"
+  ],
+  [
+   83.7,
+   "short"
+  ],
+  [
+   94.1,
+   "medium"
+  ],
+  [
+   106.7,
+   "medium"
+  ]
+ ],
+ "src": {
+  "A": "Search for alleged cop killer instills fear in Pa. community - CBS Evening News (720p, h264).mp4",
+  "B": "Slain cop's cuffs used to arrest Frein - CNN (720p, h264).mp4",
+  "D": "Authorities Identify Suspect in Pennsylvania Barracks Shooting - ABC News (720p, h264).mp4",
+  "E": "Eric Frein manhunt Suspect may have left letter - CBS Evening News (720p, h264).mp4",
+  "M": "Pa. breathes easier after capture of Eric Frein - CBS Evening News (720p, h264).mp4",
+  "W": "hangar-screen-recording-2026-11-19.mp4",
+  "F": "Police discovers journal of Pennsylvania cop killer suspect - CBS Mornings (720p, h264).mp4"
+ },
+ "shots": [
+  {
+   "id": 101,
+   "start": 52.8,
+   "end": 54.38,
+   "kind": "clip",
+   "line": "For forty-eight days,",
+   "what": "real: police cars lined up along the road at dusk; 48 DAYS types on",
+   "src": "E",
+   "in": 18.2,
+   "out": 19.78,
+   "crop": "1102:620:0:0",
+   "tag": "source-cbs-news.png",
+   "push": 0.03,
+   "stamp": {
+    "line": "48 DAYS",
+    "sub": "SEPT 12 – OCT 30, 2014",
+    "at": 52.9
+   }
+  },
+  {
+   "id": 102,
+   "start": 54.38,
+   "end": 55.88,
+   "kind": "image",
+   "line": "he'd been the most wanted man",
+   "what": "the FBI Ten Most Wanted page with Frein on it, push in",
+   "img": "media/photos/18b-buzzfeednews-fbi-page.png",
+   "tag": "source-fbi.png",
+   "push": 0.07,
+   "fit": "contain"
+  },
+  {
+   "id": 103,
+   "start": 55.88,
+   "end": 57.42,
+   "kind": "clip",
+   "line": "in Pennsylvania.",
+   "what": "real: police cars racing through the town",
+   "src": "A",
+   "in": 21.0,
+   "out": 22.54,
+   "crop": "1102:620:0:0",
+   "tag": "source-cbs-news.png",
+   "push": 0.02
+  },
+  {
+   "id": 104,
+   "start": 57.42,
+   "end": 58.98,
+   "kind": "image",
+   "line": "More than a thousand officers",
+   "what": "real photo: State Police cars filling a field",
+   "img": "media/photos/33-thecitizensvoice-cruisers-field.jpg",
+   "tag": "source-the-times-tribune.png",
+   "push": 0.06
+  },
+  {
+   "id": 105,
+   "start": 58.98,
+   "end": 60.0,
+   "kind": "clip",
+   "line": "took part in the search",
+   "what": "real: searchers in camouflage crossing a field",
+   "src": "A",
+   "in": 40.2,
+   "out": 41.22,
+   "crop": "1102:620:0:0",
+   "tag": "source-cbs-news.png",
+   "push": 0.02
+  },
+  {
+   "id": 106,
+   "start": 60.0,
+   "end": 61.8,
+   "kind": "image",
+   "line": "at one point or another.",
+   "what": "real photo: troopers with rifles beside a cruiser",
+   "img": "media/photos/30-troopers-rifles-6ES2.webp",
+   "tag": "source-the-morning-call.png",
+   "push": 0.05
+  },
+  {
+   "id": 107,
+   "start": 61.8,
+   "end": 62.8,
+   "kind": "clip",
+   "line": "There were roadblocks",
+   "what": "real: a trooper stopping a car on a wooded road",
+   "src": "A",
+   "in": 30.6,
+   "out": 31.6,
+   "crop": "1102:620:0:0",
+   "tag": "source-cbs-news.png",
+   "push": 0.02
+  },
+  {
+   "id": 108,
+   "start": 62.8,
+   "end": 64.34,
+   "kind": "map",
+   "line": "and closed schools,",
+   "what": "clay road map, close; SCHOOLS CLOSED types on",
+   "tag": "source-openstreetmap.png",
+   "map": {
+    "view": "close",
+    "stamp": "SCHOOLS CLOSED",
+    "sub": "POCONO MOUNTAIN SCHOOL DISTRICT",
+    "at": 62.9
+   }
+  },
+  {
+   "id": 109,
+   "start": 64.34,
+   "end": 65.88,
+   "kind": "map",
+   "line": "and a whole corner of the state",
+   "what": "same map pulling wide over the search area",
+   "tag": "source-openstreetmap.png",
+   "map": {
+    "view": "wide",
+    "stamp": "SCHOOLS CLOSED",
+    "sub": "POCONO MOUNTAIN SCHOOL DISTRICT",
+    "at": 0
+   }
+  },
+  {
+   "id": 110,
+   "start": 65.88,
+   "end": 66.98,
+   "kind": "clip",
+   "line": "was living under it,",
+   "what": "real: a police helicopter seen through bare branches",
+   "src": "A",
+   "in": 26.3,
+   "out": 27.4,
+   "crop": "1102:620:0:0",
+   "tag": "source-cbs-news.png",
+   "push": 0.02
+  },
+  {
+   "id": 111,
+   "start": 66.98,
+   "end": 68.3,
+   "kind": "reuse",
+   "line": "and it ends in a field",
+   "what": "3D callback: the crane up over him on the ground, marshals around",
+   "from": "shots2/S38.mp4",
+   "at": 0.5
+  },
+  {
+   "id": 112,
+   "start": 68.3,
+   "end": 70.2,
+   "kind": "clip",
+   "line": "next to an empty hangar.",
+   "what": "real: helicopter view closing on the hangar",
+   "src": "W",
+   "in": 24.6,
+   "out": 26.5,
+   "crop": "1248:702:520:0",
+   "tag": "source-wnep.png",
+   "push": 0.03
+  },
+  {
+   "id": 113,
+   "start": 70.2,
+   "end": 71.7,
+   "kind": "clip",
+   "line": "Then the marshals handed him over",
+   "what": "real: the arrest night, officers under blue lights",
+   "src": "B",
+   "in": 44.6,
+   "out": 46.1,
+   "crop": "853:480:213:0",
+   "tag": "source-wnep.png",
+   "push": 0.02
+  },
+  {
+   "id": 114,
+   "start": 71.7,
+   "end": 74.02,
+   "kind": "image",
+   "line": "to the Pennsylvania State Police,",
+   "what": "real photo: troopers lead him from the barracks at night",
+   "img": "media/photos/11c-phillymag-perp-walk-night.jpg",
+   "tag": "source-ap-the-times-tribune.png",
+   "push": 0.05
+  },
+  {
+   "id": 115,
+   "start": 74.02,
+   "end": 75.6,
+   "kind": "clip",
+   "line": "and the troopers put something on him",
+   "what": "real: the perp walk, troopers either side",
+   "src": "B",
+   "in": 50.3,
+   "out": 51.88,
+   "crop": "853:480:213:0",
+   "tag": "source-cnn.png",
+   "push": 0.03
+  },
+  {
+   "id": 116,
+   "start": 75.6,
+   "end": 78.94,
+   "kind": "card",
+   "line": "that belonged to Bryon Dickson. We'll get there.",
+   "what": "Cpl. Bryon K. Dickson II, official portrait, his name types on; held through 'We'll get there'",
+   "tag": "source-pennsylvania-state-police.png",
+   "card": {
+    "mode": "portrait",
+    "img": "media/cuts/dickson-portrait.png",
+    "name": "BRYON K. DICKSON II",
+    "sub": "CORPORAL, PENNSYLVANIA STATE POLICE",
+    "at": 75.7,
+    "size": 0.3
+   }
+  },
+  {
+   "id": 118,
+   "start": 78.94,
+   "end": 81.82,
+   "kind": "card",
+   "line": "First, the question underneath all of this:",
+   "what": "title card: the question typed, an amber line drawn from Blooming Grove to Tannersville",
+   "card": {
+    "mode": "title",
+    "l1": "HOW ONE MAN HID FOR 48 DAYS",
+    "l2": "FROM A THOUSAND OFFICERS",
+    "a": "BLOOMING GROVE  ·  SEPT 12",
+    "b": "TANNERSVILLE  ·  OCT 30",
+    "at": 79.0,
+    "at2": 79.85
+   }
+  },
+  {
+   "id": 119,
+   "start": 81.82,
+   "end": 83.68,
+   "kind": "open",
+   "line": "how did one man stay out of reach",
+   "what": "3D: the amber figure alone, walking away into the woods"
+  },
+  {
+   "id": 120,
+   "start": 83.68,
+   "end": 84.98,
+   "kind": "open",
+   "line": "for seven weeks",
+   "what": "3D: his legs through the grass; 7 WEEKS types on"
+  },
+  {
+   "id": 121,
+   "start": 84.98,
+   "end": 86.4,
+   "kind": "image",
+   "line": "while one of the biggest searches",
+   "what": "real photo: troopers and armoured trucks staged on a road",
+   "img": "media/photos/TMC-FreinManhunt-troopers-stage.webp",
+   "tag": "source-the-morning-call.png",
+   "push": 0.06
+  },
+  {
+   "id": 122,
+   "start": 86.4,
+   "end": 87.44,
+   "kind": "image",
+   "line": "in the state's history",
+   "what": "real photo: State Police helicopter landed in a field",
+   "img": "media/photos/pikecountycourier-b.webp",
+   "tag": "source-pike-county-courier.png",
+   "push": 0.07
+  },
+  {
+   "id": 123,
+   "start": 87.44,
+   "end": 88.64,
+   "kind": "clip",
+   "line": "went on around him?",
+   "what": "real: a searcher in camouflage moving through the woods",
+   "src": "A",
+   "in": 41.9,
+   "out": 43.1,
+   "crop": "1102:620:0:0",
+   "tag": "source-cbs-news.png",
+   "push": 0.03
+  },
+  {
+   "id": 124,
+   "start": 88.64,
+   "end": 90.26,
+   "kind": "clip",
+   "line": "Part of the answer is that police believed",
+   "what": "real: the State Police commissioner at the podium",
+   "src": "D",
+   "in": 47.1,
+   "out": 48.72,
+   "crop": "896:504:192:0",
+   "tag": "source-abc-news.png",
+   "push": 0.02
+  },
+  {
+   "id": 125,
+   "start": 90.26,
+   "end": 92.44,
+   "kind": "still",
+   "line": "he'd been preparing for this,",
+   "what": "police-released photo of Frein in re-enactor gear with a rifle, push in",
+   "src": "E",
+   "at": 26.2,
+   "crop": "1102:620:0:0",
+   "tag": "source-pennsylvania-state-police.png",
+   "push": 0.06
+  },
+  {
+   "id": 126,
+   "start": 92.44,
+   "end": 94.04,
+   "kind": "clip",
+   "line": "as they put it at the time,",
+   "what": "real: Lt. Col. Bivens at the microphones",
+   "src": "E",
+   "in": 32.4,
+   "out": 34.0,
+   "crop": "1102:620:0:0",
+   "tag": "source-cbs-news.png",
+   "push": 0.02
+  },
+  {
+   "id": 127,
+   "start": 94.04,
+   "end": 96.58,
+   "kind": "card",
+   "line": "for months or maybe years.",
+   "what": "typed quote card with an amber bar",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "“MONTHS",
+     "OR MAYBE YEARS.”"
+    ],
+    "who": "PENNSYLVANIA STATE POLICE, 2014",
+    "at": 94.1
+   }
+  },
+  {
+   "id": 128,
+   "start": 96.58,
+   "end": 100.92,
+   "kind": "card",
+   "line": "Everything here comes from the Pennsylvania Supreme Court's opinion in his case,",
+   "what": "the court opinion's first page, push in, amber highlighter across the court's name and the case",
+   "tag": "source-pa-supreme-court.png",
+   "card": {
+    "mode": "doc",
+    "img": "media/photos/19c-court-opinion-p1-caption.png",
+    "marks": [
+     [
+      0.27,
+      0.105,
+      0.73,
+      0.128,
+      97.9
+     ],
+     [
+      0.12,
+      0.218,
+      0.5,
+      0.242,
+      99.3
+     ],
+     [
+      0.12,
+      0.352,
+      0.36,
+      0.376,
+      99.9
+     ]
+    ]
+   }
+  },
+  {
+   "id": 130,
+   "start": 100.92,
+   "end": 102.3,
+   "kind": "image",
+   "line": "trial testimony,",
+   "what": "real photo: Frein led by a trooper during the 2017 trial",
+   "img": "media/photos/14-dailylocal.webp",
+   "tag": "source-daily-local-news.png",
+   "push": 0.06
+  },
+  {
+   "id": 131,
+   "start": 102.3,
+   "end": 103.26,
+   "kind": "clip",
+   "line": "state police",
+   "what": "real: Lt. Col. Bivens at the podium (another briefing)",
+   "src": "F",
+   "in": 143.0,
+   "out": 143.96,
+   "crop": "996:560:142:0",
+   "tag": "source-cbs-news.png",
+   "push": 0.03
+  },
+  {
+   "id": 132,
+   "start": 103.26,
+   "end": 104.8,
+   "kind": "clip",
+   "line": "and US Marshals statements,",
+   "what": "real: Malkowski at the map",
+   "src": "M",
+   "in": 81.9,
+   "out": 83.44,
+   "tag": "source-cbs-news.png",
+   "push": 0.03
+  },
+  {
+   "id": 133,
+   "start": 104.8,
+   "end": 106.66,
+   "kind": "image",
+   "line": "and reporting from the time.",
+   "what": "the Philadelphia Inquirer headline, push in",
+   "img": "media/photos/20-inquirer-headline.png",
+   "tag": "source-the-philadelphia-inquirer.png",
+   "push": 0.05,
+   "fit": "contain"
+  },
+  {
+   "id": 134,
+   "start": 106.66,
+   "end": 108.9,
+   "kind": "card",
+   "line": "Where accounts disagree, I'll tell you.",
+   "what": "sources card, lines type on",
+   "card": {
+    "mode": "sources",
+    "head": "SOURCES",
+    "lines": [
+     "PENNSYLVANIA SUPREME COURT OPINION, 2019",
+     "TRIAL TESTIMONY, 2017",
+     "STATE POLICE AND U.S. MARSHALS STATEMENTS",
+     "NEWS REPORTS FROM 2014"
+    ],
+    "foot": "WHERE ACCOUNTS DISAGREE, THE VIDEO SAYS SO.",
+    "at": 106.7
+   }
+  }
+ ]
+}

@@ -66,7 +66,7 @@ for e in d["elements"]:
         p.co = (x, y, width[k] * 0.5, 1.0)
 
 # towns: small clay blocks + typed labels
-for name in ("Tannersville", "Stroudsburg", "Mount Pocono"):
+for name in (("Tannersville", "Stroudsburg") if S.get("map") else ("Tannersville", "Stroudsburg", "Mount Pocono")):   # keep the top-left clear for a stamp
     n = next(e for e in d["elements"] if e["type"] == "node" and e["tags"].get("name") == name)
     x, y = xy(n["lat"], n["lon"])
     for i, (dx, dy, h) in enumerate(((0, 0, 0.5), (0.35, 0.2, 0.32), (-0.3, 0.25, 0.4), (0.15, -0.35, 0.28))):
@@ -74,19 +74,28 @@ for name in ("Tannersville", "Stroudsburg", "Mount Pocono"):
     t = kit.text(name.upper(), font="Montserrat-Bold", size=0.55, spacing=1.15, color="#DADDE3", strength=1.2,
                  align="LEFT", loc=(x + 0.7, y - 0.2, 0.9), rot=(62, 0, 0), name="T_" + name)
     t.visible_shadow = False
-    rt.typed(t, (f(7.85) if not V2 else f(8.9)) + (0 if name == "Tannersville" else 8), cps=30, cursor=False)
+    rt.typed(t, -300 if S.get("map") else ((f(7.85) if not V2 else f(8.9)) + (0 if name == "Tannersville" else 8)), cps=30, cursor=False)
 
 # the airfield: amber pin dropping in, amber glow on the slab
 pin_m = kit.emission(rt.AMBER, 3.0, "Pin")
 post = clay.cyl(0.05, 2.0, (0, 0, 1.0), m["amber"], "PinPost", verts=12)
 head = clay.sphere(0.34, (0, 0, 2.1), pin_m, "PinHead")
-t0 = f(8.0) if not V2 else f(8.25)
+t0 = -300 if S.get("map") else (f(8.0) if not V2 else f(8.25))
 for ob, z in ((post, 1.0), (head, 2.1)):
     kit.key(ob, "location", [(t0 - 6, (0, 0, z + 4)), (t0 + 4, (0, 0, z))], ease="expo")
 glow = kit.light("POINT", (0, 0, 0.6), (0, 0, 0), power=0, color=rt.AMBER, size=1.0, name="PinGlow")
 kit.key(glow.data, "energy", [(t0, 0.0), (t0 + 10, 420.0)], ease="out")
 
-if not V2:
+MP = S.get("map")
+if MP:                                             # later chapters: the plan names the view and the typed stamp
+    if MP["view"] == "close":
+        cam = kit.camera((4.5, -15, 10.5), look_at=(-2.0, 0.4, 0.3), lens=38)
+        kit.key(cam, "location", [(1, (4.5, -15, 10.5)), (N, (3.6, -12.6, 8.8))], ease="linear")
+    else:
+        cam = kit.camera((4.0, -19, 14), look_at=(-2.2, 0.8, 0), lens=34)
+        kit.key(cam, "location", [(1, (4.0, -19, 14)), (N, (5.6, -27, 22))], ease="linear")       # pull out wide
+    rt.date_stamp(cam, MP["stamp"], MP.get("sub"), start_frame=f(MP["at"]) if MP.get("at") else -300, cps=40, sub_cps=70)
+elif not V2:
     cam = kit.camera((3.5, -21, 17), look_at=(-2.5, 1.2, 0), lens=34)
     kit.key(cam, "location", [(1, (3.5, -21, 17)), (N, (2.6, -17.5, 14.5))], ease="linear")
     rt.date_stamp(cam, "POCONO MOUNTAINS", "PENNSYLVANIA", start_frame=f(7.9))
