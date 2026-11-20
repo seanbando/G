@@ -1,6 +1,6 @@
 # Storyboard (POV): You Are the Money
 
-Script: script-pov.md (143 words, about 44 s at 196 wpm).
+Script: script-pov.md (145 words, about 44 s at 196 wpm).
 Times are estimates until the voiceover is recorded and measured with speech-to-text; every beat is then locked to its word.
 
 Structure: POV (second person, "you" are the thousand pounds), told in order through 1791 → 1891 → 1991. One structure only.
