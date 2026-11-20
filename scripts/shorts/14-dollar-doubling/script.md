@@ -14,14 +14,14 @@ Day forty-one. Two trillion bills, more than halfway to the Moon.
 
 One more doubling. Day forty-two. You fly right past the Moon.
 
-Day forty-seven. A hundred forty trillion dollars. More than the whole world makes in a year.
+Day forty-seven. A hundred forty trillion dollars. More than the world makes in a year.
 
 You just broke the world.
 
 Now the catch. No real money doubles every day.
 
-Historically, the stock market averages about ten percent a year. That doubles your money roughly every seven years.
+The stock market's historical average is about ten percent a year. That doubles your money roughly every seven years.
 
-At that speed, turning one dollar into a million takes about a hundred forty-five years.
+At that speed, one dollar becomes a million in about a hundred forty-five years.
 
 So, a million dollars today, or one dollar doubling for twenty days?
