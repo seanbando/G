@@ -1,25 +1,25 @@
-Why Paying the Minimum Costs You More
+Why Banks Love People Who Pay the Minimum
 
-Let me guess. You put a phone on your card, pay the minimum every month, and the balance barely moves.
+Banks love people who pay the minimum. Guess why.
 
-YOU: Wait, why isn't it going down?
+Say you put a thousand-dollar phone on a card at twenty-two percent.
 
-Say it's a thousand-dollar phone at twenty-two percent. Your first minimum is about twenty-eight dollars. Eighteen goes to interest. Just ten comes off the thousand you owe.
+The minimum is about twenty-eight dollars. Eighteen goes to the bank. Ten goes to the phone.
 
-It's like walking up an escalator that's moving down, because you step every month, but you barely go anywhere.
+Year one: you've paid three hundred twenty dollars. You still owe eight hundred eighty-six.
 
-Keep paying the minimum and it takes five years and ten months, long after your next phone, and costs you seventeen hundred sixty-six dollars.
+Year two: six hundred twenty paid. Still owe seven seventy.
 
-[PAUSE: 0.5 seconds. The fake-out.]
+Year three: nine hundred twenty paid. Almost a whole phone.
 
-So that low minimum feels like the bank doing you a favor, but it's exactly what keeps you paying interest for years.
+And you still owe six hundred twenty-five.
 
-[PAUSE: 0.5 seconds]
+That's why banks love you.
 
-Pay one hundred dollars a month instead, and the phone is paid off in one year with about one hundred fifteen dollars of interest.
+Minimum all the way: five years and ten months, seventeen hundred sixty-six dollars. Almost two phones for one.
 
-Your statement even has a "Minimum Payment Warning" box estimating how long the minimum takes.
+Pay a hundred a month instead: done in one year, about a hundred fifteen in interest.
 
-[PAUSE: 0.4 seconds. Callback to the escalator.]
+Your statement's Minimum Payment Warning box estimates your real number.
 
-Run up the escalator, and you're off in a year, so are you walking or running?
+So are you paying for one phone, or almost two?
