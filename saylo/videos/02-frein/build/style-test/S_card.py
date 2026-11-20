@@ -98,7 +98,8 @@ elif mode == "quote":
         t, h, hw, hh = hud_text(cam, ln, "Montserrat-Bold", qs, -0.62, 0.3 - 0.36 * i * qs / 0.27, "#FFFFFF", fr, cps=cps, cursor=(i == n - 1))
         fr += int(len(ln) / cps * CFG["fps"]) + 2
     k_ = C.get("size", 0.27) / 0.27
-    hud_text(cam, C["who"], "Montserrat-Bold", 0.075, -0.62, 0.3 - 0.36 * n * k_ + 0.08, rt.AMBER, fr + 4, cps=60, cursor=False, spacing=1.2)
+    if C.get("who"):
+        hud_text(cam, C["who"], "Montserrat-Bold", 0.075, -0.62, 0.3 - 0.36 * n * k_ + 0.08, rt.AMBER, fr + 4, cps=60, cursor=False, spacing=1.2)
     bar = kit.rect(hh * 0.03, hh * (0.36 * n * k_ + 0.22), rt.AMBER, loc=(-hw * 0.68, hh * (0.3 - 0.18 * (n - 1) * k_), 0), rot=(0, 0, 0), name="Bar")
     kit.parent(bar, h)
     kit.fade(bar, [(f(C["at"]) - 3, 0.0), (f(C["at"]), 1.0)])
@@ -116,9 +117,10 @@ elif mode == "doc":
         cam = kit.camera((0.4, -9.8, zc + 0.3), look_at=(0, 0, zc), lens=50)
         kit.key(cam, "location", [(1, (0.4, -9.8, zc + 0.3)), (N, (0.0, -7.4, zc))], ease="in_out")
     else:
-        cam = kit.camera((0.5, -9.5, zc + 0.6), look_at=(0, 0, zc + 0.5), lens=50)
-        kit.key(cam, "location", [(1, (0.5, -9.5, zc + 0.6)), (N, (-0.25, -5.6, zc + 0.05))], ease="in_out")
-        kit.key(kit.aim(cam), "location", [(1, (0, 0, zc + 0.5)), (N, (-0.3, 0, zc))], ease="in_out")
+        # push in, but never closer than shows the page's full width (text was being cut at the edges)
+        cam = kit.camera((0.5, -10.5, zc + 0.6), look_at=(0, 0, zc + 0.5), lens=50)
+        kit.key(cam, "location", [(1, (0.5, -10.5, zc + 0.6)), (N, (0.0, -7.0, zc + 0.05))], ease="in_out")
+        kit.key(kit.aim(cam), "location", [(1, (0, 0, zc + 0.5)), (N, (0, 0, zc))], ease="in_out")
     for x0, y0, x1, y1, t in marks:                    # amber highlighter sweeps left to right
         w, hgt = (x1 - x0) * W, (y1 - y0) * H
         r = kit.rect(w, hgt, rt.AMBER, loc=((x0 - 0.5) * W, -0.01, (0.5 - (y0 + y1) / 2) * H), rot=(90, 0, 0), anchor="left", name="Mark")

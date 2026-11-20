@@ -39,13 +39,13 @@ def f(t):
 kit.setup(world="#05070C", view="AgX", look="Medium High Contrast", bloom=0.3, motion_blur=0.3)
 table = kit.matte("#1A1D23", 0.45, "Table")
 clay.box(6, 4, 0.1, (0, 0, -0.05), table, "Table", bevel=False)
-LAMP = {"license": 40, "pages": 45, "notebook": 120, "casings": 160}.get(OBJ, 260)      # pale paper needs far less light than a black case
+LAMP = {"license": 70, "pages": 80, "notebook": 300, "casings": 160}.get(OBJ, 260)      # pale paper needs far less light than a black case
 kit.light("SPOT", (-0.9, -0.8, 1.5), (0, 0, 0.02), power=LAMP, color="#E9EEFF", size=0.5, name="Lamp").data.spot_size = math.radians(70)
 kit.light("AREA", (1.6, 1.2, 1.0), (0, 0, 0.05), power=18, color="#8FA6D8", size=2.0, name="Fill")
 black = kit.matte("#101216", 0.45, "CaseBlack")
 steel = kit.matte("#8A8E96", 0.3, "Steel")
 paper = kit.matte("#D8D2C2", 0.9, "Paper")
-ink = kit.matte("#3B4254", 0.9, "Ink")
+ink = kit.matte("#0E1118", 0.9, "Ink")
 rnd = random.Random(2)
 focus = (0, 0, 0.05)
 dist = 1.6
@@ -68,11 +68,13 @@ elif OBJ == "license":
     card = clay.box(0.0856, 0.054, 0.001, (0, 0, 0.0006), kit.matte("#C9CCD2", 0.4, "Card"), "Card", rot=(0, 0, 12), bevel=False)
     ph = clay.box(0.024, 0.03, 0.0004, (0, 0, 0), kit.matte("#7C8088", 0.6, "Blank"), "PhotoBlank", bevel=False)
     ph.parent = card
-    ph.location = (-0.026, -0.004, 0.0008)
+    ph.location = (-0.026, -0.004, 0.002)
+    ph.scale = (1, 1, 4)
     for k in range(4):
         ln = clay.box(0.036 - 0.006 * (k % 2), 0.0022, 0.0003, (0, 0, 0), ink, "Line", bevel=False)
         ln.parent = card
-        ln.location = (0.014, 0.012 - k * 0.008, 0.0008)
+        ln.location = (0.014, 0.012 - k * 0.008, 0.002)
+        ln.scale = (1, 1, 4)
     dist, lens = 0.36, 60
 elif OBJ in ("pages", "notebook"):
     if OBJ == "notebook":
@@ -82,11 +84,12 @@ elif OBJ in ("pages", "notebook"):
     else:
         for i, (px, py, rz) in enumerate(((-0.2, 0.02, 9), (0.02, -0.03, -6), (0.24, 0.04, 14))):
             pg = clay.box(0.19, 0.27, 0.002, (px, py, 0.002 + i * 0.002), paper, "Page", rot=(0, 0, rz), bevel=False)
-            for k in range(11):
+            cr, sr = math.cos(math.radians(rz)), math.sin(math.radians(rz))
+            for k in range(11):                        # ruled handwriting as strokes, placed in world space on the page
                 w = rnd.uniform(0.08, 0.16)
-                ln = clay.box(w, 0.004, 0.0006, (0, 0, 0), ink, "Line", bevel=False)
-                ln.parent = pg
-                ln.location = (-0.085 + w / 2, 0.11 - k * 0.021, 0.0015)
+                lx, ly = -0.085 + w / 2, 0.11 - k * 0.021
+                clay.box(w, 0.005, 0.0012, (px + lx * cr - ly * sr, py + lx * sr + ly * cr, 0.0036 + i * 0.002), ink, "Line",
+                         rot=(0, 0, rz), bevel=False).visible_shadow = False
     dist, lens = 1.05, 45
 elif OBJ == "laptop":
     clay.box(0.34, 0.24, 0.016, (0, 0, 0.008), kit.matte("#2A2D33", 0.4, "Base"), "Base")
@@ -117,7 +120,11 @@ elif OBJ == "checkbook":
     clay.box(0.16, 0.075, 0.008, (0, 0, 0.004), kit.matte("#2B3A4A", 0.6, "Cheque"), "Checkbook", rot=(0, 0, -10))
     dist, lens = 0.55, 55
 elif OBJ == "bag":
-    bag = clay.sphere(0.2, (0, 0, 0.15), kit.matte("#0C0D10", 0.25, "BagPlastic"), "Bag", scale=(1.0, 0.85, 0.75), segs=24)
+    bag = clay.sphere(0.2, (0, 0, 0.15), kit.matte("#0C0D10", 0.25, "BagPlastic"), "Bag", scale=(1.0, 0.85, 0.75), segs=48)
+    for pl in bag.data.polygons:
+        pl.use_smooth = True
+    sub = bag.modifiers.new("Round", "SUBSURF")
+    sub.levels = sub.render_levels = 2
     d = bag.modifiers.new("Crumple", "DISPLACE")
     tex = bpy.data.textures.new("Crumple", "CLOUDS")
     tex.noise_scale = 0.08
@@ -138,7 +145,7 @@ else:
     p1 = tuple(p0[i] + (focus[i] - p0[i]) * k for i in range(3))
     cam = kit.camera(p0, look_at=focus, lens=lens)
     kit.key(cam, "location", [(1, p0), (N, (p1[0] - 0.06 * dist, p1[1], p1[2]))], ease="linear")
-dof = kit.depth_of_field(cam, focus=dist, fstop=S.get("fstop", 4))
+dof = kit.depth_of_field(cam, focus=dist, fstop=S.get("fstop", 11 if OBJ == "laptop" else 4))
 if S.get("stamp"):
     st = S["stamp"]
     rt.date_stamp(cam, st["line"], st.get("sub"), start_frame=f(st["at"]) if st.get("at") is not None else -300, cps=34, sub_cps=60)

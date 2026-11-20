@@ -73,8 +73,8 @@
    "what": "real photo: State Police cars filling a field; chapter lettering types on",
    "kind": "image",
    "img": "media/photos/33-thecitizensvoice-cruisers-field.jpg",
-   "tag": "source-the-times-tribune.png",
    "push": 0.045,
+   "tag": "source-the-times-tribune.png",
    "stamp": {
     "line": "THE SEARCH",
     "sub": "CHAPTER 04",
@@ -89,8 +89,8 @@
    "what": "real photo: a tactical team walking up a road",
    "kind": "image",
    "img": "media/photos/35-tactical-team-ghows.webp",
-   "tag": "source-pocono-record.png",
-   "push": 0.045
+   "push": 0.045,
+   "tag": "source-pocono-record.png"
   },
   {
    "id": 403,
@@ -100,8 +100,8 @@
    "what": "real photo: armed officers on a street",
    "kind": "image",
    "img": "media/photos/mcall-a.webp",
-   "tag": "source-the-morning-call.png",
-   "push": 0.045
+   "push": 0.045,
+   "tag": "source-the-morning-call.png"
   },
   {
    "id": 404,
@@ -111,8 +111,8 @@
    "what": "the FBI Ten Most Wanted page",
    "kind": "image",
    "img": "media/photos/18b-buzzfeednews-fbi-page.png",
-   "tag": "source-fbi.png",
    "push": 0.045,
+   "tag": "source-fbi.png",
    "fit": "contain"
   },
   {
@@ -192,8 +192,8 @@
    "what": "real photo: troopers confer on Snow Hill Road; the place types on",
    "kind": "image",
    "img": "media/photos/AP-manhunt-snow-hill-road.jpg",
-   "tag": "source-ap-the-times-tribune.png",
    "push": 0.045,
+   "tag": "source-ap-the-times-tribune.png",
    "stamp": {
     "line": "SNOW HILL ROAD",
     "sub": "PRICE TOWNSHIP  ·  SEPT 30, 2014",
@@ -222,8 +222,8 @@
    "what": "real photo: searchers spread through forest",
    "kind": "image",
    "img": "media/photos/36-abcnewsgo.jpg",
-   "tag": "source-abc-news.png",
-   "push": 0.045
+   "push": 0.045,
+   "tag": "source-abc-news.png"
   },
   {
    "id": 412,
@@ -278,8 +278,8 @@
    "what": "real photo: the empty main road through Canadensis",
    "kind": "image",
    "img": "media/photos/25-canadensis.jpg",
-   "tag": "source-bonnachoven-cc0.png",
-   "push": 0.045
+   "push": 0.045,
+   "tag": "source-bonnachoven-cc0.png"
   },
   {
    "id": 416,
@@ -346,8 +346,8 @@
    "what": "real photo: dense Pocono woods; the distance types on",
    "kind": "image",
    "img": "media/photos/26a-bog-forest.jpg",
-   "tag": "source-famartin-cc-by-sa-4-0.png",
    "push": 0.03,
+   "tag": "source-famartin-cc-by-sa-4-0.png",
    "stamp": {
     "line": "75 TO 100 YARDS",
     "sub": "THROUGH THICK WOODS",
@@ -371,8 +371,8 @@
    "what": "real photo: the hangar",
    "kind": "image",
    "img": "media/photos/hangar-exterior.jpg",
-   "tag": "source-reuters.png",
    "push": 0.045,
+   "tag": "source-reuters.png",
    "crop": "962:541:0:66"
   },
   {
@@ -393,8 +393,8 @@
    "what": "real photo: inside the hangar, officers with flashlights",
    "kind": "image",
    "img": "media/photos/hangar-interior-reuters-abc.jpg",
-   "tag": "source-reuters.png",
-   "push": 0.03
+   "push": 0.03,
+   "tag": "source-reuters.png"
   },
   {
    "id": 425,
@@ -415,8 +415,8 @@
    "what": "real police photo: the campsite; chapter lettering types on",
    "kind": "image",
    "img": "media/photos/09d-campsite-default.jpg",
-   "tag": "source-pennsylvania-state-police.png",
    "push": 0.045,
+   "tag": "source-pennsylvania-state-police.png",
    "stamp": {
     "line": "WHAT HE LEFT BEHIND",
     "sub": "CHAPTER 05  ·  SEPT 29, 2014",
@@ -598,8 +598,8 @@
    "what": "real photo: the field of police cars, closer; the figure types on at the words",
    "kind": "image",
    "img": "media/photos/33-thecitizensvoice-cruisers-field.jpg",
-   "tag": "source-the-times-tribune.png",
    "push": 0.045,
+   "tag": "source-the-times-tribune.png",
    "crop": "900:506:120:20",
    "stamp": {
     "line": "$11,000,000",
@@ -615,8 +615,8 @@
    "what": "real photo: troopers and armoured trucks staged on a road",
    "kind": "image",
    "img": "media/photos/TMC-FreinManhunt-troopers-stage.webp",
-   "tag": "source-the-morning-call.png",
-   "push": 0.045
+   "push": 0.045,
+   "tag": "source-the-morning-call.png"
   },
   {
    "id": 440,

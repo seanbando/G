@@ -145,7 +145,7 @@ CAR = (8.0, -16.0)                                     # Cpl. Dickson's assigned
 car, CL = rt.police_car(m, (CAR[0], CAR[1], 0), 0, name="Cruiser")
 CL["beam"].data.energy = 0
 others = []
-if V not in ("aerial",):
+if V not in ("aerial", "return"):
     for i, (x, y, r) in enumerate(((20, -16, 0), (-2, -16, 0), (-14, -16.2, 0))):
         c2, l2 = rt.police_car(m, (x, y, 0), r, name=f"Car{i}")
         l2["beam"].data.energy = 0
@@ -208,7 +208,7 @@ if V == "chapter":
 elif V == "aerial":
     cam = push((70, -110, 85), (0, -12, 0), 0.1, lens=32)
 elif V == "lot":
-    cam = push((-26, -40, 1.6), (-4, -9, 2.4), 0.06, lens=28)
+    cam = push((-24, -46, 1.6), (-4, -9, 2.4), 0.06, lens=28)       # the lamp pole stays left of frame, behind the typed stamp
 elif V == "leaving":
     for i, (x, y) in enumerate(((DX - 0.5, DY - 2.0), (DX + 0.9, DY - 3.6))):
         trooper(f"T{i}", x, y, -90, walk=1.25, phase=i)
@@ -236,9 +236,9 @@ elif V in ("cruiser", "cruiser2"):
         cam = push((CAR[0] - 4.6, CAR[1] - 4.4, 1.15), (CAR[0], CAR[1] - 0.4, 1.0), 0.06, lens=40, slide=(0, 0.9, 0.1))
         kit.depth_of_field(cam, focus=5.5, fstop=2.8)
 elif V in ("treeline", "treeline2"):
-    x0 = 0 if V == "treeline" else -18
+    x0 = 10 if V == "treeline" else -18             # clear of the lamp poles
     cam = kit.camera((x0, -14, 1.7), look_at=(x0 + 5, -62, 3.2), lens=40)       # locked off: an impact is light, not a camera move
-    flash((x0 + 6, -59.6, 1.7), S["flash_at"])          # just inside the edge of the trees, where it can be seen
+    flash((x0 + 6, -57.4, 1.5), S["flash_at"])          # in front of the undergrowth: behind it the light was hidden          # just inside the edge of the trees, where it can be seen
 elif V == "front":
     cam = push((12, -32, 1.6), (-6, -9, 2.2), 0.05, lens=30)
 elif V == "four":
@@ -249,8 +249,13 @@ elif V == "four":
     kit.depth_of_field(cam, focus=14, fstop=3.2)
 elif V == "bag":
     T = trooper("Douglass", 16.5, -11.5, -90, walk=1.2)
-    bag = clay.box(0.26, 0.5, 0.28, (0, -0.36, 0.86), kit.matte("#22252B", 0.8, "GymBag"), "GymBag")
-    rt._on_body(T, bag, "hand.R")
+    bag = clay.box(0.5, 0.22, 0.26, (0, 0, 0), kit.matte("#22252B", 0.8, "GymBag"), "GymBag")   # carried low at his left side, the camera's side
+    bag.parent = T["root"]
+    bag.location = (0.06, 0.36, 0.5)
+    for dx in (-0.12, 0.12):
+        st_ = clay.box(0.03, 0.03, 0.26, (0, 0, 0), kit.matte("#22252B", 0.8, "Strap"), "Strap", bevel=False)
+        st_.parent = T["root"]
+        st_.location = (0.06 + dx, 0.36, 0.74)
     d = 1.2 * DUR
     cam = kit.camera((18.6, -14.4, 0.8), look_at=(16.35, -11.9, 0.78), lens=40)
     kit.key(cam, "location", [(1, (18.6, -14.4, 0.8)), (N, (18.3, -14.4 - d * 0.85, 0.82))], ease="linear")
@@ -294,15 +299,25 @@ elif V == "wide":
     cam = push((-30, -57, 2.2), (0, -6, 3), 0.05, lens=30)
 elif V == "vanish":
     # whoever fired is the one amber figure, going back into the trees across the road (no weapon drawn)
-    man = rt.real_mannequin("Subject", (5, -58.5, 0), -90, amber, subsurf=2)
+    man = rt.real_mannequin("Subject", (5, -53.0, 0), -90, amber, subsurf=2)      # crossing the road toward the trees, in the open
     rt.beanie(man)
     rt.rwalk_cycle(man, 1, N, period=34)
     d = 1.3 * DUR
-    kit.key(man["root"], "location", [(1, (5, -58.5, 0)), (N, (5, -58.5 - d, 0))], ease="linear")
-    cam = kit.camera((6.4, -50.5, 1.6), look_at=(5, -59, 1.35), lens=40)
-    kit.key(cam, "location", [(1, (6.4, -50.5, 1.6)), (N, (6.0, -51.6, 1.6))], ease="linear")
-    kit.key(kit.aim(cam), "location", [(1, (5, -59, 1.35)), (N, (5, -59 - d, 1.35))], ease="linear")
-    kit.light("AREA", (5, -56, 6), (5, -60, 1.2), power=2600, color="#C9D6F2", size=6, name="EdgeLight").data.specular_factor = 0.0
+    kit.key(man["root"], "location", [(1, (5, -53.0, 0)), (N, (5, -53.0 - d, 0))], ease="linear")
+    cam = kit.camera((7.0, -45.5, 1.6), look_at=(5, -53.5, 1.3), lens=40)
+    kit.key(cam, "location", [(1, (7.0, -45.5, 1.6)), (N, (6.5, -46.8, 1.6))], ease="linear")
+    kit.key(kit.aim(cam), "location", [(1, (5, -53.5, 1.3)), (N, (5, -53.5 - d, 1.3))], ease="linear")
+    kit.light("AREA", (6, -49, 6), (5, -55, 1.2), power=1400, color="#C9D6F2", size=6, name="EdgeLight").data.specular_factor = 0.0
+
+elif V == "return":
+    # the last 3D shot: Cpl. Dickson's cruiser, 48 days later, turning in from the road and up the drive
+    kit.key(car, "location", [(1, (52, -50, 0)), (int(N * 0.45), (34, -50, 0), "linear"), (N, (30, -40, 0), "out")], ease="linear")
+    kit.key(car, "rotation_euler", [(1, (0, 0, math.radians(-90))), (int(N * 0.45), (0, 0, math.radians(-90)), "linear"), (N, (0, 0, math.radians(-165)), "out")], ease="linear")
+    CL["beam"].data.energy = 9000
+    rim = kit.light("AREA", (2.2, 3.0, 2.4), (0, 0, 0.9), power=140, color=rt.AMBER, size=2.0, name="CruiserRim")
+    kit.parent(rim, car)
+    rim.data.specular_factor = 0.8
+    cam = push((22, -33, 1.4), (32, -46, 0.9), 0.05, lens=40)
 
 if ST:
     stamp(cam, ST["line"], ST.get("at"), ST.get("sub"))

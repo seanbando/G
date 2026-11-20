@@ -719,11 +719,20 @@ def date_stamp(cam, line, sub=None, start_frame=1, d=4.0, cps=30, sub_cps=30):
                  loc=(x, y, 0), rot=(0, 0, 0), name="DateStamp")
     kit.parent(t, h)
     typed(t, start_frame, cps=cps)
+    for dx, dy in ((0.03, -0.03), (-0.02, 0.02), (0.05, -0.05)):      # dark edge so the stamp reads over a bright photo
+        sh = kit.text(line, font="Montserrat-Bold", size=size, spacing=1.05, color="#000000", strength=0.0, align="LEFT",
+                      loc=(x + size * dx, y + size * dy, -0.004), rot=(0, 0, 0), name="DateStampShadow")
+        kit.parent(sh, h)
+        typed(sh, start_frame, cps=cps, cursor=False)
     if sub:
         s = kit.text(sub, font="Montserrat-Bold", size=size * 0.38, spacing=1.2, color=AMBER, strength=1.6, align="LEFT",
                      loc=(x, y - size * 0.85, 0), rot=(0, 0, 0), name="DateSub")
         kit.parent(s, h)
         typed(s, start_frame + int(len(line) / cps * bpy.context.scene.render.fps) + 2, cps=sub_cps, cursor=False)
+        s2 = kit.text(sub, font="Montserrat-Bold", size=size * 0.38, spacing=1.2, color="#000000", strength=0.0, align="LEFT",
+                      loc=(x + size * 0.02, y - size * 0.85 - size * 0.02, -0.004), rot=(0, 0, 0), name="DateSubShadow")
+        kit.parent(s2, h)
+        typed(s2, start_frame + int(len(line) / cps * bpy.context.scene.render.fps) + 2, cps=sub_cps, cursor=False)
     return t
 
 

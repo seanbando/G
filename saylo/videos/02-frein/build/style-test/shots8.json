@@ -1,0 +1,535 @@
+{
+ "vo": "saylo/videos/02-frein/voiceover-full.mp3",
+ "fps": 30,
+ "start": 556.55,
+ "end": 655.47,
+ "out": "frein_s7_court.mp4",
+ "dir": "shots8",
+ "chapter": "The Verdict / The Confession",
+ "types": [
+  [
+   556.7,
+   "short"
+  ],
+  [
+   560.5,
+   "medium"
+  ],
+  [
+   569.3,
+   "medium"
+  ],
+  [
+   590.8,
+   "medium"
+  ],
+  [
+   594.4,
+   "short"
+  ],
+  [
+   600.8,
+   "medium"
+  ],
+  [
+   626.5,
+   "medium"
+  ],
+  [
+   630.0,
+   "medium"
+  ],
+  [
+   633.5,
+   "medium"
+  ],
+  [
+   640.3,
+   "medium"
+  ],
+  [
+   645.3,
+   "short"
+  ],
+  [
+   651.1,
+   "medium"
+  ]
+ ],
+ "src": {
+  "A": "Search for alleged cop killer instills fear in Pa. community - CBS Evening News (720p, h264).mp4",
+  "B": "Slain cop's cuffs used to arrest Frein - CNN (720p, h264).mp4",
+  "D": "Authorities Identify Suspect in Pennsylvania Barracks Shooting - ABC News (720p, h264).mp4",
+  "E": "Eric Frein manhunt Suspect may have left letter - CBS Evening News (720p, h264).mp4",
+  "F": "Police discovers journal of Pennsylvania cop killer suspect - CBS Mornings (720p, h264).mp4",
+  "M": "Pa. breathes easier after capture of Eric Frein - CBS Evening News (720p, h264).mp4",
+  "N": "wnep-novak-jeep-screen-recording.mp4",
+  "W": "hangar-screen-recording-2026-11-19.mp4",
+  "T": "Pike County DA Ray Tonkin responds to Eric Frein's Sentence of Death - Straus News (1080p, h264).mp4",
+  "J": "Eric Frein Notice of Execution signed for man responsible for killing PA State Trooper - WTAJ News (1080p, h264).mp4"
+ },
+ "shots": [
+  {
+   "id": 601,
+   "start": 556.55,
+   "end": 559.89,
+   "line": "Before we go back to that night, here's how this ended in court.",
+   "what": "real photo: Pike County Courthouse, Milford; chapter lettering types on",
+   "kind": "image",
+   "img": "media/photos/23-courthouse-milford.jpg",
+   "push": 0.045,
+   "tag": "source-beyond-my-ken-cc-by-sa-4-0.png",
+   "stamp": {
+    "line": "THE VERDICT",
+    "sub": "CHAPTER 07",
+    "at": 556.7
+   }
+  },
+  {
+   "id": 602,
+   "start": 559.89,
+   "end": 563.73,
+   "line": "The trial came in April twenty-seventeen in Pike County.",
+   "what": "real photo: the prosecution team walking to court; date types on",
+   "kind": "image",
+   "img": "media/photos/41-poconorecord.webp",
+   "push": 0.045,
+   "tag": "source-pocono-record.png",
+   "stamp": {
+    "line": "APRIL 2017",
+    "sub": "PIKE COUNTY COURTHOUSE, MILFORD",
+    "at": 560.5
+   }
+  },
+  {
+   "id": 603,
+   "start": 563.73,
+   "end": 566.21,
+   "line": "Alex Douglass testified.",
+   "what": "his official portrait",
+   "kind": "card",
+   "tag": "source-pennsylvania-state-police.png",
+   "card": {
+    "mode": "portrait",
+    "img": "media/cuts/douglass-portrait.png",
+    "name": "ALEX DOUGLASS",
+    "sub": "TESTIFIED AT THE TRIAL",
+    "size": 0.34,
+    "at": 100
+   }
+  },
+  {
+   "id": 604,
+   "start": 566.21,
+   "end": 569.27,
+   "line": "On April nineteenth, the jury convicted Eric Frein on",
+   "what": "real photo: Frein led by a trooper at the trial",
+   "kind": "image",
+   "img": "media/photos/14-dailylocal.webp",
+   "push": 0.045,
+   "tag": "source-daily-local-news.png"
+  },
+  {
+   "id": 605,
+   "start": 569.27,
+   "end": 575.45,
+   "line": "all twelve counts, including first-degree murder of a law enforcement officer and terrorism.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "GUILTY",
+     "ALL 12 COUNTS"
+    ],
+    "who": "APRIL 19, 2017  ·  INCLUDING MURDER AND TERRORISM",
+    "at": 569.3,
+    "size": 0.3
+   }
+  },
+  {
+   "id": 606,
+   "start": 575.45,
+   "end": 579.25,
+   "line": "Then came the penalty phase to decide whether he'd live.",
+   "what": "real: camera crews behind police tape outside court (station caption cropped out)",
+   "kind": "image",
+   "img": "media/photos/wnep-a.jpg",
+   "push": 0.045,
+   "tag": "source-wnep.png",
+   "crop": "1920:700:0:0",
+   "fit": "contain"
+  },
+  {
+   "id": 607,
+   "start": 579.25,
+   "end": 586.83,
+   "line": "On April twentieth, Bryon Dickson's widow, Tiffany Dickson, testified about raising their two sons without their father.",
+   "what": "Cpl. Dickson's portrait, held (no photos of his family are used)",
+   "kind": "card",
+   "tag": "source-pennsylvania-state-police.png",
+   "card": {
+    "mode": "portrait",
+    "img": "media/cuts/dickson-portrait.png",
+    "name": "BRYON K. DICKSON II",
+    "sub": "HIS WIDOW, TIFFANY DICKSON, TESTIFIED",
+    "size": 0.3,
+    "at": 100,
+    "facts": [
+     [
+      "APRIL 20, 2017",
+      579.4
+     ]
+    ]
+   }
+  },
+  {
+   "id": 608,
+   "start": 586.83,
+   "end": 590.63,
+   "line": "Frein's parents testified too, asking for his life.",
+   "what": "real photo: the courthouse, closer",
+   "kind": "image",
+   "img": "media/photos/23-courthouse-milford.jpg",
+   "push": 0.03,
+   "tag": "source-beyond-my-ken-cc-by-sa-4-0.png",
+   "crop": "1200:675:360:420"
+  },
+  {
+   "id": 609,
+   "start": 590.63,
+   "end": 594.35,
+   "line": "On April twenty-sixth, the jury returned a death verdict.",
+   "what": "real: the District Attorney outside the courthouse after the verdict; name tag types on",
+   "kind": "clip",
+   "src": "T",
+   "in": 126.2,
+   "tag": "source-straus-news.png",
+   "push": 0.025,
+   "nametag": {
+    "name": "RAY TONKIN",
+    "role": "PIKE COUNTY DISTRICT ATTORNEY",
+    "at": 590.8
+   },
+   "out": 129.92
+  },
+  {
+   "id": 610,
+   "start": 594.35,
+   "end": 597.07,
+   "line": "They found no mitigating circumstances.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "DEATH"
+    ],
+    "who": "APRIL 26, 2017  ·  NO MITIGATING CIRCUMSTANCES FOUND",
+    "at": 594.4,
+    "size": 0.4
+   }
+  },
+  {
+   "id": 611,
+   "start": 597.07,
+   "end": 600.67,
+   "line": "The judge formally imposed the sentence the next day.",
+   "what": "real: Tonkin, punched in",
+   "kind": "clip",
+   "src": "T",
+   "in": 131.0,
+   "tag": "source-straus-news.png",
+   "push": 0.025,
+   "zoom": 1.3,
+   "cx": 0.55,
+   "cy": 0.2,
+   "out": 134.6
+  },
+  {
+   "id": 612,
+   "start": 600.67,
+   "end": 604.17,
+   "line": "Remember that recorded statement from the night of the arrest?",
+   "what": "typed card; chapter lettering",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "RECORDED STATEMENT"
+    ],
+    "who": "CHAPTER 08  ·  THE CONFESSION",
+    "at": 600.8,
+    "size": 0.22
+   }
+  },
+  {
+   "id": 613,
+   "start": 604.17,
+   "end": 606.55,
+   "line": "The jury heard Frein's confession.",
+   "what": "real photo: Frein at the trial, pushing in",
+   "kind": "image",
+   "img": "media/photos/14-dailylocal.webp",
+   "push": 0.08,
+   "tag": "source-daily-local-news.png"
+  },
+  {
+   "id": 614,
+   "start": 606.55,
+   "end": 611.45,
+   "line": "Two years later, Pennsylvania's highest court said the jury should never have heard it.",
+   "what": "the court opinion: highlighter on the court's name and \"DECIDED: April 26, 2019\"",
+   "kind": "card",
+   "card": {
+    "mode": "doc",
+    "img": "media/photos/19c-court-opinion-p1-caption.png",
+    "marks": [
+     [
+      0.27,
+      0.105,
+      0.73,
+      0.128,
+      608.4
+     ],
+     [
+      0.63,
+      0.502,
+      0.885,
+      0.526,
+      609.6
+     ]
+    ]
+   },
+   "tag": "source-pa-supreme-court.png"
+  },
+  {
+   "id": 615,
+   "start": 611.45,
+   "end": 615.31,
+   "line": "Frein had repeatedly told investigators he wanted to stop talking.",
+   "what": "opinion p. 28: highlighter on \"unambiguously invoked his right to remain silent on multiple occasions\"",
+   "kind": "card",
+   "card": {
+    "mode": "doc",
+    "img": "media/photos/19a-court-opinion-p28.png",
+    "marks": [
+     [
+      0.118,
+      0.481,
+      0.882,
+      0.498,
+      612.8
+     ]
+    ]
+   },
+   "tag": "source-pa-supreme-court.png"
+  },
+  {
+   "id": 616,
+   "start": 615.31,
+   "end": 617.05,
+   "line": "They kept going.",
+   "what": "opinion p. 28: highlighter on \"the officers continued to question Appellant\"",
+   "kind": "card",
+   "card": {
+    "mode": "doc",
+    "img": "media/photos/19a-court-opinion-p28.png",
+    "marks": [
+     [
+      0.118,
+      0.512,
+      0.882,
+      0.529,
+      615.4
+     ]
+    ]
+   },
+   "tag": "source-pa-supreme-court.png"
+  },
+  {
+   "id": 617,
+   "start": 617.05,
+   "end": 621.79,
+   "line": "The rifle from the hangar fired the bullets that killed Dickson and wounded Douglass.",
+   "what": "opinion p. 29: three highlighter sweeps (the bullets, the rifle, the hangar)",
+   "kind": "card",
+   "card": {
+    "mode": "doc",
+    "img": "media/photos/19b-court-opinion-p29.png",
+    "marks": [
+     [
+      0.5,
+      0.482,
+      0.882,
+      0.499,
+      617.9
+     ],
+     [
+      0.118,
+      0.513,
+      0.882,
+      0.53,
+      619.2
+     ],
+     [
+      0.118,
+      0.545,
+      0.882,
+      0.562,
+      620.4
+     ]
+    ]
+   },
+   "tag": "source-pa-supreme-court.png"
+  },
+  {
+   "id": 618,
+   "start": 621.79,
+   "end": 623.77,
+   "line": "Frein's DNA was on it.",
+   "what": "opinion p. 29: highlighter on \"Appellant's DNA was on the rifle\"",
+   "kind": "card",
+   "card": {
+    "mode": "doc",
+    "img": "media/photos/19b-court-opinion-p29.png",
+    "marks": [
+     [
+      0.7,
+      0.609,
+      0.882,
+      0.626,
+      622.0
+     ],
+     [
+      0.118,
+      0.64,
+      0.262,
+      0.657,
+      622.6
+     ]
+    ]
+   },
+   "tag": "source-pa-supreme-court.png"
+  },
+  {
+   "id": 619,
+   "start": 623.77,
+   "end": 626.43,
+   "line": "The handwriting on the torn pages was his.",
+   "what": "3D object: the three torn pages",
+   "kind": "obj",
+   "obj": "pages",
+   "angle": -30,
+   "rate": 0.1
+  },
+  {
+   "id": 620,
+   "start": 626.43,
+   "end": 629.95,
+   "line": "The court ruled that the confession hadn't changed the verdict.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "THE CONFESSION",
+     "DID NOT CHANGE",
+     "THE VERDICT"
+    ],
+    "who": "PENNSYLVANIA SUPREME COURT, 2019  ·  “HARMLESS ERROR”",
+    "at": 626.5,
+    "size": 0.2
+   }
+  },
+  {
+   "id": 621,
+   "start": 629.95,
+   "end": 633.37,
+   "line": "The conviction stood, and so did the death sentence.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "CONVICTION: STANDS",
+     "DEATH SENTENCE: STANDS"
+    ],
+    "who": "APRIL 26, 2019",
+    "at": 630.0,
+    "size": 0.2
+   }
+  },
+  {
+   "id": 622,
+   "start": 633.37,
+   "end": 638.53,
+   "line": "In January twenty-twenty, the US Supreme Court declined to take the case.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "U.S. SUPREME COURT",
+     "DECLINED THE CASE"
+    ],
+    "who": "JANUARY 2020",
+    "at": 633.5,
+    "size": 0.2
+   }
+  },
+  {
+   "id": 623,
+   "start": 638.53,
+   "end": 642.83,
+   "line": "Pennsylvania set an execution date for June twenty-second, twenty-twenty.",
+   "what": "typed card (the WTAJ clip for this line is a long close-up of his face from the perp walk, so it is not used)",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "EXECUTION DATE SET",
+     "JUNE 22, 2020"
+    ],
+    "who": "PENNSYLVANIA DEPARTMENT OF CORRECTIONS",
+    "at": 638.7,
+    "size": 0.22
+   }
+  },
+  {
+   "id": 624,
+   "start": 642.83,
+   "end": 650.49,
+   "line": "Ten days before it, a Pike County judge put the execution on hold so Frein could continue challenging his conviction and sentence.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "STAYED"
+    ],
+    "who": "JUNE 12, 2020  ·  PIKE COUNTY JUDGE",
+    "at": 645.3,
+    "size": 0.4
+   }
+  },
+  {
+   "id": 625,
+   "start": 650.49,
+   "end": 655.47,
+   "line": "Pennsylvania hasn't carried out an execution since nineteen ninety-nine.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "LAST EXECUTION",
+     "IN PENNSYLVANIA: 1999"
+    ],
+    "who": "",
+    "at": 651.1,
+    "size": 0.22
+   }
+  }
+ ]
+}

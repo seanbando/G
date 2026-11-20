@@ -417,7 +417,7 @@ elif SHOT in (30, 31):
         t.visible_shadow = False
     rt.typed(q1, f(38.6), cps=18, cursor=False)
     rt.typed(q2, f(39.66), cps=20)
-    rt.typed(q3, f(40.45), cps=45, cursor=False)
+    rt.typed(q3, f(40.2), cps=80, cursor=False)        # the credit must finish before the cut at 41.22
     kit.fade(bar, [(f(38.5), 0.0), (f(38.62), 1.0)])
     kit.light("AREA", (GX, WY + 9, 6), (GX, WY, 3), power=1500, color="#AFC0E6", size=10, name="WallWash").data.specular_factor = 0.2
     if SHOT == 30:

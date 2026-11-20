@@ -240,10 +240,10 @@
    "end": 249.4,
    "kind": "clip",
    "line": "and ended up in the swamp.",
-   "what": "real: the water and reeds at the site",
+   "what": "real: the pond field at the site",
    "src": "N",
-   "in": 107.5,
-   "out": 109.68,
+   "in": 144.6,
+   "out": 146.78,
    "crop": "1840:1035:40:0",
    "tag": "source-wnep.png",
    "push": 0.04
@@ -300,9 +300,9 @@
    "crop": "1102:620:0:0",
    "tag": "source-cbs-news.png",
    "push": 0.03,
-   "zoom": 1.3,
-   "cx": 0.62,
-   "cy": 0.25
+   "zoom": 1.1,
+   "cx": 0.6,
+   "cy": 0.1
   },
   {
    "id": 318,
