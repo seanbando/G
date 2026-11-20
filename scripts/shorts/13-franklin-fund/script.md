@@ -22,4 +22,4 @@ Fewer tradesmen qualified, many struggled to pay back, and the money didn't keep
 
 The math never failed. People interrupted it.
 
-So could you leave your money alone for twenty years? Yes or no.
+So could you leave your money alone for twenty years? Forget two hundred. Yes or no.

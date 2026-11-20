@@ -142,7 +142,7 @@ VO: "The math never failed. People interrupted it."
 | 45.66 | "People interrupted it" | giant scissors snip the curve from the sides; it breaks and falls in pieces. FRANKLIN facepalms. | stop dead on the cut, impact shake | snip and crash |
 
 ## Board 12 · 0:46.76-0:50.10 · QUESTION
-VO: "So could you leave your money alone for twenty years? Yes or no."
+VO: "So could you leave your money alone for twenty years? Forget two hundred. Yes or no."
 
 | Time | Word | Shot / action | Camera | Sound |
 |---|---|---|---|---|
