@@ -26,3 +26,10 @@ Sources cited by the reviewer: Massachusetts court record of the Franklin Fund f
 - Line 10: "safe, slow accounts" oversimplified (one early account earned about 5⅓%; later diversified securities). New line: "Fewer tradesmen qualified, many struggled to pay back, and the money didn't keep compounding like he planned."
 - Lines 3, 4, 6, 7 confirmed: 5% loans to young married tradesmen; projections £131,000 and £4,061,000; part of the first-century money helped found the technical school.
 - Line 11 is interpretation; the chest is a visual metaphor (the trust was actively managed).
+
+## POV version (script-pov.md, Nov 20, 2026): "you are the money"
+Same facts as the corrected main script. New claims:
+- "Franklin's will sends you to Boston": codicil to his will (1789), money received March 1791. OK.
+- "Some borrowers pay you back... fewer tradesmen qualify, many struggle to repay, and you don't get lent out enough": matches the review (fewer eligible borrowers, repayment problems, money not continuously lent and compounded). OK.
+- "His math said almost four times that": £4,061,000 x $4.444 = $18.05M; $18.05M / $4.65M (court figure) = 3.9x. OK.
+- "The rest goes back in the dark" / "Light again" = the chest metaphor (the trust was actively managed; visual metaphor only).
