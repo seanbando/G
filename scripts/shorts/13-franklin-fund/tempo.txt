@@ -1,0 +1,13 @@
+# Auto tempo: every line brought to about 195 words a minute.
+VO-01 1.100  # NARRATOR: 171 wpm as recorded (capped at 1.1)
+VO-02 1.100  # NARRATOR: 125 wpm as recorded (capped at 1.1)
+VO-03 1.100  # NARRATOR: 165 wpm as recorded (capped at 1.1)
+VO-04 1.100  # NARRATOR: 136 wpm as recorded (capped at 1.1)
+VO-05 1.100  # NARRATOR: 126 wpm as recorded (capped at 1.1)
+VO-06 1.039  # NARRATOR: 188 wpm as recorded
+VO-07 1.000  # NARRATOR: 198 wpm as recorded
+VO-08 1.100  # NARRATOR: 124 wpm as recorded (capped at 1.1)
+VO-09 1.100  # NARRATOR: 166 wpm as recorded (capped at 1.1)
+VO-10 1.100  # NARRATOR: 148 wpm as recorded (capped at 1.1)
+VO-11 1.100  # NARRATOR: 119 wpm as recorded (capped at 1.1)
+VO-12 1.043  # NARRATOR: 187 wpm as recorded

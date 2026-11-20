@@ -22,4 +22,4 @@ Fewer tradesmen borrowed, many didn't pay back, and the money got parked in safe
 
 The math never failed. People interrupted it.
 
-So could you leave your money alone for twenty years, let alone two hundred?
+So could you leave your money alone for twenty years? Yes or no.
