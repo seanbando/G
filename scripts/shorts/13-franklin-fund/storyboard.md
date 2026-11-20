@@ -1,5 +1,7 @@
 # Storyboard: Ben Franklin's 200-Year Money Chest
 
+Structure: Ricks (cold open on "He...", true story told in order, twist, lesson, question). One structure only.
+
 Rule for this video: every line is a new 3D set, with new models, new character expressions, real movement, and details that act out the words.
 Long lines are split into 2-3 shots (about 1-1.5 s each), so a new shot lands every 1-3 s.
 Times are estimates until the voiceover is measured; every action then gets locked to its word with speech-to-text.
@@ -26,18 +28,18 @@ Cast (new sprites, each with an expression set):
 
 ---
 
-## Board 1 · 0:00-0:03.4 · Hook (the visual acts out the hook, word by word)
-VO: "Ben Franklin gave Boston money to grow for two hundred years. Guess what it became."
+## Board 1 · 0:00-0:05 · Hook (Ricks-style cold open: "He...", name revealed second)
+VO: "He gave a city money that had to grow for two hundred years. His name was Ben Franklin. Guess what it became."
 
-- Frame 1 (finished, no text card): a 1790 candlelit study. FRANKLIN (smug half-lids) stands behind his desk, both hands on the lid of the iron chest, ready to slide it across. Through the window behind him, Boston's harbor and church steeple glow at dusk. A small brass plate on the chest reads "£1,000". The shot is fully lit and composed from the very first frame.
-- "Ben Franklin": push in on his face, and his glasses glint.
-- "gave Boston": he shoves the chest across the desk into the arms of the CLERK (proud), who stands in front of the window. The Boston skyline sits right behind them, so "Boston" reads instantly.
-- "money": the clerk flips the lid, and a wave of coins catches the candle light. Coin clink.
-- "to grow": the coins start stacking themselves inside the chest, a pile visibly rising out of it with a soft glow. Rising whoosh.
-- "for two hundred years": the lid slams and the padlock snaps. Then a hyper-timelapse: the candle melts and is replaced by a gas lamp, then a light bulb; the window flips from horse carts to cars to neon. The chest rusts, vines creep over it, dust piles up. A wall calendar rips through "1790 → 1890 → 1990". Time-rush sound.
-- "Guess what it became": silence, the camera rushes in on the old chest, light leaks out of the cracks in the lid, and the padlock rattles. Cut on the shake, with no answer yet.
-- Camera: a push-in, then a whip with the chest, then a locked-off timelapse with handheld drift, then a fast push.
-- Why it works: every word has its own picture, and the opening never shows a plain text card. The timelapse acts out "200 years" in about 1.5 s and sets up the chest as the running image.
+- Frame 1 (finished, no text card): a 1790 candlelit study, seen from behind a MAN in a brown coat. His face is hidden in shadow, both hands on the lid of the iron chest. Through the window, Boston's harbor and church steeple glow at dusk. A small brass plate on the chest reads "£1,000". Fully lit and composed from the very first frame.
+- "He gave": he slides the chest across the desk. We still only see his back and his hands.
+- "a city": the CLERK (proud) catches it in front of the window, with the Boston skyline right behind him.
+- "money": the lid flips open and a wave of coins catches the candle light. Coin clink.
+- "that had to grow": the coins stack themselves and the pile rises out of the chest with a soft glow. Rising whoosh.
+- "for two hundred years": the lid slams and the padlock snaps. Then a hyper-timelapse: the candle becomes a gas lamp, then a bulb; the window goes from horse carts to cars to neon; the chest rusts and vines grow over it; the calendar rips "1790 → 1890 → 1990".
+- "His name was Ben Franklin": a whip back to 1790 as the man turns around. FRANKLIN (smug half-lids, glasses glint) faces the camera, and the candle flares on his face. This is the face reveal.
+- "Guess what it became": silence, then a fast push in on the ancient 1990 chest as light leaks from the cracks and the lock rattles. Cut before the answer.
+- Camera: a slow push from behind, then a whip with the chest, then the timelapse with drift, then a whip and a turn-around, then a fast push.
 
 ## Board 2 · ~0:03.4-0:07 · 1790
 VO: "Seventeen ninety. A thousand pounds, about forty-five hundred dollars, goes into the chest."
