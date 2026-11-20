@@ -14,10 +14,10 @@ Rules applied:
 
 Look:
 - 2.5D: 3D sets, props, lights and particles (three.js), with flat 2D characters whose faces swap on cue.
-- Era light colour: 1790 candle amber (#ffb35c), 1890 gaslight green-gold (#d8c060), 1990 neon magenta/cyan (#ff3fa4 / #3fe0ff).
+- Era light colour: 1791 candle amber (#ffb35c), 1891 gaslight green-gold (#d8c060), 1991 neon magenta/cyan (#ff3fa4 / #3fe0ff).
 - Grade: brightness about 90-110, soft vignette, saturation +30%.
 - Moves: push-ins about 40% of shots, handheld shake on hits, whips between eras.
-- Running image: THE CHEST, the same iron-banded oak model in every era. It starts new (1790), then gets scuffed (1890), then ancient with rust, moss and a dented lock (1990).
+- Running image: THE CHEST, the same iron-banded oak model in every era. It starts new (1791), then gets scuffed (1891), then ancient with rust, moss and a dented lock (1991).
 
 Cast (2D sprites drawn in our style, 3 to 7 faces each):
 
@@ -28,9 +28,9 @@ Cast (2D sprites drawn in our style, 3 to 7 faces each):
 | BLACKSMITH (1790) | young, leather apron, soot on cheek | hopeful grin, happy |
 | CARPENTER, PRINTER (1790) | small background extras for the loan loop | happy |
 | BORROWER (1800s) | patched coat, cap | sneaky |
-| TREASURER (1890) | top hat, big mustache, pocket watch | proud, let down |
+| TREASURER (1891) | top hat, big mustache, pocket watch | proud, let down |
 | WORKERS (1900s) | flat caps | effort |
-| OFFICIAL (1990) | grey suit, brick phone | anticipation, stunned, grin |
+| OFFICIAL (1991) | grey suit, brick phone | anticipation, stunned, grin |
 | SAM (today) | from three friends | tempted, unsure, decided |
 
 Sound: room tone per era (crackling fire, gaslight hiss, city hum), whoosh on every whip, a hit on every number slam, light music bed. Master at -13 LUFS.
@@ -42,15 +42,15 @@ VO: "He left a city a two-hundred-year bet. Guess how it ended."
 
 | Time | Word | Shot / action | Camera | Sound |
 |---|---|---|---|---|
-| 0.00 | (frame 1) | 1790 study at dusk, fully lit and composed. THE MAN seen from behind, face in shadow, both hands on the lid of THE CHEST on an oak desk. Window behind him: Boston harbor, ship masts, church steeple glowing orange. Candle flickering, dust floating in the beam. Small brass plate on the chest: "£1,000". | slow push from behind his shoulder | fire crackle |
+| 0.00 | (frame 1) | 1790 study at dusk (Franklin wrote the bet into his will in 1789), fully lit and composed. THE MAN seen from behind, face in shadow, both hands on the lid of THE CHEST on an oak desk. Window behind him: Boston harbor, ship masts, church steeple glowing orange. Candle flickering, dust floating in the beam. Small brass plate on the chest: "£1,000". | slow push from behind his shoulder | fire crackle |
 | 0.20 | "left" | he slides the chest across the desk (it skids, papers flutter) | push continues | wood scrape |
 | 0.52 | "city" | whip to the CLERK (proud) catching the chest in front of the window. The Boston skyline fills the frame behind him. | whip-pan right | whoosh |
 | 0.88 | "a" | the lid flips open and coins catch the candle light; sparkle particles | quick punch-in | coin clink |
 | 1.00 | "two-hundred-year" | THE MAN's hand slaps a wax-sealed paper on the lid: "200 YEARS". The coins start stacking themselves and rising. | tilt down to the seal | paper slap and seal thud |
 | 1.90 | "bet." | the lid SLAMS and the padlock snaps. Hyper-timelapse in 0.4 s: candle → gas lamp → light bulb; the window goes horse carts → cars → neon; the chest rusts and moss creeps over it; the wall calendar rips 1791 → 1891 → 1991. | locked-off with drift, then a shake on the slam | lid slam, time-rush whoosh |
-| 2.32 | "Guess how it ended." | 1990 darkness. The ancient chest sits alone, light leaking from the cracks in the lid, the padlock rattling by itself. Cut before it opens. | fast push-in to the lock | heartbeat thump, rattle |
+| 2.32 | "Guess how it ended." | 1991 darkness. The ancient chest sits alone, light leaking from the cracks in the lid, the padlock rattling by itself. Cut before it opens. | fast push-in to the lock | heartbeat thump, rattle |
 
-## Board 2 · 0:03.04-0:08.66 · 1790: INTO THE CHEST
+## Board 2 · 0:03.04-0:08.66 · 1791: INTO THE CHEST
 VO: "Seventeen ninety-one. A thousand pounds, about forty-five hundred dollars, goes into the chest."
 
 | Time | Word | Shot / action | Camera | Sound |
@@ -81,7 +81,7 @@ VO: "He did the math himself. One hundred years, a hundred thirty-one thousand p
 | 18.02 | "Two hundred years" | a second, far bigger tower blasts through the ceiling and the roof; debris and shingles fly | tilt up out through the roof into the night sky | crash, shake |
 | 18.94 | "over four million" | the tower top glows in the clouds: "£4,061,000". The silhouetted arm points up proudly. | hold with drift | choir swell |
 
-## Board 5 · 0:20.00-0:26.88 · 1890: FIRST OPENING
+## Board 5 · 0:20.00-0:26.88 · 1891: FIRST OPENING
 VO: "Eighteen ninety-one. The chest opens. Three hundred ninety-one thousand dollars. Only two thirds of his math."
 
 | Time | Word | Shot / action | Camera | Sound |
@@ -107,12 +107,12 @@ VO: "Part of it builds a trade school. The rest goes back in the chest."
 | 29.00 | "Part of it builds a trade school" | early-1900s Boston street: scaffolding, cranes, WORKERS (effort). Sped-up shot: bricks stack themselves and the building rises; a sign bolts on, "FRANKLIN UNION · 1908". | crane up with the building | construction rhythm |
 | 30.66 | "The rest goes back in the chest" | a thin stream of coins pours back into the chest; the lid shuts and dust puffs | push-in on the chest | coins, thud |
 
-## Board 8 · 0:32.18-0:35.00 · 1990: SECOND OPENING
+## Board 8 · 0:32.18-0:35.00 · 1991: SECOND OPENING
 VO: "Nineteen ninety-one. The chest opens again."
 
 | Time | Word | Shot / action | Camera | Sound |
 |---|---|---|---|---|
-| 32.18 | "Nineteen ninety-one" | a digital clock flips 1891 → 1991. 1990 Boston at night: neon, skyscrapers, car headlights streaking. Inside, a modern vault with a CRT monitor reading "FRANKLIN FUND". The ancient chest sits on a pedestal under a spotlight. | fast push through the city into the vault | synth stab, city hum |
+| 32.18 | "Nineteen ninety-one" | a digital clock flips 1891 → 1991. 1991 Boston at night: neon, skyscrapers, car headlights streaking. Inside, a modern vault with a CRT monitor reading "FRANKLIN FUND". The ancient chest sits on a pedestal under a spotlight. | fast push through the city into the vault | synth stab, city hum |
 | 33.94 | "The chest opens again" | OFFICIAL (anticipation, brick phone in hand) grips the lid. Drum roll; the lid lifts slowly and light floods out. | slow push with handheld tension | drum roll |
 
 ## Board 9 · 0:35.14-0:38.92 · THE REVEAL
@@ -148,7 +148,8 @@ VO: "So could you leave your money alone for twenty years? Forget two hundred. Y
 |---|---|---|---|---|
 | 46.76 | "So could you leave your money alone" | today: small apartment bedroom, fairy lights, desk. SAM (tempted) holds a phone showing a stock app balance, thumb hovering over a big red "SELL". A tiny version of THE CHEST sits on the shelf. FRANKLIN's ghost leans over his shoulder, whispering. | push in to the phone | room tone, phone buzz |
 | 48.44 | "for twenty years?" | "20 YEARS?" pops up big; SAM (unsure) looks at the camera | punch | hit |
-| 49.36 | "Yes or no." | two big buttons slam in, "YES" (green) and "NO" (red); a comment-bubble icon wiggles under them | small shake | double hit |
+| ~49.2 | "Forget two hundred." | "200?" stamps over "20 YEARS?" and instantly cracks and crumbles; FRANKLIN's ghost shrugs and laughs | whip | stamp, crumble |
+| ~49.9 | "Yes or no." | two big buttons slam in, "YES" (green) and "NO" (red); a comment-bubble icon wiggles under them | small shake | double hit |
 
 ## Board 13 · 0:50.10-0:52.10 · SAVE + FOLLOW CARD (no voice)
 - 50.1-51.3: save card over the chest. "1791: $4,444 → 1891: $391,000 → 1991: ~$4.6 million · His math: 3× more." A bookmark icon pulses with "SAVE THIS".
@@ -156,6 +157,6 @@ VO: "So could you leave your money alone for twenty years? Forget two hundred. Y
 
 ---
 
-Caption: "He left a city a 200-year bet 💰 Ben Franklin's real 1790 gift to Boston. Could you last 20 years? Yes or no 👇 Send this to the friend who can't leave their money alone. Save this for the next time you want to sell. Figures are nominal (not inflation-adjusted), from historians' accounts of the Franklin Fund; sources vary slightly."
+Caption: "He left a city a 200-year bet 💰 Ben Franklin's real gift to Boston, from his 1789 will. Could you last 20 years? Forget 200. Yes or no 👇 Send this to the friend who can't leave their money alone. Save this for the next time you want to sell. Figures are nominal (not inflation-adjusted), from historians' accounts of the Franklin Fund; sources vary slightly."
 
 Pinned comment: "Honestly? I'd last about 2 years 😬"
