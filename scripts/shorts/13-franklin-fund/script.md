@@ -1,6 +1,6 @@
 Ben Franklin's 200-Year Money Chest
 
-Ben Franklin left Boston money it couldn't touch for two hundred years. Guess what it became.
+Ben Franklin gave Boston money to grow for two hundred years. Guess what it became.
 
 Seventeen ninety. A thousand pounds, about forty-five hundred dollars, goes into the chest.
 

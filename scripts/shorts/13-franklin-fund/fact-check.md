@@ -5,7 +5,7 @@ Single city (Boston) for simplicity; Philadelphia (about $2M in 1990) goes in th
 
 | Line | Claim | Source / math | Status |
 |---|---|---|---|
-| Hook | Money couldn't be fully used for 200 years | Codicil (June 23, 1789): spend part at 100 yrs, rest held to 200 yrs (Mental Floss, Britannica, Cambridge "Franklin and the Invention of Microfinance") | OK |
+| Hook | Money given to grow for 200 years (part usable at 100) | Codicil (June 23, 1789): spend part at 100 yrs, rest held to 200 yrs (Mental Floss, Britannica, Cambridge "Franklin and the Invention of Microfinance") | OK |
 | 2 | £1,000 to Boston, about $4,500 | £1,000 each to Boston and Philadelphia; "about $4,500 in 1790s dollars" (search summaries). £1 ≈ $4.44 then -> $4,444 | OK, voice says "about" |
 | 3 | Lent to young tradesmen at 5% | "lend at five per cent per annum to such young married artificers, under the age of twenty-five" | OK ("tradesmen" = artificers) |
 | 4 | Franklin projected £131,000 at 100 yrs, £4,061,000 at 200 | Codicil projections (appstate "Ben's Life and Will", Philanthropy Roundtable) | OK |
