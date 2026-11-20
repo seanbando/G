@@ -16,7 +16,7 @@ $runner = Join-Path $studio ".claude\skills\documentary-pro\scripts\render_blend
 $cfg = Get-Content (Join-Path $build $Plan) -Raw -Encoding UTF8 | ConvertFrom-Json
 $dir = if ($cfg.dir) { $cfg.dir } else { "shots" }
 $out = Join-Path $vid "build\render\$dir"
-$extra = if ($Plan -ne "shots.json") { @("--arg", "cfg=$Plan") } else { @() }
+$extra = if ($Plan -ne "shots.json") { @("--arg", "cfg=$Plan", "--wait", "1500") } else { @() }
 New-Item -ItemType Directory -Force $out | Out-Null
 $script = @{ "3d" = "S_airfield.py"; "open" = "S_open.py"; "map" = "S_map.py"; "photo" = "S_photo.py"; "card" = "S_card.py"; "map2" = "S_map2.py"; "barracks" = "S_barracks.py"; "obj" = "S_objects.py" }
 Push-Location $studio
@@ -27,12 +27,12 @@ foreach ($s in $cfg.shots) {
     $name = "S{0:D2}" -f $s.id
     # the runner reuses %TEMP%\faceless-studio-shot-* frames for the same output name: clear them first
     Get-ChildItem $env:TEMP -Directory -Filter "faceless-studio-shot-*" -ErrorAction SilentlyContinue | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
-    if ($s.kind -eq "still" -or $s.kind -eq "image" -or $s.kind -eq "reuse") { continue }   # made in assemble.py              # freeze frames are cut in assemble.py
-    if ($s.kind -eq "clip") {
-        if ($s.nametag -and -not $Stills) {
-            $a = @($runner, (Join-Path $build "O_tag.py"), "--out", (Join-Path $out "$name-tag.mov"), "--frames", $n, "--alpha",
-                   "--arg", "name=$($s.nametag.name)", "--arg", "role=$($s.nametag.role)", "--arg", "at=$($s.nametag.at - $s.start)")
-            Write-Host "== $name name tag ($n frames)"
+    if ($s.kind -eq "clip" -or $s.kind -eq "still" -or $s.kind -eq "image" -or $s.kind -eq "reuse") {
+        # cut in assemble.py; only a typed name tag / stamp over the footage is rendered here (with alpha)
+        if (($s.nametag -or $s.stamp) -and -not $Stills) {
+            $a = @($runner, (Join-Path $build "O_text.py"), "--out", (Join-Path $out ("O{0:D2}.mov" -f $s.id)), "--frames", $n, "--alpha",
+                   "--arg", "shot=$($s.id)", "--arg", "cfg=$Plan", "--wait", "1500")
+            Write-Host "== $name overlay ($n frames)"
             python @a
         }
         continue

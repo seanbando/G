@@ -42,10 +42,17 @@ kit.light("SUN", (-120, 60, 140), (0, 0, 0), power=1.3 if V == "aerial" else 0.8
 
 ground = rt.pbr("forest_ground_04", scale=5.0, sat=0.4)
 asph = rt.pbr("asphalt_02", scale=4.0, sat=0.2)
-block = rt.pbr("brick_wall_08", scale=1.6, sat=0.5, name="TanBlock")
+block = rt.pbr("brick_wall_08", scale=1.6, sat=0.0, name="TanBlock")       # the brick's relief, re-tinted tan like the real block wall
 for nd in block.node_tree.nodes:
     if nd.type == "HUE_SAT":
-        nd.inputs["Value"].default_value = 1.7
+        nd.inputs["Value"].default_value = 2.0
+        mixn = block.node_tree.nodes.new("ShaderNodeMixRGB")
+        mixn.blend_type = "MULTIPLY"
+        mixn.inputs["Fac"].default_value = 1.0
+        mixn.inputs["Color2"].default_value = (0.86, 0.72, 0.52, 1)
+        bs = next(n for n in block.node_tree.nodes if n.type == "BSDF_PRINCIPLED")
+        block.node_tree.links.new(nd.outputs["Color"], mixn.inputs["Color1"])
+        block.node_tree.links.new(mixn.outputs["Color"], bs.inputs["Base Color"])
 roofm = kit.matte("#3A2D29", 0.85, "Roof")
 steel = kit.matte("#3B3F45", 0.5, "Steel")
 paint = kit.matte("#B8B5AC", 0.9, "Paint")

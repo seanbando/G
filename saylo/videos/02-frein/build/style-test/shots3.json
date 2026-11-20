@@ -360,7 +360,7 @@
    "what": "police-released photo of Frein in re-enactor gear with a rifle, push in",
    "src": "E",
    "at": 26.2,
-   "crop": "1102:620:0:0",
+   "crop": "800:450:240:10",
    "tag": "source-pennsylvania-state-police.png",
    "push": 0.06
   },
@@ -476,7 +476,7 @@
    "kind": "image",
    "line": "and reporting from the time.",
    "what": "the Philadelphia Inquirer headline, push in",
-   "img": "media/photos/20-inquirer-headline.png",
+   "img": "media/cuts/inquirer-headline-card.png",
    "tag": "source-the-philadelphia-inquirer.png",
    "push": 0.05,
    "fit": "contain"
