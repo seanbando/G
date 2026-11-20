@@ -18,7 +18,7 @@ Day forty-seven. A hundred forty trillion dollars. More than the world makes in 
 
 You just broke the world.
 
-Now the catch. No real money doubles every day.
+No real money doubles every day.
 
 The S and P five hundred's historical average is about ten percent a year, including reinvested dividends. That doubles your money roughly every seven years.
 
