@@ -18,10 +18,6 @@ End of twenty twenty-five, Sam's at over ten phones, about eight thousand dollar
 
 And Maya? Same as Sam, except one year.
 
-[PAUSE: 0.5 seconds. The reveal.]
-
 About eight phones. That one missed year cost her two.
-
-[PAUSE: 0.4 seconds]
 
 So if your money crashed tomorrow, would you sell, wait or hold?

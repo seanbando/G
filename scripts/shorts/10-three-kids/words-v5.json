@@ -1,0 +1,924 @@
+{
+ "lines": [
+  {
+   "id": "VO-01",
+   "start": 0.06,
+   "end": 6.2,
+   "text": "Same thousand dollars, same S and P five hundred. One friend ends with ten times as much. Guess what the other two did."
+  },
+  {
+   "id": "VO-02",
+   "start": 6.34,
+   "end": 12.7,
+   "text": "They buy in at the start of two thousand six. The two thousand eight crash shrinks each one to seven seventy. One new phone."
+  },
+  {
+   "id": "VO-03",
+   "start": 12.88,
+   "end": 16.02,
+   "text": "Jay panics, sells, and hides the cash in a shoebox."
+  },
+  {
+   "id": "VO-04",
+   "start": 16.18,
+   "end": 18.64,
+   "text": "Maya sells too, then buys back a year later."
+  },
+  {
+   "id": "VO-05",
+   "start": 18.86,
+   "end": 21.12,
+   "text": "Sam holds and lets his dividends reinvest."
+  },
+  {
+   "id": "VO-06",
+   "start": 21.26,
+   "end": 26.0,
+   "text": "By twenty thirteen, Sam's money is worth over two phones. Jay's shoebox? Still one."
+  },
+  {
+   "id": "VO-07",
+   "start": 26.14,
+   "end": 29.4,
+   "text": "By twenty nineteen, over four phones. Jay? Still one."
+  },
+  {
+   "id": "VO-08",
+   "start": 29.54,
+   "end": 34.82,
+   "text": "End of twenty twenty-five, Sam's at over ten phones, about eight thousand dollars. Jay? Still one."
+  },
+  {
+   "id": "VO-09",
+   "start": 34.98,
+   "end": 37.22,
+   "text": "And Maya? Same as Sam, except one year."
+  },
+  {
+   "id": "VO-10",
+   "start": 37.38,
+   "end": 40.16,
+   "text": "About eight phones. That one missed year cost her two."
+  },
+  {
+   "id": "VO-11",
+   "start": 40.36,
+   "end": 43.46,
+   "text": "So if your money crashed tomorrow, would you sell, wait or hold?"
+  }
+ ],
+ "words": [
+  {
+   "text": "Same",
+   "start": 0.06,
+   "end": 0.24,
+   "line": "VO-01"
+  },
+  {
+   "text": "thousand",
+   "start": 0.3,
+   "end": 0.58,
+   "line": "VO-01"
+  },
+  {
+   "text": "dollars,",
+   "start": 0.64,
+   "end": 1.1,
+   "line": "VO-01"
+  },
+  {
+   "text": "same",
+   "start": 1.38,
+   "end": 1.64,
+   "line": "VO-01"
+  },
+  {
+   "text": "S",
+   "start": 1.64,
+   "end": 1.944,
+   "line": "VO-01"
+  },
+  {
+   "text": "and",
+   "start": 1.944,
+   "end": 2.248,
+   "line": "VO-01"
+  },
+  {
+   "text": "P",
+   "start": 2.248,
+   "end": 2.552,
+   "line": "VO-01"
+  },
+  {
+   "text": "five",
+   "start": 2.552,
+   "end": 2.856,
+   "line": "VO-01"
+  },
+  {
+   "text": "hundred.",
+   "start": 2.856,
+   "end": 3.16,
+   "line": "VO-01"
+  },
+  {
+   "text": "One",
+   "start": 3.16,
+   "end": 3.28,
+   "line": "VO-01"
+  },
+  {
+   "text": "friend",
+   "start": 3.4,
+   "end": 3.56,
+   "line": "VO-01"
+  },
+  {
+   "text": "ends",
+   "start": 3.66,
+   "end": 3.82,
+   "line": "VO-01"
+  },
+  {
+   "text": "with",
+   "start": 3.86,
+   "end": 4.019,
+   "line": "VO-01"
+  },
+  {
+   "text": "ten",
+   "start": 4.08,
+   "end": 4.26,
+   "line": "VO-01"
+  },
+  {
+   "text": "times",
+   "start": 4.38,
+   "end": 4.64,
+   "line": "VO-01"
+  },
+  {
+   "text": "as",
+   "start": 4.68,
+   "end": 4.78,
+   "line": "VO-01"
+  },
+  {
+   "text": "much.",
+   "start": 4.84,
+   "end": 5.06,
+   "line": "VO-01"
+  },
+  {
+   "text": "Guess",
+   "start": 5.22,
+   "end": 5.36,
+   "line": "VO-01"
+  },
+  {
+   "text": "what",
+   "start": 5.4,
+   "end": 5.48,
+   "line": "VO-01"
+  },
+  {
+   "text": "the",
+   "start": 5.52,
+   "end": 5.58,
+   "line": "VO-01"
+  },
+  {
+   "text": "other",
+   "start": 5.62,
+   "end": 5.8,
+   "line": "VO-01"
+  },
+  {
+   "text": "two",
+   "start": 5.82,
+   "end": 5.98,
+   "line": "VO-01"
+  },
+  {
+   "text": "did.",
+   "start": 6.02,
+   "end": 6.2,
+   "line": "VO-01"
+  },
+  {
+   "text": "They",
+   "start": 6.34,
+   "end": 6.48,
+   "line": "VO-02"
+  },
+  {
+   "text": "buy",
+   "start": 6.52,
+   "end": 6.74,
+   "line": "VO-02"
+  },
+  {
+   "text": "in",
+   "start": 6.8,
+   "end": 6.92,
+   "line": "VO-02"
+  },
+  {
+   "text": "at",
+   "start": 6.96,
+   "end": 7.04,
+   "line": "VO-02"
+  },
+  {
+   "text": "the",
+   "start": 7.06,
+   "end": 7.16,
+   "line": "VO-02"
+  },
+  {
+   "text": "start",
+   "start": 7.24,
+   "end": 7.42,
+   "line": "VO-02"
+  },
+  {
+   "text": "of",
+   "start": 7.46,
+   "end": 7.56,
+   "line": "VO-02"
+  },
+  {
+   "text": "two",
+   "start": 7.6,
+   "end": 7.7,
+   "line": "VO-02"
+  },
+  {
+   "text": "thousand",
+   "start": 7.78,
+   "end": 8.02,
+   "line": "VO-02"
+  },
+  {
+   "text": "six.",
+   "start": 8.2,
+   "end": 8.52,
+   "line": "VO-02"
+  },
+  {
+   "text": "The",
+   "start": 8.7,
+   "end": 8.8,
+   "line": "VO-02"
+  },
+  {
+   "text": "two",
+   "start": 8.84,
+   "end": 8.92,
+   "line": "VO-02"
+  },
+  {
+   "text": "thousand",
+   "start": 8.98,
+   "end": 9.2,
+   "line": "VO-02"
+  },
+  {
+   "text": "eight",
+   "start": 9.34,
+   "end": 9.48,
+   "line": "VO-02"
+  },
+  {
+   "text": "crash",
+   "start": 9.56,
+   "end": 9.88,
+   "line": "VO-02"
+  },
+  {
+   "text": "shrinks",
+   "start": 10.06,
+   "end": 10.36,
+   "line": "VO-02"
+  },
+  {
+   "text": "each",
+   "start": 10.42,
+   "end": 10.58,
+   "line": "VO-02"
+  },
+  {
+   "text": "one",
+   "start": 10.68,
+   "end": 10.86,
+   "line": "VO-02"
+  },
+  {
+   "text": "to",
+   "start": 10.9,
+   "end": 11.02,
+   "line": "VO-02"
+  },
+  {
+   "text": "seven",
+   "start": 11.1,
+   "end": 11.26,
+   "line": "VO-02"
+  },
+  {
+   "text": "seventy.",
+   "start": 11.44,
+   "end": 11.86,
+   "line": "VO-02"
+  },
+  {
+   "text": "One",
+   "start": 12.02,
+   "end": 12.14,
+   "line": "VO-02"
+  },
+  {
+   "text": "new",
+   "start": 12.18,
+   "end": 12.36,
+   "line": "VO-02"
+  },
+  {
+   "text": "phone.",
+   "start": 12.38,
+   "end": 12.7,
+   "line": "VO-02"
+  },
+  {
+   "text": "Jay",
+   "start": 12.88,
+   "end": 13.04,
+   "line": "VO-03"
+  },
+  {
+   "text": "panics,",
+   "start": 13.08,
+   "end": 13.52,
+   "line": "VO-03"
+  },
+  {
+   "text": "sells,",
+   "start": 13.78,
+   "end": 14.2,
+   "line": "VO-03"
+  },
+  {
+   "text": "and",
+   "start": 14.32,
+   "end": 14.42,
+   "line": "VO-03"
+  },
+  {
+   "text": "hides",
+   "start": 14.48,
+   "end": 14.72,
+   "line": "VO-03"
+  },
+  {
+   "text": "the",
+   "start": 14.76,
+   "end": 14.84,
+   "line": "VO-03"
+  },
+  {
+   "text": "cash",
+   "start": 14.9,
+   "end": 15.18,
+   "line": "VO-03"
+  },
+  {
+   "text": "in",
+   "start": 15.22,
+   "end": 15.28,
+   "line": "VO-03"
+  },
+  {
+   "text": "a",
+   "start": 15.32,
+   "end": 15.4,
+   "line": "VO-03"
+  },
+  {
+   "text": "shoebox.",
+   "start": 15.44,
+   "end": 16.02,
+   "line": "VO-03"
+  },
+  {
+   "text": "Maya",
+   "start": 16.18,
+   "end": 16.4,
+   "line": "VO-04"
+  },
+  {
+   "text": "sells",
+   "start": 16.52,
+   "end": 16.82,
+   "line": "VO-04"
+  },
+  {
+   "text": "too,",
+   "start": 16.88,
+   "end": 17.08,
+   "line": "VO-04"
+  },
+  {
+   "text": "then",
+   "start": 17.2,
+   "end": 17.36,
+   "line": "VO-04"
+  },
+  {
+   "text": "buys",
+   "start": 17.38,
+   "end": 17.64,
+   "line": "VO-04"
+  },
+  {
+   "text": "back",
+   "start": 17.68,
+   "end": 17.92,
+   "line": "VO-04"
+  },
+  {
+   "text": "a",
+   "start": 18.0,
+   "end": 18.04,
+   "line": "VO-04"
+  },
+  {
+   "text": "year",
+   "start": 18.1,
+   "end": 18.28,
+   "line": "VO-04"
+  },
+  {
+   "text": "later.",
+   "start": 18.32,
+   "end": 18.64,
+   "line": "VO-04"
+  },
+  {
+   "text": "Sam",
+   "start": 18.86,
+   "end": 19.1,
+   "line": "VO-05"
+  },
+  {
+   "text": "holds",
+   "start": 19.16,
+   "end": 19.56,
+   "line": "VO-05"
+  },
+  {
+   "text": "and",
+   "start": 19.58,
+   "end": 19.68,
+   "line": "VO-05"
+  },
+  {
+   "text": "lets",
+   "start": 19.72,
+   "end": 19.86,
+   "line": "VO-05"
+  },
+  {
+   "text": "his",
+   "start": 19.9,
+   "end": 20.04,
+   "line": "VO-05"
+  },
+  {
+   "text": "dividends",
+   "start": 20.08,
+   "end": 20.52,
+   "line": "VO-05"
+  },
+  {
+   "text": "reinvest.",
+   "start": 20.56,
+   "end": 21.12,
+   "line": "VO-05"
+  },
+  {
+   "text": "By",
+   "start": 21.26,
+   "end": 21.42,
+   "line": "VO-06"
+  },
+  {
+   "text": "twenty",
+   "start": 21.46,
+   "end": 21.64,
+   "line": "VO-06"
+  },
+  {
+   "text": "thirteen,",
+   "start": 21.74,
+   "end": 22.2,
+   "line": "VO-06"
+  },
+  {
+   "text": "Sam's",
+   "start": 22.42,
+   "end": 22.7,
+   "line": "VO-06"
+  },
+  {
+   "text": "money",
+   "start": 22.74,
+   "end": 22.96,
+   "line": "VO-06"
+  },
+  {
+   "text": "is",
+   "start": 23.0,
+   "end": 23.14,
+   "line": "VO-06"
+  },
+  {
+   "text": "worth",
+   "start": 23.18,
+   "end": 23.36,
+   "line": "VO-06"
+  },
+  {
+   "text": "over",
+   "start": 23.44,
+   "end": 23.64,
+   "line": "VO-06"
+  },
+  {
+   "text": "two",
+   "start": 23.72,
+   "end": 23.88,
+   "line": "VO-06"
+  },
+  {
+   "text": "phones.",
+   "start": 24.0,
+   "end": 24.44,
+   "line": "VO-06"
+  },
+  {
+   "text": "Jay's",
+   "start": 24.6,
+   "end": 24.82,
+   "line": "VO-06"
+  },
+  {
+   "text": "shoebox?",
+   "start": 24.84,
+   "end": 25.32,
+   "line": "VO-06"
+  },
+  {
+   "text": "Still",
+   "start": 25.56,
+   "end": 25.74,
+   "line": "VO-06"
+  },
+  {
+   "text": "one.",
+   "start": 25.86,
+   "end": 26.0,
+   "line": "VO-06"
+  },
+  {
+   "text": "By",
+   "start": 26.14,
+   "end": 26.3,
+   "line": "VO-07"
+  },
+  {
+   "text": "twenty",
+   "start": 26.36,
+   "end": 26.56,
+   "line": "VO-07"
+  },
+  {
+   "text": "nineteen,",
+   "start": 26.62,
+   "end": 27.08,
+   "line": "VO-07"
+  },
+  {
+   "text": "over",
+   "start": 27.24,
+   "end": 27.42,
+   "line": "VO-07"
+  },
+  {
+   "text": "four",
+   "start": 27.62,
+   "end": 27.78,
+   "line": "VO-07"
+  },
+  {
+   "text": "phones.",
+   "start": 27.88,
+   "end": 28.3,
+   "line": "VO-07"
+  },
+  {
+   "text": "Jay?",
+   "start": 28.46,
+   "end": 28.64,
+   "line": "VO-07"
+  },
+  {
+   "text": "Still",
+   "start": 28.92,
+   "end": 29.14,
+   "line": "VO-07"
+  },
+  {
+   "text": "one.",
+   "start": 29.24,
+   "end": 29.4,
+   "line": "VO-07"
+  },
+  {
+   "text": "End",
+   "start": 29.54,
+   "end": 29.68,
+   "line": "VO-08"
+  },
+  {
+   "text": "of",
+   "start": 29.72,
+   "end": 29.82,
+   "line": "VO-08"
+  },
+  {
+   "text": "twenty",
+   "start": 29.88,
+   "end": 30.04,
+   "line": "VO-08"
+  },
+  {
+   "text": "twenty-five,",
+   "start": 30.14,
+   "end": 30.68,
+   "line": "VO-08"
+  },
+  {
+   "text": "Sam's",
+   "start": 30.92,
+   "end": 31.16,
+   "line": "VO-08"
+  },
+  {
+   "text": "at",
+   "start": 31.18,
+   "end": 31.28,
+   "line": "VO-08"
+  },
+  {
+   "text": "over",
+   "start": 31.34,
+   "end": 31.6,
+   "line": "VO-08"
+  },
+  {
+   "text": "ten",
+   "start": 31.68,
+   "end": 31.88,
+   "line": "VO-08"
+  },
+  {
+   "text": "phones,",
+   "start": 32.0,
+   "end": 32.38,
+   "line": "VO-08"
+  },
+  {
+   "text": "about",
+   "start": 32.52,
+   "end": 32.82,
+   "line": "VO-08"
+  },
+  {
+   "text": "eight",
+   "start": 32.88,
+   "end": 33.02,
+   "line": "VO-08"
+  },
+  {
+   "text": "thousand",
+   "start": 33.06,
+   "end": 33.32,
+   "line": "VO-08"
+  },
+  {
+   "text": "dollars.",
+   "start": 33.38,
+   "end": 33.82,
+   "line": "VO-08"
+  },
+  {
+   "text": "Jay?",
+   "start": 33.98,
+   "end": 34.18,
+   "line": "VO-08"
+  },
+  {
+   "text": "Still",
+   "start": 34.38,
+   "end": 34.58,
+   "line": "VO-08"
+  },
+  {
+   "text": "one.",
+   "start": 34.68,
+   "end": 34.82,
+   "line": "VO-08"
+  },
+  {
+   "text": "And",
+   "start": 34.98,
+   "end": 35.1,
+   "line": "VO-09"
+  },
+  {
+   "text": "Maya?",
+   "start": 35.16,
+   "end": 35.46,
+   "line": "VO-09"
+  },
+  {
+   "text": "Same",
+   "start": 35.7,
+   "end": 35.84,
+   "line": "VO-09"
+  },
+  {
+   "text": "as",
+   "start": 35.88,
+   "end": 35.98,
+   "line": "VO-09"
+  },
+  {
+   "text": "Sam,",
+   "start": 36.04,
+   "end": 36.32,
+   "line": "VO-09"
+  },
+  {
+   "text": "except",
+   "start": 36.42,
+   "end": 36.72,
+   "line": "VO-09"
+  },
+  {
+   "text": "one",
+   "start": 36.82,
+   "end": 36.96,
+   "line": "VO-09"
+  },
+  {
+   "text": "year.",
+   "start": 37.02,
+   "end": 37.22,
+   "line": "VO-09"
+  },
+  {
+   "text": "About",
+   "start": 37.38,
+   "end": 37.68,
+   "line": "VO-10"
+  },
+  {
+   "text": "eight",
+   "start": 37.72,
+   "end": 37.86,
+   "line": "VO-10"
+  },
+  {
+   "text": "phones.",
+   "start": 37.96,
+   "end": 38.4,
+   "line": "VO-10"
+  },
+  {
+   "text": "That",
+   "start": 38.54,
+   "end": 38.74,
+   "line": "VO-10"
+  },
+  {
+   "text": "one",
+   "start": 38.78,
+   "end": 38.92,
+   "line": "VO-10"
+  },
+  {
+   "text": "missed",
+   "start": 38.98,
+   "end": 39.18,
+   "line": "VO-10"
+  },
+  {
+   "text": "year",
+   "start": 39.22,
+   "end": 39.4,
+   "line": "VO-10"
+  },
+  {
+   "text": "cost",
+   "start": 39.46,
+   "end": 39.68,
+   "line": "VO-10"
+  },
+  {
+   "text": "her",
+   "start": 39.72,
+   "end": 39.88,
+   "line": "VO-10"
+  },
+  {
+   "text": "two.",
+   "start": 39.94,
+   "end": 40.16,
+   "line": "VO-10"
+  },
+  {
+   "text": "So",
+   "start": 40.36,
+   "end": 40.46,
+   "line": "VO-11"
+  },
+  {
+   "text": "if",
+   "start": 40.52,
+   "end": 40.6,
+   "line": "VO-11"
+  },
+  {
+   "text": "your",
+   "start": 40.64,
+   "end": 40.74,
+   "line": "VO-11"
+  },
+  {
+   "text": "money",
+   "start": 40.8,
+   "end": 41.0,
+   "line": "VO-11"
+  },
+  {
+   "text": "crashed",
+   "start": 41.04,
+   "end": 41.34,
+   "line": "VO-11"
+  },
+  {
+   "text": "tomorrow,",
+   "start": 41.36,
+   "end": 41.8,
+   "line": "VO-11"
+  },
+  {
+   "text": "would",
+   "start": 41.96,
+   "end": 42.08,
+   "line": "VO-11"
+  },
+  {
+   "text": "you",
+   "start": 42.12,
+   "end": 42.24,
+   "line": "VO-11"
+  },
+  {
+   "text": "sell,",
+   "start": 42.32,
+   "end": 42.54,
+   "line": "VO-11"
+  },
+  {
+   "text": "wait",
+   "start": 42.74,
+   "end": 42.92,
+   "line": "VO-11"
+  },
+  {
+   "text": "or",
+   "start": 43.02,
+   "end": 43.12,
+   "line": "VO-11"
+  },
+  {
+   "text": "hold?",
+   "start": 43.16,
+   "end": 43.46,
+   "line": "VO-11"
+  }
+ ]
+}
