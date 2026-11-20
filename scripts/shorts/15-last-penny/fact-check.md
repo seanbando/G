@@ -14,3 +14,10 @@ Structure: POV ("you" are the last circulating penny). Ladder of eras with the p
 | Note | pennies still legal tender; about 250-300 billion still out there | Mint/AP (300B), American Bankers Association (250B) | caption only |
 
 Caption disclaimer: "The final circulating penny was struck Nov 12, 2025 (the Mint still makes some collector pennies). Buying-power figures use the BLS CPI-U; 2025 is estimated. Pennies are still legal tender."
+
+## Outside review (Nov 20, 2026), applied
+- "Today: nothing" -> "Today: almost nothing" (a penny still has monetary value; still legal tender).
+- "every year you bought less" -> "decade after decade you bought less" (some years had deflation, e.g. early 1920s, 1930s, 2009 for some months).
+- "232 years of pennies end" -> "232 years of everyday pennies end" (circulating production ended; collector pennies continue).
+- 1950: "about fourteen cents" in 2026 dollars (13.4 in 2025 dollars). 1913 "over thirty", 1980 "about four" and 97% still hold in 2026 dollars.
+- Confirmed by reviewer: date, 3.69-cent cost, $85M loss, other comparisons, 97%.
