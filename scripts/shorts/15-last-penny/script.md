@@ -4,7 +4,7 @@ You're America's last penny. You cost almost four cents to make.
 
 November twelfth, twenty twenty-five. A press in Philadelphia slams down, and two hundred thirty-two years of everyday pennies end with you.
 
-Every penny cost the Mint three point six nine cents. In twenty twenty-four, that lost about eighty-five million dollars.
+Making each one lost the Mint almost three cents. In twenty twenty-four, that added up to about eighty-five million dollars.
 
 But the real problem? You got weak.
 

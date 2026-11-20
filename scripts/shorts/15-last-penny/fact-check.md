@@ -21,3 +21,4 @@ Caption disclaimer: "The final circulating penny was struck Nov 12, 2025 (the Mi
 - "232 years of pennies end" -> "232 years of everyday pennies end" (circulating production ended; collector pennies continue).
 - 1950: "about fourteen cents" in 2026 dollars (13.4 in 2025 dollars). 1913 "over thirty", 1980 "about four" and 97% still hold in 2026 dollars.
 - Confirmed by reviewer: date, 3.69-cent cost, $85M loss, other comparisons, 97%.
+- Line 3 reworded: "Making each one lost the Mint almost three cents" = 3.69c cost - 1c face value = 2.69c loss per penny; x about 3.17B pennies = about $85M (2024).
