@@ -1,26 +1,26 @@
-Same $1,000, Same S&P 500, 3 Different Endings
+Same $1,000, Same S&P 500, 3 Different Endings (v5: guess hook + phone ladder)
 
-Same thousand dollars, same S and P five hundred, one friend ended with ten times as much.
+Same thousand dollars, same S and P five hundred. One friend ends with ten times as much. Guess what the other two did.
 
-YOU: Wait, how is that possible?
+They buy in at the start of two thousand six. The two thousand eight crash shrinks each one to seven seventy. One new phone.
 
-They all bought in at the start of two thousand six, then the two thousand eight crash cut each thousand to about seven hundred seventy.
+Jay panics, sells, and hides the cash in a shoebox.
 
-Jay sells at year-end and hides the cash in a shoebox.
+Maya sells too, then buys back a year later.
 
-Maya sells too, then buys back a year later, after missing a twenty-six percent rebound.
+Sam holds and lets his dividends reinvest.
 
-Sam stays invested and lets his dividends reinvest.
+By twenty thirteen, Sam's money is worth over two phones. Jay's shoebox? Still one.
 
-[PAUSE: 0.5 seconds. The fake-out.]
+By twenty nineteen, over four phones. Jay? Still one.
 
-At first, Jay feels smart, because shoebox money can't crash.
+End of twenty twenty-five, Sam's at over ten phones, about eight thousand dollars. Jay? Still one.
 
-[PAUSE: 0.4 seconds]
+And Maya? Same as Sam, except one year.
 
-By the end of twenty twenty-five, Jay has seven hundred seventy, Maya about sixty-four hundred, and Sam about eight thousand.
+[PAUSE: 0.5 seconds. The reveal.]
 
-Selling in a crash is the shoebox mistake, and coming back just one year late cost Maya about seventeen hundred.
+About eight phones. That one missed year cost her two.
 
 [PAUSE: 0.4 seconds]
 

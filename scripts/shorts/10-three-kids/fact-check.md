@@ -55,3 +55,15 @@ Returns check (Nov 17): 2013 32.39, 2015 1.38, 2018 -4.38, 2019 31.49 confirmed 
 - "The shoebox mistake" = named mechanism for selling in a crash (our label, not a claim).
 - +1 bonus: "coming back just one year late cost Maya about seventeen hundred": $8,061 - $6,374 = $1,687 (Maya missed 2009's +26.46%).
 - Proof tag on screen: "Real S&P 500 total returns, 2006–2025".
+
+## v5 script (Nov 20): guess hook + phone ladder + one-year reveal
+Unit: 1 phone = $770 (Jay's shoebox after the 2008 crash). Illustrative unit, not a phone price claim.
+Sam (holds, dividends reinvested), year-end values from the same 2006-2025 total returns:
+| Year-end | Sam | In phones ($770) | Voice |
+|---|---|---|---|
+| 2008 | $770 | 1.0 | "one new phone" |
+| 2013 | $1,756 | 2.3 | "over two phones" |
+| 2019 | $3,471 | 4.5 | "over four phones" |
+| 2025 | $8,061 | 10.5 | "over ten phones, about eight thousand dollars" |
+Jay stays $770 = 1 phone every rung. Maya $6,374 = 8.3 phones ("about eight"); missed year cost $8,061 - $6,374 = $1,687 = 2.2 phones ("cost her two").
+Hook "ten times as much" = $8,061 / $770 = 10.5x (Sam vs Jay). Caption disclaimer unchanged.
