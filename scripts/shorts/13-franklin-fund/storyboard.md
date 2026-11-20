@@ -28,8 +28,8 @@ Cast (new sprites, each with an expression set):
 
 ---
 
-## Board 1 · 0:00-0:05 · Hook (Ricks-style cold open: "He...", name revealed second)
-VO: "He gave a city money that had to grow for two hundred years. His name was Ben Franklin. Guess what it became."
+## Board 1 · 0:00-0:04.5 · Hook (Ricks-style cold open: "He...", name held back until board 3)
+VO: "He gave a city money that had to grow for two hundred years. Guess what it became."
 
 - Frame 1 (finished, no text card): a 1790 candlelit study, seen from behind a MAN in a brown coat. His face is hidden in shadow, both hands on the lid of the iron chest. Through the window, Boston's harbor and church steeple glow at dusk. A small brass plate on the chest reads "£1,000". Fully lit and composed from the very first frame.
 - "He gave": he slides the chest across the desk. We still only see his back and his hands.
@@ -37,29 +37,29 @@ VO: "He gave a city money that had to grow for two hundred years. His name was B
 - "money": the lid flips open and a wave of coins catches the candle light. Coin clink.
 - "that had to grow": the coins stack themselves and the pile rises out of the chest with a soft glow. Rising whoosh.
 - "for two hundred years": the lid slams and the padlock snaps. Then a hyper-timelapse: the candle becomes a gas lamp, then a bulb; the window goes from horse carts to cars to neon; the chest rusts and vines grow over it; the calendar rips "1790 → 1890 → 1990".
-- "His name was Ben Franklin": a whip back to 1790 as the man turns around. FRANKLIN (smug half-lids, glasses glint) faces the camera, and the candle flares on his face. This is the face reveal.
 - "Guess what it became": silence, then a fast push in on the ancient 1990 chest as light leaks from the cracks and the lock rattles. Cut before the answer.
-- Camera: a slow push from behind, then a whip with the chest, then the timelapse with drift, then a whip and a turn-around, then a fast push.
+- Camera: a slow push from behind, then a whip with the chest, then the timelapse with drift, then a fast push. The man's face stays hidden.
 
-## Board 2 · ~0:03.4-0:07 · 1790
+## Board 2 · ~0:04.5-0:08 · 1790 (man still hidden)
 VO: "Seventeen ninety. A thousand pounds, about forty-five hundred dollars, goes into the chest."
 
 - Set: 1790 Boston harbor street at dusk. Cobblestones, tall-ship masts, lanterns on posts, fog rolling.
 - On "1790": a wooden sign reading "1790" swings down on chains.
 - On "a thousand pounds": a 3D stack of coins labelled "£1,000" rises out of the chest, then the label flips to "≈ $4,500".
-- CLERK (proud) rides a horse-drawn cart carrying the chest toward the town hall.
+- CLERK (proud) rides a horse-drawn cart carrying the chest toward the town hall. In the doorway behind, the MAN in the brown coat watches, still in silhouette, his glasses catching the lantern light for one frame.
 - Camera: crane down from the masts, then dolly alongside the cart.
 
-## Board 3 · ~0:07-0:11 · The rule (2 shots)
-VO: "The rule: lend it to young tradesmen at five percent, and keep lending the interest."
+## Board 3 · ~0:08-0:13.5 · The reveal + the rule (3 shots)
+VO: "The man? Ben Franklin. His rule: lend it to young tradesmen at five percent, and keep lending the interest."
 
-1. Blacksmith forge. Glowing anvil, sparks, orange rim light. CLERK (serious) hands the BLACKSMITH (hopeful grin) a coin pouch, and a tag swings on it: "LOAN · 5%".
+0. "The man?": whip back to the doorway silhouette. "Ben Franklin": he steps into the lantern light and FRANKLIN's face is revealed (smug half-lids, glasses glint, the candle flares). A small "BEN FRANKLIN" nameplate drops in under him, with a hit sound.
+1. "His rule": Blacksmith forge. Glowing anvil, sparks, orange rim light. CLERK (serious) hands the BLACKSMITH (hopeful grin) a coin pouch, and a tag swings on it: "LOAN · 5%".
 2. On "keep lending the interest": pull back to a mini Boston diorama. Glowing coins travel from the blacksmith back to the chest, then out to a carpenter, then a printer, then back again: a loop of light circling the town. Coins get added to the loop on each pass.
 
 - Camera: orbit the anvil, then a fast pull-back to the diorama.
 
-## Board 4 · ~0:11-0:16 · Franklin's math (2 shots)
-VO: "Franklin did the math himself. One hundred years, a hundred thirty-one thousand pounds. Two hundred years, over four million."
+## Board 4 · ~0:13.5-0:18 · Franklin's math (2 shots)
+VO: "He did the math himself. One hundred years, a hundred thirty-one thousand pounds. Two hundred years, over four million."
 
 1. Study. FRANKLIN (excited, glasses glinting) scribbles on a parchment, and ink numbers float up off the page.
 2. On "one hundred years": a gold tower rises from the floor, labelled "100 YRS: £131,000". On "two hundred years": a second tower shoots up through the ceiling and the roof, labelled "200 YRS: £4,061,000". Franklin points up, grinning.
