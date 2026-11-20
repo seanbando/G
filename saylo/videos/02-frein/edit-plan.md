@@ -88,3 +88,9 @@ card "RECORDED STATEMENT" → court opinion p. 28 with the highlighter (tease).
 - **Look:** barracks lit to read at night; evidence close-ups on a concrete surface with more detail; scanned pines along the tree lines in every ground-level shot.
 - **Cold open credit:** the Malkowski credit on the quote wall now finishes before the cut.
 - All stills sheets predate this look pass except the test tiles in `build/render/stills/look_fix.jpg`; re-run `stills.py` per chapter before rendering it.
+
+## Nov 20, 2026 (later): motion renders
+- Cold open **v7 approved**. Hook (`frein_s2_hook.mp4`) and The Barracks (`frein_s3_barracks.mp4`) rendered in motion and sent;
+  joined review file `frein_0000_0340.mp4`. Awaiting the creator's notes on both.
+- Barracks set renders about 4 s/frame at 16 samples; the airfield set about 8 s/frame.
+- Creator is moving to another PC: see `TRANSFER.md`.
