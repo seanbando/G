@@ -13,17 +13,20 @@ from PIL import Image, ImageDraw, ImageFont
 
 import build_screenshot as base
 
-W, H, FPS, SECS, STEP = 1080, 1920, 30, 7.2, 6
+HERE = __file__.rsplit("/", 1)[0] or "."
+
+W, H, FPS, SECS, STEP = 1080, 1920, 30, 7.2, 4  # 7.5 changes a second
 F = base.font
 PANEL = 960
 # a market-map style layout (x, y, w, h) inside the top panel, our own design
 TILES = {
-    "NVDA": (40, 150, 330, 290), "META": (370, 150, 250, 190), "TSLA": (620, 150, 220, 190), "AMD": (840, 150, 200, 140),
-    "PLTR": (840, 290, 200, 150), "SPY": (370, 340, 250, 210), "QQQ": (620, 340, 220, 210), "NFLX": (40, 440, 180, 160),
-    "JPM": (220, 440, 150, 160), "XOM": (840, 440, 200, 160), "SPCX": (370, 550, 250, 150), "GLD": (620, 550, 220, 150),
-    "KO": (840, 600, 200, 100), "PFE": (220, 600, 150, 100), "DIS": (40, 600, 180, 100),
+    "NVDA": (40, 120, 330, 260), "META": (370, 120, 240, 140), "TSLA": (610, 120, 230, 140), "AMD": (840, 120, 200, 130),
+    "PLTR": (840, 250, 200, 130), "SPY": (370, 260, 240, 180), "QQQ": (610, 260, 230, 180),
+    "NFLX": (40, 380, 170, 140), "JPM": (210, 380, 160, 140), "XOM": (840, 380, 200, 140),
+    "SPCX": (370, 440, 240, 120), "GLD": (610, 440, 230, 120),
+    "DIS": (40, 520, 170, 120), "PFE": (210, 520, 160, 120), "KO": (840, 520, 200, 120), "PTON": (370, 560, 470, 80),
 }
-INFO = {s[0]: s for s in base.STOCKS}
+INFO = {s[0]: s for s in base.STOCKS + [("PTON", "Peloton", 41, "")]}
 
 
 def board(lit):
@@ -51,8 +54,6 @@ def result_box(t):
     f = F("Inter-ExtraBold.otf", 64 if len(vt) <= 7 else 56)
     tw = d.textlength(vt, font=f)
     d.text(((280 - tw) / 2, 120), vt, font=f, fill=(255, 255, 255))
-    e = base.emoji(emo, 44)
-    im.alpha_composite(e, (226, 94))
     return im
 
 
@@ -72,10 +73,9 @@ def main(out):
     boards = {t: board(t) for t in TILES}
     boxes = {t: result_box(t) for t in TILES}
     bb = base.bottom_bg()
-    you = base.you_nervous()
-    sc = 1.55
+    you = Image.open(HERE + "/../../../assets/characters/you-front-cutout.png").convert("RGBA")
+    sc = 1.75
     you = you.resize((int(you.width * sc), int(you.height * sc)), Image.LANCZOS)
-    drop = base.sweat(46)
     ftxt = F("Inter-ExtraBold.otf", 64)
     enc = subprocess.Popen(["ffmpeg", "-v", "error", "-y", "-f", "rawvideo", "-pix_fmt", "rgb24", "-s", f"{W}x{H}", "-r", str(FPS),
                             "-i", "-", "-c:v", "libx264", "-crf", "17", "-pix_fmt", "yuv420p", out + ".v.mp4"], stdin=subprocess.PIPE)
@@ -92,9 +92,10 @@ def main(out):
             dd.text((640, 790 + j * 28), ln, font=fs, fill=(120, 126, 136))
         fr.paste(bb, (0, PANEL))
         bob, sway = 10 * math.sin(ph * 3), 6 * math.sin(ph * 2)
-        yx, yy = int((W - you.width) / 2 + sway), int(1960 - you.height + 190 + bob)
-        fr.paste(you, (yx, yy), you)
-        fr.paste(drop, (yx + int(455 * sc), yy + int(240 * sc) + int((t * 140) % 140)), drop)
+        yx, yy = int((W - you.width) / 2 + sway), int(1960 - you.height + 260 + bob)
+        cut = max(0, PANEL - yy)  # keep YOU inside the bottom half, like the reference
+        part = you.crop((0, cut, you.width, you.height))
+        fr.paste(part, (yx, yy + cut), part)
         d = ImageDraw.Draw(fr)
         for j, ln in enumerate(["The stock you screenshot", "is what your $1,000", "turned into"]):
             base.centered(d, 975 + j * 80, ln, ftxt, (255, 255, 255), 7, (0, 0, 0))
@@ -102,12 +103,40 @@ def main(out):
     enc.stdin.close()
     enc.wait()
     sr = 44100
-    a = np.zeros(int(SECS * sr), np.float32)
-    m = int(0.025 * sr)
-    clk = (np.sin(2 * np.pi * 1800 * np.arange(m) / sr) * np.exp(-np.arange(m) / (0.004 * sr))).astype(np.float32)
+    N = int(SECS * sr)
+    a = np.zeros(N, np.float32)
+    beat = SECS / 16
+
+    def put(sig, t0, g):
+        s0 = int(t0 * sr)
+        e = min(N, s0 + len(sig))
+        a[s0:e] += g * sig[: e - s0]
+
+    tk = np.arange(int(0.35 * sr)) / sr
+    kick = np.sin(2 * np.pi * (45 + 110 * np.exp(-tk * 28)) * tk) * np.exp(-tk * 9)
+    rng = np.random.default_rng(1)
+    tn = np.arange(int(0.18 * sr)) / sr
+    snare = (rng.standard_normal(len(tn)) * 0.7 + np.sin(2 * np.pi * 190 * tn)) * np.exp(-tn * 22)
+    th = np.arange(int(0.05 * sr)) / sr
+    hat = rng.standard_normal(len(th)) * np.exp(-th * 90)
+    hat = np.diff(hat, prepend=0)
+    notes = [55.0, 55.0, 65.41, 49.0]  # A1 A1 C2 G1, one per bar
+    for b in range(16):
+        t0 = b * beat
+        put(kick, t0, 0.9)
+        if b % 2 == 1:
+            put(snare, t0, 0.45)
+        for h in (0, 0.5):
+            put(hat, t0 + h * beat, 0.25)
+        f = notes[b // 4]
+        tb = np.arange(int(beat * 0.9 * sr)) / sr
+        bass = np.tanh(2.5 * np.sin(2 * np.pi * f * tb)) * np.exp(-tb * 3)
+        put(bass, t0, 0.35)
+    m = int(0.02 * sr)
+    clk = (np.sin(2 * np.pi * 2200 * np.arange(m) / sr) * np.exp(-np.arange(m) / (0.003 * sr))).astype(np.float32)
     for j in range(len(order)):
-        s = int(j * STEP / FPS * sr)
-        a[s:s + m] += 0.5 * clk[: len(a) - s]
+        put(clk, j * STEP / FPS, 0.18)
+    a = (a / np.abs(a).max() * 0.85).astype(np.float32)
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-i", out + ".v.mp4", "-f", "f32le", "-ar", str(sr), "-ac", "1", "-i", "-",
                     "-c:v", "copy", "-c:a", "aac", "-b:a", "160k", "-shortest", out], input=a.tobytes(), check=True)
     subprocess.run(["rm", "-f", out + ".v.mp4"])

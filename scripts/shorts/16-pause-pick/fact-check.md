@@ -33,3 +33,6 @@ Script claims:
 To verify before showing on screen: 2020 starting prices and the META/JPM/PFE/DIS 2025 closes came partly from memory in the research pass; boxes show only "$1,000 -> $X" (the chained totals), not raw prices, unless re-checked.
 
 Caption disclaimer: "Historical results, not predictions. $1,000 invested 12/31/2020, valued 12/31/2025, dividends reinvested, no fees or taxes. SpaceX shown since its June 12, 2026 IPO. Not financial advice."
+
+## Added: PTON (Peloton), Nov 21, 2026
+$1,000 at the 12/31/2020 close ($151.72; CMC Markets, AverageAnnualReturn) -> 12/31/2025 close ($6.16; Stock Analysis, Stock Titan). No dividends, no splits. 1000 x 6.16 / 151.72 = $40.60 -> shown as "$41". High confidence.
