@@ -100,3 +100,20 @@ def load_parts(parts, collection_name):
                 o.use_fake_user = False
                 objs.append(o)
     return col, objs
+
+
+def dedupe_materials():
+    """Slices imported separately each bring their own copy of the scan's materials and textures ("x.001", "x.002" ...).
+    Point every copy back at the first one and drop the rest, so a render loads each texture once."""
+    import re
+    n = 0
+    for coll in (bpy.data.images, bpy.data.materials):
+        names = {d.name for d in coll}
+        for d in list(coll):
+            m = re.match(r"^(.*)\.\d{3}$", d.name)
+            if m and m.group(1) in names and d.name != m.group(1):
+                d.user_remap(coll[m.group(1)])
+                n += 1
+    bpy.ops.outliner.orphans_purge(do_recursive=True)
+    print("TREE dedupe remapped", n, "copies;", len(bpy.data.images), "images,", len(bpy.data.materials), "materials",
+          flush=True)

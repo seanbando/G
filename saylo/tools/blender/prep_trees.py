@@ -31,6 +31,7 @@ for name, files in parts.items():
         bpy.context.view_layer.objects.active = c
         bpy.ops.object.modifier_apply(modifier="Dec")
     print("TREE", name + "Lo", "faces", sum(len(o.data.polygons) for o in lo_col.objects), flush=True)
+tree_parts.dedupe_materials()
 bpy.ops.file.pack_all()
 out = os.path.join(REPO, "_kit", "assets", "trees.blend")
 bpy.ops.wm.save_as_mainfile(filepath=out)

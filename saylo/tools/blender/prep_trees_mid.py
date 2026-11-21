@@ -21,6 +21,7 @@ bpy.ops.wm.read_factory_settings(use_empty=True)
 for name, files in parts.items():
     col, objs = tree_parts.load_parts(files, name)
     print("TREE", name, "faces", sum(len(o.data.polygons) for o in objs), flush=True)
+tree_parts.dedupe_materials()
 bpy.ops.file.pack_all()
 out = os.path.join(REPO, "_kit", "assets", "trees_mid.blend")
 bpy.ops.wm.save_as_mainfile(filepath=out)
