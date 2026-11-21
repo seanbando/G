@@ -15,7 +15,10 @@ import tree_parts  # noqa: E402
 REPO = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".."))
 PH = os.path.join(REPO, "_kit", "assets", "polyhaven")
 
-parts = {name: tree_parts.reduce_scan(os.path.join(PH, aid), target)
+# TREES_MID_SCALE: 1.0 on a PC with a graphics card. A cloud machine renders with software OpenGL: there 17 full hero
+# trees (1.7M faces each) in one shot crash or take far too long, so cloud_setup.sh builds them at 0.4.
+SCALE = float(os.environ.get("TREES_MID_SCALE", "1.0"))
+parts = {name: tree_parts.reduce_scan(os.path.join(PH, aid), int(target * SCALE))
          for aid, name, target in (("fir_tree_01", "FirMid", 1600000), ("pine_tree_01", "PineMid", 1800000))}
 bpy.ops.wm.read_factory_settings(use_empty=True)
 for name, files in parts.items():

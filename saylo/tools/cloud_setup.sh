@@ -74,7 +74,7 @@ os.makedirs(os.path.dirname(p), exist_ok=True)
 open(p, "wb").write(get(u)); print("ok sky")
 EOF
   blender -b --factory-startup --python saylo/tools/blender/prep_trees.py        # one at a time: 15 GB RAM is tight
-  blender -b --factory-startup --python saylo/tools/blender/prep_trees_mid.py
+  TREES_MID_SCALE=0.4 blender -b --factory-startup --python saylo/tools/blender/prep_trees_mid.py
   blender -b --factory-startup --python saylo/tools/blender/make_mannequin.py
 fi
 echo "cloud setup done"
