@@ -60,6 +60,9 @@ From `saylo\videos\02-frein\build\style-test\`:
 
 ## 6. Still open
 - Outlet names for two photo credits (shots 413 and 439).
-- One soundtrack for the whole film (`final.py`, not written yet): joins every `_picture.mp4`.
+- One soundtrack for the whole film: **`final.py` written Nov 21, 2026** (tested on stand-in pictures, 12:07.8, -14 LUFS).
+  `python final.py` joins every section's `_picture.mp4` and mixes the voiceover, one continuous bed-A, the cold-open
+  ambience and all typewriter clicks in one pass → `build/render/frein_final.mp4`. `python final.py --partial` joins what
+  is rendered so far (e.g. 0:00–3:40). Each section needs `python assemble.py shotsN.json` run first.
 - Thumbnail.
 - Rules and decisions: see `edit-plan.md`.
