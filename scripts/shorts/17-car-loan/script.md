@@ -1,20 +1,20 @@
 The Question Every Car Dealer Asks First (scene style)
 
-"What can you afford a month?" the dealer asks, and it sounds like a nice question.
+"What can you afford a month?" the dealer asks. Sounds friendly.
 
 You say five hundred. He smiles like you just passed a test.
 
-The car is thirty thousand dollars, used, at about ten and a half percent. On a five-year loan, that's six forty-six a month. Too high.
+It's a thirty-thousand-dollar used car at about ten and a half percent. Over five years, that's six forty-six a month. Too high.
 
-So he slides a new paper across the desk. He stretches it to seven years: five oh seven a month.
+So he stretches it to seven years: five oh seven a month.
 
 You sign before he finishes the sentence.
 
-For a while, it feels like a win. The car smells new, the payment fits, and you tell everyone you got a deal.
+For a while, it feels like a win. The payment fits, and you tell everyone you got a deal.
 
 Then one night you add it up. That lower payment costs you about thirty-eight hundred more in interest.
 
-And when you trade it in, you might still owe more than it's worth. That's true for about three in ten trade-ins, around seven thousand dollars.
+And at trade-in, you might still owe more than it's worth. About three in ten trade-ins do, by around seven thousand dollars.
 
 The dealer offers to roll it into your next loan.
 
