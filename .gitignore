@@ -15,3 +15,6 @@ saylo/videos/*/render/
 saylo/videos/*/footage/
 
 /.videohub/
+
+# Render output (stills, shots, joined reviews): rebuilt locally, too big for git
+saylo/videos/*/build/render/
