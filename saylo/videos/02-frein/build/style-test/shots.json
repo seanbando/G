@@ -1,0 +1,33 @@
+{
+  "vo": "saylo/videos/02-frein/voiceover-full.mp3",
+  "fps": 30,
+  "end": 52.8,
+  "shots": [
+    {"id": 1,  "start": 0.00,  "end": 3.30,  "kind": "3d",   "line": "Thursday, October 30th, 2014,", "what": "dusk aerial over the airfield in the woods; date stamp types on"},
+    {"id": 2,  "start": 3.30,  "end": 5.34,  "kind": "3d",   "line": "a little after six in the evening", "what": "low glide along the cracked runway, stamp held"},
+    {"id": 3,  "start": 5.34,  "end": 7.66,  "kind": "3d",   "line": "at a defunct airfield near Tannersville", "what": "the empty hangar, weeds, push in, stamp held"},
+    {"id": 4,  "start": 7.66,  "end": 10.10, "kind": "map",  "line": "in the Pocono Mountains of Pennsylvania.", "what": "clay road map from OpenStreetMap data, amber pin on the airfield, label types on", "tag": "source-openstreetmap.png"},
+    {"id": 5,  "start": 10.10, "end": 11.56, "kind": "3d",   "line": "A team of US Marshals", "what": "marshals in a line walking at the camera, low angle"},
+    {"id": 6,  "start": 11.56, "end": 14.02, "kind": "3d",   "line": "is working its way across the property.", "what": "high angle: the line of marshals crossing the field by the runway"},
+    {"id": 7,  "start": 14.02, "end": 16.66, "kind": "3d",   "line": "The state police asked them to clear this place,", "what": "side tracking shot, marshals pass close"},
+    {"id": 8,  "start": 16.66, "end": 19.22, "kind": "3d",   "line": "an abandoned resort with an old airstrip,", "what": "the empty resort building, dark windows, slow dolly"},
+    {"id": 9,  "start": 19.22, "end": 21.74, "kind": "3d",   "line": "and they've been at it for about two hours.", "what": "wide from behind the team; ABOUT 2 HOURS IN types on"},
+    {"id": 10, "start": 21.74, "end": 25.00, "kind": "clip", "line": "Their commander, a marshal named Scott Malkowski,", "what": "real footage: Malkowski pointing at the map; name tag types on",
+     "src": "Pa. breathes easier after capture of Eric Frein - CBS Evening News (720p, h264).mp4", "in": 80.42, "out": 83.68, "tag": "source-cbs-news.png",
+     "nametag": {"name": "SCOTT MALKOWSKI", "role": "DEPUTY U.S. MARSHAL", "at": 22.80}},
+    {"id": 11, "start": 25.00, "end": 28.14, "kind": "3d",   "line": "is walking toward the hangar with two members of his team", "what": "three marshals from behind, walking to the hangar"},
+    {"id": 12, "start": 28.14, "end": 30.76, "kind": "3d",   "line": "when something moves at the edge of the woods.", "what": "the dark tree line; a small amber shape moves between the trunks"},
+    {"id": 13, "start": 30.76, "end": 32.66, "kind": "3d",   "line": "A man is coming out of the trees,", "what": "the amber figure steps out of the trees toward the camera"},
+    {"id": 14, "start": 32.66, "end": 33.92, "kind": "3d",   "line": "heading for the hangar.", "what": "high wide: amber figure crossing the open ground to the hangar"},
+    {"id": 15, "start": 33.92, "end": 36.20, "kind": "clip", "line": "Later, telling reporters about it,", "what": "real footage: Malkowski talking to reporters",
+     "src": "Pa. breathes easier after capture of Eric Frein - CBS Evening News (720p, h264).mp4", "in": 84.04, "out": 86.29, "tag": "source-cbs-news.png"},
+    {"id": 16, "start": 36.20, "end": 38.58, "kind": "clip", "line": "Malkowski kept coming back to one detail:", "what": "same footage, punched in",
+     "src": "Pa. breathes easier after capture of Eric Frein - CBS Evening News (720p, h264).mp4", "in": 86.29, "out": 88.62, "tag": "source-cbs-news.png", "zoom": 1.22, "cx": 0.62, "cy": 0.3},
+    {"id": 17, "start": 38.58, "end": 41.22, "kind": "3d",   "line": "\"I saw the black hat.\"", "what": "close on the black cap on the amber figure; quote types on"},
+    {"id": 18, "start": 41.22, "end": 43.62, "kind": "3d",   "line": "The marshals order him to the ground.", "what": "over a marshal's shoulder: the amber figure goes down to his knees"},
+    {"id": 19, "start": 43.62, "end": 46.24, "kind": "3d",   "line": "He doesn't run, and he doesn't fight.", "what": "ground level: amber figure face down, marshals standing over him"},
+    {"id": 20, "start": 46.24, "end": 47.86, "kind": "3d",   "line": "He isn't carrying a gun.", "what": "straight down on his open, empty hand"},
+    {"id": 21, "start": 47.86, "end": 51.26, "kind": "3d",   "line": "They ask him his name, and he gives them the real one:", "what": "camera rises over the figure on the ground, ring of marshals"},
+    {"id": 22, "start": 51.26, "end": 52.80, "kind": "photo", "line": "Eric Frein.", "what": "FBI photo, slow push; name tag types on", "tag": "source-fbi.png"}
+  ]
+}

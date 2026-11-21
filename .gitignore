@@ -7,3 +7,11 @@ __pycache__/
 # Private style-reference stills for the cartoon-3d-short skill (never publish)
 .claude/skills/cartoon-3d-short/references/frames/
 .claude/skills/cartoon-3d-short/references/sheets/
+
+# Local media and renders (not in git)
+/_kit/
+saylo/videos/*/media/
+saylo/videos/*/render/
+saylo/videos/*/footage/
+
+/.videohub/

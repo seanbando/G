@@ -1,0 +1,636 @@
+{
+ "vo": "saylo/videos/02-frein/voiceover-full.mp3",
+ "fps": 30,
+ "start": 326.6,
+ "end": 443.07,
+ "out": "frein_s5_search.mp4",
+ "dir": "shots6",
+ "chapter": "The Search / What He Left Behind",
+ "types": [
+  [
+   326.7,
+   "short"
+  ],
+  [
+   342.45,
+   "medium"
+  ],
+  [
+   345.7,
+   "medium"
+  ],
+  [
+   357.6,
+   "short"
+  ],
+  [
+   365.1,
+   "medium"
+  ],
+  [
+   376.0,
+   "medium"
+  ],
+  [
+   394.5,
+   "medium"
+  ],
+  [
+   404.9,
+   "short"
+  ],
+  [
+   422.5,
+   "short"
+  ],
+  [
+   434.25,
+   "short"
+  ],
+  [
+   440.1,
+   "short"
+  ]
+ ],
+ "src": {
+  "A": "Search for alleged cop killer instills fear in Pa. community - CBS Evening News (720p, h264).mp4",
+  "B": "Slain cop's cuffs used to arrest Frein - CNN (720p, h264).mp4",
+  "D": "Authorities Identify Suspect in Pennsylvania Barracks Shooting - ABC News (720p, h264).mp4",
+  "E": "Eric Frein manhunt Suspect may have left letter - CBS Evening News (720p, h264).mp4",
+  "F": "Police discovers journal of Pennsylvania cop killer suspect - CBS Mornings (720p, h264).mp4",
+  "M": "Pa. breathes easier after capture of Eric Frein - CBS Evening News (720p, h264).mp4",
+  "N": "wnep-novak-jeep-screen-recording.mp4",
+  "W": "hangar-screen-recording-2026-11-19.mp4",
+  "T": "Pike County DA Ray Tonkin responds to Eric Frein's Sentence of Death - Straus News (1080p, h264).mp4",
+  "J": "Eric Frein Notice of Execution signed for man responsible for killing PA State Trooper - WTAJ News (1080p, h264).mp4"
+ },
+ "shots": [
+  {
+   "id": 401,
+   "start": 326.6,
+   "end": 328.6,
+   "line": "The search that followed was enormous.",
+   "what": "real photo: State Police cars filling a field; chapter lettering types on",
+   "kind": "image",
+   "img": "media/photos/33-thecitizensvoice-cruisers-field.jpg",
+   "push": 0.045,
+   "tag": "source-the-times-tribune.png",
+   "stamp": {
+    "line": "THE SEARCH",
+    "sub": "CHAPTER 04",
+    "at": 326.7
+   }
+  },
+  {
+   "id": 402,
+   "start": 328.6,
+   "end": 331.78,
+   "line": "Over its seven weeks, more than",
+   "what": "real photo: a tactical team walking up a road",
+   "kind": "image",
+   "img": "media/photos/35-tactical-team-ghows.webp",
+   "push": 0.045,
+   "tag": "source-pocono-record.png"
+  },
+  {
+   "id": 403,
+   "start": 331.78,
+   "end": 333.62,
+   "line": "a thousand officers from state police,",
+   "what": "real photo: a line of State Police troopers with rifles (credited to the Los Angeles Times, where the creator's copy was published)",
+   "kind": "image",
+   "img": "media/photos/ca-times-brightspot.jpg",
+   "push": 0.045,
+   "tag": "source-los-angeles-times.png"
+  },
+  {
+   "id": 404,
+   "start": 333.62,
+   "end": 335.22,
+   "line": "the FBI,",
+   "what": "the FBI Ten Most Wanted page",
+   "kind": "image",
+   "img": "media/photos/18b-buzzfeednews-fbi-page.png",
+   "push": 0.045,
+   "tag": "source-fbi.png",
+   "fit": "contain"
+  },
+  {
+   "id": 405,
+   "start": 335.22,
+   "end": 337.12,
+   "line": "the US Marshals,",
+   "what": "real: the marshals team",
+   "kind": "still",
+   "src": "M",
+   "at": 84.3,
+   "tag": "source-cbs-news.png",
+   "push": 0.07
+  },
+  {
+   "id": 406,
+   "start": 337.12,
+   "end": 338.74,
+   "line": "and departments across the region took part.",
+   "what": "real: police vehicles along a wooded road",
+   "kind": "clip",
+   "src": "D",
+   "in": 77.2,
+   "tag": "source-abc-news.png",
+   "push": 0.025,
+   "crop": "896:504:192:0",
+   "out": 78.82
+  },
+  {
+   "id": 407,
+   "start": 338.74,
+   "end": 342.38,
+   "line": "At one stage, police said their focus was an area of",
+   "what": "real: Bivens briefing reporters in front of a map",
+   "kind": "clip",
+   "src": "E",
+   "in": 36.6,
+   "tag": "source-cbs-news.png",
+   "push": 0.025,
+   "crop": "1102:620:0:0",
+   "out": 40.24
+  },
+  {
+   "id": 408,
+   "start": 342.38,
+   "end": 345.54,
+   "line": "roughly five square miles of steep, wooded ground.",
+   "what": "road map around Canadensis; the figure types on (no boundary drawn: the exact area is not in our sources)",
+   "kind": "map2",
+   "tag": "source-openstreetmap.png",
+   "map": {
+    "center": [
+     41.192,
+     -75.2513
+    ],
+    "span": 22,
+    "move": "pull",
+    "pins": [
+     {
+      "lat": 41.192,
+      "lon": -75.2513,
+      "label": "CANADENSIS",
+      "amber": true,
+      "at": 100
+     }
+    ],
+    "stamp": "ABOUT 5 SQUARE MILES",
+    "sub": "STEEP, WOODED GROUND",
+    "at": 342.45
+   }
+  },
+  {
+   "id": 409,
+   "start": 345.54,
+   "end": 348.32,
+   "line": "Later, a neighborhood called Snow Hill Falls",
+   "what": "real photo: troopers confer on Snow Hill Road; the place types on",
+   "kind": "image",
+   "img": "media/photos/AP-manhunt-snow-hill-road.jpg",
+   "push": 0.045,
+   "tag": "source-ap-the-times-tribune.png",
+   "stamp": {
+    "line": "SNOW HILL ROAD",
+    "sub": "PRICE TOWNSHIP  ·  SEPT 30, 2014",
+    "at": 345.7
+   }
+  },
+  {
+   "id": 410,
+   "start": 348.32,
+   "end": 350.66,
+   "line": "got a lot of attention, though police said they were",
+   "what": "real: troopers walking a road",
+   "kind": "clip",
+   "src": "E",
+   "in": 44.2,
+   "tag": "source-cbs-news.png",
+   "push": 0.025,
+   "crop": "1102:620:0:0",
+   "out": 46.54
+  },
+  {
+   "id": 411,
+   "start": 350.66,
+   "end": 352.82,
+   "line": "searching other places too.",
+   "what": "real photo: searchers spread through forest",
+   "kind": "image",
+   "img": "media/photos/36-abcnewsgo.jpg",
+   "push": 0.045,
+   "tag": "source-abc-news.png"
+  },
+  {
+   "id": 412,
+   "start": 352.82,
+   "end": 356.16,
+   "line": "For people who lived there, normal life stopped.",
+   "what": "real: a resident talking to CBS",
+   "kind": "clip",
+   "src": "A",
+   "in": 44.5,
+   "tag": "source-cbs-news.png",
+   "push": 0.025,
+   "crop": "1102:620:0:0",
+   "out": 47.84
+  },
+  {
+   "id": 413,
+   "start": 356.16,
+   "end": 357.54,
+   "line": "Roads were blocked.",
+   "what": "real photo: two armed troopers at a roadside (OUTLET NOT CONFIRMED: needs its credit before the final render)",
+   "kind": "image",
+   "img": "media/photos/7Y7YM5UU.jpg",
+   "push": 0.06,
+   "credit_needed": true
+  },
+  {
+   "id": 414,
+   "start": 357.54,
+   "end": 359.24,
+   "line": "Schools closed at times.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "SCHOOLS CLOSED"
+    ],
+    "who": "POCONO MOUNTAIN SCHOOL DISTRICT",
+    "at": 357.6,
+    "size": 0.24
+   }
+  },
+  {
+   "id": 415,
+   "start": 359.24,
+   "end": 362.7,
+   "line": "Local businesses lost money as visitors stayed away.",
+   "what": "real photo: the empty main road through Canadensis",
+   "kind": "image",
+   "img": "media/photos/25-canadensis.jpg",
+   "push": 0.045,
+   "tag": "source-bonnachoven-cc0.png"
+  },
+  {
+   "id": 416,
+   "start": 362.7,
+   "end": 365.0,
+   "line": "And in Barrett Township, door-to-door",
+   "what": "real: a house decorated for Halloween",
+   "kind": "clip",
+   "src": "M",
+   "in": 116.7,
+   "tag": "source-cbs-news.png",
+   "push": 0.025,
+   "out": 119.0
+  },
+  {
+   "id": 417,
+   "start": 365.0,
+   "end": 367.87,
+   "line": "trick-or-treating was canceled for Halloween.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "TRICK-OR-TREATING",
+     "CANCELED"
+    ],
+    "who": "BARRETT TOWNSHIP  ·  OCTOBER 2014",
+    "at": 365.1,
+    "size": 0.22
+   }
+  },
+  {
+   "id": 418,
+   "start": 367.87,
+   "end": 370.63,
+   "line": "Remember that. It comes back too.",
+   "what": "real: the Halloween decorations, held",
+   "kind": "still",
+   "src": "M",
+   "at": 117.6,
+   "tag": "source-cbs-news.png",
+   "push": 0.03
+  },
+  {
+   "id": 419,
+   "start": 370.63,
+   "end": 375.77,
+   "line": "And at one point, state police said searchers had seen a man they believed was Frein",
+   "what": "real: Bivens at the podium",
+   "kind": "clip",
+   "src": "F",
+   "in": 42.5,
+   "tag": "source-cbs-news.png",
+   "push": 0.025,
+   "crop": "996:560:142:0",
+   "out": 47.64
+  },
+  {
+   "id": 420,
+   "start": 375.77,
+   "end": 380.55,
+   "line": "somewhere between seventy-five and a hundred yards away through thick woods.",
+   "what": "real photo: dense Pocono woods; the distance types on",
+   "kind": "image",
+   "img": "media/photos/26a-bog-forest.jpg",
+   "push": 0.03,
+   "tag": "source-famartin-cc-by-sa-4-0.png",
+   "stamp": {
+    "line": "75 TO 100 YARDS",
+    "sub": "THROUGH THICK WOODS",
+    "at": 376.0
+   }
+  },
+  {
+   "id": 421,
+   "start": 380.55,
+   "end": 381.97,
+   "line": "They couldn't reach him.",
+   "what": "3D: the amber figure walking away into the trees",
+   "kind": "open",
+   "as": 119
+  },
+  {
+   "id": 422,
+   "start": 381.97,
+   "end": 384.69,
+   "line": "Here's something to keep in mind through this next part.",
+   "what": "real photo: the hangar",
+   "kind": "image",
+   "img": "media/photos/hangar-exterior.jpg",
+   "push": 0.045,
+   "tag": "source-reuters.png",
+   "crop": "962:541:0:66"
+  },
+  {
+   "id": 423,
+   "start": 384.69,
+   "end": 388.41,
+   "line": "When they finally caught him, there was a notebook at that hangar.",
+   "what": "3D object: a closed notebook under a lamp, push in",
+   "kind": "obj",
+   "obj": "notebook",
+   "rate": 0.12
+  },
+  {
+   "id": 424,
+   "start": 388.41,
+   "end": 393.13,
+   "line": "It's the closest thing we have to hearing what those forty-eight days were like from his side.",
+   "what": "real photo: inside the hangar, officers with flashlights",
+   "kind": "image",
+   "img": "media/photos/hangar-interior-reuters-abc.jpg",
+   "push": 0.03,
+   "tag": "source-reuters.png"
+  },
+  {
+   "id": 425,
+   "start": 393.13,
+   "end": 394.35,
+   "line": "We'll get to it.",
+   "what": "3D object: the notebook from the other side, closer",
+   "kind": "obj",
+   "obj": "notebook",
+   "angle": -40,
+   "rate": 0.15
+  },
+  {
+   "id": 426,
+   "start": 394.35,
+   "end": 397.79,
+   "line": "On September twenty-ninth, searchers found a campsite.",
+   "what": "real police photo: the campsite; chapter lettering types on",
+   "kind": "image",
+   "img": "media/photos/09d-campsite-default.jpg",
+   "push": 0.045,
+   "tag": "source-pennsylvania-state-police.png",
+   "stamp": {
+    "line": "WHAT HE LEFT BEHIND",
+    "sub": "CHAPTER 05  ·  SEPT 29, 2014",
+    "at": 394.5
+   }
+  },
+  {
+   "id": 427,
+   "start": 397.79,
+   "end": 399.91,
+   "line": "There was clothing, ammunition,",
+   "what": "real police photo: bags and clothing at the campsite",
+   "kind": "still",
+   "src": "E",
+   "at": 56.0,
+   "tag": "source-cbs-news.png",
+   "push": 0.05,
+   "crop": "1102:620:0:0"
+  },
+  {
+   "id": 428,
+   "start": 399.91,
+   "end": 401.65,
+   "line": "Frein's checkbook,",
+   "what": "3D object: a chequebook",
+   "kind": "obj",
+   "obj": "checkbook"
+  },
+  {
+   "id": 429,
+   "start": 401.65,
+   "end": 403.29,
+   "line": "and two explosive devices.",
+   "what": "real: Bivens announcing it (the devices are never shown close)",
+   "kind": "clip",
+   "src": "E",
+   "in": 52.3,
+   "tag": "source-cbs-news.png",
+   "push": 0.025,
+   "crop": "1102:620:0:0",
+   "out": 53.94
+  },
+  {
+   "id": 430,
+   "start": 403.29,
+   "end": 406.97,
+   "line": "Bivens described them as fully functional pipe bombs,",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "FULLY FUNCTIONAL"
+    ],
+    "who": "LT. COL. GEORGE BIVENS, ON THE TWO DEVICES",
+    "at": 404.9,
+    "size": 0.24
+   }
+  },
+  {
+   "id": 431,
+   "start": 406.97,
+   "end": 411.39,
+   "line": "and he said he believed Frein had left them behind because he was under pressure.",
+   "what": "real: Bivens, punched in",
+   "kind": "clip",
+   "src": "E",
+   "in": 37.5,
+   "tag": "source-cbs-news.png",
+   "push": 0.025,
+   "crop": "1102:620:0:0",
+   "zoom": 1.25,
+   "cx": 0.5,
+   "cy": 0.2,
+   "out": 41.92
+  },
+  {
+   "id": 432,
+   "start": 411.39,
+   "end": 415.25,
+   "line": "The next day, an agent collected a trash bag near the site.",
+   "what": "3D object: a tied rubbish bag under a lamp",
+   "kind": "obj",
+   "obj": "bag",
+   "rate": 0.08
+  },
+  {
+   "id": 433,
+   "start": 415.25,
+   "end": 419.29,
+   "line": "Inside were three torn notebook pages describing the attack.",
+   "what": "3D object: three torn pages (writing not legible)",
+   "kind": "obj",
+   "obj": "pages",
+   "rate": 0.08
+  },
+  {
+   "id": 434,
+   "start": 419.29,
+   "end": 422.37,
+   "line": "That's where the line about taking the shot came from.",
+   "what": "the Inquirer headline again, highlighter on the quote",
+   "kind": "card",
+   "card": {
+    "mode": "doc",
+    "img": "media/photos/20-inquirer-headline.png",
+    "marks": [
+     [
+      0.615,
+      0.2,
+      0.975,
+      0.4,
+      420.1
+     ],
+     [
+      0.012,
+      0.42,
+      0.105,
+      0.6,
+      421.3
+     ]
+    ],
+    "wide": true
+   },
+   "tag": "source-the-philadelphia-inquirer.png"
+  },
+  {
+   "id": 435,
+   "start": 422.37,
+   "end": 425.17,
+   "line": "On October eighth, with Frein still out there,",
+   "what": "real: Bivens at the podium beside the wanted photos; date types on",
+   "kind": "clip",
+   "src": "F",
+   "in": 96.6,
+   "tag": "source-cbs-news.png",
+   "push": 0.025,
+   "crop": "996:560:142:0",
+   "stamp": {
+    "line": "OCT 8, 2014",
+    "sub": "FREIN STILL AT LARGE",
+    "at": 422.5
+   },
+   "out": 99.4
+  },
+  {
+   "id": 436,
+   "start": 425.17,
+   "end": 429.39,
+   "line": "Bivens stood in front of reporters and read from those pages out loud.",
+   "what": "real: Bivens reading the pages",
+   "kind": "clip",
+   "src": "F",
+   "in": 40.3,
+   "tag": "source-cbs-news.png",
+   "push": 0.025,
+   "crop": "996:560:142:0",
+   "out": 44.52
+  },
+  {
+   "id": 437,
+   "start": 429.39,
+   "end": 432.09,
+   "line": "Then the search went on for three more weeks.",
+   "what": "real: troopers searching along a creek",
+   "kind": "clip",
+   "src": "E",
+   "in": 28.3,
+   "tag": "source-cbs-news.png",
+   "push": 0.025,
+   "crop": "1102:620:0:0",
+   "out": 31.0
+  },
+  {
+   "id": 438,
+   "start": 432.09,
+   "end": 436.85,
+   "line": "By the end, state police put their own cost at about eleven million dollars.",
+   "what": "real photo: the field of police cars, closer; the figure types on at the words",
+   "kind": "image",
+   "img": "media/photos/33-thecitizensvoice-cruisers-field.jpg",
+   "push": 0.045,
+   "tag": "source-the-times-tribune.png",
+   "crop": "900:506:120:20",
+   "stamp": {
+    "line": "$11,000,000",
+    "sub": "STATE POLICE COST",
+    "at": 434.25
+   }
+  },
+  {
+   "id": 439,
+   "start": 436.85,
+   "end": 439.99,
+   "line": "That doesn't count what the FBI and the Marshals spent.",
+   "what": "real photo: two armoured police vehicles on a wooded road (OUTLET NOT CONFIRMED: needs its credit before the final render)",
+   "kind": "image",
+   "img": "media/photos/34-armored-PPO235.jpg",
+   "push": 0.045,
+   "credit_needed": true
+  },
+  {
+   "id": 440,
+   "start": 439.99,
+   "end": 443.07,
+   "line": "October thirtieth, day forty-eight.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "DAY 48"
+    ],
+    "who": "OCT 30, 2014",
+    "at": 440.1,
+    "size": 0.4
+   }
+  }
+ ]
+}

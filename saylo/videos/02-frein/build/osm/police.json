@@ -1,0 +1,493 @@
+{
+  "version": 0.6,
+  "generator": "Overpass API 0.7.62.11 87bfad18",
+  "osm3s": {
+    "timestamp_osm_base": "2026-11-20T04:01:38Z",
+    "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."
+  },
+  "elements": [
+
+{
+  "type": "way",
+  "id": 12015727,
+  "center": {
+    "lat": 41.1976823,
+    "lon": -75.0758159
+  },
+  "tags": {
+    "hgv": "designated",
+    "highway": "secondary",
+    "maxspeed": "45 mph",
+    "name": "Route 402 Road",
+    "note": "nasme tag changed to conform with accepted USPS addresses (Note both \"Route\" and \"Road\" are pesent in the accepted name)",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 45779757,
+  "center": {
+    "lat": 41.3697188,
+    "lon": -75.1275366
+  },
+  "tags": {
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "45 mph",
+    "old_ref_legislative": "220",
+    "oneway": "no",
+    "ref": "PA 402",
+    "sidewalk": "no",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 45779759,
+  "center": {
+    "lat": 41.3664062,
+    "lon": -75.1276511
+  },
+  "tags": {
+    "bridge": "yes",
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 460821770,
+  "center": {
+    "lat": 41.4290142,
+    "lon": -75.1379671
+  },
+  "tags": {
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "45 mph",
+    "old_ref_legislative": "220",
+    "oneway": "no",
+    "ref": "PA 402",
+    "sidewalk": "no",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 460821771,
+  "center": {
+    "lat": 41.4282869,
+    "lon": -75.1382909
+  },
+  "tags": {
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "45 mph",
+    "old_ref_legislative": "220",
+    "oneway": "no",
+    "ref": "PA 402",
+    "sidewalk": "no",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 631709770,
+  "center": {
+    "lat": 41.2604184,
+    "lon": -75.0785238
+  },
+  "tags": {
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "1",
+    "maxspeed": "45 mph",
+    "name": "PA-402",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 631709771,
+  "center": {
+    "lat": 41.2538459,
+    "lon": -75.0730959
+  },
+  "tags": {
+    "bridge": "yes",
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "45 mph",
+    "name": "PA-402",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 835596635,
+  "center": {
+    "lat": 41.2797831,
+    "lon": -75.0895918
+  },
+  "tags": {
+    "bridge": "yes",
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "1",
+    "layer": "1",
+    "maxspeed": "45 mph",
+    "name": "PA-402",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 835596636,
+  "center": {
+    "lat": 41.2819194,
+    "lon": -75.0910847
+  },
+  "tags": {
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "1",
+    "maxspeed": "45 mph",
+    "name": "PA-402",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 835596640,
+  "center": {
+    "lat": 41.3066613,
+    "lon": -75.1083359
+  },
+  "tags": {
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "45 mph",
+    "name": "PA-402",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "surface": "asphalt"
+  }
+},
+{
+  "type": "way",
+  "id": 835596641,
+  "center": {
+    "lat": 41.2840302,
+    "lon": -75.0925453
+  },
+  "tags": {
+    "bridge": "yes",
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "1",
+    "layer": "1",
+    "maxspeed": "45 mph",
+    "name": "PA-402",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 837560140,
+  "center": {
+    "lat": 41.3670453,
+    "lon": -75.1275871
+  },
+  "tags": {
+    "bridge": "yes",
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 837560141,
+  "center": {
+    "lat": 41.3667257,
+    "lon": -75.1276219
+  },
+  "tags": {
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 837695030,
+  "center": {
+    "lat": 41.3478360,
+    "lon": -75.1291519
+  },
+  "tags": {
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "45 mph",
+    "name": "PA-402",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 837695031,
+  "center": {
+    "lat": 41.3293238,
+    "lon": -75.1266581
+  },
+  "tags": {
+    "bridge": "yes",
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "45 mph",
+    "maxweight": "34 st",
+    "name": "PA-402",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 841542465,
+  "center": {
+    "lat": 41.4003672,
+    "lon": -75.1351375
+  },
+  "tags": {
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "45 mph",
+    "old_ref_legislative": "220",
+    "oneway": "no",
+    "ref": "PA 402",
+    "sidewalk": "no",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 841542466,
+  "center": {
+    "lat": 41.3727882,
+    "lon": -75.1281161
+  },
+  "tags": {
+    "bridge": "yes",
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "2",
+    "layer": "1",
+    "maxspeed": "45 mph",
+    "old_ref_legislative": "220",
+    "oneway": "no",
+    "ref": "PA 402",
+    "sidewalk": "no",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 841545785,
+  "center": {
+    "lat": 41.3724663,
+    "lon": -75.1278421
+  },
+  "tags": {
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "2",
+    "maxspeed": "45 mph",
+    "old_ref_legislative": "220",
+    "oneway": "no",
+    "ref": "PA 402",
+    "sidewalk": "no",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 842177191,
+  "center": {
+    "lat": 41.3870740,
+    "lon": -75.1309910
+  },
+  "tags": {
+    "addr:city": "Hawley",
+    "addr:housenumber": "434",
+    "addr:postcode": "18428",
+    "addr:state": "PA",
+    "addr:street": "PA-402",
+    "amenity": "police",
+    "building": "yes",
+    "name": "Pennsylvania State Police - Troop R - Blooming Grove"
+  }
+},
+{
+  "type": "way",
+  "id": 1341425630,
+  "center": {
+    "lat": 41.2671874,
+    "lon": -75.0839354
+  },
+  "tags": {
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "1",
+    "maxspeed": "45 mph",
+    "name": "PA-402",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 1341425631,
+  "center": {
+    "lat": 41.2754501,
+    "lon": -75.0878899
+  },
+  "tags": {
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "1",
+    "maxspeed": "45 mph",
+    "name": "PA-402",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+},
+{
+  "type": "way",
+  "id": 1341425632,
+  "center": {
+    "lat": 41.2692975,
+    "lon": -75.0851239
+  },
+  "tags": {
+    "hgv": "designated",
+    "highway": "secondary",
+    "lanes": "1",
+    "maxspeed": "45 mph",
+    "name": "PA-402",
+    "old_ref_legislative": "220",
+    "ref": "PA 402",
+    "source:hgv": "https://www.dot.state.pa.us/public/pubsforms/Publications/TruckersMap.pdf",
+    "surface": "asphalt",
+    "tiger:cfcc": "A31",
+    "tiger:county": "Pike, PA",
+    "tiger:name_base": "State Route 402"
+  }
+}
+
+  ]
+}

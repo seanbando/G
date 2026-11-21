@@ -1,0 +1,640 @@
+{
+ "vo": "saylo/videos/02-frein/voiceover-full.mp3",
+ "fps": 30,
+ "start": 443.07,
+ "end": 556.55,
+ "out": "frein_s6_hangar.mp4",
+ "dir": "shots7",
+ "chapter": "The Hangar",
+ "types": [
+  [
+   443.2,
+   "medium"
+  ],
+  [
+   451.4,
+   "medium"
+  ],
+  [
+   456.0,
+   "medium"
+  ],
+  [
+   458.0,
+   "long"
+  ],
+  [
+   467.9,
+   "short"
+  ],
+  [
+   481.1,
+   "medium"
+  ],
+  [
+   498.7,
+   "medium"
+  ],
+  [
+   504.3,
+   "medium"
+  ],
+  [
+   509.7,
+   "medium"
+  ],
+  [
+   516.2,
+   "long"
+  ],
+  [
+   522.5,
+   "short"
+  ],
+  [
+   526.7,
+   "short"
+  ],
+  [
+   529.3,
+   "short"
+  ],
+  [
+   536.3,
+   "short"
+  ],
+  [
+   540.6,
+   "short"
+  ],
+  [
+   545.0,
+   "short"
+  ],
+  [
+   547.4,
+   "short"
+  ]
+ ],
+ "src": {
+  "A": "Search for alleged cop killer instills fear in Pa. community - CBS Evening News (720p, h264).mp4",
+  "B": "Slain cop's cuffs used to arrest Frein - CNN (720p, h264).mp4",
+  "D": "Authorities Identify Suspect in Pennsylvania Barracks Shooting - ABC News (720p, h264).mp4",
+  "E": "Eric Frein manhunt Suspect may have left letter - CBS Evening News (720p, h264).mp4",
+  "F": "Police discovers journal of Pennsylvania cop killer suspect - CBS Mornings (720p, h264).mp4",
+  "M": "Pa. breathes easier after capture of Eric Frein - CBS Evening News (720p, h264).mp4",
+  "N": "wnep-novak-jeep-screen-recording.mp4",
+  "W": "hangar-screen-recording-2026-11-19.mp4",
+  "T": "Pike County DA Ray Tonkin responds to Eric Frein's Sentence of Death - Straus News (1080p, h264).mp4",
+  "J": "Eric Frein Notice of Execution signed for man responsible for killing PA State Trooper - WTAJ News (1080p, h264).mp4"
+ },
+ "shots": [
+  {
+   "id": 501,
+   "start": 443.07,
+   "end": 445.41,
+   "line": "So why were the Marshals at that airfield at all?",
+   "what": "real: helicopter view of the hangar; chapter lettering types on",
+   "kind": "clip",
+   "src": "W",
+   "in": 17.4,
+   "tag": "source-wnep.png",
+   "push": 0.025,
+   "crop": "1248:702:520:0",
+   "stamp": {
+    "line": "THE HANGAR",
+    "sub": "CHAPTER 06  ·  OCT 30, 2014",
+    "at": 443.2
+   },
+   "out": 19.74
+  },
+  {
+   "id": 502,
+   "start": 445.41,
+   "end": 447.83,
+   "line": "They weren't following a tip.",
+   "what": "real: Malkowski at the map on the vehicle",
+   "kind": "clip",
+   "src": "M",
+   "in": 80.6,
+   "tag": "source-cbs-news.png",
+   "push": 0.025,
+   "out": 83.02
+  },
+  {
+   "id": 503,
+   "start": 447.83,
+   "end": 453.15,
+   "line": "State police had asked them to clear the abandoned resort, the old Birchwood Pocono Airpark",
+   "what": "road map: the airpark pinned as it is named, the barracks to the north",
+   "kind": "map2",
+   "tag": "source-openstreetmap.png",
+   "map": {
+    "center": [
+     41.225,
+     -75.19
+    ],
+    "span": 62,
+    "move": "pull",
+    "pins": [
+     {
+      "lat": 41.3871,
+      "lon": -75.131,
+      "label": "BARRACKS",
+      "amber": false,
+      "at": 100
+     },
+     {
+      "lat": 41.0624,
+      "lon": -75.2534,
+      "label": "BIRCHWOOD-POCONO AIRPARK",
+      "amber": true,
+      "at": 451.4
+     }
+    ]
+   }
+  },
+  {
+   "id": 504,
+   "start": 453.15,
+   "end": 455.87,
+   "line": "near Tannersville, and they were working through it.",
+   "what": "3D callback: the line of marshals crossing the field",
+   "kind": "reuse",
+   "from": "shots2/S11.mp4",
+   "at": 0.0,
+   "fit": true
+  },
+  {
+   "id": 505,
+   "start": 455.87,
+   "end": 457.97,
+   "line": "Malkowski said afterward,",
+   "what": "real: Malkowski; name tag types on",
+   "kind": "clip",
+   "src": "M",
+   "in": 84.6,
+   "tag": "source-cbs-news.png",
+   "push": 0.025,
+   "nametag": {
+    "name": "SCOTT MALKOWSKI",
+    "role": "DEPUTY U.S. MARSHAL",
+    "at": 456.0
+   },
+   "out": 86.7
+  },
+  {
+   "id": 506,
+   "start": 457.97,
+   "end": 462.25,
+   "line": "\"We just had a hunch that if we were on the run, this is a place we would hide.\"",
+   "what": "typed quote card, line by line",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "“WE JUST HAD A HUNCH",
+     "THAT IF WE WERE ON THE RUN,",
+     "THIS IS A PLACE",
+     "WE WOULD HIDE.”"
+    ],
+    "who": "DEPUTY U.S. MARSHAL SCOTT MALKOWSKI",
+    "at": 458.0,
+    "size": 0.15
+   }
+  },
+  {
+   "id": 507,
+   "start": 462.25,
+   "end": 463.99,
+   "line": "You know what happened next.",
+   "what": "3D callback: he steps out of the trees",
+   "kind": "reuse",
+   "from": "shots2/S24.mp4",
+   "at": 0.0,
+   "fit": true
+  },
+  {
+   "id": 508,
+   "start": 463.99,
+   "end": 465.37,
+   "line": "The black hat,",
+   "what": "3D callback: the black hat",
+   "kind": "reuse",
+   "from": "shots2/S31.mp4",
+   "at": 0.2,
+   "fit": true
+  },
+  {
+   "id": 509,
+   "start": 465.37,
+   "end": 466.73,
+   "line": "the order to get down,",
+   "what": "3D callback: he goes to his knees",
+   "kind": "reuse",
+   "from": "shots2/S33.mp4",
+   "at": 0.0,
+   "fit": true
+  },
+  {
+   "id": 510,
+   "start": 466.73,
+   "end": 467.83,
+   "line": "his name.",
+   "what": "callback: the FBI photo and his name",
+   "kind": "reuse",
+   "from": "shots2/S39.mp4",
+   "at": 0.4,
+   "fit": true
+  },
+  {
+   "id": 511,
+   "start": 467.83,
+   "end": 470.61,
+   "line": "There's one thing the accounts don't agree on.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "TWO ACCOUNTS"
+    ],
+    "who": "OF HOW HIS FACE WAS SCRAPED",
+    "at": 467.9,
+    "size": 0.3
+   }
+  },
+  {
+   "id": 512,
+   "start": 470.61,
+   "end": 474.67,
+   "line": "An early public account said nobody was hurt during the capture,",
+   "what": "real: the State Police commissioner at the microphones",
+   "kind": "clip",
+   "src": "B",
+   "in": 54.6,
+   "tag": "source-cnn.png",
+   "push": 0.025,
+   "crop": "853:480:213:0",
+   "zoom": 1.22,
+   "cx": 0.15,
+   "cy": 1.0,
+   "out": 58.66
+  },
+  {
+   "id": 513,
+   "start": 474.67,
+   "end": 476.45,
+   "line": "but Frein's face was scraped,",
+   "what": "real photo, 1.8 seconds, wide, no zoom: the perp walk",
+   "kind": "image",
+   "img": "media/photos/32-ap-perp-walk.jpg",
+   "push": 0.0,
+   "tag": "source-associated-press.png"
+  },
+  {
+   "id": 514,
+   "start": 476.45,
+   "end": 481.03,
+   "line": "and the Marshals themselves said that happened while he was held face down on the pavement.",
+   "what": "3D: the crane up over him on the ground, marshals around",
+   "kind": "open",
+   "as": 38
+  },
+  {
+   "id": 515,
+   "start": 481.03,
+   "end": 484.37,
+   "line": "Both versions are on the record, so you're getting both.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "BOTH VERSIONS",
+     "ARE ON THE RECORD"
+    ],
+    "who": "EARLY PUBLIC ACCOUNT  ·  U.S. MARSHALS",
+    "at": 481.1,
+    "size": 0.22
+   }
+  },
+  {
+   "id": 516,
+   "start": 484.37,
+   "end": 486.37,
+   "line": "He wasn't armed in that field.",
+   "what": "3D callback: his open, empty hand",
+   "kind": "open",
+   "as": 36
+  },
+  {
+   "id": 517,
+   "start": 486.37,
+   "end": 488.67,
+   "line": "There were weapons inside the hangar,",
+   "what": "real photo: inside the hangar",
+   "kind": "image",
+   "img": "media/photos/hangar-interior-reuters-abc.jpg",
+   "push": 0.05,
+   "tag": "source-reuters.png"
+  },
+  {
+   "id": 518,
+   "start": 488.67,
+   "end": 489.99,
+   "line": "and so was the notebook.",
+   "what": "3D object: the notebook",
+   "kind": "obj",
+   "obj": "notebook",
+   "rate": 0.15
+  },
+  {
+   "id": 519,
+   "start": 489.99,
+   "end": 493.35,
+   "line": "This was the longer journal, not the three pages from the trash bag,",
+   "what": "3D object: the notebook from above",
+   "kind": "obj",
+   "obj": "notebook",
+   "angle": 60,
+   "elev": 52,
+   "rate": 0.07
+  },
+  {
+   "id": 520,
+   "start": 493.35,
+   "end": 497.01,
+   "line": "and it doesn't read like a soldier on a mission.",
+   "what": "police-released photo: Frein in re-enactor uniform",
+   "kind": "still",
+   "src": "E",
+   "at": 68.6,
+   "tag": "source-pennsylvania-state-police.png",
+   "push": 0.04,
+   "crop": "1102:620:0:0"
+  },
+  {
+   "id": 521,
+   "start": 497.01,
+   "end": 502.85,
+   "line": "On September twenty-fifth, he wrote that he slept like a human first time in two weeks.",
+   "what": "typed journal quote, amber bar",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "“SLEPT LIKE A HUMAN",
+     "FIRST TIME IN TWO WEEKS.”"
+    ],
+    "who": "ERIC FREIN'S JOURNAL, SEPT 25  ·  COURT RECORD",
+    "at": 498.7,
+    "size": 0.19
+   }
+  },
+  {
+   "id": 522,
+   "start": 502.85,
+   "end": 509.45,
+   "line": "On October eleventh, he wrote, \"Thirty days. A lot longer than I expected to last.\"",
+   "what": "typed journal quote, amber bar",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "“THIRTY DAYS.",
+     "A LOT LONGER THAN",
+     "I EXPECTED TO LAST.”"
+    ],
+    "who": "ERIC FREIN'S JOURNAL, OCT 11  ·  COURT RECORD",
+    "at": 504.3,
+    "size": 0.19
+   }
+  },
+  {
+   "id": 523,
+   "start": 509.45,
+   "end": 516.07,
+   "line": "Police also recovered a file on a storage drive. It was a letter addressed Mom and Dad,",
+   "what": "3D object: a screen; the file types on as it is described",
+   "kind": "obj",
+   "obj": "laptop",
+   "head": "STORAGE DRIVE  ·  COURT RECORD",
+   "head_at": 509.7,
+   "lines": [
+    [
+     "FILE: A LETTER",
+     510.9
+    ],
+    [
+     "ADDRESSED “MOM AND DAD”",
+     513.3
+    ]
+   ],
+   "rate": 0.05,
+   "angle": 12,
+   "elev": 16,
+   "last": true
+  },
+  {
+   "id": 524,
+   "start": 516.07,
+   "end": 521.73,
+   "line": "and in it, he wrote that, \"The time seems right for a spark to ignite a fire in the hearts of men.\"",
+   "what": "typed quote card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "“THE TIME SEEMS RIGHT",
+     "FOR A SPARK TO IGNITE A FIRE",
+     "IN THE HEARTS OF MEN.”"
+    ],
+    "who": "LETTER ADDRESSED “MOM AND DAD”  ·  COURT RECORD",
+    "at": 516.2,
+    "size": 0.16
+   }
+  },
+  {
+   "id": 525,
+   "start": 521.73,
+   "end": 526.67,
+   "line": "The file had been created on December twenty-ninth, twenty-thirteen,",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "FILE CREATED",
+     "DEC 29, 2013"
+    ],
+    "who": "COURT RECORD",
+    "at": 522.5,
+    "size": 0.24
+   }
+  },
+  {
+   "id": 526,
+   "start": 526.67,
+   "end": 529.13,
+   "line": "and last accessed on October sixth, twenty-fourteen.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "LAST ACCESSED",
+     "OCT 6, 2014"
+    ],
+    "who": "COURT RECORD",
+    "at": 526.7,
+    "size": 0.24
+   }
+  },
+  {
+   "id": 527,
+   "start": 529.13,
+   "end": 536.15,
+   "line": "Those dates don't tell us when any particular line was written, only when the file was made and when it was last opened.",
+   "what": "3D object: the screen again; the two things the dates do tell us type on",
+   "kind": "obj",
+   "obj": "laptop",
+   "head": "FILE DATES ONLY",
+   "head_at": 529.3,
+   "lines": [
+    [
+     "WHEN IT WAS MADE",
+     533.0
+    ],
+    [
+     "WHEN IT WAS LAST OPENED",
+     534.7
+    ]
+   ],
+   "rate": 0.04,
+   "angle": -14,
+   "elev": 18,
+   "last": true
+  },
+  {
+   "id": 528,
+   "start": 536.15,
+   "end": 539.49,
+   "line": "That night, investigators questioned him on video.",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "RECORDED INTERVIEW"
+    ],
+    "who": "OCT 30–31, 2014",
+    "at": 536.3,
+    "size": 0.22
+   }
+  },
+  {
+   "id": 529,
+   "start": 539.49,
+   "end": 542.29,
+   "line": "He called the killing an assassination,",
+   "what": "typed card",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "“ASSASSINATION”"
+    ],
+    "who": "HIS WORD, FROM THE INTERVIEW",
+    "at": 540.6,
+    "size": 0.24
+   }
+  },
+  {
+   "id": 530,
+   "start": 542.29,
+   "end": 547.19,
+   "line": "and the phrase that came out of that interview was that he'd wanted to wake people up.",
+   "what": "typed card; the words appear when they are said",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "“WAKE PEOPLE UP”"
+    ],
+    "who": "FROM THE RECORDED INTERVIEW",
+    "at": 545.0,
+    "size": 0.24
+   }
+  },
+  {
+   "id": 531,
+   "start": 547.19,
+   "end": 550.63,
+   "line": "Back in Barrett Township, the news spread fast.",
+   "what": "real: a resident the morning after; name tag types on",
+   "kind": "clip",
+   "src": "M",
+   "in": 119.6,
+   "tag": "source-cbs-news.png",
+   "push": 0.025,
+   "nametag": {
+    "name": "RAY KOWALSKI",
+    "role": "RESIDENT",
+    "at": 547.4
+   },
+   "out": 123.04
+  },
+  {
+   "id": 532,
+   "start": 550.63,
+   "end": 553.21,
+   "line": "The next day was Halloween,",
+   "what": "the CBS/AP article, highlighter on its headline",
+   "kind": "card",
+   "card": {
+    "mode": "doc",
+    "img": "media/photos/13b-cbs-halloween-headline.png",
+    "marks": [
+     [
+      0.02,
+      0.055,
+      0.74,
+      0.145,
+      551.4
+     ]
+    ]
+   },
+   "tag": "source-cbs-news.png"
+  },
+  {
+   "id": 533,
+   "start": 553.21,
+   "end": 556.55,
+   "line": "and officials told families that trick-or-treating could go ahead after all.",
+   "what": "the same article, highlighter on \"Trick-or-treating is on tomorrow night from 6 to 8 in Barrett Township\"",
+   "kind": "card",
+   "card": {
+    "mode": "doc",
+    "img": "media/photos/13b-cbs-halloween-headline.png",
+    "marks": [
+     [
+      0.535,
+      0.882,
+      0.87,
+      0.915,
+      553.6
+     ],
+     [
+      0.02,
+      0.925,
+      0.675,
+      0.957,
+      554.4
+     ]
+    ]
+   },
+   "tag": "source-cbs-news.png"
+  }
+ ]
+}

@@ -1,0 +1,20 @@
+{
+  "vo": "saylo/videos/01-olympic-bomber/voiceover-full.mp3",
+  "fps": 30,
+  "end": 33.0,
+  "shots": [
+    {"id": 1,  "start": 0.00,  "end": 1.80,  "line": "Three thirty in the morning,",            "what": "aerial over the clay town at night; date stamp types on"},
+    {"id": 2,  "start": 1.80,  "end": 4.45,  "line": "May thirty-first, two thousand and three.", "what": "lower glide down the main street, stamp held"},
+    {"id": 3,  "start": 4.45,  "end": 6.50,  "line": "Murphy, North Carolina,",                   "what": "MURPHY / NORTH CAROLINA types on a building wall (title in the set)"},
+    {"id": 4,  "start": 6.50,  "end": 9.50,  "line": "a mountain town of about 1,600 people",     "what": "wide: the town in its ring of clay mountains; POP. ABOUT 1,600"},
+    {"id": 5,  "start": 9.50,  "end": 12.30, "line": "where, at that hour, the only thing moving", "what": "empty main street at ground level"},
+    {"id": 6,  "start": 12.30, "end": 14.30, "line": "is the occasional patrol car.",             "what": "patrol car drives up the street, camera low behind"},
+    {"id": 7,  "start": 14.30, "end": 17.35, "line": "The officer in that car is 21 years old.",  "what": "push in on the white mannequin officer driving"},
+    {"id": 8,  "start": 17.35, "end": 21.70, "line": "His name is Jeff Postell, ... less than a year.", "what": "closer on the officer; name tag types on"},
+    {"id": 9,  "start": 21.70, "end": 24.25, "line": "He swings around behind the Save-A-Lot grocery store", "what": "top-down clay block map, amber route line draws behind the store"},
+    {"id": 10, "start": 24.25, "end": 25.60, "line": "with his lights off,",                      "what": "car rolls into the back lot, headlights go off"},
+    {"id": 11, "start": 25.60, "end": 28.45, "line": "and he spots a man crouched by the dumpsters.", "what": "flashlight finds the glossy amber mannequin crouched by the dumpsters"},
+    {"id": 12, "start": 28.45, "end": 30.65, "line": "Postell figures it's a burglar.",           "what": "over the officer's shoulder, flashlight on the amber man"},
+    {"id": 13, "start": 30.65, "end": 33.00, "line": "The man bolts, then gives up.",             "what": "amber man runs, stops, raises his hands"}
+  ]
+}

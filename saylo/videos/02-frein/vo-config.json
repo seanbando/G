@@ -1,0 +1,69 @@
+{
+ "spoken": {
+  "Hold onto that. It comes back at the end of this story.": "Hold onto that. It comes back, at the end of this story.",
+  "One line is in the court record.": "One line... is in the court record.",
+  "Tell me what you think in the comments.": "Tell me what you think... in the comments.",
+  "Seven weeks earlier. Friday night, September twelfth, twenty fourteen.": "Seven weeks earlier: Friday night, September twelfth, twenty fourteen."
+ },
+ "beats": {
+  "\"I saw the black hat.\"": 0.25,
+  "Eric Frein.": 0.25,
+  "and Dickson goes down outside the building.": 0.25,
+  "and they couldn't save him.": 0.25,
+  "and took it.\"": 0.25,
+  "What they didn't have was Eric Frein.": 0.25,
+  "\"slept like a human first time in two weeks.\"": 0.25,
+  "A lot longer than I expected to last.\"": 0.25,
+  "They kept going.": 0.25
+ },
+ "aliases": {
+  "Erik": "Eric",
+  "Dixon": "Dickson",
+  "Dixon's": "Dickson's",
+  "Brian": "Bryon",
+  "Bryan": "Bryon"
+ },
+ "chunk_settings": {
+  "016": {
+   "seed": 2022
+  },
+  "019": {
+   "seed": 2013
+  },
+  "025": {
+   "seed": 2014
+  },
+  "085": {
+   "seed": 2025
+  },
+  "024": {
+   "seed": 3024,
+   "speed": 0.92,
+   "tempo": 0.88
+  },
+  "027": {
+   "seed": 3027,
+   "speed": 0.92,
+   "tempo": 0.92
+  },
+  "030": {
+   "seed": 3030,
+   "speed": 0.92
+  },
+  "038": {
+   "seed": 3038,
+   "speed": 0.92,
+   "tempo": 0.88
+  },
+  "072": {
+   "seed": 3072,
+   "speed": 0.92,
+   "tempo": 0.88
+  }
+ },
+ "gaps": {
+  "chapter": 0.55,
+  "paragraph": 0.5,
+  "sentence": 0.28
+ }
+}

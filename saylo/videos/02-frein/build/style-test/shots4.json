@@ -1,0 +1,498 @@
+{
+ "vo": "saylo/videos/02-frein/voiceover-full.mp3",
+ "fps": 30,
+ "start": 108.9,
+ "end": 220.1,
+ "out": "frein_s3_barracks.mp4",
+ "dir": "shots4",
+ "chapter": "The Barracks",
+ "types": [
+  [
+   111.4,
+   "medium"
+  ],
+  [
+   111.95,
+   "short"
+  ],
+  [
+   118.0,
+   "short"
+  ],
+  [
+   122.4,
+   "medium"
+  ],
+  [
+   129.5,
+   "medium"
+  ],
+  [
+   133.0,
+   "short"
+  ],
+  [
+   135.2,
+   "short"
+  ],
+  [
+   136.7,
+   "short"
+  ],
+  [
+   153.8,
+   "medium"
+  ],
+  [
+   181.9,
+   "short"
+  ],
+  [
+   192.96,
+   "short"
+  ],
+  [
+   203.2,
+   "medium"
+  ],
+  [
+   213.3,
+   "short"
+  ]
+ ],
+ "src": {},
+ "shots": [
+  {
+   "id": 201,
+   "start": 108.9,
+   "end": 114.34,
+   "kind": "barracks",
+   "view": "chapter",
+   "line": "Seven weeks earlier, Friday night, September 12th, 2014.",
+   "what": "3D: the barracks at night, then a fast fly-in onto the sign: CHAPTER 01 / THE BARRACKS types on; date stamp types on",
+   "fly_at": 110.9,
+   "chapter": [
+    "CHAPTER 01",
+    "THE BARRACKS"
+   ],
+   "chapter_at": 111.4,
+   "stamp": {
+    "line": "SEPT 12, 2014",
+    "sub": "FRIDAY NIGHT",
+    "at": 111.95
+   },
+   "last": true
+  },
+  {
+   "id": 202,
+   "start": 114.34,
+   "end": 117.98,
+   "kind": "image",
+   "line": "The Pennsylvania State Police barracks in Blooming Grove",
+   "what": "real photo: the barracks with police tape, days after (WNEP)",
+   "img": "media/photos/wnep-b.jpg",
+   "tag": "source-wnep.png",
+   "push": 0.04
+  },
+  {
+   "id": 203,
+   "start": 117.98,
+   "end": 119.5,
+   "kind": "map2",
+   "line": "in Pike County",
+   "what": "road map: amber pin on the barracks, label types on",
+   "tag": "source-openstreetmap.png",
+   "map": {
+    "center": [
+     41.387,
+     -75.131
+    ],
+    "span": 34,
+    "move": "push",
+    "pins": [
+     {
+      "lat": 41.3871,
+      "lon": -75.131,
+      "label": "BLOOMING GROVE BARRACKS",
+      "amber": true,
+      "at": 118.0
+     }
+    ],
+    "stamp": "PIKE COUNTY, PA",
+    "at": 118.05
+   }
+  },
+  {
+   "id": 204,
+   "start": 119.5,
+   "end": 121.84,
+   "kind": "barracks",
+   "view": "aerial",
+   "line": "has forest pressing in on almost every side.",
+   "what": "3D: from above, the building and lot ringed by dark woods, pushing down"
+  },
+  {
+   "id": 205,
+   "start": 121.84,
+   "end": 125.0,
+   "kind": "barracks",
+   "view": "lot",
+   "line": "It's shortly before eleven, and it's shift change.",
+   "what": "3D: the lot under its lamps, the lit lobby door; SHORTLY BEFORE 11 PM types on",
+   "stamp": {
+    "line": "SHORTLY BEFORE 11 PM",
+    "sub": "SHIFT CHANGE",
+    "at": 122.4
+   },
+   "last": true
+  },
+  {
+   "id": 206,
+   "start": 125.0,
+   "end": 126.52,
+   "kind": "barracks",
+   "view": "leaving",
+   "line": "One group of troopers",
+   "what": "3D: two troopers in campaign hats walking out of the lobby door"
+  },
+  {
+   "id": 207,
+   "start": 126.52,
+   "end": 128.82,
+   "kind": "barracks",
+   "view": "arriving",
+   "line": "is finishing up and another is arriving.",
+   "what": "3D: a cruiser pulling into the lot from the drive"
+  },
+  {
+   "id": 208,
+   "start": 128.82,
+   "end": 137.78,
+   "kind": "card",
+   "line": "Corporal Bryon Dickson is one of the troopers on his way out. He's thirty-eight, from Dunmore, a Marine veteran, married with two young sons.",
+   "what": "his official portrait, name types on, then three facts one at a time as they are said; slow, no effects",
+   "tag": "source-pennsylvania-state-police.png",
+   "card": {
+    "mode": "portrait",
+    "img": "media/cuts/dickson-portrait.png",
+    "name": "BRYON K. DICKSON II",
+    "sub": "CORPORAL, PENNSYLVANIA STATE POLICE",
+    "size": 0.3,
+    "at": 129.5,
+    "facts": [
+     [
+      "38  ·  DUNMORE, PA",
+      133.0
+     ],
+     [
+      "MARINE VETERAN",
+      135.2
+     ],
+     [
+      "MARRIED, TWO YOUNG SONS",
+      136.7
+     ]
+    ]
+   }
+  },
+  {
+   "id": 211,
+   "start": 137.78,
+   "end": 141.0,
+   "kind": "barracks",
+   "view": "to_car",
+   "line": "Early accounts say he was heading toward his patrol car.",
+   "what": "3D: behind a trooper walking from the door toward a cruiser in its bay"
+  },
+  {
+   "id": 212,
+   "start": 141.0,
+   "end": 144.96,
+   "kind": "barracks",
+   "view": "cruiser",
+   "line": "Dickson had his own assigned cruiser at Blooming Grove.",
+   "what": "3D: slow push on the cruiser in its bay, an amber edge of light on it (the planted detail)"
+  },
+  {
+   "id": 213,
+   "start": 144.96,
+   "end": 148.22,
+   "kind": "barracks",
+   "view": "cruiser2",
+   "line": "Hold on to that. It comes back at the end of this story.",
+   "what": "3D: closer, low, along the cruiser's side"
+  },
+  {
+   "id": 215,
+   "start": 148.22,
+   "end": 150.82,
+   "kind": "barracks",
+   "view": "treeline",
+   "line": "A rifle shot comes out of the dark,",
+   "what": "3D: the tree line across the road, locked camera; one flash of light in the trees. Nobody is shown.",
+   "flash_at": 149.25,
+   "still_at": 0.423
+  },
+  {
+   "id": 216,
+   "start": 150.82,
+   "end": 152.88,
+   "kind": "barracks",
+   "view": "front",
+   "line": "and Dickson goes down outside the building.",
+   "what": "3D: the front of the building and the empty walk, slow push. No figure."
+  },
+  {
+   "id": 217,
+   "start": 152.88,
+   "end": 156.2,
+   "kind": "card",
+   "line": "Trooper Alex Douglass, thirty-one,",
+   "what": "his official portrait, name types on",
+   "tag": "source-pennsylvania-state-police.png",
+   "card": {
+    "mode": "portrait",
+    "img": "media/cuts/douglass-portrait.png",
+    "name": "ALEX DOUGLASS",
+    "sub": "TROOPER, PENNSYLVANIA STATE POLICE",
+    "size": 0.34,
+    "at": 153.8,
+    "facts": [
+     [
+      "31",
+      155.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": 218,
+   "start": 156.2,
+   "end": 159.26,
+   "kind": "barracks",
+   "view": "four",
+   "line": "has just arrived for his shift along with three other troopers.",
+   "what": "3D: four troopers by their cars in the lot"
+  },
+  {
+   "id": 219,
+   "start": 159.26,
+   "end": 162.82,
+   "kind": "barracks",
+   "view": "bag",
+   "line": "He carries a gym bag out to his own vehicle,",
+   "what": "3D object: the gym bag in his hand as he walks, low tracking shot"
+  },
+  {
+   "id": 220,
+   "start": 162.82,
+   "end": 164.98,
+   "kind": "barracks",
+   "view": "notice",
+   "line": "hears a noise, and sees Dickson on the ground.",
+   "what": "3D: close on a trooper, head turned toward the building. What he sees is not shown."
+  },
+  {
+   "id": 221,
+   "start": 164.98,
+   "end": 167.76,
+   "kind": "barracks",
+   "view": "treeline2",
+   "line": "He goes toward him, and he's shot too.",
+   "what": "3D: the tree line again from another spot, locked camera; a second flash. Nobody is shown.",
+   "flash_at": 167.0,
+   "still_at": 0.74
+  },
+  {
+   "id": 222,
+   "start": 167.76,
+   "end": 171.4,
+   "kind": "barracks",
+   "view": "lobby",
+   "line": "Badly wounded, Douglass gets himself into the lobby.",
+   "what": "3D: the lobby door, warm light on the walk, push in. No figure."
+  },
+  {
+   "id": 223,
+   "start": 171.4,
+   "end": 174.12,
+   "kind": "barracks",
+   "view": "doorway",
+   "line": "Two troopers pull him farther inside.",
+   "what": "3D: two troopers kneeling in the doorway, backs to the camera"
+  },
+  {
+   "id": 224,
+   "start": 174.12,
+   "end": 178.72,
+   "kind": "image",
+   "line": "Officers and paramedics worked on Bryon Dickson, and they couldn't save him.",
+   "what": "real photo: the barracks behind police tape in daylight; the slowest shot of the chapter",
+   "img": "media/photos/wnep-b.jpg",
+   "crop": "1344:756:420:140",
+   "tag": "source-wnep.png",
+   "push": 0.025
+  },
+  {
+   "id": 225,
+   "start": 178.72,
+   "end": 181.12,
+   "kind": "card",
+   "line": "Alex Douglass survived.",
+   "what": "Douglass's portrait again, push",
+   "tag": "source-pennsylvania-state-police.png",
+   "card": {
+    "mode": "portrait",
+    "img": "media/cuts/douglass-portrait.png",
+    "name": "ALEX DOUGLASS",
+    "sub": "SURVIVED",
+    "size": 0.34,
+    "at": 100
+   }
+  },
+  {
+   "id": 226,
+   "start": 181.12,
+   "end": 187.66,
+   "kind": "card",
+   "line": "He was in the hospital until the middle of October, then moved to a rehabilitation facility.",
+   "what": "same portrait; two facts type on as they are said",
+   "tag": "source-pennsylvania-state-police.png",
+   "card": {
+    "mode": "portrait",
+    "img": "media/cuts/douglass-portrait.png",
+    "name": "ALEX DOUGLASS",
+    "sub": "SURVIVED",
+    "size": 0.34,
+    "at": 100,
+    "facts": [
+     [
+      "IN HOSPITAL UNTIL MID-OCTOBER",
+      181.9
+     ],
+     [
+      "THEN A REHABILITATION FACILITY",
+      185.8
+     ]
+    ]
+   }
+  },
+  {
+   "id": 227,
+   "start": 187.66,
+   "end": 195.44,
+   "kind": "card",
+   "line": "By late March 2015, he said he had already been through sixteen surgeries, with another one scheduled.",
+   "what": "same portrait; 16 SURGERIES types on big at the word",
+   "tag": "source-pennsylvania-state-police.png",
+   "card": {
+    "mode": "portrait",
+    "img": "media/cuts/douglass-portrait.png",
+    "name": "ALEX DOUGLASS",
+    "sub": "BY LATE MARCH 2015",
+    "size": 0.34,
+    "at": 100,
+    "big": {
+     "text": "16 SURGERIES",
+     "at": 192.96
+    }
+   }
+  },
+  {
+   "id": 228,
+   "start": 195.44,
+   "end": 199.96,
+   "kind": "obj",
+   "obj": "pages",
+   "line": "Weeks later, police would have a few torn notebook pages describing that night.",
+   "what": "3D object: three torn notebook pages under a lamp, push in (the writing is not legible on purpose)",
+   "rate": 0.08
+  },
+  {
+   "id": 229,
+   "start": 199.96,
+   "end": 205.54,
+   "kind": "card",
+   "line": "One line is in the court record. \"Got a shot around eleven PM and took it.\"",
+   "what": "the Philadelphia Inquirer headline quoting the journal; amber highlighter sweeps across the quote as it is read",
+   "tag": "source-the-philadelphia-inquirer.png",
+   "card": {
+    "mode": "doc",
+    "img": "media/photos/20-inquirer-headline.png",
+    "marks": [
+     [
+      0.615,
+      0.2,
+      0.975,
+      0.4,
+      203.2
+     ],
+     [
+      0.012,
+      0.42,
+      0.105,
+      0.6,
+      204.6
+     ]
+    ],
+    "wide": true
+   }
+  },
+  {
+   "id": 231,
+   "start": 205.54,
+   "end": 209.24,
+   "kind": "barracks",
+   "view": "wide",
+   "line": "That night, though, nobody knew who had written anything.",
+   "what": "3D: the barracks from across the road, through the edge of the trees"
+  },
+  {
+   "id": 232,
+   "start": 209.24,
+   "end": 212.28,
+   "kind": "barracks",
+   "view": "vanish",
+   "line": "Whoever fired those shots had disappeared into the trees.",
+   "what": "3D: the amber figure walking away into the woods across the road"
+  },
+  {
+   "id": 233,
+   "start": 212.28,
+   "end": 217.64,
+   "kind": "card",
+   "line": "There was no suspect and no name. They didn't even have a vehicle.",
+   "what": "typed card: SUSPECT, NAME, VEHICLE, each struck through in amber as it is said",
+   "card": {
+    "mode": "strike",
+    "head": "WHAT INVESTIGATORS HAD THAT NIGHT",
+    "at": 212.4,
+    "items": [
+     [
+      "SUSPECT",
+      213.9
+     ],
+     [
+      "NAME",
+      215.0
+     ],
+     [
+      "VEHICLE",
+      217.0
+     ]
+    ]
+   }
+  },
+  {
+   "id": 234,
+   "start": 217.64,
+   "end": 220.1,
+   "kind": "image",
+   "line": "That changed within days.",
+   "what": "real photo: the Jeep in the water (tease for the next chapter)",
+   "img": "media/photos/27c-jeep-swamp-ap.jpg",
+   "tag": "source-associated-press.png",
+   "push": 0.05
+  }
+ ]
+}
