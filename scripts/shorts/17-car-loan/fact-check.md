@@ -17,3 +17,7 @@ Context (caption/on screen, not all in VO):
 - "Asks what you can afford a month": a typical sales question, presented as a scene, not a claim about every dealer.
 
 Caption disclaimer: "Example: $30,000 used-car loan at 10.6% APR (Edmunds Q3 2026 average). Your rate and terms will differ. Not financial advice."
+
+## Revision (creator, Nov 21): no stat proof in the voice, explain the why + value
+- Replaced the "three in ten trade-ins, $7,000" line with the mechanism: cars lose value fast while a 7-year loan's balance falls slowly, so you can owe more than the car is worth at trade-in (negative equity). True in general; Edmunds data above backs it (30.9% of new-car trade-ins underwater, Q1 2026) for the caption only.
+- Added the takeaway: "ask for the total price first, and pick the shortest loan you can handle" (general consumer education, not investment advice).
