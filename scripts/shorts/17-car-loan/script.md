@@ -1,6 +1,8 @@
 The Question Every Car Dealer Asks First (scene style)
 
-"What can you afford a month?" the dealer asks. Sounds friendly.
+You're buying a car, and the dealer asks one question that costs you thousands.
+
+"What can you afford a month?" Sounds friendly.
 
 You say five hundred. He smiles like you just passed a test.
 
