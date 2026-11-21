@@ -6,13 +6,13 @@ You're buying a car, and the dealer asks one question that costs you thousands.
 
 You say five hundred. He smiles like you just passed a test.
 
-It's a thirty-thousand-dollar used car at about ten and a half percent. Over five years, that's six forty-six a month. Too high.
+It's a thirty-thousand-dollar used car at about ten and a half percent. Over five years, that's six forty-six a month.
 
 So he stretches it to seven years: five oh seven a month.
 
 You sign before he finishes the sentence.
 
-For a while, it feels like a win. The payment fits, and you tell everyone you got a deal.
+For a while, it feels like a win. The payment fits.
 
 Then one night you add it up. That lower payment costs you about thirty-eight hundred more in interest.
 
