@@ -17,3 +17,10 @@ Structure: Money Mystery (paradox hook: they can, so why won't they), reasons in
 Not in the voice (left out on purpose): Texas reincorporation (2024), the 2018 pay-package court fight, and October 2026 proxy coverage about directors' SpaceX ties and a possible Tesla-SpaceX deal. Re-check board and stake facts on posting day.
 
 Caption disclaimer: "Not financial advice. Pay-package figures are maximums that depend on Tesla hitting its targets."
+
+## Outside review (Nov 22, 2026), applied
+- Full award stake: about 28.4% under current share counts if he earns the full award (SEC filing) -> "more than a quarter of the company".
+- "They never will" (prediction) -> "So why haven't they?" (true: they haven't).
+- "But the real reason?" (interpretation stated as fact) -> "But the biggest reason might be this." (hedged).
+- Title "Why Tesla Can't Fire Elon Musk" -> "Why Hasn't Tesla Fired Elon Musk?" (the board can; "can't" contradicted line 1).
+- Reviewer confirmed the remaining factual claims.
