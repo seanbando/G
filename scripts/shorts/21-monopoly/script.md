@@ -1,23 +1,19 @@
-You're a Monopoly Board (POV)
+You're a Monopoly Board (POV, humanized)
 
-You're a Monopoly board, and you were stolen.
+You're a Monopoly board, and you were stolen from the woman who invented you.
 
-A woman named Lizzie Magie made you to warn people about landlords.
+Lizzie Magie built you as a warning about landlords, so every rent you charge and every player you bankrupt was meant to feel unfair.
 
-Every rent you charge, every player you bankrupt, was supposed to feel unfair.
+Tucked inside your box was a second set of rules, one where everyone at the table gets richer together.
 
-She even gave you a second set of rules, where everyone gets richer together.
+For years, people passed around homemade copies of you. That's when Charles Darrow played one and sold you to Parker Brothers as his own idea.
 
-For years, people made homemade copies of you, scribbling in their own street names.
+Darrow walked away a millionaire, while Lizzie handed over her patent for five hundred dollars.
 
-Then Charles Darrow played one and sold you to Parker Brothers as his own idea.
+What came next was a game with its second rulebook torn out, teaching one lesson only, which is to crush everyone.
 
-He became a millionaire. Lizzie sold them her patent for five hundred dollars.
+Built to warn people about monopolies, you became one.
 
-And they ripped out your second rulebook. Now you only teach one thing: crush everyone.
+Off the board, the people playing you live by that same lesson, because owners collect the rent and renters pay it.
 
-You were made to warn people about monopolies. You became one.
-
-And the people playing you? Off the board, owners collect rent and renters pay it.
-
-So in real life, which side are you on?
+Which side of that are you on in real life?
