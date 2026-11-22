@@ -14,8 +14,6 @@ But every Bitcoin payment sits on a public record forever, and the plans you typ
 
 That's when the knock comes.
 
-This really happened, minus the AI. A man named Ross Ulbricht ran a site called Silk Road, with about two hundred million dollars in sales.
+Sound made up? It already happened, minus the AI. Ross Ulbricht got two life sentences for running Silk Road, then a presidential pardon years later.
 
-An old forum post helped lead investigators to him. He was arrested in a public library and sentenced to two life sentences.
-
-"Anonymous" money always leaves a receipt. Congrats, you just rebuilt Silk Road.
+Congrats, you just rebuilt Silk Road.

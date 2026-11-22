@@ -20,3 +20,4 @@ Caption disclaimer: "Dramatization: the AI part is fiction. Silk Road was real. 
 ## Outside review (Nov 22), applied
 - "Every plan you typed is saved in a chat log" overstated (depends on the AI service and its retention settings) -> "the plans you typed into that AI could still be sitting in a chat log".
 - Confirmed: ~$200M sales, forum-post lead, library arrest, two life sentences, Bitcoin's public ledger. Pardon on Jan 21, 2025 stays in the caption; the sentencing line remains correct.
+- Ending cut to one punch (creator): sentence + pardon in the voice. Pardon: President Trump, Jan 21, 2025 (Al Jazeera, Fortune, The Block). ~$200M sales, forum post and library arrest moved to the caption.
