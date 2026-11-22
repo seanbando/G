@@ -16,3 +16,7 @@ Safety: describes the site only at the level already in news coverage (Bitcoin, 
 | Not said in the voice | Pardoned by President Trump on Jan 21, 2025; the US had seized and auctioned his bitcoin | Fortune, Al Jazeera, The Block (caption detail) |
 
 Caption disclaimer: "Dramatization: the AI part is fiction. Silk Road was real. Ross Ulbricht was sentenced in 2015 and pardoned in January 2025. Not advice."
+
+## Outside review (Nov 22), applied
+- "Every plan you typed is saved in a chat log" overstated (depends on the AI service and its retention settings) -> "the plans you typed into that AI could still be sitting in a chat log".
+- Confirmed: ~$200M sales, forum-post lead, library arrest, two life sentences, Bitcoin's public ledger. Pardon on Jan 21, 2025 stays in the caption; the sentencing line remains correct.

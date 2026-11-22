@@ -10,7 +10,7 @@ Scammers creep in, so it adds seller ratings, just like a normal shopping site.
 
 Orders explode. Millions move through your site, and you're sure nobody can trace you.
 
-But every Bitcoin payment sits on a public record forever, and every plan you typed is saved in a chat log.
+But every Bitcoin payment sits on a public record forever, and the plans you typed into that AI could still be sitting in a chat log.
 
 That's when the knock comes.
 
