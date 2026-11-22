@@ -21,3 +21,6 @@ Caption note: "True story. Lizzie Magie patented The Landlord's Game in 1904; Pa
 ## v2 (Nov 22): retention edits
 - Hook names Monopoly in the first 2 s: "The woman who invented Monopoly made it to warn you." Note: Magie invented The Landlord's Game, the game Monopoly was copied from; she is widely credited as Monopoly's original inventor (Smithsonian/History/NPR framing). "Stole the credit": Darrow claimed he invented it (sources above).
 - Removed the standalone name line; her name now lands on the $500 line. Rules line shortened. Middle tightened. Facts unchanged. v1 kept in script-v1.md.
+
+## v3 (Nov 22): POV "You're a Monopoly board" (creator choice). Story version kept in script-v2-story.md.
+Same facts. Metaphors: "you were stolen" (Darrow claimed the game as his own idea; NPR: "he stole the idea from a woman"); "ripped out your second rulebook" = Monopoly shipped with only the monopolist rules; "you became one" = irony (Monopoly became the dominant board game). Her purpose (warn about landlords / rent enriching owners) and the $500 patent sale as above.

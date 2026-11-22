@@ -1,19 +1,23 @@
-She Invented Monopoly to Warn You (Ricks story)
+You're a Monopoly Board (POV)
 
-The woman who invented Monopoly made it to warn you. A man stole the credit and got rich.
+You're a Monopoly board, and you were stolen.
 
-The point was to feel how rent makes owners richer and tenants poorer.
+A woman named Lizzie Magie made you to warn people about landlords.
 
-She even made a second set of rules where everyone gets richer together.
+Every rent you charge, every player you bankrupt, was supposed to feel unfair.
 
-Homemade copies spread for years. Then Charles Darrow played one, sold it to Parker Brothers as his own idea, and they called it Monopoly.
+She even gave you a second set of rules, where everyone gets richer together.
 
-He became a millionaire. Lizzie Magie sold them her patent for five hundred dollars.
+For years, people made homemade copies of you, scribbling in their own street names.
 
-And they kept only the rules where you crush everyone.
+Then Charles Darrow played one and sold you to Parker Brothers as his own idea.
 
-The game made to warn you about monopolies became one.
+He became a millionaire. Lizzie sold them her patent for five hundred dollars.
 
-Off the board, it still works: owners collect rent, renters pay it.
+And they ripped out your second rulebook. Now you only teach one thing: crush everyone.
 
-So in real life, are you collecting rent or paying it?
+You were made to warn people about monopolies. You became one.
+
+And the people playing you? Off the board, owners collect rent and renters pay it.
+
+So in real life, which side are you on?
