@@ -19,8 +19,8 @@ The viewer's stand-in in every short; scripts talk to "you" and he acts it out.
 Reference sheet: `assets/characters/jay-maya-sam-reference.png` (taken from the posted $5,000 video). Use these designs in every future video.
 - JAY: red beanie with a white pom-pom, grey body. Usually the one who spends or panics.
 - MAYA: brown hair in a top bun, gold earrings, eyelashes, purple body. Usually the "safe" one.
-- SAM: orange beanie with a white pom-pom, blue body. Usually the long-term investor.
-- All: round cream faces, black stick arms and legs, brown round shoes, simple 3D-shaded cartoon style.
+- SAM: Black, warm dark-brown skin, black braids (shoulder length, visible under/around an orange beanie with a white pom-pom), blue body. Usually the long-term investor. (Creator change, Nov 22, 2026: the reference sheet still shows the old cream-faced Sam until the new drawing is made.)
+- All: round faces (Jay and Maya cream, Sam dark brown), black stick arms and legs, brown round shoes, simple 3D-shaded cartoon style.
 - Name tags: Jay red, Maya purple, Sam blue. Always left to right: Jay, Maya, Sam.
 - The older kid sheets and the flat 3D-film sprites below are retired for this cast.
 
