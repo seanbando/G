@@ -1,18 +1,14 @@
 She Invented Monopoly to Warn You (Ricks story)
 
-She invented a game to warn you about landlords. A man sold it as his own and got rich.
+The woman who invented Monopoly made it to warn you. A man stole the credit and got rich.
 
-Her name was Lizzie Magie.
-
-Players buy land, charge rent, and bankrupt each other. That was her warning: rent makes owners richer and tenants poorer.
+The point was to feel how rent makes owners richer and tenants poorer.
 
 She even made a second set of rules where everyone gets richer together.
 
-For years, people made homemade copies and passed them around, writing in their own street names.
+Homemade copies spread for years. Then Charles Darrow played one, sold it to Parker Brothers as his own idea, and they called it Monopoly.
 
-Then Charles Darrow played one, sold it to Parker Brothers as his own idea, and they called it Monopoly.
-
-He became a millionaire. Lizzie sold them her patent for five hundred dollars.
+He became a millionaire. Lizzie Magie sold them her patent for five hundred dollars.
 
 And they kept only the rules where you crush everyone.
 

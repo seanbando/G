@@ -17,3 +17,7 @@ Structure: Ricks (cold open on "She...", true story in order, fake-out "for year
 
 Not said (unverified): that Magie got "no royalties". Her role became public through Ralph Anspach's 1970s Anti-Monopoly lawsuit (caption detail).
 Caption note: "True story. Lizzie Magie patented The Landlord's Game in 1904; Parker Brothers bought her patent for $500 in 1935."
+
+## v2 (Nov 22): retention edits
+- Hook names Monopoly in the first 2 s: "The woman who invented Monopoly made it to warn you." Note: Magie invented The Landlord's Game, the game Monopoly was copied from; she is widely credited as Monopoly's original inventor (Smithsonian/History/NPR framing). "Stole the credit": Darrow claimed he invented it (sources above).
+- Removed the standalone name line; her name now lands on the $500 line. Rules line shortened. Middle tightened. Facts unchanged. v1 kept in script-v1.md.
