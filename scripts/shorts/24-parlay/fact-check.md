@@ -17,3 +17,8 @@ Math assumptions (stated in the caption): every leg at standard -110 odds (decim
 | "Every leg you add, the house gets a bigger slice" | OK by the math above | own calculation |
 
 Caption: "Math assumes every leg is a 50/50 pick at -110 odds; real odds vary. If gambling stops being fun, call or text 1-800-GAMBLER. Not financial advice."
+
+## v2 (Nov 23): retention rewrite (creator: v1's second half was a lecture). v1 kept in script-v1-lecture.md.
+- Tension now runs to the last line; the loss is the climax and the app's promo notification is the punchline (no stats after the loss).
+- "payout almost doubles" (1 leg pays 1.91x, 2 legs 3.64x at -110). "the cut the app quietly keeps grows with every leg" = house edge 4.5% -> 31% (math above). "about seventeen hundred" = $1,764 on 8 legs.
+- "Your boy says add the Lakers" and the promo notification are story details (fiction); sportsbooks do send parlay-boost promotions (common industry practice). New Jersey stat moves to the caption.

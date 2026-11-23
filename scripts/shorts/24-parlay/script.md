@@ -2,18 +2,18 @@ You Lost Your Parlay (build, then life breaks it)
 
 You put ten bucks on one game, and it hits.
 
-Easy money, so you add a second game, and the payout jumps.
+So you add a second game, and the payout almost doubles.
 
-A third leg, a fourth, then eight, and now that ten dollars could win you about seventeen hundred.
+Your boy says add the Lakers, so you add the Lakers.
 
-Seven games hit. You're already screenshotting it for the group chat.
+Every leg you add, the payout grows, and so does the cut the app quietly keeps for itself.
 
-Last game, last minute, and one guy misses a free throw. The whole thing is gone.
+Eight legs now, and that ten dollars could turn into about seventeen hundred.
 
-Here's what the app knew. Each pick was close to a coin flip, so hitting all eight is about one in two hundred fifty-six.
+Six hit. Seven hit. You're already screenshotting it for the group chat.
 
-On a single bet, the house keeps around four and a half cents of every dollar. On your eight-leg parlay, it keeps about thirty-one.
+Last game, ten seconds left, and your guy steps to the free throw line.
 
-That's why sportsbooks push parlays. In New Jersey, they were about a third of the bets but around two thirds of the sportsbooks' winnings.
+He misses.
 
-Every leg you add, the house gets a bigger slice.
+Before you can even close the app, it buzzes: "Parlay boost on tonight's games."
