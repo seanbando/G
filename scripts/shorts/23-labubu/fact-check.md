@@ -18,3 +18,6 @@ Format: build-then-life-breaks-it ("you" chain), ending on "Congrats, you just l
 Not used: lines, fights, or store sales pauses (not confirmed in search). Pop Mart profit surge (H1 2025 net profit +397%) available for the caption.
 Copyright: draw our own monster-style toy, no Pop Mart logo or official Labubu artwork. Name used for the facts only.
 Caption disclaimer: "Prices vary by series and country. Collectibles are not investments, and this is not financial advice."
+
+## v2 (Nov 23): story rewrite in the mirror/barbershop style (creator feedback: v1 was too fact-heavy to stop a random scroller). v1 kept in script-v1-facts.md.
+All lines are a fictional "you" story. The only real-world facts implied: Labubus come in blind boxes with rare "secret" figures that people chase (true, see above). The ending (a flood of supply makes the line disappear) shows supply and demand without stating it. No stats in the voice; caption can carry the real numbers ($150K auction, 24% resale drop).

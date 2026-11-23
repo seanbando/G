@@ -1,21 +1,17 @@
-You Bought a Labubu (build, then life breaks it)
+You Start a Labubu Stand (build, then life breaks it)
 
-You buy a Labubu blind box for about twenty-seven dollars, and you don't even know which one is inside.
+You put one Labubu on a folding table outside your house, and a kid buys it in ten seconds.
 
-You open it. It's the secret one, roughly a one-in-seventy-two pull, and people online will pay way more than you did.
+Three more people knock on your door, so you order a whole case of blind boxes.
 
-So you buy twenty more boxes to flip.
+Nobody knows which one is inside, so people buy two, then five, chasing the rare one.
 
-Meanwhile, one Labubu sells at auction for about a hundred fifty thousand dollars.
+The line wraps around the block, so you hang a velvet rope and a sign that says one per customer.
 
-Then the fakes show up. People call them Lafufus, and customs seizes eleven thousand of them at one airport.
+Every box sells out, so you double the price, and people pay it anyway.
 
-Then the company does the one thing that kills a frenzy. It makes more.
+Then somebody pulls the secret one and screams so loud the whole street comes running.
 
-Mini Labubu resale prices drop about twenty-four percent from the peak, and a regular box can resell for less than you paid.
+Now you're the Labubu plug for the entire neighborhood.
 
-You're sitting on twenty boxes nobody wants.
-
-Scarcity made the price. More supply took it away.
-
-Congrats, you just lived through a bubble.
+Then your mom walks out with a bag of fifty she found on sale, dumps them on your table, and the whole line walks away.
