@@ -12,3 +12,8 @@ Format: "How You Invented" (fix that breaks): double-meaning opener (clean, PG-1
 | Jay's rumor, the crash-out line | Story (fiction) | n/a |
 
 Caption facts (optional): "FDIC insurance started Jan 1, 1934. Today it covers up to $250,000 per depositor, per bank, per ownership category. Since 1934, no depositor has lost a penny of FDIC-insured funds (FDIC)."
+
+## Outside review (Nov 23), applied
+- Coverage limit added: up to $250,000 per depositor, per insured bank, per ownership category (FDIC FAQ). Voice says "up to two hundred fifty thousand dollars"; the caption carries the full rule.
+- "Now nobody needs to rush, so nobody does" / "nobody panics" were too absolute: insurance reduces the incentive to run, it doesn't eliminate runs. Now: "most people have no reason to rush" and "most people don't panic... unless they had way more than that in the bank. Just ask Silicon Valley Bank."
+- SVB: March 2023 run driven heavily by uninsured deposits (Federal Reserve, "SVB Key Takeaways", April 2023).

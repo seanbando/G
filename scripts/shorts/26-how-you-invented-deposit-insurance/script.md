@@ -14,8 +14,8 @@ So the panic spreads, and banks all over the country collapse the same way.
 
 "JUST LEAVE YOUR MONEY IN THE BANK!"
 
-So the government makes a promise: if your bank fails, your deposits are covered. Genius.
+So the government makes a promise: if your bank fails, your deposits are covered, up to two hundred fifty thousand dollars. Genius.
 
-Now nobody needs to rush, so nobody does.
+Now most people have no reason to rush.
 
-Now nobody panics when they pull out.
+So most people don't panic when they pull out, unless they had way more than that in the bank. Just ask Silicon Valley Bank.
