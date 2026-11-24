@@ -2,7 +2,7 @@ The Biggest Buyer of Apple Stock Is Apple (Money Mystery)
 
 Apple's biggest customer isn't you. It's Apple, buying its own stock.
 
-Since twenty thirteen, Apple has spent over eight hundred billion dollars buying back its own shares, several times more than it spent on research.
+Over eight hundred billion dollars of it.
 
 Picture Apple as a giant pizza, cut into slices called shares.
 
@@ -14,6 +14,6 @@ Apple has cut its number of slices by over forty percent.
 
 So if you held one share the whole time, you now own a bigger chunk of Apple without buying anything.
 
-Critics say that money could have built the next big product instead.
+That's several times more than Apple spent on research, and critics say it could have built the next big product instead.
 
 Apple's favorite investment isn't a new iPhone. It's itself.
