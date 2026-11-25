@@ -21,4 +21,27 @@ node tools/frame_check.js video/01-follow-one-dollar/motion/hook
 cd video/01-follow-one-dollar/motion/hook && DO_NOT_TRACK=1 HYPERFRAMES_NO_TELEMETRY=1 HF_CLI_TELEMETRY_DISABLED=1 npx --yes hyperframes@0.9.92 render
 ```
 
-Sound effects are added in one pass at the end, once all scenes are done.
+## The master
+
+```bash
+node video/01-follow-one-dollar/motion/dump_events.js
+```
+
+```bash
+python3 video/01-follow-one-dollar/motion/mix_audio.py
+```
+
+```bash
+python3 video/01-follow-one-dollar/motion/assemble.py
+```
+
+```bash
+python3 video/01-follow-one-dollar/motion/make_extras.py
+```
+
+- `dump_events.js` lists every motion event with its time in the full video (`../final/events.json`).
+- `mix_audio.py` mixes voice + music + sound effects (`audio/music/`, `audio/sfx/`) to YouTube loudness. `--music-db -31` sets the music level, `--sfx-db 0` raises or lowers all sound effects.
+- `assemble.py` joins the sections and puts the master audio on top (`../final/follow-one-dollar.mp4`).
+- `make_extras.py` writes captions (`captions.srt`) and YouTube chapters (`youtube-chapters.txt`).
+
+Also built in: mascots sway and blink; ten key reveals get a slow camera push-in (`zoom: [word, x, y, scale]` on a scene).
