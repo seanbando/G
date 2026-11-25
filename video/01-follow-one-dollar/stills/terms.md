@@ -39,7 +39,6 @@ Every term a viewer might not know gets a yellow "IN PLAIN WORDS" card on the st
 | S122 | EARNINGS |  | A company's profit: the money left after it pays its costs. |
 | S128 | S&P 500 |  | A list of about 500 of the biggest U.S. companies. |
 | S128 | INDEX FUND |  | A fund that simply buys everything on a list. |
-| S130 | WEIGHT |  | How much of the basket each company takes up. Bigger company, bigger share of the basket. |
 | S133 | RETURN |  | How much an investment gained or lost over a period, shown as a percent. |
 | S134 | REINVESTED |  | Dividends used to buy more shares instead of being spent. |
 | S134 | INFLATION |  | Everyday prices rising over time, so a dollar buys less. |
@@ -50,4 +49,3 @@ Every term a viewer might not know gets a yellow "IN PLAIN WORDS" card on the st
 | S157 | NVIDIA |  | A company that designs computer chips, including chips used for AI. |
 | S159 | CANDLESTICK CHART |  | A price chart made of bars. Each bar shows where the price started, ended, and its high and low. |
 | S160 | FINANCIALLY FREE |  | Having enough money that you don't have to work just to pay the bills. |
-| S162 | CANDLESTICK CHART |  | A price chart made of bars. Each bar shows where the price started, ended, and its high and low. |

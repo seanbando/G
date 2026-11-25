@@ -25,8 +25,7 @@ S.S129 = { h: "You buy a slice of the fund, and the fund owns the companies for 
   body: g(300, 620, 1, person({ shirt: BLUE, label: "You" })) + arrow(440, 560, 700, 560, { color: DGREEN, label: "buy a slice of the fund", ldy: -30, lsize: 30 }) + g(960, 680, 1, fullBasket()) + t(960, 850, "THE FUND", 40, { w: 900 }) +
     arrow(1200, 560, 1380, 560, { color: GREY, label: "owns", ldy: -24 }) + [0, 1, 2].map((i) => g(1480 + i * 130, 700, 0.42, tower(["A", "B", "C"][i], { w: 200, h: 300 + (i % 2) * 60, sign: [BLUE, ORANGE, PURPLE][i] }))).join("") + t(1610, 760, "the companies", 36, { w: 900 }) };
 S.S130 = { h: "The biggest companies get the biggest weight in the basket",
-  body: g(820, 700, 1.05, fullBasket([1.5, 1.15, 0.9, 0.7, 0.55, 0.42, 0.34])) + arrow(480, 520, 600, 520, { color: DGREEN }) + t(330, 532, "biggest company", 34, { w: 900, fill: DGREEN }) + arrow(1240, 560, 1080, 580, { color: GREY }) + t(1420, 572, "smaller companies", 34, { w: 900, fill: GREY }),
-  term: ["WEIGHT", "How much of the basket each company takes up. Bigger company, bigger share of the basket."] };
+  body: `<g transform="translate(-150 -100) scale(1.25)">` + g(820, 700, 1.05, fullBasket([1.5, 1.15, 0.9, 0.7, 0.55, 0.42, 0.34])) + arrow(480, 520, 600, 520, { color: DGREEN }) + t(330, 532, "biggest company", 34, { w: 900, fill: DGREEN }) + arrow(1240, 560, 1080, 580, { color: GREY }) + t(1420, 572, "smaller companies", 34, { w: 900, fill: GREY }) + `</g>` };
 S.S131 = { body: `<g transform="translate(900 640) scale(2.9 0.75)">${buck("shocked")}</g>` + bubble(1320, 340, "So thin…", { tail: "left" }) };
 S.S132 = { body: g(900, 520, 1.3, hamlet("proud")) + g(900, 720, 1.5, basket({ w: 420 })) + bubble(1340, 300, "I'd sit in this.", { tail: "left" }) };
 S.S133 = { h: "Over long periods, the S&P 500 has returned roughly 10% a year",
@@ -106,8 +105,7 @@ S.S160 = { h: "I started learning about money because I want to be financially f
   term: ["FINANCIALLY FREE", "Having enough money that you don't have to work just to pay the bills."] };
 S.S161 = { body: g(900, 900, 1.6, house({ roof: "new" })) + g(900, 500, 0.85, buck("shocked")) + bubble(1380, 300, "I'm in the roof.", { tail: "left" }) };
 S.S162 = { h: "Next time: how to read a candlestick chart without getting lost",
-  body: card(960, 580, 900, 520, t(0, -200, "NEXT VIDEO", 36, { w: 900, fill: GREY }) + g(-330, 200, 1.15, candles(12, { w: 580, h: 300, seed: 8 })), { sw: 9 }),
-  term: ["CANDLESTICK CHART", "A price chart made of bars. Each bar shows where the price started, ended, and its high and low."] };
+  body: card(960, 640, 900, 520, t(0, -200, "NEXT VIDEO", 36, { w: 900, fill: GREY }) + g(-330, 200, 1.15, candles(12, { w: 580, h: 300, seed: 8 })), { sw: 9 }) };
 const cbubble = (x, y, ls, fill = "#fff") => g(x, y, 1, W(`<path d="M -330 -110 H 330 Q 360 -110 360 -80 V 60 Q 360 90 330 90 H -180 L -250 150 L -240 90 H -330 Q -360 90 -360 60 V -80 Q -360 -110 -330 -110 Z" fill="${fill}" stroke="${INK}" stroke-width="7" stroke-linejoin="round"/>`) + ls.map((l, i) => t(0, -30 + i * 56 + (ls.length === 1 ? 30 : 0), l, 44, { w: 900 })).join(""));
 S.S163 = { h: "Tell me in the comments", body: cbubble(520, 520, ["Which stop", "surprised you most?"]) + cbubble(1400, 620, ["What was your", "first stock?"], YEL) };
 S.S164 = { h: "If this made the stock market make more sense, a like really helps",
