@@ -4,7 +4,7 @@ const path = require("path");
 const { chromium } = require("playwright");
 const L = require("../stills/lib.js");
 const { fontCss } = require("../stills/compose.js");
-const { g, W, buck, hamlet, phone, appScreen, tower, appleIcon, bill, arrow, cross, INK, RED, GREEN, DGREEN, PAPER } = L;
+const { g, W, buck, hamlet, phone, appScreen, tower, bank, pocket, appleIcon, bill, arrow, cross, INK, RED, GREEN, DGREEN, PAPER } = L;
 
 // big thumbnail text: heavy, with a thick outline so it reads at phone size
 const big = (x, y, str, size, { fill = "#fff", stroke = INK, sw = 0.16, anchor = "middle", rot = 0 } = {}) =>
@@ -16,10 +16,11 @@ const OPTIONS = {
   a: `<rect width="1280" height="720" fill="#ffd84d"/>${rays(330, 420, "#ffd84d", "#ffc81f")}` +
     g(330, 430, 1.75, buck("shocked")) +
     big(900, 250, "APPLE", 150, { fill: "#fff" }) + big(900, 390, "GETS", 150, { fill: "#fff" }) + big(900, 640, "$0", 300, { fill: RED, stroke: "#fff", sw: 0.1 }),
-  // B: the question and the journey
+  // B: the question and the journey, from your pocket to Wall Street
   b: `<rect width="1280" height="720" fill="${GREEN}"/>${rays(640, 800, GREEN, "#1f9150")}` +
-    W(`<path d="M -20 600 C 200 420, 380 700, 600 560 S 900 380, 1300 520" fill="none" stroke="${INK}" stroke-width="34" stroke-linecap="round"/><path d="M -20 600 C 200 420, 380 700, 600 560 S 900 380, 1300 520" fill="none" stroke="#fff" stroke-width="8" stroke-dasharray="30 34" stroke-linecap="round"/>`) +
-    g(300, 400, 1.25, buck("cocky")) + big(1150, 520, "?", 330, { fill: "#ffd84d" }) +
+    W(`<path d="M 210 560 C 380 430, 520 700, 700 580 S 880 470, 1000 600" fill="none" stroke="${INK}" stroke-width="34" stroke-linecap="round"/><path d="M 210 560 C 380 430, 520 700, 700 580 S 880 470, 1000 600" fill="none" stroke="#fff" stroke-width="8" stroke-dasharray="30 34" stroke-linecap="round"/>`) +
+    g(150, 560, 0.85, pocket()) + g(1090, 700, 0.74, bank(" ", { w: 380 })) + `<text x="1090" y="517" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="46" fill="${INK}">WALL ST</text>` +
+    g(590, 440, 1.05, buck("cocky")) +
     big(640, 120, "WHERE DOES", 112) + big(640, 240, "YOUR $1 GO?", 124, { fill: "#ffd84d" }),
   // C: the tap and the crossed-out arrow
   c: `<rect width="1280" height="720" fill="#2b6cb0"/>${rays(640, 360, "#2b6cb0", "#2a63a2")}` +
