@@ -18,7 +18,7 @@ Every term a viewer might not know gets a yellow "IN PLAIN WORDS" card on the st
 | S051 | BEST EXECUTION |  | Your broker's duty to try to get you the best deal that is reasonably available. |
 | S053 | INVENTORY |  | Shares the market maker already owns and keeps ready to sell. |
 | S055 | STOCK EXCHANGE |  | An organized marketplace where buyers and sellers of shares are matched. Most people picture it when they hear "Wall Street". |
-| S056 | NYSE | New York Stock Exchange | The biggest U.S. stock exchange. Its building is on Wall Street in New York City. |
+| S056 | NYSE | New York Stock Exchange | One of the biggest U.S. stock exchanges. Its building is on Wall Street in New York City. |
 | S057 | DATA CENTER |  | A building full of computers. This is where the trades are really matched. |
 | S058 | NASDAQ |  | The other big U.S. stock exchange. Many tech companies, including Apple, are listed on it. |
 | S065 | EXTENDED HOURS |  | Trading before 9:30 a.m. or after 4 p.m., when far fewer people are trading. |

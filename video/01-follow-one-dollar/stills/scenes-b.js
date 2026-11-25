@@ -74,7 +74,7 @@ S.S055 = { h: "Stop 3: the stock exchange", map: false,
   term: ["STOCK EXCHANGE", "An organized marketplace where buyers and sellers of shares are matched. Most people picture it when they hear \"Wall Street\"."] };
 S.S056 = { h: "The opening bell rings at 9:30 a.m. Eastern time",
   body: g(620, 830, 1.1, bank("NEW YORK STOCK EXCHANGE", { w: 520 })) + g(1240, 480, 1.3, bell()) + g(1560, 500, 1.1, clock(9, 30)) + t(1560, 660, "9:30 a.m.", 48, { w: 900 }) + t(1560, 710, "Eastern time", 32, { fill: GREY }),
-  term: ["NYSE", "The biggest U.S. stock exchange. Its building is on Wall Street in New York City.", "New York Stock Exchange"] };
+  term: ["NYSE", "One of the biggest U.S. stock exchanges. Its building is on Wall Street in New York City.", "New York Stock Exchange"] };
 S.S057 = { h: "The computers that match its trades are in New Jersey",
   body: g(700, 800, 1.3, rack({ n: 4 })) + g(1400, 690, 1.2, signpost("Mahwah,", "New Jersey")) + t(700, 860, "NYSE data center", 38, { w: 900 }),
   term: ["DATA CENTER", "A building full of computers. This is where the trades are really matched."] };
