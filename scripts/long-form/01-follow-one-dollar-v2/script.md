@@ -268,8 +268,8 @@ Usually none of it, because your dollar goes to whoever sold you the share.
 It could be your own broker, a market maker, a big fund, or a retired teacher.
 [SOURCE: SEC Investor.gov, Executing an Order; SEC Rule 605 FAQ]
 
-**S075 · NARRATOR · ~4 s · EXAMPLE**
-Say she's selling a little stock to help pay for a new roof.
+**S075 · NARRATOR · ~5 s · EXAMPLE**
+Say the retired teacher is selling a little stock to help pay for a new roof.
 
 **S076 · BUCK · ~5 s · gag**
 Tell her I'll pay for the roof myself, so she doesn't have to sell.
