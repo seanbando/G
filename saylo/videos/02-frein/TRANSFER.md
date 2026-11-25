@@ -29,26 +29,28 @@ Keep the same folder layout under the repo. Also outside the repo:
 - Python 3.13 on PATH
 - Git, Claude desktop app, VideoHub (`C:\Users\owner\VideoHub`)
 
-## 4. Where the edit stands
-| Section | Time | Plan | In motion |
+## 4. Where the edit stands (Nov 25, 2026)
+**Every chapter is rendered in motion and the whole film is joined: `build/render/frein_full_v1.mp4` (12:08, one soundtrack, -14 LUFS).**
+Cold open v7 is approved; the creator has given notes on the Barracks and the Swamp chapter (applied); the other chapters and the
+full join are awaiting the creator's notes.
+
+| Section | Time | Plan | Chapter file |
 |---|---|---|---|
-| Cold open | 0:00–0:53 | `shots2.json` | **v7 approved** (`frein_cold_open_v7.mp4`) |
-| Hook | 0:53–1:49 | `shots3.json` | rendered, sent (`frein_s2_hook.mp4`), awaiting notes |
-| 01 The Barracks | 1:49–3:40 | `shots4.json` | rendered, sent (`frein_s3_barracks.mp4`), awaiting notes |
-| 02–03 Swamp, Who | 3:40–5:27 | `shots5.json` | stills only |
-| 04–05 Search, Left Behind | 5:27–7:23 | `shots6.json` | stills only |
-| 06 The Hangar | 7:23–9:17 | `shots7.json` | stills only |
-| 07–08 Verdict, Confession | 9:17–10:55 | `shots8.json` | stills only |
-| 09 Handoff + outro | 10:55–12:08 | `shots9.json` | stills only |
+| Cold open | 0:00-0:53 | `shots2.json` | `frein_cold_open_v7.mp4` (approved) |
+| Hook | 0:53-1:49 | `shots3.json` | `frein_s2_hook.mp4` |
+| 01 The Barracks | 1:49-3:40 | `shots4.json` | `frein_s3_barracks.mp4` |
+| 02-03 Swamp, Who | 3:40-5:27 | `shots5.json` | `frein_s4_swamp_who.mp4` |
+| 04-05 Search, Left Behind | 5:27-7:23 | `shots6.json` | `frein_s5_search.mp4` |
+| 06 The Hangar | 7:23-9:17 | `shots7.json` | `frein_s6_hangar.mp4` |
+| 07-08 Verdict, Confession | 9:17-10:55 | `shots8.json` | `frein_s7_court.mp4` |
+| 09 Handoff + outro | 10:55-12:08 | `shots9.json` | `frein_s8_handoff.mp4` |
 
-Joined review file of everything rendered so far: `build/render/frein_0000_0340.mp4` (0:00–3:40).
+To change a shot: edit the plan (or `make_plans.py` for shots6-9, then run it), `build.ps1 -Plan shotsN.json -Only "id"`,
+`python assemble.py shotsN.json`, then `python final.py v2` for a new full film.
+**Never run two build jobs at once** (the second corrupts the first's frames).
 
-**Next step: render chapters 02–03** (`shots5.json`). Re-run its stills first (they predate the 16-sample look pass),
-check them, then `build.ps1 -Plan shots5.json`.
-
-**Backup package:** folder `Frein-backup` (uploaded to Google Drive by the creator): `1-media.zip`, `2-kit.zip`,
-`3-renders.zip`, `4-claude-memory.zip`. Unzip 1–3 into the repo folder (`G`); they already contain the right sub-paths.
-Unzip 4 into `C:/Users/<you>/.claude/projects/C--Users-owner-G/` (only matches if the repo sits at the same path).
+**Backup package:** folder `Frein-backup`: `1-media.zip`, `2-kit.zip`, `3-renders.zip`, `4-claude-memory.zip`. Unzip 1-3 into
+the repo folder (`G`); they already contain the right sub-paths.
 
 ## 5. How to carry on
 From `saylo\videos\02-frein\build\style-test\`:
@@ -59,7 +61,8 @@ From `saylo\videos\02-frein\build\style-test\`:
   again unless you pass `-Only "id,id"` for the missing ones.
 
 ## 6. Still open
-- Outlet names for two photo credits (shots 413 and 439).
-- One soundtrack for the whole film (`final.py`, not written yet): joins every `_picture.mp4`.
-- Thumbnail.
+- Creator's notes on the full film; any weak 3D shot gets replaced by a still, real footage or a card (creator's rule).
+- Small cold-open items: "ABOUT 2 HOURS IN" faint on the sky, a map label under the stamp, dark wide shot at 0:33.
+- Thumbnail (phone-size test at 168 px), title and upload package.
+- Two photos run without a source watermark by the creator's decision (shots 413, 439).
 - Rules and decisions: see `edit-plan.md`.

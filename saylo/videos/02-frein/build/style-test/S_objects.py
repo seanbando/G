@@ -117,8 +117,9 @@ elif OBJ == "laptop":
     kit.light("AREA", (0, -0.05, 0.3), (0, 0.12, 0.12), power=2, color="#8FB0FF", size=0.3, name="ScreenSpill")
     focus, dist, lens = (0, 0.12, 0.118), 0.86, 50
 elif OBJ == "cuffs":
-    amber = rt.gloss(rt.SUBJECT, 0.14, 1.0, "CuffAmber")
-    amber_d = rt.gloss("#9A5A1C", 0.3, 0.6, "CuffAmberDark")
+    # steel, not amber: the amber pair read as a toy. The amber stays in the type and the edge light.
+    amber = rt.gloss("#C4C8CE", 0.2, 1.0, "CuffSteel")
+    amber_d = rt.gloss("#3A3D42", 0.35, 0.9, "CuffSteelDark")
     for sx in (-1, 1):
         cx_ = sx * 0.07
         for mr, z_ in ((0.038, 0.004), (0.038, 0.012)):      # the two bars of the fixed bow
@@ -126,7 +127,7 @@ elif OBJ == "cuffs":
             kit.assign(bpy.context.active_object, amber)
         bpy.ops.mesh.primitive_torus_add(major_radius=0.034, minor_radius=0.0032, major_segments=64, location=(cx_, 0.004, 0.008))
         kit.assign(bpy.context.active_object, amber)          # the swinging ratchet arm, between them
-        lock = clay.box(0.034, 0.03, 0.02, (cx_ - sx * 0.04, 0, 0.01), amber, "Lock")
+        lock = clay.box(0.03, 0.022, 0.013, (cx_ - sx * 0.04, 0, 0.008), amber, "Lock")
         clay.cyl(0.003, 0.021, (cx_ - sx * 0.04, -0.006, 0.01), amber_d, "Keyhole", verts=12)
         for k_ in range(6):                                # ratchet teeth
             clay.box(0.002, 0.004, 0.006, (cx_ + sx * (0.02 + k_ * 0.003), 0.03 - k_ * 0.0016, 0.008), amber_d, "Tooth", bevel=False)

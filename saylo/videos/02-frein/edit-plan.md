@@ -110,3 +110,8 @@ card "RECORDED STATEMENT" → court opinion p. 28 with the highlighter (tease).
 - `frein_s5_search.mp4` (5:27-7:23, 40 shots) rendered and sent on its own. Creator wants chapters sent one by one, one full join at the end.
 - Never run two build jobs at once: the second corrupts the first's frames (S223 came back 76/82 frames).
 - Next to render: `shots7.json` (06 The Hangar, 7:23-9:17).
+
+## Nov 25, 2026 (later): whole film in motion
+- Chapters 06-09 rendered and sent one by one. Handcuffs changed from amber to steel (the amber pair read as a toy).
+- `final.py` written: joins every chapter's `_picture.mp4` and mixes one soundtrack (bed out 675.6-684.5 for the handcuffs).
+- **`frein_full_v1.mp4`: 12:08, -14.0 LUFS, no silence over 0.9 s.** Awaiting the creator's notes.
