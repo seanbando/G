@@ -35,8 +35,6 @@ from qa_narration import norm_tokens  # noqa: E402
 from build_track import loudness, LIMIT, CLIP_TARGET, FINAL_TARGET  # noqa: E402
 import generate_voiceovers as gv  # noqa: E402
 
-TRIM = ("silenceremove=start_periods=1:start_threshold=-40dB:start_silence=0.05,"
-        "areverse,silenceremove=start_periods=1:start_threshold=-40dB:start_silence=0.12,areverse")
 GAP_SAME_VOICE = 0.35   # between two takes of the narrator (a section break)
 GAP_NEW_VOICE = 0.4     # when Buck or Hamlet cuts in, or hands back
 
@@ -114,6 +112,43 @@ def record(segs, out, only):
         print(f"recorded {s['id']} {s['voice']}: {len(s['lines'])} line(s), {len(text)} chars")
     for s in takes:
         s["path"] = os.path.join(out, "takes", f"{s['id']}_{s['voice']}.mp3")
+
+
+def clean_edges(src, dst, speech_end, sr=44100):
+    """Cut any click, breath or static before the first word and after the last one.
+    Start: finds where speech gets loud and walks back to the last quiet moment before it.
+    End: never cuts before Whisper's end of the last word (speech_end); cuts at the first
+    0.1 s of real quiet after it, so trailing static is dropped but soft last words stay.
+    Tiny fades so the cut itself can't click."""
+    pcm = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", src, "-ac", "1", "-ar", str(sr), "-f", "f32le", "-"],
+                         capture_output=True, check=True, stdin=subprocess.DEVNULL).stdout
+    a = np.frombuffer(pcm, dtype=np.float32).copy()
+    win = int(0.01 * sr)
+    n = len(a) // win
+    db = 20 * np.log10(np.abs(a[:n * win]).reshape(n, win).max(axis=1) + 1e-9)
+    top = db.max()
+    first = int(np.argmax(db > top - 12))
+    j = first
+    for _ in range(30):  # up to 0.3 s back to the last quiet moment
+        if j == 0 or db[j - 1] < top - 32:
+            break
+        j -= 1
+    start = (j - 1 if j > 0 and db[j - 1] < top - 32 else max(0, j - 4)) * win
+    k = min(n - 1, int(np.ceil(speech_end / 0.01)))
+    end_w = None
+    while k < min(n, int((speech_end + 0.8) / 0.01)):
+        if k + 10 <= n and (db[k:k + 10] < top - 35).all():
+            end_w = k + 2
+            break
+        k += 1
+    end = min(len(a), (end_w if end_w else int((speech_end + 0.3) / 0.01)) * win)
+    a = a[start:end]
+    fi, fo = int(0.008 * sr), int(0.03 * sr)
+    a[:fi] *= np.linspace(0, 1, fi)
+    a[-fo:] *= np.linspace(1, 0, fo)
+    subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-f", "f32le", "-ar", str(sr), "-ac", "1", "-i", "-",
+                    "-c:a", "pcm_s16le", dst], input=a.tobytes(), check=True)
+    return start / sr, end / sr
 
 
 def words_in(model, wav):
@@ -202,7 +237,10 @@ def main():
         just_paused = False
         raw = os.path.join(tmp, s["id"] + "_raw.wav")
         wav = os.path.join(tmp, s["id"] + ".wav")
-        ff("-i", s["path"], "-af", TRIM, "-ac", "1", "-ar", "44100", "-c:a", "pcm_s16le", raw)
+        heard_raw = words_in(model, s["path"])
+        cut_in, cut_out = clean_edges(s["path"], raw, heard_raw[-1]["end"] if heard_raw else 1e9)
+        if cut_in > 0.2:
+            print(f"  {s['id']}: cut {cut_in:.2f} s of noise/silence before the first word")
         ff("-i", raw, "-af", f"volume={CLIP_TARGET - loudness(raw):.2f}dB,{LIMIT}", "-ac", "1", "-ar", "44100",
            "-c:a", "pcm_s16le", wav)
         length = duration(wav)
