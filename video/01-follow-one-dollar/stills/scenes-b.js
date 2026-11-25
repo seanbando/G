@@ -74,44 +74,50 @@ S.S054 = { h: "If it doesn't, your order can head to stop 3",
   body: g(520, 640, 1.1, shelf(0)) + A(t(520, 770, "shelf is empty", 36, { w: 800, fill: RED }), "doesn't", "fade") + A(arrow(860, 560, 1160, 560, { color: DGREEN, width: 12 }), "head", "wipe", { dir: "r", dur: 0.5 }) + A(g(1440, 760, 0.8, bank("STOP 3", { w: 380 })), "stop", "pop") };
 
 // ---------- STOP 3: THE EXCHANGE ----------
-S.S055 = { h: "Stop 3: the stock exchange", map: false,
-  body: map(["done", "done", "active"], { at: 3, who: buck("happy"), y: 400, s: 0.9, x: 240 }),
+S.S055 = { h: "Stop 3: the stock exchange", map: false, anims: [{ sel: "#map-stop3", on: "stop>", fx: "pop" }],
+  body: map(["done", "done", "active"], { at: 3, who: buck("happy"), y: 400, s: 0.9, x: 240, whoOn: "stop" }),
   term: ["STOCK EXCHANGE", "An organized marketplace where buyers and sellers of shares are matched. Most people picture it when they hear \"Wall Street\"."] };
 S.S056 = { h: "The opening bell rings at 9:30 a.m. Eastern time",
-  body: g(620, 830, 1.1, bank("NEW YORK STOCK EXCHANGE", { w: 520 })) + g(1240, 480, 1.3, bell()) + g(1560, 500, 1.1, clock(9, 30)) + t(1560, 660, "9:30 a.m.", 48, { w: 900 }) + t(1560, 710, "Eastern time", 32, { fill: GREY }),
+  body: A(g(620, 830, 1.1, bank("NEW YORK STOCK EXCHANGE", { w: 520 })), "new", "pop") + A(g(1240, 480, 1.3, bell()), "bell", "stamp") +
+    A(g(1560, 500, 1.1, clock(9, 30)) + t(1560, 660, "9:30 a.m.", 48, { w: 900 }), "at>", "pop") + A(t(1560, 710, "Eastern time", 32, { fill: GREY }), "eastern", "fade"),
   term: ["NYSE", "One of the biggest U.S. stock exchanges. Its building is on Wall Street in New York City.", "New York Stock Exchange"] };
 S.S057 = { h: "The computers that match its trades are in New Jersey",
-  body: g(700, 800, 1.3, rack({ n: 4 })) + g(1400, 690, 1.2, signpost("Mahwah,", "New Jersey")) + t(700, 860, "NYSE data center", 38, { w: 900 }),
+  body: A(g(700, 800, 1.3, rack({ n: 4 })), "computers", "pop") + A(t(700, 410, "NYSE data center", 38, { w: 900 }), "data", "fade") + A(g(1400, 690, 1.2, signpost("Mahwah,", "New Jersey")), "new", "pop"),
   term: ["DATA CENTER", "A building full of computers. This is where the trades are really matched."] };
 S.S058 = { h: "Nasdaq's main computers are in New Jersey too",
   body: g(480, 760, 0.9, rack({ n: 3 })) + t(480, 820, "NYSE computers", 36, { w: 900 }) + g(480, 400, 0.8, signpost("Mahwah, NJ", null, { w: 320 })) +
-    g(1440, 760, 0.9, rack({ n: 3 })) + t(1440, 820, "Nasdaq computers", 36, { w: 900 }) + g(1440, 400, 0.8, signpost("Carteret, NJ", null, { w: 320, fill: BLUE })),
+    A(g(1440, 760, 0.9, rack({ n: 3 })) + t(1440, 820, "Nasdaq computers", 36, { w: 900 }), "nasdaq's", "pop") + A(g(1440, 400, 0.8, signpost("Carteret, NJ", null, { w: 320, fill: BLUE })), "carteret", "pop"),
   term: ["NASDAQ", "The other big U.S. stock exchange. Many tech companies, including Apple, are listed on it."] };
-S.S059 = { body: g(760, 640, 1.6, buck("annoyed")) + g(1340, 700, 1.3, signpost("WELCOME TO", "NEW JERSEY", { fill: BLUE })) + bubble(1120, 320, "New Jersey?!", { tail: "left" }) };
-const lists = (buy, sell, match = false) =>
-  g(960, 440, 0.5, bank("STOCK EXCHANGE", { w: 1500 })) +
-  g(600, 690, 1, doc("BUYERS", buy, { w: 480, size: 36, hl: match ? 0 : -1 })) + g(1320, 690, 1, doc("SELLERS", sell, { w: 480, size: 36, hl: match ? 0 : -1 }));
-S.S060 = { h: "An exchange is a matchmaker that keeps two lists", body: lists(["", "", ""], ["", "", ""]) };
-S.S061 = { h: "One list holds buyers, the other holds sellers",
-  body: lists(["Buyer: will pay this much", "Buyer: will pay a bit less", "Buyer: will pay less still"], ["Seller: wants this much", "Seller: wants a bit more", "Seller: wants more still"]) };
-S.S062 = { h: "When a buyer and a seller agree on a price, it's a match",
-  body: lists(["Buyer: will pay this much", "Buyer: will pay a bit less", "Buyer: will pay less still"], ["Seller: wants this much", "Seller: wants a bit more", "Seller: wants more still"], true) +
-    W(`<path d="M 846 668 H 1074" stroke="${GREEN}" stroke-width="12" stroke-linecap="round"/>`) + stamp(960, 600, "MATCH", { color: GREEN, rot: -6, size: 44 }) };
-const dayBar = (ext = false) => {
-  const x0 = 260, w = 1400, seg = (a, b, fill, label, sub) => W(`<rect x="${x0 + a * w}" y="430" width="${(b - a) * w}" height="120" fill="${fill}" stroke="${INK}" stroke-width="6"/>`) + t(x0 + (a + b) / 2 * w, 484, label, 36, { w: 900, max: (b - a) * w - 20 }) + (sub ? t(x0 + (a + b) / 2 * w, 526, sub, 26, { w: 800, fill: GREY, max: (b - a) * w - 20 }) : "");
-  return (ext ? seg(0, 0.25, "#e6e2d6", "EARLY", "fewer traders") + seg(0.75, 1, "#e6e2d6", "LATE", "fewer traders") : "") + seg(0.25, 0.75, "#cfead7", "REGULAR TRADING", null) +
-    t(x0 + 0.25 * w, 610, "9:30 a.m.", 44, { w: 900 }) + t(x0 + 0.75 * w, 610, "4:00 p.m.", 44, { w: 900 }) + t(960, 660, "Eastern time", 32, { fill: GREY });
+S.S059 = { body: A(g(760, 640, 1.6, buck("annoyed")), "start", "slide", { dir: "l", idle: "talk" }) + A(g(1340, 700, 1.3, signpost("WELCOME TO", "NEW JERSEY", { fill: BLUE })), "new", "pop") + A(bubble(1120, 320, "New Jersey?!", { tail: "left" }), "got", "pop") };
+// the exchange's two lists. m.buy / m.sell: the word the filled-in list fades in on (over the empty one)
+const lists = (buy, sell, match = false, m = {}) => {
+  const empty = ["", "", ""], d = (x, title, rows, hl) => g(x, 720, 1, doc(title, rows, { w: 480, size: 36, hl }));
+  return g(960, 476, 0.5, bank("STOCK EXCHANGE", { w: 1500 })) +
+    (m.buy ? d(600, "BUYERS", empty, -1) + `<g data-allow-overlap>${A(d(600, "BUYERS", buy, -1), m.buy, "fade")}</g>` : d(600, "BUYERS", buy, match ? 0 : -1)) +
+    (m.sell ? d(1320, "SELLERS", empty, -1) + `<g data-allow-overlap>${A(d(1320, "SELLERS", sell, -1), m.sell, "fade")}</g>` : d(1320, "SELLERS", sell, match ? 0 : -1));
 };
-const week = (y) => ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"].map((d, i) => W(`<rect x="${470 + i * 144}" y="${y}" width="120" height="96" rx="14" fill="${i < 5 ? "#cfead7" : "#e6e2d6"}" stroke="${INK}" stroke-width="5"/>`) + t(530 + i * 144, y + 60, d, 34, { w: 900, fill: i < 5 ? INK : GREY })).join("");
-S.S063 = { h: "Regular trading: 9:30 to 4, Monday through Friday", hOpts: { max: 60 }, body: dayBar() + week(730) };
+const BUYERS = ["Buyer: will pay this much", "Buyer: will pay a bit less", "Buyer: will pay less still"], SELLERS = ["Seller: wants this much", "Seller: wants a bit more", "Seller: wants more still"];
+S.S060 = { h: "An exchange is a matchmaker that keeps two lists", body: A(lists(["", "", ""], ["", "", ""]), "exchange", "fade") };
+S.S061 = { h: "One list holds buyers, the other holds sellers", enter: "cut", body: lists(BUYERS, SELLERS, false, { buy: "buyers", sell: "sellers" }) };
+S.S062 = { h: "When a buyer and a seller agree on a price, it's a match", enter: "cut",
+  body: lists(BUYERS, SELLERS, true) + A(W(`<path d="M 846 698 H 1074" stroke="${GREEN}" stroke-width="12" stroke-linecap="round"/>`), "agree", "wipe", { dir: "r", dur: 0.4 }) + A(stamp(960, 630, "MATCH", { color: GREEN, rot: -6, size: 44 }), "matches", "stamp") };
+// the trading day. m = words for each part
+const dayBar = (ext = false, m = {}) => {
+  const T = (inner, key, fx = "pop", o = {}) => (m[key] ? A(inner, m[key], fx, o) : inner);
+  const x0 = 260, w = 1400, seg = (a, b, fill, label, sub) => W(`<rect x="${x0 + a * w}" y="430" width="${(b - a) * w}" height="120" fill="${fill}" stroke="${INK}" stroke-width="6"/>`) + t(x0 + (a + b) / 2 * w, 484, label, 36, { w: 900, max: (b - a) * w - 20 }) + (sub ? t(x0 + (a + b) / 2 * w, 526, sub, 26, { w: 800, fill: GREY, max: (b - a) * w - 20 }) : "");
+  return (ext ? T(seg(0, 0.25, "#e6e2d6", "EARLY", "fewer traders"), "early") + T(seg(0.75, 1, "#e6e2d6", "LATE", "fewer traders"), "late") : "") + T(seg(0.25, 0.75, "#cfead7", "REGULAR TRADING", null), "regular", "wipe", { dir: "r", dur: 0.6 }) +
+    T(t(x0 + 0.25 * w, 610, "9:30 a.m.", 44, { w: 900 }), "open") + T(t(x0 + 0.75 * w, 610, "4:00 p.m.", 44, { w: 900 }), "close") + T(t(960, 660, "Eastern time", 32, { fill: GREY }), "eastern", "fade");
+};
+const week = (y, on = null) => ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"].map((d, i) => { const box = W(`<rect x="${470 + i * 144}" y="${y}" width="120" height="96" rx="14" fill="${i < 5 ? "#cfead7" : "#e6e2d6"}" stroke="${INK}" stroke-width="5"/>`) + t(530 + i * 144, y + 60, d, 34, { w: 900, fill: i < 5 ? INK : GREY }); return on ? A(box, on, "pop", { delay: i * 0.07 }) : box; }).join("");
+S.S063 = { h: "Regular trading: 9:30 to 4, Monday through Friday", hOpts: { max: 60 }, body: dayBar(false, { regular: "regular", open: "from>", close: "to>", eastern: "eastern" }) + week(730, "monday") };
 S.S064 = { h: "The exceptions: market holidays and a few early-close days",
-  body: g(600, 560, 1.35, calendar("HOLIDAY", "CLOSED", { color: RED, w: 300 })) + g(1300, 560, 1.35, calendar("SOME DAYS", "EARLY", { sub: "closes early", color: ORANGE, w: 300 })) };
+  body: A(g(600, 560, 1.35, calendar("HOLIDAY", "CLOSED", { color: RED, w: 300 })), "holidays", "pop") + A(g(1300, 560, 1.35, calendar("SOME DAYS", "EARLY", { sub: "closes early", color: ORANGE, w: 300 })), "early", "pop") };
 S.S065 = { h: "Some apps let you trade earlier or later",
-  body: dayBar(true) + [0, 1].map((i) => g(400 + i * 60, 780, 0.34, person({ shirt: GREY }))).join("") + [0, 1, 2, 3, 4, 5, 6, 7].map((i) => g(730 + i * 66, 780, 0.34, person({ shirt: [BLUE, ORANGE, PURPLE, GREEN][i % 4], skin: i % 4 }))).join("") + [0, 1].map((i) => g(1460 + i * 60, 780, 0.34, person({ shirt: GREY }))).join(""),
+  body: dayBar(true, { early: "earlier", late: "later" }) + [0, 1].map((i) => A(g(400 + i * 60, 780, 0.34, person({ shirt: GREY })), "fewer", "pop", { delay: i * 0.08 })).join("") + [0, 1, 2, 3, 4, 5, 6, 7].map((i) => g(730 + i * 66, 780, 0.34, person({ shirt: [BLUE, ORANGE, PURPLE, GREEN][i % 4], skin: i % 4 }))).join("") + [0, 1].map((i) => A(g(1460 + i * 60, 780, 0.34, person({ shirt: GREY })), "fewer", "pop", { delay: 0.16 + i * 0.08 })).join(""),
   term: ["EXTENDED HOURS", "Trading before 9:30 a.m. or after 4 p.m., when far fewer people are trading."] };
 S.S066 = { h: "Fewer traders can mean bigger jumps and a wider gap",
-  body: card(520, 560, 680, 480, t(0, -190, "BIGGER PRICE JUMPS", 36, { w: 900, fill: RED }) + g(-270, 190, 1, chart([[0, 0.4], [0.12, 0.42], [0.2, 0.8], [0.32, 0.72], [0.45, 0.25], [0.6, 0.3], [0.72, 0.7], [0.86, 0.2], [1, 0.55]], { w: 540, h: 300, color: RED }))) +
-    card(1400, 560, 680, 480, t(0, -190, "WIDER GAP (SPREAD)", 36, { w: 900, fill: RED }) + t(-150, -70, "buy price", 34, { fill: GREY }) + W(`<path d="M -260 -40 H -40" stroke="${DGREEN}" stroke-width="12" stroke-linecap="round"/><path d="M -260 150 H -40" stroke="${ORANGE}" stroke-width="12" stroke-linecap="round"/><path d="M 0 -40 h 50 v 190 h -50" fill="none" stroke="${INK}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>`) + t(-150, 200, "sell price", 34, { fill: GREY }) + t(170, 70, "wider", 44, { w: 900, fill: RED })) };
+  body: A(card(520, 560, 680, 480, t(0, -190, "BIGGER PRICE JUMPS", 36, { w: 900, fill: RED })), "bigger", "pop") + A(g(250, 750, 1, chart([[0, 0.4], [0.12, 0.42], [0.2, 0.8], [0.32, 0.72], [0.45, 0.25], [0.6, 0.3], [0.72, 0.7], [0.86, 0.2], [1, 0.55]], { w: 540, h: 300, color: RED })), "jumps", "wipe", { dir: "r", dur: 1.0 }) +
+    A(card(1400, 560, 680, 480, t(0, -190, "WIDER GAP (SPREAD)", 36, { w: 900, fill: RED }) + t(-150, -70, "buy price", 34, { fill: GREY }) + W(`<path d="M -260 -40 H -40" stroke="${DGREEN}" stroke-width="12" stroke-linecap="round"/><path d="M -260 150 H -40" stroke="${ORANGE}" stroke-width="12" stroke-linecap="round"/><path d="M 0 -40 h 50 v 190 h -50" fill="none" stroke="${INK}" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>`) + t(-150, 200, "sell price", 34, { fill: GREY }) + t(170, 70, "wider", 44, { w: 900, fill: RED })), "wider", "pop") };
 
 // ---------- CHECKPOINT 1 ----------
 S.S067 = { h: "Quick check: look how far your dollar has come", mapDone: 3, stop: 0, map: false,
