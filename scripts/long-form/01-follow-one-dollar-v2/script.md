@@ -155,7 +155,7 @@ A market maker works the same way, regularly posting a buy price and a sell pric
 [SOURCE: SEC Investor.gov, Market Maker]
 
 **S045 · NARRATOR · ~6 s · EXAMPLE**
-Say it will buy Apple at two hundred fifty dollars and sell at two hundred fifty and two cents.
+Say it will buy Apple at three hundred fifty dollars and sell at three hundred fifty and two cents.
 
 **S046 · NARRATOR · ~5 s**
 That two-cent gap is called the spread, and the market maker tries to earn it.
@@ -419,13 +419,13 @@ The price you usually see is the last-traded price, the last price someone actua
 [SOURCE: SEC Investor.gov]
 
 **S118 · NARRATOR · ~3 s · EXAMPLE**
-Say Apple's last trade was two hundred fifty dollars even.
+Say Apple's last trade was three hundred fifty dollars even.
 
 **S119 · NARRATOR · ~5 s · EXAMPLE**
-The cheapest seller wants two hundred fifty dollars and five cents, and a buyer pays it.
+The cheapest seller wants three hundred fifty dollars and five cents, and a buyer pays it.
 
 **S120 · NARRATOR · ~4 s · EXAMPLE**
-The last-trade price now becomes two hundred fifty dollars and five cents.
+The last-trade price now becomes three hundred fifty dollars and five cents.
 
 **S121 · NARRATOR · ~5 s**
 Millions of small deals like that, every day, are what make a stock chart move.

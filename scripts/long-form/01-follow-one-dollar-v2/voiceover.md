@@ -167,7 +167,7 @@ Picture a currency booth at the airport, with one price to buy and one to sell.
 A market maker works the same way, regularly posting a buy price and a sell price.
 
 **S045 · NARRATOR** · EXAMPLE  
-Say it will buy Apple at two hundred fifty dollars and sell at two hundred fifty and two cents.
+Say it will buy Apple at three hundred fifty dollars and sell at three hundred fifty and two cents.
 
 **S046 · NARRATOR**  
 That two-cent gap is called the spread, and the market maker tries to earn it.
@@ -400,13 +400,13 @@ Dividends sound like savings that pay you rent, and I approve.
 The price you usually see is the last-traded price, the last price someone actually paid.
 
 **S118 · NARRATOR** · EXAMPLE  
-Say Apple's last trade was two hundred fifty dollars even.
+Say Apple's last trade was three hundred fifty dollars even.
 
 **S119 · NARRATOR** · EXAMPLE  
-The cheapest seller wants two hundred fifty dollars and five cents, and a buyer pays it.
+The cheapest seller wants three hundred fifty dollars and five cents, and a buyer pays it.
 
 **S120 · NARRATOR** · EXAMPLE  
-The last-trade price now becomes two hundred fifty dollars and five cents.
+The last-trade price now becomes three hundred fifty dollars and five cents.
 
 **S121 · NARRATOR**  
 Millions of small deals like that, every day, are what make a stock chart move.
@@ -590,7 +590,7 @@ If this made the stock market make more sense, a like really helps the channel.
 - **S042:** Brokers often send them to a trading firm called a market maker instead.
 - **S043:** Picture a currency booth at the airport, with one price to buy and one to sell.
 - **S044:** A market maker works the same way, regularly posting a buy price and a sell price.
-- **S045:** Say it will buy Apple at two hundred fifty dollars and sell at two hundred fifty and two cents.
+- **S045:** Say it will buy Apple at three hundred fifty dollars and sell at three hundred fifty and two cents.
 - **S046:** That two-cent gap is called the spread, and the market maker tries to earn it.
 - **S047:** It can lose money too, because the price can move against it a minute later.
 - **S048:** Citadel Securities says it executes about a third of all U.S. retail stock trading volume.
@@ -658,9 +658,9 @@ If this made the stock market make more sense, a like really helps the channel.
 - **S114:** The second way is dividends, when a company shares part of its profits with its owners.
 - **S115:** Not every company pays dividends, and the ones that do can cut them.
 - **S117:** The price you usually see is the last-traded price, the last price someone actually paid.
-- **S118:** Say Apple's last trade was two hundred fifty dollars even.
-- **S119:** The cheapest seller wants two hundred fifty dollars and five cents, and a buyer pays it.
-- **S120:** The last-trade price now becomes two hundred fifty dollars and five cents.
+- **S118:** Say Apple's last trade was three hundred fifty dollars even.
+- **S119:** The cheapest seller wants three hundred fifty dollars and five cents, and a buyer pays it.
+- **S120:** The last-trade price now becomes three hundred fifty dollars and five cents.
 - **S121:** Millions of small deals like that, every day, are what make a stock chart move.
 - **S122:** Prices mostly move on what buyers and sellers expect a company to earn later.
 - **S123:** Good news can lift a price in minutes, and bad news can sink it.

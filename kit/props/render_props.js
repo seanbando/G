@@ -14,7 +14,7 @@ const P = require("./props.js");
     `<g transform="translate(640 690) scale(0.6)">${P.pizza({ id: "p2", highlight: 0, bite: true })}</g>` + label(640, 1000, "SLICE + BITE") +
     `<g transform="translate(900 470) scale(0.72)">${P.exampleCard({ title: "EXAMPLE: A PIZZA SHOP", lines: ["Shop worth $100", "Cut into 100 slices", "1 slice = $1"] })}</g>` +
     label(1130, 760, "EXAMPLE CARD") +
-    `<g transform="translate(1400 470) scale(0.72)">${P.priceBoard({ price: "$250.05", change: "+$0.05" })}</g>` +
+    `<g transform="translate(1400 470) scale(0.72)">${P.priceBoard({ price: "$350.05", change: "+$0.05", example: true })}</g>` +
     label(1630, 730, "PRICE BOARD") +
     `<g transform="translate(940 860)">${P.sourceTag({ text: "Source: Apple Investor Relations" })}</g>` +
     label(1180, 930, "SOURCE TAG (bottom-left on real-data shots)");

@@ -114,7 +114,7 @@ function sourceTag({ id = "source", text: str = "Source: SEC Investor.gov" } = {
 
 // ---------- PRICE BOARD ----------
 // A ticker-style board showing the last-trade price. Top-left at (0, 0), 640 x 300.
-function priceBoard({ id = "board", label = "APPLE · LAST TRADE", price = "$250.00", change = null, example = false } = {}) {
+function priceBoard({ id = "board", label = "APPLE · LAST TRADE", price = "$350.00", change = null, example = false } = {}) {
   let s = `<g id="${id}" filter="url(#wobble)">`;
   s += `<rect x="0" y="0" width="640" height="300" rx="22" fill="#20252b" stroke="${INK}" stroke-width="8"/>`;
   s += `<rect x="24" y="24" width="592" height="252" rx="12" fill="#2c333b"/>`;
