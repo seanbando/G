@@ -94,3 +94,7 @@ card "RECORDED STATEMENT" → court opinion p. 28 with the highlighter (tease).
   joined review file `frein_0000_0340.mp4`. Awaiting the creator's notes on both.
 - Barracks set renders about 4 s/frame at 16 samples; the airfield set about 8 s/frame.
 - Creator is moving to another PC: see `TRANSFER.md`.
+
+## Nov 25, 2026: uncredited photos
+- Creator's decision: `7Y7YM5UU.jpg` (shot 413) and `34-armored-PPO235.jpg` (shot 439) stay in, without a source watermark
+  (outlet unknown). The only two real images in the film with no tag. Logged in `sources-used.md` rows 46–47.

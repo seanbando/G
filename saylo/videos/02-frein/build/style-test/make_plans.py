@@ -108,7 +108,7 @@ rows6 = [
     (410, 350.66, clip("E", 44.2), "got a lot of attention, though police said they were", "real: troopers walking a road"),
     (411, 352.82, image("36-abcnewsgo.jpg", "source-abc-news.png"), "searching other places too.", "real photo: searchers spread through forest"),
     (412, 356.16, clip("A", 44.5), "For people who lived there, normal life stopped.", "real: a resident talking to CBS"),
-    (413, 357.54, image("7Y7YM5UU.jpg", None, credit_needed=True, push=0.06), "Roads were blocked.", "real photo: two armed troopers at a roadside (OUTLET NOT CONFIRMED: needs its credit before the final render)"),
+    (413, 357.54, image("7Y7YM5UU.jpg", None, push=0.06), "Roads were blocked.", "real photo: two armed troopers at a roadside (outlet unknown: used without a watermark, creator's decision Nov 25, 2026)"),
     (414, 359.24, quote(["SCHOOLS CLOSED"], "POCONO MOUNTAIN SCHOOL DISTRICT", 357.6, size=0.24), "Schools closed at times.", "typed card"),
     (415, 362.70, image("25-canadensis.jpg", "source-bonnachoven-cc0.png"), "Local businesses lost money as visitors stayed away.", "real photo: the empty main road through Canadensis"),
     (416, 365.00, clip("M", 116.7), "And in Barrett Township, door-to-door", "real: a house decorated for Halloween"),
@@ -138,7 +138,7 @@ rows6 = [
     (437, 432.09, clip("E", 28.3), "Then the search went on for three more weeks.", "real: troopers searching along a creek"),
     (438, 436.85, image("33-thecitizensvoice-cruisers-field.jpg", "source-the-times-tribune.png", crop="900:506:120:20", stamp={"line": "$11,000,000", "sub": "STATE POLICE COST", "at": 434.25}),
      "By the end, state police put their own cost at about eleven million dollars.", "real photo: the field of police cars, closer; the figure types on at the words"),
-    (439, 439.99, image("34-armored-PPO235.jpg", None, credit_needed=True), "That doesn't count what the FBI and the Marshals spent.", "real photo: two armoured police vehicles on a wooded road (OUTLET NOT CONFIRMED: needs its credit before the final render)"),
+    (439, 439.99, image("34-armored-PPO235.jpg", None), "That doesn't count what the FBI and the Marshals spent.", "real photo: two armoured police vehicles on a wooded road (outlet unknown: used without a watermark, creator's decision Nov 25, 2026)"),
     (440, 443.07, quote(["DAY 48"], "OCT 30, 2014", 440.1, size=0.4), "October thirtieth, day forty-eight.", "typed card"),
 ]
 write("shots6.json", 326.60, "frein_s5_search.mp4", "shots6", "The Search / What He Left Behind", rows6,

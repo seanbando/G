@@ -244,11 +244,10 @@
    "start": 356.16,
    "end": 357.54,
    "line": "Roads were blocked.",
-   "what": "real photo: two armed troopers at a roadside (OUTLET NOT CONFIRMED: needs its credit before the final render)",
+   "what": "real photo: two armed troopers at a roadside (outlet unknown: used without a watermark, creator's decision Nov 25, 2026)",
    "kind": "image",
    "img": "media/photos/7Y7YM5UU.jpg",
-   "push": 0.06,
-   "credit_needed": true
+   "push": 0.06
   },
   {
    "id": 414,
@@ -609,11 +608,10 @@
    "start": 436.85,
    "end": 439.99,
    "line": "That doesn't count what the FBI and the Marshals spent.",
-   "what": "real photo: two armoured police vehicles on a wooded road (OUTLET NOT CONFIRMED: needs its credit before the final render)",
+   "what": "real photo: two armoured police vehicles on a wooded road (outlet unknown: used without a watermark, creator's decision Nov 25, 2026)",
    "kind": "image",
    "img": "media/photos/34-armored-PPO235.jpg",
-   "push": 0.045,
-   "credit_needed": true
+   "push": 0.045
   },
   {
    "id": 440,
