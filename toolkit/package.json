@@ -1,0 +1,9 @@
+{
+  "name": "cashley-tools",
+  "private": true,
+  "description": "Cashley Finance video tools: frame check, character and props kit, HyperFrames scenes",
+  "type": "commonjs",
+  "dependencies": {
+    "playwright": "^1.48.0"
+  }
+}
