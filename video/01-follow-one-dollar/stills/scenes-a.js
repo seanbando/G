@@ -5,9 +5,9 @@ const { A, t, lines, g, W, dim, bubble, arrow, cross, tick, stamp, card, bill, c
 
 const POS = [[100, 158], [452, 245], [800, 128], [1157, 262], [1500, 183]];
 // the road map, placed on the stage. states per stop; who = character svg standing on a stop
-function map(states, { x = 200, y = 330, s = 0.95, at = null, who = null, extra = "" } = {}) {
+function map(states, { x = 200, y = 330, s = 0.95, at = null, who = null, extra = "", whoOn = null } = {}) {
   let o = g(x, y, s, P.roadMap({ states }) + extra);
-  if (at && who) { const [px, py] = POS[at - 1]; o += g(x + px * s, y + (py - (at === 5 ? 190 : 118)) * s, 0.5, who); }
+  if (at && who) { const [px, py] = POS[at - 1]; const w = g(x + px * s, y + (py - (at === 5 ? 190 : 118)) * s, 0.5, who); o += whoOn ? A(w, whoOn, "slide", { dir: "u", idle: "bob" }) : w; }
   return o;
 }
 const stopXY = (i, { x = 200, y = 330, s = 0.95 } = {}) => [x + POS[i - 1][0] * s, y + POS[i - 1][1] * s];
@@ -146,38 +146,43 @@ S.S029 = { h: "Apple is cut into about 14.5 billion shares",
 S.S030 = { body: A(g(860, 620, 1.7, buck("happy")), "start", "slide", { dir: "l", idle: "talk" }) + A(g(1130, 420, 1.6, crumb()), "crumb", "pop") + A(bubble(1330, 300, "My crumb!", { tail: "left" }), "proud", "pop") };
 
 // ---------- STOP 1: YOUR APP ----------
-S.S031 = { h: "Stop 1: the investing app on your phone", map: false,
-  body: map(["active"], { at: 1, who: buck("neutral"), y: 380 }) + g(1700, 800, 0.36, phone(appScreen())) };
+S.S031 = { h: "Stop 1: the investing app on your phone", map: false, anims: [{ sel: "#map-stop1", on: "one", fx: "pop" }],
+  body: map(["active"], { at: 1, who: buck("neutral"), y: 380, whoOn: "stop" }) + A(g(1700, 800, 0.36, phone(appScreen())), "app", "slide", { dir: "u" }) };
 S.S032 = { h: "Tuesday morning: you buy $1 of Apple",
-  body: g(560, 560, 1.4, calendar("MORNING", "TUE", {})) + g(1280, 590, 0.82, phone(appScreen())) + W(`<circle cx="1280" cy="712" r="74" fill="none" stroke="${GREEN}" stroke-width="7" stroke-dasharray="14 12"/>`) };
+  body: A(g(560, 560, 1.4, calendar("MORNING", "TUE", {})), "tuesday", "pop") + A(g(1280, 590, 0.82, phone(appScreen())), "you", "slide", { dir: "u" }) +
+    A(W(`<circle cx="1280" cy="712" r="74" fill="none" stroke="${GREEN}" stroke-width="7" stroke-dasharray="14 12"/>`), "buy", "pop") };
 S.S033 = { h: "One share costs a few hundred dollars, so $1 buys a crumb",
-  body: g(620, 540, 2.6, slice(1, { crumb: true })) + t(620, 830, "1 Apple share: a few hundred dollars", 36, { w: 800, max: 700 }) +
-    arrow(700, 740, 1180, 600, { color: DGREEN, curve: 60 }) + g(1320, 540, 2.4, crumb()) + g(1320, 700, 1, bill(150)) + t(1560, 560, "your $1", 46, { w: 900, fill: DGREEN }) };
+  body: A(g(620, 540, 2.6, slice(1, { crumb: true })), "share", "pop") + A(t(620, 830, "1 Apple share: a few hundred dollars", 36, { w: 800, max: 700 }), "costs", "fade") +
+    A(arrow(700, 740, 1180, 600, { color: DGREEN, curve: 60 }), "buys", "wipe", { dir: "r", dur: 0.5 }) + A(g(1320, 540, 2.4, crumb()), "crumb", "pop") +
+    A(g(1320, 700, 1, bill(150)) + t(1560, 560, "your $1", 46, { w: 900, fill: DGREEN }), "dollar", "pop") };
 S.S034 = { h: "These crumbs are called fractional shares",
-  body: g(520, 530, 1.9, slice()) + W(`<path d="M 520 420 v 250 M 440 500 h 160 M 468 580 h 104" stroke="${INK}" stroke-width="6" stroke-dasharray="12 10"/>`) +
-    arrow(700, 530, 900, 530, {}) + [0, 1, 2, 3, 4, 5].map((i) => g(1040 + (i % 3) * 150, 460 + Math.floor(i / 3) * 150, 1.5, crumb())).join("") +
-    t(1190, 730, "pieces of one share", 38, { w: 800 }) + g(1640, 540, 0.36, phone(appScreen())) + t(1640, 730, "sold by many big apps", 30, { fill: GREY, max: 300 }),
+  body: g(520, 530, 1.9, slice()) + A(W(`<path d="M 520 420 v 250 M 440 500 h 160 M 468 580 h 104" stroke="${INK}" stroke-width="6" stroke-dasharray="12 10"/>`), "sell", "fade") +
+    A(arrow(700, 530, 900, 530, {}), "crumbs", "wipe", { dir: "r", dur: 0.4 }) + [0, 1, 2, 3, 4, 5].map((i) => A(g(1040 + (i % 3) * 150, 460 + Math.floor(i / 3) * 150, 1.5, crumb()), "crumbs", "pop", { delay: 0.15 + i * 0.09 })).join("") +
+    A(t(1190, 730, "pieces of one share", 38, { w: 800 }), "fractional", "fade") + A(g(1640, 540, 0.36, phone(appScreen())) + t(1640, 730, "sold by many big apps", 30, { fill: GREY, max: 300 }), "apps", "pop"),
   term: ["FRACTIONAL SHARE", "A piece of one share, for when you buy less than a whole one."] };
-const ticketScreen = (rows, hl) => phone(t(0, -210, "YOUR ORDER", 30, { w: 900, fill: GREY }) + rows.map((r, i) => (i === hl ? `<rect x="-136" y="${-166 + i * 92}" width="272" height="80" rx="12" fill="${YEL}" stroke="${INK}" stroke-width="4"/>` : "") + t(0, -134 + i * 92, r[0], 22, { w: 800, fill: GREY }) + t(0, -100 + i * 92, r[1], 34, { w: 900, max: 250 })).join("") + g(0, 210, 0.9, buyBtn("BUY")));
+const ticketScreen = (rows, hl, hlOn = null) => phone(t(0, -210, "YOUR ORDER", 30, { w: 900, fill: GREY }) + rows.map((r, i) => { const box = i === hl ? `<rect x="-136" y="${-166 + i * 92}" width="272" height="80" rx="12" fill="${YEL}" stroke="${INK}" stroke-width="4"/>` : "";
+  return (box && hlOn ? A(box, hlOn, "pop") : box) + t(0, -134 + i * 92, r[0], 22, { w: 800, fill: GREY }) + t(0, -100 + i * 92, r[1], 34, { w: 900, max: 250 }); }).join("") + g(0, 210, 0.9, buyBtn("BUY")));
 S.S035 = { h: "You place a market order",
-  body: g(560, 570, 0.8, ticketScreen([["STOCK", "Apple"], ["AMOUNT", "$1"], ["ORDER TYPE", "MARKET"]], 2)) +
-    arrow(800, 560, 1020, 560, { color: DGREEN }) + card(1380, 560, 640, 220, t(0, -30, "Buy right away,", 48, { w: 900 }) + t(0, 36, "at the available price", 48, { w: 900 })),
+  body: A(g(560, 570, 0.8, ticketScreen([["STOCK", "Apple"], ["AMOUNT", "$1"], ["ORDER TYPE", "MARKET"]], 2, "market")), "start", "slide", { dir: "u" }) +
+    A(arrow(800, 560, 1020, 560, { color: DGREEN }), "means", "wipe", { dir: "r", dur: 0.4 }) + A(card(1380, 560, 640, 220, t(0, -30, "Buy right away,", 48, { w: 900 }) + t(0, 36, "at the available price", 48, { w: 900 })), "buy", "pop"),
   term: ["MARKET ORDER", "An order to buy (or sell) right now, at whatever price is available."] };
 S.S036 = { h: "The price can change before your order goes through",
-  body: card(480, 520, 480, 250, t(0, -50, "Price you SAW", 36, { fill: GREY }) + g(0, 40, 1.2, priceTag("$ ? ? ?", { w: 260 }))) +
-    g(960, 520, 0.9, L.clock(10, 10)) + arrow(760, 400, 1160, 400, { curve: -50, label: "a moment later", ldy: -40 }) +
-    card(1440, 520, 480, 250, t(0, -50, "Price you GET", 36, { fill: GREY }) + g(0, 40, 1.2, priceTag("$ ? ? ?", { w: 260, color: YEL })), {}) +
-    t(960, 760, "may not be exactly the same", 44, { w: 900, fill: RED }) };
+  body: A(card(480, 520, 480, 250, t(0, -50, "Price you SAW", 36, { fill: GREY }) + g(0, 40, 1.2, priceTag("$ ? ? ?", { w: 260 }))), "saw", "pop") +
+    A(g(960, 520, 0.9, L.clock(10, 10)) + arrow(760, 400, 1160, 400, { curve: -50, label: "a moment later", ldy: -40 }), "change", "fade") +
+    A(card(1440, 520, 480, 250, t(0, -50, "Price you GET", 36, { fill: GREY }) + g(0, 40, 1.2, priceTag("$ ? ? ?", { w: 260, color: YEL })), {}), "order", "pop") +
+    A(t(960, 760, "may not be exactly the same", 44, { w: 900, fill: RED }), "through", "fade") };
 S.S037 = { h: "Your broker may bundle your crumb with other orders",
-  body: [0, 1, 2].map((i) => g(300, 380 + i * 170, 0.5, person({ shirt: [BLUE, L.ORANGE, L.PURPLE][i], skin: i, hair: i === 1 ? "long" : "short", label: i === 0 ? "You" : null })) + g(430, 370 + i * 170, 1, crumb()) + arrow(490, 370 + i * 170, 780, 520, { color: GREY, width: 6 })).join("") +
-    g(960, 720, 1, tower("YOUR BROKER", { w: 280, h: 330 })) + arrow(1130, 540, 1380, 540, { color: DGREEN }) +
-    W(`<rect x="1410" y="450" width="250" height="180" rx="16" fill="#fff" stroke="${INK}" stroke-width="7"/>`) + [0, 1, 2].map((i) => g(1470 + i * 65, 540, 1.1, crumb())).join("") + t(1535, 690, "one bigger order", 34, { w: 800 }),
+  body: [0, 1, 2].map((i) => A(g(300, 380 + i * 170, 0.5, person({ shirt: [BLUE, L.ORANGE, L.PURPLE][i], skin: i, hair: i === 1 ? "long" : "short", label: i === 0 ? "You" : null })) + g(430, 370 + i * 170, 1, crumb()), i === 0 ? "crumb" : "other", "pop", { delay: i === 2 ? 0.15 : 0 }) +
+      A(arrow(490, 370 + i * 170, 780, 520, { color: GREY, width: 6 }), "bundle", "wipe", { dir: "r", dur: 0.5, delay: i === 0 ? 0 : 0.1 })).join("") +
+    A(g(960, 720, 1, tower("YOUR BROKER", { w: 280, h: 330 })), "broker", "pop") + A(arrow(1130, 540, 1380, 540, { color: DGREEN }), "orders", "wipe", { dir: "r", dur: 0.4 }) +
+    A(W(`<rect x="1410" y="450" width="250" height="180" rx="16" fill="#fff" stroke="${INK}" stroke-width="7"/>`) + [0, 1, 2].map((i) => g(1470 + i * 65, 540, 1.1, crumb())).join("") + t(1535, 690, "one bigger order", 34, { w: 800 }), "before", "pop"),
   term: ["BROKER", "The company behind your investing app. It places your orders for you."] };
 S.S038 = { h: "Your broker picks where the order goes",
   body: g(420, 760, 1, tower("YOUR BROKER", { w: 280, h: 330 })) +
-    arrow(590, 500, 1050, 340, { color: DGREEN, curve: -30 }) + g(1280, 420, 0.5, bank("EXCHANGE", { w: 360 })) + t(1560, 360, "an exchange", 36, { w: 900, anchor: "start", max: 300 }) +
-    arrow(600, 580, 1050, 580, { color: DGREEN }) + g(1280, 690, 0.5, booth("MARKET MAKER")) + t(1560, 610, "a market maker", 36, { w: 900, anchor: "start", max: 300 }) +
-    arrow(560, 760, 760, 830, { color: DGREEN, curve: -160 }) + t(900, 842, "or fill it itself", 36, { w: 900, anchor: "start" }) };
-S.S039 = { body: g(760, 600, 1, doc("ORDER #0001", ["Buy: $1 of Apple", "Type: market order", ""], { w: 560, size: 40 })) + g(760, 690, 0.62, buck("annoyed")) + stamp(1010, 440, "PAPERWORK", { rot: 10 }) + bubble(1330, 360, "No thank-you?", { tail: "left" }) };
+    A(arrow(590, 500, 1050, 340, { color: DGREEN, curve: -30 }), "exchange", "wipe", { dir: "r", dur: 0.4 }) + A(g(1280, 420, 0.5, bank("EXCHANGE", { w: 360 })) + t(1460, 360, "an exchange", 36, { w: 900, anchor: "start", max: 220 }), "exchange", "pop", { delay: 0.2 }) +
+    A(arrow(600, 580, 1050, 580, { color: DGREEN }), "market", "wipe", { dir: "r", dur: 0.4 }) + A(g(1280, 690, 0.5, booth("MARKET MAKER")) + t(1460, 610, "a market maker", 36, { w: 900, anchor: "start", max: 220 }), "market", "pop", { delay: 0.2 }) +
+    A(arrow(560, 760, 760, 830, { color: DGREEN, curve: -160 }), "fill", "wipe", { dir: "r", dur: 0.4 }) + A(t(900, 842, "or fill it itself", 36, { w: 900, anchor: "start" }), "fill", "fade", { delay: 0.2 }) };
+S.S039 = { body: A(g(760, 600, 1, doc("ORDER #0001", ["Buy: $1 of Apple", "Type: market order", ""], { w: 560, size: 40 })), "start", "fade") + A(g(760, 690, 0.62, buck("annoyed")), "start", "pop", { idle: "talk" }) +
+    A(stamp(1010, 440, "PAPERWORK", { rot: 10 }), "paperwork", "stamp") + A(bubble(1330, 360, "No thank-you?", { tail: "left" }), "nobody", "pop") };
 
 module.exports = { S, map, stopXY, promises, formula, ticketScreen, POS };
