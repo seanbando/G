@@ -40,6 +40,10 @@
    "short"
   ],
   [
+   411.6,
+   "medium"
+  ],
+  [
    422.5,
    "short"
   ],
@@ -494,10 +498,18 @@
    "start": 411.39,
    "end": 415.25,
    "line": "The next day, an agent collected a trash bag near the site.",
-   "what": "3D object: a tied rubbish bag under a lamp",
-   "kind": "obj",
-   "obj": "bag",
-   "rate": 0.08
+   "what": "typed card (the 3D rubbish bag read badly)",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "A TRASH BAG",
+     "NEAR THE CAMPSITE"
+    ],
+    "who": "COLLECTED SEPT 30, 2014",
+    "at": 411.6,
+    "size": 0.22
+   }
   },
   {
    "id": 433,

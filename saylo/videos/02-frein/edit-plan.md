@@ -102,3 +102,11 @@ card "RECORDED STATEMENT" → court opinion p. 28 with the highlighter (tease).
 ## Nov 25, 2026: chapters 02-03 in motion
 - `frein_s4_swamp_who.mp4` (3:40-5:27, 37 shots) rendered and sent; joined review file `frein_0000_0527.mp4`. Awaiting notes.
 - Next to render: `shots6.json` (04 The Search + 05 What He Left Behind, 5:27-7:23).
+
+## Nov 25, 2026: creator notes on 3D, chapters 04-05 in motion
+- **Rule (creator, twice):** if a 3D shot isn't good or its figures don't do what the line says, skip it or use a still/card. Don't polish.
+- Barracks: campaign hat rebuilt; 219 (trooper with bag) and 223 (troopers kneeling at the door) are now figure-free (cruiser; lit doorway).
+- 324 cap close-up replaced by the wider photo. 432 rubbish-bag object replaced by a typed card.
+- `frein_s5_search.mp4` (5:27-7:23, 40 shots) rendered and sent on its own. Creator wants chapters sent one by one, one full join at the end.
+- Never run two build jobs at once: the second corrupts the first's frames (S223 came back 76/82 frames).
+- Next to render: `shots7.json` (06 The Hangar, 7:23-9:17).

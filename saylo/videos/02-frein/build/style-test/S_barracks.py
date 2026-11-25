@@ -269,12 +269,8 @@ elif V == "notice":
     kit.light("AREA", (22.5, -23, 3.2), (19.2, -19.4, 1.5), power=260, color="#DCE6FF", size=2.5, name="FaceKey")
 elif V == "lobby":
     cam = push((DX + 2.2, DY - 12, 1.5), (DX, DY, 1.35), 0.1, lens=35)
-elif V == "doorway":
-    for i, dx in enumerate((-0.55, 0.5)):                                    # two troopers in the doorway, backs to the camera
-        T = trooper(f"T{i}", DX + dx, DY - 0.9, 90)
-        rt.rpose(T, "kneel")
-        T["root"].location = (DX + dx, DY - 0.9, -rt.RDROP["kneel"])
-    cam = push((DX + 1.4, DY - 6.2, 1.15), (DX, DY - 0.6, 1.0), 0.1, lens=40)
+elif V == "doorway":                              # no figures: the kneeling troopers did not match "pull him farther inside". Close and low into the lit door.
+    cam = push((DX - 1.6, DY - 5.0, 0.7), (DX, DY - 0.2, 1.1), 0.12, lens=40)
 elif V == "pages":
     # object: the torn notebook pages, on a table under a lamp (their wording is typed in the next shots, not drawn here)
     bx, by = 150.0, 150.0

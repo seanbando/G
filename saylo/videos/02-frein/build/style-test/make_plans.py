@@ -129,7 +129,7 @@ rows6 = [
     (429, 403.29, clip("E", 52.3), "and two explosive devices.", "real: Bivens announcing it (the devices are never shown close)"),
     (430, 406.97, quote(["FULLY FUNCTIONAL"], "LT. COL. GEORGE BIVENS, ON THE TWO DEVICES", 404.9, size=0.24), "Bivens described them as fully functional pipe bombs,", "typed card"),
     (431, 411.39, clip("E", 37.5, zoom=1.25, cx=0.5, cy=0.2), "and he said he believed Frein had left them behind because he was under pressure.", "real: Bivens, punched in"),
-    (432, 415.25, obj("bag", rate=0.08), "The next day, an agent collected a trash bag near the site.", "3D object: a tied rubbish bag under a lamp"),
+    (432, 415.25, quote(["A TRASH BAG", "NEAR THE CAMPSITE"], "COLLECTED SEPT 30, 2014", 411.6, size=0.22), "The next day, an agent collected a trash bag near the site.", "typed card (the 3D rubbish bag read badly)"),
     (433, 419.29, obj("pages", rate=0.08), "Inside were three torn notebook pages describing the attack.", "3D object: three torn pages (writing not legible)"),
     (434, 422.37, doc("20-inquirer-headline.png", [[0.615, 0.2, 0.975, 0.4, 420.1], [0.012, 0.42, 0.105, 0.6, 421.3]], "source-the-philadelphia-inquirer.png", wide=True),
      "That's where the line about taking the shot came from.", "the Inquirer headline again, highlighter on the quote"),
@@ -142,7 +142,7 @@ rows6 = [
     (440, 443.07, quote(["DAY 48"], "OCT 30, 2014", 440.1, size=0.4), "October thirtieth, day forty-eight.", "typed card"),
 ]
 write("shots6.json", 326.60, "frein_s5_search.mp4", "shots6", "The Search / What He Left Behind", rows6,
-      [[326.7, "short"], [342.45, "medium"], [345.7, "medium"], [357.6, "short"], [365.1, "medium"], [376.0, "medium"], [394.5, "medium"], [404.9, "short"], [422.5, "short"], [434.25, "short"], [440.1, "short"]])
+      [[326.7, "short"], [342.45, "medium"], [345.7, "medium"], [357.6, "short"], [365.1, "medium"], [376.0, "medium"], [394.5, "medium"], [404.9, "short"], [411.6, "medium"], [422.5, "short"], [434.25, "short"], [440.1, "short"]])
 
 # ------------------------------------------------------------------ 06 The Hangar (and the night of the arrest)
 R2 = "shots2/"
