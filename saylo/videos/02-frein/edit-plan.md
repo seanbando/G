@@ -98,3 +98,7 @@ card "RECORDED STATEMENT" → court opinion p. 28 with the highlighter (tease).
 ## Nov 25, 2026: uncredited photos
 - Creator's decision: `7Y7YM5UU.jpg` (shot 413) and `34-armored-PPO235.jpg` (shot 439) stay in, without a source watermark
   (outlet unknown). The only two real images in the film with no tag. Logged in `sources-used.md` rows 46–47.
+
+## Nov 25, 2026: chapters 02-03 in motion
+- `frein_s4_swamp_who.mp4` (3:40-5:27, 37 shots) rendered and sent; joined review file `frein_0000_0527.mp4`. Awaiting notes.
+- Next to render: `shots6.json` (04 The Search + 05 What He Left Behind, 5:27-7:23).

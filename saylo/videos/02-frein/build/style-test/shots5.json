@@ -299,10 +299,7 @@
    "out": 37.92,
    "crop": "1102:620:0:0",
    "tag": "source-cbs-news.png",
-   "push": 0.03,
-   "zoom": 1.1,
-   "cx": 0.6,
-   "cy": 0.1
+   "push": 0.03
   },
   {
    "id": 318,
@@ -413,7 +410,7 @@
    "what": "police-released photo: Frein in re-enactor uniform with a rifle",
    "src": "E",
    "at": 26.2,
-   "crop": "1102:620:0:0",
+   "crop": "760:428:240:170",
    "tag": "source-pennsylvania-state-police.png",
    "push": 0.04
   },
