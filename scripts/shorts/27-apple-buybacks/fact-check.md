@@ -15,3 +15,7 @@ Format: Money Mystery, most surprising fact first, one running image (the pizza)
 
 Caption: "Figures: Apple has repurchased roughly $840-880 billion of stock since fiscal 2013 and cut its share count by about 44% (Motley Fool, citing Apple filings). Not financial advice."
 Visual note: pizza slices on a board (fits the channel's chart style); never imply buy/sell advice.
+
+## v3 (Nov 25): what-if version (creator: more hypotheticals, like the Elon video). v2 kept in script-v2.md.
+- "Apple could buy almost any company in the S&P 500": Motley Fool (2026) notes the money Apple spent on buybacks ($841B-$853B) could have bought any of 486-488 S&P 500 companies at the time. Phrased "almost any".
+- What-ifs are framed as questions (holding one share; spending on new products), not predictions. Other facts unchanged.

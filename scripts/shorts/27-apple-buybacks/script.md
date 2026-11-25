@@ -1,19 +1,17 @@
-The Biggest Buyer of Apple Stock Is Apple (Money Mystery)
+The Biggest Buyer of Apple Stock Is Apple (Money Mystery, what-if version)
 
-Apple's biggest customer isn't you. It's Apple, buying its own stock.
+Apple could buy almost any company in the S and P five hundred. Instead, it keeps buying the same one: itself.
 
-Over eight hundred billion dollars of it.
+Over eight hundred billion dollars of its own stock.
 
-Picture Apple as a giant pizza, cut into slices called shares.
+So why would Apple spend that kind of money on Apple?
 
-Every time Apple buys slices back, it cancels them, so they're gone for good.
+Picture Apple as a giant pizza, cut into slices called shares. Every time Apple buys slices back, it cancels them.
 
-Apple's profits stay on the table, but there are fewer slices, so every slice left gets a bigger piece.
+Same profits, fewer slices, so every slice left gets bigger. Apple has cut its slices by over forty percent.
 
-Apple has cut its number of slices by over forty percent.
+What if you'd held one share the whole time? You'd own a bigger chunk of Apple without buying anything.
 
-So if you held one share the whole time, you now own a bigger chunk of Apple without buying anything.
+And what if Apple had spent that money building the next big thing instead? Critics ask exactly that, because it's several times what Apple spent on research.
 
-That's several times more than Apple spent on research, and critics say it could have built the next big product instead.
-
-Apple's favorite investment isn't a new iPhone. It's itself.
+Apple could have bought almost anyone. It picked itself.
