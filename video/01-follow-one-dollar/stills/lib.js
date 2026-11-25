@@ -32,10 +32,11 @@ const g = (x, y, s, inner, rot = 0) => `<g transform="translate(${x} ${y})${rot 
 const W = (inner, id) => `<g filter="url(#wobble)"${id ? ` id="${id}"` : ""}>${inner}</g>`;
 // Motion tag. In a still this is just a group; the motion builder animates it when the
 // narrator reaches the word `on` ("start", a word, "word:2" for its 2nd use, or "+1.5" seconds
-// into the line). fx: pop, fade, slide (dir l/r/u/d), wipe (dir), stamp, move (dx, dy, dur).
+// into the line). fx: pop, fade, slide (dir l/r/u/d), wipe (dir), stamp, move (dx, dy, dur), scalefrom (from).
+// "word>" means right after that word ends (use it for numbers, which are not in the word list).
 // idle: "bob" (gentle float) or "talk" (hops on each spoken word).
 function A(inner, on = "start", fx = "pop", o = {}) {
-  const at = Object.entries({ dir: o.dir, dx: o.dx, dy: o.dy, dur: o.dur, delay: o.delay }).filter(([, v]) => v !== undefined).map(([k, v]) => ` data-${k}="${v}"`).join("");
+  const at = Object.entries({ dir: o.dir, dx: o.dx, dy: o.dy, dur: o.dur, delay: o.delay, from: o.from }).filter(([, v]) => v !== undefined).map(([k, v]) => ` data-${k}="${v}"`).join("");
   return `<g class="anim" data-on="${on}" data-fx="${fx}"${at}>${o.idle ? `<g class="idle" data-idle="${o.idle}">${inner}</g>` : inner}</g>`;
 }
 const dim = (inner, o = 0.3) => `<g opacity="${o}">${inner}</g>`;

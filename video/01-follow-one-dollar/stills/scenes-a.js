@@ -72,64 +72,78 @@ S.S011 = { enter: "cut", body: map([]) + A(g(300, 290, 0.9, buck("annoyed")), "s
     A(W(`<path d="M 440 200 q 14 22 0 36 q -14 -14 0 -36 Z" fill="${LBLUE}" stroke="${INK}" stroke-width="4"/>`), "walking", "pop") + A(bubble(760, 210, "That's a lot of walking.", { tail: "left" }), "lot", "pop") };
 
 // ---------- THE DEVICE: WHAT YOUR DOLLAR BUYS ----------
+// Numbers are not in the word timings (Whisper writes them as digits), so number cues use
+// "word>" = right after that word ends, which is where the number is spoken.
 S.S012 = { h: "First: what is your dollar actually buying?",
-  body: g(620, 600, 1.4, buck("neutral")) + W(`<rect x="1090" y="440" width="300" height="300" rx="20" fill="#fff" stroke="${INK}" stroke-width="8" stroke-dasharray="22 14"/>`) + t(1240, 650, "?", 190, { w: 900, fill: GREY }) };
+  body: A(g(620, 600, 1.4, buck("neutral")), "start", "slide", { dir: "l", idle: "bob" }) +
+    A(W(`<rect x="1090" y="440" width="300" height="300" rx="20" fill="#fff" stroke="${INK}" stroke-width="8" stroke-dasharray="22 14"/>`) + t(1240, 650, "?", 190, { w: 900, fill: GREY }), "what", "pop") };
 S.S013 = { h: "Picture a company as a pizza, cut into slices",
-  body: g(480, 800, 1.1, tower("A COMPANY", { w: 260, h: 380 })) + t(880, 620, "=", 150, { w: 900 }) + g(1300, 570, 0.9, P.pizza({})) };
+  body: A(g(480, 800, 1.1, tower("A COMPANY", { w: 260, h: 380 })), "company", "pop") + A(t(880, 620, "=", 150, { w: 900 }), "as", "pop") + A(g(1300, 570, 0.9, P.pizza({})), "pizza", "pop") };
 S.S014 = { h: "One slice = one share",
-  body: g(760, 560, 0.9, P.pizza({ highlight: 0 })) + arrow(1090, 470, 1240, 470, { color: DGREEN }) + g(1380, 470, 1.5, slice()) + t(1380, 680, "1 share", 54, { w: 900, fill: DGREEN }),
+  body: g(760, 560, 0.9, P.pizza({ highlight: 0 })) + A(arrow(1090, 470, 1240, 470, { color: DGREEN }), "slice:2", "wipe", { dir: "r", dur: 0.4 }) +
+    A(g(1380, 470, 1.5, slice()), "slice:2", "pop", { delay: 0.25 }) + A(t(1380, 680, "1 share", 54, { w: 900, fill: DGREEN }), "share", "pop"),
   term: ["SHARE", "One small piece of ownership in a company."] };
 S.S015 = { h: "The stock market is where people trade those slices",
-  body: g(960, 760, 1, W(`<rect x="-560" y="-430" width="1120" height="60" rx="10" fill="${INK}"/><path d="M -520 -370 V 0 M 520 -370 V 0" stroke="${INK}" stroke-width="12"/>`) + t(0, -386, "STOCK MARKET", 40, { w: 900, fill: "#fff" })) +
-    g(560, 640, 1, person({ shirt: BLUE })) + g(1360, 640, 1, person({ shirt: L.ORANGE, skin: 1, hair: "long" })) +
-    g(820, 500, 0.9, slice()) + arrow(700, 470, 1220, 470, { color: DGREEN, curve: -70, label: "slice", ldy: -52 }) +
-    g(1100, 700, 1, bill(130)) + arrow(1220, 700, 700, 700, { color: GREY, curve: -70, label: "money", ldy: 84 }),
+  body: A(g(960, 760, 1, W(`<rect x="-560" y="-430" width="1120" height="60" rx="10" fill="${INK}"/><path d="M -520 -370 V 0 M 520 -370 V 0" stroke="${INK}" stroke-width="12"/>`) + t(0, -386, "STOCK MARKET", 40, { w: 900, fill: "#fff" })), "stock", "fade") +
+    A(g(560, 640, 1, person({ shirt: BLUE })), "people", "pop") + A(g(1360, 640, 1, person({ shirt: L.ORANGE, skin: 1, hair: "long" })), "people", "pop", { delay: 0.15 }) +
+    A(g(820, 500, 0.9, slice()) + arrow(700, 470, 1220, 470, { color: DGREEN, curve: -70, label: "slice", ldy: 62 }), "trade", "wipe", { dir: "r", dur: 0.6 }) +
+    A(g(1100, 700, 1, bill(130)) + arrow(1220, 700, 700, 700, { color: GREY, curve: -70, label: "money", ldy: 84 }), "slices", "wipe", { dir: "l", dur: 0.6 }),
   term: ["STOCK MARKET", "The place where people buy and sell shares."] };
-S.S016 = { h: "A simple example, with made-up numbers", example: false,
-  body: g(560, 330, 1.25, P.exampleCard({ title: "EXAMPLE: A PIZZA SHOP", lines: ["How do slices work?", "", ""] })) };
-const shop = (value, per, { s = 0.78, hl = true, arrowDir = 0, note2 = null } = {}) =>
-  g(660, 560, s, P.pizza({ slices: 100, highlight: hl ? 0 : null })) +
-  card(1340, 420, 560, 170, t(0, -18, "PIZZA SHOP", 32, { w: 900, fill: GREY }) + t(0, 44, "worth " + value, 60, { w: 900 })) +
-  (per ? card(1340, 660, 560, 190, t(0, -26, "1 slice", 32, { w: 900, fill: GREY }) + t(0, 44, per, 64, { w: 900, fill: arrowDir < 0 ? RED : DGREEN }), { fill: YEL }) +
-    (hl ? arrow(660 + 300 * s + 14, 548, 1050, 640, { color: DGREEN, curve: 30 }) : "") : "") +
-  (note2 ? t(1340, 800, note2, 36, { w: 800 }) : "") +
-  (arrowDir ? arrow(1690, arrowDir > 0 ? 500 : 340, 1690, arrowDir > 0 ? 340 : 500, { color: arrowDir > 0 ? GREEN : RED, width: 16 }) : "");
-S.S017 = { h: "A pizza shop worth $100, cut into 100 slices", body: shop("$100", null, { hl: false }) + card(1340, 660, 560, 150, t(0, 18, "cut into 100 slices", 46, { w: 900 })) };
-S.S018 = { h: "Each slice is worth $1", body: shop("$100", "= $1", { note2: "1 slice of 100 = you own 1%" }) };
-S.S019 = { h: "The shop grows, and so does your slice", body: shop("$200", "= $2", { s: 0.92, arrowDir: 1 }) };
-S.S020 = { h: "The shop shrinks, and so does your slice", body: shop("$50", "= 50¢", { s: 0.56, arrowDir: -1 }) };
-S.S021 = { body: g(860, 600, 1.6, hamlet("hugging")) + bubble(1300, 360, "Coins stay home.", { tail: "left" }) };
-S.S022 = { h: "A price tag can fool you",
-  body: g(620, 540, 1.6, priceTag("$500")) + g(1300, 540, 1.6, priceTag("$5")) + t(960, 760, "Which company is bigger?", 50, { w: 900, fill: GREY }) };
-const AB = (o = {}) => {
-  const a = g(520, 500, 1, card(0, 0, 620, 520, t(0, -200, "COMPANY A", 40, { w: 900, fill: BLUE }) + (o.a || ""), { fill: o.hlA ? YEL : "#fff" }));
-  const b = g(1400, 500, 1, card(0, 0, 620, 520, t(0, -200, "COMPANY B", 40, { w: 900, fill: L.ORANGE }) + (o.b || ""), { fill: o.hlB ? YEL : "#fff" }));
-  return (o.dimA ? dim(a, 0.4) : a) + (o.dimB ? dim(b, 0.4) : b) + (o.mid || "");
+S.S016 = { h: "A simple example, with made-up numbers", example: false, anims: [{ sel: "#example-stamp", on: "made", fx: "stamp" }],
+  body: A(g(560, 330, 1.25, P.exampleCard({ title: "EXAMPLE: A PIZZA SHOP", lines: ["How do slices work?", "", ""] })), "example", "pop") };
+// the pizza shop: m = which word each part appears on
+const shop = (value, per, { s = 0.78, hl = true, arrowDir = 0, note2 = null, m = {} } = {}) => {
+  const T = (inner, key, fx = "pop", o = {}) => (m[key] ? A(inner, m[key], fx, o) : inner);
+  const pie = g(660, 560, s, P.pizza({ slices: 100, highlight: hl ? 0 : null }));
+  return (m.grow ? A(pie, m.grow, "scalefrom", { from: (0.78 / s).toFixed(3), dur: 0.9 }) : T(pie, "pizza")) +
+    T(card(1340, 420, 560, 170, t(0, -18, "PIZZA SHOP", 32, { w: 900, fill: GREY }) + t(0, 44, "worth " + value, 60, { w: 900 })), "worth") +
+    (per ? T(card(1340, 660, 560, 190, t(0, -26, "1 slice", 32, { w: 900, fill: GREY }) + t(0, 44, per, 64, { w: 900, fill: arrowDir < 0 ? RED : DGREEN }), { fill: YEL }), "per") +
+      (hl ? T(arrow(660 + 300 * s + 14, 548, 1050, 640, { color: DGREEN, curve: 30 }), "arrow", "wipe", { dir: "r", dur: 0.4 }) : "") : "") +
+    (note2 ? T(t(1340, 800, note2, 36, { w: 800 }), "note", "fade") : "") +
+    (arrowDir ? T(arrow(1690, arrowDir > 0 ? 500 : 340, 1690, arrowDir > 0 ? 340 : 500, { color: arrowDir > 0 ? GREEN : RED, width: 16 }), "dir", "wipe", { dir: arrowDir > 0 ? "u" : "d", dur: 0.5 }) : "");
 };
-const shareTag = (p) => g(-110, -20, 1.3, slice()) + g(130, -30, 1.1, priceTag(p)) + t(0, 190, "price of 1 share", 34, { fill: GREY });
-S.S023 = { h: "Two companies, two share prices", body: AB({ a: shareTag("$500"), b: shareTag("$5") }) };
-S.S024 = { h: "The $500 share looks like the bigger company",
-  body: AB({ a: shareTag("$500"), b: shareTag("$5"), hlA: true, dimB: true }) + stamp(960, 820, "THAT'S THE TRAP", { size: 56, rot: -4 }) };
-S.S025 = { h: "Company A is cut into only 3 slices",
-  body: AB({ hlA: true, dimB: true, a: g(0, -40, 0.42, P.pizza({ id: "pa", slices: 3 })) + t(0, 140, "3 slices × $500", 44, { w: 900 }) + t(0, 204, "= $1,500", 56, { w: 900, fill: DGREEN }), b: shareTag("$5") }) };
-S.S026 = { h: "Company B is cut into a million slices",
-  body: AB({ hlB: true, dimA: true, a: g(0, -40, 0.42, P.pizza({ id: "pa", slices: 3 })) + t(0, 140, "3 slices × $500", 44, { w: 900 }) + t(0, 204, "= $1,500", 56, { w: 900, fill: DGREEN }),
-    b: g(0, -40, 0.5, P.pizza({ id: "pb", slices: 90 })) + t(0, 140, "1,000,000 slices × $5", 40, { w: 900 }) + t(0, 204, "= $5,000,000", 56, { w: 900, fill: DGREEN }) }) };
+S.S017 = { h: "A pizza shop worth $100, cut into 100 slices", body: shop("$100", null, { hl: false, m: { pizza: "pizza", worth: "worth>" } }) + A(card(1340, 660, 560, 150, t(0, 18, "cut into 100 slices", 46, { w: 900 })), "cut", "pop") };
+S.S018 = { h: "Each slice is worth $1", enter: "cut", body: shop("$100", "= $1", { note2: "1 slice of 100 = you own 1%", m: { arrow: "slice", per: "worth>", note: "owning:2" } }) };
+S.S019 = { h: "The shop grows, and so does your slice", enter: "cut", body: shop("$200", "= $2", { s: 0.92, arrowDir: 1, m: { grow: "grows", dir: "grows", worth: "to>", per: "worth>" } }) };
+S.S020 = { h: "The shop shrinks, and so does your slice", enter: "cut", body: shop("$50", "= 50¢", { s: 0.56, arrowDir: -1, m: { grow: "shrinks", dir: "shrinks", worth: "to>", per: "worth>" } }) };
+S.S021 = { body: A(g(860, 600, 1.6, hamlet("hugging")), "start", "fade", { idle: "talk" }) + A(bubble(1300, 360, "Coins stay home.", { tail: "left" }), "coins", "pop") };
+S.S022 = { h: "A price tag can fool you",
+  body: A(g(620, 540, 1.6, priceTag("$500")), "price", "pop") + A(g(1300, 540, 1.6, priceTag("$5")), "tag", "pop") + A(t(960, 760, "Which company is bigger?", 50, { w: 900, fill: GREY }), "fool", "fade") };
+const AB = (o = {}) => {
+  const a = g(520, 560, 1, card(0, 0, 620, 520, t(0, -200, "COMPANY A", 40, { w: 900, fill: BLUE }) + (o.a || ""), { fill: o.hlA ? YEL : "#fff" }));
+  const b = g(1400, 560, 1, card(0, 0, 620, 520, t(0, -200, "COMPANY B", 40, { w: 900, fill: L.ORANGE }) + (o.b || ""), { fill: o.hlB ? YEL : "#fff" }));
+  const a2 = o.dimA ? dim(a, 0.4) : a, b2 = o.dimB ? dim(b, 0.4) : b;
+  return (o.onA ? A(a2, o.onA, "slide", { dir: "l" }) : a2) + (o.onB ? A(b2, o.onB, "slide", { dir: "r" }) : b2) + (o.mid || "");
+};
+const shareTag = (p, on = null) => g(-110, -20, 1.3, slice()) + (on ? A(g(130, -30, 1.1, priceTag(p)), on, "pop") : g(130, -30, 1.1, priceTag(p))) + t(0, 190, "price of 1 share", 34, { fill: GREY });
+S.S023 = { h: "Two companies, two share prices", body: AB({ a: shareTag("$500", "costs>"), b: shareTag("$5", "costs:2>"), onA: "company", onB: "company:2" }) };
+S.S024 = { h: "The $500 share looks like the bigger company", enter: "cut",
+  body: AB({ a: shareTag("$500"), b: shareTag("$5"), hlA: true, dimB: true }) + A(stamp(960, 880, "THAT'S THE TRAP", { size: 56, rot: -4 }), "trap", "stamp") };
+const totalA = (on) => { const p = g(0, -40, 0.42, P.pizza({ id: "pa", slices: 3 })), l1 = t(0, 140, "3 slices × $500", 44, { w: 900 }), l2 = t(0, 208, "= $1,500", 56, { w: 900, fill: DGREEN });
+  return on ? A(p, "three", "pop") + A(l1, "slices", "fade") + A(l2, "worth>", "pop") : p + l1 + l2; };
+S.S025 = { h: "Company A is cut into only 3 slices", body: AB({ hlA: true, dimB: true, a: totalA(true), b: shareTag("$5") }) };
+S.S026 = { h: "Company B is cut into a million slices", enter: "cut",
+  body: AB({ hlB: true, dimA: true, a: totalA(false),
+    b: A(g(0, -40, 0.5, P.pizza({ id: "pb", slices: 90 })), "million", "pop") + A(t(0, 140, "1,000,000 slices × $5", 40, { w: 900 }), "slices", "fade") + A(t(0, 208, "= $5,000,000", 56, { w: 900, fill: DGREEN }), "worth>", "pop") }) };
 S.S027 = { h: "The cheap slice came from the far bigger pizza",
-  body: g(480, 600, 0.3, P.pizza({ id: "pa", slices: 3 })) + t(480, 400, "COMPANY A", 38, { w: 900, fill: BLUE }) + t(480, 760, "$500 a slice", 36, { fill: GREY }) + t(480, 820, "whole pizza: $1,500", 44, { w: 900 }) +
-    g(1280, 540, 0.82, P.pizza({ id: "pb", slices: 90 })) + t(1700, 330, "COMPANY B", 38, { w: 900, fill: L.ORANGE, max: 330 }) + t(1700, 400, "$5 a slice", 36, { fill: GREY }) + t(1700, 470, "whole pizza:", 40, { w: 900 }) + t(1700, 530, "$5,000,000", 50, { w: 900, fill: DGREEN }) };
-const formula = (a, b, c, cFill = YEL) =>
-  card(400, 520, 440, 240, lines(0, a.length > 1 ? -14 : 16, a, 46, { w: 900 })) + t(680, 550, "×", 110, { w: 900 }) +
-  card(960, 520, 440, 240, lines(0, b.length > 1 ? -14 : 16, b, 46, { w: 900 })) + t(1240, 550, "=", 110, { w: 900 }) +
-  card(1540, 520, 480, 240, lines(0, c.length > 1 ? -14 : 16, c, 50, { w: 900, fill: DGREEN }), { fill: cFill, sw: 9 });
+  body: A(g(480, 600, 0.3, P.pizza({ id: "pa", slices: 3 })) + t(480, 400, "COMPANY A", 38, { w: 900, fill: BLUE }) + t(480, 760, "$500 a slice", 36, { fill: GREY }) + t(480, 824, "whole pizza: $1,500", 44, { w: 900 }), "start", "fade") +
+    A(g(1180, 540, 0.82, P.pizza({ id: "pb", slices: 90 })), "bigger", "pop") +
+    A(t(1590, 330, "COMPANY B", 38, { w: 900, fill: L.ORANGE, max: 270 }) + t(1590, 400, "$5 a slice", 36, { fill: GREY }) + t(1590, 480, "whole pizza:", 40, { w: 900, max: 270 }) + t(1590, 550, "$5,000,000", 50, { w: 900, fill: DGREEN, max: 270 }), "cheap", "fade") };
+// formula cards; ons = words for [card 1, ×, card 2, =, result]
+const formula = (a, b, c, cFill = YEL, ons = null) => {
+  const T = (inner, i) => (ons ? A(inner, ons[i], "pop") : inner);
+  return T(card(400, 520, 440, 240, lines(0, a.length > 1 ? -14 : 16, a, 46, { w: 900, lh: 1.4 })), 0) + T(t(680, 550, "×", 110, { w: 900 }), 1) +
+    T(card(960, 520, 440, 240, lines(0, b.length > 1 ? -14 : 16, b, 46, { w: 900, lh: 1.4 })), 2) + T(t(1240, 550, "=", 110, { w: 900 }), 3) +
+    T(card(1520, 520, 440, 240, lines(0, c.length > 1 ? -14 : 16, c, 50, { w: 900, fill: DGREEN, lh: 1.4 }), { fill: cFill, sw: 9 }), 4);
+};
 S.S028 = { h: "Price × number of shares = market cap",
-  body: formula(["Price of", "1 share"], ["Number of", "shares"], ["MARKET CAP"]),
+  body: formula(["Price of", "1 share"], ["Number of", "shares"], ["MARKET CAP"], YEL, ["price", "times", "number", "called", "market"]),
   term: ["MARKET CAP", "What the whole company is worth. Short for market capitalization."] };
 S.S029 = { h: "Apple is cut into about 14.5 billion shares",
-  body: g(560, 570, 0.8, P.pizza({ id: "apl", slices: 120 })) + g(560, 570, 1.5, appleIcon(1, "#f6f3ea")) +
-    card(1360, 400, 640, 150, t(0, -14, "about 14.5 billion shares", 46, { w: 900 }) + t(0, 40, "each worth a few hundred dollars", 32, { fill: GREY })) +
-    t(1360, 560, "=", 90, { w: 900 }) + card(1360, 690, 640, 150, t(0, -10, "worth TRILLIONS", 56, { w: 900, fill: DGREEN }) + t(0, 42, "of dollars", 34, { fill: GREY }), { fill: YEL, sw: 9 }) };
-S.S030 = { body: g(860, 620, 1.7, buck("happy")) + g(1130, 420, 1.6, crumb()) + bubble(1330, 300, "My crumb!", { tail: "left" }) };
+  body: A(g(560, 570, 0.8, P.pizza({ id: "apl", slices: 120 })) + g(560, 570, 1.5, appleIcon(1, "#f6f3ea")), "apple", "pop") +
+    A(card(1340, 400, 640, 160, t(0, -18, "about 14.5 billion shares", 46, { w: 900 }) + t(0, 44, "each worth a few hundred dollars", 32, { fill: GREY })), "about>", "pop") +
+    A(t(1340, 570, "=", 90, { w: 900 }), "value", "pop") + A(card(1340, 700, 640, 160, t(0, -14, "worth TRILLIONS", 56, { w: 900, fill: DGREEN }) + t(0, 48, "of dollars", 34, { fill: GREY }), { fill: YEL, sw: 9 }), "trillions", "pop") };
+S.S030 = { body: A(g(860, 620, 1.7, buck("happy")), "start", "slide", { dir: "l", idle: "talk" }) + A(g(1130, 420, 1.6, crumb()), "crumb", "pop") + A(bubble(1330, 300, "My crumb!", { tail: "left" }), "proud", "pop") };
 
 // ---------- STOP 1: YOUR APP ----------
 S.S031 = { h: "Stop 1: the investing app on your phone", map: false,

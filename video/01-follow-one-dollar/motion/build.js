@@ -41,7 +41,7 @@ for (let i = i0; i <= i1; i++) {
   const end = i === i1 ? total : +(tl[i + 1].start - t0 - 0.12).toFixed(3);
   const prev = i > i0 ? C.SCENES[script[i - 1].id] : null;
   scenes.push({ id: line.id, start, dur: +(end - start).toFixed(3), lineStart: +(tm.start - t0).toFixed(3), lineEnd: +(tm.end - t0).toFixed(3),
-    words: tm.words.map((w) => ({ w: w.word, t: +(w.start - t0).toFixed(3) })), enter: sc.enter || "fade",
+    words: tm.words.map((w) => ({ w: w.word, t: +(w.start - t0).toFixed(3), e: +(w.end - t0).toFixed(3) })), enter: sc.enter || "fade",
     sameHeadline: !!(prev && prev.h && prev.h === sc.h), anims: sc.anims || [] });
   const svg = C.buildSvg(line).replace(/^<svg[^>]*>/, `<svg viewBox="0 0 1920 1080">`).replace(/<rect width="1920" height="1080"[^>]*\/>/, "");
   clips += `      <div id="sc-${line.id}" class="clip layer scene" data-start="${start}" data-duration="${(end - start).toFixed(3)}" data-track-index="${(i - i0) % 2}">\n        ${svg}\n      </div>\n`;
@@ -56,11 +56,12 @@ const RUNTIME = function (SCENES, FIT) {
   const when = (sc, on) => {
     if (!on || on === "start") return sc.start + 0.05;
     if (on[0] === "+") return sc.lineStart + parseFloat(on);
-    const [w, n] = on.toLowerCase().split(":");
+    const after = on.endsWith(">");                      // "word>" = right after the word (for numbers)
+    const [w, n] = on.replace(">", "").toLowerCase().split(":");
     const hits = sc.words.filter((x) => x.w === w);
     const hit = hits[(parseInt(n || "1", 10) || 1) - 1];
     if (!hit) { console.error(`motion: word "${on}" is not in line ${sc.id}`); return sc.start + 0.05; }
-    return Math.max(sc.start + 0.02, hit.t - LEAD);
+    return Math.max(sc.start + 0.02, after ? hit.e + 0.02 : hit.t - LEAD);
   };
   const apply = (sc, svg, el, a) => {
     const at = when(sc, a.on) + parseFloat(a.delay || 0);
@@ -73,6 +74,8 @@ const RUNTIME = function (SCENES, FIT) {
     } else if (a.fx === "stamp") {
       tl.fromTo(el, { scale: 2.6, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: dur || 0.22, ease: "power4.in" }, at);
       tl.fromTo(el, { rotation: -5 }, { rotation: 0, duration: 0.3, ease: "elastic.out(1.2, 0.4)" }, at + 0.22);
+    } else if (a.fx === "scalefrom") {
+      tl.fromTo(el, { scale: parseFloat(a.from || 1), transformOrigin: "50% 50%" }, { scale: 1, duration: dur || 0.8, ease: "power2.inOut" }, at);
     } else if (a.fx === "move") {
       tl.to(el, { x: parseFloat(a.dx || 0), y: parseFloat(a.dy || 0), duration: dur || 1, ease: "power1.inOut" }, at);
     } else if (a.fx === "wipe") {
@@ -102,6 +105,13 @@ const RUNTIME = function (SCENES, FIT) {
         // a small hop on each spoken word, plus a slight lean, so the character looks like it is talking
         sc.words.forEach((w, k) => { if (k % 2 === 0) tl.to(el, { y: -14, rotation: k % 4 ? 1.5 : -1.5, transformOrigin: "50% 100%", duration: 0.11, yoyo: true, repeat: 1, ease: "sine.out" }, Math.max(sc.start, w.t - 0.02)); });
       }
+    });
+    // plain-words cards rise in when the term is said (or halfway through the line)
+    svg.querySelectorAll(".term").forEach((el) => {
+      const first = (el.querySelector(":scope > text").textContent || "").toLowerCase().split(/[^a-z0-9&+']+/).filter(Boolean)[0];
+      const hits = sc.words.filter((x) => x.w === first);
+      const at = hits.length ? hits[hits.length - 1].t - LEAD : sc.lineStart + (sc.lineEnd - sc.lineStart) * 0.5;
+      tl.fromTo(el, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.4)" }, Math.max(sc.start + 0.05, at));
     });
     svg.querySelectorAll(".src, .exbadge").forEach((el) => tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.3 }, sc.start + 0.3));
   });

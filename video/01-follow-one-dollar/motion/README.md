@@ -3,7 +3,7 @@
 Animated scenes, built from the stills and timed to the real voiceover.
 
 - `build.js` turns a range of script lines into a HyperFrames project: `node video/01-follow-one-dollar/motion/build.js hook S001 S011`
-- `hook/` the hook (S001–S011): `index.html` (generated, don't edit by hand), `assets/`, and `hook.mp4` (the render)
+- `hook/` the hook (S001–S011) and `pizza/` the pizza section (S012–S030): each has `index.html` (generated, don't edit by hand), `assets/`, and the rendered `.mp4`
 
 How timing works: each script line is one clip that starts when the narrator starts that line, and each tagged part appears on the word it belongs to (`audio/follow-one-dollar-v5/timings.json`). So when the voice speeds up the pictures speed up, and when it pauses they wait. If the voiceover is re-recorded, rebuild and everything re-times itself.
 

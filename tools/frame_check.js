@@ -132,8 +132,12 @@ const ts = s => `${Math.floor(s / 60)}:${(s % 60).toFixed(2).padStart(5, "0")}`;
     for (let i = 0; i < texts.length; i++) for (let j = i + 1; j < texts.length; j++) {
       const a = texts[i], b = texts[j];
       if (a.allowOverlap || b.allowOverlap) continue;
-      const o = inter(a, b);
-      if (o > 0.05 * Math.min(a.w * a.h, b.w * b.h)) add("OVERLAP", a.name + "~" + b.name, `text ${a.name} overlaps text ${b.name}`, t, [a, b]);
+      // compare the inked part of each line: a text box includes empty room above and below the
+      // letters, so stacked lines of one label would otherwise count as overlapping
+      const ink = r => ({ x: r.x, y: r.y + r.h * 0.22, w: r.w, h: r.h * 0.56 });
+      const ia = ink(a), ib = ink(b);
+      const o = inter(ia, ib);
+      if (o > 0.05 * Math.min(ia.w * ia.h, ib.w * ib.h)) add("OVERLAP", a.name + "~" + b.name, `text ${a.name} overlaps text ${b.name}`, t, [a, b]);
     }
     for (const tx of texts) for (const ob of items.filter(i => !i.text)) {
       if (tx.allowOverlap || ob.allowOverlap || ob.order < tx.order) continue;       // only objects painted on top
