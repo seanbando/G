@@ -1,5 +1,7 @@
 # Script Format Guide (money, investing, stock market)
 
+> **Variety comes first.** This guide sets the quality bar, not a template. Before writing, check `docs/video-variety-log.md`: each new video must differ from the last three in at least four of the seven columns (hook, device, structure, characters, ending, length, value).
+
 Adapted from the creator's "Pure Millionaires" format guide. Use the **format** for rewrites and new money explainers; the video ideas in the original are examples, not topics we have to copy. Where this guide and `docs/script-system.md` disagree, see "How this fits with the script system" at the bottom.
 
 ---
