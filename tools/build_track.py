@@ -32,8 +32,10 @@ def load_any(path):
         return load_lines(path)
     return parse(path)[1]
 
-TRIM = ("silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,"
-        "areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08,"
+# Clip edges are trimmed at -40 dB: quiet breaths and room tone left at -45 dB
+# added about half a second of dead air after many lines.
+TRIM = ("silenceremove=start_periods=1:start_threshold=-40dB:start_silence=0.05,"
+        "areverse,silenceremove=start_periods=1:start_threshold=-40dB:start_silence=0.1,"
         "areverse,silenceremove=stop_periods=-1:stop_duration=0.45:stop_threshold=-45dB:stop_silence=0.4")
 
 

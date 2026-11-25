@@ -332,7 +332,7 @@ They guarantee eligible trades, work out what each firm owes, and hold the share
 A referee for money is the first sensible thing I've heard today.
 
 **S093 · NARRATOR · ~4 s · PROMISE 2**
-Now for the paperwork promise from the start of this video.
+Now for the paperwork question from the start of this video.
 
 **S094 · NARRATOR · ~4 s**
 Many shares held through brokerages are registered under one name, Cede and Company.
@@ -346,7 +346,7 @@ Cede and Company is the name the Depository Trust Company uses on the official r
 It's a bit like a coat check at a restaurant.
 
 **S097 · NARRATOR · ~5 s**
-The hanger tag doesn't have your name, but your ticket proves the coat is yours.
+The hanger tag doesn't have your name, but your ticket proves the coat belongs to you.
 
 **S098 · NARRATOR · ~5 s**
 Your brokerage's records are that ticket, and they list you as the beneficial owner.
@@ -434,7 +434,7 @@ Millions of small deals like that, every day, are what make a stock chart move.
 Prices mostly move on what buyers and sellers expect a company to earn later.
 
 **S123 · NARRATOR · ~5 s**
-Good news can lift a price in minutes, and bad news can sink it.
+Good news can lift a stock's price in minutes, and bad news can sink it.
 
 **S124 · NARRATOR · ~5 s**
 In his nineteen eighty-seven letter, Warren Buffett passed on a lesson from his teacher, Benjamin Graham.

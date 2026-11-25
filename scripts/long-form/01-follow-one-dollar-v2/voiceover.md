@@ -8,11 +8,11 @@ Voice-only recording sheet. Every spoken line is numbered (S001, S002 …) and b
 
 | Voice | ElevenLabs voice | Lines | Words | Direction |
 |---|---|---|---|---|
-| **NARRATOR** | Yaboy | 147 | 2032 | Warm, clear and conversational, like explaining money to a friend. |
+| **NARRATOR** | Yaboy | 147 | 2034 | Warm, clear and conversational, like explaining money to a friend. |
 | **BUCK** | Larry | 9 | 114 | Cocky dollar bill and the dollar making the trip. Dry, quick, one-sentence gags; never explains. |
 | **HAMLET** | Grampa Werthers | 8 | 94 | Grumpy piggy bank the dollar left behind. Lower and slower than Buck; grumbles about spending, warms up to saving. |
 
-**Total:** 164 lines · 2240 spoken words · about 12.4 minutes at 180 words per minute, plus 1 silent pause.
+**Total:** 164 lines · 2242 spoken words · about 12.5 minutes at 180 words per minute, plus 1 silent pause.
 
 ### Recording notes
 - **File names:** name each file after its line, for example `S004_BUCK.mp3`.
@@ -321,7 +321,7 @@ They guarantee eligible trades, work out what each firm owes, and hold the share
 A referee for money is the first sensible thing I've heard today.
 
 **S093 · NARRATOR** · PROMISE 2  
-Now for the paperwork promise from the start of this video.
+Now for the paperwork question from the start of this video.
 
 **S094 · NARRATOR**  
 Many shares held through brokerages are registered under one name, Cede and Company.
@@ -333,7 +333,7 @@ Cede and Company is the name the Depository Trust Company uses on the official r
 It's a bit like a coat check at a restaurant.
 
 **S097 · NARRATOR**  
-The hanger tag doesn't have your name, but your ticket proves the coat is yours.
+The hanger tag doesn't have your name, but your ticket proves the coat belongs to you.
 
 **S098 · NARRATOR**  
 Your brokerage's records are that ticket, and they list you as the beneficial owner.
@@ -415,7 +415,7 @@ Millions of small deals like that, every day, are what make a stock chart move.
 Prices mostly move on what buyers and sellers expect a company to earn later.
 
 **S123 · NARRATOR**  
-Good news can lift a price in minutes, and bad news can sink it.
+Good news can lift a stock's price in minutes, and bad news can sink it.
 
 **S124 · NARRATOR**  
 In his nineteen eighty-seven letter, Warren Buffett passed on a lesson from his teacher, Benjamin Graham.
@@ -634,11 +634,11 @@ If this made the stock market make more sense, a like really helps the channel.
 - **S089:** That means your Tuesday trade is usually final on Wednesday.
 - **S090:** Behind the scenes, companies in a group called the D-T-C-C clear and settle the trade.
 - **S091:** They guarantee eligible trades, work out what each firm owes, and hold the shares.
-- **S093:** Now for the paperwork promise from the start of this video.
+- **S093:** Now for the paperwork question from the start of this video.
 - **S094:** Many shares held through brokerages are registered under one name, Cede and Company.
 - **S095:** Cede and Company is the name the Depository Trust Company uses on the official record.
 - **S096:** It's a bit like a coat check at a restaurant.
-- **S097:** The hanger tag doesn't have your name, but your ticket proves the coat is yours.
+- **S097:** The hanger tag doesn't have your name, but your ticket proves the coat belongs to you.
 - **S098:** Your brokerage's records are that ticket, and they list you as the beneficial owner.
 - **S099:** Promise two, done, because the name on the record isn't yours, but the shares are.
 - **S100:** The gains are yours, and so are the losses.
@@ -663,7 +663,7 @@ If this made the stock market make more sense, a like really helps the channel.
 - **S120:** The last-trade price now becomes three hundred fifty dollars and five cents.
 - **S121:** Millions of small deals like that, every day, are what make a stock chart move.
 - **S122:** Prices mostly move on what buyers and sellers expect a company to earn later.
-- **S123:** Good news can lift a price in minutes, and bad news can sink it.
+- **S123:** Good news can lift a stock's price in minutes, and bad news can sink it.
 - **S124:** In his nineteen eighty-seven letter, Warren Buffett passed on a lesson from his teacher, Benjamin Graham.
 - **S125:** In the short run, the market is a voting machine, but in the long run it is a weighing machine.
 - **S126:** Day to day, prices follow moods, and over many years they tend to follow profits.
