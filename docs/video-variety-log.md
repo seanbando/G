@@ -2,6 +2,18 @@
 
 YouTube's monetization rules penalize mass-produced or repetitive content: videos built from one template with the topic swapped in. (As of 2025 YouTube calls this "inauthentic content"; check the current YouTube Help page.) The format guide sets the *quality bar*; this log makes sure every video is also *different* from the ones before it.
 
+## Always carried over (channel identity)
+
+These stay the same on purpose, because they make the channel recognizable. They don't count against variety:
+
+- The narrator's voice, and Buck and Hamlet as the recurring mascots (their personalities stay the same; their jokes are new every video)
+- The dollar mascot, the overall look, and the not-advice end-screen line
+- The quality rules: plain words, pictures before numbers, sourced numbers, full sentences for the voice
+- Recurring ending pieces: a callback, the next video, a comment prompt and a like line (written fresh each time)
+- Anything that genuinely fits the video, even if an earlier video used it too
+
+## Must change every video
+
 **Rule:** before writing a script, read the last three entries. The new video must differ from each of them in at least **four** of the seven columns. Add the new video's row when the script is approved.
 
 | # | Video | Length | Hook type | Main device | Structure | Mascot/character use | Ending | Value only this video gives |
@@ -19,6 +31,8 @@ YouTube's monetization rules penalize mass-produced or repetitive content: video
 - **Value:** every video must teach or reveal one thing the channel hasn't covered before, backed by its own research file.
 
 ## What doesn't count as variety
+
+(Carrying over the channel identity above is fine; this list is about the content.)
 
 - Swapping the topic while keeping the same hook wording, device, beat order and ending.
 - Reusing the same promise lines, checkpoint lines or mascot jokes word for word.
