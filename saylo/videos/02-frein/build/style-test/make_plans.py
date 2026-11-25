@@ -170,7 +170,7 @@ rows7 = [
     (517, 488.67, image("hangar-interior-reuters-abc.jpg", "source-reuters.png", push=0.05), "There were weapons inside the hangar,", "real photo: inside the hangar"),
     (518, 489.99, obj("notebook", rate=0.15), "and so was the notebook.", "3D object: the notebook"),
     (519, 493.35, obj("notebook", angle=60, elev=52, rate=0.07), "This was the longer journal, not the three pages from the trash bag,", "3D object: the notebook from above"),
-    (520, 497.01, still("E", 68.6, push=0.04, tag=PSP), "and it doesn't read like a soldier on a mission.", "police-released photo: Frein in re-enactor uniform"),
+    (520, 497.01, still("E", 68.6, push=0.04, tag=PSP, crop="664:374:307:20"), "and it doesn't read like a soldier on a mission.", "police-released photo: Frein in re-enactor uniform"),
     (521, 502.85, quote(["“SLEPT LIKE A HUMAN", "FIRST TIME IN TWO WEEKS.”"], "ERIC FREIN'S JOURNAL, SEPT 25  ·  COURT RECORD", 498.7, size=0.19),
      "On September twenty-fifth, he wrote that he slept like a human first time in two weeks.", "typed journal quote, amber bar"),
     (522, 509.45, quote(["“THIRTY DAYS.", "A LOT LONGER THAN", "I EXPECTED TO LAST.”"], "ERIC FREIN'S JOURNAL, OCT 11  ·  COURT RECORD", 504.3, size=0.19),
