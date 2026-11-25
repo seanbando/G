@@ -24,6 +24,14 @@ import tempfile
 sys.path.insert(0, os.path.dirname(__file__))
 from make_voiceover import parse  # noqa: E402
 
+
+def load_any(path):
+    """Read either script format: "ROLE: text" paragraphs or "**S012 · VOICE · ~5 s**" lines."""
+    if re.search(r"^\*\*S\d+ · ", open(path).read(), re.M):
+        from make_voiceover_v2 import load_lines
+        return load_lines(path)
+    return parse(path)[1]
+
 TRIM = ("silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.05,"
         "areverse,silenceremove=start_periods=1:start_threshold=-45dB:start_silence=0.08,"
         "areverse,silenceremove=stop_periods=-1:stop_duration=0.45:stop_threshold=-45dB:stop_silence=0.4")
@@ -65,7 +73,7 @@ def ff(*args):
 
 
 def main(script, clips, out):
-    _, lines = parse(script)
+    lines = load_any(script)
     tmp = tempfile.mkdtemp()
     os.makedirs(os.path.join(clips, "trimmed"), exist_ok=True)
     silences = {}

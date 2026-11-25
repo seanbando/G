@@ -20,6 +20,14 @@ from elevenlabs.types import VoiceSettings
 sys.path.insert(0, os.path.dirname(__file__))
 from make_voiceover import parse  # noqa: E402
 
+
+def load_any(path):
+    """Read either script format: "ROLE: text" paragraphs or "**S012 · VOICE · ~5 s**" lines."""
+    if re.search(r"^\*\*S\d+ · ", open(path).read(), re.M):
+        from make_voiceover_v2 import load_lines
+        return load_lines(path)
+    return parse(path)[1]
+
 VOICES = {
     "NARRATOR": "eAE1ARfBOYNmMW3Ma9aS",      # Yaboy (creator's cloned voice)
     "YOU": "cjVigY5qzO86Huf0OWal",           # Eric - Smooth, Trustworthy
@@ -42,7 +50,8 @@ FORMAT = "mp3_44100_128"
 SETTINGS = dict(stability=0.4, similarity_boost=0.8, style=0.2, use_speaker_boost=True)
 DEFAULT_SPEED = 1.0
 # Faster read for the hook (roughly the first 30 seconds).
-SPEED = {f"VO-{n:02d}": 1.12 for n in range(1, 7)}  # VO-01 to VO-06
+SPEED = {f"VO-{n:02d}": 1.12 for n in range(1, 7)}  # VO-01 to VO-06 (v1)
+SPEED.update({f"S{n:03d}": 1.12 for n in range(1, 7)})  # S001 to S006 (v2 hook)
 
 # --split: long lines are cut into pieces of a few sentences (VO-13a, VO-13b, ...).
 SPLIT_TARGET = 220  # aim for pieces of about this many characters
@@ -91,7 +100,7 @@ def main():
     ap.add_argument("--split", action="store_true", help="cut long lines into smaller pieces")
     args = ap.parse_args()
 
-    _, lines = parse(args.script)
+    lines = load_any(args.script)
     only = set(args.only.split(",")) if args.only else None
     os.makedirs(args.out_dir, exist_ok=True)
     client = ElevenLabs()  # reads ELEVENLABS_API_KEY

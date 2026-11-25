@@ -83,3 +83,18 @@ def main(src, dst):
 
 if __name__ == "__main__":
     main(sys.argv[1], sys.argv[2])
+
+
+def load_lines(path):
+    """Lines in the v1 tuple shape (line_id, voice, text, cues) so the recording and
+    joining tools work with both script formats. Pauses become "⏸ PAUSE ..." cues on
+    the line that follows them."""
+    _, items = parse(path)
+    out, cues = [], []
+    for it in items:
+        if it[0] == "pause":
+            cues.append("⏸ PAUSE " + it[1])
+        elif it[0] == "line":
+            out.append((it[1], it[2], it[4], cues))
+            cues = []
+    return out
