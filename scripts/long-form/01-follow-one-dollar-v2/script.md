@@ -295,8 +295,8 @@ Say the retired teacher is selling a little stock to help pay for a new roof.
 **S082 · BUCK · ~5 s · gag**
 Tell her I'll pay for the roof myself, so she doesn't have to sell.
 
-**S083 · NARRATOR · ~5 s · EXAMPLE**
-Your dollar buys her share, so your dollar ends up helping pay for that roof.
+**S083 · NARRATOR · ~6 s · EXAMPLE**
+Your dollar buys a crumb of her stock, so your dollar ends up helping pay for that roof.
 
 **S084 · NARRATOR · ~4 s · PROMISE 1 (closed)**
 Promise one, done, because your dollar went to the seller, not to Apple.

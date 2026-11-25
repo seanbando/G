@@ -100,7 +100,7 @@ L(N,"Today, your dollar goes to whoever sold you the share.","",'secondary')
 L(N,"It could be your own broker, a market maker, a big fund, or a retired teacher.","",'routing')
 L(N,"Say the retired teacher is selling a little stock to help pay for a new roof.","EXAMPLE")
 L(B,"Tell her I'll pay for the roof myself, so she doesn't have to sell.","gag")
-L(N,"Your dollar buys her share, so your dollar ends up helping pay for that roof.","EXAMPLE")
+L(N,"Your dollar buys a crumb of her stock, so your dollar ends up helping pay for that roof.","EXAMPLE")
 L(N,"Promise one, done, because your dollar went to the seller, not to Apple.","PROMISE 1 (closed)")
 L(N,"Apple still cares about its price, partly because its executives are often paid in stock.")
 

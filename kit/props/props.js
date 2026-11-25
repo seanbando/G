@@ -15,6 +15,14 @@ function text(x, y, str, size, { weight = 800, fill = INK, anchor = "middle", ex
   return `<text x="${x}" y="${y}" text-anchor="${anchor}" font-family="${FONT}" font-weight="${weight}" font-size="${size}" fill="${fill}" ${extra}>${str}</text>`;
 }
 
+// Small red "EXAMPLE · MADE-UP NUMBERS" badge for any prop showing made-up numbers.
+function exampleBadge(x, y, rot = -8) {
+  return `<g transform="translate(${x} ${y}) rotate(${rot})">` +
+    `<rect x="-120" y="-30" width="240" height="60" rx="9" fill="#fffaf0" stroke="${STAMP}" stroke-width="5"/>` +
+    text(0, -4, "EXAMPLE", 24, { weight: 900, fill: STAMP }) +
+    text(0, 20, "MADE-UP NUMBERS", 17, { weight: 900, fill: STAMP }) + `</g>`;
+}
+
 // ---------- ROAD MAP ----------
 // Five stops along a hand-drawn road. state per stop: "todo" | "active" | "done".
 // Drawn in a 1600 x 360 box with its top-left at (0, 0).
@@ -43,7 +51,7 @@ function roadMap({ id = "map", stops = ["Your App", "Market Maker", "Exchange", 
 // ---------- PIZZA ----------
 // A pizza centred on (0, 0), radius 300. highlight = slice index (0 = right, going counter-clockwise).
 // bite = true cuts a scalloped bite from the highlighted slice's crust.
-function pizza({ id = "pizza", slices = 8, highlight = null, bite = false, label = null } = {}) {
+function pizza({ id = "pizza", slices = 8, highlight = null, bite = false, label = null, note = null, example = false } = {}) {
   const R = 300;
   let s = `<g id="${id}" filter="url(#wobble)">`;
   s += `<circle r="${R}" fill="#f3c26b" stroke="${INK}" stroke-width="10"/>`;
@@ -53,7 +61,9 @@ function pizza({ id = "pizza", slices = 8, highlight = null, bite = false, label
     .forEach(([x, y]) => (s += `<circle cx="${x}" cy="${y}" r="26" fill="#b8352a" stroke="${INK}" stroke-width="4"/>`));
   for (let k = 0; k < slices; k++) {
     const a = (-k / slices) * Math.PI * 2;
-    s += `<line x1="0" y1="0" x2="${(Math.cos(a) * R).toFixed(1)}" y2="${(Math.sin(a) * R).toFixed(1)}" stroke="${INK}" stroke-width="6"/>`;
+    const w = slices > 40 ? 1.5 : slices > 16 ? 3 : 6;
+    const r0 = slices > 16 ? R * 0.16 : 0;  // many slices: start the cuts away from the centre
+    s += `<line x1="${(Math.cos(a) * r0).toFixed(1)}" y1="${(Math.sin(a) * r0).toFixed(1)}" x2="${(Math.cos(a) * R).toFixed(1)}" y2="${(Math.sin(a) * R).toFixed(1)}" stroke="${INK}" stroke-width="${w}"/>`;
   }
   if (highlight !== null) {
     const a1 = (-highlight / slices) * Math.PI * 2, a2 = (-(highlight + 1) / slices) * Math.PI * 2;
@@ -72,6 +82,8 @@ function pizza({ id = "pizza", slices = 8, highlight = null, bite = false, label
     s += `</g>`;
   }
   if (label) s += text(0, -R - 50, label, 52);
+  if (note) s += text(0, R + 62, note, 34, { weight: 700, fill: GREY });
+  if (example) s += exampleBadge(R - 40, R - 10);
   return s + `</g>`;
 }
 
@@ -102,7 +114,7 @@ function sourceTag({ id = "source", text: str = "Source: SEC Investor.gov" } = {
 
 // ---------- PRICE BOARD ----------
 // A ticker-style board showing the last-trade price. Top-left at (0, 0), 640 x 300.
-function priceBoard({ id = "board", label = "APPLE · LAST TRADE", price = "$250.00", change = null } = {}) {
+function priceBoard({ id = "board", label = "APPLE · LAST TRADE", price = "$250.00", change = null, example = false } = {}) {
   let s = `<g id="${id}" filter="url(#wobble)">`;
   s += `<rect x="0" y="0" width="640" height="300" rx="22" fill="#20252b" stroke="${INK}" stroke-width="8"/>`;
   s += `<rect x="24" y="24" width="592" height="252" rx="12" fill="#2c333b"/>`;
@@ -110,7 +122,8 @@ function priceBoard({ id = "board", label = "APPLE · LAST TRADE", price = "$250
   s += `<g id="${id}-price">` + text(320, 196, price, 104, { weight: 900, fill: "#5fe08f" }) + `</g>`;
   if (change) s += text(320, 252, change, 34, { weight: 800, fill: "#5fe08f" });
   [70, 570].forEach(x => (s += `<circle cx="${x}" cy="50" r="8" fill="#5fe08f"/>`));
+  if (example) s += exampleBadge(540, 4, 6);
   return s + `</g>`;
 }
 
-module.exports = { roadMap, pizza, exampleCard, sourceTag, priceBoard, ROAD_PATH };
+module.exports = { roadMap, pizza, exampleCard, sourceTag, priceBoard, exampleBadge, ROAD_PATH };

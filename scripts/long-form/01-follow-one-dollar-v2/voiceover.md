@@ -8,11 +8,11 @@ Voice-only recording sheet. Every spoken line is numbered (S001, S002 …) and b
 
 | Voice | ElevenLabs voice | Lines | Words | Direction |
 |---|---|---|---|---|
-| **NARRATOR** | Yaboy | 147 | 2026 | Warm, clear and conversational, like explaining money to a friend. |
+| **NARRATOR** | Yaboy | 147 | 2029 | Warm, clear and conversational, like explaining money to a friend. |
 | **BUCK** | Larry | 9 | 114 | Cocky dollar bill and the dollar making the trip. Dry, quick, one-sentence gags; never explains. |
 | **HAMLET** | Grampa Werthers | 8 | 94 | Grumpy piggy bank the dollar left behind. Lower and slower than Buck; grumbles about spending, warms up to saving. |
 
-**Total:** 164 lines · 2234 spoken words · about 12.4 minutes at 180 words per minute, plus 1 silent pause.
+**Total:** 164 lines · 2237 spoken words · about 12.4 minutes at 180 words per minute, plus 1 silent pause.
 
 ### Recording notes
 - **File names:** name each file after its line, for example `S004_BUCK.mp3`.
@@ -289,7 +289,7 @@ Say the retired teacher is selling a little stock to help pay for a new roof.
 Tell her I'll pay for the roof myself, so she doesn't have to sell.
 
 **S083 · NARRATOR** · EXAMPLE  
-Your dollar buys her share, so your dollar ends up helping pay for that roof.
+Your dollar buys a crumb of her stock, so your dollar ends up helping pay for that roof.
 
 **S084 · NARRATOR** · PROMISE 1 (closed)  
 Promise one, done, because your dollar went to the seller, not to Apple.
@@ -625,7 +625,7 @@ If this made the stock market make more sense, a like really helps the channel.
 - **S079:** Today, your dollar goes to whoever sold you the share.
 - **S080:** It could be your own broker, a market maker, a big fund, or a retired teacher.
 - **S081:** Say the retired teacher is selling a little stock to help pay for a new roof.
-- **S083:** Your dollar buys her share, so your dollar ends up helping pay for that roof.
+- **S083:** Your dollar buys a crumb of her stock, so your dollar ends up helping pay for that roof.
 - **S084:** Promise one, done, because your dollar went to the seller, not to Apple.
 - **S085:** Apple still cares about its price, partly because its executives are often paid in stock.
 - **S086:** Stop five is where your trade becomes official.
