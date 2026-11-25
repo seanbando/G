@@ -12,9 +12,9 @@ const path = require("path");
 const { execFileSync } = require("child_process");
 const C = require("../stills/compose.js");
 
-const [name, first, last] = process.argv.slice(2);
+const [name, first, last, audioDir] = process.argv.slice(2); // audioDir: optional, default the v4 recording
 if (!name || !first || !last) { console.error("usage: build.js <name> <first-line> <last-line>"); process.exit(1); }
-const AUDIO_DIR = path.join(C.ROOT, "audio", "follow-one-dollar-v4");
+const AUDIO_DIR = audioDir ? path.resolve(audioDir) : path.join(C.ROOT, "audio", "follow-one-dollar-v4");
 const T = JSON.parse(fs.readFileSync(path.join(AUDIO_DIR, "timings.json"), "utf8"));
 const OUT = path.join(__dirname, name);
 fs.mkdirSync(path.join(OUT, "assets"), { recursive: true });
