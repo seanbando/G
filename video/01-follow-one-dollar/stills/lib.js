@@ -30,6 +30,14 @@ function lines(x, y, str, size = 40, { max = 30, lh = 1.22, ...o } = {}) {
 }
 const g = (x, y, s, inner, rot = 0) => `<g transform="translate(${x} ${y})${rot ? ` rotate(${rot})` : ""}${s !== 1 ? ` scale(${s})` : ""}">${inner}</g>`;
 const W = (inner, id) => `<g filter="url(#wobble)"${id ? ` id="${id}"` : ""}>${inner}</g>`;
+// Motion tag. In a still this is just a group; the motion builder animates it when the
+// narrator reaches the word `on` ("start", a word, "word:2" for its 2nd use, or "+1.5" seconds
+// into the line). fx: pop, fade, slide (dir l/r/u/d), wipe (dir), stamp, move (dx, dy, dur).
+// idle: "bob" (gentle float) or "talk" (hops on each spoken word).
+function A(inner, on = "start", fx = "pop", o = {}) {
+  const at = Object.entries({ dir: o.dir, dx: o.dx, dy: o.dy, dur: o.dur, delay: o.delay }).filter(([, v]) => v !== undefined).map(([k, v]) => ` data-${k}="${v}"`).join("");
+  return `<g class="anim" data-on="${on}" data-fx="${fx}"${at}>${o.idle ? `<g class="idle" data-idle="${o.idle}">${inner}</g>` : inner}</g>`;
+}
 const dim = (inner, o = 0.3) => `<g opacity="${o}">${inner}</g>`;
 
 // ---------- frame furniture ----------
@@ -44,16 +52,16 @@ function headline(str, { size = 62, max = 44, fill = INK, width = 1500 } = {}) {
     }
     ls = best.ls;
   }
-  const ys = ls.length === 1 ? [168] : [140, 140 + size * 1.12];
-  return `<g id="headline">` + ls.map((l, i) => t(960, ys[i], l, size, { w: 900, fill, max: width })).join("") + `</g>`;
+  const ys = ls.length === 1 ? [184] : [172, 172 + size * 1.12];
+  return `<g class="headline">` + ls.map((l, i) => t(960, ys[i], l, size, { w: 900, fill, max: width })).join("") + `</g>`;
 }
 function chip(label) {
-  return `<g id="chip" class="fitbox" data-pad="22" data-anchor="start"><rect x="50" y="34" width="300" height="52" rx="26" fill="#fff" stroke="${INK}" stroke-width="4"/>` +
+  return `<g class="chip fitbox" data-allow-edge data-pad="22" data-anchor="start"><rect x="50" y="34" width="300" height="52" rx="26" fill="#fff" stroke="${INK}" stroke-width="4"/>` +
     t(74, 71, label, 26, { w: 900, anchor: "start", fill: GREY }) + `</g>`;
 }
 // five dots, top-right: where we are on the trip
 function miniMap(active, doneUpTo = active - 1) {
-  let s = `<g id="minimap"><path d="M 1560 62 H 1840" stroke="${INK}" stroke-width="5" stroke-dasharray="10 9"/>`;
+  let s = `<g class="minimap" data-allow-edge><path d="M 1560 62 H 1840" stroke="${INK}" stroke-width="5" stroke-dasharray="10 9"/>`;
   for (let i = 1; i <= 5; i++) {
     const x = 1560 + (i - 1) * 70, st = i === active ? "a" : i <= doneUpTo ? "d" : "t";
     s += `<circle cx="${x}" cy="62" r="23" fill="${st === "a" ? GREEN : st === "d" ? "#cfead7" : "#fff"}" stroke="${INK}" stroke-width="5"/>` +
@@ -264,6 +272,6 @@ const ballotBox = (s = 1) => g(0, 0, s, W(`<rect x="-120" y="-30" width="240" he
 const pocket = (s = 1) => g(0, 0, s, W(`<path d="M -150 -120 H 150 V 40 Q 150 150 0 160 Q -150 150 -150 40 Z" fill="#5b7fb5" stroke="${INK}" stroke-width="7" stroke-linejoin="round"/><path d="M -126 -96 H 126 V 36 Q 126 126 0 136 Q -126 126 -126 36 Z" fill="none" stroke="#f0d9a0" stroke-width="5" stroke-dasharray="14 10"/>`));
 
 const termTop = (meaning, full) => 992 - (84 + (Array.isArray(meaning) ? meaning : wrap(meaning, 54)).length * 44 + (full ? 40 : 0) + 14);
-module.exports = { termTop, buck, hamlet, COLORS, WOBBLE_FILTER, P, INK, PAPER, GREEN, DGREEN, RED, GREY, LGREY, BLUE, LBLUE, YEL, GOLD, CREAM, ORANGE, PURPLE, SKIN,
+module.exports = { A, termTop, buck, hamlet, COLORS, WOBBLE_FILTER, P, INK, PAPER, GREEN, DGREEN, RED, GREY, LGREY, BLUE, LBLUE, YEL, GOLD, CREAM, ORANGE, PURPLE, SKIN,
   t, wrap, lines, g, W, dim, headline, chip, miniMap, termCard, bubble, arrow, cross, tick, stamp, card, bill, coin, slice, crumb, priceTag, person, teacher, phone, appleIcon, buyBtn, appScreen,
   tower, bank, booth, house, sparkle, rack, signpost, calendar, clock, bell, ticket, doc, basket, shield, chart, candles, newspaper, checklist, thumbsUp, scaleIcon, ballotBox, pocket };

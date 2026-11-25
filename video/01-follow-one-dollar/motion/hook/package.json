@@ -1,0 +1,8 @@
+{
+  "name": "follow-one-dollar-hook",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "render": "npx --yes hyperframes@0.9.92 render"
+  }
+}

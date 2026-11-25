@@ -1,6 +1,6 @@
 // Stills S001–S039: hook, the pizza device, stop 1 (your app).
 const L = require("./lib.js");
-const { t, lines, g, W, dim, bubble, arrow, cross, tick, stamp, card, bill, coin, slice, crumb, priceTag, person, phone, appleIcon, buyBtn, appScreen,
+const { A, t, lines, g, W, dim, bubble, arrow, cross, tick, stamp, card, bill, coin, slice, crumb, priceTag, person, phone, appleIcon, buyBtn, appScreen,
   tower, bank, booth, calendar, doc, checklist, pocket, buck, hamlet, P, INK, GREEN, DGREEN, RED, GREY, LGREY, BLUE, LBLUE, YEL, GOLD, PAPER } = L;
 
 const POS = [[100, 158], [452, 245], [800, 128], [1157, 262], [1500, 183]];
@@ -14,17 +14,17 @@ const stopXY = (i, { x = 200, y = 330, s = 0.95 } = {}) => [x + POS[i - 1][0] * 
 
 // three promise cards; active = highlighted one, done = list of finished ones
 const PROMISES = [["Who ends up", "holding your dollar"], ["Whose name is", "on your stock"], ["3 checks before", "you tap BUY"]];
-function promises(active, done = [], show = [1, 2, 3]) {
+function promises(active, done = [], show = [1, 2, 3], word = null) {
   let o = "";
   PROMISES.forEach((p, i) => {
     const n = i + 1, x = 400 + i * 560, on = n === active, isDone = done.includes(n), shown = show.includes(n) || isDone;
     const icon = n === 1 ? g(0, -70, 0.9, bill(170)) + W(`<path d="M -110 -20 Q -60 30 0 30 Q 60 30 110 -20" fill="none" stroke="${INK}" stroke-width="8" stroke-linecap="round"/>`)
       : n === 2 ? g(0, -66, 0.62, doc("STOCK", ["Name: ? ? ?"], { w: 380 }))
       : g(0, -64, 0.5, checklist(["", "", ""], ["done", "done", "done"], { w: 300, size: 34 }));
-    let inner = t(0, -170, "PROMISE " + n, 34, { w: 900, fill: on || isDone ? DGREEN : GREY }) + (shown ? icon + t(0, 96, p[0], 40, { w: 900 }) + t(0, 144, p[1], 40, { w: 900 }) : t(0, 40, "?", 150, { w: 900, fill: LGREY }));
+    let inner = t(0, -170, "PROMISE " + n, 34, { w: 900, fill: on || isDone ? DGREEN : GREY }) + (shown ? icon + t(0, 90, p[0], 40, { w: 900 }) + t(0, 150, p[1], 40, { w: 900 }) : t(0, 40, "?", 150, { w: 900, fill: LGREY }));
     if (isDone) inner += stamp(170, -214, "DONE", { color: GREEN, rot: 8, size: 44 });
     const c = card(x, 520, 480, 440, inner, { fill: on ? YEL : "#fff", sw: on ? 9 : 6 });
-    o += on || isDone ? c : dim(c, shown ? 0.55 : 0.5);
+    o += on && word ? A(c, word, "pop") : on || isDone ? c : dim(c, shown ? 0.55 : 0.5);
   });
   return o;
 }
@@ -32,36 +32,44 @@ function promises(active, done = [], show = [1, 2, 3]) {
 const S = {};
 
 // ---------- HOOK ----------
+// A(...) tags say which spoken word each part appears on (see lib.js); stills ignore them.
 S.S001 = { h: "You tap BUY on $1 of Apple stock…",
-  body: g(520, 590, 0.82, phone(appScreen())) + W(`<circle cx="520" cy="712" r="74" fill="none" stroke="${GREEN}" stroke-width="7" stroke-dasharray="14 12"/>`) +
-    arrow(730, 560, 1150, 560, { dash: "18 16", color: GREY }) + cross(940, 560, 46, 14) +
-    g(1400, 760, 1, tower("APPLE", { fill: "#e6e9ee", sign: "#6b7280" })) + g(1400, 580, 0.5, appleIcon()) +
-    card(1400, 300, 420, 120, t(0, -8, "Apple usually gets", 34) + t(0, 40, "$0", 50, { w: 900, fill: RED }), { fill: "#fff" }) };
+  body: A(g(520, 590, 0.82, phone(appScreen())), "start", "slide", { dir: "u" }) +
+    A(W(`<circle cx="520" cy="712" r="74" fill="none" stroke="${GREEN}" stroke-width="7" stroke-dasharray="14 12"/>`), "buy", "pop") +
+    A(g(1400, 760, 1, tower("APPLE", { fill: "#e6e9ee", sign: "#6b7280" })) + g(1400, 580, 0.5, appleIcon()), "apple", "pop") +
+    A(arrow(730, 560, 1150, 560, { dash: "18 16", color: GREY }), "apple:2", "wipe", { dir: "r", dur: 0.5 }) + A(cross(940, 560, 46, 14), "none", "stamp") +
+    A(card(1400, 310, 420, 150, t(0, -22, "Apple usually gets", 34) + t(0, 48, "$0", 54, { w: 900, fill: RED }), { fill: "#fff" }), "none", "pop", { delay: 0.2 }) };
 S.S002 = { h: "Your dollar goes somewhere else",
-  body: g(300, 600, 0.6, phone(appScreen())) + g(560, 560, 1, bill(150)) +
-    arrow(660, 560, 1700, 560, { dash: "18 16", curve: -60, color: GREY }) +
-    [820, 1120, 1420].map((x, i) => g(x, 800, 0.8, tower("?", { fill: "#e3e0d6", sign: GREY, w: 200, h: 280 + (i % 2) * 50 }))).join("") +
-    t(1700, 640, "?", 150, { w: 900, fill: RED }) + t(1120, 880, "…passing through several companies on the way", 36, { fill: GREY }) };
+  body: g(300, 600, 0.6, phone(appScreen())) +
+    A(arrow(660, 440, 1540, 440, { dash: "18 16", curve: -40, color: GREY }), "goes", "wipe", { dir: "r", dur: 3 }) +
+    [820, 1120, 1420].map((x, i) => A(g(x, 820, 0.8, tower("?", { fill: "#e3e0d6", sign: GREY, w: 200, h: 280 + (i % 2) * 50 })), "passes", "pop", { delay: i * 0.3 })).join("") +
+    A(A(g(560, 440, 1, bill(150)), "dollar", "pop"), "goes", "move", { dx: 880, dy: 0, dur: 3 }) +
+    A(t(1650, 500, "?", 150, { w: 900, fill: RED }), "way", "pop") + A(t(1120, 900, "…passing through several companies on the way", 36, { fill: GREY }), "several", "fade") };
 S.S003 = { h: "Follow $1 from your pocket to Wall Street",
-  body: g(300, 560, 0.9, pocket()) + g(300, 420, 1, bill(170)) + t(300, 780, "Your pocket", 40, { w: 900 }) +
-    W(`<path d="M 480 600 C 700 440, 820 760, 1040 620 S 1300 480, 1400 600" fill="none" stroke="${INK}" stroke-width="12" stroke-linecap="round"/><path d="M 480 600 C 700 440, 820 760, 1040 620 S 1300 480, 1400 600" fill="none" stroke="${PAPER}" stroke-width="4" stroke-dasharray="18 22"/>`) +
-    g(1580, 740, 0.9, bank("WALL STREET", { w: 380 })) };
-S.S004 = { body: g(900, 600, 1.7, buck("annoyed")) + W(`<rect x="1180" y="640" width="150" height="110" rx="14" fill="#c89b62" stroke="${INK}" stroke-width="7"/><path d="M 1225 640 v -30 h 60 v 30" fill="none" stroke="${INK}" stroke-width="7"/><path d="M 1180 690 h 150" stroke="${INK}" stroke-width="5"/>`) +
-    bubble(1250, 330, "Nobody asked me.", { tail: "left" }) };
-S.S005 = { h: "By the end, you'll know…", body: promises(1, [], [1]) };
-S.S006 = { h: "By the end, you'll know…", body: promises(2, [], [1, 2]) };
+  body: A(g(320, 560, 0.9, pocket()) + t(320, 780, "Your pocket", 40, { w: 900 }), "start", "slide", { dir: "u" }) + A(g(320, 420, 1, bill(170)), "dollar", "pop", { idle: "bob" }) +
+    A(W(`<path d="M 500 600 C 700 440, 820 760, 1040 620 S 1260 480, 1360 600" fill="none" stroke="${INK}" stroke-width="12" stroke-linecap="round"/><path d="M 500 600 C 700 440, 820 760, 1040 620 S 1260 480, 1360 600" fill="none" stroke="${PAPER}" stroke-width="4" stroke-dasharray="18 22"/>`), "pocket", "wipe", { dir: "r", dur: 1.2 }) +
+    A(g(1540, 740, 0.9, bank("WALL STREET", { w: 380 })), "wall", "pop") };
+S.S004 = { body: A(g(900, 600, 1.7, buck("annoyed")), "start", "slide", { dir: "l", idle: "talk" }) +
+    A(W(`<rect x="1180" y="640" width="150" height="110" rx="14" fill="#c89b62" stroke="${INK}" stroke-width="7"/><path d="M 1225 640 v -30 h 60 v 30" fill="none" stroke="${INK}" stroke-width="7"/><path d="M 1180 690 h 150" stroke="${INK}" stroke-width="5"/>`), "travel", "pop") +
+    A(bubble(1250, 330, "Nobody asked me.", { tail: "left" }), "nobody", "pop") };
+S.S005 = { h: "By the end, you'll know…", body: promises(1, [], [1], "know") };
+S.S006 = { h: "By the end, you'll know…", enter: "cut", body: promises(2, [], [1, 2], "whose") };
 S.S007 = { body: W(`<path d="M 380 800 H 1540" stroke="${INK}" stroke-width="12" stroke-linecap="round"/><path d="M 470 800 v 60 M 1450 800 v 60" stroke="${INK}" stroke-width="10" stroke-linecap="round"/>`) +
-    g(820, 610, 1.5, hamlet("grumpy")) + W(`<rect x="1150" y="640" width="250" height="134" rx="16" fill="none" stroke="${GREY}" stroke-width="6" stroke-dasharray="16 12"/>`) + t(1275, 720, "empty", 34, { fill: GREY }) +
-    bubble(1220, 400, "He was safe here.", { tail: "left" }) };
-S.S008 = { h: "By the end, you'll know…", body: promises(3, [], [1, 2, 3]) };
+    A(g(820, 610, 1.5, hamlet("grumpy")), "start", "fade", { idle: "talk" }) +
+    A(W(`<rect x="1150" y="640" width="250" height="134" rx="16" fill="none" stroke="${GREY}" stroke-width="6" stroke-dasharray="16 12"/>`) + t(1275, 720, "empty", 34, { fill: GREY }), "here", "fade") +
+    A(bubble(1220, 400, "He was safe here.", { tail: "left" }), "perfectly", "pop") };
+S.S008 = { h: "By the end, you'll know…", body: promises(3, [], [1, 2, 3], "three") };
 S.S009 = { h: "The BUY button isn't as simple as it looks",
-  body: g(420, 590, 0.82, phone(appScreen())) +
-    W(`<path d="M 520 712 C 700 712, 640 420, 800 420 S 860 760, 1010 720 S 1080 380, 1230 440 S 1300 760, 1440 700 S 1560 470, 1680 520" fill="none" stroke="${INK}" stroke-width="9" stroke-linecap="round" stroke-dasharray="4 20"/>`) +
-    [[800, 420], [1010, 720], [1230, 440], [1440, 700], [1680, 520]].map(([x, y], i) => W(`<circle cx="${x}" cy="${y}" r="36" fill="#fff" stroke="${INK}" stroke-width="7"/>`) + t(x, y + 14, i + 1, 38, { w: 900 })).join("") };
+  body: A(g(420, 590, 0.82, phone(appScreen())), "start", "slide", { dir: "u" }) +
+    A(W(`<path d="M 520 712 C 700 712, 640 420, 800 420 S 860 760, 1010 720 S 1080 380, 1230 440 S 1300 760, 1440 700 S 1560 470, 1640 520" fill="none" stroke="${INK}" stroke-width="9" stroke-linecap="round" stroke-dasharray="4 20"/>`), "route", "wipe", { dir: "r", dur: 1.6 }) +
+    [[800, 420], [1010, 720], [1230, 440], [1440, 700], [1640, 520]].map(([x, y], i) => A(W(`<circle cx="${x}" cy="${y}" r="36" fill="#fff" stroke="${INK}" stroke-width="7"/>`) + t(x, y + 14, i + 1, 38, { w: 900 }), "route", "pop", { delay: 0.3 + i * 0.3 })).join("") +
+    A(W(`<circle cx="420" cy="712" r="74" fill="none" stroke="${GREEN}" stroke-width="7" stroke-dasharray="14 12"/>`), "buy", "pop") };
 S.S010 = { h: "This trip has 5 stops",
-  body: map([]) + W(`<path d="M 630 520 Q 960 860 1290 560" fill="none" stroke="${GREY}" stroke-width="6" stroke-dasharray="14 14"/>`) +
-    card(960, 800, 900, 96, t(0, 14, "One common route. Real orders can skip some stops.", 34), {}) };
-S.S011 = { body: map([], { y: 420 }) + g(340, 420, 0.9, buck("annoyed")) + W(`<path d="M 470 330 q 14 22 0 36 q -14 -14 0 -36 Z" fill="${LBLUE}" stroke="${INK}" stroke-width="4"/>`) + bubble(700, 280, "That's a lot of walking.", { tail: "left" }) };
+  anims: [{ sel: "#map", on: "trip", fx: "wipe", dir: "r", dur: 1.0 }, ...[1, 2, 3, 4, 5].map((i) => ({ sel: `#map-stop${i}`, on: "five", fx: "pop", delay: (i - 1) * 0.16 }))],
+  body: map([]) + A(W(`<path d="M 630 520 Q 960 860 1290 560" fill="none" stroke="${GREY}" stroke-width="6" stroke-dasharray="14 14"/>`), "skip", "wipe", { dir: "r", dur: 0.6 }) +
+    A(card(960, 800, 900, 96, t(0, 14, "One common route. Real orders can skip some stops.", 34), {}), "common", "pop") };
+S.S011 = { enter: "cut", body: map([]) + A(g(300, 290, 0.9, buck("annoyed")), "start", "slide", { dir: "u", idle: "talk" }) +
+    A(W(`<path d="M 440 200 q 14 22 0 36 q -14 -14 0 -36 Z" fill="${LBLUE}" stroke="${INK}" stroke-width="4"/>`), "walking", "pop") + A(bubble(760, 210, "That's a lot of walking.", { tail: "left" }), "lot", "pop") };
 
 // ---------- THE DEVICE: WHAT YOUR DOLLAR BUYS ----------
 S.S012 = { h: "First: what is your dollar actually buying?",
