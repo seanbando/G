@@ -19,7 +19,7 @@
       .layer { position: absolute; inset: 0; }
       svg { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: visible; }
       .label { font-family: "Nunito"; font-weight: 800; fill: var(--ink); }
-      .title { position: absolute; left: 0; right: 0; top: 70px; text-align: center; font-size: 64px; font-weight: 900; letter-spacing: -0.01em; }
+      .title { position: absolute; left: 0; right: 0; top: 120px; text-align: center; font-size: 64px; font-weight: 900; letter-spacing: -0.01em; }
       .title b { color: var(--green-dark); }
     </style>
   </head>
@@ -31,7 +31,7 @@
       <div id="map" class="clip layer" data-start="0" data-duration="9.4" data-track-index="0">
         <div id="mapWrap" class="layer">
           <svg viewBox="0 0 1920 1080">
-            <path id="road" d="M 150 700 C 400 520, 520 860, 760 700 S 1120 520, 1260 700 S 1600 860, 1800 640"
+            <path id="road" d="M 200 700 C 420 520, 540 860, 760 700 S 1100 520, 1240 700 S 1520 840, 1660 660"
                   fill="none" stroke="var(--ink)" stroke-width="10" stroke-linecap="round" stroke-dasharray="1 1" />
             <g id="stops"></g>
           </svg>
@@ -55,7 +55,7 @@
               <rect x="870" y="560" width="240" height="110" rx="55" fill="var(--green)" stroke="var(--ink)" stroke-width="8" />
               <text x="990" y="632" text-anchor="middle" class="label" font-size="44" fill="#fff" style="fill:#fff">BUY $1</text>
             </g>
-            <circle id="tap" cx="990" cy="615" r="20" fill="none" stroke="var(--green-dark)" stroke-width="8" />
+            <circle id="tap" data-allow-overlap cx="990" cy="615" r="20" fill="none" stroke="var(--green-dark)" stroke-width="8" />
           </g>
         </svg>
       </div>
@@ -100,7 +100,7 @@
       <!-- BUCK: the dollar mascot, on top of every scene -->
       <div id="buckLayer" class="clip layer" data-start="0" data-duration="19.5" data-track-index="3">
         <svg viewBox="0 0 1920 1080">
-          <g id="buck">
+          <g id="buck" data-allow-edge>
             <g id="legL"><line x1="-28" y1="40" x2="-36" y2="96" stroke="var(--ink)" stroke-width="9" stroke-linecap="round" /></g>
             <g id="legR"><line x1="28" y1="40" x2="36" y2="96" stroke="var(--ink)" stroke-width="9" stroke-linecap="round" /></g>
             <g id="body">
@@ -124,7 +124,7 @@
       road.setAttribute("stroke-dasharray", len + " " + len);
       road.setAttribute("stroke-dashoffset", len);
       const names = ["Your App", "Market Maker", "Exchange", "Seller", "Clearinghouse"];
-      const stopT = [0.08, 0.3, 0.52, 0.74, 0.96];
+      const stopT = [0.08, 0.3, 0.52, 0.74, 0.95];
       const stops = document.getElementById("stops");
       const stopPts = stopT.map((t, i) => {
         const p = road.getPointAtLength(len * t);
@@ -133,7 +133,7 @@
         g.innerHTML =
           `<circle cx="${p.x}" cy="${p.y}" r="38" fill="#fff" stroke="#1f2328" stroke-width="8"/>` +
           `<text x="${p.x}" y="${p.y + 14}" text-anchor="middle" class="label" font-size="40">${i + 1}</text>` +
-          `<text x="${p.x}" y="${p.y + 100}" text-anchor="middle" class="label" font-size="36">${names[i]}</text>`;
+          `<text x="${p.x}" y="${i === 4 ? p.y - 62 : p.y + 100}" text-anchor="middle" class="label" font-size="36">${names[i]}</text>`;
         stops.appendChild(g);
         return p;
       });
