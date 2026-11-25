@@ -1,15 +1,16 @@
 // Stills S040–S085: stop 2 (market maker), stop 3 (exchange), checkpoint 1, stop 4 (the seller).
 const L = require("./lib.js");
 const { map, promises } = require("./scenes-a.js");
-const { t, lines, g, W, dim, bubble, arrow, cross, tick, stamp, card, bill, coin, slice, crumb, priceTag, person, teacher, phone, appleIcon, appScreen,
+const { A, t, lines, g, W, dim, bubble, arrow, cross, tick, stamp, card, bill, coin, slice, crumb, priceTag, person, teacher, phone, appleIcon, appScreen,
   tower, bank, booth, house, rack, signpost, calendar, clock, bell, ticket, doc, chart, buck, hamlet, P, INK, GREEN, DGREEN, RED, GREY, LGREY, BLUE, LBLUE, YEL, GOLD, PAPER, ORANGE, PURPLE } = L;
 
 // dark two-row price board: what the booth buys at and sells at
-function quoteBoard(buy, sell, { title = "APPLE SHARES", w = 620 } = {}) {
+function quoteBoard(buy, sell, { title = "APPLE SHARES", w = 620, onBuy = null, onSell = null } = {}) {
+  const vb = t(w / 2 - 50, -14, buy, 52, { w: 900, fill: "#5fe08f", anchor: "end", max: w * 0.5 }), vs = t(w / 2 - 50, 100, sell, 52, { w: 900, fill: "#ffd27a", anchor: "end", max: w * 0.5 });
   return W(`<rect x="${-w / 2}" y="-160" width="${w}" height="320" rx="22" fill="#20252b" stroke="${INK}" stroke-width="8"/><rect x="${-w / 2 + 22}" y="-138" width="${w - 44}" height="276" rx="12" fill="#2c333b"/><path d="M ${-w / 2 + 40} 22 H ${w / 2 - 40}" stroke="#59636e" stroke-width="4"/>`) +
     t(0, -92, title, 30, { w: 800, fill: "#aab3bd" }) +
-    t(-w / 2 + 50, -18, "WE BUY AT", 34, { w: 900, fill: "#fff", anchor: "start" }) + t(w / 2 - 50, -14, buy, 52, { w: 900, fill: "#5fe08f", anchor: "end", max: w * 0.5 }) +
-    t(-w / 2 + 50, 96, "WE SELL AT", 34, { w: 900, fill: "#fff", anchor: "start" }) + t(w / 2 - 50, 100, sell, 52, { w: 900, fill: "#ffd27a", anchor: "end", max: w * 0.5 });
+    t(-w / 2 + 50, -18, "WE BUY AT", 34, { w: 900, fill: "#fff", anchor: "start" }) + (onBuy ? A(vb, onBuy, "pop") : vb) +
+    t(-w / 2 + 50, 96, "WE SELL AT", 34, { w: 900, fill: "#fff", anchor: "start" }) + (onSell ? A(vs, onSell, "pop") : vs);
 }
 const mm = (x, y, s = 1, o = {}) => g(x, y, s, booth("MARKET MAKER", { awning: GREEN, ...o }));
 const shelf = (n) => W(`<rect x="-230" y="-30" width="460" height="22" fill="#c89b62" stroke="${INK}" stroke-width="5"/><path d="M -210 -8 v 60 M 210 -8 v 60" stroke="${INK}" stroke-width="8"/>`) + Array.from({ length: n }, (_, i) => g(-170 + i * 85, -110, 0.8, slice())).join("");
@@ -17,56 +18,60 @@ const shelf = (n) => W(`<rect x="-230" y="-30" width="460" height="22" fill="#c8
 const S = {};
 
 // ---------- STOP 2: THE MARKET MAKER ----------
-S.S040 = { h: "Stop 2: a company most people have never heard of", map: false,
-  body: map(["done", "active"], { at: 2, who: buck("neutral"), y: 380 }) };
+S.S040 = { h: "Stop 2: a company most people have never heard of", map: false, anims: [{ sel: "#map-stop2", on: "stop>", fx: "pop" }],
+  body: map(["done", "active"], { at: 2, who: buck("neutral"), y: 380, whoOn: "stop" }) };
 S.S041 = { h: "Many everyday orders don't go straight to an exchange",
-  body: g(360, 590, 0.62, phone(appScreen())) + arrow(520, 520, 1180, 400, { dash: "18 16", color: GREY, curve: -30 }) + cross(860, 420, 42, 14) + g(1420, 560, 0.72, bank("STOCK EXCHANGE", { w: 400 })) +
-    arrow(520, 660, 1120, 800, { color: DGREEN, curve: 40 }) + t(1240, 830, "?", 130, { w: 900, fill: DGREEN }),
+  body: A(g(360, 590, 0.62, phone(appScreen())), "start", "slide", { dir: "u" }) + A(g(1420, 560, 0.72, bank("STOCK EXCHANGE", { w: 400 })), "stock", "pop") +
+    A(arrow(520, 520, 1180, 400, { dash: "18 16", color: GREY, curve: -30 }), "orders", "wipe", { dir: "r", dur: 0.6 }) + A(cross(860, 420, 42, 14), "don't", "stamp") +
+    A(arrow(520, 660, 1120, 800, { color: DGREEN, curve: 40 }) + t(1240, 830, "?", 130, { w: 900, fill: DGREEN }), "exchange", "wipe", { dir: "r", dur: 0.6 }),
   term: ["RETAIL ORDER", "An order from an everyday investor like you, not from a big firm."] };
 S.S042 = { h: "Brokers often send them to a market maker",
-  body: g(300, 590, 0.55, phone(appScreen())) + arrow(430, 560, 600, 560, { color: GREY }) + g(780, 760, 0.8, tower("YOUR BROKER", { w: 280, h: 330 })) + arrow(950, 560, 1150, 560, { color: DGREEN }) + mm(1420, 780, 1),
+  body: g(300, 590, 0.55, phone(appScreen())) + A(arrow(430, 560, 600, 560, { color: GREY }), "start", "wipe", { dir: "r", dur: 0.3 }) + A(g(780, 760, 0.8, tower("YOUR BROKER", { w: 280, h: 330 })), "brokers", "pop") +
+    A(arrow(950, 560, 1150, 560, { color: DGREEN }), "send", "wipe", { dir: "r", dur: 0.4 }) + A(mm(1420, 780, 1), "trading", "pop"),
   term: ["MARKET MAKER", "A trading firm that is always ready to buy shares from you or sell shares to you."] };
 S.S043 = { h: "Picture a currency booth at the airport",
-  body: g(640, 800, 1.15, booth("CURRENCY EXCHANGE", { awning: BLUE })) + g(640, 628, 0.5, person({ shirt: BLUE })) +
-    W(`<path d="M 1150 330 l 230 -60 l 40 20 l -150 70 l 80 70 l -30 14 l -110 -50 l -70 30 l -20 -16 l 50 -44 Z" fill="#fff" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/>`) +
-    card(1380, 620, 600, 250, t(0, -44, "One price to BUY from you", 38, { w: 900 }) + W(`<path d="M -250 0 H 250" stroke="${LGREY}" stroke-width="4"/>`) + t(0, 66, "A higher price to SELL to you", 38, { w: 900 })) };
+  body: A(g(640, 800, 1.15, booth("CURRENCY EXCHANGE", { awning: BLUE })) + g(640, 628, 0.5, person({ shirt: BLUE })), "currency", "pop") +
+    A(W(`<path d="M 1150 330 l 230 -60 l 40 20 l -150 70 l 80 70 l -30 14 l -110 -50 l -70 30 l -20 -16 l 50 -44 Z" fill="#fff" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/>`), "airport", "slide", { dir: "l" }) +
+    A(card(1380, 620, 600, 250, t(0, -44, "One price to BUY from you", 38, { w: 900 }) + W(`<path d="M -250 0 H 250" stroke="${LGREY}" stroke-width="4"/>`)), "price", "pop") + A(g(1380, 620, 1, t(0, 66, "A higher price to SELL to you", 38, { w: 900 })), "sell", "fade") };
 S.S044 = { h: "A market maker works the same way",
-  body: g(380, 800, 0.72, booth("CURRENCY EXCHANGE", { awning: BLUE })) + t(700, 600, "=", 130, { w: 900 }) + mm(1020, 800, 0.72) +
-    g(1540, 560, 0.72, quoteBoard("buy price", "sell price")) + t(1540, 760, "posted regularly", 36, { fill: GREY }) };
+  body: g(380, 800, 0.72, booth("CURRENCY EXCHANGE", { awning: BLUE })) + A(t(700, 600, "=", 130, { w: 900 }), "same", "pop") + A(mm(1020, 800, 0.72), "market", "pop") +
+    A(g(1500, 560, 0.72, quoteBoard("buy price", "sell price", { onBuy: "buy", onSell: "sell" })) + t(1500, 760, "posted regularly", 36, { fill: GREY }), "posting", "pop") };
 S.S045 = { h: "Say it buys at one price and sells at another",
-  body: mm(480, 820, 1) + g(1260, 560, 1.1, quoteBoard("$350.00", "$350.02")) };
+  body: mm(480, 820, 1) + A(g(1240, 560, 1.1, quoteBoard("$350.00", "$350.02", { onBuy: "at>", onSell: "at:2>" })), "start", "slide", { dir: "r" }) };
 S.S046 = { h: "That 2¢ gap is called the spread", example: true,
   body: card(520, 440, 560, 170, t(0, -18, "MARKET MAKER BUYS AT", 30, { w: 900, fill: GREY }) + t(0, 48, "$350.00", 70, { w: 900, fill: DGREEN })) +
     card(520, 700, 560, 170, t(0, -18, "MARKET MAKER SELLS AT", 30, { w: 900, fill: GREY }) + t(0, 48, "$350.02", 70, { w: 900, fill: ORANGE })) +
-    W(`<path d="M 840 440 h 70 v 260 h -70" fill="none" stroke="${INK}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>`) + arrow(915, 570, 1060, 570, {}) +
-    card(1380, 570, 560, 230, t(0, -24, "THE SPREAD", 40, { w: 900, fill: GREY }) + t(0, 62, "2¢", 110, { w: 900, fill: RED }), { fill: YEL, sw: 9 }),
+    A(W(`<path d="M 840 440 h 70 v 260 h -70" fill="none" stroke="${INK}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>`) + arrow(915, 570, 1060, 570, {}), "gap", "wipe", { dir: "r", dur: 0.4 }) +
+    A(card(1380, 570, 560, 230, t(0, -24, "THE SPREAD", 40, { w: 900, fill: GREY }) + t(0, 62, "2¢", 110, { w: 900, fill: RED }), { fill: YEL, sw: 9 }), "spread", "pop"),
   term: ["SPREAD", "The small gap between the buy price and the sell price. The market maker tries to earn it."] };
 S.S047 = { h: "It can lose money too",
-  body: mm(480, 820, 0.95) + g(780, 560, 0.9, slice()) + g(1000, 760, 1, chart([[0, 0.8], [0.25, 0.74], [0.4, 0.82], [0.6, 0.5], [0.8, 0.36], [1, 0.14]], { w: 640, h: 380, color: RED, xl: "a minute later" })) +
-    t(1320, 330, "the price moves against it", 40, { w: 900, fill: RED }) };
+  body: mm(480, 820, 0.95) + g(780, 560, 0.9, slice()) + A(g(1000, 760, 1, chart([[0, 0.8], [0.25, 0.74], [0.4, 0.82], [0.6, 0.5], [0.8, 0.36], [1, 0.14]], { w: 640, h: 380, color: RED, xl: "a minute later" })), "price", "wipe", { dir: "r", dur: 1.4 }) +
+    A(t(1320, 330, "the price moves against it", 40, { w: 900, fill: RED }), "against", "fade") };
 S.S048 = { h: "One market maker handles about a third of everyday trading",
-  body: g(640, 580, 1, W(`<circle r="250" fill="#fff" stroke="${INK}" stroke-width="8"/><path d="M 0 0 L 0 -250 A 250 250 0 0 1 216.5 125 Z" fill="${GREEN}" stroke="${INK}" stroke-width="8" stroke-linejoin="round"/>`) + t(96, -60, "about", 34, { w: 900, fill: "#fff" }) + t(100, -6, "1/3", 64, { w: 900, fill: "#fff" })) +
-    card(1340, 480, 680, 230, t(0, -40, "Citadel Securities says it executes", 36, { w: 800 }) + t(0, 28, "about a third", 60, { w: 900, fill: DGREEN }) + t(0, 82, "of all U.S. retail stock trading", 36, { w: 800 })) +
-    card(1340, 740, 680, 120, t(0, -8, "Citadel Securities = a big market maker", 32, { w: 800 }) + t(0, 34, "executes = carries out the trade", 30, { fill: GREY }), { fill: YEL }) };
+  body: A(g(640, 580, 1, W(`<circle r="250" fill="#fff" stroke="${INK}" stroke-width="8"/>`)), "start", "pop") +
+    A(g(640, 580, 1, W(`<path d="M 0 0 L 0 -250 A 250 250 0 0 1 216.5 125 Z" fill="${GREEN}" stroke="${INK}" stroke-width="8" stroke-linejoin="round"/>`) + t(96, -60, "about", 34, { w: 900, fill: "#fff" }) + t(100, 0, "1/3", 64, { w: 900, fill: "#fff" })), "third", "pop") +
+    A(card(1340, 480, 680, 230, t(0, -44, "Citadel Securities says it executes", 36, { w: 800 }) + t(0, 28, "about a third", 60, { w: 900, fill: DGREEN }) + t(0, 86, "of all U.S. retail stock trading", 36, { w: 800 })), "citadel", "pop") +
+    A(card(1340, 740, 680, 130, t(0, -14, "Citadel Securities = a big market maker", 32, { w: 800 }) + t(0, 36, "executes = carries out the trade", 30, { fill: GREY }), { fill: YEL }), "executes", "pop") };
 S.S049 = { h: "Market makers often pay brokers for sending them orders",
   body: g(480, 800, 0.9, tower("YOUR BROKER", { w: 280, h: 330 })) + mm(1440, 820, 0.95) +
-    arrow(660, 480, 1220, 480, { color: GREY, curve: -50, label: "your orders", ldy: -44, lsize: 36 }) + g(940, 440, 0.6, doc("ORDER", ["Buy $1"], { w: 260 })) +
-    arrow(1220, 680, 660, 680, { color: DGREEN, curve: -50, label: "a small payment", ldy: 86, lsize: 36 }) + g(940, 720, 1, coin(30)) + g(1000, 730, 1, coin(30)),
+    A(arrow(660, 480, 1220, 480, { color: GREY, curve: -50, label: "your orders", ldy: -84, lsize: 36 }) + g(940, 470, 0.6, doc("ORDER", ["Buy $1"], { w: 260 })), "sending", "wipe", { dir: "r", dur: 0.6 }) +
+    A(arrow(1220, 680, 660, 680, { color: DGREEN, curve: -50, label: "a small payment", ldy: 86, lsize: 36 }) + g(940, 720, 1, coin(30)) + g(1000, 730, 1, coin(30)), "pay", "wipe", { dir: "l", dur: 0.6 }),
   term: ["PAYMENT FOR ORDER FLOW", "Market makers paying your broker to send your orders to them."] };
 S.S050 = { h: "That's one reason many apps charge no commission",
-  body: g(620, 590, 0.82, phone(g(0, -150, 0.9, appleIcon()) + t(0, -46, "Apple", 46, { w: 900 }) + `<rect x="-130" y="30" width="260" height="110" rx="14" fill="${YEL}" stroke="${INK}" stroke-width="4"/>` + t(0, 70, "COMMISSION", 26, { w: 900, fill: GREY }) + t(0, 122, "$0", 50, { w: 900, fill: DGREEN }))) +
-    card(1300, 560, 560, 200, t(0, -20, "No fee per trade", 46, { w: 900 }) + t(0, 40, "on stock trades, at many apps", 32, { fill: GREY })),
+  body: A(g(620, 590, 0.82, phone(g(0, -150, 0.9, appleIcon()) + t(0, -46, "Apple", 46, { w: 900 }) + `<rect x="-130" y="30" width="260" height="110" rx="14" fill="${YEL}" stroke="${INK}" stroke-width="4"/>` + t(0, 70, "COMMISSION", 26, { w: 900, fill: GREY }) + t(0, 122, "$0", 50, { w: 900, fill: DGREEN }))), "apps", "slide", { dir: "u" }) +
+    A(card(1300, 560, 560, 200, t(0, -20, "No fee per trade", 46, { w: 900 }) + t(0, 40, "on stock trades, at many apps", 32, { fill: GREY })), "no", "pop"),
   term: ["COMMISSION", "A fee a broker charges you each time you trade."] };
 S.S051 = { h: "Your broker still has to try to get you the best available deal",
-  body: g(440, 800, 0.9, tower("YOUR BROKER", { w: 280, h: 330 })) +
-    g(1240, 560, 1, L.checklist(["The price", "How reliably the order gets filled"], ["done", "done"], { w: 820, title: "BEST AVAILABLE DEAL, CONSIDERING:" })),
+  body: A(g(440, 800, 0.9, tower("YOUR BROKER", { w: 280, h: 330 })), "broker", "pop") +
+    A(g(1240, 560, 1, L.checklist(["The price", "How reliably the order gets filled"], ["done", "done"], { w: 820, title: "BEST AVAILABLE DEAL, CONSIDERING:" })), "considering", "pop"),
   term: ["BEST EXECUTION", "Your broker's duty to try to get you the best deal that is reasonably available."] };
-S.S052 = { body: g(900, 620, 1.6, hamlet("sideeye")) + [[420, 380], [520, 700], [1380, 720], [1480, 480]].map(([x, y]) => g(x, y, 1.2, coin())).join("") + bubble(1300, 330, "And the pig?", { tail: "left" }) };
+S.S052 = { body: A(g(900, 620, 1.6, hamlet("sideeye")), "start", "fade", { idle: "talk" }) + [[420, 380], [520, 700], [1380, 720], [1480, 480]].map(([x, y], i) => A(g(x, y, 1.2, coin()), "paid", "pop", { delay: i * 0.1 })).join("") + A(bubble(1300, 330, "And the pig?", { tail: "left" }), "except", "pop") };
 S.S053 = { h: "If it has the shares, it sells them from its own shelf",
-  body: mm(480, 820, 0.95) + g(1220, 640, 1.1, shelf(5)) + t(1220, 770, "the market maker's own shares", 36, { w: 800 }) + arrow(1000, 420, 760, 420, { color: DGREEN, curve: 60 }) + g(880, 330, 0.7, slice()),
+  body: mm(480, 820, 0.95) + A(g(1220, 640, 1.1, shelf(5)) + t(1220, 770, "the market maker's own shares", 36, { w: 800 }), "shares", "pop") +
+    A(arrow(1000, 420, 760, 420, { color: DGREEN, curve: 60 }) + g(880, 330, 0.7, slice()), "sell", "wipe", { dir: "l", dur: 0.5 }),
   term: ["INVENTORY", "Shares the market maker already owns and keeps ready to sell."] };
 S.S054 = { h: "If it doesn't, your order can head to stop 3",
-  body: g(520, 640, 1.1, shelf(0)) + t(520, 770, "shelf is empty", 36, { w: 800, fill: RED }) + arrow(860, 560, 1160, 560, { color: DGREEN, width: 12 }) + g(1440, 760, 0.8, bank("STOP 3", { w: 380 })) };
+  body: g(520, 640, 1.1, shelf(0)) + A(t(520, 770, "shelf is empty", 36, { w: 800, fill: RED }), "doesn't", "fade") + A(arrow(860, 560, 1160, 560, { color: DGREEN, width: 12 }), "head", "wipe", { dir: "r", dur: 0.5 }) + A(g(1440, 760, 0.8, bank("STOP 3", { w: 380 })), "stop", "pop") };
 
 // ---------- STOP 3: THE EXCHANGE ----------
 S.S055 = { h: "Stop 3: the stock exchange", map: false,
