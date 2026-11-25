@@ -41,12 +41,13 @@ function buildSvg(line) {
 
   const terms = sc.terms || (sc.term ? [sc.term] : []);
   // a plain-words card needs the bottom band, so the stage shrinks a little to make room
-  const top = Math.min(...terms.map((tm) => L.termTop(tm[1], tm[2])), 9999);
+  const wrapAt = terms.length > 1 ? 34 : 54;   // two cards side by side are narrower
+  const top = Math.min(...terms.map((tm) => L.termTop(tm[1], tm[2], wrapAt)), 9999);
   const k = terms.length && sc.fit !== false ? Math.min(0.9, (top - 24 - 236) / 614) : 1;
   s += `<g class="stage"${k < 1 ? ` transform="translate(${960 * (1 - k)} ${236 * (1 - k)}) scale(${k})"` : ""}>${sc.body || ""}</g>`;
   terms.forEach((tm, i, arr) => {
-    const x = arr.length === 1 ? 960 : i === 0 ? 500 : 1420;
-    s += L.termCard(tm[0], tm[1], { full: tm[2] || null, x });
+    const x = arr.length === 1 ? 960 : i === 0 ? 570 : 1350;
+    s += L.termCard(tm[0], tm[1], { full: tm[2] || null, x, wrapAt });
   });
   const example = sc.example !== undefined ? sc.example : /EXAMPLE/.test(line.tag);
   if (sc.h) s += L.headline(sc.h, { ...(example ? { max: 36, width: 1220 } : {}), ...(sc.hOpts || {}) });

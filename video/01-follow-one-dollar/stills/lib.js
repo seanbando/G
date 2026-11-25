@@ -73,10 +73,10 @@ function miniMap(active, doneUpTo = active - 1) {
 }
 // Plain-words card for a term people may not know. Sits in the bottom band.
 // term: the word; full: what the letters stand for (optional); meaning: plain words (string or 2 lines)
-function termCard(term, meaning, { full = null, x = 960, bottom = 992 } = {}) {
-  const ms = Array.isArray(meaning) ? meaning : wrap(meaning, 54);
+function termCard(term, meaning, { full = null, x = 960, bottom = 992, wrapAt = 54 } = {}) {
+  const ms = Array.isArray(meaning) ? meaning : wrap(meaning, wrapAt);
   const h = 84 + ms.length * 44 + (full ? 40 : 0) + 14, y = bottom - h;
-  let s = `<g class="fitbox term" data-pad="36" data-minw="520" data-anchor="middle">`;
+  let s = `<g class="fitbox term" data-pad="36" data-minw="${wrapAt < 54 ? 420 : 520}" data-anchor="middle">`;
   s += `<rect x="${x - 300}" y="${y}" width="600" height="${h}" rx="16" fill="${YEL}" stroke="${INK}" stroke-width="5"/>`;
   s += t(x, y + 62, term, 42, { w: 900 });
   let yy = y + 62;
@@ -273,7 +273,7 @@ const scaleIcon = (s = 1) => g(0, 0, s, W(`<rect x="-130" y="40" width="260" hei
 const ballotBox = (s = 1) => g(0, 0, s, W(`<rect x="-120" y="-30" width="240" height="140" rx="10" fill="${LBLUE}" stroke="${INK}" stroke-width="6"/><rect x="-136" y="-52" width="272" height="34" rx="8" fill="#fff" stroke="${INK}" stroke-width="6"/><rect x="-50" y="-42" width="100" height="12" rx="6" fill="${INK}"/><rect x="-40" y="-150" width="80" height="104" fill="#fff" stroke="${INK}" stroke-width="5" transform="rotate(8 0 -100)"/><path d="M -14 -104 l 12 14 l 26 -32" fill="none" stroke="${GREEN}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" transform="rotate(8 0 -100)"/>`));
 const pocket = (s = 1) => g(0, 0, s, W(`<path d="M -150 -120 H 150 V 40 Q 150 150 0 160 Q -150 150 -150 40 Z" fill="#5b7fb5" stroke="${INK}" stroke-width="7" stroke-linejoin="round"/><path d="M -126 -96 H 126 V 36 Q 126 126 0 136 Q -126 126 -126 36 Z" fill="none" stroke="#f0d9a0" stroke-width="5" stroke-dasharray="14 10"/>`));
 
-const termTop = (meaning, full) => 992 - (84 + (Array.isArray(meaning) ? meaning : wrap(meaning, 54)).length * 44 + (full ? 40 : 0) + 14);
+const termTop = (meaning, full, wrapAt = 54) => 992 - (84 + (Array.isArray(meaning) ? meaning : wrap(meaning, wrapAt)).length * 44 + (full ? 40 : 0) + 14);
 module.exports = { A, termTop, buck, hamlet, COLORS, WOBBLE_FILTER, P, INK, PAPER, GREEN, DGREEN, RED, GREY, LGREY, BLUE, LBLUE, YEL, GOLD, CREAM, ORANGE, PURPLE, SKIN,
   t, wrap, lines, g, W, dim, headline, chip, miniMap, termCard, bubble, arrow, cross, tick, stamp, card, bill, coin, slice, crumb, priceTag, person, teacher, phone, appleIcon, buyBtn, appScreen,
   tower, bank, booth, house, sparkle, rack, signpost, calendar, clock, bell, ticket, doc, basket, shield, chart, candles, newspaper, checklist, thumbsUp, scaleIcon, ballotBox, pocket };

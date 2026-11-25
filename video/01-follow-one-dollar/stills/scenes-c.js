@@ -1,7 +1,7 @@
 // Stills S086–S126: stop 5 (making it official), checkpoint 2, how a share makes money.
 const L = require("./lib.js");
 const { map, promises } = require("./scenes-a.js");
-const { t, lines, g, W, dim, bubble, arrow, cross, tick, stamp, card, bill, coin, slice, crumb, priceTag, person, phone, appleIcon, appScreen,
+const { A, t, lines, g, W, dim, bubble, arrow, cross, tick, stamp, card, bill, coin, slice, crumb, priceTag, person, phone, appleIcon, appScreen,
   tower, bank, booth, calendar, clock, ticket, doc, shield, chart, newspaper, scaleIcon, ballotBox, buck, hamlet, P, INK, GREEN, DGREEN, RED, GREY, LGREY, BLUE, LBLUE, YEL, GOLD, PAPER, ORANGE, PURPLE } = L;
 
 const coat = (color = "#6b7fa8") => W(`<path d="M 0 -150 q 0 -30 22 -30 q 22 0 22 20 q 0 16 -22 22 L 0 -128" fill="none" stroke="${INK}" stroke-width="6" stroke-linecap="round"/><path d="M 0 -128 L -120 -70 L -100 150 H 100 L 120 -70 Z" fill="${color}" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/><path d="M 0 -128 V 150 M -40 -108 L 0 -40 L 40 -108" fill="none" stroke="${INK}" stroke-width="5"/>`);
@@ -12,52 +12,56 @@ const dtcc = (x, y, s = 1, label = "DTCC") => g(x, y, s, bank(label, { w: 360, f
 const S = {};
 
 // ---------- STOP 5: MAKING IT OFFICIAL ----------
-S.S086 = { h: "Stop 5: where your trade becomes official", map: false,
-  body: map(["done", "done", "done", "done", "active"], { at: 5, who: buck("neutral"), y: 400 }) };
+// "Cede" is not in the word timings (Whisper hears "and company"), so Cede cues use the word before it.
+const WHOSE = "STOP 5 · WHOSE NAME IS ON YOUR STOCK";
+S.S086 = { h: "Stop 5: where your trade becomes official", map: false, anims: [{ sel: "#map-stop5", on: "stop>", fx: "pop" }],
+  body: map(["done", "done", "done", "done", "active"], { at: 5, who: buck("neutral"), y: 400, whoOn: "stop" }) };
 S.S087 = { h: "Your trade is matched, but the paperwork isn't finished",
-  body: card(520, 560, 520, 300, t(0, -30, "YOUR TRADE", 36, { w: 900, fill: GREY }) + t(0, 50, "MATCHED", 76, { w: 900, fill: DGREEN }) + g(190, -110, 1, W(`<circle r="40" fill="${GREEN}" stroke="${INK}" stroke-width="6"/>`) + tick(0, 2, 18, 9, "#fff")), { fill: "#cfead7" }) +
-    arrow(820, 560, 1020, 560, {}) + [0, 1, 2, 3].map((i) => g(1340 + i * 8, 640 - i * 46, 1, doc("PAPERWORK", ["", ""], { w: 440 }), (i % 2 ? 3 : -3))).join("") + stamp(1500, 720, "NOT FINISHED", { rot: -8, size: 40 }) };
+  body: A(card(520, 560, 520, 300, t(0, -30, "YOUR TRADE", 36, { w: 900, fill: GREY }) + t(0, 50, "MATCHED", 76, { w: 900, fill: DGREEN }) + g(190, -110, 1, W(`<circle r="40" fill="${GREEN}" stroke="${INK}" stroke-width="6"/>`) + tick(0, 2, 18, 9, "#fff")), { fill: "#cfead7" }), "matched", "pop") +
+    A(arrow(820, 560, 1020, 560, {}), "but", "wipe", { dir: "r", dur: 0.3 }) + [0, 1, 2, 3].map((i) => A(g(1340 + i * 8, 640 - i * 46, 1, doc("PAPERWORK", ["", ""], { w: 440 }), (i % 2 ? 3 : -3)), "paperwork", "slide", { dir: "d", delay: i * 0.1 })).join("") + A(stamp(1500, 720, "NOT FINISHED", { rot: -8, size: 40 }), "finished", "stamp") };
 S.S088 = { h: "Since May 28, 2024: most U.S. stock trades settle one business day later",
-  body: g(480, 580, 1.4, calendar("MAY 2024", "28", { w: 280 })) + card(1260, 480, 760, 190, t(-200, 22, "Trade day", 44, { w: 900 }) + t(20, 26, "+", 70, { w: 900, fill: DGREEN }) + t(210, 22, "1 business day", 44, { w: 900 })) +
-    card(1260, 720, 760, 130, t(0, 16, "= the trade is final", 46, { w: 900, fill: DGREEN }), { fill: YEL }),
+  body: A(g(480, 580, 1.4, calendar("MAY 2024", "28", { w: 280 })), "may", "pop") + A(card(1260, 480, 760, 190, t(-200, 22, "Trade day", 44, { w: 900 }) + t(20, 26, "+", 70, { w: 900, fill: DGREEN }) + t(210, 22, "1 business day", 44, { w: 900 })), "one", "pop") +
+    A(card(1260, 720, 760, 130, t(0, 16, "= the trade is final", 46, { w: 900, fill: DGREEN }), { fill: YEL }), "later", "pop"),
   terms: [["SETTLE", "The trade is finished: the buyer has the shares and the seller has the money."], ["T+1", "Trade day plus 1 business day. That is when the trade settles."]] };
 S.S089 = { h: "Your Tuesday trade is usually final on Wednesday",
-  body: g(540, 540, 1.4, calendar("YOU TAP BUY", "TUE", { w: 280 })) + arrow(790, 540, 1130, 540, { color: DGREEN, width: 12, label: "1 business day", ldy: -30, lsize: 36 }) +
-    g(1380, 540, 1.4, calendar("TRADE IS FINAL", "WED", { color: GREEN, w: 280 })) + g(1600, 380, 1, W(`<circle r="48" fill="${GREEN}" stroke="${INK}" stroke-width="6"/>`) + tick(0, 2, 22, 10, "#fff")) };
+  body: A(g(540, 540, 1.4, calendar("YOU TAP BUY", "TUE", { w: 280 })), "tuesday", "pop") + A(arrow(790, 540, 1130, 540, { color: DGREEN, width: 12, label: "1 business day", ldy: -30, lsize: 36 }), "usually", "wipe", { dir: "r", dur: 0.6 }) +
+    A(g(1380, 540, 1.4, calendar("TRADE IS FINAL", "WED", { color: GREEN, w: 280 })), "wednesday", "pop") + A(g(1600, 380, 1, W(`<circle r="48" fill="${GREEN}" stroke="${INK}" stroke-width="6"/>`) + tick(0, 2, 22, 10, "#fff")), "wednesday", "stamp", { delay: 0.35 }) };
 S.S090 = { h: "Behind the scenes, a group called the DTCC finishes the trade",
-  body: g(340, 780, 0.8, tower("BUYER'S FIRM", { w: 260, h: 300 })) + dtcc(960, 800, 1.05) + g(1580, 780, 0.8, tower("SELLER'S FIRM", { w: 260, h: 300, sign: ORANGE })) +
-    arrow(480, 560, 740, 560, { color: GREY, label: "money", ldy: -24 }) + arrow(1180, 560, 1440, 560, { color: GREY }) + arrow(1440, 660, 1180, 660, { color: DGREEN, label: "shares", ldy: 60 }) + arrow(740, 660, 480, 660, { color: DGREEN }),
+  body: g(340, 780, 0.8, tower("BUYER'S FIRM", { w: 260, h: 300 })) + g(1580, 780, 0.8, tower("SELLER'S FIRM", { w: 260, h: 300, sign: ORANGE })) + A(dtcc(960, 800, 1.05), "dtcc", "pop") +
+    A(arrow(480, 560, 740, 560, { color: GREY, label: "money", ldy: -24 }) + arrow(1180, 560, 1440, 560, { color: GREY }), "clear", "wipe", { dir: "r", dur: 0.7 }) +
+    A(arrow(1440, 660, 1180, 660, { color: DGREEN, label: "shares", ldy: 60 }) + arrow(740, 660, 480, 660, { color: DGREEN }), "settle", "wipe", { dir: "l", dur: 0.7 }),
   term: ["DTCC", "The behind-the-scenes group of companies that clears and settles stock trades in the U.S.", "Depository Trust & Clearing Corporation"] };
 S.S091 = { h: "The DTCC companies do three jobs",
-  body: [[g(0, -30, 0.62, shield("OK", { fill: GREEN })), ["Guarantee", "eligible trades"]], [W(`<rect x="-80" y="-130" width="160" height="200" rx="14" fill="#fff" stroke="${INK}" stroke-width="6"/><rect x="-60" y="-110" width="120" height="50" rx="6" fill="${LBLUE}" stroke="${INK}" stroke-width="4"/>`) + [0, 1, 2, 3, 4, 5].map((i) => `<rect x="${-58 + (i % 3) * 42}" y="${-44 + Math.floor(i / 3) * 46}" width="32" height="34" rx="6" fill="${LGREY}" stroke="${INK}" stroke-width="3"/>`).join(""), ["Work out what", "each firm owes"]],
-    [W(`<rect x="-100" y="-130" width="200" height="200" rx="16" fill="#8a8f98" stroke="${INK}" stroke-width="7"/><circle cx="0" cy="-30" r="56" fill="#cfd4da" stroke="${INK}" stroke-width="6"/><path d="M 0 -86 V 26 M -56 -30 H 56" stroke="${INK}" stroke-width="6"/><circle cx="0" cy="-30" r="12" fill="${INK}"/>`), ["Hold the", "shares"]]]
-    .map(([icon, ls], i) => card(400 + i * 560, 550, 480, 450, t(0, -180, String(i + 1), 44, { w: 900, fill: GREY }) + g(0, 0, 1, icon) + t(0, 140, ls[0], 42, { w: 900 }) + t(0, 190, ls[1], 42, { w: 900 }))).join(""),
+  body: [[g(0, -30, 0.62, shield("OK", { fill: GREEN })), ["Guarantee", "eligible trades"], "guarantee"], [W(`<rect x="-80" y="-130" width="160" height="200" rx="14" fill="#fff" stroke="${INK}" stroke-width="6"/><rect x="-60" y="-110" width="120" height="50" rx="6" fill="${LBLUE}" stroke="${INK}" stroke-width="4"/>`) + [0, 1, 2, 3, 4, 5].map((i) => `<rect x="${-58 + (i % 3) * 42}" y="${-44 + Math.floor(i / 3) * 46}" width="32" height="34" rx="6" fill="${LGREY}" stroke="${INK}" stroke-width="3"/>`).join(""), ["Work out what", "each firm owes"], "work"],
+    [W(`<rect x="-100" y="-130" width="200" height="200" rx="16" fill="#8a8f98" stroke="${INK}" stroke-width="7"/><circle cx="0" cy="-30" r="56" fill="#cfd4da" stroke="${INK}" stroke-width="6"/><path d="M 0 -86 V 26 M -56 -30 H 56" stroke="${INK}" stroke-width="6"/><circle cx="0" cy="-30" r="12" fill="${INK}"/>`), ["Hold the", "shares"], "hold"]]
+    .map(([icon, ls, on], i) => A(card(400 + i * 560, 550, 480, 450, t(0, -180, String(i + 1), 44, { w: 900, fill: GREY }) + g(0, 0, 1, icon) + t(0, 140, ls[0], 42, { w: 900 }) + t(0, 196, ls[1], 42, { w: 900 })), on, "pop")).join(""),
   terms: [["CLEAR", "Check the trade and work out who owes what."], ["SETTLE", "Swap the money and the shares. The trade is done."]] };
-S.S092 = { body: g(860, 620, 1.6, hamlet("proud")) + g(1240, 640, 1, W(`<rect x="-60" y="-34" width="120" height="68" rx="30" fill="${GOLD}" stroke="${INK}" stroke-width="6"/><rect x="50" y="-16" width="70" height="32" rx="8" fill="${GOLD}" stroke="${INK}" stroke-width="6"/><circle cx="-14" cy="0" r="14" fill="${INK}"/>`)) + bubble(1300, 340, "A money referee!", { tail: "left" }) };
-S.S093 = { h: "Now for the paperwork question from the start", chip: "STOP 5 · WHOSE NAME IS ON YOUR STOCK",
-  body: g(960, 580, 1.5, doc("YOUR STOCK", ["Registered name:", "? ? ? ? ?"], { w: 520, size: 40, hl: 1 })) };
-S.S094 = { h: "Many shares are registered under one name: Cede & Co.", chip: "STOP 5 · WHOSE NAME IS ON YOUR STOCK",
-  body: g(960, 600, 1.4, doc("OFFICIAL RECORD", ["Registered name:", "CEDE & CO."], { w: 560, size: 44, hl: 1 })) + g(1560, 560, 0.5, phone(appScreen())) + t(1560, 760, "held through", 30, { fill: GREY }) + t(1560, 798, "a brokerage", 30, { fill: GREY }),
+S.S092 = { body: A(g(860, 620, 1.6, hamlet("proud")), "start", "fade", { idle: "talk" }) + A(g(1240, 640, 1, W(`<rect x="-60" y="-34" width="120" height="68" rx="30" fill="${GOLD}" stroke="${INK}" stroke-width="6"/><rect x="50" y="-16" width="70" height="32" rx="8" fill="${GOLD}" stroke="${INK}" stroke-width="6"/><circle cx="-14" cy="0" r="14" fill="${INK}"/>`)), "referee", "pop") + A(bubble(1300, 340, "A money referee!", { tail: "left" }), "money", "pop") };
+S.S093 = { h: "Now for the paperwork question from the start", chip: WHOSE,
+  body: A(g(960, 580, 1.5, doc("YOUR STOCK", ["Registered name:", "? ? ? ? ?"], { w: 520, size: 40, hl: 1 })), "paperwork", "pop") };
+S.S094 = { h: "Many shares are registered under one name: Cede & Co.", chip: WHOSE,
+  body: g(960, 600, 1.4, doc("OFFICIAL RECORD", ["Registered name:", ""], { w: 560, size: 44, hl: 1 })) + `<g data-allow-overlap>${A(g(960, 600, 1.4, doc("OFFICIAL RECORD", ["Registered name:", "CEDE & CO."], { w: 560, size: 44, hl: 1 })), "name>", "fade", { dur: 0.25 })}</g>` +
+    A(g(1560, 560, 0.5, phone(appScreen())) + t(1560, 760, "held through", 30, { fill: GREY }) + t(1560, 800, "a brokerage", 30, { fill: GREY }), "brokerages", "pop"),
   term: ["CEDE & CO.", "The name written on the official record for many shares that are held through brokerages. \"Cede\" is said like \"seed\"."] };
-S.S095 = { h: "Cede & Co. is the name the Depository Trust Company uses", chip: "STOP 5 · WHOSE NAME IS ON YOUR STOCK",
-  body: g(560, 820, 1.1, bank("DEPOSITORY TRUST CO.", { w: 480, fill: "#e4ecf5" })) + arrow(860, 520, 1100, 520, { label: "signs as", ldy: -24 }) + g(1400, 520, 1.3, doc("OFFICIAL RECORD", ["CEDE & CO."], { w: 420, size: 44, hl: 0 })),
+S.S095 = { h: "Cede & Co. is the name the Depository Trust Company uses", chip: WHOSE,
+  body: g(1400, 520, 1.3, doc("OFFICIAL RECORD", ["CEDE & CO."], { w: 420, size: 44, hl: 0 })) + A(g(560, 820, 1.1, bank("DEPOSITORY TRUST CO.", { w: 480, fill: "#e4ecf5" })), "depository", "pop") + A(arrow(860, 520, 1100, 520, { label: "signs as", ldy: -24 }), "uses", "wipe", { dir: "r", dur: 0.5 }),
   term: ["DTC", "The DTCC company that holds the shares. On the official record it uses the name Cede & Co.", "Depository Trust Company"] };
-S.S096 = { h: "It's a bit like a coat check at a restaurant", chip: "STOP 5 · WHOSE NAME IS ON YOUR STOCK",
-  body: W(`<path d="M 300 330 H 1620" stroke="${INK}" stroke-width="10" stroke-linecap="round"/><rect x="340" y="700" width="1240" height="40" fill="#c89b62" stroke="${INK}" stroke-width="6"/><rect x="380" y="740" width="1160" height="110" fill="#e8d2b0" stroke="${INK}" stroke-width="6"/>`) +
-    ["#6b7fa8", "#b5564c", "#5a8f6a", "#8e6bbf"].map((c, i) => g(520 + i * 290, 500, 0.9, coat(c)) + g(590 + i * 290, 470, 0.5, tag("#" + (25 + i)))).join("") + t(960, 815, "COAT CHECK", 46, { w: 900 }) };
-S.S097 = { h: "The hanger tag doesn't have your name, but your ticket proves the coat is yours", chip: "STOP 5 · WHOSE NAME IS ON YOUR STOCK",
-  body: g(520, 600, 1.3, coat()) + g(700, 520, 1.1, tag("#27", { fill: YEL })) + t(520, 850, "hanger tag: a number, no name", 34, { w: 800, fill: GREY }) +
-    W(`<path d="M 850 520 H 1130" stroke="${GREEN}" stroke-width="10" stroke-dasharray="20 14" stroke-linecap="round"/>`) + t(990, 490, "same number", 34, { w: 900, fill: DGREEN }) +
-    g(1380, 520, 1.3, ticket("#27", "your ticket", { color: YEL })) + g(1380, 740, 0.5, person({ shirt: BLUE, label: null })) + t(1500, 760, "You", 40, { w: 900, anchor: "start" }) };
-S.S098 = { h: "Your brokerage's records are that ticket", chip: "STOP 5 · WHOSE NAME IS ON YOUR STOCK",
-  body: g(480, 560, 1.1, ticket("#27", "your ticket", { color: YEL })) + t(800, 590, "=", 120, { w: 900 }) + g(1320, 570, 1.25, doc("YOUR BROKERAGE'S RECORDS", ["Owner of these shares:", "YOU"], { w: 600, size: 42, hl: 1 })),
+S.S096 = { h: "It's a bit like a coat check at a restaurant", chip: WHOSE,
+  body: A(W(`<path d="M 300 330 H 1620" stroke="${INK}" stroke-width="10" stroke-linecap="round"/><rect x="340" y="700" width="1240" height="40" fill="#c89b62" stroke="${INK}" stroke-width="6"/><rect x="380" y="740" width="1160" height="110" fill="#e8d2b0" stroke="${INK}" stroke-width="6"/>`) + t(960, 815, "COAT CHECK", 46, { w: 900 }), "start", "fade") +
+    ["#6b7fa8", "#b5564c", "#5a8f6a", "#8e6bbf"].map((c, i) => A(g(520 + i * 290, 500, 0.9, coat(c)) + g(590 + i * 290, 470, 0.5, tag("#" + (25 + i))), "coat", "slide", { dir: "d", delay: i * 0.1 })).join("") };
+S.S097 = { h: "The hanger tag doesn't have your name, but your ticket proves the coat is yours", chip: WHOSE,
+  body: g(520, 600, 1.3, coat()) + A(g(700, 520, 1.1, tag("#27", { fill: YEL })), "tag", "pop") + A(t(520, 850, "hanger tag: a number, no name", 34, { w: 800, fill: GREY }), "name", "fade") +
+    A(g(1380, 520, 1.3, ticket("#27", "your ticket", { color: YEL })) + g(1380, 740, 0.5, person({ shirt: BLUE, label: null })) + t(1500, 760, "You", 40, { w: 900, anchor: "start" }), "ticket", "pop") +
+    A(W(`<path d="M 850 520 H 1130" stroke="${GREEN}" stroke-width="10" stroke-dasharray="20 14" stroke-linecap="round"/>`) + t(990, 490, "same number", 34, { w: 900, fill: DGREEN }), "proves", "wipe", { dir: "r", dur: 0.5 }) };
+S.S098 = { h: "Your brokerage's records are that ticket", chip: WHOSE,
+  body: A(g(1320, 570, 1.25, doc("YOUR BROKERAGE'S RECORDS", ["Owner of these shares:", "YOU"], { w: 600, size: 42, hl: 1 })), "records", "pop") + A(t(800, 590, "=", 120, { w: 900 }), "are", "pop") + A(g(480, 560, 1.1, ticket("#27", "your ticket", { color: YEL })), "ticket", "pop"),
   term: ["BENEFICIAL OWNER", "The real owner. You get the gains and the losses, even though another name is on the official record."] };
-S.S099 = { h: "Promise two, done", chip: "STOP 5 · WHOSE NAME IS ON YOUR STOCK", body: promises(2, [1, 2], [1, 2]) + card(960, 830, 1040, 96, t(0, 14, "The name on the record isn't yours, but the shares are.", 36, { w: 900 }), { fill: "#cfead7" }) };
-S.S100 = { h: "The gains are yours, and so are the losses", chip: "STOP 5 · WHOSE NAME IS ON YOUR STOCK",
-  body: card(520, 560, 600, 420, arrow(0, 80, 0, -130, { color: GREEN, width: 26 }) + t(0, 170, "GAINS: yours", 50, { w: 900, fill: DGREEN }), { fill: "#e6f4ea" }) +
-    card(1400, 560, 600, 420, arrow(0, -130, 0, 80, { color: RED, width: 26 }) + t(0, 170, "LOSSES: yours too", 50, { w: 900, fill: RED }), { fill: "#fbe9e6" }) };
-S.S101 = { h: "Voting with a fractional share depends on your broker's rules", chip: "STOP 5 · WHOSE NAME IS ON YOUR STOCK",
-  body: g(620, 620, 1.5, ballotBox()) + g(1000, 440, 1.6, crumb()) + t(1000, 560, "?", 90, { w: 900, fill: GREY }) + g(1420, 780, 0.9, tower("YOUR BROKER", { w: 280, h: 330 })) + t(1420, 380, "its rules decide", 38, { w: 900 }),
+S.S099 = { h: "Promise two, done", chip: WHOSE, body: promises(2, [1, 2], [1, 2], null, "done") + A(card(960, 830, 1040, 96, t(0, 14, "The name on the record isn't yours, but the shares are.", 36, { w: 900 }), { fill: "#cfead7" }), "shares", "pop") };
+S.S100 = { h: "The gains are yours, and so are the losses", chip: WHOSE,
+  body: A(card(520, 560, 600, 420, arrow(0, 80, 0, -130, { color: GREEN, width: 26 }) + t(0, 170, "GAINS: yours", 50, { w: 900, fill: DGREEN }), { fill: "#e6f4ea" }), "gains", "pop") +
+    A(card(1400, 560, 600, 420, arrow(0, -130, 0, 80, { color: RED, width: 26 }) + t(0, 170, "LOSSES: yours too", 50, { w: 900, fill: RED }), { fill: "#fbe9e6" }), "losses", "pop") };
+S.S101 = { h: "Voting with a fractional share depends on your broker's rules", chip: WHOSE,
+  body: A(g(620, 620, 1.5, ballotBox()), "voting", "pop") + A(g(1000, 440, 1.6, crumb()) + t(1000, 560, "?", 90, { w: 900, fill: GREY }), "fractional", "pop") + A(g(1420, 780, 0.9, tower("YOUR BROKER", { w: 280, h: 330 })) + t(1420, 380, "its rules decide", 38, { w: 900 }), "broker's", "pop"),
   term: ["SHAREHOLDER VOTE", "People who own shares can vote on some big company decisions."] };
 
 // ---------- CHECKPOINT 2 ----------
