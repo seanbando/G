@@ -257,22 +257,9 @@ elif V == "four":
         trooper(f"T{i}", x, y, h)
     cam = push((31, -31, 1.6), (21, -20.5, 1.3), 0.07, lens=35)
     kit.depth_of_field(cam, focus=14, fstop=3.2)
-elif V == "bag":
-    T = trooper("Douglass", 16.5, -11.5, -90, walk=1.2)
-    bag = clay.box(0.5, 0.22, 0.26, (0, 0, 0), kit.matte("#22252B", 0.8, "GymBag"), "GymBag")   # carried low at his left side, the camera's side
-    bag.parent = T["root"]
-    bag.location = (0.06, 0.36, 0.5)
-    for dx in (-0.12, 0.12):
-        st_ = clay.box(0.03, 0.03, 0.26, (0, 0, 0), kit.matte("#22252B", 0.8, "Strap"), "Strap", bevel=False)
-        st_.parent = T["root"]
-        st_.location = (0.06 + dx, 0.36, 0.74)
-    d = 1.2 * DUR
-    cam = kit.camera((18.6, -14.4, 0.8), look_at=(16.35, -11.9, 0.78), lens=40)
-    kit.key(cam, "location", [(1, (18.6, -14.4, 0.8)), (N, (18.3, -14.4 - d * 0.85, 0.82))], ease="linear")
-    kit.key(kit.aim(cam), "location", [(1, (16.35, -11.9, 0.78)), (N, (16.35, -11.9 - d, 0.78))], ease="linear")
-    kit.depth_of_field(cam, focus=3.3, fstop=2.8)
-    key = kit.light("AREA", (19.5, -15.5, 3.0), (16.4, -12.5, 0.8), power=320, color="#DCE6FF", size=2.5, name="BagKey")   # travels with him
-    kit.key(key, "location", [(1, (19.5, -15.5, 3.0)), (N, (19.5, -15.5 - d, 3.0))], ease="linear")
+elif V == "bag":                                  # his own vehicle: low and long toward the parked cruiser. No figure (the carried bag read badly).
+    cam = push((CAR[0] - 7.5, CAR[1] - 9.5, 0.6), (CAR[0], CAR[1], 0.9), 0.06, lens=50, slide=(0.9, 0, 0.05))
+    kit.depth_of_field(cam, focus=11, fstop=2.8)
 elif V == "notice":
     T = trooper("Douglass", 19.2, -19.4, -90)
     rt.rpose(T, {"upper_arm.L": (4, 0, -24), "upper_arm.R": (4, 0, 24), "forearm.L": (14, 0, 0), "forearm.R": (14, 0, 0),

@@ -1017,7 +1017,9 @@ def trooper_kit(M, name="Trooper"):
     garment(M, ("upper_arm.L", "upper_arm.R", "forearm.L", "forearm.R", "hand.L", "hand.R"), 0.09, 1.16, dark, 0.016,
             name + ".trousers", share=0.55, exclude=True)
     _on_body(M, clay.box(0.012, 0.05, 0.3, (0.168, 0, 1.42), dark, name + ".tie", bevel=False), "spine.003")
-    brim = clay.cyl(0.2, 0.014, (-0.004, 0, 1.925), hat, name + ".brim", verts=32)
-    crown = clay.cyl(0.098, 0.115, (-0.004, 0, 1.985), hat, name + ".crown", verts=24)
-    for ob in (brim, crown):
+    # campaign hat: wide flat brim, a low band and a rounded crown (the old tall cylinder read as a top hat)
+    brim = clay.cyl(0.19, 0.012, (-0.004, 0, 1.922), hat, name + ".brim", verts=40)
+    band = clay.cyl(0.092, 0.04, (-0.004, 0, 1.946), dark, name + ".band", verts=32)
+    crown = _dome((-0.004, 0, 1.962), (0.09, 0.09, 0.085), hat, name + ".crown")
+    for ob in (brim, band, crown):
         _on_body(M, ob, "spine.005")

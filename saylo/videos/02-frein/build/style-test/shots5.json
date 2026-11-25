@@ -420,12 +420,12 @@
    "end": 276.86,
    "kind": "still",
    "line": "the kind of hobby where people put on uniforms and act out history.",
-   "what": "same photo, closer on the uniform and cap",
+   "what": "same photo, the whole upper half: face, cap and collar (the tight cap crop was too blocky)",
    "src": "E",
    "at": 26.2,
-   "crop": "620:349:330:40",
+   "crop": "800:450:240:10",
    "tag": "source-pennsylvania-state-police.png",
-   "push": 0.05
+   "push": 0.03
   },
   {
    "id": 325,
