@@ -196,7 +196,7 @@ L(N,"Tell me in the comments which stop surprised you most, and what your first 
 L(N,"If this made the stock market make more sense, a like really helps the channel.","OUTRO")
 
 SOURCES={
- 'apple_shares':("Apple has roughly fifteen billion shares outstanding","Apple Form 10-K / 10-Q cover page (shares outstanding)","https://investor.apple.com/sec-filings/","⚠️ re-check latest filing"),
+ 'apple_shares':("Apple has roughly fifteen billion shares outstanding; at about $354 a share that's roughly $5.3 trillion","Apple Form 10-K / 10-Q cover page (shares outstanding); share count and ~$354 price confirmed by the creator, Nov 2026","https://investor.apple.com/sec-filings/","✅ (Nov 2026)"),
  'fractional':("Fractional shares; brokers may bundle fractional orders","SEC Investor.gov, Investor Bulletin: Fractional Share Investing","https://www.investor.gov/introduction-investing/general-resources/news-alerts/alerts-bulletins/investor-bulletins/investor-bulletin-fractional-share-investing","✅"),
  'market_order':("Market order buys at the available price; price can change before execution","SEC Investor.gov, Market Order","https://www.investor.gov/introduction-investing/investing-basics/glossary/market-order","✅"),
  'pfof':("Many retail orders routed to market makers; payment for order flow; no-commission apps","SEC Investor.gov, Payment for Order Flow","https://www.investor.gov/introduction-investing/investing-basics/glossary/payment-order-flow","✅"),

@@ -10,8 +10,8 @@ Every example and number in the script, with the arithmetic recomputed and what 
 | S023–S025 | Company A: $500 a share, 3 slices → whole pizza $1,500 | 3 × $500 = $1,500 | ✅ | Pizza with **3 slices**, each tagged $500, total $1,500, EXAMPLE badge |
 | S026–S027 | Company B: $5 a share, a million slices → $5 million; the cheap slice is from the far bigger pizza | 1,000,000 × $5 = $5,000,000 (about 3,333× Company A) | ✅ | Much **bigger** pizza, densely sliced, labelled "1,000,000 slices" (can't draw a million lines), EXAMPLE badge |
 | S028 | Price × number of shares = market cap | Definition | ✅ | Formula card: Price × shares = market cap |
-| S029 | Apple: roughly 15 billion shares → value in the trillions | 15 billion × $200–$300 = $3.0–4.5 trillion | ⚠️ | Real-data line: **source tag** (Apple 10-K share count). ⚠️ Re-check the latest share count before upload |
-| S033 | One Apple share costs a few hundred dollars; your $1 buys a crumb | $1 ÷ a few hundred dollars ≈ well under 1% of one share | ⚠️ | Pizza = Apple, **highlighted slice = 1 share**, crumb = your $1. Note: "not to scale: about 15 billion shares". ⚠️ Confirm Apple's price is still in the hundreds before upload |
+| S029 | Apple: roughly 15 billion shares → value in the trillions | 15 billion × $354 ≈ $5.3 trillion | ✅ | Real-data line: **source tag** (Apple 10-K share count). Confirmed Nov 2026: about 15 billion shares × about $354 ≈ $5.3 trillion |
+| S033 | One Apple share costs a few hundred dollars; your $1 buys a crumb | $1 ÷ $354 ≈ 0.28% of one share | ✅ | Pizza = Apple, **highlighted slice = 1 share**, crumb = your $1. Note: "not to scale: about 15 billion shares". Confirmed Nov 2026: about $354 a share, so $1 is about 1/354 of a share |
 | S045–S046 | Booth buys at $250.00, sells at $250.02 → two-cent spread | $250.02 − $250.00 = $0.02 | ✅ | Booth with two signs $250.00 / $250.02, **EXAMPLE badge**, gap labelled 2¢ |
 | S072–S073 | Quiz: how much of your dollar Apple gets → usually none | Secondary-market trade pays the seller (fact-checked) | ✅ | Three choices on screen: all of it / half / none |
 | S081–S083 | Retired teacher sells a little stock; your dollar buys **a crumb of her stock** and helps pay for her roof | $1 buys a fraction of a share (matches S033) | ✅ | Teacher with roof estimate; Buck's crumb goes to her; roof gets a shingle. **Fixed:** the line used to say "buys her share" |
@@ -31,6 +31,6 @@ Every example and number in the script, with the arithmetic recomputed and what 
 - **Pizza prop:** now draws any slice count cleanly (100 slices for S017, 3 for S025) and takes a `note` ("not to scale") and an EXAMPLE badge.
 - **Price board prop:** gets an EXAMPLE badge for made-up prices.
 
-## Still to confirm before upload
+## Confirmed
 
-- Apple's current share count (S029) and that its share price is still "a few hundred dollars" (S033).
+- Apple's share count (about 15 billion) and share price (about $354) confirmed by the creator in November 2026. If the video goes up much later, check both again.
