@@ -29,6 +29,7 @@ def main():
     ap.add_argument("--inner", type=float, default=0.26, help="pause to leave at a long mid-sentence pause (only pauses over --inner-min are touched)")
     ap.add_argument("--inner-min", type=float, default=0.42)
     ap.add_argument("--first"); ap.add_argument("--last")
+    ap.add_argument("--tempo", type=float, default=1.0, help="also speed the whole track up by this factor, same pitch (1.06 = 6%% faster)")
     a = ap.parse_args()
     T = json.load(open(os.path.join(a.src, "timings.json")))
     pcm = subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-i", os.path.join(a.src, "narration.mp3"), "-ac", "1", "-ar", str(SR), "-f", "f32le", "-"],
@@ -90,9 +91,17 @@ def main():
     for pa in T.get("pauses", []):
         pa["start"], pa["end"] = shift(pa["start"]), shift(pa["end"])
     os.makedirs(a.dst, exist_ok=True)
-    subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-", "-c:a", "libmp3lame", "-b:a", "160k",
+    subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", "-f", "f32le", "-ar", str(SR), "-ac", "1", "-i", "-"] +
+                   (["-af", f"atempo={a.tempo}"] if a.tempo != 1 else []) + ["-c:a", "libmp3lame", "-b:a", "160k",
                     os.path.join(a.dst, "narration.mp3")], input=y.tobytes(), check=True)
-    T["duration"] = round(len(y) / SR, 3)
+    if a.tempo != 1:
+        for l in L:
+            l["start"], l["end"] = round(l["start"] / a.tempo, 3), round(l["end"] / a.tempo, 3)
+            for w in l["words"]:
+                w["start"], w["end"] = round(w["start"] / a.tempo, 3), round(w["end"] / a.tempo, 3)
+        for pa in T.get("pauses", []):
+            pa["start"], pa["end"] = round(pa["start"] / a.tempo, 3), round(pa["end"] / a.tempo, 3)
+    T["duration"] = round(len(y) / SR / a.tempo, 3)
     json.dump(T, open(os.path.join(a.dst, "timings.json"), "w"), indent=1)
     saved = (len(x) - len(y)) / SR
     print(f"tightened {len(cuts)} pauses, saved {saved:.1f} s ({len(x) / SR:.1f} s -> {len(y) / SR:.1f} s)")
