@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1920, height=1080" />
+    <script src="assets/gsap.min.js"></script>
+    <style>
+      :root {
+        --ground: #f6f3ea;
+        --ink: #1f2328;
+        --green: #23a05a;
+        --green-dark: #14733e;
+        --soft: #d9d3c4;
+        --font-display: "Nunito";
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body { width: 1920px; height: 1080px; overflow: hidden; background: var(--ground); }
+      #root { position: relative; width: 100%; height: 100%; font-family: var(--font-display); color: var(--ink); }
+      .layer { position: absolute; inset: 0; }
+      svg { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: visible; }
+      .label { font-family: "Nunito"; font-weight: 800; fill: var(--ink); }
+      .title { position: absolute; left: 0; right: 0; top: 70px; text-align: center; font-size: 64px; font-weight: 900; letter-spacing: -0.01em; }
+      .title b { color: var(--green-dark); }
+    </style>
+  </head>
+  <body>
+    <div id="root" data-composition-id="main" data-start="0" data-duration="19.5" data-width="1920" data-height="1080">
+      <audio id="vo" class="clip" data-start="0" data-duration="19.5" data-track-index="9" src="assets/narration.mp3"></audio>
+
+      <!-- SCENE 1: the road map -->
+      <div id="map" class="clip layer" data-start="0" data-duration="9.4" data-track-index="0">
+        <div id="mapWrap" class="layer">
+          <svg viewBox="0 0 1920 1080">
+            <path id="road" d="M 150 700 C 400 520, 520 860, 760 700 S 1120 520, 1260 700 S 1600 860, 1800 640"
+                  fill="none" stroke="var(--ink)" stroke-width="10" stroke-linecap="round" stroke-dasharray="1 1" />
+            <g id="stops"></g>
+          </svg>
+          <div id="t1" class="title">Stop one: <b>your app</b></div>
+        </div>
+      </div>
+
+      <!-- SCENE 2: the app -->
+      <div id="app" class="clip layer" data-start="4.0" data-duration="5.4" data-track-index="1">
+        <svg viewBox="0 0 1920 1080">
+          <g id="cal">
+            <rect x="390" y="330" width="320" height="250" rx="22" fill="#fff" stroke="var(--ink)" stroke-width="8" />
+            <rect x="390" y="330" width="320" height="70" rx="22" fill="var(--green)" stroke="var(--ink)" stroke-width="8" />
+            <text x="550" y="505" text-anchor="middle" class="label" font-size="50">TUESDAY</text>
+          </g>
+          <g id="phone">
+            <rect x="820" y="210" width="340" height="660" rx="48" fill="#fff" stroke="var(--ink)" stroke-width="10" />
+            <rect x="935" y="235" width="110" height="20" rx="10" fill="var(--ink)" />
+            <text x="990" y="380" text-anchor="middle" class="label" font-size="44">Apple</text>
+            <g id="btn">
+              <rect x="870" y="560" width="240" height="110" rx="55" fill="var(--green)" stroke="var(--ink)" stroke-width="8" />
+              <text x="990" y="632" text-anchor="middle" class="label" font-size="44" fill="#fff" style="fill:#fff">BUY $1</text>
+            </g>
+            <circle id="tap" cx="990" cy="615" r="20" fill="none" stroke="var(--green-dark)" stroke-width="8" />
+          </g>
+        </svg>
+      </div>
+
+      <!-- SCENE 3: the pizza -->
+      <div id="pizza" class="clip layer" data-start="9.2" data-duration="10.3" data-track-index="2">
+        <svg viewBox="0 0 1920 1080">
+          <g id="pie">
+            <circle id="crust" cx="960" cy="600" r="300" fill="#f3c26b" stroke="var(--ink)" stroke-width="10" />
+            <circle cx="960" cy="600" r="255" fill="#e8573f" stroke="var(--ink)" stroke-width="6" />
+            <g id="cuts" stroke="var(--ink)" stroke-width="6"></g>
+          </g>
+          <g id="slice1">
+            <path d="M 960 600 L 1260 600 A 300 300 0 0 0 1172 388 Z" fill="#ffd27a" stroke="var(--green-dark)" stroke-width="10" />
+          </g>
+          <g id="sliceTag">
+            <rect x="1290" y="250" width="230" height="90" rx="20" fill="#fff" stroke="var(--ink)" stroke-width="8" />
+            <text x="1405" y="312" text-anchor="middle" class="label" font-size="48">1 share</text>
+          </g>
+          <g id="bite">
+            <path d="M 1196 431 L 1236 488 A 300 300 0 0 0 1214 450 Z" fill="#ffd27a" stroke="var(--green-dark)" stroke-width="7" stroke-linejoin="round" />
+            <circle cx="1222" cy="462" r="30" fill="#ffd27a" stroke="var(--green-dark)" stroke-width="7" />
+          </g>
+          <text id="shareLabel" x="960" y="200" text-anchor="middle" class="label" font-size="56">1 Apple share = a few hundred dollars</text>
+          <g id="biteTag">
+            <rect x="1420" y="590" width="250" height="96" rx="20" fill="#fff" stroke="var(--green-dark)" stroke-width="8" />
+            <text x="1545" y="655" text-anchor="middle" class="label" font-size="50" style="fill:var(--green-dark)">your $1</text>
+          </g>
+        </svg>
+      </div>
+
+      <!-- BUCK: the dollar mascot, on top of every scene -->
+      <div id="buckLayer" class="clip layer" data-start="0" data-duration="19.5" data-track-index="3">
+        <svg viewBox="0 0 1920 1080">
+          <g id="buck">
+            <g id="legL"><line x1="-28" y1="40" x2="-36" y2="96" stroke="var(--ink)" stroke-width="9" stroke-linecap="round" /></g>
+            <g id="legR"><line x1="28" y1="40" x2="36" y2="96" stroke="var(--ink)" stroke-width="9" stroke-linecap="round" /></g>
+            <g id="body">
+              <rect x="-110" y="-55" width="220" height="110" rx="14" fill="#9fd9a8" stroke="var(--ink)" stroke-width="8" />
+              <rect x="-92" y="-38" width="184" height="76" rx="8" fill="none" stroke="var(--green-dark)" stroke-width="5" />
+              <circle cx="-58" cy="-6" r="9" fill="var(--ink)" />
+              <circle cx="58" cy="-6" r="9" fill="var(--ink)" />
+              <path d="M -26 14 Q 0 34 26 14" fill="none" stroke="var(--ink)" stroke-width="7" stroke-linecap="round" />
+              <text x="0" y="-14" text-anchor="middle" class="label" font-size="30" style="fill:var(--green-dark)" data-layout-ignore>$1</text>
+            </g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <script>
+      // Build the five stop markers and the pizza cuts (deterministic, no randomness).
+      const NS = "http://www.w3.org/2000/svg";
+      const road = document.getElementById("road");
+      const len = road.getTotalLength();
+      road.setAttribute("stroke-dasharray", len + " " + len);
+      road.setAttribute("stroke-dashoffset", len);
+      const names = ["Your App", "Market Maker", "Exchange", "Seller", "Clearinghouse"];
+      const stopT = [0.08, 0.3, 0.52, 0.74, 0.96];
+      const stops = document.getElementById("stops");
+      const stopPts = stopT.map((t, i) => {
+        const p = road.getPointAtLength(len * t);
+        const g = document.createElementNS(NS, "g");
+        g.setAttribute("id", "stop" + (i + 1));
+        g.innerHTML =
+          `<circle cx="${p.x}" cy="${p.y}" r="38" fill="#fff" stroke="#1f2328" stroke-width="8"/>` +
+          `<text x="${p.x}" y="${p.y + 14}" text-anchor="middle" class="label" font-size="40">${i + 1}</text>` +
+          `<text x="${p.x}" y="${p.y + 100}" text-anchor="middle" class="label" font-size="36">${names[i]}</text>`;
+        stops.appendChild(g);
+        return p;
+      });
+      const cuts = document.getElementById("cuts");
+      for (let k = 0; k < 8; k++) {
+        const a = (k / 8) * Math.PI * 2;
+        const l = document.createElementNS(NS, "line");
+        l.setAttribute("x1", 960); l.setAttribute("y1", 600);
+        l.setAttribute("x2", 960 + Math.cos(a) * 300); l.setAttribute("y2", 600 + Math.sin(a) * 300);
+        cuts.appendChild(l);
+      }
+
+      const tl = gsap.timeline({ paused: true });
+      const start = road.getPointAtLength(0);
+      const s1 = stopPts[0];
+
+      // Scene 1: road draws on, stops pop in, Buck walks to stop one.
+      tl.to(road, { strokeDashoffset: 0, duration: 1.6, ease: "power2.inOut" }, 0.2);
+      stopPts.forEach((_, i) => {
+        tl.fromTo("#stop" + (i + 1), { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.35, ease: "back.out(2)" }, 0.5 + i * 0.22);
+      });
+      tl.set("#buck", { x: start.x - 140, y: start.y - 150, scale: 0.8 }, 0);
+      tl.fromTo("#buck", { opacity: 0 }, { opacity: 1, duration: 0.3 }, 0.6);
+      tl.to("#buck", { x: s1.x, y: s1.y - 150, duration: 1.8, ease: "power1.inOut" }, 1.4);
+      tl.to("#legL", { rotation: 22, transformOrigin: "-28px 40px", duration: 0.15, yoyo: true, repeat: 11, ease: "sine.inOut" }, 1.4);
+      tl.to("#legR", { rotation: -22, transformOrigin: "28px 40px", duration: 0.15, yoyo: true, repeat: 11, ease: "sine.inOut" }, 1.4);
+      tl.to("#body", { y: -8, duration: 0.15, yoyo: true, repeat: 11, ease: "sine.inOut" }, 1.4);
+      tl.to("#stop1 circle", { fill: "#23a05a", duration: 0.3 }, 3.2);
+      tl.fromTo("#t1", { opacity: 0, y: -30 }, { opacity: 1, y: 0, duration: 0.4, ease: "power3.out" }, 1.9);
+
+      // Scene 2: map steps back, phone and calendar arrive, button tapped.
+      tl.to("#mapWrap", { opacity: 0, scale: 0.6, transformOrigin: "50% 0%", duration: 0.5, ease: "power2.in" }, 3.8);
+      tl.to("#buck", { x: 1340, y: 640, scale: 1, duration: 0.6, ease: "power2.out" }, 4.0);
+      tl.fromTo("#phone", { y: 400, opacity: 0 }, { y: 0, opacity: 1, duration: 0.6, ease: "back.out(1.4)" }, 4.1);
+      tl.fromTo("#cal", { scale: 0, transformOrigin: "550px 455px" }, { scale: 1, duration: 0.4, ease: "back.out(2)" }, 4.6);
+      tl.fromTo("#btn", { scale: 1, transformOrigin: "990px 615px" }, { scale: 0.9, duration: 0.12, yoyo: true, repeat: 1 }, 7.4);
+      tl.fromTo("#tap", { attr: { r: 20 }, opacity: 1 }, { attr: { r: 150 }, opacity: 0, duration: 0.6, ease: "power2.out" }, 7.4);
+      tl.fromTo("#tap", { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      tl.to("#app svg", { opacity: 0, duration: 0.4 }, 8.9);
+
+      // Scene 3: the pizza, the share label, then a bite labelled "your $1" with Buck on it.
+      tl.fromTo("#pie", { scale: 0, transformOrigin: "960px 600px" }, { scale: 1, duration: 0.6, ease: "back.out(1.6)" }, 9.3);
+      tl.fromTo("#shareLabel", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4 }, 9.6);
+      tl.fromTo("#shareLabel", { scale: 1, transformOrigin: "960px 180px" }, { scale: 1.06, duration: 0.25, yoyo: true, repeat: 1 }, 11.2);
+      tl.fromTo("#slice1", { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      tl.to("#slice1", { opacity: 1, duration: 0.3 }, 12.2);
+      tl.fromTo("#sliceTag", { opacity: 0, scale: 0.6, transformOrigin: "1405px 295px" }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 12.5);
+      tl.to("#slice1", { x: 30, y: -14, duration: 0.5, ease: "power2.out" }, 13.2);
+      tl.to("#buck", { x: 760, y: 330, scale: 0.55, duration: 0.7, ease: "power2.inOut" }, 9.6);
+      tl.to("#buck", { rotation: -8, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, 13.4);
+      tl.fromTo("#bite", { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
+      tl.to("#bite", { opacity: 1, duration: 0.01 }, 15.0);
+      tl.fromTo("#bite", { x: 0, y: 0 }, { x: 140, y: 110, duration: 0.6, ease: "power2.out" }, 15.0);
+      tl.fromTo("#biteTag", { opacity: 0, scale: 0.6, transformOrigin: "1545px 638px" }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 15.5);
+      tl.to("#buck", { x: 1370, y: 470, scale: 0.55, duration: 0.5, ease: "power2.out" }, 16.2);
+      tl.to("#buck", { y: 445, duration: 0.18, yoyo: true, repeat: 3, ease: "sine.inOut" }, 16.8);
+
+      window.__timelines["main"] = tl;
+      tl.seek(0);
+    </script>
+  </body>
+</html>
