@@ -24,8 +24,8 @@ By the end, you'll know exactly who ends up holding your dollar.
 **S006 · NARRATOR · ~5 s · PROMISE 2**
 You'll also find out whose name is on your stock, and it probably isn't yours.
 
-**S007 · HAMLET · ~5 s · gag**
-He was perfectly safe in here with me, and I'd like that on the record.
+**S007 · HAMLET · ~4 s · gag**
+He was perfectly safe in here with me, and now he wants adventure.
 
 **S008 · NARRATOR · ~4 s · PROMISE 3**
 And you'll get three checks worth doing before you ever tap buy.
@@ -34,7 +34,8 @@ And you'll get three checks worth doing before you ever tap buy.
 Once you see this route, the buy button won't look so simple again.
 
 **S010 · NARRATOR · ~5 s**
-The trip has five stops, and every stop is a real company or system.
+This trip has five stops, and it's one common route, since real orders can skip some.
+[SOURCE: SEC Investor.gov, Executing an Order; SEC Rule 605 FAQ]
 
 **S011 · BUCK · ~4 s · gag**
 Five stops sounds like a lot of walking for one dollar.
@@ -126,8 +127,9 @@ The price you saw on screen can change before your order goes through.
 Your broker may also bundle your crumb with other customers' orders before it buys.
 [SOURCE: SEC Investor.gov, Investor Bulletin: Fractional Share Investing]
 
-**S038 · NARRATOR · ~5 s**
-At this point, your dollar has turned into an order that needs a seller.
+**S038 · NARRATOR · ~6 s**
+Your broker can send that order to an exchange or a market maker, or fill it itself.
+[SOURCE: SEC Investor.gov, Executing an Order; SEC Rule 605 FAQ]
 
 **S039 · BUCK · ~4 s · gag**
 I've been turned into paperwork, and nobody even said thank you.
@@ -165,7 +167,7 @@ It can lose money too, because the price can move against it a minute later.
 
 **S048 · NARRATOR · ~5 s**
 Citadel Securities says it executes about a third of all U.S. retail stock trading volume.
-[SOURCE: Citadel Securities, first-half 2026 report (per creator's fact-check)]
+[SOURCE: Citadel Securities, 1H 2026 Market Structure & Flows]
 
 **S049 · NARRATOR · ~5 s**
 Market makers often pay brokers for sending them orders, which is called payment for order flow.
@@ -251,18 +253,20 @@ Stop three was an exchange, which matches buyers with sellers.
 **S071 · NARRATOR · ~3 s · RE-HOOK**
 The next stop is where your dollar actually changes hands.
 
-## STOP 4 · THE STRANGER
+## STOP 4 · THE SELLER
 
-**S072 · NARRATOR · ~4 s · QUIZ**
-Pick who ends up with your dollar, Apple, your app, or a stranger.
+**S072 · NARRATOR · ~5 s · QUIZ**
+Pick who ends up with your dollar, Apple or whoever sold you the share.
 
-[PAUSE: 3 seconds. On screen: "Pick who ends up with your dollar, Apple, your app, or a stranger."]
+[PAUSE: 3 seconds. On screen: "Pick who ends up with your dollar, Apple or whoever sold you the share."]
 
-**S073 · NARRATOR · ~4 s · PROMISE 1**
-It's a stranger, whoever sold you that crumb of a share.
+**S073 · NARRATOR · ~5 s · PROMISE 1**
+It's whoever sold you that crumb of a share, and that's almost never Apple.
+[SOURCE: SEC Investor.gov]
 
 **S074 · NARRATOR · ~5 s**
-It could be the market maker, a big fund, or a retired teacher in Arizona.
+It could be your own broker, a market maker, a big fund, or a retired teacher.
+[SOURCE: SEC Investor.gov, Executing an Order; SEC Rule 605 FAQ]
 
 **S075 · NARRATOR · ~4 s · EXAMPLE**
 Say she's selling a little stock to help pay for a new roof.
@@ -291,8 +295,8 @@ When you buy that ticket later from another fan, your money goes to the fan.
 When investors trade Apple stock on the market today, the money normally goes to the seller, not Apple.
 [SOURCE: SEC Investor.gov]
 
-**S083 · NARRATOR · ~3 s · PROMISE 1 (closed)**
-Promise one, done, because your dollar went to a stranger.
+**S083 · NARRATOR · ~4 s · PROMISE 1 (closed)**
+Promise one, done, because your dollar went to the seller, not to Apple.
 
 **S084 · NARRATOR · ~4 s**
 Apple still cares about its stock price, for a few practical reasons.
@@ -313,11 +317,11 @@ Your trade is matched, but the paperwork isn't finished yet.
 
 **S089 · NARRATOR · ~5 s**
 Since May twenty-eighth, twenty twenty-four, most U.S. stock trades settle one business day later.
-[SOURCE: SEC, T+1 settlement cycle]
+[SOURCE: SEC Investor.gov, New T+1 Settlement Cycle investor bulletin]
 
 **S090 · NARRATOR · ~3 s**
 That means your Tuesday trade is usually final on Wednesday.
-[SOURCE: SEC, T+1 settlement cycle]
+[SOURCE: SEC Investor.gov, New T+1 Settlement Cycle investor bulletin]
 
 **S091 · NARRATOR · ~5 s**
 Behind the scenes, companies in a group called the D-T-C-C help clear and settle trades.
@@ -371,15 +375,15 @@ Voting with a fractional share depends on your broker's rules.
 
 **S105 · NARRATOR · ~6 s**
 If your brokerage is an S-I-P-C member and fails with customer assets missing, S-I-P-C can help recover them.
-[SOURCE: SIPC, What SIPC Protects]
+[SOURCE: SIPC, What SIPC Protects; Investors with Multiple Accounts (separate account capacities can qualify separately)]
 
 **S106 · NARRATOR · ~6 s**
 Protection goes up to five hundred thousand dollars per customer, including two hundred fifty thousand in cash.
-[SOURCE: SIPC, What SIPC Protects]
+[SOURCE: SIPC, What SIPC Protects; Investors with Multiple Accounts (separate account capacities can qualify separately)]
 
 **S107 · NARRATOR · ~3 s**
 It does not cover a stock that simply loses value.
-[SOURCE: SIPC, What SIPC Protects]
+[SOURCE: SIPC, What SIPC Protects; Investors with Multiple Accounts (separate account capacities can qualify separately)]
 
 **S108 · BUCK · ~4 s · gag**
 Nobody insures my feelings either, and I've been through a lot today.
@@ -389,15 +393,15 @@ Nobody insures my feelings either, and I've been through a lot today.
 **S109 · NARRATOR · ~5 s · CHECKPOINT 2**
 Quick check before the big part, because the whole route is on the map now.
 
-**S110 · NARRATOR · ~5 s · CHECKPOINT 2**
-Your dollar became an order, met a market maker or exchange, and found a stranger.
+**S110 · NARRATOR · ~4 s · CHECKPOINT 2**
+Your dollar became an order, took one possible route, and reached a seller.
 
 **S111 · NARRATOR · ~4 s · CHECKPOINT 2**
 It settled a business day later, with Cede and Company on the record.
 
 **S112 · NARRATOR · ~6 s · CHECKPOINT 2**
 The order itself can go through in a fraction of a second, and settlement follows a business day later.
-[SOURCE: SEC, T+1 settlement cycle]
+[SOURCE: SEC Investor.gov, New T+1 Settlement Cycle investor bulletin]
 
 **S113 · NARRATOR · ~5 s · RE-HOOK**
 Now comes the part that matters most, which is how one dollar turns into more dollars.
@@ -543,14 +547,14 @@ Your app should explain its order types and how it routes your orders.
 
 **S153 · NARRATOR · ~5 s · CHECK 3**
 Check three is whether your brokerage is an S-I-P-C member, and what that covers.
-[SOURCE: SIPC, What SIPC Protects]
+[SOURCE: SIPC, What SIPC Protects; Investors with Multiple Accounts (separate account capacities can qualify separately)]
 
 **S154 · NARRATOR · ~4 s · CHECK 3**
 That protection is for a failed brokerage, not for a stock that falls.
-[SOURCE: SIPC, What SIPC Protects]
+[SOURCE: SIPC, What SIPC Protects; Investors with Multiple Accounts (separate account capacities can qualify separately)]
 
 **S155 · HAMLET · ~4 s · gag**
-Finally, a list that keeps money safe, and I'd like a copy.
+These checks keep money safe, which makes this the only list I trust.
 
 **S156 · NARRATOR · ~5 s · PROMISE 3 (closed)**
 That's promise three, and notice that none of these checks tells you what to buy.
@@ -558,7 +562,7 @@ That's promise three, and notice that none of these checks tells you what to buy
 ## ENDING
 
 **S157 · NARRATOR · ~5 s · CALLBACK**
-The whole trip is on the map now, from your pocket to a stranger's hands.
+The whole trip is on the map now, from your pocket to a seller's hands.
 
 **S158 · NARRATOR · ~5 s · CALLBACK**
 Apple never got your dollar, but you now own a tiny piece of Apple.
