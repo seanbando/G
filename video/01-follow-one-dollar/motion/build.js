@@ -5,16 +5,16 @@
 // Writes motion/<name>/ (index.html, assets/, hyperframes.json, package.json).
 //
 // Every script line is one clip that starts when the narrator starts that line
-// (audio/follow-one-dollar-v5/timings.json). Parts tagged with A(...) in the scene files
+// (audio/follow-one-dollar-v6/timings.json). Parts tagged with A(...) in the scene files
 // appear on the exact word they are tied to, so fast lines move fast and pauses wait.
 const fs = require("fs");
 const path = require("path");
 const { execFileSync } = require("child_process");
 const C = require("../stills/compose.js");
 
-const [name, first, last, audioDir] = process.argv.slice(2); // audioDir: optional, default the v5 voiceover
+const [name, first, last, audioDir] = process.argv.slice(2); // audioDir: optional, default the v6 voiceover
 if (!name || !first || !last) { console.error("usage: build.js <name> <first-line> <last-line>"); process.exit(1); }
-const AUDIO_DIR = audioDir ? path.resolve(audioDir) : path.join(C.ROOT, "audio", "follow-one-dollar-v5");
+const AUDIO_DIR = audioDir ? path.resolve(audioDir) : path.join(C.ROOT, "audio", "follow-one-dollar-v6");
 const T = JSON.parse(fs.readFileSync(path.join(AUDIO_DIR, "timings.json"), "utf8"));
 const OUT = path.join(__dirname, name);
 fs.mkdirSync(path.join(OUT, "assets"), { recursive: true });
