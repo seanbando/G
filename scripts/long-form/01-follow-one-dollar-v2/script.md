@@ -93,9 +93,9 @@ The cheap slice came from the far bigger pizza.
 **S028 · NARRATOR · ~5 s**
 Price times the number of shares is called market cap, the company's market value.
 
-**S029 · NARRATOR · ~5 s**
-Apple is cut into roughly fifteen billion shares, which is how its value reaches trillions.
-[SOURCE: Apple Form 10-K / 10-Q cover page (shares outstanding); share count and ~$354 price confirmed by the creator, Nov 2026]
+**S029 · NARRATOR · ~6 s**
+Apple is cut into about fourteen and a half billion shares, which is how its value reaches trillions.
+[SOURCE: Apple Form 10-K / 10-Q cover page (shares outstanding); 14.53 billion shares and ~$354 price confirmed by the creator, Nov 2026]
 
 **S030 · BUCK · ~5 s · gag**
 So I'm buying a crumb of a slice, and I'm still proud of it.

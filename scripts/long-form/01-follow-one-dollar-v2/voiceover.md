@@ -8,11 +8,11 @@ Voice-only recording sheet. Every spoken line is numbered (S001, S002 …) and b
 
 | Voice | ElevenLabs voice | Lines | Words | Direction |
 |---|---|---|---|---|
-| **NARRATOR** | Yaboy | 147 | 2029 | Warm, clear and conversational, like explaining money to a friend. |
+| **NARRATOR** | Yaboy | 147 | 2032 | Warm, clear and conversational, like explaining money to a friend. |
 | **BUCK** | Larry | 9 | 114 | Cocky dollar bill and the dollar making the trip. Dry, quick, one-sentence gags; never explains. |
 | **HAMLET** | Grampa Werthers | 8 | 94 | Grumpy piggy bank the dollar left behind. Lower and slower than Buck; grumbles about spending, warms up to saving. |
 
-**Total:** 164 lines · 2237 spoken words · about 12.4 minutes at 180 words per minute, plus 1 silent pause.
+**Total:** 164 lines · 2240 spoken words · about 12.4 minutes at 180 words per minute, plus 1 silent pause.
 
 ### Recording notes
 - **File names:** name each file after its line, for example `S004_BUCK.mp3`.
@@ -115,7 +115,7 @@ The cheap slice came from the far bigger pizza.
 Price times the number of shares is called market cap, the company's market value.
 
 **S029 · NARRATOR**  
-Apple is cut into roughly fifteen billion shares, which is how its value reaches trillions.
+Apple is cut into about fourteen and a half billion shares, which is how its value reaches trillions.
 
 **S030 · BUCK** · gag  
 So I'm buying a crumb of a slice, and I'm still proud of it.
@@ -576,7 +576,7 @@ If this made the stock market make more sense, a like really helps the channel.
 - **S026:** Company B is cut into a million slices, so its whole pizza is worth five million.
 - **S027:** The cheap slice came from the far bigger pizza.
 - **S028:** Price times the number of shares is called market cap, the company's market value.
-- **S029:** Apple is cut into roughly fifteen billion shares, which is how its value reaches trillions.
+- **S029:** Apple is cut into about fourteen and a half billion shares, which is how its value reaches trillions.
 - **S031:** Stop one is the investing app on your phone.
 - **S032:** Say it's Tuesday morning, and you buy one dollar of Apple.
 - **S033:** One Apple share costs a few hundred dollars, so your dollar buys a crumb.
