@@ -93,7 +93,7 @@ S.append(("LINE",P,"QUIZ","3 seconds. On screen: \"Pick who ends up with your do
 L(N,"It's whoever sold you that crumb of a share, and that's almost never Apple.","PROMISE 1",'secondary')
 L(N,"It could be your own broker, a market maker, a big fund, or a retired teacher.","",'routing')
 L(N,"Say she's selling a little stock to help pay for a new roof.","EXAMPLE")
-L(B,"I'm about to become a roof shingle, and I've made peace with it.","gag")
+L(B,"Tell her I'll pay for the roof myself, so she doesn't have to sell.","gag")
 L(N,"Apple raised money from its stock when it first sold shares to the public.","",'apple_ipo')
 L(N,"That first sale happened on December twelfth, nineteen eighty, at twenty-two dollars a share.","",'apple_ipo')
 L(N,"It works like a concert ticket that gets resold between fans.")

@@ -271,8 +271,8 @@ It could be your own broker, a market maker, a big fund, or a retired teacher.
 **S075 · NARRATOR · ~4 s · EXAMPLE**
 Say she's selling a little stock to help pay for a new roof.
 
-**S076 · BUCK · ~4 s · gag**
-I'm about to become a roof shingle, and I've made peace with it.
+**S076 · BUCK · ~5 s · gag**
+Tell her I'll pay for the roof myself, so she doesn't have to sell.
 
 **S077 · NARRATOR · ~5 s**
 Apple raised money from its stock when it first sold shares to the public.
