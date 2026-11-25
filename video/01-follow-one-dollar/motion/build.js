@@ -53,6 +53,7 @@ const RUNTIME = function (SCENES, FIT) {
   const tl = gsap.timeline({ paused: true });
   const LEAD = 0.1; // start a touch early so the move lands on the word
   let clipN = 0;
+  const SFX = [];   // every motion event, so the sound pass can put a sound on it
   const when = (sc, on) => {
     if (!on || on === "start") return sc.start + 0.05;
     if (on === "end") return sc.lineEnd + 0.1;            // right after the line is spoken (e.g. the quiz pause)
@@ -67,6 +68,7 @@ const RUNTIME = function (SCENES, FIT) {
   const apply = (sc, svg, el, a) => {
     const at = when(sc, a.on) + parseFloat(a.delay || 0);
     const dir = a.dir || "u", dur = parseFloat(a.dur || 0);
+    SFX.push({ t: +at.toFixed(3), fx: a.fx, dur, line: sc.id });
     if (a.fx === "pop") tl.fromTo(el, { scale: 0, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: dur || 0.4, ease: "back.out(1.9)" }, at);
     else if (a.fx === "fade") tl.fromTo(el, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: dur || 0.4, ease: "power2.out" }, at);
     else if (a.fx === "slide") {
@@ -118,10 +120,12 @@ const RUNTIME = function (SCENES, FIT) {
       const hits = sc.words.filter((x) => x.w === first);
       const at = hits.length ? hits[hits.length - 1].t - LEAD : sc.lineStart + (sc.lineEnd - sc.lineStart) * 0.5;
       tl.fromTo(el, { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.4, ease: "back.out(1.4)" }, Math.max(sc.start + 0.05, at));
+      SFX.push({ t: +Math.max(sc.start + 0.05, at).toFixed(3), fx: "term", dur: 0, line: sc.id });
     });
     svg.querySelectorAll(".src, .exbadge").forEach((el) => tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.3 }, sc.start + 0.3));
   });
   window.__timelines = window.__timelines || {};
+  window.__sfx = SFX;
   window.__timelines["main"] = tl;
   tl.seek(0);
 };

@@ -1,0 +1,864 @@
+1
+00:00:00,000 --> 00:00:04,405
+When you tap buy on one dollar of Apple
+stock, Apple usually gets none of it.
+
+2
+00:00:04,455 --> 00:00:08,707
+Your dollar goes somewhere else, and it
+passes through several companies on the
+way.
+
+3
+00:00:08,757 --> 00:00:12,920
+This video follows that one dollar from
+your pocket all the way to Wall Street.
+
+4
+00:00:12,970 --> 00:00:16,581
+I'm the dollar, and nobody asked me if I
+wanted to travel.
+
+5
+00:00:16,631 --> 00:00:19,889
+By the end, you'll know exactly who ends
+up holding your dollar.
+
+6
+00:00:19,939 --> 00:00:24,446
+You'll also find out whose name is on your
+stock, and it probably isn't yours.
+
+7
+00:00:24,496 --> 00:00:28,909
+He was perfectly safe in here with me, and
+now he wants adventure.
+
+8
+00:00:28,959 --> 00:00:32,217
+And you'll get three checks worth doing
+before you ever tap buy.
+
+9
+00:00:32,267 --> 00:00:35,723
+Once you see this route, the buy button
+won't look so simple again.
+
+10
+00:00:35,773 --> 00:00:40,629
+This trip has five stops, and it's one
+common route, since real orders can skip
+some.
+
+11
+00:00:40,679 --> 00:00:44,108
+Five stops sounds like a lot of walking
+for one dollar.
+
+12
+00:00:44,158 --> 00:00:48,188
+Before the dollar moves, you need to know
+what it's actually buying.
+
+13
+00:00:48,238 --> 00:00:51,888
+Picture a company as a pizza that's been
+cut into slices.
+
+14
+00:00:51,938 --> 00:00:56,888
+Each slice is a small piece of ownership,
+and that slice is called a share.
+
+15
+00:00:56,938 --> 00:01:00,948
+The stock market is simply the place where
+people trade those slices.
+
+16
+00:01:00,998 --> 00:01:05,388
+Here's a simple example to show how slices
+work, with made-up numbers.
+
+17
+00:01:05,438 --> 00:01:10,628
+Say a pizza shop is worth one hundred
+dollars and is cut into one hundred
+slices.
+
+18
+00:01:10,678 --> 00:01:15,548
+Each slice is worth one dollar, so owning
+one slice means owning one percent.
+
+19
+00:01:15,598 --> 00:01:20,528
+If the shop grows to two hundred dollars,
+your slice is worth two dollars.
+
+20
+00:01:20,578 --> 00:01:25,618
+If the shop shrinks to fifty dollars, your
+slice is worth fifty cents.
+
+21
+00:01:25,668 --> 00:01:29,258
+Fifty cents is exactly why I keep my coins
+at home.
+
+22
+00:01:29,308 --> 00:01:32,558
+Now comes the part where a price tag can
+fool you.
+
+23
+00:01:32,608 --> 00:01:38,508
+Say Company A's stock costs five hundred
+dollars a share, and Company B's costs
+five dollars.
+
+24
+00:01:38,568 --> 00:01:43,658
+The five-hundred-dollar share looks like
+the bigger company, and that's the trap.
+
+25
+00:01:43,708 --> 00:01:49,148
+Company A is cut into only three slices,
+so its whole pizza is worth fifteen
+hundred dollars.
+
+26
+00:01:49,988 --> 00:01:55,658
+Company B is cut into a million slices, so
+its whole pizza is worth five million.
+
+27
+00:01:55,708 --> 00:01:59,298
+The cheap slice came from the far bigger
+pizza.
+
+28
+00:01:59,348 --> 00:02:04,238
+Price times the number of shares is called
+market cap, the company's market value.
+
+29
+00:02:04,288 --> 00:02:10,328
+Apple is cut into about fourteen and a
+half billion shares, which is how its
+value reaches trillions.
+
+30
+00:02:10,378 --> 00:02:14,308
+So I'm buying a crumb of a slice, and I'm
+still proud of it.
+
+31
+00:02:14,358 --> 00:02:17,208
+Stop one is the investing app on your
+phone.
+
+32
+00:02:17,258 --> 00:02:20,788
+Say it's Tuesday morning, and you buy one
+dollar of Apple.
+
+33
+00:02:20,838 --> 00:02:25,588
+One Apple share costs a few hundred
+dollars, so your dollar buys a crumb.
+
+34
+00:02:25,638 --> 00:02:29,868
+Many big apps sell these crumbs, and
+they're called fractional shares.
+
+35
+00:02:29,918 --> 00:02:34,568
+You place a market order, which means buy
+right away at the available price.
+
+36
+00:02:34,618 --> 00:02:38,448
+The price you saw on screen can change
+before your order goes through.
+
+37
+00:02:38,498 --> 00:02:42,428
+Your broker may also bundle your crumb
+with other customers' orders before it
+buys.
+
+38
+00:02:42,478 --> 00:02:48,318
+Your broker can send that order to an
+exchange or a market maker, or fill it
+itself.
+
+39
+00:02:48,368 --> 00:02:52,468
+I've been turned into paperwork, and
+nobody even said thank you.
+
+40
+00:02:52,518 --> 00:02:56,508
+Stop two is a kind of company most people
+have never heard of.
+
+41
+00:02:56,558 --> 00:03:00,128
+Many retail orders don't go straight to a
+stock exchange.
+
+42
+00:03:00,178 --> 00:03:04,648
+Brokers often send them to a trading firm
+called a market maker instead.
+
+43
+00:03:04,698 --> 00:03:09,328
+Picture a currency booth at the airport,
+with one price to buy and one to sell.
+
+44
+00:03:09,378 --> 00:03:14,748
+A market maker works the same way,
+regularly posting a buy price and a sell
+price.
+
+45
+00:03:14,798 --> 00:03:19,718
+Say it will buy Apple at three hundred
+fifty dollars and sell at three hundred
+fifty and two cents.
+
+46
+00:03:20,018 --> 00:03:25,548
+That two-cent gap is called the spread,
+and the market maker tries to earn it.
+
+47
+00:03:25,598 --> 00:03:29,968
+It can lose money too, because the price
+can move against it a minute later.
+
+48
+00:03:30,018 --> 00:03:35,828
+Citadel Securities says it executes about
+a third of all U.S. retail stock trading
+volume.
+
+49
+00:03:35,878 --> 00:03:40,828
+Market makers often pay brokers for
+sending them orders, which is called
+payment for order flow.
+
+50
+00:03:40,878 --> 00:03:45,058
+That's one reason many apps charge no
+commission on stock trades.
+
+51
+00:03:45,108 --> 00:03:52,628
+Your broker still has to try to get you
+the best available deal, considering price
+and how reliably the order can be filled.
+
+52
+00:03:52,678 --> 00:03:56,628
+Everyone on this trip gets paid except the
+pig, apparently.
+
+53
+00:03:56,678 --> 00:04:01,688
+If the market maker has the shares, it can
+sell them straight from its own inventory.
+
+54
+00:04:01,738 --> 00:04:04,848
+If it doesn't, your order can head to stop
+three.
+
+55
+00:04:04,898 --> 00:04:10,408
+Stop three is the stock exchange, the
+place most people picture when they hear
+Wall Street.
+
+56
+00:04:10,458 --> 00:04:16,888
+The New York Stock Exchange still rings
+its opening bell on Wall Street at nine
+thirty in the morning, Eastern time.
+
+57
+00:04:16,938 --> 00:04:21,828
+The computers that match its trades sit in
+a data center in Mahwah, New Jersey.
+
+58
+00:04:21,878 --> 00:04:25,458
+Nasdaq's main U.S. data center sits in
+Carteret, New Jersey.
+
+59
+00:04:25,508 --> 00:04:29,548
+I came all this way for Wall Street, and I
+got New Jersey.
+
+60
+00:04:29,598 --> 00:04:33,188
+An exchange works like a matchmaker that
+keeps two lists.
+
+61
+00:04:33,238 --> 00:04:37,068
+One list holds buyers, and the other list
+holds sellers.
+
+62
+00:04:37,118 --> 00:04:41,768
+When a buyer and a seller agree on a
+price, the exchange matches them.
+
+63
+00:04:41,818 --> 00:04:46,408
+Regular trading runs from nine thirty to
+four, Eastern time, Monday through Friday.
+
+64
+00:04:46,458 --> 00:04:50,108
+Market holidays and a few early-close days
+are the exceptions.
+
+65
+00:04:50,158 --> 00:04:54,228
+Some apps let you trade earlier or later,
+when far fewer people are trading.
+
+66
+00:04:54,278 --> 00:05:00,138
+Fewer traders can mean bigger price jumps
+and a wider gap between buy and sell
+prices.
+
+67
+00:05:00,188 --> 00:05:04,858
+Quick check, because look at how far your
+dollar has already come.
+
+68
+00:05:04,908 --> 00:05:08,798
+Stop one turned your dollar into an order
+inside your app.
+
+69
+00:05:08,848 --> 00:05:13,558
+Stop two was a market maker, which may
+sell to you from its own shelf.
+
+70
+00:05:13,608 --> 00:05:17,758
+Stop three was an exchange, which matches
+buyers with sellers.
+
+71
+00:05:17,808 --> 00:05:21,268
+The next stop is where your dollar
+actually changes hands.
+
+72
+00:05:21,318 --> 00:05:27,138
+Pick how much of your dollar Apple gets,
+all of it, half, or none.
+
+73
+00:05:29,088 --> 00:05:33,238
+Usually none of it, because Apple isn't
+the one selling you the share.
+
+74
+00:05:33,288 --> 00:05:36,758
+Think of a concert ticket that gets resold
+between fans.
+
+75
+00:05:36,808 --> 00:05:40,638
+The band gets paid when the box office
+sells the ticket the first time.
+
+76
+00:05:40,688 --> 00:05:45,498
+When you buy that ticket later from
+another fan, your money goes to the fan.
+
+77
+00:05:45,548 --> 00:05:49,338
+Apple's box-office moment came when it
+first sold shares to the public.
+
+78
+00:05:49,388 --> 00:05:54,038
+That happened on December twelfth,
+nineteen eighty, at twenty-two dollars a
+share.
+
+79
+00:05:54,088 --> 00:05:57,118
+Today, your dollar goes to whoever sold
+you the share.
+
+80
+00:05:57,168 --> 00:06:03,058
+It could be your own broker, a market
+maker, a big fund, or a retired teacher.
+
+81
+00:06:03,108 --> 00:06:07,138
+Say the retired teacher is selling a
+little stock to help pay for a new roof.
+
+82
+00:06:07,188 --> 00:06:11,188
+Tell her I'll pay for the roof myself, so
+she doesn't have to sell.
+
+83
+00:06:11,238 --> 00:06:17,128
+Your dollar buys a crumb of her stock, so
+your dollar ends up helping pay for that
+roof.
+
+84
+00:06:17,178 --> 00:06:22,028
+Promise one, done, because your dollar
+went to the seller, not to Apple.
+
+85
+00:06:22,078 --> 00:06:27,428
+Apple still cares about its price, partly
+because its executives are often paid in
+stock.
+
+86
+00:06:27,478 --> 00:06:30,588
+Stop five is where your trade becomes
+official.
+
+87
+00:06:30,638 --> 00:06:34,528
+Your trade is matched, but the paperwork
+isn't finished yet.
+
+88
+00:06:34,578 --> 00:06:40,608
+Since May twenty-eighth, twenty twenty-
+four, most U.S. stock trades settle one
+business day later.
+
+89
+00:06:40,658 --> 00:06:44,788
+That means your Tuesday trade is usually
+final on Wednesday.
+
+90
+00:06:44,838 --> 00:06:50,228
+Behind the scenes, companies in a group
+called the D-T-C-C clear and settle the
+trade.
+
+91
+00:06:50,278 --> 00:06:56,298
+They guarantee eligible trades, work out
+what each firm owes, and hold the shares.
+
+92
+00:06:56,348 --> 00:07:00,708
+A referee for money is the first sensible
+thing I've heard today.
+
+93
+00:07:00,758 --> 00:07:04,448
+Now for the paperwork question from the
+start of this video.
+
+94
+00:07:04,498 --> 00:07:09,968
+Many shares held through brokerages are
+registered under one name, Cede and
+Company.
+
+95
+00:07:10,018 --> 00:07:14,968
+Cede and Company is the name the
+Depository Trust Company uses on the
+official record.
+
+96
+00:07:15,018 --> 00:07:17,488
+It's a bit like a coat check at a
+restaurant.
+
+97
+00:07:17,538 --> 00:07:22,428
+The hanger tag doesn't have your name, but
+your ticket proves the coat belongs to
+you.
+
+98
+00:07:22,478 --> 00:07:27,568
+Your brokerage's records are that ticket,
+and they list you as the beneficial owner.
+
+99
+00:07:27,618 --> 00:07:33,528
+Promise two, done, because the name on the
+record isn't yours, but the shares are.
+
+100
+00:07:33,578 --> 00:07:36,728
+The gains are yours, and so are the
+losses.
+
+101
+00:07:36,778 --> 00:07:39,918
+Voting with a fractional share depends on
+your broker's rules.
+
+102
+00:07:39,968 --> 00:07:44,258
+Quick check before the big part, because
+the whole route is on the map now.
+
+103
+00:07:44,308 --> 00:07:49,078
+Your dollar became an order, took one
+possible route, and reached a seller.
+
+104
+00:07:49,128 --> 00:07:53,258
+It settled a business day later, with Cede
+and Company on the record.
+
+105
+00:07:53,308 --> 00:07:58,718
+The order itself can go through in a
+fraction of a second, and settlement
+follows a business day later.
+
+106
+00:07:58,768 --> 00:08:04,598
+Now comes the part that matters most,
+which is how one dollar turns into more
+dollars.
+
+107
+00:08:04,648 --> 00:08:08,038
+There are two main ways to make money from
+owning a stock.
+
+108
+00:08:08,088 --> 00:08:10,838
+The first is selling for more than you
+paid.
+
+109
+00:08:10,888 --> 00:08:13,978
+Here's a made-up example to show how that
+works.
+
+110
+00:08:14,028 --> 00:08:19,048
+Say Maya buys ten shares at two hundred
+dollars each, which costs two thousand
+dollars.
+
+111
+00:08:19,448 --> 00:08:24,618
+A year later, Jordan offers two hundred
+fifty dollars a share for all ten.
+
+112
+00:08:24,668 --> 00:08:29,198
+Maya sells and makes five hundred dollars,
+before taxes and any fees.
+
+113
+00:08:29,248 --> 00:08:33,938
+If Jordan had offered one hundred fifty
+dollars a share, Maya would have lost five
+hundred.
+
+114
+00:08:33,988 --> 00:08:39,758
+The second way is dividends, when a
+company shares part of its profits with
+its owners.
+
+115
+00:08:39,808 --> 00:08:43,858
+Not every company pays dividends, and the
+ones that do can cut them.
+
+116
+00:08:43,908 --> 00:08:48,458
+Dividends sound like savings that pay you
+rent, and I approve.
+
+117
+00:08:48,508 --> 00:08:54,318
+The price you usually see is the last-
+traded price, the last price someone
+actually paid.
+
+118
+00:08:54,368 --> 00:08:58,078
+Say Apple's last trade was three hundred
+fifty dollars even.
+
+119
+00:08:58,128 --> 00:09:03,438
+The cheapest seller wants three hundred
+fifty dollars and five cents, and a buyer
+pays it.
+
+120
+00:09:03,488 --> 00:09:06,368
+The last-trade price now becomes three
+hundred fifty dollars and five cents.
+
+121
+00:09:08,068 --> 00:09:13,158
+Millions of small deals like that, every
+day, are what make a stock chart move.
+
+122
+00:09:13,208 --> 00:09:18,418
+Prices mostly move on what buyers and
+sellers expect a company to earn later.
+
+123
+00:09:18,468 --> 00:09:23,558
+Good news can lift a stock's price in
+minutes, and bad news can sink it.
+
+124
+00:09:23,608 --> 00:09:29,618
+In his nineteen eighty-seven letter,
+Warren Buffett passed on a lesson from his
+teacher, Benjamin Graham.
+
+125
+00:09:29,668 --> 00:09:36,078
+In the short run, the market is a voting
+machine, but in the long run it is a
+weighing machine.
+
+126
+00:09:36,128 --> 00:09:41,458
+Day to day, prices follow moods, and over
+many years they tend to follow profits.
+
+127
+00:09:41,508 --> 00:09:45,498
+Picking single companies isn't the only
+way to own stocks.
+
+128
+00:09:45,548 --> 00:09:51,798
+An S and P five hundred index fund is a
+basket holding slices of about five
+hundred companies.
+
+129
+00:09:51,848 --> 00:09:56,018
+You buy a slice of the fund, and the fund
+owns the companies for you.
+
+130
+00:09:56,068 --> 00:09:59,498
+The biggest companies get the biggest
+weight inside the basket.
+
+131
+00:09:59,548 --> 00:10:04,498
+I'm spread across five hundred companies
+now, and I've never felt so thin.
+
+132
+00:10:04,548 --> 00:10:10,058
+A basket holding five hundred companies is
+the first investment I'd happily sit in.
+
+133
+00:10:10,108 --> 00:10:16,478
+Over long periods, the S and P five
+hundred has historically returned roughly
+ten percent a year.
+
+134
+00:10:16,528 --> 00:10:22,698
+That's with dividends reinvested and
+before inflation, and it's history, not a
+promise.
+
+135
+00:10:22,748 --> 00:10:26,238
+Here's what a steady ten percent a year
+would do to one dollar.
+
+136
+00:10:26,288 --> 00:10:31,928
+After forty years of steady ten percent
+growth, one dollar becomes about forty-
+five dollars.
+
+137
+00:10:32,308 --> 00:10:36,758
+Real markets don't move in a straight
+line, and the drops can be brutal.
+
+138
+00:10:36,808 --> 00:10:43,298
+From late two thousand seven to early two
+thousand nine, the S and P five hundred
+lost more than half its value.
+
+139
+00:10:43,348 --> 00:10:49,498
+In twenty twenty, it fell almost thirty-
+four percent between February nineteenth
+and March twenty-third.
+
+140
+00:10:49,548 --> 00:10:54,718
+The broad index came back both times, but
+a single company doesn't always come back.
+
+141
+00:10:54,768 --> 00:10:58,378
+This is exactly why I sleep with one eye
+open.
+
+142
+00:10:58,428 --> 00:11:02,658
+Here are the three checks worth doing
+before you ever tap buy.
+
+143
+00:11:02,708 --> 00:11:07,518
+Check one is the size of the company, not
+just the price of one share.
+
+144
+00:11:07,568 --> 00:11:12,658
+Price times shares is the number that
+tells you how big the pizza really is.
+
+145
+00:11:12,708 --> 00:11:17,678
+Check two is how your order works, since a
+market order takes the available price.
+
+146
+00:11:17,728 --> 00:11:21,538
+Your app should explain its order types
+and how it routes your orders.
+
+147
+00:11:21,588 --> 00:11:26,358
+Check three is whether your brokerage is
+an S-I-P-C member, and what that covers.
+
+148
+00:11:26,408 --> 00:11:32,818
+If a member firm fails with customer
+assets missing, S-I-P-C can help recover
+them.
+
+149
+00:11:32,868 --> 00:11:39,238
+Protection goes up to five hundred
+thousand dollars per customer, including
+two hundred fifty thousand in cash.
+
+150
+00:11:39,288 --> 00:11:43,388
+That protection is for a failed brokerage,
+not for a stock that falls.
+
+151
+00:11:43,438 --> 00:11:47,578
+Nobody insures my feelings either, and
+I've been through a lot today.
+
+152
+00:11:47,628 --> 00:11:52,868
+These checks keep money safe, which makes
+this the only list I trust.
+
+153
+00:11:52,918 --> 00:11:57,678
+That's promise three, and notice that none
+of these checks tells you what to buy.
+
+154
+00:11:57,728 --> 00:12:03,118
+The whole trip is on the map now, from
+your pocket to a retired teacher's new
+roof.
+
+155
+00:12:03,168 --> 00:12:07,838
+Apple never got your dollar, but you now
+own a tiny piece of Apple.
+
+156
+00:12:07,888 --> 00:12:11,518
+Before I ask you something, I'll go first
+with my own story.
+
+157
+00:12:11,568 --> 00:12:16,558
+The first stock I ever bought was Nvidia,
+one of the biggest companies in the
+market.
+
+158
+00:12:16,608 --> 00:12:22,218
+I picked it because I think it's tied to
+where the world is heading, and that's my
+reason, not advice.
+
+159
+00:12:22,268 --> 00:12:25,978
+The first time I opened a candlestick
+chart, I was completely lost.
+
+160
+00:12:26,028 --> 00:12:30,418
+I started learning about money because I
+want to be financially free.
+
+161
+00:12:30,468 --> 00:12:34,968
+I offered to pay for that roof, and
+somehow I ended up inside it.
+
+162
+00:12:35,018 --> 00:12:39,948
+Next time, we'll break down how to read a
+candlestick chart without getting lost.
+
+163
+00:12:39,998 --> 00:12:44,768
+Tell me in the comments which stop
+surprised you most, and what your first
+stock was.
+
+164
+00:12:44,818 --> 00:12:49,120
+If this made the stock market make more
+sense, a like really helps the channel.

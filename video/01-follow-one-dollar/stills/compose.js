@@ -24,6 +24,13 @@ function shortSource(s) {
   s = s.split(";")[0].replace(/\s*\([^)]*\)/g, "").trim();
   return "Source: " + (s.length > 64 ? s.slice(0, 61).trim() + "…" : s);
 }
+// The label viewers see top-left. Script headings that are production words (HOOK, ENDING)
+// show nothing; the others are reworded for the viewer.
+function chipLabel(section) {
+  if (/^(HOOK|ENDING)$/.test(section)) return null;
+  if (/^CHECKPOINT/.test(section)) return "QUICK CHECK";
+  return section.replace(/^THE DEVICE · /, "").replace(/^TODAY · /, "");
+}
 const stopOf = (section) => { const m = section.match(/^STOP (\d)/); return m ? +m[1] : null; };
 
 function fontCss() {
@@ -36,7 +43,8 @@ function buildSvg(line) {
   if (!sc) throw new Error("no scene for " + line.id);
   const stop = sc.stop !== undefined ? sc.stop : stopOf(line.section);
   let s = `<rect width="1920" height="1080" fill="${L.PAPER}"/>`;
-  s += L.chip(sc.chip || line.section);
+  const label = sc.chip || chipLabel(line.section);
+  if (label) s += L.chip(label);
   if (sc.map !== false && (stop || sc.mapDone)) s += L.miniMap(stop || 0, sc.mapDone !== undefined ? sc.mapDone : stop - 1);
 
   const terms = sc.terms || (sc.term ? [sc.term] : []);
