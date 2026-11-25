@@ -22,7 +22,7 @@ function promises(active, done = [], show = [1, 2, 3], word = null, doneWord = n
       : n === 2 ? g(0, -66, 0.62, doc("STOCK", ["Name: ? ? ?"], { w: 380 }))
       : g(0, -64, 0.5, checklist(["", "", ""], ["done", "done", "done"], { w: 300, size: 34 }));
     let inner = t(0, -170, "PROMISE " + n, 34, { w: 900, fill: on || isDone ? DGREEN : GREY }) + (shown ? icon + t(0, 90, p[0], 40, { w: 900 }) + t(0, 150, p[1], 40, { w: 900 }) : t(0, 40, "?", 150, { w: 900, fill: LGREY }));
-    if (isDone) { const st = stamp(170, -214, "DONE", { color: GREEN, rot: 8, size: 44 }); inner += doneWord && on ? A(st, doneWord, "stamp") : st; }
+    if (isDone) { const st = stamp(n === 3 ? 100 : 170, -214, "DONE", { color: GREEN, rot: 8, size: 44 }); inner += doneWord && on ? A(st, doneWord, "stamp") : st; }
     const c = card(x, 520, 480, 440, inner, { fill: on ? YEL : "#fff", sw: on ? 9 : 6 });
     o += on && word ? A(c, word, "pop") : on || isDone ? c : dim(c, shown ? 0.55 : 0.5);
   });

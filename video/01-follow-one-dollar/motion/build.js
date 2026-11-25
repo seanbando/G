@@ -24,7 +24,7 @@ const ids = script.map((l) => l.id);
 const i0 = ids.indexOf(first), i1 = ids.indexOf(last);
 const tl = T.lines;
 const t0 = i0 === 0 ? 0 : tl[i0].start - 0.2;                       // where this part starts in the full track
-const tEnd = i1 + 1 < tl.length ? tl[i1 + 1].start - 0.15 : T.duration;
+const tEnd = i1 + 1 < tl.length ? tl[i1 + 1].start - 0.15 : T.duration;   // 0.05 s overlap with the next part; assemble.py trims it
 const total = +(tEnd - t0).toFixed(3);
 
 // cut this part's audio out of the full narration

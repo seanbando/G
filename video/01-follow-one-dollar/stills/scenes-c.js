@@ -66,71 +66,85 @@ S.S101 = { h: "Voting with a fractional share depends on your broker's rules", c
 
 // ---------- CHECKPOINT 2 ----------
 S.S102 = { h: "Quick check: the whole route is on the map now", map: false,
-  body: map(["done", "done", "done", "done", "done"], { at: 5, who: buck("happy"), y: 400 }) };
-const steps3 = (items) => items.map(([icon, ls], i) => card(400 + i * 560, 560, 460, 420, g(0, -60, 1, icon) + t(0, 110, ls[0], 38, { w: 900, max: 420 }) + t(0, 158, ls[1], 38, { w: 900, max: 420 }))).join("") + arrow(650, 560, 710, 560, { width: 10 }) + arrow(1210, 560, 1270, 560, { width: 10 });
+  body: map(["done", "done", "done", "done", "done"], { at: 5, who: buck("happy"), y: 400, whoOn: "start" }) };
+const steps3 = (items, ons = null) => items.map(([icon, ls], i) => { const c = card(400 + i * 560, 560, 460, 420, g(0, -60, 1, icon) + t(0, 110, ls[0], 38, { w: 900, max: 420 }) + t(0, 164, ls[1], 38, { w: 900, max: 420 })); return ons ? A(c, ons[i], "pop") : c; }).join("") +
+  (ons ? A(arrow(650, 560, 710, 560, { width: 10 }), ons[1], "fade") + A(arrow(1210, 560, 1270, 560, { width: 10 }), ons[2], "fade") : arrow(650, 560, 710, 560, { width: 10 }) + arrow(1210, 560, 1270, 560, { width: 10 }));
 S.S103 = { h: "Your dollar became an order, took one possible route, and reached a seller", mapDone: 5, stop: 0,
-  body: steps3([[g(0, 0, 0.6, doc("ORDER", ["Buy $1 of Apple"], { w: 380 })), ["Became", "an order"]], [g(-180, -70, 0.24, P.roadMap({ id: "m2", states: ["done", "done", "done", "done", "done"] })), ["Took one", "possible route"]], [g(0, 10, 0.6, L.teacher(null)), ["Reached", "a seller"]]]) };
+  body: steps3([[g(0, 0, 0.6, doc("ORDER", ["Buy $1 of Apple"], { w: 380 })), ["Became", "an order"]], [g(-180, -70, 0.24, P.roadMap({ id: "m2", states: ["done", "done", "done", "done", "done"] })), ["Took one", "possible route"]], [g(0, 10, 0.6, L.teacher(null)), ["Reached", "a seller"]]], ["order", "route", "seller"]) };
 S.S104 = { h: "It settled a business day later, with Cede & Co. on the record", mapDone: 5, stop: 0,
-  body: g(560, 560, 1.3, calendar("TRADE DAY", "+1", { sub: "business day", color: GREEN, w: 300 })) + g(1340, 560, 1.3, doc("OFFICIAL RECORD", ["Registered name:", "CEDE & CO."], { w: 520, size: 40, hl: 1 })) };
+  body: A(g(560, 560, 1.3, calendar("TRADE DAY", "+1", { sub: "business day", color: GREEN, w: 300 })), "settled", "pop") + A(g(1340, 560, 1.3, doc("OFFICIAL RECORD", ["Registered name:", "CEDE & CO."], { w: 520, size: 40, hl: 1 })), "with", "pop") };
 S.S105 = { h: "The order: a fraction of a second. Settlement: a business day later.", mapDone: 5, stop: 0,
-  body: card(520, 570, 640, 440, g(0, -50, 1, stopwatch()) + t(0, 110, "THE ORDER", 34, { w: 900, fill: GREY }) + t(0, 166, "a fraction of a second", 44, { w: 900 })) +
-    card(1400, 570, 640, 440, g(0, -70, 0.85, calendar("TRADE DAY", "+1", { color: GREEN, w: 260 })) + t(0, 110, "SETTLEMENT", 34, { w: 900, fill: GREY }) + t(0, 166, "one business day later", 44, { w: 900 })) };
+  body: A(card(520, 570, 640, 440, g(0, -50, 1, stopwatch()) + t(0, 110, "THE ORDER", 34, { w: 900, fill: GREY }) + t(0, 170, "a fraction of a second", 44, { w: 900 })), "order", "pop") +
+    A(card(1400, 570, 640, 440, g(0, -70, 0.85, calendar("TRADE DAY", "+1", { color: GREEN, w: 260 })) + t(0, 110, "SETTLEMENT", 34, { w: 900, fill: GREY }) + t(0, 170, "one business day later", 44, { w: 900 })), "settlement", "pop") };
 S.S106 = { h: "The part that matters most: how one dollar turns into more dollars", mapDone: 5, stop: 0, map: false,
-  body: g(520, 580, 1.8, bill(170)) + arrow(760, 580, 1060, 580, { color: DGREEN, width: 14 }) + [0, 1, 2, 3].map((i) => g(1360 + i * 14, 640 - i * 44, 1.8, bill(170))).join("") + t(1680, 500, "?", 130, { w: 900, fill: DGREEN }) };
+  body: A(g(520, 580, 1.8, bill(170)), "start", "pop", { idle: "bob" }) + A(arrow(760, 580, 1060, 580, { color: DGREEN, width: 14 }), "turns", "wipe", { dir: "r", dur: 0.4 }) +
+    `<g data-allow-overlap>${[0, 1, 2, 3].map((i) => A(g(1360 + i * 14, 640 - i * 44, 1.8, bill(170)), "more", "pop", { delay: i * 0.1 })).join("")}</g>` + A(t(1650, 500, "?", 130, { w: 900, fill: DGREEN }), "dollars", "pop") };
 
 // ---------- HOW A SHARE MAKES MONEY ----------
-const ways = (on) => [["1", ["Sell for more", "than you paid"], g(0, -40, 1, arrow(-90, 40, 90, -60, { color: GREEN, width: 18 }))], ["2", ["Dividends"], g(-40, -40, 1.3, coin()) + g(40, -20, 1.3, coin())]]
-  .map(([n, ls, icon], i) => { const c = card(520 + i * 880, 560, 680, 460, t(0, -170, "WAY " + n, 40, { w: 900, fill: DGREEN }) + icon + ls.map((l, k) => t(0, 120 + k * 56 - (ls.length - 1) * 20, l, 48, { w: 900 })).join(""), { fill: on === i ? YEL : "#fff", sw: on === i ? 9 : 6 }); return on === null || on === i ? c : dim(c, 0.35); }).join("");
-S.S107 = { h: "Two main ways to make money from owning a stock", body: ways(null) };
-S.S108 = { h: "Way 1: sell for more than you paid", body: ways(0) };
-S.S109 = { h: "A made-up example to show how that works", example: false, body: g(560, 330, 1.25, P.exampleCard({ title: "MAYA AND JORDAN", lines: ["Maya buys shares.", "Later, Jordan wants them.", ""] })) };
+const ways = (on, words = null) => [["1", ["Sell for more", "than you paid"], g(0, -40, 1, arrow(-90, 40, 90, -60, { color: GREEN, width: 18 }))], ["2", ["Dividends"], g(-40, -40, 1.3, coin()) + g(40, -20, 1.3, coin())]]
+  .map(([n, ls, icon], i) => { const c = card(520 + i * 880, 560, 680, 460, t(0, -170, "WAY " + n, 40, { w: 900, fill: DGREEN }) + icon + ls.map((l, k) => t(0, 120 + k * 60 - (ls.length - 1) * 20, l, 48, { w: 900 })).join(""), { fill: on === i ? YEL : "#fff", sw: on === i ? 9 : 6 });
+    return on === i ? A(c, "start", "pulse") : on !== null ? dim(c, 0.35) : words ? A(c, words[i], "pop", { delay: i * 0.25 }) : c; }).join("");
+S.S107 = { h: "Two main ways to make money from owning a stock", body: ways(null, ["two", "two"]) };
+S.S108 = { h: "Way 1: sell for more than you paid", enter: "cut", body: ways(0) };
+S.S109 = { h: "A made-up example to show how that works", example: false, anims: [{ sel: "#example-stamp", on: "made", fx: "stamp" }],
+  body: A(g(560, 330, 1.25, P.exampleCard({ title: "MAYA AND JORDAN", lines: ["Maya buys shares.", "Later, Jordan wants them.", ""] })), "start", "pop") };
 const maya = (x = 400) => g(x, 600, 1.2, person({ shirt: PURPLE, skin: 1, hair: "long", label: "Maya" }));
 const jordan = (x = 1520) => g(x, 600, 1.2, person({ shirt: ORANGE, skin: 2, label: "Jordan" }));
-const sum = (x, y, rows, total, tf = DGREEN, w = 640) => card(x, y, w, 120 + rows.length * 62 + 110, rows.map((r, i) => t(0, -((rows.length * 62 + 110) / 2) + 40 + i * 62, r, 44, { w: 800, max: w - 60 })).join("") + W(`<path d="M ${-w / 2 + 40} ${((rows.length * 62 + 110) / 2) - 96 - 14} H ${w / 2 - 40}" stroke="${INK}" stroke-width="5"/>`) + t(0, ((rows.length * 62 + 110) / 2) - 18, total, 66, { w: 900, fill: tf, max: w - 60 }));
-const tenSlices = (x, y) => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => g(x + (i % 5) * 62, y + Math.floor(i / 5) * 86, 0.45, slice())).join("");
-S.S110 = { h: "Maya buys 10 shares at $200 each", body: maya() + tenSlices(620, 420) + sum(1300, 560, ["10 shares × $200"], "= $2,000") };
+// a small sum card. ons = [word the card appears on, word the total appears on]
+const sum = (x, y, rows, total, tf = DGREEN, w = 640, ons = null) => { const h = rows.length * 62 + 110;
+  const tot = t(0, h / 2 - 14, total, 66, { w: 900, fill: tf, max: w - 60 });
+  const c = card(x, y, w, 120 + h, rows.map((r, i) => t(0, -h / 2 + 40 + i * 62, r, 44, { w: 800, max: w - 60 })).join("") + W(`<path d="M ${-w / 2 + 40} ${h / 2 - 104} H ${w / 2 - 40}" stroke="${INK}" stroke-width="5"/>`) + (ons ? A(tot, ons[1], "pop") : tot));
+  return ons ? A(c, ons[0], "pop") : c; };
+const tenSlices = (x, y, on = null) => [0, 1, 2, 3, 4, 5, 6, 7, 8, 9].map((i) => { const s = g(x + (i % 5) * 62, y + Math.floor(i / 5) * 86, 0.45, slice()); return on ? A(s, on, "pop", { delay: i * 0.04 }) : s; }).join("");
+S.S110 = { h: "Maya buys 10 shares at $200 each", body: A(maya(), "maya", "pop") + tenSlices(620, 420, "buys>") + sum(1300, 560, ["10 shares × $200"], "= $2,000", DGREEN, 640, ["at>", "costs>"]) };
 S.S111 = { h: "A year later, Jordan offers $250 a share for all ten",
-  body: maya() + tenSlices(620, 420) + jordan() + card(1180, 500, 400, 240, t(0, -60, "1 YEAR LATER", 30, { w: 900, fill: GREY }) + t(0, 0, "10 × $250", 50, { w: 900 }) + t(0, 70, "= $2,500", 60, { w: 900, fill: DGREEN })) + arrow(1380, 700, 900, 700, { color: DGREEN, curve: -40, label: "offer", ldy: 70 }) };
+  body: maya() + tenSlices(620, 420) + A(jordan(), "jordan", "pop") + A(card(1180, 500, 400, 240, t(0, -60, "1 YEAR LATER", 30, { w: 900, fill: GREY }) + t(0, 0, "10 × $250", 50, { w: 900 }) + t(0, 74, "= $2,500", 60, { w: 900, fill: DGREEN })), "offers>", "pop") +
+    A(arrow(1380, 700, 900, 700, { color: DGREEN, curve: -40, label: "offer", ldy: 70 }), "offers", "wipe", { dir: "l", dur: 0.5 }) };
 S.S112 = { h: "Maya sells and makes $500",
-  body: maya() + sum(1040, 520, ["Sold for   $2,500", "Paid         $2,000"], "+$500") + jordan() + t(1040, 780, "before taxes and any fees", 36, { w: 800, fill: GREY }) };
+  body: maya() + jordan() + sum(1040, 520, ["Sold for   $2,500", "Paid         $2,000"], "+$500", DGREEN, 640, ["sells", "makes>"]) + A(t(1040, 790, "before taxes and any fees", 36, { w: 800, fill: GREY }), "before", "fade") };
 S.S113 = { h: "At $150 a share, Maya would have lost $500",
-  body: maya() + sum(1040, 520, ["Sold for   $1,500", "Paid         $2,000"], "−$500", RED) + jordan() + t(1040, 780, "10 × $150 = $1,500", 36, { w: 800, fill: GREY }) };
+  body: maya() + jordan() + sum(1040, 520, ["Sold for   $1,500", "Paid         $2,000"], "−$500", RED, 640, ["offered>", "lost>"]) + A(t(1040, 790, "10 × $150 = $1,500", 36, { w: 800, fill: GREY }), "share", "fade") };
 const owners = (x, y) => [0, 1, 2].map((i) => g(x + i * 170, y, 0.7, person({ shirt: [BLUE, ORANGE, PURPLE][i], skin: i, hair: i === 1 ? "long" : "short" }))).join("");
 S.S114 = { h: "Way 2: dividends. The company shares part of its profits with its owners.",
-  body: g(480, 800, 1, tower("COMPANY", { w: 280, h: 360 })) + [0, 1, 2].map((i) => arrow(660, 520, 1150 + i * 170, 480, { color: DGREEN, curve: -60 - i * 20, width: 6 }) + g(900 + i * 110, 400 - i * 16, 1, coin(30))).join("") + owners(1180, 660) + t(1350, 810, "its owners (shareholders)", 36, { w: 900 }),
+  body: A(g(480, 800, 1, tower("COMPANY", { w: 280, h: 360 })), "company", "pop") + A(owners(1180, 660) + t(1350, 810, "its owners (shareholders)", 36, { w: 900 }), "owners", "pop") +
+    [0, 1, 2].map((i) => A(arrow(660, 520, 1150 + i * 170, 480, { color: DGREEN, curve: -60 - i * 20, width: 6 }) + g(900 + i * 110, 400 - i * 16, 1, coin(30)), "shares", "wipe", { dir: "r", dur: 0.6, delay: i * 0.15 })).join(""),
   term: ["DIVIDEND", "A payment a company makes to the people who own its shares, out of its profits."] };
 S.S115 = { h: "Not every company pays dividends, and they can be cut",
-  body: card(400, 560, 480, 420, g(0, 90, 0.5, tower("COMPANY A", { w: 260, h: 300 })) + g(-60, -150, 1, coin(30)) + g(10, -160, 1, coin(30)) + g(80, -150, 1, coin(30)) + t(0, 170, "pays dividends", 38, { w: 900, fill: DGREEN })) +
-    card(960, 560, 480, 420, g(0, 90, 0.5, tower("COMPANY B", { w: 260, h: 300, sign: ORANGE })) + t(0, -130, "$0", 60, { w: 900, fill: GREY }) + t(0, 170, "pays none", 38, { w: 900, fill: GREY })) +
-    card(1520, 560, 480, 420, g(0, 90, 0.5, tower("COMPANY C", { w: 260, h: 300, sign: PURPLE })) + g(-30, -150, 1, coin(30)) + dim(g(50, -150, 1, coin(30)), 0.3) + cross(50, -150, 30, 9) + t(0, 170, "cut its dividend", 38, { w: 900, fill: RED })) };
-S.S116 = { body: g(860, 640, 1.6, hamlet("proud")) + [[760, 300], [860, 250], [960, 310]].map(([x, y]) => g(x, y, 1.1, coin())).join("") + bubble(1320, 380, "Rent for my savings!", { tail: "left" }) };
-const board = (price, change, ex) => g(640, 400, 1, P.priceBoard({ price, change, example: false }));
+  body: A(card(400, 560, 480, 420, g(0, 90, 0.5, tower("COMPANY A", { w: 260, h: 300 })) + g(-60, -150, 1, coin(30)) + g(10, -160, 1, coin(30)) + g(80, -150, 1, coin(30)) + t(0, 170, "pays dividends", 38, { w: 900, fill: DGREEN })), "pays", "pop") +
+    A(card(960, 560, 480, 420, g(0, 90, 0.5, tower("COMPANY B", { w: 260, h: 300, sign: ORANGE })) + t(0, -130, "$0", 60, { w: 900, fill: GREY }) + t(0, 170, "pays none", 38, { w: 900, fill: GREY })), "not", "pop") +
+    A(card(1520, 560, 480, 420, g(0, 90, 0.5, tower("COMPANY C", { w: 260, h: 300, sign: PURPLE })) + g(-30, -150, 1, coin(30)) + dim(g(50, -150, 1, coin(30)), 0.3) + cross(50, -150, 30, 9) + t(0, 170, "cut its dividend", 38, { w: 900, fill: RED })), "cut", "pop") };
+S.S116 = { body: A(g(860, 640, 1.6, hamlet("proud")), "start", "fade", { idle: "talk" }) + [[760, 300], [860, 250], [960, 310]].map(([x, y], i) => A(g(x, y, 1.1, coin()), "pay", "slide", { dir: "d", delay: i * 0.1 })).join("") + A(bubble(1320, 380, "Rent for my savings!", { tail: "left" }), "rent", "pop") };
 S.S117 = { h: "The price you usually see is the last-traded price",
-  body: g(260, 420, 1, P.priceBoard({ price: "$ ? ? ?", label: "APPLE · LAST TRADE" })) + arrow(1200, 570, 940, 570, { color: DGREEN }) + card(1500, 570, 560, 220, t(0, -30, "the last price", 46, { w: 900 }) + t(0, 36, "someone actually paid", 46, { w: 900 }), { fill: YEL }),
+  body: A(g(260, 420, 1, P.priceBoard({ price: "$ ? ? ?", label: "APPLE · LAST TRADE" })), "price", "pop") + A(arrow(1200, 570, 940, 570, { color: DGREEN }), "last:2", "wipe", { dir: "l", dur: 0.4 }) +
+    A(card(1500, 570, 560, 220, t(0, -30, "the last price", 46, { w: 900 }) + t(0, 36, "someone actually paid", 46, { w: 900 }), { fill: YEL }), "last:2", "pop"),
   term: ["LAST-TRADED PRICE", "The price of the most recent sale: what a buyer just paid a seller."] };
-S.S118 = { h: "Say Apple's last trade was $350.00", body: g(640, 420, 1, P.priceBoard({ price: "$350.00" })) };
+S.S118 = { h: "Say Apple's last trade was $350.00", body: A(g(640, 420, 1, P.priceBoard({ price: "$350.00" })), "apple's", "pop") };
 S.S119 = { h: "The cheapest seller wants $350.05, and a buyer pays it",
-  body: g(200, 300, 0.8, P.priceBoard({ price: "$350.00" })) + g(1180, 680, 0.9, person({ shirt: ORANGE, skin: 2, label: "Cheapest seller" })) + g(1180, 400, 1.3, priceTag("$350.05", { w: 280, color: YEL })) +
-    g(1640, 680, 0.9, person({ shirt: BLUE, label: "Buyer" })) + arrow(1540, 600, 1300, 600, { color: DGREEN, label: "pays it", ldy: -24 }) + stamp(1420, 480, "DEAL", { color: GREEN, rot: -8 }) };
-S.S120 = { h: "The last-trade price now becomes $350.05", body: g(640, 420, 1, P.priceBoard({ price: "$350.05", change: "+$0.05" })) };
+  body: g(200, 300, 0.8, P.priceBoard({ price: "$350.00" })) + A(g(1180, 680, 0.9, person({ shirt: ORANGE, skin: 2, label: "Cheapest seller" })), "seller", "pop") + A(g(1180, 400, 1.3, priceTag("$350.05", { w: 280, color: YEL })), "wants>", "pop") +
+    A(g(1600, 680, 0.9, person({ shirt: BLUE, label: "Buyer" })), "buyer", "pop") + A(arrow(1500, 600, 1300, 600, { color: DGREEN, label: "pays it", ldy: -24 }), "pays", "wipe", { dir: "l", dur: 0.4 }) + A(stamp(1400, 480, "DEAL", { color: GREEN, rot: -8 }), "it", "stamp") };
+S.S120 = { h: "The last-trade price now becomes $350.05",
+  body: g(640, 420, 1, P.priceBoard({ price: "$350.00" })) + `<g data-allow-overlap>${A(g(640, 420, 1, P.priceBoard({ id: "board2", price: "$350.05", change: "+$0.05" })), "becomes>", "fade", { dur: 0.2 })}</g>` };
 const jag = (n, seed, trend = 0.5) => { const pts = []; let v = 0.2, r = seed; const rnd = () => ((r = (r * 9301 + 49297) % 233280) / 233280); for (let i = 0; i <= n; i++) { pts.push([i / n, Math.max(0.05, Math.min(0.95, v))]); v += (rnd() - 0.5 + trend * 0.12) * 0.16; } return pts; };
 S.S121 = { h: "Millions of small deals like that, every day, make a stock chart move",
-  body: g(420, 820, 1, chart(jag(60, 11, 0.8), { w: 1080, h: 480, color: GREEN, sw: 7, xl: "time", yl: "price" })) + [0.2, 0.45, 0.7].map((x, i) => g(420 + x * 1080, 330 + i * 30, 0.8, stamp(0, 0, "DEAL", { color: GREEN, rot: -6 + i * 5, size: 30 }))).join("") };
+  body: A(g(420, 820, 1, chart(jag(60, 11, 0.8), { w: 1080, h: 480, color: GREEN, sw: 7, xl: "time", yl: "price" })), "millions", "wipe", { dir: "r", dur: 3.2 }) +
+    [0.2, 0.45, 0.7].map((x, i) => A(g(420 + x * 1080, 330 + i * 30, 0.8, stamp(0, 0, "DEAL", { color: GREEN, rot: -6 + i * 5, size: 30 })), "deals", "stamp", { delay: i * 0.5 })).join("") };
 S.S122 = { h: "Prices mostly move on what people expect a company to earn later",
-  body: g(420, 640, 1, person({ shirt: BLUE, label: "Buyers" })) + g(640, 640, 1, person({ shirt: ORANGE, skin: 2, label: "Sellers" })) +
-    W(`<path d="M 760 470 L 1040 400 L 1050 440 L 770 520 Z" fill="#cfd4da" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/><circle cx="1066" cy="418" r="34" fill="${LBLUE}" stroke="${INK}" stroke-width="6"/>`) +
-    card(1460, 520, 520, 380, t(0, -140, "LATER", 34, { w: 900, fill: GREY }) + g(-190, 130, 1, chart([[0, 0.2], [0.3, 0.35], [0.6, 0.55], [1, 0.9]], { w: 380, h: 200, color: GREEN })) + t(0, 172, "future profits?", 36, { w: 900 }), { fill: YEL }),
+  body: A(g(420, 640, 1, person({ shirt: BLUE, label: "Buyers" })), "buyers", "pop") + A(g(640, 640, 1, person({ shirt: ORANGE, skin: 2, label: "Sellers" })), "sellers", "pop") +
+    A(W(`<path d="M 760 470 L 1040 400 L 1050 440 L 770 520 Z" fill="#cfd4da" stroke="${INK}" stroke-width="6" stroke-linejoin="round"/><circle cx="1066" cy="418" r="34" fill="${LBLUE}" stroke="${INK}" stroke-width="6"/>`), "expect", "pop") +
+    A(card(1460, 520, 520, 380, t(0, -140, "LATER", 34, { w: 900, fill: GREY }) + g(-190, 130, 1, chart([[0, 0.2], [0.3, 0.35], [0.6, 0.55], [1, 0.9]], { w: 380, h: 200, color: GREEN })) + t(0, 172, "future profits?", 36, { w: 900 }), { fill: YEL }), "earn", "pop"),
   term: ["EARNINGS", "A company's profit: the money left after it pays its costs."] };
 S.S123 = { h: "Good news can lift a price in minutes, and bad news can sink it",
-  body: g(480, 600, 1.4, newspaper("GOOD NEWS")) + arrow(760, 720, 760, 420, { color: GREEN, width: 22 }) + g(1280, 600, 1.4, newspaper("BAD NEWS", { good: false })) + arrow(1560, 420, 1560, 720, { color: RED, width: 22 }) };
+  body: A(g(480, 600, 1.4, newspaper("GOOD NEWS")), "good", "pop") + A(arrow(760, 720, 760, 420, { color: GREEN, width: 22 }), "lift", "wipe", { dir: "u", dur: 0.5 }) +
+    A(g(1280, 600, 1.4, newspaper("BAD NEWS", { good: false })), "bad", "pop") + A(arrow(1560, 420, 1560, 720, { color: RED, width: 22 }), "sink", "wipe", { dir: "d", dur: 0.5 }) };
 S.S124 = { h: "A lesson Warren Buffett passed on from his teacher, Benjamin Graham",
-  body: g(480, 600, 1.3, doc("1987 LETTER", ["To the shareholders of", "Berkshire Hathaway", "", "Warren Buffett"], { w: 500, size: 34 })) +
-    g(1160, 620, 1, person({ shirt: "#3a4756", hair: "none", skin: 3, glasses: true, label: "Warren Buffett" })) + arrow(1500, 500, 1300, 500, { curve: 40, label: "taught him", ldy: -46 }) + g(1640, 620, 1, person({ shirt: "#6b5a4a", hair: "none", skin: 3, glasses: true, label: "Benjamin Graham" })) };
+  body: A(g(480, 600, 1.3, doc("1987 LETTER", ["To the shareholders of", "Berkshire Hathaway", "", "Warren Buffett"], { w: 500, size: 34 })), "letter", "pop") +
+    A(g(1160, 620, 1, person({ shirt: "#3a4756", hair: "none", skin: 3, glasses: true, label: "Warren Buffett" })), "warren", "pop") + A(g(1560, 620, 1, person({ shirt: "#6b5a4a", hair: "none", skin: 3, glasses: true, label: "Benjamin Graham" })), "benjamin", "pop") +
+    A(arrow(1440, 500, 1280, 500, { curve: 40, label: "taught him", ldy: -46 }), "teacher", "wipe", { dir: "l", dur: 0.4 }) };
 S.S125 = { h: "Short run: a voting machine. Long run: a weighing machine.",
-  body: card(520, 570, 640, 460, t(0, -180, "IN THE SHORT RUN", 36, { w: 900, fill: GREY }) + g(0, 20, 1.1, ballotBox()) + t(0, 190, "a voting machine", 46, { w: 900 })) +
-    card(1400, 570, 640, 460, t(0, -180, "IN THE LONG RUN", 36, { w: 900, fill: GREY }) + g(0, 10, 1, scaleIcon()) + t(0, 190, "a weighing machine", 46, { w: 900 }), { fill: YEL }) };
+  body: A(card(520, 570, 640, 460, t(0, -180, "IN THE SHORT RUN", 36, { w: 900, fill: GREY }) + g(0, 20, 1.1, ballotBox()) + t(0, 190, "a voting machine", 46, { w: 900 })), "short", "pop") +
+    A(card(1400, 570, 640, 460, t(0, -180, "IN THE LONG RUN", 36, { w: 900, fill: GREY }) + g(0, 10, 1, scaleIcon()) + t(0, 190, "a weighing machine", 46, { w: 900 }), { fill: YEL }), "long", "pop") };
 S.S126 = { h: "Day to day, prices follow moods. Over many years, they tend to follow profits.",
-  body: card(520, 570, 640, 440, t(0, -170, "DAY TO DAY: MOODS", 36, { w: 900, fill: RED }) + g(-250, 150, 1, chart(jag(26, 5, 0), { w: 500, h: 240, color: RED, sw: 7 }))) +
-    card(1400, 570, 640, 440, t(0, -170, "MANY YEARS: PROFITS", 36, { w: 900, fill: DGREEN }) + g(-250, 150, 1, chart([[0, 0.1], [0.2, 0.22], [0.35, 0.2], [0.5, 0.42], [0.65, 0.5], [0.8, 0.72], [1, 0.95]], { w: 500, h: 240, color: GREEN, sw: 9 })), { fill: "#e6f4ea" }) };
+  body: A(card(520, 570, 640, 440, t(0, -170, "DAY TO DAY: MOODS", 36, { w: 900, fill: RED })), "day", "pop") + A(g(270, 720, 1, chart(jag(26, 5, 0), { w: 500, h: 240, color: RED, sw: 7 })), "prices", "wipe", { dir: "r", dur: 1.0 }) +
+    A(card(1400, 570, 640, 440, t(0, -170, "MANY YEARS: PROFITS", 36, { w: 900, fill: DGREEN }), { fill: "#e6f4ea" }), "years", "pop") + A(g(1150, 720, 1, chart([[0, 0.1], [0.2, 0.22], [0.35, 0.2], [0.5, 0.42], [0.65, 0.5], [0.8, 0.72], [1, 0.95]], { w: 500, h: 240, color: GREEN, sw: 9 })), "tend", "wipe", { dir: "r", dur: 1.0 }) };
 
 module.exports = { S, jag, steps3 };
