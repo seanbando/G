@@ -52,7 +52,8 @@ function buildSvg(line) {
   const wrapAt = terms.length > 1 ? 34 : 54;   // two cards side by side are narrower
   const top = Math.min(...terms.map((tm) => L.termTop(tm[1], tm[2], wrapAt)), 9999);
   const k = terms.length && sc.fit !== false ? Math.min(0.9, (top - 24 - 236) / 614) : 1;
-  s += `<g class="stage"${k < 1 ? ` transform="translate(${960 * (1 - k)} ${236 * (1 - k)}) scale(${k})"` : ""}>${sc.body || ""}</g>`;
+  // "cam" is the camera: motion can push in on it without disturbing the stage's own fit
+  s += `<g class="cam"><g class="stage"${k < 1 ? ` transform="translate(${960 * (1 - k)} ${236 * (1 - k)}) scale(${k})"` : ""}>${sc.body || ""}</g></g>`;
   terms.forEach((tm, i, arr) => {
     const x = arr.length === 1 ? 960 : i === 0 ? 570 : 1350;
     s += L.termCard(tm[0], tm[1], { full: tm[2] || null, x, wrapAt });

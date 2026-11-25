@@ -61,7 +61,7 @@ function buck(expr = "neutral", opts = {}) {
   const armKey = opts.arms || { neutral: "down", cocky: "hip", shocked: "up", annoyed: "crossed", happy: "up" }[expr] || "down";
   const arms = BUCK_ARMS[armKey];
   const ink = COLORS.ink;
-  let s = `<g filter="url(#wobble)">`;
+  let s = `<g class="char buck" filter="url(#wobble)">`;
   // legs and sneakers
   s += `<path d="M -36 62 L -42 118" stroke="${ink}" stroke-width="${LINE + 1}" stroke-linecap="round" fill="none"/>`;
   s += `<path d="M 36 62 L 42 118" stroke="${ink}" stroke-width="${LINE + 1}" stroke-linecap="round" fill="none"/>`;
@@ -82,7 +82,7 @@ function buck(expr = "neutral", opts = {}) {
     : `<circle cx="${x}" cy="-6" r="12" fill="${COLORS.white}" stroke="${ink}" stroke-width="3"/>` +
       `<circle cx="${x + (f.look || 0)}" cy="-5" r="${f.pupil}" fill="${ink}"/>` +
       (f.lids ? `<path d="M ${x - 12} -10 L ${x + 12} -10" stroke="${ink}" stroke-width="4"/>` : "");
-  s += eye(-24) + eye(24);
+  s += f.closed ? eye(-24) + eye(24) : `<g class="eyes">${eye(-24) + eye(24)}</g>`;  // class "eyes": scenes make them blink
   s += `<path d="${f.browL}" stroke="${ink}" stroke-width="5" stroke-linecap="round" fill="none"/>`;
   s += `<path d="${f.browR}" stroke="${ink}" stroke-width="5" stroke-linecap="round" fill="none"/>`;
   if (f.mouth === "O") s += `<ellipse cx="0" cy="22" rx="9" ry="12" fill="${ink}"/>`;
@@ -118,7 +118,7 @@ const HAMLET_FACES = {
 function hamlet(expr = "grumpy") {
   const f = HAMLET_FACES[expr] || HAMLET_FACES.grumpy;
   const ink = COLORS.ink;
-  let s = `<g filter="url(#wobble)">`;
+  let s = `<g class="char hamlet" filter="url(#wobble)">`;
   // tail and legs
   s += `<path d="M 118 6 q 22 -10 18 -26 q -4 -14 -16 -6 q -8 8 6 14" stroke="${ink}" stroke-width="${LINE - 1}" fill="none" stroke-linecap="round"/>`;
   [[-78, 62], [-36, 74], [36, 74], [78, 62]].forEach(([x, y]) => {
@@ -146,7 +146,7 @@ function hamlet(expr = "grumpy") {
       : f.oneEye
       ? `<circle cx="${x + f.look}" cy="${y + 2}" r="${f.pupil + 1}" fill="${ink}"/>` +
         `<path d="M ${x - 15} ${y - 3} Q ${x} ${y - 9} ${x + 15} ${y - 3}" stroke="${ink}" stroke-width="5" fill="none" stroke-linecap="round"/>`
-      : `<circle cx="${x + (f.look || 0)}" cy="${y}" r="${f.pupil}" fill="${ink}"/>` +
+      : `<circle class="pupil" cx="${x + (f.look || 0)}" cy="${y}" r="${f.pupil}" fill="${ink}"/>` +
         (f.lids ? `<path d="M ${x - 12} ${y - 4} H ${x + 12}" stroke="${ink}" stroke-width="4"/>` : "");
     s += `<circle cx="${x}" cy="${y}" r="19" fill="none" stroke="${ink}" stroke-width="4"/>`;
   });

@@ -26,7 +26,7 @@ S.S088 = { h: "Since May 28, 2024: most U.S. stock trades settle one business da
 S.S089 = { h: "Your Tuesday trade is usually final on Wednesday",
   body: A(g(540, 540, 1.4, calendar("YOU TAP BUY", "TUE", { w: 280 })), "tuesday", "pop") + A(arrow(790, 540, 1130, 540, { color: DGREEN, width: 12, label: "1 business day", ldy: -30, lsize: 36 }), "usually", "wipe", { dir: "r", dur: 0.6 }) +
     A(g(1380, 540, 1.4, calendar("TRADE IS FINAL", "WED", { color: GREEN, w: 280 })), "wednesday", "pop") + A(g(1600, 380, 1, W(`<circle r="48" fill="${GREEN}" stroke="${INK}" stroke-width="6"/>`) + tick(0, 2, 22, 10, "#fff")), "wednesday", "stamp", { delay: 0.35 }) };
-S.S090 = { h: "Behind the scenes, a group called the DTCC finishes the trade",
+S.S090 = { zoom: ["dtcc", 960, 600, 1.07], h: "Behind the scenes, a group called the DTCC finishes the trade",
   body: g(340, 780, 0.8, tower("BUYER'S FIRM", { w: 260, h: 300 })) + g(1580, 780, 0.8, tower("SELLER'S FIRM", { w: 260, h: 300, sign: ORANGE })) + A(dtcc(960, 800, 1.05), "dtcc", "pop") +
     A(arrow(480, 560, 740, 560, { color: GREY, label: "money", ldy: -24 }) + arrow(1180, 560, 1440, 560, { color: GREY }), "clear", "wipe", { dir: "r", dur: 0.7 }) +
     A(arrow(1440, 660, 1180, 660, { color: DGREEN, label: "shares", ldy: 60 }) + arrow(740, 660, 480, 660, { color: DGREEN }), "settle", "wipe", { dir: "l", dur: 0.7 }),
@@ -39,7 +39,7 @@ S.S091 = { h: "The DTCC companies do three jobs",
 S.S092 = { body: A(g(860, 620, 1.6, hamlet("proud")), "start", "fade", { idle: "talk" }) + A(g(1240, 640, 1, W(`<rect x="-60" y="-34" width="120" height="68" rx="30" fill="${GOLD}" stroke="${INK}" stroke-width="6"/><rect x="50" y="-16" width="70" height="32" rx="8" fill="${GOLD}" stroke="${INK}" stroke-width="6"/><circle cx="-14" cy="0" r="14" fill="${INK}"/>`)), "referee", "pop") + A(bubble(1300, 340, "A money referee!", { tail: "left" }), "money", "pop") };
 S.S093 = { h: "Now for the paperwork question from the start", chip: WHOSE,
   body: A(g(960, 580, 1.5, doc("YOUR STOCK", ["Registered name:", "? ? ? ? ?"], { w: 520, size: 40, hl: 1 })), "paperwork", "pop") };
-S.S094 = { h: "Many shares are registered under one name: Cede & Co.", chip: WHOSE,
+S.S094 = { zoom: ["name>", 960, 620, 1.09], h: "Many shares are registered under one name: Cede & Co.", chip: WHOSE,
   body: g(960, 600, 1.4, doc("OFFICIAL RECORD", ["Registered name:", ""], { w: 560, size: 44, hl: 1 })) + `<g data-allow-overlap>${A(g(960, 600, 1.4, doc("OFFICIAL RECORD", ["Registered name:", "CEDE & CO."], { w: 560, size: 44, hl: 1 })), "name>", "fade", { dur: 0.25 })}</g>` +
     A(g(1560, 560, 0.5, phone(appScreen())) + t(1560, 760, "held through", 30, { fill: GREY }) + t(1560, 800, "a brokerage", 30, { fill: GREY }), "brokerages", "pop"),
   term: ["CEDE & CO.", "The name written on the official record for many shares that are held through brokerages. \"Cede\" is said like \"seed\"."] };
@@ -122,7 +122,7 @@ S.S118 = { h: "Say Apple's last trade was $350.00", body: A(g(640, 420, 1, P.pri
 S.S119 = { h: "The cheapest seller wants $350.05, and a buyer pays it",
   body: g(200, 300, 0.8, P.priceBoard({ price: "$350.00" })) + A(g(1180, 680, 0.9, person({ shirt: ORANGE, skin: 2, label: "Cheapest seller" })), "seller", "pop") + A(g(1180, 400, 1.3, priceTag("$350.05", { w: 280, color: YEL })), "wants>", "pop") +
     A(g(1600, 680, 0.9, person({ shirt: BLUE, label: "Buyer" })), "buyer", "pop") + A(arrow(1500, 600, 1300, 600, { color: DGREEN, label: "pays it", ldy: -24 }), "pays", "wipe", { dir: "l", dur: 0.4 }) + A(stamp(1400, 480, "DEAL", { color: GREEN, rot: -8 }), "it", "stamp") };
-S.S120 = { h: "The last-trade price now becomes $350.05",
+S.S120 = { zoom: ["becomes>", 960, 570, 1.09], h: "The last-trade price now becomes $350.05",
   body: g(640, 420, 1, P.priceBoard({ price: "$350.00" })) + `<g data-allow-overlap>${A(g(640, 420, 1, P.priceBoard({ id: "board2", price: "$350.05", change: "+$0.05" })), "becomes>", "fade", { dur: 0.2 })}</g>` };
 const jag = (n, seed, trend = 0.5) => { const pts = []; let v = 0.2, r = seed; const rnd = () => ((r = (r * 9301 + 49297) % 233280) / 233280); for (let i = 0; i <= n; i++) { pts.push([i / n, Math.max(0.05, Math.min(0.95, v))]); v += (rnd() - 0.5 + trend * 0.12) * 0.16; } return pts; };
 S.S121 = { h: "Millions of small deals like that, every day, make a stock chart move",

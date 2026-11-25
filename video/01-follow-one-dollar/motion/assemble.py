@@ -31,9 +31,13 @@ filt += "".join(f"[v{i}]" for i in range(len(SECTIONS))) + f"concat=n={len(SECTI
 out_dir = os.path.join(HERE, "..", "final")
 os.makedirs(out_dir, exist_ok=True)
 out = os.path.join(out_dir, "follow-one-dollar.mp4")
-subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", *inputs, "-i", os.path.join(AUDIO, "narration.mp3"), "-filter_complex", filt,
+# master audio (voice + music + sound effects from mix_audio.py) if it exists, else the voice alone
+master = os.path.join(out_dir, "master-audio.wav")
+sound = master if os.path.exists(master) else os.path.join(AUDIO, "narration.mp3")
+print("audio:", os.path.relpath(sound, ROOT))
+subprocess.run(["ffmpeg", "-nostdin", "-v", "error", "-y", *inputs, "-i", sound, "-filter_complex", filt,
                 "-map", "[v]", "-map", f"{len(SECTIONS)}:a", "-c:v", "libx264", "-preset", "medium", "-crf", "24", "-pix_fmt", "yuv420p",
-                "-c:a", "aac", "-b:a", "160k", "-movflags", "+faststart", "-shortest", out], check=True)
+                "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", "-shortest", out], check=True)
 for (name, first), f, t in zip(SECTIONS, frames, t0):
     print(f"{name:7s} starts {int(t // 60)}:{t % 60:04.1f}  {f / FPS:6.1f} s")
 print("wrote", out)

@@ -38,7 +38,7 @@ S.S044 = { h: "A market maker works the same way",
     A(g(1500, 560, 0.72, quoteBoard("buy price", "sell price", { onBuy: "buy", onSell: "sell" })) + t(1500, 760, "posted regularly", 36, { fill: GREY }), "posting", "pop") };
 S.S045 = { h: "Say it buys at one price and sells at another",
   body: mm(480, 820, 1) + A(g(1240, 560, 1.1, quoteBoard("$350.00", "$350.02", { onBuy: "at>", onSell: "at:2>" })), "start", "slide", { dir: "r" }) };
-S.S046 = { h: "That 2¢ gap is called the spread", example: true,
+S.S046 = { zoom: ["spread", 1300, 570, 1.07], h: "That 2¢ gap is called the spread", example: true,
   body: card(520, 440, 560, 170, t(0, -18, "MARKET MAKER BUYS AT", 30, { w: 900, fill: GREY }) + t(0, 48, "$350.00", 70, { w: 900, fill: DGREEN })) +
     card(520, 700, 560, 170, t(0, -18, "MARKET MAKER SELLS AT", 30, { w: 900, fill: GREY }) + t(0, 48, "$350.02", 70, { w: 900, fill: ORANGE })) +
     A(W(`<path d="M 840 440 h 70 v 260 h -70" fill="none" stroke="${INK}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>`) + arrow(915, 570, 1060, 570, {}), "gap", "wipe", { dir: "r", dur: 0.4 }) +
@@ -145,7 +145,7 @@ const quiz = (answer, on = null, ons = null) => [["A", "All of it", 1], ["B", "H
 // the quiz pause: a bar that drains over the three silent seconds
 S.S072 = { h: "Pick: how much of your dollar does Apple get?",
   body: quiz(false, null, ["all", "half", "none"]) + A(W(`<rect x="560" y="850" width="800" height="26" rx="13" fill="${GREEN}" stroke="${INK}" stroke-width="5"/>`), "end", "drain", { dur: 2.9 }) };
-S.S073 = { h: "Usually none: Apple isn't the one selling you the share", enter: "cut", body: quiz(true, "none") };
+S.S073 = { zoom: ["none", 1400, 560, 1.07], h: "Usually none: Apple isn't the one selling you the share", enter: "cut", body: quiz(true, "none") };
 const fan = (x, y, i, label) => g(x, y, 1, person({ shirt: [ORANGE, BLUE][i], skin: i + 1, hair: i ? "short" : "long", label }));
 S.S074 = { h: "Think of a concert ticket that gets resold between fans",
   body: A(fan(520, 620, 0, "Fan 1"), "start", "pop") + A(g(960, 520, 1.3, ticket("CONCERT", "admit one")), "ticket", "pop") + A(fan(1400, 620, 1, "Fan 2"), "fans", "pop") + A(arrow(700, 400, 1220, 400, { curve: -60 }), "resold", "wipe", { dir: "r", dur: 0.6 }) };

@@ -44,7 +44,7 @@ S.S134 = { h: "That's history, not a promise",
 const gchart = (full, on = null) => g(420, 820, 1, chart(growth.slice(0, 2), { w: 900, h: 460, color: GREEN }) + [0, 10, 20, 30, 40].map((y) => t(y / 40 * 900, 36, y, 28, { w: 800, fill: GREY })).join("") + t(450, 76, "years", 28, { w: 800, fill: GREY }) + g(0, -1 / 48 * 460 - 44, 1, t(10, 0, "$1", 40, { w: 900, anchor: "start" })) +
   (full ? (on ? A(chart(growth, { w: 900, h: 460, color: GREEN, area: true, axes: false }), on, "wipe", { dir: "r", dur: 2.4 }) : chart(growth, { w: 900, h: 460, color: GREEN, area: true, axes: false })) : ""));
 S.S135 = { h: "What a steady 10% a year would do to one dollar", body: A(gchart(false), "start", "fade") + A(g(1520, 520, 1.6, bill(170)), "to>", "pop") + A(t(1520, 660, "10% a year, every year", 36, { w: 900 }), "steady>", "fade") };
-S.S136 = { h: "After 40 years of steady 10% growth, $1 becomes about $45", enter: "cut",
+S.S136 = { zoom: ["about>", 1150, 450, 1.07], h: "After 40 years of steady 10% growth, $1 becomes about $45", enter: "cut",
   body: gchart(true, "after") + A(card(1000, 400, 400, 200, t(0, -30, "after 40 years", 34, { w: 800, fill: GREY }) + t(0, 50, "about $45", 64, { w: 900, fill: DGREEN }), { fill: YEL }) + arrow(1210, 390, 1300, 392, { color: DGREEN }), "about>", "pop") };
 S.S137 = { h: "Real markets don't move in a straight line, and the drops can be brutal",
   body: A(card(520, 570, 640, 440, t(0, -170, "STEADY (THE EXAMPLE)", 34, { w: 900, fill: GREY }) + g(-250, 150, 1, chart([[0, 0.1], [1, 0.9]], { w: 500, h: 240, color: GREY }))), "straight", "pop") +
@@ -83,7 +83,7 @@ S.S148 = { h: "If a member firm fails with customer assets missing, SIPC can hel
     A(g(1560, 600, 0.9, person({ shirt: BLUE, label: "Customer" })), "customer", "pop") + A(g(1040, 600, 1.2, shield("SIPC")), "sipc", "stamp") +
     A(arrow(1200, 560, 1420, 560, { color: DGREEN, width: 12 }) + g(1300, 470, 0.7, slice()) + g(1310, 660, 0.9, bill(120)), "recover", "wipe", { dir: "r", dur: 0.5 }),
   term: ["CUSTOMER ASSETS", "The shares and cash a brokerage holds for you."] };
-S.S149 = { h: "Protection goes up to $500,000 per customer",
+S.S149 = { zoom: ["to>", 1200, 520, 1.06], h: "Protection goes up to $500,000 per customer",
   body: A(g(420, 600, 1.2, shield("SIPC")), "start", "pop") + A(W(`<rect x="700" y="420" width="1000" height="130" rx="14" fill="#cfead7" stroke="${INK}" stroke-width="6"/>`), "to>", "wipe", { dir: "r", dur: 0.8 }) + A(t(1200, 640, "up to $500,000 per customer, in total", 46, { w: 900 }), "to>", "fade", { delay: 0.2 }) +
     A(W(`<rect x="700" y="420" width="500" height="130" rx="14" fill="${GREEN}" stroke="${INK}" stroke-width="6"/>`) + t(950, 500, "up to $250,000 in cash", 36, { w: 900, fill: "#fff", max: 460 }), "including>", "wipe", { dir: "r", dur: 0.6 }) + A(t(1200, 710, "(the cash limit is part of it)", 34, { fill: GREY }), "cash", "fade") };
 S.S150 = { h: "That protection is for a failed brokerage, not for a stock that falls",
@@ -96,7 +96,7 @@ S.S153 = { h: "Promise three, done", body: promises(3, [1, 2, 3], [1, 2, 3], nul
 // ---------- ENDING ----------
 S.S154 = { h: "The whole trip: from your pocket to a retired teacher's new roof", mapDone: 5, stop: 0, map: false,
   body: map(["done", "done", "done", "done", "done"], { x: 440, y: 380, s: 0.66 }) + A(g(310, 520, 0.5, pocket()) + g(310, 440, 0.6, bill(170)) + t(310, 660, "Your pocket", 32, { w: 900 }), "pocket", "pop") + A(g(1620, 640, 0.62, house({ roof: "new" })) + t(1620, 690, "New roof", 32, { w: 900 }), "roof", "pop") };
-S.S155 = { h: "Apple never got your dollar, but you now own a tiny piece of Apple",
+S.S155 = { zoom: ["tiny", 1400, 600, 1.07], h: "Apple never got your dollar, but you now own a tiny piece of Apple",
   body: A(g(480, 800, 1.05, tower("APPLE", { fill: "#e6e9ee", sign: "#6b7280", w: 260, h: 360 })) + g(480, 570, 0.6, appleIcon()), "apple", "pop") + A(card(480, 330, 420, 110, t(0, 14, "got $0 from your dollar", 32, { w: 900, fill: RED }), {}), "never", "pop") +
     A(g(1240, 640, 1.2, person({ shirt: BLUE, label: "You" })), "you", "pop") + A(g(1460, 520, 2.2, crumb()) + t(1540, 660, "a tiny piece", 40, { w: 900, fill: DGREEN }) + t(1540, 714, "of Apple", 40, { w: 900, fill: DGREEN }), "tiny", "pop") };
 const me = (x, y, s = 1.1) => g(x, y, s, person({ shirt: GREEN, skin: 1, label: null }));

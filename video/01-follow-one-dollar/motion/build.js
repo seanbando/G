@@ -42,7 +42,7 @@ for (let i = i0; i <= i1; i++) {
   const prev = i > i0 ? C.SCENES[script[i - 1].id] : null;
   scenes.push({ id: line.id, start, dur: +(end - start).toFixed(3), lineStart: +(tm.start - t0).toFixed(3), lineEnd: +(tm.end - t0).toFixed(3),
     words: tm.words.map((w) => ({ w: w.word, t: +(w.start - t0).toFixed(3), e: +(w.end - t0).toFixed(3) })), enter: sc.enter || "fade",
-    sameHeadline: !!(prev && prev.h && prev.h === sc.h), anims: sc.anims || [] });
+    sameHeadline: !!(prev && prev.h && prev.h === sc.h), anims: sc.anims || [], zoom: sc.zoom || null });
   const svg = C.buildSvg(line).replace(/^<svg[^>]*>/, `<svg viewBox="0 0 1920 1080">`).replace(/<rect width="1920" height="1080"[^>]*\/>/, "");
   clips += `      <div id="sc-${line.id}" class="clip layer scene" data-start="${start}" data-duration="${(end - start).toFixed(3)}" data-track-index="${(i - i0) % 2}">\n        ${svg}\n      </div>\n`;
 }
@@ -107,6 +107,20 @@ const RUNTIME = function (SCENES, FIT) {
     if (h && !sc.sameHeadline) tl.fromTo(h, { opacity: 0, y: -24 }, { opacity: 1, y: 0, duration: 0.35, ease: "power3.out" }, sc.start + 0.02);
     svg.querySelectorAll(".anim").forEach((el) => apply(sc, svg, el, el.dataset));
     sc.anims.forEach((a) => svg.querySelectorAll(a.sel).forEach((el) => apply(sc, svg, el, a)));
+    // camera: a slow push-in on a key reveal. zoom = [word, x, y, scale]
+    if (sc.zoom) {
+      const [on, zx, zy, zs] = sc.zoom, at = when(sc, on);
+      tl.to(svg.querySelector(".cam"), { scale: zs || 1.07, svgOrigin: `${zx} ${zy}`, duration: Math.max(1.2, sc.start + sc.dur - at), ease: "sine.inOut" }, at);
+    }
+    // mascot life: a slow sway the whole time, and blinks every few seconds
+    svg.querySelectorAll(".char").forEach((el, k) => {
+      tl.fromTo(el, { rotation: -1.1, transformOrigin: "50% 100%" }, { rotation: 1.1, duration: 1.7, yoyo: true, repeat: Math.max(1, Math.ceil(sc.dur / 1.7)), ease: "sine.inOut" }, sc.start);
+      const eyes = el.querySelectorAll(".eyes, .pupil");
+      if (!eyes.length) return;
+      const n = parseInt(sc.id.slice(1), 10) + k * 3;
+      for (let t = sc.start + 0.9 + (n % 5) * 0.22; t < sc.start + sc.dur - 0.3; t += 2.3 + ((n + Math.round(t)) % 4) * 0.45)
+        tl.to(eyes, { scaleY: 0.1, transformOrigin: "50% 50%", duration: 0.07, yoyo: true, repeat: 1, ease: "sine.inOut" }, t);
+    });
     svg.querySelectorAll(".idle").forEach((el) => {
       if (el.dataset.idle === "bob") tl.to(el, { y: -10, duration: 0.7, yoyo: true, repeat: Math.max(1, Math.floor(sc.dur / 0.7)), ease: "sine.inOut" }, sc.start);
       else if (el.dataset.idle === "talk") {

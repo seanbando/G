@@ -33,7 +33,7 @@ const S = {};
 
 // ---------- HOOK ----------
 // A(...) tags say which spoken word each part appears on (see lib.js); stills ignore them.
-S.S001 = { h: "You tap BUY on $1 of Apple stock…",
+S.S001 = { zoom: ["none", 1300, 470, 1.08], h: "You tap BUY on $1 of Apple stock…",
   body: A(g(520, 590, 0.82, phone(appScreen())), "start", "slide", { dir: "u" }) +
     A(W(`<circle cx="520" cy="712" r="74" fill="none" stroke="${GREEN}" stroke-width="7" stroke-dasharray="14 12"/>`), "buy", "pop") +
     A(g(1400, 760, 1, tower("APPLE", { fill: "#e6e9ee", sign: "#6b7280" })) + g(1400, 580, 0.5, appleIcon()), "apple", "pop") +
@@ -139,7 +139,7 @@ const formula = (a, b, c, cFill = YEL, ons = null) => {
 S.S028 = { h: "Price × number of shares = market cap",
   body: formula(["Price of", "1 share"], ["Number of", "shares"], ["MARKET CAP"], YEL, ["price", "times", "number", "called", "market"]),
   term: ["MARKET CAP", "What the whole company is worth. Short for market capitalization."] };
-S.S029 = { h: "Apple is cut into about 14.5 billion shares",
+S.S029 = { zoom: ["trillions", 1340, 640, 1.07], h: "Apple is cut into about 14.5 billion shares",
   body: A(g(560, 570, 0.8, P.pizza({ id: "apl", slices: 120 })) + g(560, 570, 1.5, appleIcon(1, "#f6f3ea")), "apple", "pop") +
     A(card(1340, 400, 640, 160, t(0, -18, "about 14.5 billion shares", 46, { w: 900 }) + t(0, 44, "each worth a few hundred dollars", 32, { fill: GREY })), "about>", "pop") +
     A(t(1340, 570, "=", 90, { w: 900 }), "value", "pop") + A(card(1340, 700, 640, 160, t(0, -14, "worth TRILLIONS", 56, { w: 900, fill: DGREEN }) + t(0, 48, "of dollars", 34, { fill: GREY }), { fill: YEL, sw: 9 }), "trillions", "pop") };
