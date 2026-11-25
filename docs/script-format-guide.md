@@ -106,6 +106,63 @@ S008 NARRATOR (PROMISE 3): And you'll get three habits that matter more than pic
 
 ---
 
+## Writing style reference (spoken words only)
+
+From the creator's approved reference script ("What TV Families Understood About Money That We Forgot", a different niche). Copy **how the lines are written**, not the topic, the visuals or the structure. Examples are quoted from that script.
+
+### Sentence shape
+
+- **One full sentence per line, usually 9 to 20 words:** one idea plus its consequence, joined with "and", "so" or "because". *"Everything cost less back then, but people also earned a lot less."*
+- **No questions, fragments or ellipses.** The only guess beat is an instruction: *"Take a guess at how many stacks the median home needs today, before the number shows up."*
+- **Plain words, then the term:** *"The house right in the middle of that row is called the median home."*
+- **Define by saying what it isn't:** *"This is not a salary, a mortgage payment, or the time it takes to pay off a house."*
+
+### Numbers
+
+- **One statistic per line, with its year inside the sentence:** *"In 1950, the median home in America was worth seven thousand, three hundred and fifty-four dollars."*
+- **Do the math out loud, in picture words:** *"Two stacks and a thin slice of a third balance the house, so that's two point two years."*
+- **Short, honest caveats right after a number:** *"That's an average price, not what every family with kids pays."* / *"Census surveys have changed over the decades, so treat these as close estimates."*
+- **Attribute plainly** (attribution isn't hedging): *"Critic Ken Tucker described the Hecks as a family struggling to stay afloat in rough economic water."*
+
+### The hook
+
+- **Open on a strange picture stated as fact:** *"Turn off the laugh track on any family sitcom, and what's left is a receipt."*
+- **One line of premise:** *"So this video puts eight TV families on the same scale, from the 1950s to right now."*
+- **Promises:** *"By the end, you'll see…"* / *"You'll find out who really…, and here's a hint, it wasn't a paycheck."* / *"And you'll leave with three money habits…"*
+- **A curiosity bridge into the body:** *"Once you see this scale, you won't watch a sitcom kitchen the same way again."*
+
+### Holding attention
+
+- **Signposts that say why:** *"First, here's how the scale works, because every family in this video gets weighed on it."*
+- **Re-hooks that plant a number:** *"For the country as a whole, the scale read two point two in 1950, so hold on to that number."* / *"It comes back later in a way almost nobody expects."*
+- **Twists as a pair of lines,** good news then the catch: *"Later that season, in episode twenty, Red finally gets his full-time hours back."* / *"In that very same episode, his son learns the plant will be closing for good."*
+- **A recurring summary line** for the video's device, worded the same way each time: *"The Cleaver receipt reads Ward at the office, June at home, two boys and a detached house."*
+
+### Lessons, checkpoints and promises
+
+- **Lesson pattern:** announce it (*"That's lesson one, and the whole video builds on it."*), give the picture (*"Think of a family's money as a house resting on two pillars…"*), then one principle (*"A family is only as steady as the jobs behind it…"*).
+- **Checkpoint:** *"Quick check, because look at what you already know."* then one line per lesson: *"Lesson two says a family is only as steady as its jobs."*
+- **Closing a promise out loud:** *"So that's promise two, because some of these houses were paid for partly by a parent."*
+- **Fair framing near the end:** *"None of this means the old TV families were smarter than families today."*
+
+### Mascot gags
+
+- **One dry sentence that reacts; never explains.** Usually two clauses: *"Nobody watching thought that was strange, and I asked around."* / *"You're one dollar, so please sit down."*
+- **Running callbacks get shorter each time:** *"It also wasn't me."* then *"Still not me."* (the only very short lines allowed).
+- **Hamlet is grumpy about spending and pays off on saving:** *"Room is where savings go, and I'd like that on the record."* / *"Finally, a habit with my name on it."*
+
+### Ending
+
+- **Closing line that names what the video revealed:** *"Some of the money that kept these TV families in their homes never showed up on a paycheck at all."*
+- **Specific next video:** *"Next time, we'll look at exactly how Homer Simpson got his house, and what his paycheck had to do with it."*
+- **Easy comment prompt with two options:** *"Tell me in the comments whether your family runs on one paycheck or two, and who helped with your first home."*
+- **Soft like line:** *"If this made the money side of TV make sense, a like really helps the channel, and there's more right here."*
+
+### Where this reference differs from the written rules
+
+- **It opens lines with "So", "Now" and "First"** ("So instead of counting dollars, we'll count paychecks."), which Part 3 tells you to replace. Follow the reference: these work as natural spoken signposts when used sparingly.
+- **Many lines run past 14 words** (up to about 25). Treat 8–14 as the usual length, not a hard cap, when a number or date needs the room.
+
 ## How this fits with the script system
 
 `docs/script-system.md` (research → script → humanization) still governs **how** a script is made: research first, facts only from the research, then the humanization pass. This guide governs **what the finished script looks like** for money explainers. Clashes still to decide:
