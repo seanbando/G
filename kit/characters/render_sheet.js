@@ -6,12 +6,12 @@ const { buck, hamlet, WOBBLE_FILTER } = require("./characters.js");
   const out = process.argv[2] || "sheet.png";
   const scale = parseFloat(process.argv[3] || "1");
   const buckPoses = [["neutral", "Neutral"], ["cocky", "Cocky"], ["shocked", "Shocked"], ["annoyed", "Annoyed"], ["happy", "Happy"], ["neutral", "Clipboard", { arms: "clipboard" }]];
-  const hamPoses = [["grumpy", "Grumpy"], ["sideeye", "Side-eye"], ["shocked", "Shocked"], ["proud", "Proud (rare)"], ["hugging", "Hugging his coin"]];
+  const hamPoses = [["grumpy", "Grumpy"], ["sideeye", "Side-eye"], ["shocked", "Shocked"], ["proud", "Proud (rare)"], ["hugging", "Hugging his coin"], ["sleeping", "Sleeping, one eye open"]];
   const cell = (svg, label, x, y) =>
     `<g transform="translate(${x} ${y})">${svg}</g><text x="${x}" y="${y + 175}" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="800" font-size="30" fill="#1f2328">${label}</text>`;
   let body = "";
   buckPoses.forEach(([e, l, o], i) => (body += cell(`<g transform="scale(0.85)">${buck(e, o)}</g>`, l, 175 + i * 300, 300)));
-  hamPoses.forEach(([e, l], i) => (body += cell(hamlet(e), l, 220 + i * 370, 770)));
+  hamPoses.forEach(([e, l], i) => (body += cell(`<g transform="scale(0.85)">${hamlet(e)}</g>`, l, 185 + i * 310, 770)));
   const html = `<!doctype html><html><head><style>body{margin:0;background:#f6f3ea}</style></head><body>
   <svg xmlns="http://www.w3.org/2000/svg" width="1920" height="1080" viewBox="0 0 1920 1080">
     <defs>${WOBBLE_FILTER}</defs>

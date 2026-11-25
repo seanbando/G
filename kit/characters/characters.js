@@ -110,6 +110,9 @@ const HAMLET_FACES = {
              mouth: "M -18 46 Q 0 60 18 46" },
   hugging: { browL: "M -62 -46 L -22 -38", browR: "M 22 -38 L 62 -46", pupil: 4, look: -3,
              mouth: "M -14 52 Q 0 46 14 52" },
+  // asleep, but one eye stays open on his money
+  sleeping:{ browL: "M -62 -40 Q -42 -34 -22 -38", browR: "M 22 -48 Q 42 -56 62 -46", pupil: 4, look: 4,
+             mouth: "M -12 50 Q 0 56 12 50", oneEye: true },
 };
 
 function hamlet(expr = "grumpy") {
@@ -135,8 +138,14 @@ function hamlet(expr = "grumpy") {
   const tilt = f.tilt ? 6 : 0;
   eyeX.forEach((x, i) => {
     const y = -26 + (i ? tilt : -tilt);
-    s += f.closed
-      ? `<path d="M ${x - 9} ${y + 2} Q ${x} ${y - 8} ${x + 9} ${y + 2}" stroke="${ink}" stroke-width="4" fill="none" stroke-linecap="round"/>`
+    const shut = f.closed || (f.oneEye && i === 0);
+    s += shut
+      ? (f.oneEye
+          ? `<path d="M ${x - 10} ${y} Q ${x} ${y + 7} ${x + 10} ${y}" stroke="${ink}" stroke-width="4" fill="none" stroke-linecap="round"/>`
+          : `<path d="M ${x - 9} ${y + 2} Q ${x} ${y - 8} ${x + 9} ${y + 2}" stroke="${ink}" stroke-width="4" fill="none" stroke-linecap="round"/>`)
+      : f.oneEye
+      ? `<circle cx="${x + f.look}" cy="${y + 2}" r="${f.pupil + 1}" fill="${ink}"/>` +
+        `<path d="M ${x - 15} ${y - 3} Q ${x} ${y - 9} ${x + 15} ${y - 3}" stroke="${ink}" stroke-width="5" fill="none" stroke-linecap="round"/>`
       : `<circle cx="${x + (f.look || 0)}" cy="${y}" r="${f.pupil}" fill="${ink}"/>` +
         (f.lids ? `<path d="M ${x - 12} ${y - 4} H ${x + 12}" stroke="${ink}" stroke-width="4"/>` : "");
     s += `<circle cx="${x}" cy="${y}" r="19" fill="none" stroke="${ink}" stroke-width="4"/>`;
@@ -168,6 +177,15 @@ function hamlet(expr = "grumpy") {
          `<path d="M -112 -6 Q -150 -40 -150 -80" stroke="${COLORS.pig}" stroke-width="13" stroke-linecap="round" fill="none"/>` +
          `<path d="M 112 -6 Q 150 -40 150 -80" stroke="${ink}" stroke-width="22" stroke-linecap="round" fill="none"/>` +
          `<path d="M 112 -6 Q 150 -40 150 -80" stroke="${COLORS.pig}" stroke-width="13" stroke-linecap="round" fill="none"/>`;
+  }
+  if (expr === "sleeping") {
+    s += `<path d="M -100 44 Q -24 86 44 76" stroke="${ink}" stroke-width="22" stroke-linecap="round" fill="none"/>` +
+         `<path d="M -100 44 Q -24 86 44 76" stroke="${COLORS.pig}" stroke-width="13" stroke-linecap="round" fill="none"/>` +
+         `<path d="M 100 44 Q 24 90 -44 80" stroke="${ink}" stroke-width="22" stroke-linecap="round" fill="none"/>` +
+         `<path d="M 100 44 Q 24 90 -44 80" stroke="${COLORS.pig}" stroke-width="13" stroke-linecap="round" fill="none"/>`;
+    [[-112, -112, 26], [-142, -150, 34], [-178, -196, 42]].forEach(([x, y, size], k) => {
+      s += `<text id="z${k + 1}" x="${x}" y="${y}" text-anchor="middle" font-family="Nunito, sans-serif" font-weight="900" font-size="${size}" fill="${COLORS.brow}">z</text>`;
+    });
   }
   return s + `</g>`;
 }
