@@ -137,7 +137,7 @@ S.S071 = { h: "Next stop: where your dollar actually changes hands", map: false,
 // the quiz: three options. answer = show C as right; on = word the tick lands on
 const quiz = (answer, on = null, ons = null) => [["A", "All of it", 1], ["B", "Half", 0.5], ["C", "None", 0]].map(([k, label, amt], i) => {
   const right = answer && k === "C";
-  const inner = t(0, -150, k, 60, { w: 900, fill: GREY }) + (amt ? `<g><clipPath id="q${i}"><rect x="-140" y="-70" width="${280 * amt}" height="140"/></clipPath><g clip-path="url(#q${i})">${g(0, -30, 1.5, bill(170))}</g></g>` : W(`<rect x="-128" y="-96" width="256" height="132" rx="16" fill="none" stroke="${GREY}" stroke-width="6" stroke-dasharray="16 12"/>`) + t(0, -10, "$0", 60, { w: 900, fill: GREY })) + t(0, 150, label, 50, { w: 900 });
+  const inner = t(0, -150, k, 60, { w: 900, fill: GREY }) + (amt ? `<g><clipPath id="q${i}"><rect x="-140" y="-112" width="${280 * amt}" height="170"/></clipPath><g clip-path="url(#q${i})">${g(0, -30, 1.5, bill(170))}</g></g>` : W(`<rect x="-128" y="-96" width="256" height="132" rx="16" fill="none" stroke="${GREY}" stroke-width="6" stroke-dasharray="16 12"/>`) + t(0, -10, "$0", 60, { w: 900, fill: GREY })) + t(0, 150, label, 50, { w: 900 });
   const mark = right ? g(170, -170, 1, W(`<circle r="44" fill="${GREEN}" stroke="${INK}" stroke-width="6"/>`) + tick(0, 2, 20, 9, "#fff")) : "";
   const c = card(400 + i * 560, 560, 480, 460, inner + (mark && on ? A(mark, on, "stamp") : mark), { fill: right ? "#cfead7" : "#fff", sw: right ? 10 : 6 });
   return answer && !right ? dim(c, 0.35) : ons ? A(A(c, "start", "pop", { delay: 0.1 + i * 0.12 }), ons[i], "pulse") : c;
