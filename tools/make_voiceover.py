@@ -21,6 +21,8 @@ CAST = {
     "THE CLEARINGHOUSE": ("The D-T-C-C, personified. Steady, wise, a bit strict, like a referee.", "Makes the trade official (stop five)"),
     "MAYA": ("A young investor. Bright, a little proud of her savings.", "Buys ten shares"),
     "JORDAN": ("A young buyer. Relaxed and upbeat.", "Buys Maya's shares for more"),
+    "BUCK": ("Cocky dollar-bill mascot. High energy, one-sentence gags only; never teaches.", "Comic relief"),
+    "HAMLET": ("Grumpy piggy-bank mascot. Old and cranky; his payoff lands on the saving or investing habit.", "Comic relief"),
 }
 DRAW = {
     "YOU": "a stick-figure viewer holding a phone",
@@ -31,6 +33,8 @@ DRAW = {
     "THE CLEARINGHOUSE": "a referee standing between two buildings",
     "MAYA": "a young woman holding ten share certificates",
     "JORDAN": "a young buyer holding cash",
+    "BUCK": "a cocky dollar bill with a clipboard",
+    "HAMLET": "a grumpy piggy bank",
 }
 
 
@@ -80,17 +84,18 @@ ASSETS = [
 
 
 def build(title, lines):
+    used = [v for v in CAST if any(l[1] == v for l in lines)]
     first_you = next(l[0] for l in lines if l[1] == "YOU")
     total = sum(words(l[2]) for l in lines)
     out = [
         f"# Voice-Over Script: {title}\n",
         "Voice-only recording sheet. Every spoken line is numbered (VO-01, VO-02 …) and becomes one audio file with the same number, so the files join back together in order. Golpo animates the finished narration, so there are no drawing notes here; those live in the main script and the Golpo brief.\n",
         "**All numbers, dollar amounts, dates, times and abbreviations are written out in words**, so read them exactly as written.\n",
-        f"## Cast: {len(CAST)} voices\n",
+        f"## Cast: {len(used)} voices\n",
         "| # | Voice | Lines | Words | Character direction | Role in the story |",
         "|---|---|---|---|---|---|",
     ]
-    for i, (v, (direction, role)) in enumerate(CAST.items(), 1):
+    for i, (v, (direction, role)) in enumerate(((v, CAST[v]) for v in used), 1):
         ls = [l for l in lines if l[1] == v]
         out.append(f"| {i} | **{v}** | {len(ls)} | {sum(words(l[2]) for l in ls)} | {direction} | {role} |")
     out += [
@@ -117,7 +122,7 @@ def build(title, lines):
                 out.append(f"> {cue}\n")
         out.append(f"**{id_} · {v}** · ~{secs(t)} s  \n{t}\n")
     out += ["---", "", "## Part 2: Lines by voice (for recording sessions)", ""]
-    for v in CAST:
+    for v in used:
         ls = [l for l in lines if l[1] == v]
         out.append(f"### {v} ({len(ls)} lines)\n")
         out += [f"- **{id_}:** {t}" for id_, _, t, _ in ls]

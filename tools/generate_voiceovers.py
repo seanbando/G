@@ -31,6 +31,9 @@ VOICES = {
     "THE CLEARINGHOUSE": "pqHfZKP75CvOlQylNhV4",  # Bill - Wise, Mature, Balanced
     "MAYA": "cgSgspJ2msm6clMCkdW9",               # Jessica - Playful, Bright, Warm
     "JORDAN": "bIHbv24MWmeRgasZH58o",             # Will - Relaxed Optimist
+    # Mascots from docs/script-format-guide.md:
+    "BUCK": "fIGaHjfrR8KmMy0vGEVJ",               # Larry - High-Energy Social Media Voice
+    "HAMLET": "MKlLqCItoCkvdhrxgtLv",             # Grampa Werthers - Old & Cranky
 }
 MODEL = "eleven_v4"  # narrator style D, chosen by the creator
 FORMAT = "mp3_44100_128"
