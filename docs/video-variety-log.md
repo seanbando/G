@@ -6,7 +6,7 @@ YouTube's monetization rules penalize mass-produced or repetitive content: video
 
 | # | Video | Length | Hook type | Main device | Structure | Mascot/character use | Ending | Value only this video gives |
 |---|---|---|---|---|---|---|---|---|
-| 1 | Follow $1 From Your Pocket to Wall Street | Long, ~12 min | Surprising fact ("Apple doesn't get your money") + two open loops | Road map with five stops | Journey through stops, then lessons | YOU, THE APP, THE MARKET MAKER, THE EXCHANGE, THE SELLER, THE CLEARINGHOUSE, MAYA, JORDAN explain and react | Recap of the trip, creator's first-stock story, two-part comment question | Where a stock order actually goes, step by step, including Cede & Co. |
+| 1 | Follow $1 From Your Pocket to Wall Street (v2 rewrite) | Long, ~13 min | Surprising fact ("Apple usually gets none of it") + three promises | Road map with five stops, pizza EXAMPLE card | Journey through five stops with two checkpoints, then how shares make money, the basket, three checks | Buck is the dollar on the trip, Hamlet the piggy bank left behind; both only joke | Callback, creator's first-stock story, next video (candlestick charts), comment prompt, like line | Where a stock order actually goes, step by step, including Cede & Co. |
 | 2 | How Many Days Until $1 Owns the World | Short, ~60 s | Premise statement + guess instruction | Doubling ladder | Escalation countdown with a reality-check twist | Narrator only | Answer reveal + comment your guess | The 49-day answer and the 350-year real-world comparison |
 
 ## Ways to vary (pick a different mix each time)
