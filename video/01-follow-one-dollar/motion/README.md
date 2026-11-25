@@ -5,7 +5,7 @@ Animated scenes, built from the stills and timed to the real voiceover.
 - `build.js` turns a range of script lines into a HyperFrames project: `node video/01-follow-one-dollar/motion/build.js hook S001 S011`
 - `hook/` the hook (S001–S011): `index.html` (generated, don't edit by hand), `assets/`, and `hook.mp4` (the render)
 
-How timing works: each script line is one clip that starts when the narrator starts that line, and each tagged part appears on the word it belongs to (`audio/follow-one-dollar-v4/timings.json`). So when the voice speeds up the pictures speed up, and when it pauses they wait. If the voiceover is re-recorded, rebuild and everything re-times itself.
+How timing works: each script line is one clip that starts when the narrator starts that line, and each tagged part appears on the word it belongs to (`audio/follow-one-dollar-v5/timings.json`). So when the voice speeds up the pictures speed up, and when it pauses they wait. If the voiceover is re-recorded, rebuild and everything re-times itself.
 
 How to change motion: in `../stills/scenes-*.js`, parts are wrapped in `A(part, word, effect)`. Effects: `pop`, `fade`, `slide`, `wipe` (draws on like a pen), `stamp`, `move`; `idle: "talk"` makes a mascot hop as it speaks. Stills ignore these tags, so the still and the animation always match.
 

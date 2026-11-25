@@ -265,7 +265,7 @@ def main():
               open(os.path.join(args.out, "timings.json"), "w"), indent=1)
     est = [r["id"] for r in timeline if r.get("estimated")]
     low = [r["id"] for r in timeline if r["total"] and r["matched"] / r["total"] < 0.6 and not r.get("estimated")]
-    print(f"{out_mp3}: {duration(out_mp3) / 60:.0f}m {duration(out_mp3) % 60:.0f}s; timings for {len(timeline)} lines")
+    print(f"{out_mp3}: {int(duration(out_mp3) // 60)}m {duration(out_mp3) % 60:.0f}s; timings for {len(timeline)} lines")
     if est:
         print("lines Whisper didn't hear (timing estimated from neighbours):", ", ".join(est))
     if low:

@@ -1,6 +1,6 @@
 # Stills: Follow $1 From Your Pocket to Wall Street
 
-One still per script line (S001–S164), 1920 × 1080. These are the end-state pictures for each line; motion is added when the scenes are built, timed from `audio/follow-one-dollar-v4/timings.json`.
+One still per script line (S001–S164), 1920 × 1080. These are the end-state pictures for each line; motion is added when the scenes are built, timed from `audio/follow-one-dollar-v5/timings.json`.
 
 - `png/S001.png …` the stills
 - `sheets/sheet-01.png …` contact sheets (12 stills each, with the spoken line under each one) for review
