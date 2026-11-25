@@ -121,62 +121,69 @@ S.S066 = { h: "Fewer traders can mean bigger jumps and a wider gap",
 
 // ---------- CHECKPOINT 1 ----------
 S.S067 = { h: "Quick check: look how far your dollar has come", mapDone: 3, stop: 0, map: false,
-  body: map(["done", "done", "done"], { at: 3, who: buck("happy"), y: 400 }) };
+  body: map(["done", "done", "done"], { at: 3, who: buck("happy"), y: 400, whoOn: "start" }) };
 const recap = (on) => [
   [g(0, -60, 0.28, phone(appScreen())), "STOP 1 · YOUR APP", ["Your dollar became", "an order"]],
   [g(0, 50, 0.42, booth("MARKET MAKER", { awning: GREEN })), "STOP 2 · MARKET MAKER", ["May sell to you from", "its own shelf"]],
   [g(0, 50, 0.38, bank("EXCHANGE", { w: 380 })), "STOP 3 · EXCHANGE", ["Matches buyers", "with sellers"]],
-].map(([icon, title, ls], i) => { const c = card(400 + i * 560, 540, 500, 480, t(0, -190, title, 30, { w: 900, fill: DGREEN, max: 440 }) + g(0, -40, 1, icon) + t(0, 150, ls[0], 38, { w: 900 }) + t(0, 198, ls[1], 38, { w: 900 }), { fill: i === on ? YEL : "#fff", sw: i === on ? 9 : 6 }); return i === on ? c : dim(c, i < on ? 0.7 : 0.3); }).join("");
+].map(([icon, title, ls], i) => { const c = card(400 + i * 560, 540, 500, 480, t(0, -190, title, 30, { w: 900, fill: DGREEN, max: 440 }) + g(0, -40, 1, icon) + t(0, 150, ls[0], 38, { w: 900 }) + t(0, 204, ls[1], 38, { w: 900 }), { fill: i === on ? YEL : "#fff", sw: i === on ? 9 : 6 }); return i === on ? A(c, "start", "pulse") : dim(c, i < on ? 0.7 : 0.3); }).join("");
 S.S068 = { h: "Quick check", mapDone: 3, stop: 0, body: recap(0) };
-S.S069 = { h: "Quick check", mapDone: 3, stop: 0, body: recap(1) };
-S.S070 = { h: "Quick check", mapDone: 3, stop: 0, body: recap(2) };
-S.S071 = { h: "Next stop: where your dollar actually changes hands", map: false,
-  body: map(["done", "done", "done", "active"], { y: 400, extra: `<circle cx="1157" cy="262" r="66" fill="none" stroke="${GREEN}" stroke-width="7" stroke-dasharray="14 12"/>` }) };
+S.S069 = { h: "Quick check", mapDone: 3, stop: 0, enter: "cut", body: recap(1) };
+S.S070 = { h: "Quick check", mapDone: 3, stop: 0, enter: "cut", body: recap(2) };
+S.S071 = { h: "Next stop: where your dollar actually changes hands", map: false, anims: [{ sel: "#map-stop4", on: "next", fx: "pulse" }],
+  body: map(["done", "done", "done", "active"], { y: 400 }) + A(g(200, 400, 0.95, `<circle cx="1157" cy="262" r="66" fill="none" stroke="${GREEN}" stroke-width="7" stroke-dasharray="14 12"/>`), "next", "pop") };
 
 // ---------- STOP 4: THE SELLER ----------
-const quiz = (answer) => [["A", "All of it", 1], ["B", "Half", 0.5], ["C", "None", 0]].map(([k, label, amt], i) => {
+// the quiz: three options. answer = show C as right; on = word the tick lands on
+const quiz = (answer, on = null, ons = null) => [["A", "All of it", 1], ["B", "Half", 0.5], ["C", "None", 0]].map(([k, label, amt], i) => {
   const right = answer && k === "C";
   const inner = t(0, -150, k, 60, { w: 900, fill: GREY }) + (amt ? `<g><clipPath id="q${i}"><rect x="-140" y="-70" width="${280 * amt}" height="140"/></clipPath><g clip-path="url(#q${i})">${g(0, -30, 1.5, bill(170))}</g></g>` : W(`<rect x="-128" y="-96" width="256" height="132" rx="16" fill="none" stroke="${GREY}" stroke-width="6" stroke-dasharray="16 12"/>`) + t(0, -10, "$0", 60, { w: 900, fill: GREY })) + t(0, 150, label, 50, { w: 900 });
-  const c = card(400 + i * 560, 560, 480, 460, inner + (right ? g(170, -170, 1, W(`<circle r="44" fill="${GREEN}" stroke="${INK}" stroke-width="6"/>`) + tick(0, 2, 20, 9, "#fff")) : ""), { fill: right ? "#cfead7" : "#fff", sw: right ? 10 : 6 });
-  return answer && !right ? dim(c, 0.35) : c;
+  const mark = right ? g(170, -170, 1, W(`<circle r="44" fill="${GREEN}" stroke="${INK}" stroke-width="6"/>`) + tick(0, 2, 20, 9, "#fff")) : "";
+  const c = card(400 + i * 560, 560, 480, 460, inner + (mark && on ? A(mark, on, "stamp") : mark), { fill: right ? "#cfead7" : "#fff", sw: right ? 10 : 6 });
+  return answer && !right ? dim(c, 0.35) : ons ? A(A(c, "start", "pop", { delay: 0.1 + i * 0.12 }), ons[i], "pulse") : c;
 }).join("");
-S.S072 = { h: "Pick: how much of your dollar does Apple get?", body: quiz(false) };
-S.S073 = { h: "Usually none: Apple isn't the one selling you the share", body: quiz(true) };
+// the quiz pause: a bar that drains over the three silent seconds
+S.S072 = { h: "Pick: how much of your dollar does Apple get?",
+  body: quiz(false, null, ["all", "half", "none"]) + A(W(`<rect x="560" y="850" width="800" height="26" rx="13" fill="${GREEN}" stroke="${INK}" stroke-width="5"/>`), "end", "drain", { dur: 2.9 }) };
+S.S073 = { h: "Usually none: Apple isn't the one selling you the share", enter: "cut", body: quiz(true, "none") };
 const fan = (x, y, i, label) => g(x, y, 1, person({ shirt: [ORANGE, BLUE][i], skin: i + 1, hair: i ? "short" : "long", label }));
 S.S074 = { h: "Think of a concert ticket that gets resold between fans",
-  body: fan(520, 620, 0, "Fan 1") + fan(1400, 620, 1, "Fan 2") + g(960, 520, 1.3, ticket("CONCERT", "admit one")) + arrow(700, 400, 1220, 400, { curve: -60 }) };
+  body: A(fan(520, 620, 0, "Fan 1"), "start", "pop") + A(g(960, 520, 1.3, ticket("CONCERT", "admit one")), "ticket", "pop") + A(fan(1400, 620, 1, "Fan 2"), "fans", "pop") + A(arrow(700, 400, 1220, 400, { curve: -60 }), "resold", "wipe", { dir: "r", dur: 0.6 }) };
 const band = (x, y, s = 1) => g(x, y, s, W(`<rect x="-200" y="20" width="400" height="40" rx="8" fill="#8a5a2b" stroke="${INK}" stroke-width="6"/>`) + g(-90, -60, 0.5, person({ shirt: RED, skin: 2 })) + g(90, -60, 0.5, person({ shirt: PURPLE, skin: 0, hair: "long" })) + W(`<path d="M -20 -70 l 44 -70 l 16 10 l -44 70 Z" fill="${GOLD}" stroke="${INK}" stroke-width="5"/><circle cx="-10" cy="-50" r="26" fill="${GOLD}" stroke="${INK}" stroke-width="5"/>`) + t(0, 110, "The band", 40, { w: 900 }));
 S.S075 = { h: "The band gets paid when the box office sells the ticket first",
-  body: fan(340, 640, 0, "Fan 1") + g(920, 820, 0.95, booth("BOX OFFICE", { awning: PURPLE })) + band(1520, 640) +
-    arrow(480, 560, 700, 560, { color: DGREEN, label: "money", ldy: -24 }) + arrow(1130, 560, 1300, 560, { color: DGREEN, label: "money", ldy: -24 }) + stamp(920, 300, "FIRST SALE", { color: GREEN, rot: -4, size: 40 }) };
+  body: fan(340, 640, 0, "Fan 1") + A(band(1520, 640), "band", "pop") + A(g(920, 820, 0.95, booth("BOX OFFICE", { awning: PURPLE })), "box", "pop") +
+    A(arrow(480, 560, 700, 560, { color: DGREEN, label: "money", ldy: -24 }), "sells", "wipe", { dir: "r", dur: 0.4 }) + A(arrow(1130, 560, 1300, 560, { color: DGREEN, label: "money", ldy: -24 }), "sells", "wipe", { dir: "r", dur: 0.4, delay: 0.3 }) +
+    A(stamp(920, 300, "FIRST SALE", { color: GREEN, rot: -4, size: 40 }), "first", "stamp") };
 S.S076 = { h: "Buy it later from another fan, and your money goes to the fan",
-  body: fan(440, 640, 0, "Fan 1 (seller)") + fan(1080, 640, 1, "Fan 2 (you)") + g(760, 430, 0.8, ticket("CONCERT", "admit one")) + arrow(900, 600, 620, 600, { color: DGREEN, curve: -40, label: "money", ldy: 70 }) + g(760, 540, 1, bill(120)) +
-    dim(band(1560, 640, 0.8), 0.4) + t(1560, 400, "gets nothing this time", 34, { w: 900, fill: RED, max: 380 }) };
+  body: fan(440, 640, 0, "Fan 1 (seller)") + fan(1080, 640, 1, "Fan 2 (you)") + A(g(760, 430, 0.8, ticket("CONCERT", "admit one")), "ticket", "pop") +
+    A(arrow(900, 600, 620, 600, { color: DGREEN, curve: -40, label: "money", ldy: 70 }) + g(760, 540, 1, bill(120)), "money", "wipe", { dir: "l", dur: 0.5 }) +
+    A(dim(band(1500, 640, 0.8), 0.4) + t(1500, 400, "gets nothing this time", 34, { w: 900, fill: RED, max: 330 }), "goes", "fade") };
 S.S077 = { h: "Apple's box-office moment: when it first sold shares to the public",
-  body: g(520, 800, 1.1, tower("APPLE", { fill: "#e6e9ee", sign: "#6b7280", w: 260, h: 360 })) + g(520, 560, 0.6, appleIcon()) +
-    arrow(700, 500, 1100, 500, { color: DGREEN, curve: -40, label: "new shares", ldy: -40 }) + arrow(1100, 660, 700, 660, { color: GREY, curve: -40, label: "money to Apple", ldy: 80 }) +
-    [0, 1, 2].map((i) => g(1280 + i * 150, 620, 0.6, person({ shirt: [BLUE, ORANGE, PURPLE][i], skin: i, hair: i === 1 ? "long" : "short" }))).join("") + t(1430, 760, "the public", 38, { w: 900 }),
+  body: A(g(520, 800, 1.1, tower("APPLE", { fill: "#e6e9ee", sign: "#6b7280", w: 260, h: 360 })) + g(520, 560, 0.6, appleIcon()), "apple's", "pop") +
+    A(arrow(700, 500, 1100, 500, { color: DGREEN, curve: -40, label: "new shares", ldy: -40 }), "sold", "wipe", { dir: "r", dur: 0.5 }) + A(arrow(1100, 660, 700, 660, { color: GREY, curve: -40, label: "money to Apple", ldy: 80 }), "shares", "wipe", { dir: "l", dur: 0.5 }) +
+    A([0, 1, 2].map((i) => g(1280 + i * 150, 620, 0.6, person({ shirt: [BLUE, ORANGE, PURPLE][i], skin: i, hair: i === 1 ? "long" : "short" }))).join("") + t(1430, 760, "the public", 38, { w: 900 }), "public", "pop"),
   term: ["IPO", "The first time a company sells its shares to the public.", "Initial Public Offering"] };
 S.S078 = { h: "December 12, 1980, at $22 a share",
-  body: g(620, 560, 1.5, calendar("DECEMBER 1980", "12", { w: 300 })) + g(1300, 520, 1.9, priceTag("$22")) + t(1320, 680, "a share", 44, { w: 900 }) };
+  body: A(g(620, 560, 1.5, calendar("DECEMBER 1980", "12", { w: 300 })), "december", "pop") + A(g(1300, 520, 1.9, priceTag("$22")), "at>", "pop") + A(t(1320, 680, "a share", 44, { w: 900 }), "share", "fade") };
 S.S079 = { h: "Today, your dollar goes to whoever sold you the share",
-  body: g(480, 560, 1.6, bill(170)) + arrow(680, 560, 1100, 560, { color: DGREEN, width: 12 }) + g(1360, 600, 1.3, person({ shirt: GREY, hair: "none", skin: 3, mouth: "flat" })) + t(1360, 500, "?", 80, { w: 900, fill: "#fff" }) + t(1360, 830, "the seller", 44, { w: 900 }) };
+  body: A(g(480, 560, 1.6, bill(170)), "dollar", "pop") + A(arrow(680, 560, 1100, 560, { color: DGREEN, width: 12 }), "goes", "wipe", { dir: "r", dur: 0.5 }) +
+    A(g(1360, 600, 1.3, person({ shirt: GREY, hair: "none", skin: 3, mouth: "flat" })) + t(1360, 500, "?", 80, { w: 900, fill: "#fff" }) + t(1360, 830, "the seller", 44, { w: 900 }), "whoever", "pop") };
 S.S080 = { h: "The seller could be…",
-  body: [[g(0, 90, 0.5, tower("BROKER", { w: 240, h: 300 })), "your own broker"], [g(0, 90, 0.44, booth("MARKET MAKER", { awning: GREEN })), "a market maker"], [g(0, 90, 0.5, tower("BIG FUND", { w: 300, h: 340, sign: PURPLE })), "a big fund"], [g(0, 20, 0.7, teacher(null)), "a retired teacher"]]
-    .map(([icon, label], i) => card(300 + i * 440, 540, 400, 440, g(0, -30, 1, icon) + t(0, 180, label, 36, { w: 900, max: 360 }))).join(""),
+  body: [[g(0, 90, 0.5, tower("BROKER", { w: 240, h: 300 })), "your own broker", "broker"], [g(0, 90, 0.44, booth("MARKET MAKER", { awning: GREEN })), "a market maker", "market"], [g(0, 90, 0.5, tower("BIG FUND", { w: 300, h: 340, sign: PURPLE })), "a big fund", "fund"], [g(0, 20, 0.7, teacher(null)), "a retired teacher", "teacher"]]
+    .map(([icon, label, on], i) => A(card(300 + i * 440, 540, 400, 440, g(0, -30, 1, icon) + t(0, 180, label, 36, { w: 900, max: 360 })), on, "pop")).join(""),
   term: ["FUND", "A big pool of many people's money, invested together by a manager."] };
 S.S081 = { h: "Say a retired teacher sells a little stock to help pay for a new roof",
-  body: g(560, 620, 1.2, teacher()) + g(760, 520, 0.8, slice()) + g(1340, 800, 1.3, house({ roof: "old" })) + t(1340, 860, "needs a new roof", 36, { w: 800, fill: GREY }) };
-S.S082 = { body: g(700, 640, 1.5, buck("cocky")) + g(1420, 820, 1.1, house({ roof: "old" })) + bubble(1080, 300, "I'll pay for it!", { tail: "left" }) };
+  body: A(g(560, 620, 1.2, teacher()), "teacher", "pop") + A(g(760, 520, 0.8, slice()), "stock", "pop") + A(g(1340, 800, 1.3, house({ roof: "old" })), "roof", "pop") + A(t(1340, 860, "needs a new roof", 36, { w: 800, fill: GREY }), "roof", "fade", { delay: 0.3 }) };
+S.S082 = { body: g(1420, 820, 1.1, house({ roof: "old" })) + A(g(700, 640, 1.5, buck("cocky")), "start", "slide", { dir: "l", idle: "talk" }) + A(bubble(1080, 300, "I'll pay for it!", { tail: "left" }), "pay", "pop") };
 S.S083 = { h: "Your dollar ends up helping pay for that roof",
-  body: g(300, 600, 0.5, phone(appScreen())) + t(300, 830, "You", 40, { w: 900 }) + g(960, 620, 1, teacher()) + g(1600, 780, 0.9, house({ roof: "old" })) +
-    arrow(440, 520, 800, 520, { color: DGREEN, curve: -50, label: "your $1", ldy: -44 }) + g(620, 430, 0.8, bill(130)) +
-    arrow(800, 720, 440, 720, { color: GREY, curve: -50, label: "a crumb of her stock", ldy: 84 }) + g(620, 730, 1.2, crumb()) +
-    arrow(1100, 560, 1400, 560, { color: DGREEN, label: "toward the roof", ldy: -24 }) };
-S.S084 = { h: "Promise one, done", body: promises(1, [1], [1]) + card(960, 830, 900, 96, t(0, 14, "Your dollar went to the SELLER, not to Apple.", 36, { w: 900 }), { fill: "#cfead7" }) };
+  body: g(320, 600, 0.5, phone(appScreen())) + t(320, 830, "You", 40, { w: 900 }) + g(960, 620, 1, teacher()) + g(1540, 780, 0.9, house({ roof: "old" })) +
+    A(arrow(460, 520, 800, 520, { color: DGREEN, curve: -50, label: "your $1", ldy: 62 }) + g(630, 430, 0.8, bill(130)), "dollar", "wipe", { dir: "r", dur: 0.5 }) +
+    A(arrow(800, 720, 460, 720, { color: GREY, curve: -50, label: "a crumb of her stock", ldy: 84 }) + g(630, 730, 1.2, crumb()), "crumb", "wipe", { dir: "l", dur: 0.5 }) +
+    A(arrow(1100, 560, 1340, 560, { color: DGREEN, label: "toward the roof", ldy: -24 }), "helping", "wipe", { dir: "r", dur: 0.5 }) };
+S.S084 = { h: "Promise one, done", body: promises(1, [1], [1], null, "done") + A(card(960, 830, 900, 96, t(0, 14, "Your dollar went to the SELLER, not to Apple.", 36, { w: 900 }), { fill: "#cfead7" }), "seller", "pop") };
 S.S085 = { h: "Apple still cares about its share price",
-  body: g(480, 800, 1.1, tower("APPLE", { fill: "#e6e9ee", sign: "#6b7280", w: 260, h: 360 })) + g(480, 560, 0.6, appleIcon()) +
-    g(1080, 620, 1.1, person({ shirt: "#3a4756", skin: 3, label: "Executive" })) + g(1260, 540, 0.9, slice()) + card(1500, 720, 400, 110, t(0, 14, "often paid in stock", 34, { w: 900 }), { fill: YEL }),
+  body: A(g(480, 800, 1.1, tower("APPLE", { fill: "#e6e9ee", sign: "#6b7280", w: 260, h: 360 })) + g(480, 560, 0.6, appleIcon()), "apple", "pop") +
+    A(g(1080, 620, 1.1, person({ shirt: "#3a4756", skin: 3, label: "Executive" })), "executives", "pop") + A(g(1260, 540, 0.9, slice()) + card(1500, 720, 400, 110, t(0, 14, "often paid in stock", 34, { w: 900 }), { fill: YEL }), "paid", "pop"),
   term: ["EXECUTIVES", "The top bosses who run a company."] };
 
 module.exports = { S, quoteBoard, mm };

@@ -34,6 +34,7 @@ const W = (inner, id) => `<g filter="url(#wobble)"${id ? ` id="${id}"` : ""}>${i
 // narrator reaches the word `on` ("start", a word, "word:2" for its 2nd use, or "+1.5" seconds
 // into the line). fx: pop, fade, slide (dir l/r/u/d), wipe (dir), stamp, move (dx, dy, dur), scalefrom (from).
 // "word>" means right after that word ends (use it for numbers, which are not in the word list).
+// Also: pulse (a quick bump, stays visible), drain (a bar emptying over dur); on "end" = when the line finishes.
 // idle: "bob" (gentle float) or "talk" (hops on each spoken word).
 function A(inner, on = "start", fx = "pop", o = {}) {
   const at = Object.entries({ dir: o.dir, dx: o.dx, dy: o.dy, dur: o.dur, delay: o.delay, from: o.from }).filter(([, v]) => v !== undefined).map(([k, v]) => ` data-${k}="${v}"`).join("");

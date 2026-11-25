@@ -14,7 +14,7 @@ const stopXY = (i, { x = 200, y = 330, s = 0.95 } = {}) => [x + POS[i - 1][0] * 
 
 // three promise cards; active = highlighted one, done = list of finished ones
 const PROMISES = [["Who ends up", "holding your dollar"], ["Whose name is", "on your stock"], ["3 checks before", "you tap BUY"]];
-function promises(active, done = [], show = [1, 2, 3], word = null) {
+function promises(active, done = [], show = [1, 2, 3], word = null, doneWord = null) {
   let o = "";
   PROMISES.forEach((p, i) => {
     const n = i + 1, x = 400 + i * 560, on = n === active, isDone = done.includes(n), shown = show.includes(n) || isDone;
@@ -22,7 +22,7 @@ function promises(active, done = [], show = [1, 2, 3], word = null) {
       : n === 2 ? g(0, -66, 0.62, doc("STOCK", ["Name: ? ? ?"], { w: 380 }))
       : g(0, -64, 0.5, checklist(["", "", ""], ["done", "done", "done"], { w: 300, size: 34 }));
     let inner = t(0, -170, "PROMISE " + n, 34, { w: 900, fill: on || isDone ? DGREEN : GREY }) + (shown ? icon + t(0, 90, p[0], 40, { w: 900 }) + t(0, 150, p[1], 40, { w: 900 }) : t(0, 40, "?", 150, { w: 900, fill: LGREY }));
-    if (isDone) inner += stamp(170, -214, "DONE", { color: GREEN, rot: 8, size: 44 });
+    if (isDone) { const st = stamp(170, -214, "DONE", { color: GREEN, rot: 8, size: 44 }); inner += doneWord && on ? A(st, doneWord, "stamp") : st; }
     const c = card(x, 520, 480, 440, inner, { fill: on ? YEL : "#fff", sw: on ? 9 : 6 });
     o += on && word ? A(c, word, "pop") : on || isDone ? c : dim(c, shown ? 0.55 : 0.5);
   });

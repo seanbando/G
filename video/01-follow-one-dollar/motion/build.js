@@ -55,6 +55,7 @@ const RUNTIME = function (SCENES, FIT) {
   let clipN = 0;
   const when = (sc, on) => {
     if (!on || on === "start") return sc.start + 0.05;
+    if (on === "end") return sc.lineEnd + 0.1;            // right after the line is spoken (e.g. the quiz pause)
     if (on[0] === "+") return sc.lineStart + parseFloat(on);
     const after = on.endsWith(">");                      // "word>" = right after the word (for numbers)
     const [w, n] = on.replace(">", "").toLowerCase().split(":");
@@ -74,6 +75,11 @@ const RUNTIME = function (SCENES, FIT) {
     } else if (a.fx === "stamp") {
       tl.fromTo(el, { scale: 2.6, opacity: 0, transformOrigin: "50% 50%" }, { scale: 1, opacity: 1, duration: dur || 0.22, ease: "power4.in" }, at);
       tl.fromTo(el, { rotation: -5 }, { rotation: 0, duration: 0.3, ease: "elastic.out(1.2, 0.4)" }, at + 0.22);
+    } else if (a.fx === "pulse") {
+      tl.fromTo(el, { scale: 1, transformOrigin: "50% 50%" }, { scale: 1.07, duration: 0.18, yoyo: true, repeat: 1, ease: "sine.inOut" }, at);
+    } else if (a.fx === "drain") {
+      tl.fromTo(el, { opacity: 0 }, { opacity: 1, duration: 0.15 }, at);
+      tl.fromTo(el, { scaleX: 1, transformOrigin: "0% 50%" }, { scaleX: 0, duration: dur || 3, ease: "none" }, at + 0.1);
     } else if (a.fx === "scalefrom") {
       tl.fromTo(el, { scale: parseFloat(a.from || 1), transformOrigin: "50% 50%" }, { scale: 1, duration: dur || 0.8, ease: "power2.inOut" }, at);
     } else if (a.fx === "move") {
