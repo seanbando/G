@@ -69,20 +69,30 @@
             <g id="cuts" stroke="var(--ink)" stroke-width="6"></g>
           </g>
           <g id="slice1">
+            <defs>
+              <clipPath id="sliceClip"><path d="M 960 600 L 1260 600 A 300 300 0 0 0 1172 388 Z" /></clipPath>
+            </defs>
             <path d="M 960 600 L 1260 600 A 300 300 0 0 0 1172 388 Z" fill="#ffd27a" stroke="var(--green-dark)" stroke-width="10" />
+            <!-- the bite mark: three overlapping "teeth" curves cut into the slice's crust -->
+            <g id="biteMark" clip-path="url(#sliceClip)">
+              <circle id="tooth1" cx="1239" cy="541" r="44" fill="var(--ground)" stroke="var(--green-dark)" stroke-width="8" />
+              <circle id="tooth2" cx="1223" cy="491" r="50" fill="var(--ground)" stroke="var(--green-dark)" stroke-width="8" />
+              <circle id="tooth3" cx="1199" cy="445" r="44" fill="var(--ground)" stroke="var(--green-dark)" stroke-width="8" />
+            </g>
           </g>
           <g id="sliceTag">
             <rect x="1290" y="250" width="230" height="90" rx="20" fill="#fff" stroke="var(--ink)" stroke-width="8" />
             <text x="1405" y="312" text-anchor="middle" class="label" font-size="48">1 share</text>
           </g>
           <g id="bite">
-            <path d="M 1196 431 L 1236 488 A 300 300 0 0 0 1214 450 Z" fill="#ffd27a" stroke="var(--green-dark)" stroke-width="7" stroke-linejoin="round" />
-            <circle cx="1222" cy="462" r="30" fill="#ffd27a" stroke="var(--green-dark)" stroke-width="7" />
+            <!-- the missing chunk: same scalloped shape as the bite mark -->
+            <path d="M 1196 404 A 300 300 0 0 1 1258 560 Q 1238 538 1214 528 Q 1222 494 1190 478 Q 1196 446 1172 432 Z"
+                  fill="#ffd27a" stroke="var(--green-dark)" stroke-width="7" stroke-linejoin="round" />
           </g>
           <text id="shareLabel" x="960" y="200" text-anchor="middle" class="label" font-size="56">1 Apple share = a few hundred dollars</text>
           <g id="biteTag">
-            <rect x="1420" y="590" width="250" height="96" rx="20" fill="#fff" stroke="var(--green-dark)" stroke-width="8" />
-            <text x="1545" y="655" text-anchor="middle" class="label" font-size="50" style="fill:var(--green-dark)">your $1</text>
+            <rect x="1480" y="650" width="250" height="96" rx="20" fill="#fff" stroke="var(--green-dark)" stroke-width="8" />
+            <text x="1605" y="715" text-anchor="middle" class="label" font-size="50" style="fill:var(--green-dark)">your $1</text>
           </g>
         </svg>
       </div>
@@ -169,17 +179,23 @@
       tl.fromTo("#shareLabel", { opacity: 0, y: 20 }, { opacity: 1, y: 0, duration: 0.4 }, 9.6);
       tl.fromTo("#shareLabel", { scale: 1, transformOrigin: "960px 180px" }, { scale: 1.06, duration: 0.25, yoyo: true, repeat: 1 }, 11.2);
       tl.fromTo("#slice1", { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
-      tl.to("#slice1", { opacity: 1, duration: 0.3 }, 12.2);
-      tl.fromTo("#sliceTag", { opacity: 0, scale: 0.6, transformOrigin: "1405px 295px" }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 12.5);
-      tl.to("#slice1", { x: 30, y: -14, duration: 0.5, ease: "power2.out" }, 13.2);
+      // "...buys a tiny slice" (slice at 14.0 s) "...of one share" (share at 15.0 s)
+      tl.to("#slice1", { opacity: 1, duration: 0.3 }, 14.0);
+      tl.fromTo("#sliceTag", { opacity: 0, scale: 0.6, transformOrigin: "1405px 295px" }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 14.95);
+      tl.to("#slice1", { x: 30, y: -14, duration: 0.5, ease: "power2.out" }, 14.3);
       tl.to("#buck", { x: 760, y: 330, scale: 0.55, duration: 0.7, ease: "power2.inOut" }, 9.6);
-      tl.to("#buck", { rotation: -8, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, 13.4);
+      tl.to("#buck", { rotation: -8, duration: 0.3, yoyo: true, repeat: 3, ease: "sine.inOut" }, 12.4);
+      // "...one bite of a whole pizza" (bite at 17.0 s): the chunk gets chomped out of the slice
+      ["#tooth1", "#tooth2", "#tooth3"].forEach((id, k) => {
+        tl.fromTo(id, { scale: 0, transformOrigin: "50% 50%" }, { scale: 1, duration: 0.12, ease: "back.out(3)" }, 16.95 + k * 0.07);
+      });
+      tl.fromTo("#slice1", { rotation: 0, transformOrigin: "960px 600px" }, { rotation: 2, duration: 0.08, yoyo: true, repeat: 3, ease: "sine.inOut" }, 16.95);
       tl.fromTo("#bite", { opacity: 0 }, { opacity: 0, duration: 0.01 }, 0);
-      tl.to("#bite", { opacity: 1, duration: 0.01 }, 15.0);
-      tl.fromTo("#bite", { x: 0, y: 0 }, { x: 140, y: 110, duration: 0.6, ease: "power2.out" }, 15.0);
-      tl.fromTo("#biteTag", { opacity: 0, scale: 0.6, transformOrigin: "1545px 638px" }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 15.5);
-      tl.to("#buck", { x: 1370, y: 470, scale: 0.55, duration: 0.5, ease: "power2.out" }, 16.2);
-      tl.to("#buck", { y: 445, duration: 0.18, yoyo: true, repeat: 3, ease: "sine.inOut" }, 16.8);
+      tl.to("#bite", { opacity: 1, duration: 0.01 }, 17.1);
+      tl.fromTo("#bite", { x: 30, y: -14 }, { x: 170, y: 96, duration: 0.5, ease: "power2.out" }, 17.1);
+      tl.fromTo("#biteTag", { opacity: 0, scale: 0.6, transformOrigin: "1605px 698px" }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 17.5);
+      tl.to("#buck", { x: 1390, y: 480, scale: 0.55, duration: 0.45, ease: "power2.out" }, 17.7);
+      tl.to("#buck", { y: 455, duration: 0.16, yoyo: true, repeat: 3, ease: "sine.inOut" }, 18.2);
 
       window.__timelines["main"] = tl;
       tl.seek(0);
