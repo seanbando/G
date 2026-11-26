@@ -32,6 +32,10 @@
    "medium"
   ],
   [
+   490.1,
+   "medium"
+  ],
+  [
    498.7,
    "medium"
   ],
@@ -331,8 +335,8 @@
   {
    "id": 517,
    "start": 486.37,
-   "end": 488.67,
-   "line": "There were weapons inside the hangar,",
+   "end": 489.99,
+   "line": "There were weapons inside the hangar, and so was the notebook.",
    "what": "real photo: inside the hangar",
    "kind": "image",
    "img": "media/photos/hangar-interior-reuters-abc.jpg",
@@ -340,26 +344,21 @@
    "tag": "source-reuters.png"
   },
   {
-   "id": 518,
-   "start": 488.67,
-   "end": 489.99,
-   "line": "and so was the notebook.",
-   "what": "3D object: the notebook",
-   "kind": "obj",
-   "obj": "notebook",
-   "rate": 0.15
-  },
-  {
    "id": 519,
    "start": 489.99,
    "end": 493.35,
    "line": "This was the longer journal, not the three pages from the trash bag,",
-   "what": "3D object: the notebook from above",
-   "kind": "obj",
-   "obj": "notebook",
-   "angle": 60,
-   "elev": 52,
-   "rate": 0.07
+   "what": "typed card (the 3D notebook read badly: creator's note Nov 25, 2026)",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "THE LONGER JOURNAL"
+    ],
+    "who": "NOT THE THREE PAGES FROM THE TRASH BAG",
+    "at": 490.1,
+    "size": 0.22
+   }
   },
   {
    "id": 520,

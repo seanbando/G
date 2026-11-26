@@ -32,6 +32,10 @@
    "medium"
   ],
   [
+   385.3,
+   "medium"
+  ],
+  [
    394.5,
    "medium"
   ],
@@ -380,32 +384,29 @@
    "start": 384.69,
    "end": 388.41,
    "line": "When they finally caught him, there was a notebook at that hangar.",
-   "what": "3D object: a closed notebook under a lamp, push in",
-   "kind": "obj",
-   "obj": "notebook",
-   "rate": 0.12
+   "what": "typed card (the 3D notebook read badly: creator's note Nov 25, 2026)",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "A NOTEBOOK",
+     "AT THE HANGAR"
+    ],
+    "who": "FOUND WHEN HE WAS CAUGHT",
+    "at": 385.3,
+    "size": 0.22
+   }
   },
   {
    "id": 424,
    "start": 388.41,
-   "end": 393.13,
-   "line": "It's the closest thing we have to hearing what those forty-eight days were like from his side.",
+   "end": 394.35,
+   "line": "It's the closest thing we have to hearing what those forty-eight days were like from his side. We'll get to it.",
    "what": "real photo: inside the hangar, officers with flashlights",
    "kind": "image",
    "img": "media/photos/hangar-interior-reuters-abc.jpg",
    "push": 0.03,
    "tag": "source-reuters.png"
-  },
-  {
-   "id": 425,
-   "start": 393.13,
-   "end": 394.35,
-   "line": "We'll get to it.",
-   "what": "3D object: the notebook from the other side, closer",
-   "kind": "obj",
-   "obj": "notebook",
-   "angle": -40,
-   "rate": 0.15
   },
   {
    "id": 426,

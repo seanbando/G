@@ -119,9 +119,8 @@ rows6 = [
      "somewhere between seventy-five and a hundred yards away through thick woods.", "real photo: dense Pocono woods; the distance types on"),
     (421, 381.97, {"kind": "open", "as": 119}, "They couldn't reach him.", "3D: the amber figure walking away into the trees"),
     (422, 384.69, image("hangar-exterior.jpg", "source-reuters.png", crop="962:541:0:66"), "Here's something to keep in mind through this next part.", "real photo: the hangar"),
-    (423, 388.41, obj("notebook", rate=0.12), "When they finally caught him, there was a notebook at that hangar.", "3D object: a closed notebook under a lamp, push in"),
-    (424, 393.13, image("hangar-interior-reuters-abc.jpg", "source-reuters.png", push=0.03), "It's the closest thing we have to hearing what those forty-eight days were like from his side.", "real photo: inside the hangar, officers with flashlights"),
-    (425, 394.35, obj("notebook", angle=-40, rate=0.15), "We'll get to it.", "3D object: the notebook from the other side, closer"),
+    (423, 388.41, quote(["A NOTEBOOK", "AT THE HANGAR"], "FOUND WHEN HE WAS CAUGHT", 385.3, size=0.22), "When they finally caught him, there was a notebook at that hangar.", "typed card (the 3D notebook read badly: creator's note Nov 25, 2026)"),
+    (424, 394.35, image("hangar-interior-reuters-abc.jpg", "source-reuters.png", push=0.03), "It's the closest thing we have to hearing what those forty-eight days were like from his side. We'll get to it.", "real photo: inside the hangar, officers with flashlights"),
     (426, 397.79, image("09d-campsite-default.jpg", PSP, stamp={"line": "WHAT HE LEFT BEHIND", "sub": "CHAPTER 05  ·  SEPT 29, 2014", "at": 394.5}),
      "On September twenty-ninth, searchers found a campsite.", "real police photo: the campsite; chapter lettering types on"),
     (427, 399.91, still("E", 56.0), "There was clothing, ammunition,", "real police photo: bags and clothing at the campsite"),
@@ -142,7 +141,7 @@ rows6 = [
     (440, 443.07, quote(["DAY 48"], "OCT 30, 2014", 440.1, size=0.4), "October thirtieth, day forty-eight.", "typed card"),
 ]
 write("shots6.json", 326.60, "frein_s5_search.mp4", "shots6", "The Search / What He Left Behind", rows6,
-      [[326.7, "short"], [342.45, "medium"], [345.7, "medium"], [357.6, "short"], [365.1, "medium"], [376.0, "medium"], [394.5, "medium"], [404.9, "short"], [411.6, "medium"], [422.5, "short"], [434.25, "short"], [440.1, "short"]])
+      [[326.7, "short"], [342.45, "medium"], [345.7, "medium"], [357.6, "short"], [365.1, "medium"], [376.0, "medium"], [385.3, "medium"], [394.5, "medium"], [404.9, "short"], [411.6, "medium"], [422.5, "short"], [434.25, "short"], [440.1, "short"]])
 
 # ------------------------------------------------------------------ 06 The Hangar (and the night of the arrest)
 R2 = "shots2/"
@@ -167,9 +166,8 @@ rows7 = [
     (514, 481.03, {"kind": "open", "as": 38}, "and the Marshals themselves said that happened while he was held face down on the pavement.", "3D: the crane up over him on the ground, marshals around"),
     (515, 484.37, quote(["BOTH VERSIONS", "ARE ON THE RECORD"], "EARLY PUBLIC ACCOUNT  ·  U.S. MARSHALS", 481.1, size=0.22), "Both versions are on the record, so you're getting both.", "typed card"),
     (516, 486.37, {"kind": "open", "as": 36}, "He wasn't armed in that field.", "3D callback: his open, empty hand"),
-    (517, 488.67, image("hangar-interior-reuters-abc.jpg", "source-reuters.png", push=0.05), "There were weapons inside the hangar,", "real photo: inside the hangar"),
-    (518, 489.99, obj("notebook", rate=0.15), "and so was the notebook.", "3D object: the notebook"),
-    (519, 493.35, obj("notebook", angle=60, elev=52, rate=0.07), "This was the longer journal, not the three pages from the trash bag,", "3D object: the notebook from above"),
+    (517, 489.99, image("hangar-interior-reuters-abc.jpg", "source-reuters.png", push=0.05), "There were weapons inside the hangar, and so was the notebook.", "real photo: inside the hangar"),
+    (519, 493.35, quote(["THE LONGER JOURNAL"], "NOT THE THREE PAGES FROM THE TRASH BAG", 490.1, size=0.22), "This was the longer journal, not the three pages from the trash bag,", "typed card (the 3D notebook read badly: creator's note Nov 25, 2026)"),
     (520, 497.01, still("E", 68.6, push=0.04, tag=PSP, crop="664:374:307:20"), "and it doesn't read like a soldier on a mission.", "police-released photo: Frein in re-enactor uniform"),
     (521, 502.85, quote(["“SLEPT LIKE A HUMAN", "FIRST TIME IN TWO WEEKS.”"], "ERIC FREIN'S JOURNAL, SEPT 25  ·  COURT RECORD", 498.7, size=0.19),
      "On September twenty-fifth, he wrote that he slept like a human first time in two weeks.", "typed journal quote, amber bar"),
@@ -192,7 +190,7 @@ rows7 = [
      "and officials told families that trick-or-treating could go ahead after all.", "the same article, highlighter on \"Trick-or-treating is on tomorrow night from 6 to 8 in Barrett Township\""),
 ]
 write("shots7.json", 443.07, "frein_s6_hangar.mp4", "shots7", "The Hangar", rows7,
-      [[443.2, "medium"], [451.4, "medium"], [456.0, "medium"], [458.0, "long"], [467.9, "short"], [481.1, "medium"], [498.7, "medium"], [504.3, "medium"],
+      [[443.2, "medium"], [451.4, "medium"], [456.0, "medium"], [458.0, "long"], [467.9, "short"], [481.1, "medium"], [490.1, "medium"], [498.7, "medium"], [504.3, "medium"],
        [509.7, "medium"], [516.2, "long"], [522.5, "short"], [526.7, "short"], [529.3, "short"], [536.3, "short"], [540.6, "short"], [545.0, "short"], [547.4, "short"]])
 
 # ------------------------------------------------------------------ 07 The Verdict + 08 The Confession
@@ -263,8 +261,8 @@ rows9 = [
     (717, 704.81, obj("cuffs", angle=-30, rate=0.06), "So here's my question for you.", "3D object: the handcuffs"),
     (718, 709.95, {"kind": "barracks", "view": "cruiser2"}, "The state police chose to bring him back in Dickson's handcuffs in Dickson's car.", "3D: low along the cruiser in its bay"),
     (719, 714.51, quote(["WAS THAT", "THE RIGHT CALL?"], "TELL ME WHAT YOU THINK IN THE COMMENTS", 710.0, size=0.3), "Was that the right call? Tell me what you think in the comments.", "typed question card"),
-    (720, 723.85, image("../01-olympic-bomber/thumbnail-final.jpg", None, push=0.02),
-     "If you want another one about a man who vanished into the woods with the whole country looking for him, watch my video on the Olympic bomber who stayed hidden for five years.", "end card: the Olympic Bomber video's thumbnail"),
+    (720, 723.85, quote(["WATCH NEXT"], "THE OLYMPIC BOMBER  ·  HIDDEN FOR FIVE YEARS", 714.6, size=0.3),
+     "If you want another one about a man who vanished into the woods with the whole country looking for him, watch my video on the Olympic bomber who stayed hidden for five years.", "typed end card, room on the right for YouTube's own end-screen video tile (the old thumbnail is gone: creator's note Nov 25, 2026)"),
     (721, 727.81, quote(["SUBSCRIBE"], "PLENTY MORE COMING", 724.5, size=0.34), "And subscribe if you want more of these. There are plenty more coming.", "typed end card"),
 ]
 write("shots9.json", 655.47, "frein_s8_handoff.mp4", "shots9", "The Handoff / outro", rows9,

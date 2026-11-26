@@ -364,10 +364,17 @@
    "start": 714.51,
    "end": 723.85,
    "line": "If you want another one about a man who vanished into the woods with the whole country looking for him, watch my video on the Olympic bomber who stayed hidden for five years.",
-   "what": "end card: the Olympic Bomber video's thumbnail",
-   "kind": "image",
-   "img": "../01-olympic-bomber/thumbnail-final.jpg",
-   "push": 0.02
+   "what": "typed end card, room on the right for YouTube's own end-screen video tile (the old thumbnail is gone: creator's note Nov 25, 2026)",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "WATCH NEXT"
+    ],
+    "who": "THE OLYMPIC BOMBER  ·  HIDDEN FOR FIVE YEARS",
+    "at": 714.6,
+    "size": 0.3
+   }
   },
   {
    "id": 721,

@@ -30,7 +30,7 @@ Keep the same folder layout under the repo. Also outside the repo:
 - Git, Claude desktop app, VideoHub (`C:\Users\owner\VideoHub`)
 
 ## 4. Where the edit stands (Nov 25, 2026)
-**Every chapter is rendered in motion and the whole film is joined: `build/render/frein_full_v1.mp4` (12:08, one soundtrack, -14 LUFS).**
+**Every chapter is rendered in motion and the whole film is joined: `build/render/frein_full_v2.mp4` (12:08, one soundtrack, -14 LUFS).**
 Cold open v7 is approved; the creator has given notes on the Barracks and the Swamp chapter (applied); the other chapters and the
 full join are awaiting the creator's notes.
 

@@ -115,3 +115,8 @@ card "RECORDED STATEMENT" → court opinion p. 28 with the highlighter (tease).
 - Chapters 06-09 rendered and sent one by one. Handcuffs changed from amber to steel (the amber pair read as a toy).
 - `final.py` written: joins every chapter's `_picture.mp4` and mixes one soundtrack (bed out 675.6-684.5 for the handcuffs).
 - **`frein_full_v1.mp4`: 12:08, -14.0 LUFS, no silence over 0.9 s.** Awaiting the creator's notes.
+
+## Nov 25, 2026: creator notes on full film v1
+- The 3D spiral notebook read badly (8:09). Removed everywhere: 423 and 519 are typed cards, 424 and 517 (hangar interior photo) run longer over the old 425 and 518.
+- End card 720: the Olympic Bomber thumbnail is gone (the creator did not use that thumbnail); typed WATCH NEXT card with room on the right for the YouTube end-screen tile.
+- Full film v2: `build/render/frein_full_v2.mp4`.
