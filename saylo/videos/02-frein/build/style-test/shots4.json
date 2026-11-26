@@ -316,10 +316,13 @@
    "id": 223,
    "start": 171.4,
    "end": 174.12,
-   "kind": "barracks",
-   "view": "doorway",
+   "kind": "image",
    "line": "Two troopers pull him farther inside.",
-   "what": "3D: close and low, pushing into the lit lobby doorway. No figures."
+   "what": "real photo: the barracks entrance in daylight, punched in on the lobby door (the 3D doorway was a blank rectangle; replaced Nov 25, 2026)",
+   "img": "media/photos/wnep-b.jpg",
+   "crop": "800:450:130:240",
+   "tag": "source-wnep.png",
+   "push": 0.03
   },
   {
    "id": 224,

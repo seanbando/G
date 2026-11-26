@@ -120,3 +120,8 @@ card "RECORDED STATEMENT" → court opinion p. 28 with the highlighter (tease).
 - The 3D spiral notebook read badly (8:09). Removed everywhere: 423 and 519 are typed cards, 424 and 517 (hangar interior photo) run longer over the old 425 and 518.
 - End card 720: the Olympic Bomber thumbnail is gone (the creator did not use that thumbnail); typed WATCH NEXT card with room on the right for the YouTube end-screen tile.
 - Full film v2: `build/render/frein_full_v2.mp4`.
+
+## Nov 25, 2026: master pass 1 (full film v3)
+- Weak 3D replaced: 223 lit doorway -> real barracks entrance photo (WNEP); 516 open-hand callback -> real hangar photo (Reuters); 708 handcuffs -> real arrest-night clip, then typed card 7081 CORPORAL DICKSON'S HANDCUFFS landing on the word; 717 handcuffs dropped, 716 perp-walk photo holds through it.
+- Sound (final.py): beds A/B/C/D rotated by chapter with 1 s cross-fades (A night: cold open, Barracks, Hangar, Handoff; B investigation: Hook, Swamp, Search, Confession; C somber: after the shooting, Verdict, ending; D woods: Who, Left Behind). Music out 259.2-262.3 and 675.6-684.5. Effects: distant helicopter on three real aerials, low hit on the two rifle flashes and on "handcuffs", shutter on the FBI photo, paper slide on documents. No gunshot sounds.
+- `build/render/frein_full_v3.mp4`: 12:08, -14.0 LUFS, no silence over 0.9 s.

@@ -12,6 +12,10 @@
    "medium"
   ],
   [
+   675.55,
+   "medium"
+  ],
+  [
    680.5,
    "short"
   ],
@@ -156,13 +160,34 @@
   {
    "id": 708,
    "start": 673.89,
+   "end": 675.5,
+   "line": "and the troopers who took him put",
+   "what": "real: officers by a cruiser under red lights, the arrest night",
+   "kind": "clip",
+   "src": "B",
+   "in": 38.4,
+   "tag": "source-wnep.png",
+   "push": 0.025,
+   "crop": "853:480:213:0",
+   "out": 40.01
+  },
+  {
+   "id": 7081,
+   "start": 675.5,
    "end": 678.23,
-   "line": "and the troopers who took him put Corporal Bryon Dickson's handcuffs on him.",
-   "what": "3D object: a pair of handcuffs, amber, the camera flies in and lands on them at \"handcuffs\" (music out)",
-   "kind": "obj",
-   "obj": "cuffs",
-   "fly": 676.0,
-   "last": true
+   "line": "Corporal Bryon Dickson's handcuffs on him.",
+   "what": "typed card landing on the word handcuffs, music out (the 3D handcuffs looked like a toy; replaced Nov 25, 2026)",
+   "kind": "card",
+   "card": {
+    "mode": "quote",
+    "lines": [
+     "CORPORAL DICKSON'S",
+     "HANDCUFFS"
+    ],
+    "who": "OCT 30, 2014",
+    "at": 675.55,
+    "size": 0.3
+   }
   },
   {
    "id": 709,
@@ -313,24 +338,13 @@
   {
    "id": 716,
    "start": 698.35,
-   "end": 702.81,
-   "line": "Eric Frein was in the back seat wearing Dickson's handcuffs.",
-   "what": "real photo: troopers lead him from the barracks that night; held, slowest push, music out",
+   "end": 704.81,
+   "line": "Eric Frein was in the back seat wearing Dickson's handcuffs. So here's my question for you.",
+   "what": "real photo: troopers lead him from the barracks that night; held, slowest push",
    "kind": "image",
    "img": "media/photos/11c-phillymag-perp-walk-night.jpg",
    "push": 0.02,
    "tag": "source-ap-the-times-tribune.png"
-  },
-  {
-   "id": 717,
-   "start": 702.81,
-   "end": 704.81,
-   "line": "So here's my question for you.",
-   "what": "3D object: the handcuffs",
-   "kind": "obj",
-   "obj": "cuffs",
-   "angle": -30,
-   "rate": 0.06
   },
   {
    "id": 718,

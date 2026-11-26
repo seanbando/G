@@ -165,7 +165,7 @@ rows7 = [
     (513, 476.45, image("32-ap-perp-walk.jpg", "source-associated-press.png", push=0.0), "but Frein's face was scraped,", "real photo, 1.8 seconds, wide, no zoom: the perp walk"),
     (514, 481.03, {"kind": "open", "as": 38}, "and the Marshals themselves said that happened while he was held face down on the pavement.", "3D: the crane up over him on the ground, marshals around"),
     (515, 484.37, quote(["BOTH VERSIONS", "ARE ON THE RECORD"], "EARLY PUBLIC ACCOUNT  ·  U.S. MARSHALS", 481.1, size=0.22), "Both versions are on the record, so you're getting both.", "typed card"),
-    (516, 486.37, {"kind": "open", "as": 36}, "He wasn't armed in that field.", "3D callback: his open, empty hand"),
+    (516, 486.37, image("hangar-exterior.jpg", "source-reuters.png", crop="962:541:0:66", push=0.04), "He wasn't armed in that field.", "real photo: the hangar and the field (the 3D open-hand callback read badly; replaced Nov 25, 2026)"),
     (517, 489.99, image("hangar-interior-reuters-abc.jpg", "source-reuters.png", push=0.05), "There were weapons inside the hangar, and so was the notebook.", "real photo: inside the hangar"),
     (519, 493.35, quote(["THE LONGER JOURNAL"], "NOT THE THREE PAGES FROM THE TRASH BAG", 490.1, size=0.22), "This was the longer journal, not the three pages from the trash bag,", "typed card (the 3D notebook read badly: creator's note Nov 25, 2026)"),
     (520, 497.01, still("E", 68.6, push=0.04, tag=PSP, crop="664:374:307:20"), "and it doesn't read like a soldier on a mission.", "police-released photo: Frein in re-enactor uniform"),
@@ -245,7 +245,8 @@ rows9 = [
     (706, 669.59, {"kind": "card", "tag": PSP, "card": {"mode": "portrait", "img": "media/cuts/dickson-portrait.png", "name": "BRYON K. DICKSON II", "sub": "CORPORAL, PENNSYLVANIA STATE POLICE", "size": 0.3, "at": 100}},
      "and the man they'd caught had killed one of their own.", "Cpl. Dickson's portrait"),
     (707, 673.89, clip("B", 44.3, tag="source-wnep.png"), "So the Marshals handed Eric Frein over to the Pennsylvania State Police,", "real: the arrest night, officers under blue lights"),
-    (708, 678.23, obj("cuffs", fly=676.0, last=True), "and the troopers who took him put Corporal Bryon Dickson's handcuffs on him.", "3D object: a pair of handcuffs, amber, the camera flies in and lands on them at \"handcuffs\" (music out)"),
+    (708, 675.5, clip("B", 38.4, tag="source-wnep.png"), "and the troopers who took him put", "real: officers by a cruiser under red lights, the arrest night"),
+    (7081, 678.23, quote(["CORPORAL DICKSON'S", "HANDCUFFS"], "OCT 30, 2014", 675.55, size=0.3), "Corporal Bryon Dickson's handcuffs on him.", "typed card landing on the word handcuffs, music out (the 3D handcuffs looked like a toy; replaced Nov 25, 2026)"),
     (709, 680.37, clip("B", 114.6, tag="source-wnep.png"), "Then they put him in Dickson's patrol car", "real: Frein in the back of the patrol car that night"),
     (710, 682.73, {"kind": "map2", "tag": OSM, "map": {"center": [41.225, -75.19], "span": 62, "move": "push",
                                                        "pins": [dict(AIRFIELD, label="AIRPARK", amber=False, at=100), dict(BARRACKS, label="BLOOMING GROVE BARRACKS", amber=True, at=681.2)],
@@ -257,8 +258,7 @@ rows9 = [
     (714, 695.65, {"kind": "barracks", "view": "lot", "stamp": {"line": "48 DAYS LATER", "sub": "BLOOMING GROVE BARRACKS", "at": 691.0}, "last": True},
      "Forty-eight days after Corporal Bryon Dickson was killed outside Blooming Grove,", "3D: the barracks lot at night; 48 DAYS LATER types on"),
     (715, 698.35, {"kind": "barracks", "view": "return"}, "his patrol car pulled back into the barracks.", "3D: the cruiser, an amber edge of light on it, turning into the lot (the pay-off of the planted detail)"),
-    (716, 702.81, image("11c-phillymag-perp-walk-night.jpg", "source-ap-the-times-tribune.png", push=0.02), "Eric Frein was in the back seat wearing Dickson's handcuffs.", "real photo: troopers lead him from the barracks that night; held, slowest push, music out"),
-    (717, 704.81, obj("cuffs", angle=-30, rate=0.06), "So here's my question for you.", "3D object: the handcuffs"),
+    (716, 704.81, image("11c-phillymag-perp-walk-night.jpg", "source-ap-the-times-tribune.png", push=0.02), "Eric Frein was in the back seat wearing Dickson's handcuffs. So here's my question for you.", "real photo: troopers lead him from the barracks that night; held, slowest push"),
     (718, 709.95, {"kind": "barracks", "view": "cruiser2"}, "The state police chose to bring him back in Dickson's handcuffs in Dickson's car.", "3D: low along the cruiser in its bay"),
     (719, 714.51, quote(["WAS THAT", "THE RIGHT CALL?"], "TELL ME WHAT YOU THINK IN THE COMMENTS", 710.0, size=0.3), "Was that the right call? Tell me what you think in the comments.", "typed question card"),
     (720, 723.85, quote(["WATCH NEXT"], "THE OLYMPIC BOMBER  ·  HIDDEN FOR FIVE YEARS", 714.6, size=0.3),
@@ -266,4 +266,4 @@ rows9 = [
     (721, 727.81, quote(["SUBSCRIBE"], "PLENTY MORE COMING", 724.5, size=0.34), "And subscribe if you want more of these. There are plenty more coming.", "typed end card"),
 ]
 write("shots9.json", 655.47, "frein_s8_handoff.mp4", "shots9", "The Handoff / outro", rows9,
-      [[655.6, "medium"], [680.5, "short"], [682.9, "medium"], [687.1, "medium"], [689.0, "medium"], [691.0, "medium"], [710.0, "medium"], [714.6, "medium"], [724.5, "short"]])
+      [[655.6, "medium"], [675.55, "medium"], [680.5, "short"], [682.9, "medium"], [687.1, "medium"], [689.0, "medium"], [691.0, "medium"], [710.0, "medium"], [714.6, "medium"], [724.5, "short"]])

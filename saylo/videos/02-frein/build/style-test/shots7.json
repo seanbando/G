@@ -328,9 +328,12 @@
    "start": 484.37,
    "end": 486.37,
    "line": "He wasn't armed in that field.",
-   "what": "3D callback: his open, empty hand",
-   "kind": "open",
-   "as": 36
+   "what": "real photo: the hangar and the field (the 3D open-hand callback read badly; replaced Nov 25, 2026)",
+   "kind": "image",
+   "img": "media/photos/hangar-exterior.jpg",
+   "push": 0.04,
+   "tag": "source-reuters.png",
+   "crop": "962:541:0:66"
   },
   {
    "id": 517,
